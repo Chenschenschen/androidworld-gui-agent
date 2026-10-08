@@ -92,6 +92,71 @@ def favorite_save(reply, action):
             and re.search(r"\bSave\b", reply) is not None)
 
 
+SETTLEMENT = re.compile(r"^(Village|Hamlet|Town|City)\b")
+
+
+def osmand_view(elements):
+    """Read OsmAnd's screen from the GUI tree: route count, dialogs and search rows with their types.
+
+    Layout recorded with the accessibility forwarder: a result row is a name
+    label with its type label ("Village • ...", "Guidepost") directly below it.
+    """
+    visible = [e for e in elements if e.is_visible and e.bbox_pixels and e.text]
+    texts = {e.text for e in visible}
+    view = {"points": None, "favorite_dialog": bool(texts & {"Add Favorite", "Edit Favorite"}),
+            "place_card": {"Actions", "Marker", "Share"} <= texts, "rows": [], "boxes": {}}
+    for e in visible:
+        match = re.search(r"points:\s*(\d+)", e.text)
+        if match:
+            view["points"] = int(match[1])
+        view["boxes"].setdefault(e.text, e.bbox_pixels)
+    for name in visible:
+        for kind in visible:
+            if (kind is not name and kind.bbox_pixels.x_min == name.bbox_pixels.x_min
+                    and abs(kind.bbox_pixels.y_min - name.bbox_pixels.y_max) <= 4 and not re.search(r"\d+(\.\d+)? (mi|km)$", kind.text)):
+                view["rows"].append({"name": name.text, "type": kind.text, "settlement": bool(SETTLEMENT.match(kind.text)),
+                                     "top": name.bbox_pixels.y_min, "bottom": kind.bbox_pixels.y_max,
+                                     "center": ((name.bbox_pixels.x_min + name.bbox_pixels.x_max) // 2, (name.bbox_pixels.y_min + name.bbox_pixels.y_max) // 2)})
+    return view
+
+
+def osmand_tree_check(view, action, shape, route_points, searched_next):
+    """Return a correction for an OsmAnd tap that the real screen shows to be wrong, else None.
+
+    Replaces v46-v48's checks on the model's words: those were bypassed when a
+    corrected reply carried no text (practice batch eval_batch_20261008T155849).
+    `shape` is the screenshot's (height, width) for normalised tap centres.
+    """
+    if action["action_type"] != "click":
+        return None
+    x, y = action["x"], action["y"]
+    inside = lambda box, pad_x=0, pad_up=0, pad_down=0: (box is not None and box.x_min - pad_x <= x <= box.x_max + pad_x
+                                                        and box.y_min - pad_up <= y <= box.y_max + pad_down)
+    boxes = view["boxes"]
+    if inside(boxes.get("SHOW ON MAP")):
+        return ("SHOW ON MAP only moves the map; it never opens a place. If the search shows 'Could not find anything', "
+                "tap INCREASE SEARCH RADIUS; when the place row appears, tap that row.")
+    if view["favorite_dialog"] and inside(boxes.get("Save")):
+        return "This dialog saves a Favorite, which is not a route point. Tap Cancel (or press Back), then use Actions > Plan a route."
+    if view["place_card"] and inside(boxes.get("Add"), 60, 90, 10):
+        return ("The place card's Add saves a Favorite, not a route point. For the first waypoint tap Actions, then Plan a route; "
+                "for a later waypoint press Back until the route panel shows 'points: N' and tap that panel's Add.")
+    height, width = shape
+    for row in view["rows"]:
+        if row["top"] <= y <= row["bottom"] and not row["settlement"]:
+            good = [r for r in view["rows"] if r["settlement"]]
+            if good:
+                cx, cy = good[0]["center"]
+                kind = lambda r: r["type"].split(" •")[0]
+                return (f"This row is a {kind(row)}, not the place itself. Tap the {kind(good[0])} row "
+                        f"\"{good[0]['name']}\" at tap center [{cx * 1000 // width}, {cy * 1000 // height}].")
+            return "This row is not the place itself (a Village, Hamlet or Town row). If none is listed, tap INCREASE SEARCH RADIUS."
+    if route_points >= 1 and not searched_next and view["points"] is not None and inside(boxes.get("Add"), 60, 90, 10):
+        return ("Add only adds the point under the map centre, which still shows the previous waypoint. First tap the Search "
+                "(magnifier) button at the top left of this screen, search the next waypoint, open its row, press Back here, then tap Add.")
+    return None
+
+
 def osmand_rule_break(reply, action):
     """Return a correction when an action breaks a Skill rule the model kept breaking, else None.
 
@@ -276,8 +341,13 @@ def pixel_point(point, state):
     return min(width - 1, int(point[0] * width / 1000)), min(height - 1, int(point[1] * height / 1000))
 
 
-def convert_action(fields, state, allowed_apps):
-    """Validate action-specific fields and convert to Android World's fixed actions."""
+def convert_action(fields, state, allowed_apps, focus_check=None):
+    """Validate action-specific fields and convert to Android World's fixed actions.
+
+    `focus_check` answers "is a text field focused?" when the GUI tree reports no
+    focus at all: the accessibility forwarder marks OsmAnd's focused search field
+    unfocused (probe, 8 October 2026).
+    """
     if fields["command"] == "finish":
         if set(fields) != {"command", "message"} or not isinstance(fields["message"], str):
             raise ValueError("finish requires only a text message")
@@ -296,7 +366,8 @@ def convert_action(fields, state, allowed_apps):
         text = fields["text"]
         if not isinstance(text, str) or not text or len(text) > 2000:
             raise ValueError("Type needs 1..2000 characters")
-        if state.ui_elements and not any(e.is_visible and e.is_editable and e.is_focused for e in state.ui_elements):
+        if (state.ui_elements and not any(e.is_visible and e.is_editable and e.is_focused for e in state.ui_elements)
+                and not (focus_check and focus_check())):
             raise ValueError("No focused editable field; tap the real field first")
         return {"action_type": "input_text", "text": text, "clear_text": True}
     if name == "Launch":
@@ -512,6 +583,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         self.observations = 0
         self.route_points = 0  # last route-panel count the model reported (OsmAnd Skill)
         self.searched_next = False  # next waypoint typed since the route count last changed
+        self.tree_route = False  # True once the GUI tree has shown the route count
 
     def observe(self):
         """Check successive screenshots visually; empty trees never imply a stable screen."""
@@ -594,6 +666,18 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         text += "Fresh observed GUI labels and state:\n" + control_notes(state) + "\n"
         if task_name == "ClockTimerEntry":
             text += timer_buffer_note(state) + "\n"
+        if self.config.get("task_skills", {}).get(task_name) and state.ui_elements:
+            view = osmand_view(state.ui_elements)
+            if view["points"] is not None:
+                self.tree_route = True  # the tree, not the model's words, now keeps the count
+                if view["points"] != self.route_points:
+                    self.route_points, self.searched_next = view["points"], False
+            places = [r for r in view["rows"] if r["settlement"]]
+            if places:
+                height, width = state.pixels.shape[:2]
+                rows = [f'"{r["name"]}" ({r["type"].split(" •")[0]}) at tap center '
+                        f'[{r["center"][0] * 1000 // width}, {r["center"][1] * 1000 // height}]' for r in places]
+                text += "Place rows on this screen (choose one of these, never another row): " + "; ".join(rows) + "\n"
         text += skill_reminder(self.config, task_name, self.scratch, self.route_points)
         if self.history:
             text += "Actual observed result of last action: " + json.dumps(self.history[-1]) + "\n"
@@ -638,24 +722,36 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                 if data["choices"][0]["finish_reason"] == "length":
                     raise ValueError("Truncated model reply")
                 fields = parse_action(raw)
-                action = convert_action(fields, state, self.config["allowed_apps"])
+                action = convert_action(fields, state, self.config["allowed_apps"], focus_check=lambda: text_field_focused(self.env.controller))
                 # convert_action checks focus only when a GUI tree exists; otherwise ask Android.
                 if action["action_type"] == "input_text" and not state.ui_elements and not text_field_focused(self.env.controller):
                     raise ValueError("No text field is focused, so nothing would be typed. Tap the text field first, then Type.")
-                rule_break = osmand_rule_break(raw, action) if self.config.get("task_skills", {}).get(task_name) else None
-                if rule_break:
-                    raise ValueError(rule_break)
-                # The count this reply reads counts too: the Add attempt and "points: 1" arrive together.
-                reported = reported_route_points(raw)
-                points_now = self.route_points if reported is None else reported
-                searched = self.searched_next and points_now == self.route_points
-                if self.config.get("task_skills", {}).get(task_name) and route_add_too_early(raw, action, points_now, searched):
-                    waypoint = self.scratch["waypoints"][min(points_now, len(self.scratch["waypoints"]) - 1)].split(",")[0].strip()
-                    raise ValueError(f"Add only adds the point under the map centre, which still shows the previous waypoint. First tap the Search "
-                                     f'(magnifier) button at the top left of this screen, type "{waypoint}", open its row, press Back to this panel, then tap Add.')
-                if self.config.get("task_skills", {}).get(task_name) and favorite_save(raw, action):
-                    raise ValueError("That is OsmAnd's Favorite dialog: a Favorite is not a route point and creates no track. Do not save it. "
-                                     "Press Back to leave it, then use Actions > Plan a route (first waypoint) or Back to the route panel and its Add.")
+                skill_on = bool(self.config.get("task_skills", {}).get(task_name))
+                if skill_on and state.ui_elements:
+                    # GUI tree available (accessibility forwarder, v49): check the real screen, not the reply's words.
+                    view = osmand_view(state.ui_elements)
+                    points_now = self.route_points if view["points"] is None else view["points"]
+                    searched = self.searched_next and points_now == self.route_points
+                    correction = osmand_tree_check(view, action, state.pixels.shape[:2], points_now, searched)
+                    if correction is None and action["action_type"] == "input_text" and "," in action["text"]:
+                        correction = osmand_rule_break(raw, action)
+                    if correction:
+                        raise ValueError(correction)
+                elif skill_on:
+                    rule_break = osmand_rule_break(raw, action)
+                    if rule_break:
+                        raise ValueError(rule_break)
+                    # The count this reply reads counts too: the Add attempt and "points: 1" arrive together.
+                    reported = reported_route_points(raw)
+                    points_now = self.route_points if reported is None else reported
+                    searched = self.searched_next and points_now == self.route_points
+                    if route_add_too_early(raw, action, points_now, searched):
+                        waypoint = self.scratch["waypoints"][min(points_now, len(self.scratch["waypoints"]) - 1)].split(",")[0].strip()
+                        raise ValueError(f"Add only adds the point under the map centre, which still shows the previous waypoint. First tap the Search "
+                                         f'(magnifier) button at the top left of this screen, type "{waypoint}", open its row, press Back to this panel, then tap Add.')
+                    if favorite_save(raw, action):
+                        raise ValueError("That is OsmAnd's Favorite dialog: a Favorite is not a route point and creates no track. Do not save it. "
+                                         "Press Back to leave it, then use Actions > Plan a route (first waypoint) or Back to the route panel and its Add.")
                 calls = [line.strip() for line in raw.splitlines() if re.match(r"\s*(do|finish)\(", line)]
                 if len(calls) > 1 and len(set(calls)) == 1:
                     log_event(self.output, "IDENTICAL CALLS COLLAPSED", {"copies": len(calls), "decisions": 1, "executions_at_most": 1}, step)
@@ -733,7 +829,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                 "resource_id": selected.get("resource_id")}
         # Keep the route-panel count the model just reported for the next status line.
         points = reported_route_points(self.pending_reply)
-        if points is not None and points != self.route_points:
+        if points is not None and points != self.route_points and not self.tree_route:
             self.route_points, self.searched_next = points, False
         if action["action_type"] == "input_text" and self.scratch.get("waypoints"):
             names = [w.split(",")[0].strip().lower() for w in self.scratch["waypoints"]]

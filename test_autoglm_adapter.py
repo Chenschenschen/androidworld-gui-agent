@@ -142,6 +142,43 @@ class AdapterTests(unittest.TestCase):
         self.assertFalse(route_add_too_early(reply, click, route_points=0, searched_next=False))
         self.assertFalse(route_add_too_early("I tap the Search button at the top left.", click, route_points=1, searched_next=False))
 
+    def test_forwarder_tree_without_focus_flags(self):
+        """The forwarder reports OsmAnd's search field unfocused; Android's input method decides then."""
+        field = UIElement(text="Planken", is_visible=True, is_editable=True, is_focused=False,
+                          bbox_pixels=BoundingBox(189, 954, 128, 275), package_name="net.osmand")
+        state = SimpleNamespace(pixels=self.state.pixels, ui_elements=[field])
+        typed = {"command": "do", "action": "Type", "text": "Planken"}
+        self.assertEqual(convert_action(typed, state, [], focus_check=lambda: True)["action_type"], "input_text")
+        with self.assertRaises(ValueError):
+            convert_action(typed, state, [], focus_check=lambda: False)
+        with self.assertRaises(ValueError):
+            convert_action(typed, state, [])
+
+    def test_osmand_screen_checks_from_gui_tree(self):
+        """With the accessibility forwarder, checks read the real screen (boxes recorded in a probe)."""
+        from autoglm_agent import osmand_view, osmand_tree_check
+        def el(text, box):
+            return UIElement(text=text, is_visible=True, bbox_pixels=BoundingBox(*box), package_name="net.osmand")
+        results = [el("SHOW ON MAP", (142, 1080, 278, 404)),
+                   el("Planken", (147, 847, 475, 532)), el("Village • 2.12 mi from Schaan", (147, 630, 532, 583)),
+                   el("Planken", (147, 847, 635, 692)), el("Guidepost", (147, 315, 692, 743))]
+        view = osmand_view(results)
+        self.assertEqual([(r["name"], r["settlement"]) for r in view["rows"]], [("Planken", True), ("Planken", False)])
+        click = lambda x, y: {"action_type": "click", "x": x, "y": y}
+        self.assertIn("SHOW ON MAP", osmand_tree_check(view, click(600, 340), (2400, 1080), 0, False))
+        self.assertIn("Guidepost", osmand_tree_check(view, click(500, 700), (2400, 1080), 0, False))
+        self.assertIsNone(osmand_tree_check(view, click(500, 510), (2400, 1080), 0, False))
+        card = osmand_view([el("Planken", (42, 221, 1809, 1876)), el("Add", (106, 172, 2141, 2192)), el("Marker", (348, 465, 2141, 2192)),
+                            el("Share", (627, 722, 2141, 2192)), el("Actions", (879, 1003, 2141, 2192))])
+        self.assertIn("Favorite", osmand_tree_check(card, click(139, 2110), (2400, 1080), 0, False))
+        self.assertIsNone(osmand_tree_check(card, click(941, 2166), (2400, 1080), 0, False))
+        dialog = osmand_view([el("Add Favorite", (189, 489, 166, 237)), el("Cancel", (192, 369, 1390, 1485)), el("Save", (727, 871, 1390, 1485))])
+        self.assertIn("Favorite", osmand_tree_check(dialog, click(799, 1437), (2400, 1080), 0, False))
+        panel = osmand_view([el("0 ft, points: 1", (271, 1038, 1933, 1990)), el("Add", (867, 998, 2221, 2316))])
+        self.assertEqual(panel["points"], 1)
+        self.assertIn("Search", osmand_tree_check(panel, click(932, 2268), (2400, 1080), 1, False))
+        self.assertIsNone(osmand_tree_check(panel, click(932, 2268), (2400, 1080), 1, True))
+
     def test_osmand_rule_breaks_are_refused(self):
         """Rules the model broke repeatedly become checks: SHOW ON MAP and full-text queries."""
         from autoglm_agent import osmand_rule_break

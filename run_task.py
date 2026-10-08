@@ -265,6 +265,9 @@ def main():
     # Contacts' observed Save at step 12 needs a subsequent model inspection.
     config["max_steps"] = config.get("task_step_budgets", {}).get(args.task, config["max_steps"])
     config["max_seconds"] = config.get("task_time_budgets", {}).get(args.task, config["max_seconds"])
+    # v49: OsmAnd gets its GUI tree from Android World's accessibility forwarder (0.2 s per tree;
+    # UIAutomator dumps took 17-58 s there). Other tasks keep the screenshot-only setup.
+    config["tree_backend"] = config.get("task_tree_backends", {}).get(args.task, config["tree_backend"])
     if config.get("provider") != "zai" or config["observation"] != "screenshot" or args.observation not in {None, "screenshot"}:
         raise ValueError("AutoGLM migration uses Z.ai and screenshot observations")
     endpoint, model, _ = api_settings()

@@ -39,6 +39,15 @@ original paths, sizes and SHA256 hashes. Recordings (`video_*.mp4`) and full
 request/response files stay in the local `runs/` archive; recordings are
 excluded from Git by `.gitignore`.
 
+## Follow-up export (v43-v48, not evaluated)
+
+[followup/](followup/) holds the ten OsmAnd practice runs made after the final
+evaluation (rows 22-27 of [MEDIUM_HARD_TRIALS.md](../MEDIUM_HARD_TRIALS.md)):
+the five-run practice batch ([RESULTS](followup/eval_batch_20261008T155849_720693Z/RESULTS.md))
+and every run's summary, task, configuration, versions and readable/JSONL
+trajectory. [followup/export_manifest.json](followup/export_manifest.json)
+lists 64 files with SHA256 hashes. Recordings stay local and outside Git.
+
 ## Aggregate reports
 
 | Selected batch | Included outcome |

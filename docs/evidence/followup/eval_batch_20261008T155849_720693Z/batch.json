@@ -1,0 +1,23 @@
+{
+  "tasks": [
+    "OsmAndTrack"
+  ],
+  "task_seeds": [
+    8,
+    14,
+    1,
+    2,
+    3
+  ],
+  "source_hashes": {
+    "run_task.py": "3a4d531dfd840b43c13466b591f4bf262a5d67706a787c04fd94776601ed3e30",
+    "autoglm_agent.py": "8b668060d89496a1db64f1e4687bef59713123788611feedafece23edf7d65df",
+    "instructions/autoglm.md": "fc87621f43ad5b479306b64ddeee4520984b95d547a55e7b9d197de827f60fa1",
+    "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+    "android_compat.py": "121bfad445002ec9db94df49f7a3d9cd2de427a840353da5037517477eafd143",
+    "instructions/skills/osmand_track.md": "b942d2000882f72635211745e68f05266a8aec37d75633da72f3f07b9621a50c"
+  },
+  "run_all_seeds": true,
+  "skills_disabled": false,
+  "purpose": "Final evaluation: every task/seed recorded."
+}

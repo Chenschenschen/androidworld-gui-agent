@@ -1,0 +1,14 @@
+{
+  "name": "OsmAndTrack",
+  "goal": "Save a track with waypoints Schaanwald, Liechtenstein, Schönberg, Liechtenstein in the OsmAnd maps app in the same order as listed.",
+  "parameters": {
+    "track_name": "Schaanwald, Liechtenstein to Schönberg, Liechtenstein",
+    "waypoints": [
+      "Schaanwald, Liechtenstein",
+      "Schönberg, Liechtenstein"
+    ]
+  },
+  "verifier_rows": {},
+  "seed": 14,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

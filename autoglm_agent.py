@@ -92,6 +92,21 @@ def favorite_save(reply, action):
             and re.search(r"\bSave\b", reply) is not None)
 
 
+def osmand_rule_break(reply, action):
+    """Return a correction when an action breaks a Skill rule the model kept breaking, else None.
+
+    Recorded repeatedly: tapping the plain "SHOW ON MAP" row on an empty result
+    (the map jumps elsewhere; trials _154334, _154913, _155302) and typing the
+    full "Name, Region" text, which finds only the country.
+    """
+    if action["action_type"] == "click" and re.search(r"\bSHOW ON MAP\b", reply):
+        return ("SHOW ON MAP only moves the map; it never opens a place. If the search shows 'Could not find anything', "
+                "tap INCREASE SEARCH RADIUS; when the place row appears, tap that row.")
+    if action["action_type"] == "input_text" and "," in action["text"]:
+        return f'Type only the search term before the comma: "{action["text"].split(",")[0].strip()}".'
+    return None
+
+
 def route_add_too_early(reply, action, route_points, searched_next):
     """True when the model taps the route panel's Add before searching the next waypoint.
 
@@ -627,6 +642,9 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                 # convert_action checks focus only when a GUI tree exists; otherwise ask Android.
                 if action["action_type"] == "input_text" and not state.ui_elements and not text_field_focused(self.env.controller):
                     raise ValueError("No text field is focused, so nothing would be typed. Tap the text field first, then Type.")
+                rule_break = osmand_rule_break(raw, action) if self.config.get("task_skills", {}).get(task_name) else None
+                if rule_break:
+                    raise ValueError(rule_break)
                 # The count this reply reads counts too: the Add attempt and "points: 1" arrive together.
                 reported = reported_route_points(raw)
                 points_now = self.route_points if reported is None else reported

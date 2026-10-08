@@ -142,6 +142,16 @@ class AdapterTests(unittest.TestCase):
         self.assertFalse(route_add_too_early(reply, click, route_points=0, searched_next=False))
         self.assertFalse(route_add_too_early("I tap the Search button at the top left.", click, route_points=1, searched_next=False))
 
+    def test_osmand_rule_breaks_are_refused(self):
+        """Rules the model broke repeatedly become checks: SHOW ON MAP and full-text queries."""
+        from autoglm_agent import osmand_rule_break
+        click, typed = {"action_type": "click", "x": 1, "y": 1}, {"action_type": "input_text", "text": "Planken, Liechtenstein"}
+        # Recorded replies from trial OsmAndTrack_20261008T155302.
+        self.assertIn("SHOW ON MAP", osmand_rule_break('I should open the place card by tapping the "SHOW ON MAP" row.', click))
+        self.assertIn("Planken", osmand_rule_break("Type the full waypoint name.", typed))
+        self.assertIsNone(osmand_rule_break('Tap "SHOW MALBUN ON THE MAP" to select the village.', click))
+        self.assertIsNone(osmand_rule_break("Type the search term.", {"action_type": "input_text", "text": "Planken"}))
+
     def test_text_field_focus_without_gui_tree(self):
         """Android's input-method dump tells whether a text field holds focus."""
         from autoglm_agent import text_field_focused

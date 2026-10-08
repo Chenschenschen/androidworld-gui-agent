@@ -95,6 +95,11 @@ def favorite_save(reply, action):
 SETTLEMENT = re.compile(r"^(Village|Hamlet|Town|City)\b")
 
 
+def search_busy(elements):
+    """True while OsmAnd's search progress spinner is on screen (only visible in a GUI tree)."""
+    return any(e.is_visible and (e.resource_name or "").endswith(":id/searchProgressBar") for e in elements or [])
+
+
 def osmand_view(elements):
     """Read OsmAnd's screen from the GUI tree: route count, dialogs and search rows with their types.
 
@@ -444,9 +449,9 @@ def target_at(state, action):
 def screen_controls(state):
     """Expose observed app labels and state flags without inventing task progress."""
     controls = []
-    # Keep informative app nodes; status-bar clocks and empty containers add noise.
+    # Keep informative app nodes; status-bar clocks, keyboard keys (Type enters text) and empty containers add noise.
     for element in state.ui_elements:
-        if element.is_visible and element.package_name != "com.android.systemui" and (
+        if element.is_visible and element.package_name != "com.android.systemui" and "inputmethod" not in (element.package_name or "") and (
                 element.text or element.content_description or element.is_checkable or element.is_selected):
             control = {"label": (element.metadata or {}).get("observed_label") or element.text or element.content_description or element.class_name,
                 "checked": element.is_checked if element.is_checkable else None,
@@ -601,6 +606,16 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                 break
         log_event(self.output, "VISUAL SETTLING", {"difference": change,
             "within_threshold": change <= self.config["visual_stability_difference"], "tree_backend": self.config["tree_backend"]}, len(self.history) + 1)
+        # OsmAnd searches in the background: a list read while its spinner turns looks empty (v49 seed 8 read it as "no match").
+        for waited in range(30):
+            if time.monotonic() >= self.deadline or not search_busy(state.ui_elements):
+                break
+            time.sleep(1)
+            state = self.env.get_state(wait_to_stabilize=False)
+        else:
+            waited = 30
+        if waited:
+            log_event(self.output, "SEARCH SPINNER WAIT", {"seconds": waited, "still_busy": search_busy(state.ui_elements)}, len(self.history) + 1)
         # A working display always renders something (at least the status bar).
         # An all-zero frame is an emulator rendering failure (observed with the
         # host-GPU backend: glReadPixels error 0x506), not a screen to reason about.

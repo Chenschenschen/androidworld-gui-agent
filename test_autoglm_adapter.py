@@ -423,6 +423,26 @@ class AdapterTests(unittest.TestCase):
                     with self.assertRaisesRegex(RuntimeError, "black"):
                         agent.observe()
 
+    def test_observation_waits_for_search_spinner_and_hides_keyboard(self):
+        """A list read while OsmAnd's spinner turns looks empty; keyboard keys never reach the model."""
+        temp_root = Path(__file__).parent / ".tools/tmp"
+        temp_root.mkdir(parents=True, exist_ok=True)
+        spinner = UIElement(is_visible=True, resource_name="net.osmand:id/searchProgressBar", bbox_pixels=BoundingBox(975, 1059, 159, 243))
+        key = UIElement(content_description="q", is_visible=True, is_clickable=True, bbox_pixels=BoundingBox(5, 112, 1654, 1808),
+                        package_name="com.google.android.inputmethod.latin")
+        row = UIElement(text="Planken", is_visible=True, is_clickable=True, bbox_pixels=BoundingBox(0, 1080, 404, 530), package_name="net.osmand")
+        pixels = np.full((500, 400, 3), 9, dtype=np.uint8)
+        screens = iter([[spinner, key], [spinner, key], [spinner, key], [row, key]])
+        with tempfile.TemporaryDirectory(dir=temp_root) as folder, patch("autoglm_agent.time.sleep"):
+            agent = object.__new__(AutoGLMAgent)
+            agent.output, agent.history, agent.deadline = Path(folder), [], float("inf")
+            agent.config = {"visual_stability_checks": 1, "visual_stability_pause": 0,
+                            "visual_stability_difference": 1, "tree_backend": "a11y_forwarder"}
+            agent.env = SimpleNamespace(get_state=lambda wait_to_stabilize: State(pixels, None, next(screens)))
+            state = agent.observe()
+        self.assertEqual(state.ui_elements, [row, key])
+        self.assertEqual([c["label"] for c in screen_controls(state)], ["Planken"])
+
     def test_xml_image_pairing(self):
         """Keep genuine XML on an unchanged scene, discard it after a visual transition."""
         state = State(self.state.pixels, None, [])

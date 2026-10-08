@@ -498,7 +498,9 @@ class AdapterTests(unittest.TestCase):
             'Press Back until the route panel ("points: 1", Add, Done) is shown; the map stays centred on "Rotenboden".', "Rotenboden"))
         # v55 seed 8: a street list inside the place, and a panel whose centre is still the last point.
         streets = [field("Rotenboden "), el("SHOW ROTENBODEN ON THE MAP", (142, 1080, 278, 404), "buttonToolbarTitle")]
-        self.assertIn('Tap "SHOW ROTENBODEN ON THE MAP"', step(streets, 1, "Rotenboden")[0])
+        self.assertIn('Tap "SHOW ROTENBODEN ON THE MAP"', step(streets, 1)[0])
+        # v58 seed 8: after the card was seen, Back passes the street list again; it must not send the model back to SHOW.
+        self.assertIn("Press Back", step(streets, 1, "Rotenboden")[0])
         self.assertIn('Tap "Search"', step(panel(1) + [el("0 ft • 0°", (189, 309, 1990, 2041))], 1, "Rotenboden")[0])
         self.assertIn('Tap "Done"', step(panel(2), 2)[0])
         self.assertIn("Tap \"Cancel\"", step([el("Exit without saving?", (0, 1080, 800, 900), "title"), el("Cancel", (0, 500, 1500, 1600))], 1)[0])

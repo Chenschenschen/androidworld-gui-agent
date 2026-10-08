@@ -237,11 +237,12 @@ def osmand_next_step(elements, terms, route_points, centred_on, shape):
         return (tap(search) + f' (the magnifier) to look up the next waypoint "{terms[n]}".' if search else None), None
     field = by_id("searchEditText")
     if field is not None:
+        # Once its card was seen the map is there; Back passes the street list again (v58 seed 8 looped SHOW/Back).
+        if route_points and centred_on == term:
+            return f'Press Back until the route panel is shown; the map is centred on "{term}".', None
         show = find(f"SHOW {re.escape(term.upper())} ON THE MAP")
         if show:
             return tap(show) + f' This selects "{term}" itself.', None
-        if route_points and centred_on == term:
-            return f'Press Back until the route panel is shown; the map is centred on "{term}".', None
         typed = "" if field.text in (None, "", field.hint_text) else field.text.strip()
         if typed != term:
             clear = find("Clear")

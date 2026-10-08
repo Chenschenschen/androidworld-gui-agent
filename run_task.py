@@ -24,7 +24,7 @@ import urllib.error
 import urllib.request
 from PIL import Image
 
-from android_compat import enable_windows_compat, enable_fresh_xml
+from android_compat import enable_windows_compat, enable_fresh_xml, keep_adb_server
 from probe_connection import save_json
 from trajectory import log_event
 
@@ -235,6 +235,7 @@ def main():
     temp_root.mkdir(parents=True, exist_ok=True)
     tempfile.tempdir = str(temp_root)
     enable_windows_compat()
+    keep_adb_server()
     from android_world import registry
     from android_world.env import env_launcher
     from android_world.env.setup_device import apps, setup
@@ -266,7 +267,8 @@ def main():
                    else "unique_visible_labels" if config.get("label_grounding") and config["observation"] == "tree"
                    else "indices_with_conditional_coordinates" if config["observation"] == "tree_first"
                    else "coordinates" if config["observation"] == "screenshot" else "indices",
-               "step_budget": config["max_steps"], "time_budget_seconds": config["max_seconds"]}
+               "step_budget": config["max_steps"], "time_budget_seconds": config["max_seconds"],
+               "skill": config.get("task_skills", {}).get(args.task)}
     env, task, recorder, agent = None, None, None, None
     stop, ready = threading.Event(), threading.Event()
     video_errors = []
@@ -280,6 +282,7 @@ def main():
             shutil.copyfile(PROJECT / filename, source / filename)
         (source / "instructions").mkdir()
         shutil.copyfile(PROJECT / "instructions/autoglm.md", source / "instructions/autoglm.md")
+        shutil.copytree(PROJECT / "instructions/skills", source / "instructions/skills")
         save_json(output / "versions.json", {"model": model, "provider": "zai", "endpoint": endpoint,
             "provider_revision": "not exposed by API; response model/request IDs saved per call",
             "python": sys.version, "android_world": importlib.metadata.version("android-world"),

@@ -71,6 +71,25 @@ class AdapterTests(unittest.TestCase):
             launch_app("contacts", None)
             upstream.assert_called_once_with("contacts", None)
 
+    def test_skill_loads_only_for_its_task(self):
+        """A configured Skill joins the prompt for its own task only; none when disabled."""
+        from autoglm_agent import skill_text
+        config = {"task_skills": {"OsmAndTrack": "instructions/skills/osmand_track.md"}}
+        self.assertIn("Plan a route", skill_text(config, "OsmAndTrack"))
+        self.assertEqual(skill_text(config, "SimpleCalendarAddOneEvent"), "")
+        self.assertEqual(skill_text({"task_skills": {}}, "OsmAndTrack"), "")
+
+    def test_adb_retry_keeps_server(self):
+        """A timed-out ADB command is retried without killing the shared ADB server."""
+        from android_env.components import adb_controller
+        from android_compat import keep_adb_server
+        self.addCleanup(setattr, adb_controller.AdbController, "_restart_server", adb_controller.AdbController._restart_server)
+        keep_adb_server()
+        controller = object.__new__(adb_controller.AdbController)
+        with patch.object(adb_controller.AdbController, "execute_command") as execute, patch("android_compat.time.sleep"):
+            controller._restart_server(timeout=5)
+            execute.assert_not_called()
+
     def test_fresh_xml_retries_transient_null_root(self):
         """A launching app's transient null root is retried; stale XML is never returned."""
         from android_world.env import adb_utils

@@ -44,6 +44,24 @@ def enable_windows_compat():
     adb_call_parser.AdbCallParser._install_apk = install_from_closed_file
 
 
+def keep_adb_server():
+    """Retry a failed ADB command on the same server instead of restarting it.
+
+    android_env runs `adb kill-server` before retrying any timed-out command.
+    That drops every ADB connection, including the screen recorder's, and lost
+    the video of two OsmAnd trials (slow `am start -W`, slow `input text`).
+    The retry itself still happens; only the server restart is replaced by a
+    short pause.
+    """
+    from android_env.components import adb_controller
+
+    def pause_instead(self, timeout=None):
+        """Give a slow device a moment before android_env's own retry."""
+        time.sleep(2)
+
+    adb_controller.AdbController._restart_server = pause_instead
+
+
 def enable_fresh_xml():
     """Prevent reused XML files from masquerading as a fresh UIAutomator observation."""
     from android_world.env import adb_utils

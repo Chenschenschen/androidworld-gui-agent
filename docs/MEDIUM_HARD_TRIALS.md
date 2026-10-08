@@ -24,7 +24,8 @@ temperature 0. Task seeds generate the task instance; see each `task.json`.
 | 5 | `trial_SimpleCalendarAddOneEvent_20261008T111150_520085Z` | v31 (alias draft) | Calendar, 42 | Validation error at step 1 | A *different* Chinese translation ("Simple Calendar Professional Edition"). A per-name alias table cannot keep up | Alias table replaced by a general rule: a non-Latin Launch name resolves only when exactly one app is allowed |
 | 6 | `trial_SimpleCalendarAddOneEvent_20261008T111334_367105Z` | v31 | Calendar, 42 | **Clean PASS**, 20 steps, 149 s | Title, description, date (18 Oct), 00:00 start and 45-minute duration entered and saved | None |
 | 7 | `trial_OsmAndTrack_20261008T111626_419084Z` | v31 | OsmAnd, 43 (2 waypoints) | FAIL, `control_no_progress` after 6 steps; recording invalid | Opened Menu > Plan a route > Create new route, then tapped **Add** expecting a search dialog. In OsmAnd, Add places a point at the centre crosshair, which was in the Gulf of Guinea (default world view). The first Add worked (`points: 1`, verified afterwards), but the counter and dot appeared after the observation; repeated Adds at the same spot add nothing, so the cycle stop ended the run. Separately the device recorder ended before the run did (`kill -2` found no process) | v32 recorder polling (below); OsmAnd knowledge investigated manually (next section) |
-
+| 8 | `eval_batch_20261008T113903_850432Z` (3 runs) | v32 | OsmAnd, 42/43/44 | 0/3; seed 43 recording-invalid | Same strategy in every run: Menu > Plan a route > Create new route, then repeated **Add** on the default world view until the cycle stop (6 steps). In all three runs the recorder ended right after the Launch action; v32 replaced the clip for seeds 42 and 44, but for seed 43 no clip had been written | Kept as a learning record only; superseded as baseline because recording was affected |
+| 9 | `trial_OsmAndTrack_20261008T114612_032845Z` | v32 | OsmAnd, 44 | FAIL, same Add cycle | Diagnostic run with the device log cleared first. adbd logged `host-34: connection terminated` at the moment the recorder ended; the console logged `Failed to execute ADB command (try 1 of 3): ... am start -W -n net.osmand/...` | **Root cause:** Android World launches with a 5 s timeout; the cold OsmAnd start was slower, and android_env's retry runs `adb kill-server`, dropping the recorder's ADB connection. v33 launches with a 30 s timeout |
 ## Changes and why they sit in that layer
 
 - **Fresh XML retry (program layer).** The failure was a transient device
@@ -51,6 +52,11 @@ temperature 0. Task seeds generate the task instance; see each `task.json`.
   to the trajectory. GUI actions already wait while a clip rolls over, so at most
   about one second is unrecorded. Verified live by killing the device recorder
   mid-run: two valid clips, a logged note and no recorder error.
+- **Launch timeout (program layer, v33).** Trial 9 found the actual cause of
+  the recorder deaths: an expired 5-second `am start -W` made android_env
+  restart the ADB server. Launching with a 30-second timeout removes the
+  trigger; the v32 polling stays as a safety net. Offline check:
+  `test_launch_waits_for_slow_cold_start`.
 
 ## How OsmAndTrack can actually be completed (manual exploration)
 

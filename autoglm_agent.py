@@ -56,6 +56,18 @@ def launch_name(app, allowed_apps):
     return None
 
 
+def skill_text(config, task_name):
+    """Return the task's optional Skill (procedural app knowledge) for the prompt, or "".
+
+    Course D2 pattern: a Skill file is loaded only when its trigger matches,
+    here the task name in config["task_skills"]. Disabled when the map is empty.
+    """
+    path = config.get("task_skills", {}).get(task_name)
+    if not path:
+        return ""
+    return f"\nSKILL for {task_name} (app procedure):\n" + (PROJECT / path).read_text(encoding="utf-8")
+
+
 def launch_app(app_name, controller, timeout_sec=30):
     """Launch like Android World's launch_app, but give `am start -W` time to finish.
 
@@ -426,6 +438,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         # A benchmark parameter name can resemble current state; label the goal.
         model_inputs = {"text_to_copy": self.scratch["clipboard_content"]} if task_name == "SystemCopyToClipboard" else self.scratch
         prompt += "\nCOMPLETION CONDITION for " + task_name + ":\n" + completion_condition(task_name, self.scratch)
+        prompt += skill_text(self.config, task_name)
         prompt += f"\nAvailable apps: {json.dumps(self.config['allowed_apps'])}\n"
         # Upstream gives the goal once; later user turns are observations of that
         # same task, not new requests to perform it again (especially one photo).

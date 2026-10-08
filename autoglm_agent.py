@@ -324,7 +324,13 @@ def repeated_without_progress(action, actions, results):
     """Bound unchanged repeats/cycles; never turn a stop into model completion."""
     if action["action_type"] == "status":
         return False  # The independent verifier judges a model-issued finish.
-    same = len(actions) >= 2 and all(previous == action for previous in actions[-2:]) and all(r["no_visible_effect"] for r in results[-2:])
+    if action["action_type"] == "wait":
+        # A slow splash screen legitimately stays unchanged for a few waits
+        # (cold OsmAnd start, trial OsmAndTrack_20261008T122441). Bound waiting
+        # separately: stop only after five unchanged waits in a row.
+        recent = list(zip(actions, results))[-5:]
+        return len(recent) == 5 and all(a["action_type"] == "wait" and r["no_visible_effect"] for a, r in recent)
+    same =len(actions) >= 2 and all(previous == action for previous in actions[-2:]) and all(r["no_visible_effect"] for r in results[-2:])
     cycle = len(actions) >= 3 and action in actions[-3:] and all(r["no_visible_effect"] for r in results[-3:])
     return same or cycle
 

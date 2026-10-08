@@ -11,7 +11,7 @@ Facts about this OsmAnd version (4.6):
 - The panel text "points: N" counts the route points. It can update a moment after Add, so check it before tapping Add again. Adding twice at the same centre adds nothing.
 
 Procedure:
-1. Launch OsmAnd. Tap the Search (magnifier) button. First type the region named in the task after the comma (the country), tap its result row so the map moves there, and press Back. Then open Search again and type only the first waypoint's place name, for example "Vaduz". Near the map centre it is found without widening the radius.
+1. Launch OsmAnd. Tap the Search (magnifier) button and type only the first waypoint's place name, for example "Vaduz". The map starts far away, so the search first shows "Could not find anything": widen it as in step 2 (three or four taps from the default view).
 2. While the search shows "Could not find anything", do not tap SHOW ON MAP and do not zoom: tap INCREASE SEARCH RADIUS until a row with the place name appears. Choose the result that is the place itself (Village, Hamlet or Town), not a guidepost, street, station or shop. If a list of streets inside that place opens, tap the row "SHOW ... ON THE MAP" at the top.
 3. On the place card tap Actions, then "Plan a route". The route now shows points: 1.
 4. For each next waypoint, in the listed order: in Plan a route tap the Search (magnifier) button, the second round button at the top left (the first, a globe, is Configure map), clear the old text, type the place name and choose the place as in step 2. When its place card is shown, press Back until the Plan a route panel with Add and Done is visible again; the map stays centred on the place. Tap Add and check that "points" increased by one.

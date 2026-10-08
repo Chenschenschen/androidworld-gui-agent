@@ -454,6 +454,40 @@ class AdapterTests(unittest.TestCase):
         state = SimpleNamespace(pixels=np.zeros((2400, 1080, 3), dtype=np.uint8), ui_elements=[radius])
         self.assertEqual(screen_controls(state)[0]["tap_center"], [504, 304])
 
+    def test_osmand_next_step_follows_the_procedure(self):
+        """Labels and resource names as recorded in v50-v52 runs; one step per screen through a two-waypoint track."""
+        from autoglm_agent import osmand_next_step
+        def el(label, box, rid="", desc=False, hint=None):
+            return UIElement(text=None if desc else label, content_description=label if desc else None, hint_text=hint, is_visible=True,
+                             bbox_pixels=BoundingBox(*box), resource_name="net.osmand:id/" + rid, package_name="net.osmand")
+        terms, shape = ["Planken", "Rotenboden"], (2400, 1080)
+        step = lambda screen, points=0, centred=None: osmand_next_step(screen, terms, points, centred, shape)
+        field = lambda text: el(text, (189, 975, 128, 275), "searchEditText", hint="Type to search all")
+        self.assertIn('Tap "Search" at tap center [187, 83]', step([el("Map", (0, 1080, 0, 2337), desc=True),
+            el("Configure map", (16, 132, 128, 236), desc=True), el("Search", (145, 261, 128, 275), desc=True)])[0])
+        self.assertEqual(step([field("Type to search all")])[0], 'Type "Planken" (only the place name).')
+        empty = [field("Planken"), el("Clear", (900, 1050, 128, 275), desc=True), el("INCREASE SEARCH RADIUS", (189, 900, 770, 840))]
+        self.assertIn('Tap "INCREASE SEARCH RADIUS"', step(empty)[0])
+        self.assertIn('Tap "Clear"', step([field("Liechtenstein"), el("Clear", (900, 1050, 128, 275), desc=True)])[0])
+        rows = [field("Planken"), el("Planken", (189, 900, 1400, 1460), "title"), el("Guidepost", (189, 600, 1460, 1500), "subtitle"),
+                el("Planken", (189, 900, 1500, 1560), "title"), el("Village", (189, 600, 1560, 1600), "subtitle")]
+        self.assertIn('Village row "Planken" at tap center [503, 637]', step(rows)[0])
+        card = lambda name, kind: [el(name, (42, 900, 1809, 1876), "context_menu_line1"), el(kind, (42, 600, 1876, 1920), "context_menu_line2"),
+                                   el("Add", (106, 172, 2141, 2192)), el("Marker", (348, 465, 2141, 2192)), el("Share", (500, 600, 2141, 2192)),
+                                   el("Actions", (800, 1000, 2141, 2192))]
+        self.assertIn('Tap "Actions"', step(card("Planken", "Village"))[0])
+        self.assertIn("not the place", step(card("Planken", "Guidepost"))[0])
+        menu = [el("Directions from", (0, 1080, 800, 900), "title"), el("Plan a route", (0, 1080, 1000, 1100), "title")]
+        self.assertIn('Tap "Plan a route"', step(menu)[0])
+        panel = lambda n: [el("Search", (145, 261, 291, 407), desc=True), el("Done", (835, 1027, 154, 249)), el(f"points: {n}", (271, 1038, 1933, 1990)),
+                           el("Add", (867, 998, 2221, 2316))]
+        self.assertIn('Tap "Search"', step(panel(1), 1)[0])
+        self.assertEqual(step(card("Rotenboden", "Hamlet"), 1)[1], "Rotenboden")
+        self.assertIn("Press Back", step([field("Rotenboden")], 1, "Rotenboden")[0])
+        self.assertIn('Tap "Add"', step(panel(1), 1, "Rotenboden")[0])
+        self.assertIn('Tap "Done"', step(panel(2), 2)[0])
+        self.assertIn("Tap \"Cancel\"", step([el("Exit without saving?", (0, 1080, 800, 900), "title"), el("Cancel", (0, 500, 1500, 1600))], 1)[0])
+
     def test_near_empty_forwarder_tree_falls_back_to_uiautomator(self):
         """The forwarder shows OsmAnd's Plan a route screen as only "Map"; UIAutomator then reads it."""
         from autoglm_agent import thin_tree

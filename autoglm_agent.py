@@ -185,6 +185,77 @@ def osmand_rule_break(reply, action):
     return None
 
 
+def osmand_next_step(elements, terms, route_points, centred_on, shape):
+    """The Skill's procedure as code: the next step for the observed OsmAnd screen (v53).
+
+    v49-v52 gave the procedure as text plus checks; the model still lost its
+    place between screens (it retyped searches, which resets the radius, and
+    tapped remembered coordinates). Screens are recognised by labels and
+    resource names recorded in those runs. Returns (hint or None, name of a
+    waypoint whose place card is open in route mode, else None).
+    """
+    height, width = shape
+    seen = [e for e in elements if e.is_visible and e.bbox_pixels and (e.text or e.content_description)]
+    find = lambda pattern: next((e for e in seen if any(v and re.fullmatch(pattern, v.strip()) for v in (e.text, e.content_description))), None)
+    by_id = lambda suffix: next((e for e in elements if e.is_visible and (e.resource_name or "").endswith(suffix)), None)
+    def tap(e, label=None):
+        b = e.bbox_pixels
+        return f'Tap "{label or e.text or e.content_description}" at tap center [{(b.x_min + b.x_max) * 500 // width}, {(b.y_min + b.y_max) * 500 // height}].'
+    view = osmand_view(elements)
+    total = len(terms)
+    term = terms[min(route_points, total - 1)]
+    if view["favorite_dialog"] or find(r"Exit without saving\?"):
+        cancel = find("Cancel")
+        return (tap(cancel) + " This dialog is not part of the route." if cancel else "Press Back."), None
+    if find("Directions from") and find("Plan a route"):
+        return tap(find("Plan a route")) + f' This starts the route at "{terms[0]}" (points: 1).', None
+    if view["points"] is not None:
+        n = view["points"]
+        if n >= total:
+            done = find("Done")
+            return (tap(done) + f" All {total} waypoints are in the route; Done saves the track." if done else None), None
+        if centred_on == terms[n]:
+            add = find("Add")
+            return (tap(add) + f' The map is centred on "{terms[n]}"; Add makes it point {n + 1}.' if add else None), None
+        search = find("Search")
+        return (tap(search) + f' (the magnifier) to look up the next waypoint "{terms[n]}".' if search else None), None
+    if view["place_card"]:
+        name, kind = by_id("context_menu_line1"), by_id("context_menu_line2")
+        name, kind = (name.text or "").strip() if name else "", (kind.text or "") if kind else ""
+        if name != term or not SETTLEMENT.match(kind):
+            return f'This card is not the place "{term}" (a Village, Hamlet or Town). Press Back and choose the place row.', None
+        if route_points == 0:
+            return tap(find("Actions")) + ' Then choose "Plan a route".', None
+        return f'Press Back until the route panel ("points: {route_points}", Add, Done) is shown; the map stays centred on "{name}".', name
+    field = by_id("searchEditText")
+    if field is not None:
+        if route_points and centred_on == term:
+            return f'Press Back until the route panel is shown; the map is centred on "{term}".', None
+        typed = "" if field.text in (None, "", field.hint_text) else field.text.strip()
+        show = find(f"SHOW {re.escape(term.upper())} ON THE MAP")
+        if show:
+            return tap(show) + f' This selects "{term}" itself.', None
+        if typed != term:
+            clear = find("Clear")
+            if typed and clear:
+                return tap(clear) + f' Then type "{term}".', None
+            return f'Type "{term}" (only the place name).', None
+        row = next((r for r in view["rows"] if r["settlement"] and r["name"] == term), None)
+        if row:
+            return (f'Tap the {row["type"].split(" •")[0]} row "{term}" at tap center '
+                    f'[{row["center"][0] * 1000 // width}, {row["center"][1] * 1000 // height}].'), None
+        radius = find("INCREASE SEARCH RADIUS")
+        if radius:
+            return tap(radius) + " Repeat until the place row appears; do not retype the text (that resets the radius).", None
+        return "Wait for the results.", None
+    search = find("Search")
+    if search and route_points == 0:
+        return tap(search) + f' (the magnifier) to look up "{terms[0]}".', None
+    if route_points >= total:
+        return "All waypoints were added and Done was tapped: the track is saved. Finish.", None
+    return None, None
+
+
 def route_add_too_early(reply, action, route_points, searched_next):
     """True when the model taps the route panel's Add before searching the next waypoint.
 
@@ -599,6 +670,8 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         self.observations = 0
         self.route_points = 0  # last route-panel count the model reported (OsmAnd Skill)
         self.searched_next = False  # next waypoint typed since the route count last changed
+        self.centred_on = None  # waypoint whose place card was open in route mode (Back leaves the map there)
+        self.next_hint = None  # code-computed next step for the observed OsmAnd screen (v53)
         self.tree_route = False  # True once the GUI tree has shown the route count
 
     def observe(self):
@@ -700,14 +773,25 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
             if view["points"] is not None:
                 self.tree_route = True  # the tree, not the model's words, now keeps the count
                 if view["points"] != self.route_points:
-                    self.route_points, self.searched_next = view["points"], False
+                    self.route_points, self.searched_next, self.centred_on = view["points"], False, None
             places = [r for r in view["rows"] if r["settlement"]]
             if places:
                 height, width = state.pixels.shape[:2]
                 rows = [f'"{r["name"]}" ({r["type"].split(" •")[0]}) at tap center '
                         f'[{r["center"][0] * 1000 // width}, {r["center"][1] * 1000 // height}]' for r in places]
                 text += "Place rows on this screen (choose one of these, never another row): " + "; ".join(rows) + "\n"
-        text += skill_reminder(self.config, task_name, self.scratch, self.route_points)
+        self.next_hint = None
+        if self.config.get("task_skills", {}).get(task_name) and state.ui_elements:
+            terms = [waypoint.split(",")[0].strip() for waypoint in self.scratch["waypoints"]]
+            centred = self.centred_on or (terms[min(self.route_points, len(terms) - 1)] if self.searched_next else None)
+            self.next_hint, card = osmand_next_step(state.ui_elements, terms, self.route_points, centred, state.pixels.shape[:2])
+            self.centred_on = card or self.centred_on
+        if self.next_hint:
+            names = "; ".join(f'{i}. "{t}"' for i, t in enumerate(terms, 1))
+            text += (f"Skill status: route points {self.route_points} of {len(terms)} (read from the route panel). Waypoints in order: {names}. "
+                     f"Next step for this screen (computed by code from the OsmAnd procedure): {self.next_hint}\n")
+        else:
+            text += skill_reminder(self.config, task_name, self.scratch, self.route_points)
         if self.history:
             text += "Actual observed result of last action: " + json.dumps(self.history[-1]) + "\n"
         text += "Check the original completion condition before acting; finish when it is satisfied."
@@ -760,12 +844,14 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                     # GUI tree available (accessibility forwarder, v49): check the real screen, not the reply's words.
                     view = osmand_view(state.ui_elements)
                     points_now = self.route_points if view["points"] is None else view["points"]
-                    searched = self.searched_next and points_now == self.route_points
+                    terms = [waypoint.split(",")[0].strip() for waypoint in self.scratch["waypoints"]]
+                    searched = points_now == self.route_points and (self.searched_next or self.centred_on == terms[min(points_now, len(terms) - 1)])
                     correction = osmand_tree_check(view, action, state.pixels.shape[:2], points_now, searched)
                     if correction is None and action["action_type"] == "input_text" and "," in action["text"]:
                         correction = osmand_rule_break(raw, action)
                     if correction:
-                        raise ValueError(correction)
+                        # v52 seed 8: a fixed "tap INCREASE SEARCH RADIUS" sent the model away from the country row.
+                        raise ValueError(correction + (f" Next step for this screen: {self.next_hint}" if self.next_hint else ""))
                 elif skill_on:
                     rule_break = osmand_rule_break(raw, action)
                     if rule_break:

@@ -85,6 +85,17 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(skill_text(config, "SimpleCalendarAddOneEvent", inputs), "")
         self.assertEqual(skill_text({"task_skills": {}}, "OsmAndTrack", inputs), "")
 
+    def test_skill_reminder_repeats_search_terms_each_step(self):
+        """With the Skill on, every step restates the search terms; nothing without it."""
+        from autoglm_agent import skill_reminder
+        config = {"task_skills": {"OsmAndTrack": "instructions/skills/osmand_track.md"}}
+        inputs = {"waypoints": ["Planken, Liechtenstein", "Rotenboden, Liechtenstein"]}
+        reminder = skill_reminder(config, "OsmAndTrack", inputs)
+        self.assertIn('1. "Planken"', reminder)
+        self.assertIn("never the full", reminder)
+        self.assertEqual(skill_reminder({"task_skills": {}}, "OsmAndTrack", inputs), "")
+        self.assertEqual(skill_reminder(config, "ContactsAddContact", {"name": "A"}), "")
+
     def test_history_window_keeps_goal_and_recent_turns(self):
         """Long runs keep the first (goal) turn and the latest turns within the prompt limit."""
         from autoglm_agent import history_window

@@ -75,6 +75,18 @@ def skill_text(config, task_name, inputs):
     return text
 
 
+def skill_reminder(config, task_name, inputs):
+    """One status line per step that restates the Skill's search terms (D2 status bar).
+
+    The Skill in the system prompt alone was not followed: trial
+    OsmAndTrack_20261008T131512 still typed "Planken, Liechtenstein".
+    """
+    if not config.get("task_skills", {}).get(task_name) or not inputs.get("waypoints"):
+        return ""
+    terms = " ".join(f'{number}. "{waypoint.split(",")[0].strip()}"' for number, waypoint in enumerate(inputs["waypoints"], 1))
+    return f"Skill reminder: type only the search term, never the full waypoint text. Search terms in order: {terms}\n"
+
+
 def history_window(conversation, turns):
     """Keep the first executed turn (it carries the task goal) and the latest turns.
 
@@ -482,6 +494,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         text += "Fresh observed GUI labels and state:\n" + control_notes(state) + "\n"
         if task_name == "ClockTimerEntry":
             text += timer_buffer_note(state) + "\n"
+        text += skill_reminder(self.config, task_name, self.scratch)
         if self.history:
             text += "Actual observed result of last action: " + json.dumps(self.history[-1]) + "\n"
         text += "Check the original completion condition before acting; finish when it is satisfied."

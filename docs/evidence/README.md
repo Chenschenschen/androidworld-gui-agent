@@ -61,7 +61,8 @@ PASS just before Done). [extra/export_manifest.json](extra/export_manifest.json)
 lists 136 files with original paths, sizes and SHA256 hashes; the export
 checks that no file contains the API key. Links inside the exported
 RESULTS.md files follow the local `runs/` layout; the exported runs are under
-`extra/runs/`. Recordings stay local and outside Git.
+`extra/runs/`. Recordings stay local and outside Git: all 51 clips of these 21
+runs are in `osmand_extra_v49_v62_recordings.zip` (219 MB) next to the repository.
 
 ## Aggregate reports
 

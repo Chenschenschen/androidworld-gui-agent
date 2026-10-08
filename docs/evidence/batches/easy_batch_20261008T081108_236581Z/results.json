@@ -1,0 +1,16 @@
+[
+  {
+    "task": "SystemCopyToClipboard",
+    "task_seed": 43,
+    "run_id": "trial_SystemCopyToClipboard_20261008T081108_888681Z",
+    "version": "autoglm_api_v27_observed_edittext",
+    "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+    "verifier": "FAIL",
+    "agent_done": true,
+    "steps": 5,
+    "duration_seconds": 81.48399999999674,
+    "evaluation_valid": true,
+    "clean_agent_success": false,
+    "stop_reason": "complete"
+  }
+]

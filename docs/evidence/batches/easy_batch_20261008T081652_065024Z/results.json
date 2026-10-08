@@ -1,0 +1,30 @@
+[
+  {
+    "task": "ContactsAddContact",
+    "task_seed": 42,
+    "run_id": "trial_ContactsAddContact_20261008T081652_701104Z",
+    "version": "autoglm_api_v28_actual_control_feedback",
+    "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+    "verifier": "PASS",
+    "agent_done": true,
+    "steps": 11,
+    "duration_seconds": 71.43700000000536,
+    "evaluation_valid": true,
+    "clean_agent_success": true,
+    "stop_reason": "complete"
+  },
+  {
+    "task": "ClockTimerEntry",
+    "task_seed": 42,
+    "run_id": "trial_ClockTimerEntry_20261008T081804_857919Z",
+    "version": "autoglm_api_v28_actual_control_feedback",
+    "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+    "verifier": "FAIL",
+    "agent_done": false,
+    "steps": 12,
+    "duration_seconds": 149.36000000000058,
+    "evaluation_valid": true,
+    "clean_agent_success": false,
+    "stop_reason": "step_budget"
+  }
+]

@@ -1,0 +1,28 @@
+# Credentials and personal settings (the template is safe to commit).
+.env
+.env.*
+!.env.example
+
+# Local environments, upstream checkout, course originals and review tooling.
+/.venv/
+/.tools/
+/.review/
+/android_world/
+/course_content/
+
+# Generated experiments stay local; the small evidence export is under docs/.
+/runs/
+# Private raw evidence exports remain local; only aggregate reports are shared.
+/docs/evidence/runs/
+/docs/evidence/export_manifest.json
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.idea/
+.vscode/
+*.mp4
+*.apk
+*.log

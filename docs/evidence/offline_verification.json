@@ -1,0 +1,24 @@
+{
+  "contacts_frozen_sources_match": true,
+  "contacts_clean_trials": [
+    {
+      "run_id": "trial_ContactsAddContact_20261008T081652_701104Z",
+      "steps": 11,
+      "duration_seconds": 71.43700000000536
+    },
+    {
+      "run_id": "trial_ContactsAddContact_20261008T082214_643123Z",
+      "steps": 11,
+      "duration_seconds": 70.0
+    },
+    {
+      "run_id": "trial_ContactsAddContact_20261008T082325_354857Z",
+      "steps": 11,
+      "duration_seconds": 68.68700000000536
+    }
+  ],
+  "v29_timer_guard_counterfactual_block_before_step": 12,
+  "device_actions": 0,
+  "model_calls": 0,
+  "limitation": "Offline replay only; Timer still failed and no live v29 success is established."
+}

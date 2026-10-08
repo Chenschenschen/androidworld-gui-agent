@@ -1,0 +1,30 @@
+[
+  {
+    "task": "ContactsAddContact",
+    "task_seed": 43,
+    "run_id": "trial_ContactsAddContact_20261008T082214_643123Z",
+    "version": "autoglm_api_v28_actual_control_feedback",
+    "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+    "verifier": "PASS",
+    "agent_done": true,
+    "steps": 11,
+    "duration_seconds": 70.0,
+    "evaluation_valid": true,
+    "clean_agent_success": true,
+    "stop_reason": "complete"
+  },
+  {
+    "task": "ContactsAddContact",
+    "task_seed": 44,
+    "run_id": "trial_ContactsAddContact_20261008T082325_354857Z",
+    "version": "autoglm_api_v28_actual_control_feedback",
+    "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+    "verifier": "PASS",
+    "agent_done": true,
+    "steps": 11,
+    "duration_seconds": 68.68700000000536,
+    "evaluation_valid": true,
+    "clean_agent_success": true,
+    "stop_reason": "complete"
+  }
+]

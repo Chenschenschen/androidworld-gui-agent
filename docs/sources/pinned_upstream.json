@@ -1,0 +1,86 @@
+[
+  {
+    "repository": "zai-org/Open-AutoGLM",
+    "commit": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
+    "file": "LICENSE",
+    "url": "https://raw.githubusercontent.com/zai-org/Open-AutoGLM/86f55382982fb054e8fc98ca80609dff8a2cdc3c/LICENSE",
+    "sha256": "af69329b4667040c498cc87dfcc165db1f5f9452fe2ad3024ad7eef63d467666"
+  },
+  {
+    "repository": "zai-org/Open-AutoGLM",
+    "commit": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
+    "file": "phone_agent/config/prompts_en.py",
+    "url": "https://raw.githubusercontent.com/zai-org/Open-AutoGLM/86f55382982fb054e8fc98ca80609dff8a2cdc3c/phone_agent/config/prompts_en.py",
+    "sha256": "b7c0bd60b6a296d83c915945b58beadedf4476d30613c1dab2d4df0e1e410143"
+  },
+  {
+    "repository": "zai-org/Open-AutoGLM",
+    "commit": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
+    "file": "phone_agent/model/client.py",
+    "url": "https://raw.githubusercontent.com/zai-org/Open-AutoGLM/86f55382982fb054e8fc98ca80609dff8a2cdc3c/phone_agent/model/client.py",
+    "sha256": "be9916a2a2541137786bd3f67d01c900c76154342800bc81c9bf5ba538033df6"
+  },
+  {
+    "repository": "zai-org/Open-AutoGLM",
+    "commit": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
+    "file": "phone_agent/agent.py",
+    "url": "https://raw.githubusercontent.com/zai-org/Open-AutoGLM/86f55382982fb054e8fc98ca80609dff8a2cdc3c/phone_agent/agent.py",
+    "sha256": "686f1f11064b89ff0ea4f604ece20045bb77cd8183f0953e3da910c0878cab1f"
+  },
+  {
+    "repository": "zai-org/Open-AutoGLM",
+    "commit": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
+    "file": "phone_agent/actions/handler.py",
+    "url": "https://raw.githubusercontent.com/zai-org/Open-AutoGLM/86f55382982fb054e8fc98ca80609dff8a2cdc3c/phone_agent/actions/handler.py",
+    "sha256": "1553261c277f768e013737cfa6e9bc5a952e197d10725b4147d2efd30164160a"
+  },
+  {
+    "repository": "zai-org/Open-AutoGLM",
+    "commit": "86f55382982fb054e8fc98ca80609dff8a2cdc3c",
+    "file": "phone_agent/adb/input.py",
+    "url": "https://raw.githubusercontent.com/zai-org/Open-AutoGLM/86f55382982fb054e8fc98ca80609dff8a2cdc3c/phone_agent/adb/input.py",
+    "sha256": "77ffe621265def10c25992c87168df278114ae99d528058d80aa35abb93b9f8f"
+  },
+  {
+    "repository": "google-research/android_world",
+    "commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7",
+    "file": "LICENSE",
+    "url": "https://raw.githubusercontent.com/google-research/android_world/2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7/LICENSE",
+    "sha256": "b09fcaf4fbc265223c2479c410beef2b98c5e687c78ecedf3452aa12ffc465f1"
+  },
+  {
+    "repository": "google-research/android_world",
+    "commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7",
+    "file": "android_world/agents/m3a.py",
+    "url": "https://raw.githubusercontent.com/google-research/android_world/2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7/android_world/agents/m3a.py",
+    "sha256": "672f96be7073c7fc35e0e7810d1ba7d0e277e639c4abc16e572480f95daa564d"
+  },
+  {
+    "repository": "google-research/android_world",
+    "commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7",
+    "file": "android_world/agents/t3a.py",
+    "url": "https://raw.githubusercontent.com/google-research/android_world/2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7/android_world/agents/t3a.py",
+    "sha256": "a309fbf1de5e6dafc6e318b085fdc009f7635c1f1461fb8273caf573cf343ec6"
+  },
+  {
+    "repository": "google-research/android_world",
+    "commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7",
+    "file": "android_world/agents/base_agent.py",
+    "url": "https://raw.githubusercontent.com/google-research/android_world/2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7/android_world/agents/base_agent.py",
+    "sha256": "92704263af1024b3953f2ee169dbeacaa3b03b4b138053fa1284de5f65b22fbe"
+  },
+  {
+    "repository": "google-research/android_world",
+    "commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7",
+    "file": "android_world/env/actuation.py",
+    "url": "https://raw.githubusercontent.com/google-research/android_world/2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7/android_world/env/actuation.py",
+    "sha256": "b979caca453f4b0885f94fd2a2a27073bfe7ba4522086bc61338fd3dc3f81360"
+  },
+  {
+    "repository": "google-research/android_world",
+    "commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7",
+    "file": "android_world/task_evals/single/clock.py",
+    "url": "https://raw.githubusercontent.com/google-research/android_world/2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7/android_world/task_evals/single/clock.py",
+    "sha256": "b71344f13576f6b848a6c34dc4286962e94ec228e9643a3bdfc11b299265a65c"
+  }
+]

@@ -1,0 +1,17 @@
+Android World GUI agent with AutoGLM
+Course project: Agentic AI in Modern Business
+
+The native prompt in instructions/autoglm.md is adapted from
+zai-org/Open-AutoGLM, Copyright 2025 Zhipu AI, Apache License 2.0.
+The original license is retained in instructions/LICENSE_AutoGLM.txt.
+Adaptations are documented in instructions/AUTOGLM_SOURCE.md.
+
+Android World is an external dependency from google-research/android_world,
+Apache License 2.0. This repository does not vendor its source; clone the
+recorded commit and retain its upstream license. Android World's official
+agents informed completion/recovery guidance and environment integration.
+
+Course example structure and D1–D4 teaching material informed the simple
+agent/step loop, context, feedback and experiment design. Original course
+PDFs, ZIPs and extracted slides are not redistributed. The implementation
+mapping is documented in docs/COURSE_AND_UPSTREAM_REVIEW.md.

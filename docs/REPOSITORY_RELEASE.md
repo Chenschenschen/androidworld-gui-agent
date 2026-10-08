@@ -35,3 +35,9 @@ These checks validate packaging and existing offline behavior. They do not
 establish fresh-machine emulator compatibility or successful live v29 trials.
 Recorded task-specific results remain Wi-Fi/Camera v20 and Contacts v28 each
 3/3 clean, with Timer/Clipboard unresolved. Read WARMUP_RESULTS.md.
+
+Post-push fresh-clone check found one fixture fault: the XML pairing test assumed
+the ignored .tools/tmp directory already existed. Its original traceback was
+preserved locally. The test now creates its own temporary parent before use;
+the agent runtime is unchanged. This check uses the installed project
+dependencies and no API/emulator calls, not a new-machine live evaluation.

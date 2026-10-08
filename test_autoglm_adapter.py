@@ -174,7 +174,10 @@ class AdapterTests(unittest.TestCase):
         """Keep genuine XML on an unchanged scene, discard it after a visual transition."""
         state = State(self.state.pixels, None, [])
         xml = '<hierarchy><node text="Wi-Fi" package="com.android.settings" bounds="[1,1][10,10]" checkable="true" checked="true"/></hierarchy>'
-        with tempfile.TemporaryDirectory(dir=Path(__file__).parent / ".tools/tmp") as folder:
+        # A fresh clone has no generated tooling directory until it is needed.
+        temp_root = Path(__file__).parent / ".tools/tmp"
+        temp_root.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=temp_root) as folder:
             agent = object.__new__(AutoGLMAgent)
             agent.output, agent.observations, agent.history = Path(folder), 0, []
             agent.config = {"supplemental_tree_packages": ["com.android.settings"], "visual_stability_difference": .01}

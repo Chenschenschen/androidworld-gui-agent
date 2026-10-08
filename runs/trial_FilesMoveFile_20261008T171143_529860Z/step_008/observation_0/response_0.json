@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I need to navigate to the root directory to access the sdk_gphone64_x86_64 storage and locate the destination folder \"project_medium\". The \"Show roots\" button at [0,53,135,105] will open the navigation drawer to access storage locations.\n\n\ndo(action=\"Tap\", element=[68,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791479628,
+  "id": "202610090113465900bbc97f604d2a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610090113465900bbc97f604d2a",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 7389,
+    "prompt_tokens_details": {
+      "cached_tokens": 5374
+    },
+    "total_tokens": 7460
+  },
+  "wall_seconds": 1.8909999999887077
+}

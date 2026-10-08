@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app is now open and showing the main camera interface. There's a shutter button (the camera icon) in the center of the screen at [0, 0, 999, 999]. To take a photo, I need to tap this shutter button.\ndo(action=\"Tap\", element=[499,512])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441335,
+  "id": "202610081435334986abc0a30b458e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081435334986abc0a30b458e",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 2188,
+    "prompt_tokens_details": {
+      "cached_tokens": 884
+    },
+    "total_tokens": 2256
+  },
+  "wall_seconds": 1.5310000000026776
+}

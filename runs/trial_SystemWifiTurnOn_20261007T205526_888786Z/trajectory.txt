@@ -1,0 +1,840 @@
+
+--- 2026-10-07T20:55:26.890438+00:00 | RUN | RUN START ---
+{
+  "task": "SystemWifiTurnOn",
+  "config": {
+    "version": "autoglm_api_v7_native_finish_text",
+    "provider": "zai",
+    "prompt_version": "autoglm_native_en_v5_history_completion",
+    "model": "autoglm-phone-multilingual",
+    "observation": "screenshot",
+    "tree_backend": "none",
+    "supplemental_tree_packages": [
+      "com.android.settings"
+    ],
+    "action_format": "native_pseudocall",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 0.85,
+      "frequency_penalty": 0.2,
+      "max_tokens": 1024
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "max_reobservations": 1,
+    "freshness_global_difference": 0.08,
+    "freshness_target_difference": 0.08,
+    "no_effect_difference": 0.001,
+    "note": "v5 achieved three clean Wi-Fi finishes. Native executed conversation retains last three decisions with old images removed. Camera finishes after one capture and its new thumbnail. v6's correct finish was blocked by unescaped quoted UI text; v7 reads that bounded native finish wrapper as inert text, rejecting action sequences/extra arguments. Executable GUI actions still use checked AST literals. No verifier feedback or forced completion; software-camera repair documented separately.",
+    "visual_stability_checks": 3,
+    "visual_stability_pause": 0.5,
+    "visual_stability_difference": 0.01,
+    "api_base_url": "https://api.z.ai/api/paas/v4",
+    "task_seed": 44,
+    "task_name": "SystemWifiTurnOn"
+  }
+}
+
+--- 2026-10-07T20:55:27.003156+00:00 | RUN | OBSERVATION INFRASTRUCTURE ---
+{
+  "backend": "none",
+  "accessibility_services_before": "null",
+  "accessibility_services_after": "null",
+  "tree_used_for_model": false,
+  "task_state_modified": false
+}
+
+--- 2026-10-07T20:55:27.502059+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Turn wifi on.",
+  "parameters": {
+    "on_or_off": "on"
+  },
+  "task_seed": 44,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-07T20:55:28.910041+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-07T20:55:30.657457+00:00 | STEP 001 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:55:30.700446+00:00 | STEP 001 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 1,
+  "used": false,
+  "activity": "com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity"
+}
+
+--- 2026-10-07T20:55:31.025609+00:00 | STEP 001 | OBSERVATION ---
+{
+  "observation_id": "step_001\\observation_0",
+  "screenshot": "step_001\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-07T20:55:31.038877+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "call": 1,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_001\\observation_0\\request_0.json"
+}
+
+--- 2026-10-07T20:55:33.572318+00:00 | STEP 001 | MODEL REPLY ---
+The user wants to turn Wi-Fi on. The task is to enable Wi-Fi in Settings > Internet. I can see the Settings app icon on the home screen at coordinates [731,640,932,715]. I need to tap it to open Settings first, then navigate to Internet settings to turn on Wi-Fi.
+
+Looking at the current screen, I can see the Settings app icon. I should tap on it to open the Settings app.
+do(action="Tap", element=[848,668])
+
+--- 2026-10-07T20:55:33.573299+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "wall_seconds": 2.5310000000026776,
+  "usage": {
+    "completion_tokens": 111,
+    "prompt_tokens": 1657,
+    "prompt_tokens_details": {
+      "cached_tokens": 524
+    },
+    "total_tokens": 1768
+  }
+}
+
+--- 2026-10-07T20:55:34.200253+00:00 | STEP 001 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:55:34.236732+00:00 | STEP 001 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 2,
+  "used": false,
+  "activity": "com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity"
+}
+
+--- 2026-10-07T20:55:34.522481+00:00 | STEP 001 | OBSERVATION ---
+{
+  "observation_id": "step_001\\freshness_0",
+  "screenshot": "step_001\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-07T20:55:34.660079+00:00 | STEP 001 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-07T20:55:34.660079+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 915,
+  "y": 1603
+}
+
+--- 2026-10-07T20:55:36.772167+00:00 | STEP 001 | VISUAL SETTLING ---
+{
+  "difference": 0.00011106004901960784,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:55:39.241255+00:00 | STEP 001 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 3,
+  "used": true,
+  "activity": "com.android.settings/com.android.settings.Settings",
+  "xml": "ui_capture_003.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-07T20:55:39.376778+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.5689802581188725,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 4.719000000004598
+}
+
+--- 2026-10-07T20:55:40.025221+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:55:42.223333+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 4,
+  "used": true,
+  "activity": "com.android.settings/com.android.settings.Settings",
+  "xml": "ui_capture_004.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-07T20:55:42.311672+00:00 | STEP 002 | OBSERVATION ---
+{
+  "observation_id": "step_002\\observation_0",
+  "screenshot": "step_002\\observation_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-07T20:55:42.321819+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "call": 2,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_002\\observation_0\\request_0.json"
+}
+
+--- 2026-10-07T20:55:43.944439+00:00 | STEP 002 | MODEL REPLY ---
+I can see the Settings app is now open. I need to navigate to the "Network & internet" section to access Wi-Fi settings. I can see the "Network & internet" option with the description "Mobile, Wi‑Fi, hotspot" which is exactly what I need. I should tap on this option.
+do(action="Tap", element=[499,381])
+
+--- 2026-10-07T20:55:43.945442+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "wall_seconds": 1.625,
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 2061,
+    "prompt_tokens_details": {
+      "cached_tokens": 734
+    },
+    "total_tokens": 2139
+  }
+}
+
+--- 2026-10-07T20:55:44.592628+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:55:46.759766+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 5,
+  "used": true,
+  "activity": "com.android.settings/com.android.settings.Settings",
+  "xml": "ui_capture_005.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-07T20:55:46.848683+00:00 | STEP 002 | OBSERVATION ---
+{
+  "observation_id": "step_002\\freshness_0",
+  "screenshot": "step_002\\freshness_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-07T20:55:47.023263+00:00 | STEP 002 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": {
+    "text": "",
+    "content_description": "",
+    "class_name": "android.widget.LinearLayout",
+    "bbox": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 770,
+      "y_max": 1036
+    },
+    "bbox_pixels": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 770,
+      "y_max": 1036
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.settings",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "",
+    "metadata": null
+  },
+  "selected_target_fresh": {
+    "text": "",
+    "content_description": "",
+    "class_name": "android.widget.LinearLayout",
+    "bbox": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 770,
+      "y_max": 1036
+    },
+    "bbox_pixels": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 770,
+      "y_max": 1036
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.settings",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "",
+    "metadata": null
+  }
+}
+
+--- 2026-10-07T20:55:47.024264+00:00 | STEP 002 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 538,
+  "y": 914
+}
+
+--- 2026-10-07T20:55:49.152591+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:55:51.427420+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 6,
+  "used": true,
+  "activity": "com.android.settings/com.android.settings.SubSettings",
+  "xml": "ui_capture_006.xml",
+  "image_difference": 0.0026903339460784314
+}
+
+--- 2026-10-07T20:55:51.561108+00:00 | STEP 002 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.037203680300245096,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 4.531999999999243
+}
+
+--- 2026-10-07T20:55:52.204990+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:55:54.378081+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 7,
+  "used": true,
+  "activity": "com.android.settings/com.android.settings.SubSettings",
+  "xml": "ui_capture_007.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-07T20:55:54.461684+00:00 | STEP 003 | OBSERVATION ---
+{
+  "observation_id": "step_003\\observation_0",
+  "screenshot": "step_003\\observation_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-07T20:55:54.467396+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "call": 3,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_003\\observation_0\\request_0.json"
+}
+
+--- 2026-10-07T20:55:56.312549+00:00 | STEP 003 | MODEL REPLY ---
+I'm now in the Network & internet settings. I can see the "Internet" option at the top which shows "Networks available". This is where I can access Wi-Fi settings. I need to tap on the Internet option to access Wi-Fi controls.
+do(action="Tap", element=[499,296])
+
+--- 2026-10-07T20:55:56.313556+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "wall_seconds": 1.8430000000007567,
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 2503,
+    "prompt_tokens_details": {
+      "cached_tokens": 797
+    },
+    "total_tokens": 2569
+  }
+}
+
+--- 2026-10-07T20:55:56.966680+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:55:59.152023+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 8,
+  "used": true,
+  "activity": "com.android.settings/com.android.settings.SubSettings",
+  "xml": "ui_capture_008.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-07T20:55:59.241061+00:00 | STEP 003 | OBSERVATION ---
+{
+  "observation_id": "step_003\\freshness_0",
+  "screenshot": "step_003\\freshness_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-07T20:55:59.385796+00:00 | STEP 003 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": {
+    "text": "",
+    "content_description": "",
+    "class_name": "android.widget.LinearLayout",
+    "bbox": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 598,
+      "y_max": 820
+    },
+    "bbox_pixels": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 598,
+      "y_max": 820
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.settings",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "",
+    "metadata": null
+  },
+  "selected_target_fresh": {
+    "text": "",
+    "content_description": "",
+    "class_name": "android.widget.LinearLayout",
+    "bbox": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 598,
+      "y_max": 820
+    },
+    "bbox_pixels": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 598,
+      "y_max": 820
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.settings",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "",
+    "metadata": null
+  }
+}
+
+--- 2026-10-07T20:55:59.386798+00:00 | STEP 003 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 538,
+  "y": 710
+}
+
+--- 2026-10-07T20:56:01.359293+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:56:03.566748+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 9,
+  "used": true,
+  "activity": "com.android.settings/com.android.settings.SubSettings",
+  "xml": "ui_capture_009.xml",
+  "image_difference": 0.002218807444852941
+}
+
+--- 2026-10-07T20:56:03.701126+00:00 | STEP 003 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.038370768229166664,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 4.311999999998079
+}
+
+--- 2026-10-07T20:56:04.360969+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:56:07.390859+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 10,
+  "used": true,
+  "activity": "com.android.settings/com.android.settings.SubSettings",
+  "xml": "ui_capture_010.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-07T20:56:07.479949+00:00 | STEP 004 | OBSERVATION ---
+{
+  "observation_id": "step_004\\observation_0",
+  "screenshot": "step_004\\observation_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-07T20:56:07.487622+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "call": 4,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_004\\observation_0\\request_0.json"
+}
+
+--- 2026-10-07T20:56:09.262988+00:00 | STEP 004 | MODEL REPLY ---
+Perfect! I can see the Wi-Fi settings page. There's a Wi-Fi toggle switch that is currently OFF (the toggle appears to be in the off position based on the description). I need to tap on this Wi-Fi toggle to turn it on. The Wi-Fi option is located at coordinates [0,337,999,402] based on the tree structure.
+do(action="Tap", element=[499,379])
+
+--- 2026-10-07T20:56:09.262988+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "wall_seconds": 1.7660000000032596,
+  "usage": {
+    "completion_tokens": 90,
+    "prompt_tokens": 3064,
+    "prompt_tokens_details": {
+      "cached_tokens": 1172
+    },
+    "total_tokens": 3154
+  }
+}
+
+--- 2026-10-07T20:56:09.906772+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:56:12.082301+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 11,
+  "used": true,
+  "activity": "com.android.settings/com.android.settings.SubSettings",
+  "xml": "ui_capture_011.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-07T20:56:12.167173+00:00 | STEP 004 | OBSERVATION ---
+{
+  "observation_id": "step_004\\freshness_0",
+  "screenshot": "step_004\\freshness_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-07T20:56:12.302736+00:00 | STEP 004 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": {
+    "text": "",
+    "content_description": "",
+    "class_name": "android.widget.LinearLayout",
+    "bbox": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 828,
+      "y_max": 993
+    },
+    "bbox_pixels": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 828,
+      "y_max": 993
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.settings",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "",
+    "metadata": null
+  },
+  "selected_target_fresh": {
+    "text": "",
+    "content_description": "",
+    "class_name": "android.widget.LinearLayout",
+    "bbox": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 828,
+      "y_max": 993
+    },
+    "bbox_pixels": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 828,
+      "y_max": 993
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.settings",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "",
+    "metadata": null
+  }
+}
+
+--- 2026-10-07T20:56:12.303735+00:00 | STEP 004 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 538,
+  "y": 909
+}
+
+--- 2026-10-07T20:56:14.379120+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.00033892463235294116,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:56:17.458393+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 12,
+  "used": false,
+  "activity": "com.android.settings/com.android.settings.SubSettings",
+  "xml": "ui_capture_012.xml",
+  "image_difference": 0.023732862285539214
+}
+
+--- 2026-10-07T20:56:17.599999+00:00 | STEP 004 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.026111557904411765,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 5.296999999998661
+}
+
+--- 2026-10-07T20:56:18.253639+00:00 | STEP 005 | VISUAL SETTLING ---
+{
+  "difference": 0.00012254901960784314,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:56:20.471322+00:00 | STEP 005 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 13,
+  "used": true,
+  "activity": "com.android.settings/com.android.settings.SubSettings",
+  "xml": "ui_capture_013.xml",
+  "image_difference": 0.003722905177696078
+}
+
+--- 2026-10-07T20:56:20.558728+00:00 | STEP 005 | OBSERVATION ---
+{
+  "observation_id": "step_005\\observation_0",
+  "screenshot": "step_005\\observation_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-07T20:56:20.571695+00:00 | STEP 005 | MODEL REQUEST ---
+{
+  "call": 5,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_005\\observation_0\\request_0.json"
+}
+
+--- 2026-10-07T20:56:22.857794+00:00 | STEP 005 | MODEL REPLY ---
+Perfect! I can see that the Wi-Fi has been successfully turned on. The Wi-Fi toggle is now in the ON position (checked), and I can see that there's an available Wi-Fi network called "AndroidWifi" that shows "Saved / Won't automatically connect" and has a full Wi-Fi signal icon. The task was to turn Wi-Fi on, and this has been accomplished.
+finish(message="Wi-Fi has been successfully turned on! I can see the Wi-Fi toggle is now enabled (checked) and there's an available network "AndroidWifi" showing as saved. The task is complete - Wi-Fi is now on in the Settings > Internet section.")
+
+--- 2026-10-07T20:56:22.858297+00:00 | STEP 005 | MODEL TIMING ---
+{
+  "wall_seconds": 2.2819999999992433,
+  "usage": {
+    "completion_tokens": 135,
+    "prompt_tokens": 3353,
+    "prompt_tokens_details": {
+      "cached_tokens": 586
+    },
+    "total_tokens": 3488
+  }
+}
+
+--- 2026-10-07T20:56:22.859331+00:00 | STEP 005 | EXECUTION START ---
+{
+  "action_type": "status",
+  "goal_status": "complete",
+  "reason": "Wi-Fi has been successfully turned on! I can see the Wi-Fi toggle is now enabled (checked) and there's an available network \"AndroidWifi\" showing as saved. The task is complete - Wi-Fi is now on in the Settings > Internet section."
+}
+
+--- 2026-10-07T20:56:23.523886+00:00 | STEP 005 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-07T20:56:25.687568+00:00 | STEP 005 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 14,
+  "used": true,
+  "activity": "com.android.settings/com.android.settings.SubSettings",
+  "xml": "ui_capture_014.xml",
+  "image_difference": 0.0021489162071078433
+}
+
+--- 2026-10-07T20:56:25.814803+00:00 | STEP 005 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "finish",
+    "message": "Wi-Fi has been successfully turned on! I can see the Wi-Fi toggle is now enabled (checked) and there's an available network \"AndroidWifi\" showing as saved. The task is complete - Wi-Fi is now on in the Settings > Internet section."
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.0018880208333333333,
+  "dispatch_returned": false,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 2.9530000000013388
+}
+
+--- 2026-10-07T20:56:26.280465+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261007T205526_888786Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 5,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v7_native_finish_text",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v5_history_completion",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 5,
+  "stop_reason": "complete",
+  "model_calls_attempted": 5,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 59.390999999995984,
+  "agent_phase_seconds": 56.2809999999954
+}

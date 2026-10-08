@@ -1,0 +1,25 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "finish(message=\"Wi-Fi is now turned on as requested.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791404805,
+  "id": "202610080426441fa32fff6bbe47b8",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080426441fa32fff6bbe47b8",
+  "usage": {
+    "completion_tokens": 14,
+    "prompt_tokens": 1691,
+    "prompt_tokens_details": {
+      "cached_tokens": 698
+    },
+    "total_tokens": 1705
+  }
+}

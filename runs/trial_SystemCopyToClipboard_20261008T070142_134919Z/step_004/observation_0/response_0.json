@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Perfect! I can see that the text \"Discount code: SAVE20\" has been typed into the search bar. Now I need to copy this text to the clipboard. According to the instructions, I need to long press on the text to bring up the context menu with copy options.\n\nLet me long press on the text in the search bar.\ndo(action=\"Long Press\", element=[499,106])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442937,
+  "id": "2026100815021568077a62df5a4941",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100815021568077a62df5a4941",
+  "usage": {
+    "completion_tokens": 83,
+    "prompt_tokens": 3555,
+    "prompt_tokens_details": {
+      "cached_tokens": 1759
+    },
+    "total_tokens": 3638
+  },
+  "wall_seconds": 1.9220000000059372
+}

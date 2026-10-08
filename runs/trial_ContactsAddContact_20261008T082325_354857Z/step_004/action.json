@@ -1,0 +1,13 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Type",
+    "text": "Maya"
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "Maya",
+    "clear_text": true
+  },
+  "observation_id": "observation_0"
+}

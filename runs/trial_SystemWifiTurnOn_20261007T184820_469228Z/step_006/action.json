@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Nearby Share",
+    "verify": "The Wi-Fi toggle should be displayed on the screen.",
+    "target": "Nearby Share",
+    "index": "42",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 368,
+    "y": 1622
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

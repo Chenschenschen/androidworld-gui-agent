@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn WiFi on. Looking at the screenshot, I can see we're in the Settings app, specifically in the Internet section. I can see there's a Wi-Fi toggle switch that appears to be currently ON (checked), based on the blue toggle and the text \"Wi-Fi\" with a toggle switch that appears to be enabled.\n\nLooking at the tree structure, I can see:\n- LinearLayout;click;Wi-Fi;[0,337,999,402]\n- The Wi-Fi toggle appears to be in the on position\n\nSince the task is to turn WiFi on and it appears to already be on (the toggle is checked and blue), the task is already completed. I should finish the task.\nfinish(message=\"WiFi is already turned on. I can see the Wi-Fi toggle switch is enabled (checked and blue) in the Settings > Internet screen. The task is complete.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405552,
+  "id": "20261008043910c81eaaeadc8847a1",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008043910c81eaaeadc8847a1",
+  "usage": {
+    "completion_tokens": 188,
+    "prompt_tokens": 1959,
+    "prompt_tokens_details": {
+      "cached_tokens": 524
+    },
+    "total_tokens": 2147
+  },
+  "wall_seconds": 2.4680000000007567
+}

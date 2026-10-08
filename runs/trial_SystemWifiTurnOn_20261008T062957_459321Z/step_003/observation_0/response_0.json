@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I am now in the \"Network & internet\" settings. To turn on Wi-Fi, I need to access the \"Internet\" section, which is the first clickable option under \"Network & internet.\" The bounds for \"Internet\" are [0,248,999,334]. I should tap this option to proceed to the Wi-Fi settings.\ndo(action=\"Tap\", element=[499,296])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441026,
+  "id": "2026100814302521097196a45346f6",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814302521097196a45346f6",
+  "usage": {
+    "completion_tokens": 85,
+    "prompt_tokens": 2199,
+    "prompt_tokens_details": {
+      "cached_tokens": 771
+    },
+    "total_tokens": 2284
+  },
+  "wall_seconds": 1.8440000000118744
+}

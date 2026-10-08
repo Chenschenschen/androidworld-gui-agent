@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Settings app is now open. To turn on Wi-Fi, I need to access the \"Network & internet\" section, which is the first clickable option under Settings. The bounds for \"Network & internet\" are [0,320,999,416]. I should tap this option to proceed to the Wi-Fi settings.\ndo(action=\"Tap\", element=[499,382])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441013,
+  "id": "20261008143012699875eb615f4e51",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008143012699875eb615f4e51",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 1938,
+    "prompt_tokens_details": {
+      "cached_tokens": 629
+    },
+    "total_tokens": 2018
+  },
+  "wall_seconds": 1.7660000000032596
+}

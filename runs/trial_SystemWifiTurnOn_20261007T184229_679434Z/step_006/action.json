@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "7",
+    "verify": "Wi-Fi toggle has been turned on.",
+    "target": "com.google.androidenv.accessibilityforwarder",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,37 @@
+{
+  "model_requested": "autoglm-phone-multilingual",
+  "endpoint": "https://api.z.ai/api/paas/v4/chat/completions",
+  "probe_type": "text_connectivity_only",
+  "gui_actions": 0,
+  "retries": 0,
+  "task_verifier": "NOT_RUN",
+  "execution": "network-enabled check after sandbox DNS failure",
+  "http_status": 200,
+  "response": {
+    "choices": [
+      {
+        "finish_reason": "length",
+        "index": 0,
+        "message": {
+          "content": "I see the message \"Failed to connect to the specified device\" with the error code \"Device or resource is busy (忙)\" when trying to access the camera. This indicates that the camera is currently in use by another application or is otherwise busy.\n\nLooking at the screenshot, I can see:\n1. The camera interface",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1791402545,
+    "id": "2026100803490419a881cd1eeb451e",
+    "model": "autoglm-phone-multilingual",
+    "object": "chat.completion",
+    "request_id": "2026100803490419a881cd1eeb451e",
+    "usage": {
+      "completion_tokens": 64,
+      "prompt_tokens": 22,
+      "prompt_tokens_details": {
+        "cached_tokens": 4
+      },
+      "total_tokens": 86
+    }
+  },
+  "status": "API_RESPONSE_RECEIVED",
+  "duration_seconds": 1.219
+}

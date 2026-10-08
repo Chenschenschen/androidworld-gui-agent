@@ -1,0 +1,152 @@
+[
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261008T055645_761067Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemCopyToClipboard",
+      "run_id": "trial_SystemCopyToClipboard_20261008T055645_761067Z",
+      "agent_done": false,
+      "verifier": "PASS",
+      "steps": 10,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v15_clipboard_input_contract",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v11_clipboard_entry",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 11,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 319, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 455, in step\n    raise RuntimeError(\"Repeated action without visible effect; stopping\")\nRuntimeError: Repeated action without visible effect; stopping\n",
+      "error_class": "environment_or_execution_error",
+      "stop_reason": "error",
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "model_calls_attempted": 12,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 74.32799999999406,
+      "agent_phase_seconds": 68.48399999999674
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 12,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Chrome"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          370,
+          326
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Type",
+        "text": "Discount code: SAVE20"
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Long Press",
+        "element": [
+          370,
+          106
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          238,
+          201
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          656
+        ]
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Back"
+      },
+      {
+        "step": "step_008",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          106
+        ]
+      },
+      {
+        "step": "step_009",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          106
+        ]
+      },
+      {
+        "step": "step_010",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          106
+        ]
+      },
+      {
+        "step": "step_011",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          106
+        ]
+      }
+    ],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 458,
+        "fps": 6.683337719172375,
+        "duration_seconds": 68.52863333333333
+      }
+    ],
+    "incomplete_steps": [
+      {
+        "step": "step_011",
+        "execution_started": false,
+        "note": "Expected interrupted/failed step; inspect saved request, error and stop reason."
+      }
+    ]
+  }
+]

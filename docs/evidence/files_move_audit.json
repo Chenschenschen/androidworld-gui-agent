@@ -1,0 +1,659 @@
+{
+  "scope": "Scoped linked GUI trials; official verifier; not independent benchmark resets",
+  "manual_preparation": "User confirmed returning recipe to easy before the fresh v53 sequence",
+  "unchanged_recipe_sha256": "82287c26534ac3697a68f703d49d49e00594c123ea5801d6ad164986759d4416",
+  "v53_source_snapshots_identical": true,
+  "clean_v53_settings_identical_except_seed": true,
+  "runs": [
+    {
+      "run_id": "trial_FilesMoveFile_20261008T140525_204594Z",
+      "version": "autoglm_api_v50_files_move",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 12,
+      "gui_actions_dispatched": 12,
+      "model_calls_attempted": 16,
+      "evaluation_valid": true,
+      "clean_agent_success": false,
+      "error_class": "environment_or_execution_error",
+      "stop_reason": "error",
+      "duration_seconds": 220.45299999999406,
+      "parameters": {
+        "file_name": "cooking-recipe.md",
+        "source_folder": "project_easy",
+        "destination_folder": "project_medium",
+        "noise_candidates": [
+          "cooking-recipe.md"
+        ]
+      },
+      "seed": 42,
+      "initialization_mode": "scoped_new_file",
+      "json_files_parsed": 135,
+      "trajectory_events_parsed": 211,
+      "videos": [
+        {
+          "file": "video_001.mp4",
+          "decoded_frames": 328,
+          "sha256": "476b297928aef2b40c36db0118a3f88c868a24cf65989d02e48d2c9a650b5874"
+        },
+        {
+          "file": "video_002.mp4",
+          "decoded_frames": 89,
+          "sha256": "7fa35ecc18e3e50c7c020f20cf22283d1f508c59811f4bce0e8cb0e8e088924d"
+        }
+      ],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "7df78c2364bc1c4a05f46c598fa98cabc3ccabe614ef851c507e68dd45749ea6",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "d7bf925917cd97e231d1ce34c0b965ad2f607b7617af8369af41d1ba1751eb68"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T141128_839535Z",
+      "version": "autoglm_api_v51_folder_label_grounding",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 3,
+      "gui_actions_dispatched": 3,
+      "model_calls_attempted": 4,
+      "evaluation_valid": true,
+      "clean_agent_success": false,
+      "error_class": "control_no_progress",
+      "stop_reason": "error",
+      "duration_seconds": 57.28100000000268,
+      "parameters": {
+        "file_name": "cooking-recipe.md",
+        "source_folder": "project_easy",
+        "destination_folder": "project_medium",
+        "noise_candidates": [
+          "cooking-recipe.md"
+        ]
+      },
+      "seed": 42,
+      "initialization_mode": "linked_existing_file",
+      "json_files_parsed": 38,
+      "trajectory_events_parsed": 57,
+      "videos": [
+        {
+          "file": "video_001.mp4",
+          "decoded_frames": 55,
+          "sha256": "4cb90cfb65d32fea55d268dd81b616a9d88ed49d79f63cff7741ff2e67a20f24"
+        }
+      ],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "aaee201645453e05c3d5ca4e7d1b922326f1986c784470876f39a6dd3124b289",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "723d00ccc4f088481caf9a7e7226f640f477506f39373967fa38736cc979b957"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T141450_696380Z",
+      "version": "autoglm_api_v52_clickable_folder_labels",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 12,
+      "gui_actions_dispatched": 11,
+      "model_calls_attempted": 14,
+      "evaluation_valid": true,
+      "clean_agent_success": true,
+      "error_class": null,
+      "stop_reason": "complete",
+      "duration_seconds": 196.5,
+      "parameters": {
+        "file_name": "cooking-recipe.md",
+        "source_folder": "project_easy",
+        "destination_folder": "project_medium",
+        "noise_candidates": [
+          "cooking-recipe.md"
+        ]
+      },
+      "seed": 42,
+      "initialization_mode": "linked_existing_file",
+      "json_files_parsed": 120,
+      "trajectory_events_parsed": 181,
+      "videos": [
+        {
+          "file": "video_001.mp4",
+          "decoded_frames": 320,
+          "sha256": "4bf7053f8cb487524117580110dcda1ef0660c52c5c19774dfa21f3b42f8d5cf"
+        },
+        {
+          "file": "video_002.mp4",
+          "decoded_frames": 15,
+          "sha256": "31bd30cb299658901aa2fd884d848b1113960bb17ff44e5593a50de98595441a"
+        }
+      ],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "6988505fd17f0d1ad8aedb1021c2e3231cc42c91fb3632bd9cec9c4e25eceeb7",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "a0edb482bc11d6483df567074d9e4d988033378b72ee0202f0451c8d569922c7"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T141900_675904Z",
+      "version": "autoglm_api_v52_clickable_folder_labels",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 9,
+      "gui_actions_dispatched": 9,
+      "model_calls_attempted": 11,
+      "evaluation_valid": true,
+      "clean_agent_success": false,
+      "error_class": "environment_or_execution_error",
+      "stop_reason": "error",
+      "duration_seconds": 153.14100000000326,
+      "parameters": {
+        "file_name": "cooking-recipe.md",
+        "source_folder": "project_medium",
+        "destination_folder": "project_easy",
+        "noise_candidates": [
+          "cooking-recipe.md"
+        ]
+      },
+      "seed": 43,
+      "initialization_mode": "linked_existing_file",
+      "json_files_parsed": 99,
+      "trajectory_events_parsed": 154,
+      "videos": [
+        {
+          "file": "video_001.mp4",
+          "decoded_frames": 273,
+          "sha256": "1443d5a5c908a12ebb22b39704ab1a360b969e4fd5fae9d59da6335787604a97"
+        }
+      ],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "6988505fd17f0d1ad8aedb1021c2e3231cc42c91fb3632bd9cec9c4e25eceeb7",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "a0edb482bc11d6483df567074d9e4d988033378b72ee0202f0451c8d569922c7"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T143528_860048Z",
+      "version": "autoglm_api_v52_clickable_folder_labels",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 14,
+      "gui_actions_dispatched": 13,
+      "model_calls_attempted": 14,
+      "evaluation_valid": true,
+      "clean_agent_success": true,
+      "error_class": null,
+      "stop_reason": "complete",
+      "duration_seconds": 200.57799999999406,
+      "parameters": {
+        "file_name": "sci_fi_book.mp3",
+        "source_folder": "Recordings",
+        "destination_folder": "Audiobooks",
+        "noise_candidates": [
+          "interview_recording.mp3",
+          "lecture_capture.mp3",
+          "memoir_audio.mp3",
+          "meeting_audio.mp3",
+          "brainstorm_session.mp3",
+          "book_reading.mp3",
+          "therapy_session.mp3",
+          "personal_notes.mp3"
+        ]
+      },
+      "seed": 42,
+      "initialization_mode": "scoped_new_file",
+      "json_files_parsed": 132,
+      "trajectory_events_parsed": 200,
+      "videos": [
+        {
+          "file": "video_001.mp4",
+          "decoded_frames": 345,
+          "sha256": "138501748b10fbbf946b16993cc346dae0030bd2e149a98abdb20fbbfb0296b0"
+        },
+        {
+          "file": "video_002.mp4",
+          "decoded_frames": 17,
+          "sha256": "3a30e581322009827abe9ca822d1532541ed3a6a43a8e03b73ed213a4c263e1f"
+        }
+      ],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "6988505fd17f0d1ad8aedb1021c2e3231cc42c91fb3632bd9cec9c4e25eceeb7",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "a0edb482bc11d6483df567074d9e4d988033378b72ee0202f0451c8d569922c7"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T144918_425543Z",
+      "version": "autoglm_api_v52_clickable_folder_labels",
+      "agent_done": false,
+      "verifier": "NOT_RUN",
+      "steps": 0,
+      "gui_actions_dispatched": null,
+      "model_calls_attempted": null,
+      "evaluation_valid": false,
+      "clean_agent_success": false,
+      "error_class": "environment_setup_error",
+      "stop_reason": "error",
+      "duration_seconds": 2.937000000005355,
+      "parameters": {
+        "file_name": "sci_fi_book.mp3",
+        "source_folder": "Recordings",
+        "destination_folder": "Audiobooks",
+        "noise_candidates": [
+          "interview_recording.mp3",
+          "lecture_capture.mp3",
+          "memoir_audio.mp3",
+          "meeting_audio.mp3",
+          "brainstorm_session.mp3",
+          "book_reading.mp3",
+          "therapy_session.mp3",
+          "personal_notes.mp3"
+        ]
+      },
+      "seed": 42,
+      "initialization_mode": "scoped_new_file",
+      "json_files_parsed": 5,
+      "trajectory_events_parsed": 7,
+      "videos": [],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "6988505fd17f0d1ad8aedb1021c2e3231cc42c91fb3632bd9cec9c4e25eceeb7",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "a0edb482bc11d6483df567074d9e4d988033378b72ee0202f0451c8d569922c7"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T145147_574235Z",
+      "version": "autoglm_api_v52_clickable_folder_labels",
+      "agent_done": false,
+      "verifier": "NOT_RUN",
+      "steps": 0,
+      "gui_actions_dispatched": null,
+      "model_calls_attempted": null,
+      "evaluation_valid": false,
+      "clean_agent_success": false,
+      "error_class": "environment_setup_error",
+      "stop_reason": "error",
+      "duration_seconds": 1.2029999999940628,
+      "parameters": {
+        "file_name": "sci_fi_book.mp3",
+        "source_folder": "Recordings",
+        "destination_folder": "Audiobooks",
+        "noise_candidates": [
+          "interview_recording.mp3",
+          "lecture_capture.mp3",
+          "memoir_audio.mp3",
+          "meeting_audio.mp3",
+          "brainstorm_session.mp3",
+          "book_reading.mp3",
+          "therapy_session.mp3",
+          "personal_notes.mp3"
+        ]
+      },
+      "seed": 42,
+      "initialization_mode": "scoped_new_file",
+      "json_files_parsed": 5,
+      "trajectory_events_parsed": 7,
+      "videos": [],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "6988505fd17f0d1ad8aedb1021c2e3231cc42c91fb3632bd9cec9c4e25eceeb7",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "a0edb482bc11d6483df567074d9e4d988033378b72ee0202f0451c8d569922c7"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T150528_714063Z",
+      "version": "autoglm_api_v52_clickable_folder_labels",
+      "agent_done": false,
+      "verifier": "NOT_RUN",
+      "steps": 0,
+      "gui_actions_dispatched": null,
+      "model_calls_attempted": null,
+      "evaluation_valid": false,
+      "clean_agent_success": false,
+      "error_class": "environment_setup_error",
+      "stop_reason": "error",
+      "duration_seconds": 1.639999999999418,
+      "parameters": {
+        "file_name": "sci_fi_book.mp3",
+        "source_folder": "Recordings",
+        "destination_folder": "Audiobooks",
+        "noise_candidates": [
+          "interview_recording.mp3",
+          "lecture_capture.mp3",
+          "memoir_audio.mp3",
+          "meeting_audio.mp3",
+          "brainstorm_session.mp3",
+          "book_reading.mp3",
+          "therapy_session.mp3",
+          "personal_notes.mp3"
+        ]
+      },
+      "seed": 42,
+      "initialization_mode": "scoped_new_file",
+      "json_files_parsed": 5,
+      "trajectory_events_parsed": 7,
+      "videos": [],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "6988505fd17f0d1ad8aedb1021c2e3231cc42c91fb3632bd9cec9c4e25eceeb7",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "a0edb482bc11d6483df567074d9e4d988033378b72ee0202f0451c8d569922c7"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T153255_926287Z",
+      "version": "autoglm_api_v53_checked_container_labels",
+      "agent_done": false,
+      "verifier": "NOT_RUN",
+      "steps": 0,
+      "gui_actions_dispatched": null,
+      "model_calls_attempted": null,
+      "evaluation_valid": false,
+      "clean_agent_success": false,
+      "error_class": "environment_setup_error",
+      "stop_reason": "error",
+      "duration_seconds": 1.5160000000032596,
+      "parameters": {
+        "file_name": "cooking-recipe.md",
+        "source_folder": "project_medium",
+        "destination_folder": "project_easy",
+        "noise_candidates": [
+          "cooking-recipe.md"
+        ]
+      },
+      "seed": 43,
+      "initialization_mode": "linked_existing_file",
+      "json_files_parsed": 5,
+      "trajectory_events_parsed": 7,
+      "videos": [],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "44c77b6d1772b681b723f03d535dd01d7110836a14d0e146bb7088772f10c7a9",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "7534bd78d384e14e8b16a82a5ddf855303103571991ec61d705192477930ea63"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T153825_684536Z",
+      "version": "autoglm_api_v53_checked_container_labels",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 20,
+      "gui_actions_dispatched": 19,
+      "model_calls_attempted": 20,
+      "evaluation_valid": true,
+      "clean_agent_success": true,
+      "error_class": null,
+      "stop_reason": "complete",
+      "duration_seconds": 296.5939999999973,
+      "parameters": {
+        "file_name": "cooking-recipe.md",
+        "source_folder": "project_easy",
+        "destination_folder": "project_medium",
+        "noise_candidates": [
+          "cooking-recipe.md"
+        ]
+      },
+      "seed": 42,
+      "initialization_mode": "linked_existing_file",
+      "json_files_parsed": 184,
+      "trajectory_events_parsed": 280,
+      "videos": [
+        {
+          "file": "video_001.mp4",
+          "decoded_frames": 332,
+          "sha256": "6dcca56aceb267d008b6895517103cd4a1300f787cfc2d0b8f5b8aefb5f9e418"
+        },
+        {
+          "file": "video_002.mp4",
+          "decoded_frames": 238,
+          "sha256": "380026efd0ad22278c0869579e1f3eacc3ca40b73a6706febae4271126fc8efc"
+        }
+      ],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "44c77b6d1772b681b723f03d535dd01d7110836a14d0e146bb7088772f10c7a9",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "7534bd78d384e14e8b16a82a5ddf855303103571991ec61d705192477930ea63"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T154346_710337Z",
+      "version": "autoglm_api_v53_checked_container_labels",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 12,
+      "gui_actions_dispatched": 11,
+      "model_calls_attempted": 13,
+      "evaluation_valid": true,
+      "clean_agent_success": true,
+      "error_class": null,
+      "stop_reason": "complete",
+      "duration_seconds": 191.0,
+      "parameters": {
+        "file_name": "cooking-recipe.md",
+        "source_folder": "project_medium",
+        "destination_folder": "project_easy",
+        "noise_candidates": [
+          "cooking-recipe.md"
+        ]
+      },
+      "seed": 43,
+      "initialization_mode": "linked_existing_file",
+      "json_files_parsed": 117,
+      "trajectory_events_parsed": 176,
+      "videos": [
+        {
+          "file": "video_001.mp4",
+          "decoded_frames": 298,
+          "sha256": "4b030f65359abdeade4fc63e4ca1e8f088765b08c2953509222f02fd3b37eb6c"
+        },
+        {
+          "file": "video_002.mp4",
+          "decoded_frames": 5,
+          "sha256": "74111994d31314b4de6b13351b9797f376e5ab764f9056fb13503b7e919c0db1"
+        }
+      ],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "44c77b6d1772b681b723f03d535dd01d7110836a14d0e146bb7088772f10c7a9",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "7534bd78d384e14e8b16a82a5ddf855303103571991ec61d705192477930ea63"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T154721_039629Z",
+      "version": "autoglm_api_v53_checked_container_labels",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 20,
+      "gui_actions_dispatched": 20,
+      "model_calls_attempted": 20,
+      "evaluation_valid": true,
+      "clean_agent_success": false,
+      "error_class": null,
+      "stop_reason": "step_budget",
+      "duration_seconds": 303.7649999999994,
+      "parameters": {
+        "file_name": "cooking-recipe.md",
+        "source_folder": "project_easy",
+        "destination_folder": "project_medium",
+        "noise_candidates": [
+          "cooking-recipe.md"
+        ]
+      },
+      "seed": 44,
+      "initialization_mode": "linked_existing_file",
+      "json_files_parsed": 186,
+      "trajectory_events_parsed": 284,
+      "videos": [
+        {
+          "file": "video_001.mp4",
+          "decoded_frames": 307,
+          "sha256": "d7658b23da8b1412c0566dcf183f97c14dd047db1e9412ecd7363ec40220d10b"
+        },
+        {
+          "file": "video_002.mp4",
+          "decoded_frames": 242,
+          "sha256": "a916486b7462ca157210eb346ab7842604ba7f8af8f9ba4a18552e8a28d063fa"
+        }
+      ],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "44c77b6d1772b681b723f03d535dd01d7110836a14d0e146bb7088772f10c7a9",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "7534bd78d384e14e8b16a82a5ddf855303103571991ec61d705192477930ea63"
+    },
+    {
+      "run_id": "trial_FilesMoveFile_20261008T155433_701814Z",
+      "version": "autoglm_api_v54_bounded_xml_read_recovery",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 19,
+      "gui_actions_dispatched": 18,
+      "model_calls_attempted": 19,
+      "evaluation_valid": true,
+      "clean_agent_success": true,
+      "error_class": null,
+      "stop_reason": "complete",
+      "duration_seconds": 305.6399999999994,
+      "parameters": {
+        "file_name": "cooking-recipe.md",
+        "source_folder": "project_easy",
+        "destination_folder": "project_medium",
+        "noise_candidates": [
+          "cooking-recipe.md"
+        ]
+      },
+      "seed": 44,
+      "initialization_mode": "linked_existing_file",
+      "json_files_parsed": 177,
+      "trajectory_events_parsed": 284,
+      "videos": [
+        {
+          "file": "video_001.mp4",
+          "decoded_frames": 348,
+          "sha256": "e5ec13d606cd74feca439f3a8049f2b0e5313eefa13bd5fbf7aa5629dbda8c15"
+        },
+        {
+          "file": "video_002.mp4",
+          "decoded_frames": 226,
+          "sha256": "c94e5ac532df8f059542574dbe62837500cd84c6080f07f52eafac29174f9805"
+        }
+      ],
+      "source_sha256": {
+        "android_compat.py": "0d203dcc6575bcb255e484cbf07e1d65aef82ef159fd1dc95ebc7bb5b7fe842b",
+        "autoglm_agent.py": "8bc8c83c987fe84d094da2f2afd4ce3db882db2c39a08cf7fd8b265223efa5b6",
+        "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+        "run.ps1": "c20ed797605314623974e89f30ff0be2465666a00443eb6b992d4879ff84b975",
+        "run_task.py": "c40fdca33611fee4b31a2ca7341ee8d8d60a1e22399cf30f3eaccfea22cd5ede",
+        "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+        "upstream_reference.py": "342bb1d71204c47a6bc0d4e4c0caa3bdb4db13e47222b1a2b94a7929b6d3d929",
+        "instructions\\android_interactions.md": "eaad193c910d4549a57e4b80c0f660282de7d971ae9e6b3671f0dec68c71d1b8",
+        "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+        "instructions\\autoglm.md": "4d789797afa58cee2b96b5cc86fc406f7af995277c9647a15898c54519a5ace5",
+        "instructions\\task_guides.md": "11cd9043c5d03aa3fdd5cfa8c9a2248276447eb32aa6d8d3406fad44a512813e"
+      },
+      "config_sha256_without_seed": "0c5137bb7b90721aa4201ca26b32c7ef1e6b4413f694986aebba54f942a1715d"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe screen shows the Clipper app with a clipboard service started and instructions on how to copy to or paste from clipboard using adshell commands. To copy the text \"john.doe@example.com\" to the clipboard, I should first focus the EditText field where the text will be entered, then type the text. The EditText element is at [38,1404,960,1436].\n\n\ndo(action=\"Tap\", element=[499,960])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791461085,
+  "id": "2026100820044368a36879b1984057",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100820044368a36879b1984057",
+  "usage": {
+    "completion_tokens": 100,
+    "prompt_tokens": 2476,
+    "prompt_tokens_details": {
+      "cached_tokens": 408
+    },
+    "total_tokens": 2576
+  },
+  "wall_seconds": 2.202999999994063
+}

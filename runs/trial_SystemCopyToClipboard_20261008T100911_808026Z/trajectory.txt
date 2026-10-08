@@ -1,0 +1,203 @@
+
+--- 2026-10-08T10:09:11.810119+00:00 | RUN | RUN START ---
+{
+  "task": "SystemCopyToClipboard",
+  "config": {
+    "version": "autoglm_api_v32_assessment_shared_action_context",
+    "step_assessment": true,
+    "assessment_prompt_version": "m3a_summary_adaptation_v2_shared_prefix",
+    "provider": "zai",
+    "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+    "model": "autoglm-phone-multilingual",
+    "observation": "screenshot",
+    "tree_backend": "none",
+    "supplemental_tree_packages": [
+      "com.android.settings",
+      "com.google.android.deskclock",
+      "com.android.chrome"
+    ],
+    "action_format": "native_pseudocall",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 0.85,
+      "frequency_penalty": 0.2,
+      "max_tokens": 3000
+    },
+    "max_steps": 12,
+    "task_step_budgets": {
+      "ContactsAddContact": 16
+    },
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "max_reobservations": 1,
+    "freshness_global_difference": 0.08,
+    "freshness_target_difference": 0.08,
+    "no_effect_difference": 0.001,
+    "note": "v30 adds one M3A-style read-only before/after model assessment after each executed non-finish action, feeding its summary to the next native AutoGLM decision. Same model, action prompt, sampling, GUI adapter, step/time limits and official verification; no final-review gate or forced completion. Preserve v20/v28 task-specific gates and unresolved v28 Timer/v27 Clipboard failures. New results are recorded separately. Source/slide mapping: docs/COURSE_AND_UPSTREAM_REVIEW.md; experiment: docs/STEP_ASSESSMENT_EXPERIMENT.md.",
+    "visual_stability_checks": 3,
+    "visual_stability_pause": 0.5,
+    "visual_stability_difference": 0.01,
+    "api_base_url": "https://api.z.ai/api/paas/v4",
+    "task_seed": 43,
+    "task_name": "SystemCopyToClipboard"
+  }
+}
+
+--- 2026-10-08T10:09:11.920309+00:00 | RUN | OBSERVATION INFRASTRUCTURE ---
+{
+  "backend": "none",
+  "accessibility_services_before": "null",
+  "accessibility_services_after": "null",
+  "tree_used_for_model": false,
+  "task_state_modified": false
+}
+
+--- 2026-10-08T10:09:12.548130+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Copy the following text to the clipboard: john.doe@example.com",
+  "parameters": {
+    "clipboard_content": "john.doe@example.com"
+  },
+  "task_seed": 43,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-08T10:09:19.643049+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-08T10:09:22.392614+00:00 | STEP 001 | VISUAL SETTLING ---
+{
+  "difference": 0.0015237247242647059,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T10:09:22.495220+00:00 | STEP 001 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 1,
+  "used": false,
+  "activity": "com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity"
+}
+
+--- 2026-10-08T10:09:22.851929+00:00 | STEP 001 | OBSERVATION ---
+{
+  "observation_id": "step_001\\observation_0",
+  "screenshot": "step_001\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T10:09:22.866458+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "call": 1,
+  "role": "action_0",
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_001\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T10:09:25.597885+00:00 | STEP 001 | MODEL REPLY ---
+
+The task is to copy the text "john.doe@example.com" to the clipboard. The current screen is the home screen, and there is no clipboard interface open. To copy text, I need to first select it in an input field, then use the copy action. However, there is no input field visible yet. The first step should be to launch the app where the text will be entered, such as Messages, Gmail, or a custom app. Since the text is an email address, the most appropriate app is "Gmail".
+
+
+do(action="Launch", app="gmail")
+
+
+--- 2026-10-08T10:09:25.597885+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "role": "action_0",
+  "wall_seconds": 2.735000000000582,
+  "usage": {
+    "completion_tokens": 126,
+    "prompt_tokens": 1858,
+    "prompt_tokens_details": {
+      "cached_tokens": 817
+    },
+    "total_tokens": 1984
+  }
+}
+
+--- 2026-10-08T10:09:25.605562+00:00 | STEP 001 | VALIDATION ERROR ---
+{
+  "error": "Launch app 'gmail' is unavailable; allowed app values: [\"chrome\"]",
+  "executed": false
+}
+
+--- 2026-10-08T10:09:25.608590+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "call": 2,
+  "role": "action_1",
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_001\\observation_0\\request_1.json"
+}
+
+--- 2026-10-08T10:09:26.704673+00:00 | STEP 001 | MODEL REPLY ---
+
+do(action="Launch", app="app_name")
+
+
+--- 2026-10-08T10:09:26.704673+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "role": "action_1",
+  "wall_seconds": 1.0939999999973224,
+  "usage": {
+    "completion_tokens": 13,
+    "prompt_tokens": 2008,
+    "prompt_tokens_details": {
+      "cached_tokens": 1857
+    },
+    "total_tokens": 2021
+  }
+}
+
+--- 2026-10-08T10:09:26.704673+00:00 | STEP 001 | VALIDATION ERROR ---
+{
+  "error": "Launch app 'app_name' is unavailable; allowed app values: [\"chrome\"]",
+  "executed": false
+}
+
+--- 2026-10-08T10:09:26.707667+00:00 | STEP 001 | RUN ERROR ---
+{
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 335, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 525, in step\n    fields, action = self.ask_action(state, observed, goal, step)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 500, in ask_action\n    action = convert_action(fields, state, self.config[\"allowed_apps\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 143, in convert_action\n    raise ValueError(f\"Launch app {app!r} is unavailable; allowed app values: {json.dumps(allowed_apps)}\")\nValueError: Launch app 'app_name' is unavailable; allowed app values: [\"chrome\"]\n",
+  "class": "validation_error"
+}
+
+--- 2026-10-08T10:09:28.477809+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "SystemCopyToClipboard",
+  "run_id": "trial_SystemCopyToClipboard_20261008T100911_808026Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 0,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v32_assessment_shared_action_context",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 1,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 335, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 525, in step\n    fields, action = self.ask_action(state, observed, goal, step)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 500, in ask_action\n    action = convert_action(fields, state, self.config[\"allowed_apps\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 143, in convert_action\n    raise ValueError(f\"Launch app {app!r} is unavailable; allowed app values: {json.dumps(allowed_apps)}\")\nValueError: Launch app 'app_name' is unavailable; allowed app values: [\"chrome\"]\n",
+  "error_class": "validation_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 2,
+  "assessment_calls_attempted": 0,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "clean_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 16.65700000000652,
+  "agent_phase_seconds": 8.610000000000582
+}

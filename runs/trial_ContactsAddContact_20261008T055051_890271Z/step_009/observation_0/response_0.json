@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Phone\" field is now visible near the top of the form. I should tap it to focus and enter the phone number.\ndo(action=\"Tap\", element=[494,263])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438729,
+  "id": "202610081352084d429943cd724556",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081352084d429943cd724556",
+  "usage": {
+    "completion_tokens": 41,
+    "prompt_tokens": 3151,
+    "prompt_tokens_details": {
+      "cached_tokens": 1845
+    },
+    "total_tokens": 3192
+  },
+  "wall_seconds": 1.3589999999967404
+}

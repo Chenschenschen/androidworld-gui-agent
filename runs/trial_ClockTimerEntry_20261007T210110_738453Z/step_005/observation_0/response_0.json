@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows 00h 00m 20s. I need 20:07:01, so I should continue entering digits. I'll tap \"0\" to make it 200.\ndo(action=\"Tap\", element=[499,684])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406899,
+  "id": "20261008050138297bcdeadf0c49f2",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008050138297bcdeadf0c49f2",
+  "usage": {
+    "completion_tokens": 56,
+    "prompt_tokens": 2416,
+    "prompt_tokens_details": {
+      "cached_tokens": 1118
+    },
+    "total_tokens": 2472
+  },
+  "wall_seconds": 1.4839999999967404
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user now needs to confirm whether the task is complete. The text message has been successfully sent (the interface displays a blue bubble and a checkmark), so the task is complete. The finish function needs to be called to output the task completion message. It is important to ensure that the completion condition is met; the current state shows that the message has been sent successfully, so the finish function is called and the completion message is output.\n\n\nfinish(message=\"Text message sent successfully.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791466533,
+  "id": "20261008213531000efad9d93d4da2",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008213531000efad9d93d4da2",
+  "usage": {
+    "completion_tokens": 101,
+    "prompt_tokens": 6185,
+    "prompt_tokens_details": {
+      "cached_tokens": 3926
+    },
+    "total_tokens": 6286
+  },
+  "wall_seconds": 2.235000000000582
+}

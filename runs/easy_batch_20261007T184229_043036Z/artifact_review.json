@@ -1,0 +1,869 @@
+[
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T184229_679434Z",
+    "task": "SystemWifiTurnOn",
+    "issues": [],
+    "trace_events": 96,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 786,
+        "last_timestamp_seconds": 174.755,
+        "dimensions": [
+          540,
+          1200
+        ]
+      },
+      {
+        "path": "video_002.mp4",
+        "frames_decoded": 453,
+        "last_timestamp_seconds": 144.516,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "settings",
+          "verify": "The Settings app should open, displaying its main interface."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "WiFi",
+          "verify": "The WiFi toggle is now in the 'ON' position.",
+          "target": "App info",
+          "index": "10",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_003",
+        "action": {
+          "action": "CLICK",
+          "value": "No data used",
+          "verify": "The element with text 'No data used' should be clicked and its state should change to show the network settings.",
+          "target": "No data used",
+          "index": "39",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_004",
+        "action": {
+          "action": "CLICK",
+          "value": "Wi‑Fi",
+          "verify": "The screen should navigate to the mobile data & Wi-Fi settings, where the Wi-Fi toggle switch should be visible.",
+          "target": "com.google.androidenv.accessibilityforwarder",
+          "index": "19",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_005",
+        "action": {
+          "action": "CLICK",
+          "value": "16.76 MB used in internal storage",
+          "verify": "The task to turn on WiFi has been completed.",
+          "target": "16.76 MB used in internal storage",
+          "index": "35",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_006",
+        "action": {
+          "action": "CLICK",
+          "value": "7",
+          "verify": "Wi-Fi toggle has been turned on.",
+          "target": "com.google.androidenv.accessibilityforwarder",
+          "index": "19",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_007",
+        "action": {
+          "action": "CLICK",
+          "value": "com.google.androidenv.accessibilityforwarder",
+          "verify": "The AccessibilityForwarder app should open and be visible on the screen.",
+          "target": "16.76 MB used in internal storage",
+          "index": "35",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_008",
+        "action": {
+          "action": "CLICK",
+          "value": "21 kB",
+          "verify": "The Wifi toggle should be switched from off (grey) to on (green).",
+          "target": "com.google.androidenv.accessibilityforwarder",
+          "index": "19",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_009",
+        "action": {
+          "action": "CLICK",
+          "value": "About 0 notifications per week",
+          "verify": "The screen should switch to the Notifications settings menu.",
+          "target": "About 0 notifications per week",
+          "index": "27",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_010",
+        "action": {
+          "action": "CLICK",
+          "value": "Allow notification dot",
+          "verify": "The element with the text 'Allow notification dot' should be selected.",
+          "target": "Allow notification dot",
+          "index": "41",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_011",
+        "action": {
+          "action": "CLICK",
+          "value": "Allow notification dot",
+          "verify": "The checkbox for 'Allow notification dot' should become checked.",
+          "target": "Allow notification dot",
+          "index": "41",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_012",
+        "action": {
+          "action": "COMPLETE",
+          "value": "com.google.androidenv.accessibilityforwarder keeps stopping",
+          "verify": "Verify that WiFi is turned on."
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T184820_469228Z",
+    "task": "SystemWifiTurnOn",
+    "issues": [],
+    "trace_events": 88,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 706,
+        "last_timestamp_seconds": 174.2,
+        "dimensions": [
+          540,
+          1200
+        ]
+      },
+      {
+        "path": "video_002.mp4",
+        "frames_decoded": 516,
+        "last_timestamp_seconds": 140.595,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "settings",
+          "verify": "The Settings app should open, displaying the main settings menu."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "Connected devices",
+          "verify": "The 'Network & internet' settings menu should be visible on the screen.",
+          "target": "Connected devices",
+          "index": "30",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_003",
+        "action": {
+          "action": "CLICK",
+          "value": "Bluetooth, Android Auto",
+          "verify": "Ensure Bluetooth is enabled and confirm that Bluetooth will turn on if not already active.",
+          "target": "Bluetooth, Android Auto",
+          "index": "33",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_004",
+        "action": {
+          "action": "CLICK",
+          "value": "Cast",
+          "verify": "Cast button should navigate to the cast settings.",
+          "target": "Cast",
+          "index": "24",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_005",
+        "action": {
+          "action": "CLICK",
+          "value": "Cast",
+          "verify": "Cast button should now be selected.",
+          "target": "Navigate up",
+          "index": "7",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_006",
+        "action": {
+          "action": "CLICK",
+          "value": "Nearby Share",
+          "verify": "The Wi-Fi toggle should be displayed on the screen.",
+          "target": "Nearby Share",
+          "index": "42",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_007",
+        "action": {
+          "action": "CLICK",
+          "value": "Settings",
+          "verify": "Settings screen should appear with various options like Network & Internet, etc.",
+          "target": "sdk_gphone64_x86_64",
+          "index": "28",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_008",
+        "action": {
+          "action": "CLICK",
+          "value": "Cancel",
+          "verify": "The 'Rename device' dialog should close and the previous screen should be displayed.",
+          "target": "CANCEL",
+          "index": "15",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_009",
+        "action": {
+          "action": "CLICK",
+          "value": "When devices are sharing nearby",
+          "verify": "The 'When devices are sharing nearby' toggle should become visible or change state.",
+          "target": "When devices are sharing nearby",
+          "index": "42",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_010",
+        "action": {
+          "action": "CLICK",
+          "value": "Data may be used for small files \n(charges may apply)",
+          "verify": "Data may be used for small files \n(charges may apply) was clicked.",
+          "target": "Data may be used for small files \n(charges may apply)",
+          "index": "38",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_011",
+        "action": {
+          "action": "CLICK",
+          "value": "Never use data to share",
+          "verify": "The 'Never use data to share' option should now be selected.",
+          "target": "Never use data to share",
+          "index": "23",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_012",
+        "action": {
+          "action": "CLICK",
+          "value": "Never use data to share",
+          "verify": "The 'Never use data to share' option should remain selected.",
+          "target": "Never use data to share",
+          "index": "23",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T185408_292329Z",
+    "task": "SystemWifiTurnOn",
+    "issues": [],
+    "trace_events": 96,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 679,
+        "last_timestamp_seconds": 174.589,
+        "dimensions": [
+          540,
+          1200
+        ]
+      },
+      {
+        "path": "video_002.mp4",
+        "frames_decoded": 713,
+        "last_timestamp_seconds": 150.222,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "settings",
+          "verify": "The Settings app should be opened and visible on the screen."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "Battery",
+          "verify": "The screen should show the Battery settings page, which might contain a toggle switch for Wi-Fi.",
+          "target": "Battery",
+          "index": "48",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_003",
+        "action": {
+          "action": "CLICK",
+          "value": "7",
+          "verify": "Battery settings page closed, returning to main Settings screen.",
+          "target": "Navigate up",
+          "index": "7",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_004",
+        "action": {
+          "action": "CLICK",
+          "value": "Wi-Fi and network settings",
+          "verify": "The Wi-Fi toggle is now set to 'on', and the Wi-Fi icon in the status bar is illuminated.",
+          "target": "Network & internet",
+          "index": "24",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_005",
+        "action": {
+          "action": "CLICK",
+          "value": "Internet",
+          "verify": "The Wi-Fi toggle switch within the 'Internet' menu changes from 'OFF' to 'ON'.",
+          "target": "Internet",
+          "index": "19",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_006",
+        "action": {
+          "action": "CLICK",
+          "value": "T-Mobile",
+          "verify": "The Wi‑Fi toggle should be visible and should now be in the 'on' state.",
+          "target": "T-Mobile",
+          "index": "21",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_007",
+        "action": {
+          "action": "CLICK",
+          "value": "T-Mobile",
+          "verify": "The Wi‑Fi toggle should be visible and likely already in the ON position, as the task is to confirm it is on.",
+          "target": "T-Mobile",
+          "index": "21",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_008",
+        "action": {
+          "action": "CLICK",
+          "value": "Internet",
+          "verify": "The 'Internet' option should be selected from the 'Network & internet' menu.",
+          "target": "Settings",
+          "index": "26",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_009",
+        "action": {
+          "action": "CLICK",
+          "value": "Settings",
+          "verify": "Settings should be visible on the screen.",
+          "target": "SIM name & color",
+          "index": "10",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_010",
+        "action": {
+          "action": "CLICK",
+          "value": "Cyan",
+          "verify": "The 'Network' section should be open, revealing network-related settings like Wi-Fi.",
+          "target": "Cyan",
+          "index": "20",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_011",
+        "action": {
+          "action": "AWAKE",
+          "value": "settings",
+          "verify": "Settings app should be opened."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_012",
+        "action": {
+          "action": "CLICK",
+          "value": "Settings",
+          "verify": "Settings screen should appear.",
+          "target": "Network & internet",
+          "index": "24",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T190004_878736Z",
+    "task": "CameraTakePhoto",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 27,
+        "last_timestamp_seconds": 11.107,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "camera",
+          "verify": "The camera application should open, displaying a live preview from the camera's lens and providing controls for taking a photo."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T190044_582564Z",
+    "task": "CameraTakePhoto",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 35,
+        "last_timestamp_seconds": 15.999,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "camera",
+          "verify": "The camera application should open, displaying a live preview from the camera's lens and showing the shutter button."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T190130_190482Z",
+    "task": "CameraTakePhoto",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 44,
+        "last_timestamp_seconds": 19.605,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "camera",
+          "verify": "The camera application should open, displaying a live preview from the camera's lens and providing controls for taking a photo."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T190215_217223Z",
+    "task": "ClockTimerEntry",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 28,
+        "last_timestamp_seconds": 13.374,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "clock",
+          "verify": "The Clock app should open, displaying its main interface."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T190255_045710Z",
+    "task": "ClockTimerEntry",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 40,
+        "last_timestamp_seconds": 18.699,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "clock",
+          "verify": "The Clock app should open, displaying its main interface."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T190340_407376Z",
+    "task": "ClockTimerEntry",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 29,
+        "last_timestamp_seconds": 13.387,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "Clock",
+          "verify": "The Clock app should open, displaying its main interface."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T190419_342635Z",
+    "task": "ContactsAddContact",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 31,
+        "last_timestamp_seconds": 15.323,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "Contacts",
+          "verify": "The Contacts app should open, displaying the main contact list or a prompt to add a new contact."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T190502_714431Z",
+    "task": "ContactsAddContact",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 36,
+        "last_timestamp_seconds": 16.273,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "Contacts",
+          "verify": "The Contacts app should open, displaying the main contact list."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T190545_548445Z",
+    "task": "ContactsAddContact",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 29,
+        "last_timestamp_seconds": 14.767,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "Contacts",
+          "verify": "The Contacts app should open, displaying the main contact list."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T190628_882874Z",
+    "task": "SystemCopyToClipboard",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 70,
+        "last_timestamp_seconds": 16.822,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "Clipper",
+          "verify": "The Clipper application should be open and its main interface should be visible on the screen."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T190739_755103Z",
+    "task": "SystemCopyToClipboard",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 75,
+        "last_timestamp_seconds": 15.92,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "clipper",
+          "verify": "The Clipper application should be open and its main interface should be visible on the screen."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T190824_548338Z",
+    "task": "SystemCopyToClipboard",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 86,
+        "last_timestamp_seconds": 15.81,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "clipper",
+          "verify": "The Clipper application should be open and its main interface should be visible on the screen."
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  }
+]

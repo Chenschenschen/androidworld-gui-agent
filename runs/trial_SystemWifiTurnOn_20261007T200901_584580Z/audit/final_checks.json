@@ -1,0 +1,35 @@
+{
+  "credential_scan_files": 150,
+  "credential_found": false,
+  "current_runtime_matches_recorded_source": [
+    [
+      "android_compat.py",
+      true
+    ],
+    [
+      "autoglm_agent.py",
+      true
+    ],
+    [
+      "probe_connection.py",
+      true
+    ],
+    [
+      "run.ps1",
+      true
+    ],
+    [
+      "run_task.py",
+      true
+    ],
+    [
+      "trajectory.py",
+      true
+    ],
+    [
+      "instructions\\autoglm.md",
+      true
+    ]
+  ],
+  "official_verifier": "PASS"
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261007T200901_584580Z",
+  "agent_done": false,
+  "verifier": "PASS",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v2_visual_capture",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v1",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "step_budget",
+  "model_calls_attempted": 13,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 86.0940000000046,
+  "agent_phase_seconds": 83.375
+}

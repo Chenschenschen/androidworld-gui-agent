@@ -1,0 +1,8 @@
+{
+  "thinking": "I am on the \"Pair new device\" screen. To get back to the main Settings menu and try the search again, I should tap the back arrow at the top left.",
+  "action": "do(action=\"Tap\", element=[67,83])\n",
+  "raw_content": "I am on the \"Pair new device\" screen. To get back to the main Settings menu and try the search again, I should tap the back arrow at the top left.do(action=\"Tap\", element=[67,83])\n",
+  "time_to_first_token": 2.423837184906006,
+  "time_to_thinking_end": 2.457630157470703,
+  "total_time": 2.4696314334869385
+}

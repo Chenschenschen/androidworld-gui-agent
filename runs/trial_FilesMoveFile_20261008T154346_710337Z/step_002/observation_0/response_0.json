@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Files app is open and currently showing the Downloads folder, which is empty. To navigate to the sdk_gphone_x86_64 storage area and locate the source and destination folders, I should open the navigation drawer by tapping the \"Show roots\" button (hamburger icon) in the top-left corner (bounds [0,53,135,105]).\n\ndo(action=\"Tap\", element=[67,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474253,
+  "id": "202610082344112689119015cf40ee",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082344112689119015cf40ee",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 2901,
+    "prompt_tokens_details": {
+      "cached_tokens": 1519
+    },
+    "total_tokens": 2987
+  },
+  "wall_seconds": 2.9690000000118744
+}

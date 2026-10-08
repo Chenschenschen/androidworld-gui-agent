@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T14:43:20.622648Z",
+  "message": {
+    "role": "assistant",
+    "content": "explain:Click on the 'First name' field to activate the input focus for typing the first name.\taction:CLICK\tpoint:226,390\t{\"element_id\": \"First name\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 22191617700,
+  "load_duration": 20259500,
+  "prompt_eval_count": 1499,
+  "prompt_eval_cached_count": 249,
+  "prompt_eval_duration": 16966956999,
+  "eval_count": 43,
+  "eval_duration": 4933497000,
+  "wall_seconds": 24.21900000000096
+}

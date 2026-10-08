@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "The Settings app menu should be visible, confirming the successful return from the Bubble settings page.",
+    "point": "67,82"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 72,
+    "y": 197
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

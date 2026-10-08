@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "finish",
+    "message": "Photo taken successfully. A new thumbnail icon is visible in the bottom-right corner, confirming the photo was captured. Task completed."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "Photo taken successfully. A new thumbnail icon is visible in the bottom-right corner, confirming the photo was captured. Task completed."
+  },
+  "observation_id": "observation_0"
+}

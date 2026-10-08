@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "element with id 7",
+    "verify": "The first name field should remain active and ready for input.",
+    "index": "7"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 535,
+    "y": 939
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

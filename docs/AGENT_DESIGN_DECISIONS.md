@@ -1,5 +1,111 @@
 # Agent design decisions: Day 1 and Day 2
 
+v57 Camera uses existing checked GUI supplement rather than screenshot-only
+startup observations. A splash logo was wrongly grounded as a shutter; real
+first-use NEXT is observable. Extend package list, keep guard and budgets,
+add no prescribed onboarding steps or fixed shutter coordinates. Read-only
+real XML and43 offline checks pass; live user retry pending.
+
+v56: show redacted provider HTTP error body in console/readable trajectory as
+well as its existing JSON artifact. Keep HTTP exception/API classification,
+one request, no inferred parameter changes or automatic replay. Regression
+checks provider1210 visibility, key redaction and exactly one call;43 checks pass.
+
+v55 presentation packaging: concatenate recorder parts after shutdown/pull,
+without re-encoding or changing the action loop. Keep original MP4s and task
+outcomes; packaging errors are separate from recording and verification errors.
+One complete playback path is printed in the summary. Real original-part joins
+decoded with every frame preserved. Model/observation/completion policy unchanged.
+
+Files v54, after v53 third trial failed: one bounded additional read-only XML
+capture on error/inconsistent geometry/changing capture. The failed step4 dump
+exited137, followed by model screenshot grounding errors and a menu cycle.
+Retry only observation, never GUI dispatch. Preserve every capture/error and
+fall back after two bad reads.42 checks pass; no task route/budget/prompt change.
+
+FilesMoveFile v53: attach actual descendant text to an unnamed clickable
+container only when its text bounds are inside that container. Raw captures
+showed a recycled Android title outside project_easy's card, creating a false
+freshness failure. Reject that inconsistent XML and use existing screenshot
+fallback. Only clickable/editable controls receive tap centres; static headings
+do not. Near-identical pictures (both differences <=0.001) permit XML-availability
+fallback; changed identities between two valid controls remain rejected. No
+task route, fixed coordinates or direct move. Runtime tests: 41 passing checks.
+Official base task initialization preserves external storage in linked trials;
+exact source/destination preconditions prevent false starts. See FILES_MOVE_TRIAL.md.
+
+SMS measured repair: scalar freshness0.01 blocked harmless keyboard appearance;
+v49 restores0.08 and supplies existing checked SMS XML targets alongside images.
+Include empty editable fields/hints; reject targets appearing only after the
+decision. Use an exact observed-name dictionary before the unchanged task-app
+allowlist, and clarify literal app/standalone finish syntax. No action is inferred
+from prose. Original failed seeds43/44 now2/2 cleanPASS on frozen v49; no claim
+that a single isolated change caused the improvement. See SIMPLE_SMS_TRIAL.md.
+
+8 October SimpleSmsSend: extend only the existing task/app list and completion
+rule. Screenshot grounding and the native step loop remain unchanged. SDK app
+launches in the single-attempt adapter receive at least30 seconds after the
+recorded five-second setup timeout; other command bounds remain unchanged.
+See SIMPLE_SMS_TRIAL.md for the measured outcome.
+
+Revision 0.31, v37 general-guidance experiment: add one editable interaction
+file to the native action prefix and describe only actually allowed apps.
+The model supplies a brief observation-based explanation and one native action;
+Python supplies the observed control/result, not a next action or verifier score.
+Focus, exact selection, fresh targets and evidence-based recovery are shared
+skills. Existing observation/freshness/no-effect limits and sampling stay fixed.
+Task-specific procedures and separate reflection are disabled. Markor is the
+available Clipboard editor, prepared by official setup before recording. This
+app-catalog restriction is documented. No new parser or controller framework.
+29 offline checks pass before one frozen seed43 experiment; results pending.
+
+Revision 0.30, prepared v36: load one task procedure from task_guides.md into
+the existing action request, alongside the current screenshot, exact task
+inputs and factual GUI status. A selected task guide is separate from executable
+code. Timer's target/input string is formatted from this instance; Python does
+not select the next key from the observed buffer. Clipboard uses officially
+prepared Markor, with fresh XML labels/centres enabled for that package.
+Procedures name the starting app, route, correction and visible finish evidence.
+Native AutoGLM still chooses each checked action and coordinates. No independent
+semantic intent-to-target validator is claimed. User authorization supersedes
+earlier minimal-guidance preferences. These guided inputs differ from the
+original native-reference policy and must be reported separately. Opt-in only;
+28 offline checks pass, no live result. See TASK_GUIDANCE_AND_GROUNDING.md.
+
+Measured default v35 adds only the justified Chrome dispatch/recording repair.
+The original helper's5-second timeout can restart ADB and kill screenrecord;
+model-selected Chrome now uses the official component in one30-second ADB
+launch, with no automatic replay. A live process watch removes stale recording
+readiness. Prompt/request/observation function ASTs are identical across the
+project comparison arms. Task outcomes remain FAIL, not a successful agent gate.
+
+Reference comparison stage: upstream_reference.py wraps the original pinned
+PhoneAgent instead of rewriting its decision loop. The shared runner supplies
+initialization, video and independent verification. Logs, argument validation,
+API bounds and emulator-only targeting are boundary deviations, not task
+guidance. The unused Chinese date expression needs an equivalent Windows-only
+in-memory import fix; the original English policy and checkout stay unchanged.
+
+Revision0.28, v32–v34: source-contract comparison restored shared native
+capability context to assessment; the changed saved probe remained wrong.
+The live v32 check never reached assessment because the model chose illegal app
+values. v33 rendered a valid Launch example argument; it launched Chrome but
+assessment hit3000 tokens. Preserve original errors and do not count any as
+success. v34 disables assessment by default while retaining it for study.
+Explicit dispatch counters and assessment-error records preserve actions even
+when no agent step returns. No automatic replay.20 offline checks pass, no live
+v34 success claim. Full trace-based analysis: STEP_ASSESSMENT_EXPERIMENT.md.
+
+Revision0.27, v30/v31: add the official M3A-style post-action before/after
+assessment using the same model and existing agent. Inputs are real screens,
+GUI state, goal and dispatched-action result; output is a short model hypothesis
+fed to the next native action decision. Save all raw evidence before assessment.
+v30's saved-evidence probe rejected native operation output; v31 retains only
+visible prose and discards operation lines, never executing them. Pure calls
+are still invalid. Same steps/time/sampling, no final-review gate or task replay.
+More API usage and possible repeated model misinterpretation are accepted risks
+to measure; details/results in [STEP_ASSESSMENT_EXPERIMENT.md](STEP_ASSESSMENT_EXPERIMENT.md).
+
 Publication stage, 8 October: package the existing v29 agent without changing
 its runtime contract. Add fresh-checkout documentation, upstream attribution
 and aggregate result reports. Raw screenshots and diagnostic payloads remain

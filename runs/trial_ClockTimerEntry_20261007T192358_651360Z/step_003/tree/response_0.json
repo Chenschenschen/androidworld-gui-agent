@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T19:24:59.1868247Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Timer\", \"verify\": \"Timer should be visible on the screen.\", \"target\": \"1\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4299509900,
+  "load_duration": 18433000,
+  "prompt_eval_count": 1220,
+  "prompt_eval_cached_count": 581,
+  "prompt_eval_duration": 917215000,
+  "eval_count": 31,
+  "eval_duration": 3193642000,
+  "wall_seconds": 6.328000000001339
+}

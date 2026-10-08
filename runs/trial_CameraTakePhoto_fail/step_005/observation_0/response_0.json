@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The camera interface is still displayed, and the shutter button is still present, indicating the photo may not have been captured yet. I should tap the shutter button again to attempt to take a photo.\n\n\ndo(action=\"Tap\", element=[499,908])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791487638,
+  "id": "2026100903271721cdfde483954dd5",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100903271721cdfde483954dd5",
+  "usage": {
+    "completion_tokens": 57,
+    "prompt_tokens": 3999,
+    "prompt_tokens_details": {
+      "cached_tokens": 2192
+    },
+    "total_tokens": 4056
+  },
+  "wall_seconds": 1.5320000000065193
+}

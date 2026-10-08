@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The file \"cooking-recipe.md\" is now selected. To move the file, we need to access the \"More options\" menu, which typically contains the \"Move to\" or \"Copy to\" options in the Files app. The \"More options\" button is visible in the top right corner of the screen.\n\n\ndo(action=\"Tap\", element=[941,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791468978,
+  "id": "20261008221616529029ddc4aa4834",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008221616529029ddc4aa4834",
+  "usage": {
+    "completion_tokens": 82,
+    "prompt_tokens": 6276,
+    "prompt_tokens_details": {
+      "cached_tokens": 3888
+    },
+    "total_tokens": 6358
+  },
+  "wall_seconds": 2.422000000005937
+}

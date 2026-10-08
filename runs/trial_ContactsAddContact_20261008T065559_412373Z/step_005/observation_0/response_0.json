@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Create contact form is open with empty fields. I need to enter the first name \"Camila\" in the \"First name\" field. I'll tap the \"First name\" field to focus it.\ndo(action=\"Tap\", element=[494,385])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442591,
+  "id": "202610081456309b4012854df242ef",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081456309b4012854df242ef",
+  "usage": {
+    "completion_tokens": 56,
+    "prompt_tokens": 2480,
+    "prompt_tokens_details": {
+      "cached_tokens": 1189
+    },
+    "total_tokens": 2536
+  },
+  "wall_seconds": 1.4529999999940628
+}

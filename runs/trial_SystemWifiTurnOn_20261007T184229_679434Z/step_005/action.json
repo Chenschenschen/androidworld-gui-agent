@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "16.76 MB used in internal storage",
+    "verify": "The task to turn on WiFi has been completed.",
+    "target": "16.76 MB used in internal storage",
+    "index": "35",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 375,
+    "y": 1876
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

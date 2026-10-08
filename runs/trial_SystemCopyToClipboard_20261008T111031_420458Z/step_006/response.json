@@ -1,0 +1,8 @@
+{
+  "thinking": "I'm on the \"Connected devices\" screen. To return to the main Settings menu and access the search function, I should tap the back arrow at the top left.",
+  "action": "do(action=\"Tap\", element=[67,83])\n",
+  "raw_content": "I'm on the \"Connected devices\" screen. To return to the main Settings menu and access the search function, I should tap the back arrow at the top left.do(action=\"Tap\", element=[67,83])\n",
+  "time_to_first_token": 2.6357219219207764,
+  "time_to_thinking_end": 2.660407781600952,
+  "total_time": 2.670320749282837
+}

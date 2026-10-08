@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Move to…\" option is available in the menu. Selecting this will allow us to choose the destination folder for moving the file \"cooking-recipe.md\". We should tap on \"Move to…\" to proceed with selecting the destination folder \"project_medium\".\n\n\ndo(action=\"Tap\", element=[751,341])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791468993,
+  "id": "202610082216313e934a9c080c443d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082216313e934a9c080c443d",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 6789,
+    "prompt_tokens_details": {
+      "cached_tokens": 4564
+    },
+    "total_tokens": 6857
+  },
+  "wall_seconds": 2.875
+}

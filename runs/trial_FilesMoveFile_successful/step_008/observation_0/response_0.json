@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "We are in the move dialog, currently in the \"Downloads\" folder. To reach the \"sdk_gphone64_x86_64\" storage area and then the \"project_medium\" folder, we should first open the \"Show roots\" menu to navigate to the root directory and access the desired storage area. The \"Show roots\" button is at [68, 79, 191, 129].\n\n\ndo(action=\"Tap\", element=[68,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791480161,
+  "id": "20261009012240856e036a40234292",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261009012240856e036a40234292",
+  "usage": {
+    "completion_tokens": 99,
+    "prompt_tokens": 7648,
+    "prompt_tokens_details": {
+      "cached_tokens": 5617
+    },
+    "total_tokens": 7747
+  },
+  "wall_seconds": 1.9529999999940628
+}

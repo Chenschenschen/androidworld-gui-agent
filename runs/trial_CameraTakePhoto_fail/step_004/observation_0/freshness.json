@@ -1,0 +1,74 @@
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.014156805300245098,
+  "target_image_difference": 0.0,
+  "selected_target_before": {
+    "text": "",
+    "content_description": "Shutter",
+    "class_name": "android.widget.ImageView",
+    "bbox": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 2022,
+      "y_max": 2337
+    },
+    "bbox_pixels": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 2022,
+      "y_max": 2337
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.camera2",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "com.android.camera2:id/shutter_button",
+    "metadata": null
+  },
+  "selected_target_fresh": {
+    "text": "",
+    "content_description": "Shutter",
+    "class_name": "android.widget.ImageView",
+    "bbox": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 2022,
+      "y_max": 2337
+    },
+    "bbox_pixels": {
+      "x_min": 0,
+      "x_max": 1080,
+      "y_min": 2022,
+      "y_max": 2337
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.camera2",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "com.android.camera2:id/shutter_button",
+    "metadata": null
+  }
+}

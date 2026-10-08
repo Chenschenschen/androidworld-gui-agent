@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "214,426",
+    "verify": "After clicking the 'Create new contact' button, the next screen should appear with fields to enter contact details.",
+    "index": "1"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 180,
+    "y": 2232
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

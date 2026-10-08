@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Clock app is open and currently on the main clock screen. To create a timer, I need to switch to the Timer tab. The \"Timer\" tab is located at the bottom navigation bar with bounds [399, 885, 599, 972]. I will tap this to access the timer interface.\ndo(action=\"Tap\", element=[499,930])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791443392,
+  "id": "20261008150950f75d0ec7e73144b3",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008150950f75d0ec7e73144b3",
+  "usage": {
+    "completion_tokens": 81,
+    "prompt_tokens": 2899,
+    "prompt_tokens_details": {
+      "cached_tokens": 893
+    },
+    "total_tokens": 2980
+  },
+  "wall_seconds": 1.7189999999973224
+}

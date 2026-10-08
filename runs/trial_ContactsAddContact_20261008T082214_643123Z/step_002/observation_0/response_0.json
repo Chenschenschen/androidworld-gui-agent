@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Contacts app is open and empty. To create a new contact, tap the floating action button (plus icon) at the bottom-right to open the new contact form.\n\n\ndo(action=\"Tap\", element=[876,836])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447749,
+  "id": "20261008162228130e69a9dce843a1",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008162228130e69a9dce843a1",
+  "usage": {
+    "completion_tokens": 52,
+    "prompt_tokens": 2016,
+    "prompt_tokens_details": {
+      "cached_tokens": 795
+    },
+    "total_tokens": 2068
+  },
+  "wall_seconds": 1.4380000000091968
+}

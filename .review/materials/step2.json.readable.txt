@@ -1,0 +1,566 @@
+{
+  "step": 2,
+  "dry_run": false,
+  "records": [
+    {
+      "label": "early pair 1: warm",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-0-early.\nCurrent status revision: 0001.\nRead the reference text below, then answer the final instruction.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 2.226106958,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:39:55.802175Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 2216998333,
+        "load_duration": 1498636708,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 678198000,
+        "eval_count": 2,
+        "eval_duration": 27360000
+      }
+    },
+    {
+      "label": "early pair 1: measured",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-0-early.\nCurrent status revision: 0002.\nRead the reference text below, then answer the final instruction.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 0.6720142500000001,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:39:56.474821Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 667714333,
+        "load_duration": 1002542,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 38,
+        "prompt_eval_duration": 624980000,
+        "eval_count": 2,
+        "eval_duration": 24843000
+      }
+    },
+    {
+      "label": "late pair 1: warm",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-0-late.\nRead the reference text below, then answer the final instruction.\nCurrent status revision: 0001.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 0.6990402909999993,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:39:57.178039Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 694863209,
+        "load_duration": 909042,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 27,
+        "prompt_eval_duration": 652362000,
+        "eval_count": 2,
+        "eval_duration": 24789000
+      }
+    },
+    {
+      "label": "late pair 1: measured",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-0-late.\nRead the reference text below, then answer the final instruction.\nCurrent status revision: 0002.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 0.08990541699999888,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:39:57.268402Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 87198000,
+        "load_duration": 930709,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 914,
+        "prompt_eval_duration": 53736000,
+        "eval_count": 2,
+        "eval_duration": 25066000
+      }
+    },
+    {
+      "label": "late pair 2: warm",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-1-late.\nRead the reference text below, then answer the final instruction.\nCurrent status revision: 0001.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 0.700600249999999,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:39:57.969447Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 697355458,
+        "load_duration": 987500,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 26,
+        "prompt_eval_duration": 650201000,
+        "eval_count": 2,
+        "eval_duration": 27330000
+      }
+    },
+    {
+      "label": "late pair 2: measured",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-1-late.\nRead the reference text below, then answer the final instruction.\nCurrent status revision: 0002.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 0.09221608400000036,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:39:58.062956Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 86558083,
+        "load_duration": 915791,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 914,
+        "prompt_eval_duration": 53498000,
+        "eval_count": 2,
+        "eval_duration": 25013000
+      }
+    },
+    {
+      "label": "early pair 2: warm",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-1-early.\nCurrent status revision: 0001.\nRead the reference text below, then answer the final instruction.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 0.7033141670000003,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:39:58.76845Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 697232500,
+        "load_duration": 966416,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 27,
+        "prompt_eval_duration": 650538000,
+        "eval_count": 2,
+        "eval_duration": 27451000
+      }
+    },
+    {
+      "label": "early pair 2: measured",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-1-early.\nCurrent status revision: 0002.\nRead the reference text below, then answer the final instruction.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 0.6777144590000006,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:39:59.448024Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 672997125,
+        "load_duration": 837792,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 38,
+        "prompt_eval_duration": 629335000,
+        "eval_count": 2,
+        "eval_duration": 27131000
+      }
+    },
+    {
+      "label": "early pair 3: warm",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-2-early.\nCurrent status revision: 0001.\nRead the reference text below, then answer the final instruction.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 0.7024091659999989,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:40:00.152623Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 697402875,
+        "load_duration": 838750,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 26,
+        "prompt_eval_duration": 655868000,
+        "eval_count": 2,
+        "eval_duration": 24909000
+      }
+    },
+    {
+      "label": "early pair 3: measured",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-2-early.\nCurrent status revision: 0002.\nRead the reference text below, then answer the final instruction.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 0.6797334169999996,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:40:00.83391Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 674998500,
+        "load_duration": 1075875,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 38,
+        "prompt_eval_duration": 629059000,
+        "eval_count": 2,
+        "eval_duration": 27258000
+      }
+    },
+    {
+      "label": "late pair 3: warm",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-2-late.\nRead the reference text below, then answer the final instruction.\nCurrent status revision: 0001.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 0.7094597080000007,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:40:01.547071Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 701976500,
+        "load_duration": 1092875,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 27,
+        "prompt_eval_duration": 655381000,
+        "eval_count": 2,
+        "eval_duration": 27858000
+      }
+    },
+    {
+      "label": "late pair 3: measured",
+      "request": {
+        "model": "qwen3-vl-4b:latest",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Measurement pair 1789897193572464000-2-late.\nRead the reference text below, then answer the final instruction.\nCurrent status revision: 0002.\n[Verified exact repeated reference template: 48 lines, 000 through 047]"
+          },
+          {
+            "role": "user",
+            "content": "Reply with the single word OK."
+          }
+        ],
+        "stream": false,
+        "keep_alive": "30m",
+        "options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 4,
+          "num_ctx": 4096
+        }
+      },
+      "wall_seconds": 0.09360604199999933,
+      "response": {
+        "model": "qwen3-vl-4b:latest",
+        "created_at": "2026-09-20T09:40:01.641666Z",
+        "message": {
+          "role": "assistant",
+          "content": "OK"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 88133083,
+        "load_duration": 870292,
+        "prompt_eval_count": 933,
+        "prompt_eval_cached_count": 914,
+        "prompt_eval_duration": 54294000,
+        "eval_count": 2,
+        "eval_duration": 25959000
+      }
+    }
+  ],
+  "measurements": [
+    {
+      "layout": "early",
+      "repeat": 1,
+      "prompt_eval_ms": 624.98,
+      "prompt_eval_count": 933,
+      "prompt_eval_cached_count": 38,
+      "wall_seconds": 0.6720142500000001,
+      "shared_json_prefix_characters": 119
+    },
+    {
+      "layout": "late",
+      "repeat": 1,
+      "prompt_eval_ms": 53.736,
+      "prompt_eval_count": 933,
+      "prompt_eval_cached_count": 914,
+      "wall_seconds": 0.08990541699999888,
+      "shared_json_prefix_characters": 4889
+    },
+    {
+      "layout": "late",
+      "repeat": 2,
+      "prompt_eval_ms": 53.498,
+      "prompt_eval_count": 933,
+      "prompt_eval_cached_count": 914,
+      "wall_seconds": 0.09221608400000036,
+      "shared_json_prefix_characters": 4889
+    },
+    {
+      "layout": "early",
+      "repeat": 2,
+      "prompt_eval_ms": 629.335,
+      "prompt_eval_count": 933,
+      "prompt_eval_cached_count": 38,
+      "wall_seconds": 0.6777144590000006,
+      "shared_json_prefix_characters": 119
+    },
+    {
+      "layout": "early",
+      "repeat": 3,
+      "prompt_eval_ms": 629.059,
+      "prompt_eval_count": 933,
+      "prompt_eval_cached_count": 38,
+      "wall_seconds": 0.6797334169999996,
+      "shared_json_prefix_characters": 119
+    },
+    {
+      "layout": "late",
+      "repeat": 3,
+      "prompt_eval_ms": 54.294,
+      "prompt_eval_count": 933,
+      "prompt_eval_cached_count": 914,
+      "wall_seconds": 0.09360604199999933,
+      "shared_json_prefix_characters": 4889
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The contact details screen shows Maya Martin with the phone number +1 812-634-0319 (Mobile) and Added Oct 15, 2023. The task is complete, so finish the operation.\n\n\nfinish(message=\"Contact for Maya Martin with phone number +18126340319 created successfully.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447871,
+  "id": "202610081624290e543ed4ad9242b8",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081624290e543ed4ad9242b8",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 3621,
+    "prompt_tokens_details": {
+      "cached_tokens": 2334
+    },
+    "total_tokens": 3692
+  },
+  "wall_seconds": 1.8439999999973224
+}

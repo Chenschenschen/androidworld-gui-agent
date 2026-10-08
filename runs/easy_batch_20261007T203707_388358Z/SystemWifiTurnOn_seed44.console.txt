@@ -1,0 +1,46 @@
+D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Evidence: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_SystemWifiTurnOn_20261007T203917_607248Z
+Readable trajectory: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_SystemWifiTurnOn_20261007T203917_607248Z\trajectory.txt
+Step 1, screenshot, AutoGLM call 1
+Chosen: {'action_type': 'click', 'x': 915, 'y': 1603}
+Step 2, screenshot, AutoGLM call 2
+Chosen: {'action_type': 'click', 'x': 538, 'y': 909}
+Step 3, screenshot, AutoGLM call 3
+Chosen: {'action_type': 'click', 'x': 538, 'y': 715}
+Step 4, screenshot, AutoGLM call 4
+Chosen: {'action_type': 'click', 'x': 968, 'y': 907}
+Step 5, screenshot, AutoGLM call 5
+Chosen: {'action_type': 'status', 'goal_status': 'complete', 'reason': "Wi-Fi is already turned ON as shown by the blue toggle switch and the 'Wi-Fi: switch ON' indicator. No further action is required."}
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261007T203917_607248Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 5,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v5_labeled_completion",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v4_labeled_completion",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 5,
+  "stop_reason": "complete",
+  "model_calls_attempted": 5,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 62.56300000000192,
+  "agent_phase_seconds": 58.56300000000192
+}

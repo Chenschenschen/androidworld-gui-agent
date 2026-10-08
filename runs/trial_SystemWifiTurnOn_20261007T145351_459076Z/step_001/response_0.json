@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T14:54:39.2839884Z",
+  "message": {
+    "role": "assistant",
+    "content": "action:AWAKE\tvalue:settings\t{\"text\": \"Tap the gear icon on the home screen to open 'Settings'.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 20502994100,
+  "load_duration": 49121000,
+  "prompt_eval_count": 1391,
+  "prompt_eval_cached_count": 249,
+  "prompt_eval_duration": 17226018000,
+  "eval_count": 28,
+  "eval_duration": 3048381000,
+  "wall_seconds": 22.562000000001717
+}

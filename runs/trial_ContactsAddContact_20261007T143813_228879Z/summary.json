@@ -1,0 +1,20 @@
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261007T143813_228879Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 0,
+  "manual_intervention": false,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 1,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 133, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 191, in step\n    fields = parse_reply(raw)\n             ^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 48, in parse_reply\n    raise ValueError(\"Expected unique tab-separated key:value fields\")\nValueError: Expected unique tab-separated key:value fields\n",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "video_errors": [],
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 29.6720000000023
+}

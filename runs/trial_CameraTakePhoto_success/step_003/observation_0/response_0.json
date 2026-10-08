@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app is now on the main interface with the shutter button visible at the bottom (bounds [0,841,999,972]). To take a photo, I should tap the shutter button to capture an image.\n\n\ndo(action=\"Tap\", element=[499,908])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791487225,
+  "id": "202610090320248ae134a4d7624adb",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610090320248ae134a4d7624adb",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 3114,
+    "prompt_tokens_details": {
+      "cached_tokens": 1607
+    },
+    "total_tokens": 3178
+  },
+  "wall_seconds": 1.5320000000065193
+}

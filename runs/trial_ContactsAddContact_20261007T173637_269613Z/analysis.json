@@ -1,0 +1,23 @@
+{
+  "kind": "retrospective_analysis",
+  "failure_class": "wrong_app",
+  "evidence": [
+    "Step 2 chose Phone contacts filter instead of Create contact.",
+    "Step 3 selected Company filter; step 4 selected Privacy Policy.",
+    "Step 5 onwards interacted with Chrome onboarding checkbox, not Contacts.",
+    "Repeated checkbox taps changed checked state, so unchanged-tree recovery did not fire; global 12-step budget stopped the run.",
+    "Guide-only comparison with v6 did not improve task success: both official FAIL."
+  ],
+  "video_decode_check": [
+    {
+      "file": "video_001.mp4",
+      "decoded_frames": 935,
+      "last_timestamp_seconds": 118.254,
+      "size": [
+        540,
+        1200
+      ],
+      "limits": "Readable to EOF; timestamps alone do not prove complete action coverage."
+    }
+  ]
+}

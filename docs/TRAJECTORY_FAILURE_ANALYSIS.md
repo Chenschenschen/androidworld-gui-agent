@@ -1,5 +1,33 @@
 # Why the five easy-task trials failed
 
+Latest user-run Camera190644 stopped after one launch-icon tap: next Home
+observation changed to launch splash, then onboarding; model called logo a
+shutter. Both stale choices blocked, official FAIL. Diagnosis and prepared
+v57 checked Camera-label repair: CAMERA_SELF_RUN_REPAIR.md. No new live PASS.
+
+8 October upstream-reference diagnosis: the pinned native PhoneAgent also
+failed Timer seed42 (`trial_ClockTimerEntry_20261008T110453_899546Z`). Step7
+appends7 after20, skipping padded zeros; step9 sees00h20m77s but confuses which
+field77 belongs to and treats appending0 as a field correction. Original
+screenshots and replies are preserved. The preceding attempt failed before
+inference on a Windows import error, fixed only after recording its cause.
+See [UPSTREAM_REFERENCE_COMPARISON.md](UPSTREAM_REFERENCE_COMPARISON.md).
+
+Completed comparison: native Clipboard copied a visibly selected domain instead
+of the whole email, then false-finished. The corrected project Clipboard arm
+cycled More options→Settings→Back without typing until its step limit. Project
+Timer repeated zeros until the no-progress guard stopped it. An invalid earlier
+Clipboard arm lost recording after a cold-launch timeout and inferred ADB
+server restart; its short clip is preserved but excluded. Single-attempt launch
+and live-recorder monitoring fix this transport fault, not those model decisions.
+
+Latest source-backed improvement experiment: same-model M3A before/after
+assessment did not solve Timer/Clipboard. Each protocol/semantic failure was
+inspected and recorded before its changed check. Concrete steps, source-contract
+corrections, full video audit and opt-in status are in
+[STEP_ASSESSMENT_EXPERIMENT.md](STEP_ASSESSMENT_EXPERIMENT.md). Original
+trajectories and summaries are unchanged; current default assessment is off.
+
 8 October continuation: the original v10 analysis below remains historical.
 The hosted AutoGLM failure ledger, pinned GitHub sources and all 174 D1–D4
 pages' implementation mapping are in

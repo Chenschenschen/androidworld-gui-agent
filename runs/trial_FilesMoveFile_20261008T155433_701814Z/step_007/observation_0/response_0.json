@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Move to…\" option is available in the menu. To move the file, I need to select this option. The clickable area for \"Move to…\" is [513,315,989,367].\n\n\ndo(action=\"Tap\", element=[740,341])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474983,
+  "id": "2026100823562292c5aa5db0174b3d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100823562292c5aa5db0174b3d",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 7004,
+    "prompt_tokens_details": {
+      "cached_tokens": 4718
+    },
+    "total_tokens": 7064
+  },
+  "wall_seconds": 1.7659999999887077
+}

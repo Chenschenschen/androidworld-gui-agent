@@ -1,0 +1,37 @@
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261007T172714_503543Z",
+  "agent_done": true,
+  "verifier": "FAIL",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "learning_contact_process_v5_gpu22",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_contact_process_v5",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "complete",
+  "model_calls_attempted": 14,
+  "verifier_score": 0.0,
+  "failure_class": "false_done",
+  "screenshot_fallbacks": [
+    {
+      "step": 1,
+      "reason": "Tree/interface validation failed: Target label '' matches 0 controls; use an unambiguous visible label",
+      "from": "tree",
+      "to": "screenshot"
+    }
+  ],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 151.875
+}

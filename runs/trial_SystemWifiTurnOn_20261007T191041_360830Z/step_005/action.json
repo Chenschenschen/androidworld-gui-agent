@@ -1,0 +1,14 @@
+{
+  "native": {
+    "action": "COMPLETE",
+    "value": "Successfully turned wifi on.",
+    "verify": "On the Internet settings screen, the Wi-Fi toggle is active and blue, and the phone is searching for networks."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "Successfully turned wifi on."
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

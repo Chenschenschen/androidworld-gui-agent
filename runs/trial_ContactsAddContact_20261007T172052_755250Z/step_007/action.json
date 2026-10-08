@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The 'Contacts' screen should open, allowing for managing existing contacts or creating a new one.",
+    "point": "171,922"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 185,
+    "y": 2213
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

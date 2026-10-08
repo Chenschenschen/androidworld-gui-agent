@@ -1,0 +1,62 @@
+D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Evidence: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_ContactsAddContact_20261007T192819_171100Z
+Readable trajectory: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_ContactsAddContact_20261007T192819_171100Z\trajectory.txt
+WARNING:absl:Could not get a11y tree, retrying.
+WARNING:absl:Could not get a11y tree, retrying.
+Step 1, tree, model call 1
+Chosen: {'action_type': 'open_app', 'app_name': 'contacts'}
+Step 2, tree, model call 2
+Chosen: {'action_type': 'click', 'x': 943, 'y': 2011}
+Step 3, tree, model call 3
+Step 3, tree, model call 4
+Chosen: {'action_type': 'input_text', 'text': 'Camila da Silva', 'x': 535, 'y': 939, 'clear_text': True}
+Step 4, tree, model call 5
+Step 4, tree, model call 6
+Chosen: {'action_type': 'input_text', 'text': 'Camila', 'x': 535, 'y': 1135, 'clear_text': True}
+Step 5, tree, model call 7
+Step 5, tree, model call 8
+Chosen: {'action_type': 'input_text', 'text': 'da Silva', 'x': 535, 'y': 939, 'clear_text': True}
+Step 6, tree, model call 9
+Step 6, tree, model call 10
+Chosen: {'action_type': 'input_text', 'text': '+10433218196', 'x': 535, 'y': 1503, 'clear_text': True}
+Traceback (most recent call last):
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\run_task.py", line 221, in main
+    result = agent.step(task.goal)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\gelab_agent.py", line 511, in step
+    raise RuntimeError("UI changed during inference; action not executed")
+RuntimeError: UI changed during inference; action not executed
+
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261007T192819_171100Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 5,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "five_easy_tasks_v10_launch_guard",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_five_tasks_v8",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 6,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 221, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 511, in step\n    raise RuntimeError(\"UI changed during inference; action not executed\")\nRuntimeError: UI changed during inference; action not executed\n",
+  "error_class": "environment_or_execution_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 10,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 117.39100000000326
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I'm in the Files app, currently viewing the Downloads folder, which is empty. To access the sdk_gphone_x86_64 storage area and locate the source and destination folders, I need to open the \"Show roots\" menu. This should display the available storage locations. The \"Show roots\" button is at [0,53,135,105].\n\n\ndo(action=\"Tap\", element=[68,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474904,
+  "id": "2026100823550246d923208f9d45c7",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100823550246d923208f9d45c7",
+  "usage": {
+    "completion_tokens": 89,
+    "prompt_tokens": 3066,
+    "prompt_tokens_details": {
+      "cached_tokens": 1637
+    },
+    "total_tokens": 3155
+  },
+  "wall_seconds": 2.172000000005937
+}

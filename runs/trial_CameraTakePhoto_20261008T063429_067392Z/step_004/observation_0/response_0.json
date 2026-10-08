@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The camera interface is now visible with the shutter button at the bottom center. To take a photo, I should tap the shutter button.\ndo(action=\"Tap\", element=[499,904])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441304,
+  "id": "202610081435037d5a2f4a604740e7",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081435037d5a2f4a604740e7",
+  "usage": {
+    "completion_tokens": 41,
+    "prompt_tokens": 2253,
+    "prompt_tokens_details": {
+      "cached_tokens": 952
+    },
+    "total_tokens": 2294
+  },
+  "wall_seconds": 1.610000000000582
+}

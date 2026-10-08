@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The file has been moved from project_easy to project_medium, and the source folder now shows \"No items\", confirming the file is no longer present there. The task is complete.\n\nfinish(message=\"The file cooking-recipe.md has been moved from project_easy to project_medium within the sdk_gphone_x86_64 storage area.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791479691,
+  "id": "2026100901144964ab77cedb914e8f",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100901144964ab77cedb914e8f",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 10307,
+    "prompt_tokens_details": {
+      "cached_tokens": 8148
+    },
+    "total_tokens": 10374
+  },
+  "wall_seconds": 1.9220000000059372
+}

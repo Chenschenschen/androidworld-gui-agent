@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The navigation drawer is open, and the \"sdk_gphone64_x86_64\" storage area is visible as a selectable item (bounds [0,203,679,264]). To access the destination folder (project_easy), I should tap on \"sdk_gphone64_x86_64\" to open its contents and locate the folder for moving the file.\n\n\ndo(action=\"Tap\", element=[339,233])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474358,
+  "id": "202610082345579b1247336f91402d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082345579b1247336f91402d",
+  "usage": {
+    "completion_tokens": 88,
+    "prompt_tokens": 7823,
+    "prompt_tokens_details": {
+      "cached_tokens": 5802
+    },
+    "total_tokens": 7911
+  },
+  "wall_seconds": 2.0780000000086147
+}

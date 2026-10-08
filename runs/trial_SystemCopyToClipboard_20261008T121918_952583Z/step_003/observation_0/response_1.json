@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants me to copy the text \"john.doe@example.com\" to the clipboard. I'm currently in the Markor app's QuickNote tab. The EditText area is available for input, so the next step is to type the required text into the focused input field. I'll use the Type action to enter the email address.\n\n\ndo(action=\"Type\", text=\"john.doe@example.com\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791462006,
+  "id": "20261008202005205516953939488d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008202005205516953939488d",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 3716,
+    "prompt_tokens_details": {
+      "cached_tokens": 3669
+    },
+    "total_tokens": 3802
+  },
+  "wall_seconds": 1.5310000000026776
+}

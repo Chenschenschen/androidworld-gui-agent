@@ -1,0 +1,57 @@
+D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Evidence: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_SystemWifiTurnOn_20261008T062534_516124Z
+Readable trajectory: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_SystemWifiTurnOn_20261008T062534_516124Z\trajectory.txt
+Step 1, screenshot, AutoGLM call 1
+Step 1, screenshot, AutoGLM call 2
+Traceback (most recent call last):
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\run_task.py", line 319, in main
+    result = agent.step(task.goal)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\autoglm_agent.py", line 455, in step
+    fields, action = self.ask_action(state, observed, goal, step)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\autoglm_agent.py", line 433, in ask_action
+    action = convert_action(fields, state, self.config["allowed_apps"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\autoglm_agent.py", line 135, in convert_action
+    x, y = pixel_point(fields["element"], state)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\autoglm_agent.py", line 108, in pixel_point
+    raise ValueError("Coordinates must be two integers in 0..1000")
+ValueError: Coordinates must be two integers in 0..1000
+
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261008T062534_516124Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 0,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v18_observed_digits_optional_copy_chip",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v14_observed_progress",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 1,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 319, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 455, in step\n    fields, action = self.ask_action(state, observed, goal, step)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 433, in ask_action\n    action = convert_action(fields, state, self.config[\"allowed_apps\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 135, in convert_action\n    x, y = pixel_point(fields[\"element\"], state)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 108, in pixel_point\n    raise ValueError(\"Coordinates must be two integers in 0..1000\")\nValueError: Coordinates must be two integers in 0..1000\n",
+  "error_class": "validation_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 2,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "clean_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 8.75,
+  "agent_phase_seconds": 5.343000000008033
+}

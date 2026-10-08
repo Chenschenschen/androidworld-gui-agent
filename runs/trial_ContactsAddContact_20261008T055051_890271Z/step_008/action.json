@@ -1,0 +1,26 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Swipe",
+    "start": [
+      499,
+      548
+    ],
+    "end": [
+      499,
+      279
+    ]
+  },
+  "android": {
+    "action_type": "slide",
+    "start": [
+      538,
+      1315
+    ],
+    "end": [
+      538,
+      669
+    ]
+  },
+  "observation_id": "observation_0"
+}

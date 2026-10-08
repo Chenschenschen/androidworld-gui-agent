@@ -1,0 +1,19 @@
+{
+  "kind": "learning_trial",
+  "task": "FilesMoveFile",
+  "run_id": "trial_FilesMoveFile_20261008T181210_786433Z",
+  "agent_done": false,
+  "verifier": "NOT_RUN",
+  "steps": 16,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v56_visible_api_errors",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v27_literal_app_finish",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 20,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 16
+}

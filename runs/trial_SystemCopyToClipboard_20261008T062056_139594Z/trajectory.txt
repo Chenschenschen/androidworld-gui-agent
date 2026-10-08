@@ -1,0 +1,699 @@
+
+--- 2026-10-08T06:20:56.151850+00:00 | RUN | RUN START ---
+{
+  "task": "SystemCopyToClipboard",
+  "config": {
+    "version": "autoglm_api_v18_observed_digits_optional_copy_chip",
+    "provider": "zai",
+    "prompt_version": "autoglm_native_en_v14_observed_progress",
+    "model": "autoglm-phone-multilingual",
+    "observation": "screenshot",
+    "tree_backend": "none",
+    "supplemental_tree_packages": [
+      "com.android.settings",
+      "com.google.android.deskclock"
+    ],
+    "action_format": "native_pseudocall",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 0.85,
+      "frequency_penalty": 0.2,
+      "max_tokens": 1024
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "max_reobservations": 1,
+    "freshness_global_difference": 0.08,
+    "freshness_target_difference": 0.08,
+    "no_effect_difference": 0.001,
+    "note": "Contacts v14 3/3 clean. Timer v16 2/3 clean; extra repeated digit on seed44 motivates a stateless observed display digit count and numbered target positions. No next-key computation or target comparison in Python. Clipboard v17 copied successfully but required a transient chip and truncated both replies; v18 defines Copy plus selection-menu closure as completion, with chip/toast optional. Requested text remains named text_to_copy; original official params preserved.",
+    "visual_stability_checks": 3,
+    "visual_stability_pause": 0.5,
+    "visual_stability_difference": 0.01,
+    "api_base_url": "https://api.z.ai/api/paas/v4",
+    "task_seed": 44,
+    "task_name": "SystemCopyToClipboard"
+  }
+}
+
+--- 2026-10-08T06:20:56.232908+00:00 | RUN | OBSERVATION INFRASTRUCTURE ---
+{
+  "backend": "none",
+  "accessibility_services_before": "null",
+  "accessibility_services_after": "null",
+  "tree_used_for_model": false,
+  "task_state_modified": false
+}
+
+--- 2026-10-08T06:20:56.766894+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Copy the following text to the clipboard: alex.jordan@example.net",
+  "parameters": {
+    "clipboard_content": "alex.jordan@example.net"
+  },
+  "task_seed": 44,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-08T06:21:01.865082+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-08T06:21:04.398894+00:00 | STEP 001 | VISUAL SETTLING ---
+{
+  "difference": 0.0010301776960784314,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:04.474875+00:00 | STEP 001 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 1,
+  "used": false,
+  "activity": "com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity"
+}
+
+--- 2026-10-08T06:21:04.775957+00:00 | STEP 001 | OBSERVATION ---
+{
+  "observation_id": "step_001\\observation_0",
+  "screenshot": "step_001\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T06:21:04.787977+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "call": 1,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_001\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T06:21:06.838955+00:00 | STEP 001 | MODEL REPLY ---
+The task is to copy the text "alex.jordan@example.net" to the clipboard. The current screen is the home screen with various app icons. To copy text to the clipboard, I need to first open an app that can handle text input and clipboard operations. The most suitable app would be Google Chrome, as it commonly involves text fields where clipboard operations are performed.
+
+The next step should be to launch the Chrome app. I'll tap on the Chrome icon to open it.
+do(action="Launch", app="Chrome")
+
+--- 2026-10-08T06:21:06.838955+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "wall_seconds": 2.0469999999913853,
+  "usage": {
+    "completion_tokens": 110,
+    "prompt_tokens": 2049,
+    "prompt_tokens_details": {
+      "cached_tokens": 600
+    },
+    "total_tokens": 2159
+  }
+}
+
+--- 2026-10-08T06:21:06.839966+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action_type": "open_app",
+  "app_name": "chrome"
+}
+
+--- 2026-10-08T06:21:11.913110+00:00 | STEP 001 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:12.121032+00:00 | STEP 001 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 2,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:12.465920+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Launch",
+    "app": "Chrome"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.5505821078431372,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 5.625
+}
+
+--- 2026-10-08T06:21:13.121776+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:13.159161+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 3,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:13.241643+00:00 | STEP 002 | OBSERVATION ---
+{
+  "observation_id": "step_002\\observation_0",
+  "screenshot": "step_002\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T06:21:13.249768+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "call": 2,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_002\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T06:21:15.109889+00:00 | STEP 002 | MODEL REPLY ---
+The Chrome app has opened and is displaying the Google homepage. To proceed with copying the text "alex.jordan@example.net" to the clipboard, I need to first enter this text in a search or input field. The visible "Search or type web address" EditText field is the most appropriate input field on this screen. I should tap on this field to focus it and then type the required text.
+do(action="Tap", element=[377,326])
+
+--- 2026-10-08T06:21:15.109889+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "wall_seconds": 1.8439999999973224,
+  "usage": {
+    "completion_tokens": 94,
+    "prompt_tokens": 2511,
+    "prompt_tokens_details": {
+      "cached_tokens": 783
+    },
+    "total_tokens": 2605
+  }
+}
+
+--- 2026-10-08T06:21:15.772201+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:15.811092+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 4,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:15.899253+00:00 | STEP 002 | OBSERVATION ---
+{
+  "observation_id": "step_002\\freshness_0",
+  "screenshot": "step_002\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T06:21:16.037495+00:00 | STEP 002 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T06:21:16.038998+00:00 | STEP 002 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 407,
+  "y": 782
+}
+
+--- 2026-10-08T06:21:18.165008+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.011877680759803921,
+  "within_threshold": false,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:18.203649+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 5,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:18.413201+00:00 | STEP 002 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.0708984375,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 2.375
+}
+
+--- 2026-10-08T06:21:19.064679+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 0.00010100719975490195,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:19.102272+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 6,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:19.185502+00:00 | STEP 003 | OBSERVATION ---
+{
+  "observation_id": "step_003\\observation_0",
+  "screenshot": "step_003\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T06:21:19.197723+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "call": 3,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_003\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T06:21:20.772741+00:00 | STEP 003 | MODEL REPLY ---
+The search field is now focused and the keyboard is visible. The next step is to type the text "alex.jordan@example.net" into the search field as required by the task.
+do(action="Type", text="alex.jordan@example.net")
+
+--- 2026-10-08T06:21:20.772741+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "wall_seconds": 1.5780000000086147,
+  "usage": {
+    "completion_tokens": 51,
+    "prompt_tokens": 2954,
+    "prompt_tokens_details": {
+      "cached_tokens": 1188
+    },
+    "total_tokens": 3005
+  }
+}
+
+--- 2026-10-08T06:21:21.418249+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 0.00010100719975490195,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:21.456169+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 7,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:21.543819+00:00 | STEP 003 | OBSERVATION ---
+{
+  "observation_id": "step_003\\freshness_0",
+  "screenshot": "step_003\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T06:21:21.613197+00:00 | STEP 003 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T06:21:21.613197+00:00 | STEP 003 | EXECUTION START ---
+{
+  "action_type": "input_text",
+  "text": "alex.jordan@example.net",
+  "clear_text": true
+}
+
+--- 2026-10-08T06:21:25.021742+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 0.0003518497242647059,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:25.071122+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 8,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:25.270532+00:00 | STEP 003 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Type",
+    "text": "alex.jordan@example.net"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.005226524203431372,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 3.6560000000026776
+}
+
+--- 2026-10-08T06:21:25.979947+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.00011010263480392157,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:26.025880+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 9,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:26.114338+00:00 | STEP 004 | OBSERVATION ---
+{
+  "observation_id": "step_004\\observation_0",
+  "screenshot": "step_004\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T06:21:26.128083+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "call": 4,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_004\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T06:21:27.979347+00:00 | STEP 004 | MODEL REPLY ---
+The text "alex.jordan@example.net" has been entered in the search field, and the keyboard is still visible. To proceed with copying the text to the clipboard, I need to long press on the entered text in the search field to bring up the context menu that includes the "Copy" option. The search field is located at [136,62,881,114].
+do(action="Long Press", element=[493,106])
+
+--- 2026-10-08T06:21:27.980546+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "wall_seconds": 1.8439999999973224,
+  "usage": {
+    "completion_tokens": 91,
+    "prompt_tokens": 3374,
+    "prompt_tokens_details": {
+      "cached_tokens": 1638
+    },
+    "total_tokens": 3465
+  }
+}
+
+--- 2026-10-08T06:21:28.648068+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.00011010263480392157,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:28.688240+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 10,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:28.777746+00:00 | STEP 004 | OBSERVATION ---
+{
+  "observation_id": "step_004\\freshness_0",
+  "screenshot": "step_004\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T06:21:28.918428+00:00 | STEP 004 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T06:21:28.918428+00:00 | STEP 004 | EXECUTION START ---
+{
+  "action_type": "long_press",
+  "x": 532,
+  "y": 254
+}
+
+--- 2026-10-08T06:21:31.165549+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.005507046568627451,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:31.203405+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 11,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:31.398884+00:00 | STEP 004 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Long Press"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.006070484834558823,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 2.4839999999967404
+}
+
+--- 2026-10-08T06:21:32.039731+00:00 | STEP 005 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:32.079504+00:00 | STEP 005 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 12,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:32.164757+00:00 | STEP 005 | OBSERVATION ---
+{
+  "observation_id": "step_005\\observation_0",
+  "screenshot": "step_005\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T06:21:32.177181+00:00 | STEP 005 | MODEL REQUEST ---
+{
+  "call": 5,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_005\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T06:21:33.946700+00:00 | STEP 005 | MODEL REPLY ---
+The long press action has brought up the context menu with options including "Copy". To copy the text "alex.jordan@example.net" to the clipboard, I need to tap the "Copy" option in the menu. The "Copy" button is located at [201,165,295,191].
+do(action="Tap", element=[201,165])
+
+--- 2026-10-08T06:21:33.947701+00:00 | STEP 005 | MODEL TIMING ---
+{
+  "wall_seconds": 1.764999999999418,
+  "usage": {
+    "completion_tokens": 75,
+    "prompt_tokens": 3827,
+    "prompt_tokens_details": {
+      "cached_tokens": 2038
+    },
+    "total_tokens": 3902
+  }
+}
+
+--- 2026-10-08T06:21:34.600077+00:00 | STEP 005 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:34.639776+00:00 | STEP 005 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 13,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:34.726010+00:00 | STEP 005 | OBSERVATION ---
+{
+  "observation_id": "step_005\\freshness_0",
+  "screenshot": "step_005\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T06:21:34.865574+00:00 | STEP 005 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T06:21:34.866561+00:00 | STEP 005 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 217,
+  "y": 396
+}
+
+--- 2026-10-08T06:21:35.954731+00:00 | STEP 005 | VISUAL SETTLING ---
+{
+  "difference": 0.007160500919117647,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:36.024546+00:00 | STEP 005 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 14,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:36.342171+00:00 | STEP 005 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.006098249846813725,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 1.4689999999973224
+}
+
+--- 2026-10-08T06:21:37.503522+00:00 | STEP 006 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:37.582668+00:00 | STEP 006 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 15,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:37.731024+00:00 | STEP 006 | OBSERVATION ---
+{
+  "observation_id": "step_006\\observation_0",
+  "screenshot": "step_006\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T06:21:37.742241+00:00 | STEP 006 | MODEL REQUEST ---
+{
+  "call": 6,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_006\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T06:21:39.696334+00:00 | STEP 006 | MODEL REPLY ---
+The "Copy" option has been tapped, and the text "alex.jordan@example.net" is now copied to the clipboard. The task is complete, as the text has been successfully copied to the clipboard as required.
+finish(message="The text 'alex.jordan@example.net' has been successfully copied to the clipboard as requested. Task completed.")
+
+--- 2026-10-08T06:21:39.696334+00:00 | STEP 006 | MODEL TIMING ---
+{
+  "wall_seconds": 1.9529999999940628,
+  "usage": {
+    "completion_tokens": 70,
+    "prompt_tokens": 4263,
+    "prompt_tokens_details": {
+      "cached_tokens": 2498
+    },
+    "total_tokens": 4333
+  }
+}
+
+--- 2026-10-08T06:21:39.697336+00:00 | STEP 006 | EXECUTION START ---
+{
+  "action_type": "status",
+  "goal_status": "complete",
+  "reason": "The text 'alex.jordan@example.net' has been successfully copied to the clipboard as requested. Task completed."
+}
+
+--- 2026-10-08T06:21:40.462552+00:00 | STEP 006 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T06:21:40.507272+00:00 | STEP 006 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 16,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main"
+}
+
+--- 2026-10-08T06:21:40.767715+00:00 | STEP 006 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "finish",
+    "message": "The text 'alex.jordan@example.net' has been successfully copied to the clipboard as requested. Task completed."
+  },
+  "no_visible_effect": true,
+  "image_difference": 0.0,
+  "dispatch_returned": false,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 1.0780000000086147
+}
+
+--- 2026-10-08T06:21:42.505694+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "SystemCopyToClipboard",
+  "run_id": "trial_SystemCopyToClipboard_20261008T062056_139594Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 6,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v18_observed_digits_optional_copy_chip",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v14_observed_progress",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 6,
+  "stop_reason": "complete",
+  "model_calls_attempted": 6,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 46.36000000000058,
+  "agent_phase_seconds": 39.42200000000594
+}

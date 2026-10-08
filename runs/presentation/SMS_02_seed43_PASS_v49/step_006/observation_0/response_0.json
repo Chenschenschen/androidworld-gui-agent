@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The message has been typed into the input field. To send the message, I need to tap the \"SMS OK\" send button, which is the clickable ImageView at [872, 568, 988, 622].\n\ndo(action=\"Tap\", element=[940,605])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791466250,
+  "id": "2026100821304821094e6351a44a35",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100821304821094e6351a44a35",
+  "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 5130,
+    "prompt_tokens_details": {
+      "cached_tokens": 2973
+    },
+    "total_tokens": 5195
+  },
+  "wall_seconds": 1.7810000000026776
+}

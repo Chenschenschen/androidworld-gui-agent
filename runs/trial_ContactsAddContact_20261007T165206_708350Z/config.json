@@ -1,0 +1,26 @@
+{
+  "version": "learning_context_feedback_v2_1",
+  "prompt_version": "gelab_json_feedback_v2",
+  "action_format": "json_schema",
+  "observation": "tree_first",
+  "prompt_examples": false,
+  "max_screenshot_fallbacks": 2,
+  "model": "gelab-zero-4b-preview:latest",
+  "options": {
+    "temperature": 1,
+    "top_k": 20,
+    "top_p": 0.95,
+    "num_ctx": 4096,
+    "num_gpu": 16,
+    "num_predict": 256,
+    "seed": 42
+  },
+  "max_steps": 12,
+  "max_seconds": 900,
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "note": "Same context/model settings as v2. Guard compares labelled/interactive controls, ignoring a measured noninteractive cursor-handle disappearance. Independent launcher test and task repeat recorded.",
+  "contact_guidance": true,
+  "task_seed": 42
+}

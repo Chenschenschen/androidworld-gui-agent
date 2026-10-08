@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows \"02h 07m 01s\" and I have entered \"20701\". The target is \"20h 07m 01s\", so I need to correct the hour value. The hour field currently shows \"02\" but should be \"20\". I need to tap the \"0\" button to move the \"0\" into the hour field, making it \"20\".\ndo(action=\"Tap\", element=[500,685])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791443462,
+  "id": "202610081511008b0552992e3d4afa",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081511008b0552992e3d4afa",
+  "usage": {
+    "completion_tokens": 96,
+    "prompt_tokens": 7964,
+    "prompt_tokens_details": {
+      "cached_tokens": 5387
+    },
+    "total_tokens": 8060
+  },
+  "wall_seconds": 2.062999999994645
+}

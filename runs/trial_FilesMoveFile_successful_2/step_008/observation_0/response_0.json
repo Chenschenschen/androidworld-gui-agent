@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Move to\" dialog is open, currently showing the Downloads folder. To select the destination \"project_medium\" folder, I need to open the root directory by tapping the \"Show roots\" button in the top left corner. This will allow me to navigate to the \"sdk_gphone64_x86_64\" storage area and then to the \"project_medium\" folder within it.\n\n\ndo(action=\"Tap\", element=[68,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791483257,
+  "id": "202610090214154d96bdc407de47da",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610090214154d96bdc407de47da",
+  "usage": {
+    "completion_tokens": 94,
+    "prompt_tokens": 7608,
+    "prompt_tokens_details": {
+      "cached_tokens": 5603
+    },
+    "total_tokens": 7702
+  },
+  "wall_seconds": 1.9060000000026776
+}

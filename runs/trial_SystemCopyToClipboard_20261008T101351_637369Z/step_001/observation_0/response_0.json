@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the home screen, and there is no clipboard interface open. To copy text, I need to first select it in an input field, then use the copy action. However, there is no input field visible yet. The first step should be to launch an app that has an input field, such as Messages, Gmail, or the Chrome browser. Since \"Messages\" is available and commonly used for copying and pasting, I will launch the Messages app.\n\n\ndo(action=\"Launch\", app=\"messages\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791454443,
+  "id": "202610081814011ee251743f444a0f",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081814011ee251743f444a0f",
+  "usage": {
+    "completion_tokens": 129,
+    "prompt_tokens": 1857,
+    "prompt_tokens_details": {
+      "cached_tokens": 408
+    },
+    "total_tokens": 1986
+  },
+  "wall_seconds": 2.6570000000065193
+}

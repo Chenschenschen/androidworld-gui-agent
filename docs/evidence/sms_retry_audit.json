@@ -1,0 +1,49 @@
+{
+  "same_sources_and_settings_final_pair": true,
+  "records": [
+    {
+      "run_id": "trial_SimpleSmsSend_20261008T132430_837967Z",
+      "version": "autoglm_api_v47_literal_action_contract",
+      "verifier": "FAIL",
+      "clean_success": false,
+      "json_files_valid": 13,
+      "credential_found": false,
+      "video_frames_decoded": 2,
+      "video_seconds": 14.84,
+      "stale_decisions_discarded": 0
+    },
+    {
+      "run_id": "trial_SimpleSmsSend_20261008T132625_711688Z",
+      "version": "autoglm_api_v48_sms_name_mapping",
+      "verifier": "FAIL",
+      "clean_success": false,
+      "json_files_valid": 34,
+      "credential_found": false,
+      "video_frames_decoded": 67,
+      "video_seconds": 29.32,
+      "stale_decisions_discarded": 1
+    },
+    {
+      "run_id": "trial_SimpleSmsSend_20261008T132854_166582Z",
+      "version": "autoglm_api_v49_sms_observed_controls",
+      "verifier": "PASS",
+      "clean_success": true,
+      "json_files_valid": 78,
+      "credential_found": false,
+      "video_frames_decoded": 317,
+      "video_seconds": 120.62,
+      "stale_decisions_discarded": 2
+    },
+    {
+      "run_id": "trial_SimpleSmsSend_20261008T133321_726192Z",
+      "version": "autoglm_api_v49_sms_observed_controls",
+      "verifier": "PASS",
+      "clean_success": true,
+      "json_files_valid": 78,
+      "credential_found": false,
+      "video_frames_decoded": 338,
+      "video_seconds": 122.99,
+      "stale_decisions_discarded": 2
+    }
+  ]
+}

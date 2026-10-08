@@ -1,0 +1,13 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Type",
+    "text": "+16881263403"
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "+16881263403",
+    "clear_text": true
+  },
+  "observation_id": "observation_1"
+}

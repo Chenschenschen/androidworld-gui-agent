@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows \"00h 20m 70s\" and I have entered \"2070\". To set 20:07:01, I need to enter \"1\" next. I will tap the \"1\" button to input the final second digit.\ndo(action=\"Tap\", element=[245,340])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791443450,
+  "id": "20261008151048728ad28711dd4461",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008151048728ad28711dd4461",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 7124,
+    "prompt_tokens_details": {
+      "cached_tokens": 4544
+    },
+    "total_tokens": 7191
+  },
+  "wall_seconds": 1.9689999999973224
+}

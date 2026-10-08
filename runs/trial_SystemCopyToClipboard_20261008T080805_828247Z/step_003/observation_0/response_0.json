@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\ndo(action=\"Type\", text=\"john.doe@example.com\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791446924,
+  "id": "20261008160843e8d676d0250c466e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008160843e8d676d0250c466e",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 2789,
+    "prompt_tokens_details": {
+      "cached_tokens": 901
+    },
+    "total_tokens": 2805
+  },
+  "wall_seconds": 1.3280000000086147
+}

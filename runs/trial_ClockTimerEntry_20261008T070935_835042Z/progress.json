@@ -1,0 +1,19 @@
+{
+  "kind": "learning_trial",
+  "task": "ClockTimerEntry",
+  "run_id": "trial_ClockTimerEntry_20261008T070935_835042Z",
+  "agent_done": false,
+  "verifier": "NOT_RUN",
+  "steps": 10,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v21_gui_keyboard_and_field_grounding",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v16_gui_keyboard",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 10
+}

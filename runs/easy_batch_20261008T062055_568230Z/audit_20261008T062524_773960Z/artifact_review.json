@@ -1,0 +1,231 @@
+[
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261008T062056_139594Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemCopyToClipboard",
+      "run_id": "trial_SystemCopyToClipboard_20261008T062056_139594Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 6,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v18_observed_digits_optional_copy_chip",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v14_observed_progress",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 6,
+      "stop_reason": "complete",
+      "model_calls_attempted": 6,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 46.36000000000058,
+      "agent_phase_seconds": 39.42200000000594
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 6,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Chrome"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          377,
+          326
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Type",
+        "text": "alex.jordan@example.net"
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Long Press",
+        "element": [
+          493,
+          106
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          201,
+          165
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_006",
+        "command": "finish",
+        "message": "The text 'alex.jordan@example.net' has been successfully copied to the clipboard as requested. Task completed."
+      }
+    ],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 490,
+        "fps": 12.401947977624749,
+        "duration_seconds": 39.50992222222222
+      }
+    ],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261008T062143_198905Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ClockTimerEntry",
+      "run_id": "trial_ClockTimerEntry_20261008T062143_198905Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 9,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v18_observed_digits_optional_copy_chip",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v14_observed_progress",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 9,
+      "stop_reason": "complete",
+      "model_calls_attempted": 9,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 103.82800000000861,
+      "agent_phase_seconds": 99.68700000000536
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 9,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          610,
+          544
+        ]
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          928
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          340
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          755,
+          340
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          755,
+          340
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          755,
+          340
+        ]
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          755,
+          340
+        ]
+      },
+      {
+        "step": "step_008",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          455
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_009",
+        "command": "finish",
+        "message": "Timer set to 13:33:34 successfully. All requested values match exactly and the timer is not started, as required. Task complete."
+      }
+    ],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 321,
+        "fps": 3.2106792370297006,
+        "duration_seconds": 99.97884444444445
+      }
+    ],
+    "incomplete_steps": []
+  }
+]

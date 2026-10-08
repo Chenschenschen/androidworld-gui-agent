@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "finish",
+    "message": "Wi-Fi has been successfully turned on! I can see the Wi-Fi toggle is now enabled (blue and in the ON position), and available networks are now being displayed. The task is complete."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "Wi-Fi has been successfully turned on! I can see the Wi-Fi toggle is now enabled (blue and in the ON position), and available networks are now being displayed. The task is complete."
+  },
+  "observation_id": "observation_0"
+}

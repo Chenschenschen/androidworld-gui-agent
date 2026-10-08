@@ -1,0 +1,46 @@
+[
+  {
+    "mode": "compact",
+    "state": "ON",
+    "action": {
+      "command": "finish",
+      "message": "Wi-Fi is already enabled (switch is checked). Internet connectivity is not required, so no further action is needed. Task is complete as requested to stop when the Wi-Fi switch is on."
+    },
+    "raw": "\nfinish(message=\"Wi-Fi is already enabled (switch is checked). Internet connectivity is not required, so no further action is needed. Task is complete as requested to stop when the Wi-Fi switch is on.\")"
+  },
+  {
+    "mode": "compact",
+    "state": "OFF",
+    "action": {
+      "command": "do",
+      "action": "Tap",
+      "element": [
+        499,
+        381
+      ]
+    },
+    "raw": "\nThe Wi-Fi switch is currently OFF (the toggle is to the left and grayed out). To turn Wi-Fi on, I need to tap the switch area. The switch is located in the \"Wi-Fi\" row, which spans from the left edge to the right edge of the screen. The center of this row is approximately at coordinates [0,354,999,416]. I will tap this area to enable Wi-Fi.\ndo(action=\"Tap\", element=[499,381])"
+  },
+  {
+    "mode": "native",
+    "state": "ON",
+    "action": {
+      "command": "finish",
+      "message": "Wi-Fi is already enabled (switch is checked). Internet connectivity is not required, so no further action is needed. Task is complete as requested to stop when the Wi-Fi switch is on."
+    },
+    "raw": "\nfinish(message=\"Wi-Fi is already enabled (switch is checked). Internet connectivity is not required, so no further action is needed. Task is complete as requested to stop when the Wi-Fi switch is on.\")"
+  },
+  {
+    "mode": "native",
+    "state": "OFF",
+    "action": {
+      "command": "do",
+      "action": "Tap",
+      "element": [
+        499,
+        378
+      ]
+    },
+    "raw": "\nThe Wi-Fi switch is currently OFF (the toggle is to the left and grayed out). To turn Wi-Fi on, I need to tap the switch area. The switch is located in the \"Wi-Fi\" row, which spans from the left edge to the right edge of the screen. The center of this row is approximately at y=378 and spans most of the width, so I should tap near the center of the switch area to enable Wi-Fi.\ndo(action=\"Tap\", element=[499,378])"
+  }
+]

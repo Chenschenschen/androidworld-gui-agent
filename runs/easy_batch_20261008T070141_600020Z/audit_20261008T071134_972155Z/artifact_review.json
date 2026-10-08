@@ -1,0 +1,211 @@
+[
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261008T070142_134919Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemCopyToClipboard",
+      "run_id": "trial_SystemCopyToClipboard_20261008T070142_134919Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 6,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v20_unique_native_decision",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v15_point_or_box",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 6,
+      "stop_reason": "complete",
+      "model_calls_attempted": 6,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 49.96899999999732,
+      "agent_phase_seconds": 43.453999999997905
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 6,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Chrome"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          38,
+          300,
+          960,
+          353
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Type",
+        "text": "Discount code: SAVE20"
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Long Press",
+        "element": [
+          499,
+          106
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          243,
+          180
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_006",
+        "command": "finish",
+        "message": "Task completed successfully! I have copied the text \"Discount code: SAVE20\" to the clipboard. You can see the clipboard icon in the search bar area, indicating that the text has been copied to your clipboard and is ready to be pasted when needed."
+      }
+    ],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 266,
+        "fps": 6.153066393745359,
+        "duration_seconds": 43.23047777777778
+      }
+    ],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261008T070232_847659Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemCopyToClipboard",
+      "run_id": "trial_SystemCopyToClipboard_20261008T070232_847659Z",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 6,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v20_unique_native_decision",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v15_point_or_box",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 7,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 319, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 473, in step\n    raise RuntimeError(\"Repeated action without visible effect; stopping\")\nRuntimeError: Repeated action without visible effect; stopping\n",
+      "error_class": "environment_or_execution_error",
+      "stop_reason": "error",
+      "verifier_score": 0.0,
+      "failure_class": null,
+      "model_calls_attempted": 7,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 52.53100000000268,
+      "agent_phase_seconds": 44.71899999999732
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 7,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Chrome"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          326
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Type",
+        "text": "john.doe@example.com"
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Long Press",
+        "element": [
+          499,
+          168
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Wait",
+        "duration": "1 seconds"
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Wait",
+        "duration": "1 seconds"
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Wait",
+        "duration": "1 seconds"
+      }
+    ],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 252,
+        "fps": 5.728509564565076,
+        "duration_seconds": 43.990500000000004
+      }
+    ],
+    "incomplete_steps": [
+      {
+        "step": "step_007",
+        "execution_started": false,
+        "note": "Expected interrupted/failed step; inspect saved request, error and stop reason."
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"sdk_gphone64_x86_64\" storage area is displayed, and both the \"project_easy\" and \"project_medium\" folders are visible. To set \"project_medium\" as the destination for the move operation, I should tap on the \"project_medium\" folder at [509, 613, 939, 665].\n\n\ndo(action=\"Tap\", element=[724,627])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791468533,
+  "id": "20261008220852f7e964de5b4044da",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008220852f7e964de5b4044da",
+  "usage": {
+    "completion_tokens": 88,
+    "prompt_tokens": 10153,
+    "prompt_tokens_details": {
+      "cached_tokens": 7930
+    },
+    "total_tokens": 10241
+  },
+  "wall_seconds": 2.061999999990803
+}

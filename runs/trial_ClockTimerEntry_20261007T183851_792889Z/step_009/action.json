@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "1",
+    "verify": "The hour input for the timer should be changed to 1.",
+    "target": "More options",
+    "index": "1",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 1027,
+    "y": 211
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

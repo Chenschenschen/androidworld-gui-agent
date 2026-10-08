@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn Wi-Fi on. The task is to enable Wi-Fi in the Settings app. I can see the Settings app icon on the home screen at coordinates [731,678,960,747]. The first step is to launch the Settings app. I should tap on the Settings icon to open it.\n\nLooking at the current screen, I can see the Settings app icon (gear/cog icon) in the bottom right area of the app grid. I need to tap on it to open the Settings app.\ndo(action=\"Tap\", element=[848,668])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405229,
+  "id": "202610080433487b16d94f76454181",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080433487b16d94f76454181",
+  "usage": {
+    "completion_tokens": 127,
+    "prompt_tokens": 1717,
+    "prompt_tokens_details": {
+      "cached_tokens": 554
+    },
+    "total_tokens": 1844
+  },
+  "wall_seconds": 2.0939999999973224
+}

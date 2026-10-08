@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Add Contact or Number…\" input field is focused and ready for text input. I need to type the phone number +10427517979 into this field to start the conversation.\n\n\ndo(action=\"Type\", text=\"+10427517979\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791466184,
+  "id": "20261008212943feebaea7b0ba42b3",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008212943feebaea7b0ba42b3",
+  "usage": {
+    "completion_tokens": 56,
+    "prompt_tokens": 3320,
+    "prompt_tokens_details": {
+      "cached_tokens": 1676
+    },
+    "total_tokens": 3376
+  },
+  "wall_seconds": 1.5779999999940628
+}

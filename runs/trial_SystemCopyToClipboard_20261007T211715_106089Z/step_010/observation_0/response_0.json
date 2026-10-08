@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see the Chrome home screen. I need to tap on the search bar to search for \"john.doe@example.com\". Let me tap on the search bar.\ndo(action=\"Tap\", element=[499,326])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407896,
+  "id": "202610080518155676fd279ce847d7",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080518155676fd279ce847d7",
+  "usage": {
+    "completion_tokens": 48,
+    "prompt_tokens": 3514,
+    "prompt_tokens_details": {
+      "cached_tokens": 2224
+    },
+    "total_tokens": 3562
+  },
+  "wall_seconds": 1.4219999999986612
+}

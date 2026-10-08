@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "A notification permission dialog is blocking the screen. To proceed with creating a contact, I should dismiss it. I'll tap \"Don't allow\" to close the dialog.\ndo(action=\"Tap\", element=[499,614])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438695,
+  "id": "202610081351341cb46a2e69f740b0",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081351341cb46a2e69f740b0",
+  "usage": {
+    "completion_tokens": 48,
+    "prompt_tokens": 1861,
+    "prompt_tokens_details": {
+      "cached_tokens": 622
+    },
+    "total_tokens": 1909
+  },
+  "wall_seconds": 1.4219999999913853
+}

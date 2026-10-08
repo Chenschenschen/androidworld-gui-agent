@@ -1,0 +1,30 @@
+[
+  {
+    "state": "ON",
+    "native": {
+      "command": "finish",
+      "message": "WiFi is already turned on. I can see in the Settings > Internet screen that the Wi-Fi toggle switch is enabled (blue and checked). The task is complete - WiFi is already in the ON state."
+    },
+    "android": {
+      "action_type": "status",
+      "goal_status": "complete",
+      "reason": "WiFi is already turned on. I can see in the Settings > Internet screen that the Wi-Fi toggle switch is enabled (blue and checked). The task is complete - WiFi is already in the ON state."
+    }
+  },
+  {
+    "state": "OFF",
+    "native": {
+      "command": "do",
+      "action": "Tap",
+      "element": [
+        679,
+        389
+      ]
+    },
+    "android": {
+      "action_type": "click",
+      "x": 733,
+      "y": 933
+    }
+  }
+]

@@ -1,0 +1,697 @@
+[
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261008T063136_028753Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemWifiTurnOn",
+      "run_id": "trial_SystemWifiTurnOn_20261008T063136_028753Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 5,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v19_checked_box_centers",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v15_point_or_box",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 5,
+      "stop_reason": "complete",
+      "model_calls_attempted": 5,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 57.875,
+      "agent_phase_seconds": 54.42200000000594
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 5,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          848,
+          668
+        ]
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          379
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          294
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          846,
+          381
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_005",
+        "command": "finish",
+        "message": "Wi-Fi has been successfully turned on! The Wi-Fi toggle is now enabled (ON position) and available networks are now visible, including \"AndroidWifi\" which is saved but won't automatically connect. The task is complete."
+      }
+    ],
+    "switch_transitions": [
+      {
+        "step": "step_002",
+        "before": [],
+        "after": [
+          {
+            "label": "Airplane mode",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "step": "step_003",
+        "before": [
+          {
+            "label": "Airplane mode",
+            "checked": false
+          }
+        ],
+        "after": [
+          {
+            "label": "Wi-Fi",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "step": "step_004",
+        "before": [
+          {
+            "label": "Wi-Fi",
+            "checked": false
+          }
+        ],
+        "after": []
+      },
+      {
+        "step": "step_005",
+        "before": [
+          {
+            "label": "Wi-Fi",
+            "checked": true
+          }
+        ],
+        "after": [
+          {
+            "label": "Wi-Fi",
+            "checked": true
+          }
+        ]
+      }
+    ],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 610,
+        "fps": 11.145313984202076,
+        "duration_seconds": 54.73152222222222
+      }
+    ],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261008T063234_548534Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemWifiTurnOn",
+      "run_id": "trial_SystemWifiTurnOn_20261008T063234_548534Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 5,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v19_checked_box_centers",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v15_point_or_box",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 5,
+      "stop_reason": "complete",
+      "model_calls_attempted": 5,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 56.59300000000803,
+      "agent_phase_seconds": 53.312000000005355
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 5,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Settings"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          382
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          296
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          381
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_005",
+        "command": "finish",
+        "message": "Wi-Fi has been turned on successfully. The switch is now toggled to the right and colored, indicating that Wi-Fi is enabled. Task completed."
+      }
+    ],
+    "switch_transitions": [
+      {
+        "step": "step_002",
+        "before": [],
+        "after": [
+          {
+            "label": "Airplane mode",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "step": "step_003",
+        "before": [
+          {
+            "label": "Airplane mode",
+            "checked": false
+          }
+        ],
+        "after": [
+          {
+            "label": "Wi-Fi",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "step": "step_004",
+        "before": [
+          {
+            "label": "Wi-Fi",
+            "checked": false
+          }
+        ],
+        "after": [
+          {
+            "label": "Wi-Fi",
+            "checked": true
+          }
+        ]
+      },
+      {
+        "step": "step_005",
+        "before": [
+          {
+            "label": "Wi-Fi",
+            "checked": true
+          }
+        ],
+        "after": [
+          {
+            "label": "Wi-Fi",
+            "checked": true
+          }
+        ]
+      }
+    ],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 637,
+        "fps": 11.867759254026561,
+        "duration_seconds": 53.67483333333333
+      }
+    ],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261008T063331_739156Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemWifiTurnOn",
+      "run_id": "trial_SystemWifiTurnOn_20261008T063331_739156Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 5,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v19_checked_box_centers",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v15_point_or_box",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 5,
+      "stop_reason": "complete",
+      "model_calls_attempted": 5,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 56.71899999999732,
+      "agent_phase_seconds": 53.421999999991385
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 5,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Settings"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          379
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          298
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          379
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_005",
+        "command": "finish",
+        "message": "Wi-Fi has been turned on successfully. The toggle is now enabled and available networks are displayed."
+      }
+    ],
+    "switch_transitions": [
+      {
+        "step": "step_002",
+        "before": [],
+        "after": [
+          {
+            "label": "Airplane mode",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "step": "step_003",
+        "before": [
+          {
+            "label": "Airplane mode",
+            "checked": false
+          }
+        ],
+        "after": [
+          {
+            "label": "Wi-Fi",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "step": "step_004",
+        "before": [
+          {
+            "label": "Wi-Fi",
+            "checked": false
+          }
+        ],
+        "after": [
+          {
+            "label": "Wi-Fi",
+            "checked": true
+          }
+        ]
+      },
+      {
+        "step": "step_005",
+        "before": [
+          {
+            "label": "Wi-Fi",
+            "checked": true
+          }
+        ],
+        "after": [
+          {
+            "label": "Wi-Fi",
+            "checked": true
+          }
+        ]
+      }
+    ],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 612,
+        "fps": 11.516415910718923,
+        "duration_seconds": 53.141533333333335
+      }
+    ],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261008T063429_067392Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "CameraTakePhoto",
+      "run_id": "trial_CameraTakePhoto_20261008T063429_067392Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 5,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v19_checked_box_centers",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v15_point_or_box",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 5,
+      "stop_reason": "complete",
+      "model_calls_attempted": 5,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 44.375,
+      "agent_phase_seconds": 40.8119999999908
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 5,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          149,
+          409
+        ]
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Wait",
+        "duration": "1 seconds"
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          927
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          904
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_005",
+        "command": "finish",
+        "message": "One photo has been taken successfully. The thumbnail of the captured image is visible in the bottom-right corner of the camera interface."
+      }
+    ],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 160,
+        "fps": 3.8748634379725853,
+        "duration_seconds": 41.29177777777778
+      }
+    ],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261008T063514_164428Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "CameraTakePhoto",
+      "run_id": "trial_CameraTakePhoto_20261008T063514_164428Z",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 12,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v19_checked_box_centers",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v15_point_or_box",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 12,
+      "stop_reason": "step_budget",
+      "model_calls_attempted": 15,
+      "verifier_score": 0.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 96.06200000000536,
+      "agent_phase_seconds": 91.75
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 15,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          146,
+          409
+        ]
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          927
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          906
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          906
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          906
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          906
+        ]
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          906
+        ]
+      },
+      {
+        "step": "step_008",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          906
+        ]
+      },
+      {
+        "step": "step_009",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          906
+        ]
+      },
+      {
+        "step": "step_010",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          906
+        ]
+      },
+      {
+        "step": "step_011",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          906
+        ]
+      },
+      {
+        "step": "step_012",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          906
+        ]
+      }
+    ],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 798,
+        "fps": 8.674655837075905,
+        "duration_seconds": 91.9921222222222
+      }
+    ],
+    "incomplete_steps": []
+  }
+]

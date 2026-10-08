@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to copy the text \"alex.jordan@example.net\" to the clipboard. I've dismiss the audio dialog and now I'm back at the Chrome home screen. There's a dialog asking to turn on sync, but this is irrelevant to the task. I should close this dialog by tapping the X button to get back to the search interface where I can type the text.\ndo(action=\"Tap\", element=[893,670])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407943,
+  "id": "202610080519018c30465635a84ac3",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080519018c30465635a84ac3",
+  "usage": {
+    "completion_tokens": 91,
+    "prompt_tokens": 2292,
+    "prompt_tokens_details": {
+      "cached_tokens": 957
+    },
+    "total_tokens": 2383
+  },
+  "wall_seconds": 1.7809999999954016
+}

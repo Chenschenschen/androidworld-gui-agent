@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe current screen is the home screen of the Android device. To turn Wi-Fi on, I need to open the Settings app first, as the Wi-Fi controls are located there. The Settings app icon is visible on the screen at coordinates [735,649,932,717]. The first step should be to launch the Settings app.\ndo(action=\"Launch\", app=\"Settings\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441217,
+  "id": "202610081433352cd3e6160ccd4080",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081433352cd3e6160ccd4080",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 1657,
+    "prompt_tokens_details": {
+      "cached_tokens": 630
+    },
+    "total_tokens": 1743
+  },
+  "wall_seconds": 1.9220000000059372
+}

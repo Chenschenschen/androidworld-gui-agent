@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "To access the destination folder \"project_medium\", I need to first enter the \"sdk_gphone64_x86_64\" storage area. The clickable area for \"sdk_gphone64_x86_64\" is [0,203,679,264].\n\n\ndo(action=\"Tap\", element=[340,233])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791475014,
+  "id": "2026100823565271d4d1eb64674557",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100823565271d4d1eb64674557",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 8194,
+    "prompt_tokens_details": {
+      "cached_tokens": 6097
+    },
+    "total_tokens": 8261
+  },
+  "wall_seconds": 1.812000000005355
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"sdk_gphone64_x86_64\" storage area is visible in the roots menu. To access the \"project_easy\" folder within this storage, we should tap on \"sdk_gphone64_x86_64\" to open its contents.\n\n\ndo(action=\"Tap\", element=[340,540])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791480051,
+  "id": "20261009012049e20d683e6f784f27",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261009012049e20d683e6f784f27",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 3821,
+    "prompt_tokens_details": {
+      "cached_tokens": 1714
+    },
+    "total_tokens": 3889
+  },
+  "wall_seconds": 1.8280000000086147
+}

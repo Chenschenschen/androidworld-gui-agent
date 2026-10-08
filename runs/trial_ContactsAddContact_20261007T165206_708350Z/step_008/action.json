@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "element with id 7",
+    "verify": "The 'First name' field should be focused, indicated by a blinking cursor inside the text box.",
+    "point": "535,939"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 578,
+    "y": 2254
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

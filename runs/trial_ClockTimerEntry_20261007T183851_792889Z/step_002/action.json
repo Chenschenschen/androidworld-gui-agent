@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Timer",
+    "verify": "The timer interface with hour, minute, and second selection fields should be displayed.",
+    "target": "Timer",
+    "index": "5",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 2232
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

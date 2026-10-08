@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"alex.jordan@example.net\" to the clipboard. The current screen is the home screen with various app icons. To copy text to the clipboard, I need to first open an app that can handle text input and clipboard operations. The most suitable app would be Google Chrome, as it commonly involves text fields where clipboard operations are performed.\n\nThe next step should be to launch the Chrome app. I'll tap on the Chrome icon to open it.\ndo(action=\"Launch\", app=\"Chrome\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440466,
+  "id": "20261008142104cdf7b526f84d4491",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008142104cdf7b526f84d4491",
+  "usage": {
+    "completion_tokens": 110,
+    "prompt_tokens": 2049,
+    "prompt_tokens_details": {
+      "cached_tokens": 600
+    },
+    "total_tokens": 2159
+  },
+  "wall_seconds": 2.0469999999913853
+}

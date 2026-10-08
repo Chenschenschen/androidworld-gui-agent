@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. I have long pressed on the text, but the context menu has not appeared yet. The text is still in the search bar at [135,197,749,221]. I need to wait a moment for the context menu to appear after the long press. Since the action was just performed, a short wait should be sufficient.\ndo(action=\"Wait\", duration=\"1 seconds\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442998,
+  "id": "202610081503172f0f69eb58c74110",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081503172f0f69eb58c74110",
+  "usage": {
+    "completion_tokens": 98,
+    "prompt_tokens": 4327,
+    "prompt_tokens_details": {
+      "cached_tokens": 2543
+    },
+    "total_tokens": 4425
+  },
+  "wall_seconds": 1.9060000000026776
+}

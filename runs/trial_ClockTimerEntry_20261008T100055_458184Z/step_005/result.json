@@ -1,0 +1,16 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.002068014705882353,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 3.5,
+  "selected_gui_control": {
+    "label": "7",
+    "resource_id": "com.google.android.deskclock:id/timer_setup_digit_7"
+  },
+  "model_assessment": "The timer currently shows 00h 02m 07s, but the target is 20h 07m 01s. I need to continue entering digits. The next digit should be \"1\" to make the seconds 01. I'll tap \"1\" at [122, 284, 368, 395]."
+}

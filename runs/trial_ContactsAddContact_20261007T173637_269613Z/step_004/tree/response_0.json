@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:37:36.5722797Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Manage accounts on this device\", \"verify\": \"The 'Manage accounts' screen should open.\", \"target\": \"Privacy Policy\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3984871400,
+  "load_duration": 19231000,
+  "prompt_eval_count": 1209,
+  "prompt_eval_cached_count": 504,
+  "prompt_eval_duration": 982559000,
+  "eval_count": 37,
+  "eval_duration": 2857013000,
+  "wall_seconds": 6.03099999999904
+}

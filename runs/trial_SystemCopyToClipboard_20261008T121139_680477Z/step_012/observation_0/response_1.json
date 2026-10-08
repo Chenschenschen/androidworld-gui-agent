@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nfinish(message=\"The target file 'my_note.md' was not found in the 'snippets' folder or its parent directories. The task to copy 'john.doe@example.com' to the clipboard could not be completed due to the file not being located.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791461659,
+  "id": "202610082014184d13206e7bc34a42",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082014184d13206e7bc34a42",
+  "usage": {
+    "completion_tokens": 55,
+    "prompt_tokens": 10038,
+    "prompt_tokens_details": {
+      "cached_tokens": 9959
+    },
+    "total_tokens": 10093
+  },
+  "wall_seconds": 1.389999999999418
+}

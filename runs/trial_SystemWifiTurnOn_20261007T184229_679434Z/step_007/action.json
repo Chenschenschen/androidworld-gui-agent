@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "com.google.androidenv.accessibilityforwarder",
+    "verify": "The AccessibilityForwarder app should open and be visible on the screen.",
+    "target": "16.76 MB used in internal storage",
+    "index": "35",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 375,
+    "y": 1876
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

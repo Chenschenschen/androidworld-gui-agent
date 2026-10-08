@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "4",
+    "verify": "The timer display should change from '00h 00m 36s' to '00h 00m 46s'.",
+    "target": "4",
+    "index": "6",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 265,
+    "y": 1093
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The message input field \"Type a message…\" is focused and the keyboard is visible. I should type the requested message \"I think, therefore I am.\" into this field to compose the SMS.\n\n\ndo(action=\"Type\", text=\"I think, therefore I am.\")\n\n\ndo(action=\"Type\", text=\"I think, therefore I am.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464899,
+  "id": "2026100821081723048492c8b947f2",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100821081723048492c8b947f2",
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 5206,
+    "prompt_tokens_details": {
+      "cached_tokens": 3449
+    },
+    "total_tokens": 5278
+  },
+  "wall_seconds": 1.7029999999940628
+}

@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Create contact",
+    "verify": "The 'Create contact' screen should be displayed.",
+    "target": "Create contact",
+    "index": "1",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 943,
+    "y": 2011
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

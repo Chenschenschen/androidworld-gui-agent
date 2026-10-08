@@ -1,0 +1,11 @@
+{
+  "evaluation_valid": true,
+  "verified_agent_success": false,
+  "category": "validation_error",
+  "secondary_observation": "false completion claim: model claimed Wi-Fi was on; official score remained zero",
+  "evidence": [
+    "step_001 valid AWAKE settings executed",
+    "step_002 bare COMPLETE and INFO were rejected, no action executed"
+  ],
+  "official_verifier_score": 0.0
+}

@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T15:35:54.9061772Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"First name\", \"verify\": \"The text 'Camila' should appear in the First name field.\",\"index\":7}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5210668300,
+  "load_duration": 22761200,
+  "prompt_eval_count": 953,
+  "prompt_eval_cached_count": 237,
+  "prompt_eval_duration": 1159669000,
+  "eval_count": 37,
+  "eval_duration": 3916374000,
+  "wall_seconds": 7.234000000000378
+}

@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "correct": false,
+  "fields": {
+    "verify": "Wi-Fi is enabled on the device.",
+    "note": "The Wi-Fi is already on, so no further steps are needed.",
+    "action": "COMPLETE",
+    "return": "The Wi-Fi is already turned on.",
+    "summary": "The task is to turn on Wi-Fi. The previous action of scrolling up was unnecessary because Wi-Fi was already on, as indicated by the notification. The task is complete."
+  },
+  "action": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "The Wi-Fi is already turned on."
+  },
+  "executed": false
+}

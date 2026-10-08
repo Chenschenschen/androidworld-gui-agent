@@ -1,0 +1,45 @@
+{
+  "kind": "app_capability_diagnostic",
+  "benchmark": false,
+  "actions": [
+    "Launch markor",
+    "Tap actual QuickNote label"
+  ],
+  "typed_or_copied": false,
+  "editable_controls": [
+    {
+      "text": "",
+      "content_description": "",
+      "class_name": "android.widget.EditText",
+      "bbox": {
+        "x_min": 0,
+        "x_max": 1080,
+        "y_min": 275,
+        "y_max": 2069
+      },
+      "bbox_pixels": {
+        "x_min": 0,
+        "x_max": 1080,
+        "y_min": 275,
+        "y_max": 2069
+      },
+      "hint_text": null,
+      "is_checked": false,
+      "is_checkable": false,
+      "is_clickable": true,
+      "is_editable": null,
+      "is_enabled": true,
+      "is_focused": true,
+      "is_focusable": true,
+      "is_long_clickable": true,
+      "is_scrollable": false,
+      "is_selected": false,
+      "is_visible": true,
+      "package_name": "net.gsantner.markor",
+      "resource_name": null,
+      "tooltip": null,
+      "resource_id": "net.gsantner.markor:id/document__fragment__edit__highlighting_editor",
+      "metadata": null
+    }
+  ]
+}

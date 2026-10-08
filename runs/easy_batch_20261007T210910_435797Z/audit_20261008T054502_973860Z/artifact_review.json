@@ -1,0 +1,934 @@
+[
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T210910_992181Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ClockTimerEntry",
+      "run_id": "trial_ClockTimerEntry_20261007T210910_992181Z",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 9,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v10_timer_gui_observation",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v8_timer_observation",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 10,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 287, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 419, in step\n    raise RuntimeError(\"Repeated action without visible effect; stopping\")\nRuntimeError: Repeated action without visible effect; stopping\n",
+      "error_class": "environment_or_execution_error",
+      "stop_reason": "error",
+      "verifier_score": 0.0,
+      "failure_class": null,
+      "model_calls_attempted": 10,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 116.92199999999866,
+      "agent_phase_seconds": 113.3440000000046
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 10,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Clock"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          928
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          340
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          684
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          684
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          569
+        ]
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          684
+        ]
+      },
+      {
+        "step": "step_008",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          339
+        ]
+      },
+      {
+        "step": "step_009",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          339
+        ]
+      },
+      {
+        "step": "step_010",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          339
+        ]
+      }
+    ],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 409,
+        "fps": 3.585888957069379,
+        "duration_seconds": 114.05818888888888
+      }
+    ],
+    "incomplete_steps": [
+      {
+        "step": "step_010",
+        "execution_started": false,
+        "note": "Expected interrupted/failed step; inspect saved request, error and stop reason."
+      }
+    ]
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T211108_555352Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ClockTimerEntry",
+      "run_id": "trial_ClockTimerEntry_20261007T211108_555352Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 8,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v10_timer_gui_observation",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v8_timer_observation",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 8,
+      "stop_reason": "complete",
+      "model_calls_attempted": 8,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 91.46800000000076,
+      "agent_phase_seconds": 87.63999999999942
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 8,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Clock"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          928
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          226,
+          339
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          226,
+          339
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          569
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          454
+        ]
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          454
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_008",
+        "command": "finish",
+        "message": "Timer successfully created with 01h 18m 44s. The timer is set to the requested time and has not been started, as instructed. Task completed successfully."
+      }
+    ],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 317,
+        "fps": 3.58553975569316,
+        "duration_seconds": 88.41067777777778
+      }
+    ],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T211240_628935Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ClockTimerEntry",
+      "run_id": "trial_ClockTimerEntry_20261007T211240_628935Z",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 10,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v10_timer_gui_observation",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v8_timer_observation",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 11,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 287, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 419, in step\n    raise RuntimeError(\"Repeated action without visible effect; stopping\")\nRuntimeError: Repeated action without visible effect; stopping\n",
+      "error_class": "environment_or_execution_error",
+      "stop_reason": "error",
+      "verifier_score": 0.0,
+      "failure_class": null,
+      "model_calls_attempted": 11,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 121.9059999999954,
+      "agent_phase_seconds": 118.31199999999808
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 11,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Clock"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          928
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          226,
+          339
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          754,
+          339
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          754,
+          339
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          754,
+          339
+        ]
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          754,
+          339
+        ]
+      },
+      {
+        "step": "step_008",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          754,
+          339
+        ]
+      },
+      {
+        "step": "step_009",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          454
+        ]
+      },
+      {
+        "step": "step_010",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          454
+        ]
+      },
+      {
+        "step": "step_011",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          454
+        ]
+      }
+    ],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 479,
+        "fps": 4.023966073606936,
+        "duration_seconds": 119.03678888888889
+      }
+    ],
+    "incomplete_steps": [
+      {
+        "step": "step_011",
+        "execution_started": false,
+        "note": "Expected interrupted/failed step; inspect saved request, error and stop reason."
+      }
+    ]
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T211443_160403Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ContactsAddContact",
+      "run_id": "trial_ContactsAddContact_20261007T211443_160403Z",
+      "agent_done": false,
+      "verifier": "NOT_RUN",
+      "steps": 0,
+      "manual_intervention": false,
+      "evaluation_valid": false,
+      "version": "autoglm_api_v10_timer_gui_observation",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v8_timer_observation",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 244, in main\n    setup_required_app(app, env, output)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 109, in setup_required_app\n    app.setup(env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\setup_device\\apps.py\", line 211, in setup\n    controller.click_element(\"Don't allow\")\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\tools.py\", line 50, in click_element\n    actuation.find_and_click_element(element_text, self._env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\actuation.py\", line 242, in find_and_click_element\n    action = _wait_and_find_click_element(element_text, env, case_sensitive)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\actuation.py\", line 270, in _wait_and_find_click_element\n    raise ValueError(f'Target text \"{target_text}\" not found.')\nValueError: Target text \"Don't allow\" not found.\n",
+      "error_class": "validation_error",
+      "stop_reason": "error",
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [],
+      "duration_seconds": 23.609000000004016,
+      "agent_phase_seconds": null
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 0,
+    "gui_actions": [],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T211507_489929Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ContactsAddContact",
+      "run_id": "trial_ContactsAddContact_20261007T211507_489929Z",
+      "agent_done": false,
+      "verifier": "NOT_RUN",
+      "steps": 0,
+      "manual_intervention": false,
+      "evaluation_valid": false,
+      "version": "autoglm_api_v10_timer_gui_observation",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v8_timer_observation",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 244, in main\n    setup_required_app(app, env, output)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 109, in setup_required_app\n    app.setup(env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\setup_device\\apps.py\", line 211, in setup\n    controller.click_element(\"Don't allow\")\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\tools.py\", line 50, in click_element\n    actuation.find_and_click_element(element_text, self._env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\actuation.py\", line 242, in find_and_click_element\n    action = _wait_and_find_click_element(element_text, env, case_sensitive)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\actuation.py\", line 270, in _wait_and_find_click_element\n    raise ValueError(f'Target text \"{target_text}\" not found.')\nValueError: Target text \"Don't allow\" not found.\n",
+      "error_class": "validation_error",
+      "stop_reason": "error",
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [],
+      "duration_seconds": 22.093999999997322,
+      "agent_phase_seconds": null
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 0,
+    "gui_actions": [],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T211530_303827Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ContactsAddContact",
+      "run_id": "trial_ContactsAddContact_20261007T211530_303827Z",
+      "agent_done": false,
+      "verifier": "NOT_RUN",
+      "steps": 0,
+      "manual_intervention": false,
+      "evaluation_valid": false,
+      "version": "autoglm_api_v10_timer_gui_observation",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v8_timer_observation",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 244, in main\n    setup_required_app(app, env, output)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 109, in setup_required_app\n    app.setup(env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\setup_device\\apps.py\", line 211, in setup\n    controller.click_element(\"Don't allow\")\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\tools.py\", line 50, in click_element\n    actuation.find_and_click_element(element_text, self._env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\actuation.py\", line 242, in find_and_click_element\n    action = _wait_and_find_click_element(element_text, env, case_sensitive)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\actuation.py\", line 270, in _wait_and_find_click_element\n    raise ValueError(f'Target text \"{target_text}\" not found.')\nValueError: Target text \"Don't allow\" not found.\n",
+      "error_class": "validation_error",
+      "stop_reason": "error",
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [],
+      "duration_seconds": 21.7809999999954,
+      "agent_phase_seconds": null
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 0,
+    "gui_actions": [],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T211552_824415Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemCopyToClipboard",
+      "run_id": "trial_SystemCopyToClipboard_20261007T211552_824415Z",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 6,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v10_timer_gui_observation",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v8_timer_observation",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 7,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 287, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 399, in step\n    fields, action = self.ask_action(state, observed, goal, step)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 377, in ask_action\n    action = convert_action(fields, state, self.config[\"allowed_apps\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 138, in convert_action\n    raise ValueError(\"Launch must use an app available for this task\")\nValueError: Launch must use an app available for this task\n",
+      "error_class": "validation_error",
+      "stop_reason": "error",
+      "verifier_score": 0.0,
+      "failure_class": null,
+      "model_calls_attempted": 8,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 81.57800000000134,
+      "agent_phase_seconds": 37.859000000004016
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 8,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Clipper"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Wait",
+        "duration": "1 seconds"
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Back"
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Swipe",
+        "start": [
+          499,
+          512
+        ],
+        "end": [
+          499,
+          182
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          165,
+          471
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Back"
+      }
+    ],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 267,
+        "fps": 7.184073420453054,
+        "duration_seconds": 37.16554444444444
+      }
+    ],
+    "incomplete_steps": [
+      {
+        "step": "step_007",
+        "execution_started": false,
+        "note": "Expected interrupted/failed step; inspect saved request, error and stop reason."
+      }
+    ]
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T211715_106089Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemCopyToClipboard",
+      "run_id": "trial_SystemCopyToClipboard_20261007T211715_106089Z",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 12,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v10_timer_gui_observation",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v8_timer_observation",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 12,
+      "stop_reason": "step_budget",
+      "model_calls_attempted": 13,
+      "verifier_score": 0.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 78.29699999999866,
+      "agent_phase_seconds": 72.43699999999808
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 13,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Chrome"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          326
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Type",
+        "text": "john.doe@example.com"
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Back"
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          326
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Type",
+        "text": "john.doe@example.com"
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          476
+        ]
+      },
+      {
+        "step": "step_008",
+        "command": "do",
+        "action": "Back"
+      },
+      {
+        "step": "step_009",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          893,
+          669
+        ]
+      },
+      {
+        "step": "step_010",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          326
+        ]
+      },
+      {
+        "step": "step_011",
+        "command": "do",
+        "action": "Type",
+        "text": "john.doe@example.com"
+      },
+      {
+        "step": "step_012",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          476
+        ]
+      }
+    ],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 704,
+        "fps": 9.706353693952357,
+        "duration_seconds": 72.5298111111111
+      }
+    ],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T211834_111221Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemCopyToClipboard",
+      "run_id": "trial_SystemCopyToClipboard_20261007T211834_111221Z",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 12,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v10_timer_gui_observation",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v8_timer_observation",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 12,
+      "stop_reason": "step_budget",
+      "model_calls_attempted": 13,
+      "verifier_score": 0.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 80.54699999999866,
+      "agent_phase_seconds": 74.01599999999598
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 13,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Chrome"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Type",
+        "text": "alex.jordan@example.net"
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          647
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          893,
+          670
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          326
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Type",
+        "text": "alex.jordan@example.net"
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          647
+        ]
+      },
+      {
+        "step": "step_008",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          482
+        ]
+      },
+      {
+        "step": "step_009",
+        "command": "do",
+        "action": "Back"
+      },
+      {
+        "step": "step_010",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          326
+        ]
+      },
+      {
+        "step": "step_011",
+        "command": "do",
+        "action": "Type",
+        "text": "alex.jordan@example.net"
+      },
+      {
+        "step": "step_012",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          482
+        ]
+      }
+    ],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 806,
+        "fps": 10.993509222408512,
+        "duration_seconds": 73.31598888888888
+      }
+    ],
+    "incomplete_steps": []
+  }
+]

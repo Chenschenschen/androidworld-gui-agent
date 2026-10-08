@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Last name\" field is visible and empty. Tap it to focus so we can type \"Martin\" next.\n\n\ndo(action=\"Tap\", element=[494,472])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447837,
+  "id": "2026100816235593736a9cf9b84462",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100816235593736a9cf9b84462",
+  "usage": {
+    "completion_tokens": 38,
+    "prompt_tokens": 2551,
+    "prompt_tokens_details": {
+      "cached_tokens": 1276
+    },
+    "total_tokens": 2589
+  },
+  "wall_seconds": 1.360000000000582
+}

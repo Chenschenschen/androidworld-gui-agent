@@ -1,0 +1,20 @@
+[
+  {
+    "process": "emulator.exe",
+    "process_id": 37204,
+    "avd": "AndroidWorldAvd",
+    "camera_back": "emulated",
+    "camera_front": "emulated",
+    "grpc": "8554",
+    "no_snapshot": true
+  },
+  {
+    "process": "qemu-system-x86_64.exe",
+    "process_id": 29708,
+    "avd": "AndroidWorldAvd",
+    "camera_back": "emulated",
+    "camera_front": "emulated",
+    "grpc": "8554",
+    "no_snapshot": true
+  }
+]

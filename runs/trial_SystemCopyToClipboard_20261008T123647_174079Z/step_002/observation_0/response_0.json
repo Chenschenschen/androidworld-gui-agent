@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Markor app is open and showing the Files tab. To copy the text \"john.doe@example.com\" to the clipboard, I should open the QuickNote tab to access the editable text area. The \"QuickNote\" tab button is located at [499, 911, 749, 972].\n\ndo(action=\"Tap\", element=[625, 943])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791463041,
+  "id": "20261008203719f77aaa0259524f44",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008203719f77aaa0259524f44",
+  "usage": {
+    "completion_tokens": 84,
+    "prompt_tokens": 3264,
+    "prompt_tokens_details": {
+      "cached_tokens": 1708
+    },
+    "total_tokens": 3348
+  },
+  "wall_seconds": 1.9060000000026776
+}

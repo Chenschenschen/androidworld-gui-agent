@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:35:36.7751748Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"2\", \"verify\": \"The contact creation interface should close, and a confirmation or contact list screen should appear.\",\"target\": \"Save\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5466412600,
+  "load_duration": 16254300,
+  "prompt_eval_count": 2379,
+  "prompt_eval_cached_count": 472,
+  "prompt_eval_duration": 1679929000,
+  "eval_count": 40,
+  "eval_duration": 3496533000,
+  "wall_seconds": 7.514999999999418
+}

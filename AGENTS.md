@@ -1,5 +1,121 @@
 # Project working rules
 
+Latest Camera self-run190644: valid FAIL,1 GUI action/3 calls; delayed Home->
+splash->first-use onboarding exhausted one freshness reobservation. Model
+misidentified launch logo as shutter; guard correctly blocked both stale taps.
+Diagnosed/logged before repair. v57 only adds com.android.camera2 to existing
+checked GUI supplement. Actual read-only onboarding XML parses NEXT/checkbox
+correctly;43 checks pass. No new model/GUI trial run, no measured v57 success.
+User wants to rerun themselves. Read docs/CAMERA_SELF_RUN_REPAIR.md; same command.
+
+Latest self-run issue: Files170139 failed before GUI actions on HTTP400/Z.ai1210.
+Read saved provider body first. Exact saved-request API-only diagnostic170547
+then returned200/same model without parameter changes or executing a choice.
+Temporary rejection inferred; no specific bad parameter established. Recipe now
+only in project_easy, ready for user's forward command. v56 adds redacted API
+error details to console/readable trajectory, no automatic request/action retry.
+43 offline checks pass. No new GUI trial run. Read FILES_MOVE_TRIAL.md for evidence.
+
+Latest user follow-up: split Files clips were mistaken for complete recordings.
+Inspected first/second clip boundary and final frames; continuation reaches
+post-move state. Four named *_complete.mp4 playback files now preserve all
+original frames in runs/presentation; original artifacts unchanged. v55 adds
+only recording packaging after task/recorder completion. imageio-ffmpeg0.6.0
+installed/pinned;42 offline checks and pip check pass; four real joins fully
+decoded (335/570/303/574 frames). No new agent trial run. User wants to run it
+themselves; recipe currently only in project_medium. Use RUNNING_TASKS.md's
+medium->easy command with general_config.json, --params and --continue-state.
+
+Current continuation: SMS successes named and fully copied in runs/presentation.
+FilesMoveFile supports exact --params JSON and --continue-state in the same runner.
+Scoped creation/base initialization avoids Android World's whole shared-storage
+clear rejected by approval review; unchanged official MoveFile verifies moves.
+v52 recipe forward passed; reverse failed on stale XML descendant labels outside
+their parent card. v53 checks geometry and uses existing screenshot fallback.
+User confirmed manually returning recipe to project_easy before the new sequence.
+Fresh v53 forward153825 passed/finished at20 and reverse154346 at12. Third154721
+failed after XML exit137 and repeated wrong Podcasts grounding; froze2/3 outcome.
+Recorded diagnosis, then v54 adds one bounded read-only XML capture recovery,
+never GUI replay.42 offline checks passed before retry155433: cleanPASS/finish19.
+All requested directions now have successful videos, using v53/v53/v54 (3/4
+fresh attempts, not a frozen3/3 gate). No trial running. No new task authorized.
+File contents SHA25682287c26534ac3697a68f703d49d49e00594c123ea5801d6ad164986759d4416
+remains unchanged. Read docs/FILES_MOVE_TRIAL.md and PRESENTATION_EVIDENCE.md.
+Presentation copies byte-checked and all16 Files videos decoded;1208 JSON files
+audited across13 preserved attempts. Earlier status is historical.
+
+Latest continuation: user-requested SMS failure repair and retries completed.
+v49 seeds43/44 both cleanPASS with model finish at step7, six GUI actions/nine
+calls, no manual intervention/errors. Identical frozen sources/settings checked.
+SMS now uses the existing screenshot plus checked XML-label/centre supplement;
+empty editable fields/hints remain visible and newly appeared targets are stale.
+Exact observed Chinese SMS names map to the allowed canonical app; unknown names
+remain rejected. Standalone finish/literal app contract clarified.39 offline
+checks pass; videos/203 retry JSON artifacts audited. Earlier failures, including
+prompt-only v47 and overly strict scalar freshness v48, preserved and diagnosed
+before each changed retry. Global freshness is back to0.08 with target identity
+checks. v49 has2/2 clean, not a frozen3/3 gate; original seed42PASS was v45.
+No trial running. Read docs/SIMPLE_SMS_TRIAL.md. Earlier status below is historical.
+
+Latest user-directed stage,8 October: SimpleSmsSend screenshot trial completed.
+trial_SimpleSmsSend_20261008T130636_231233Z is a valid officialPASS, model finish
+at step10, nine GUI actions/eleven calls, no manual intervention. Existing
+general_config.json/native loop; no SMS recipe or extra assessment. One clean
+success only. Prior attempt stopped before model calls on SDK five-second app
+launch timeout; its recorded correction keeps one dispatch with at least30
+seconds for am start.36 offline checks pass, video/JSON audited. No trial running.
+Read docs/SIMPLE_SMS_TRIAL.md. Earlier prepared/running status below is historical.
+
+Latest accepted direction, 8 October: implement general Android interaction
+guidance as the main design, keeping task recipes optional. Prepared v37 in
+general_config.json uses reusable rules and factual available-app capabilities;
+task_guidance and separate step_assessment are off. Clipboard offers Markor's
+editor, prepared officially before actions. 29 offline checks pass before one
+bounded seed43 trial. No measured result yet. Freeze runtime/prompts during the
+trial; diagnose and record any failure before a changed retry. Read
+docs/GENERAL_GUIDANCE_EXPERIMENT.md. Default v35 remains until result review.
+
+Latest user request, 8 October: prepare explicit per-task recommendations and
+explain grounding. This supersedes the earlier minimal completion-only guidance
+preference. instructions/task_guides.md supplies one selected task procedure;
+guided_config.json opts into v36, including Markor QuickNote for Clipboard.
+Default agent_config.json remains v35. 28 offline checks pass; no live guided
+trial or new success claim. Markor is not yet installed; the first guided run
+uses official app preparation. Read docs/TASK_GUIDANCE_AND_GROUNDING.md.
+Grounding is model screenshot coordinates plus checked conversion and target
+freshness, with fresh XML control centres for supported packages. It is not an
+independent semantic target verifier. No fixed GUI replay, next-digit controller,
+verifier feedback or forced finish was added. No active trial/batch.
+
+Latest continuation, 8 October: the user authorized the revised native-reference
+comparison, not creation of a goal. Actual pinned Open-AutoGLM PhoneAgent was
+imported with its original English prompt, full images, history and ADB policy.
+Native/project Timer42 both FAIL; native Clipboard43 partial-domain false_done,
+project Clipboard43 with corrected transport cycles through Chrome menus and
+FAIL. Four valid outcomes,0/4 clean successes. Three additional Windows-import,
+keyboard-prerequisite and invalid-recording attempts are preserved separately.
+Each failure was diagnosed before a changed trial. Read
+docs/UPSTREAM_REFERENCE_COMPARISON.md and its original run IDs before claims.
+25 offline checks pass. Reference Keyboard is installed/enabled; Gboard remains
+default outside native Type. ADB retry/server restart after cold Chrome timeout
+explains the invalid recording; comparison_config.json preserves a single-attempt
+30-second Chrome launch, and recorder-process monitoring is repaired. Default
+agent_config now adopts measured v35 transport; model policy remains v34 and
+assessment is off. No active trial/batch, model switch,
+new success gate or later-task expansion. Do not repeat failed policies unchanged.
+
+Latest continuation, 8 October: M3A-style same-AutoGLM before/after assessment
+was implemented and tried. Timer v31 seed42 officialFAIL/no finish; Clipboard
+v31 seed43 false_done, v32 app validation failure before any action, v33
+assessment truncation after one actual Launch. All variants stopped for diagnosis
+before a corrected retry. Full report: docs/STEP_ASSESSMENT_EXPERIMENT.md.
+Four videos/JSON/source snapshots audited; original summaries unchanged. v34
+retains the method as opt-in, disabled by default, with assessment_config.json
+preserving v33 settings.20 offline checks and outside-project readiness pass;
+no live v34 success claim, no new reliable task gate, no active trial/batch or
+later-task expansion. Do not repeat these failed configurations unchanged.
+Earlier v29/source sections below remain historical.
+
 Current continuation, 8 October 2026: the user requires source-backed guidance
 from official GitHub and the first four days' slides. On a failed trial, STOP,
 inspect its trajectory, record the cause, correct it, then run a bounded

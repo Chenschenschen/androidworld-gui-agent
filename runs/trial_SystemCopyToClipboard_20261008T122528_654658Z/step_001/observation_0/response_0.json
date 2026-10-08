@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe screen shows the Clipper app with a clipboard service started and instructions. At the bottom there's a text field showing \"Clipper pasted from your clipboard\", which is likely the clipboard content area. To copy the requested text \"john.doe@example.com\" to the clipboard, I should first focus that text field and then type the content. The field is at [58,872,940,944], so I'll tap it to focus.\n\n\ndo(action=\"Tap\", element=[499,898])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791462354,
+  "id": "2026100820255247ab8930efbf4e0b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100820255247ab8930efbf4e0b",
+  "usage": {
+    "completion_tokens": 115,
+    "prompt_tokens": 2499,
+    "prompt_tokens_details": {
+      "cached_tokens": 1447
+    },
+    "total_tokens": 2614
+  },
+  "wall_seconds": 2.25
+}

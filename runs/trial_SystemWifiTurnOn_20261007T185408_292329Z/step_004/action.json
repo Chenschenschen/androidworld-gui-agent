@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Wi-Fi and network settings",
+    "verify": "The Wi-Fi toggle is now set to 'on', and the Wi-Fi icon in the status bar is illuminated.",
+    "target": "Network & internet",
+    "index": "24",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 437,
+    "y": 874
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,8 @@
+{
+  "thinking": "The text \"john.doe@example.com\" has been entered in the search field. To copy it to the clipboard, I need to select the text first. A long press on the text field will bring up the context menu with options such as \"Copy.\" I will perform a long press on the search field to select the text and reveal the copy option.",
+  "action": "do(action=\"Long Press\", element=[499,87])\n",
+  "raw_content": "The text \"john.doe@example.com\" has been entered in the search field. To copy it to the clipboard, I need to select the text first. A long press on the text field will bring up the context menu with options such as \"Copy.\" I will perform a long press on the search field to select the text and reveal the copy option.do(action=\"Long Press\", element=[499,87])\n",
+  "time_to_first_token": 2.6174819469451904,
+  "time_to_thinking_end": 2.705073833465576,
+  "total_time": 2.722487688064575
+}

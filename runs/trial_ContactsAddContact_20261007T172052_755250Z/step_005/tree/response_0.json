@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:22:13.8938279Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Email contacts\", \"verify\": \"The 'Email contacts' screen should open.\", \"target\": \"Email contacts\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4271602600,
+  "load_duration": 15357100,
+  "prompt_eval_count": 1389,
+  "prompt_eval_cached_count": 428,
+  "prompt_eval_duration": 1059394000,
+  "eval_count": 34,
+  "eval_duration": 3100404000,
+  "wall_seconds": 6.311999999998079
+}

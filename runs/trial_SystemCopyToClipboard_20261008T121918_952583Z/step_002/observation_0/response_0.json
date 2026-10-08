@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. The Markor app is open and currently on the Files tab. To proceed, I should switch to the QuickNote tab, as it allows creating a new note where the text can be entered and copied. The \"QuickNote\" tab button is available at the bottom navigation bar with bounds [499, 920, 749, 972].\n\n\ndo(action=\"Tap\", element=[625,941])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791461992,
+  "id": "20261008201950f7d98518e41b4e32",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008201950f7d98518e41b4e32",
+  "usage": {
+    "completion_tokens": 109,
+    "prompt_tokens": 2943,
+    "prompt_tokens_details": {
+      "cached_tokens": 1446
+    },
+    "total_tokens": 3052
+  },
+  "wall_seconds": 2.2189999999973224
+}

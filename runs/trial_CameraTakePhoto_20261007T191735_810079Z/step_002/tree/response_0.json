@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T19:18:36.2105504Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Shutter\", \"verify\": \"The shutter icon should be clicked, possibly resulting in the camera taking a photo or opening a photo gallery view.\", \"target\": \"Shutter\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5783833200,
+  "load_duration": 15909300,
+  "prompt_eval_count": 844,
+  "prompt_eval_cached_count": 374,
+  "prompt_eval_duration": 918586000,
+  "eval_count": 47,
+  "eval_duration": 4732112000,
+  "wall_seconds": 7.8439999999973224
+}

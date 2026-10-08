@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The current screen is the home screen, and there is no clipboard interface or text input field visible. To copy the text \"john.doe@example.com\" to the clipboard, I need to first input the text in some app. I should launch the ADB shell to input the text directly, as it can interact with the clipboard and input fields.\n\n\ndo(action=\"Launch\", app=\"ADB Shell\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791446781,
+  "id": "202610081606196e3a874885a5451b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081606196e3a874885a5451b",
+  "usage": {
+    "completion_tokens": 85,
+    "prompt_tokens": 2381,
+    "prompt_tokens_details": {
+      "cached_tokens": 962
+    },
+    "total_tokens": 2466
+  },
+  "wall_seconds": 2.625
+}

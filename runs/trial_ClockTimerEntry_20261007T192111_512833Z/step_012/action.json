@@ -1,0 +1,14 @@
+{
+  "native": {
+    "action": "COMPLETE",
+    "value": "Timer setup is complete.",
+    "verify": "Timer setup is complete."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "Timer setup is complete."
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

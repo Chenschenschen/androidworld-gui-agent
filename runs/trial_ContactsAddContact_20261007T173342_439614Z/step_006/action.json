@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "2",
+    "verify": "The contact creation interface should close, and a confirmation or contact list screen should appear.",
+    "target": "Save",
+    "index": "2",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 838,
+    "y": 211
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

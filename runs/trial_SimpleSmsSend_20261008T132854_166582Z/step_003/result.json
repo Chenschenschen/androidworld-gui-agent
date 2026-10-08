@@ -1,0 +1,16 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Type",
+    "text": "+10427517979"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.00989822686887255,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 11.125,
+  "selected_gui_control": {
+    "label": "Add Contact or Number…",
+    "resource_id": "com.simplemobiletools.smsmessenger:id/new_conversation_address"
+  }
+}

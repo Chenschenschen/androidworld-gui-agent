@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app is now on the main interface with the shutter button visible at the bottom (coordinates [0,841,999,972]). To take a photo, I need to tap the shutter button. This action will either capture a photo or bring up the review screen, either of which means the task is complete.\n\n\ndo(action=\"Tap\", element=[499,906])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791487856,
+  "id": "202610090330552ab0b04abc4043d5",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610090330552ab0b04abc4043d5",
+  "usage": {
+    "completion_tokens": 84,
+    "prompt_tokens": 3078,
+    "prompt_tokens_details": {
+      "cached_tokens": 1608
+    },
+    "total_tokens": 3162
+  },
+  "wall_seconds": 1.687000000005355
+}

@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T19:35:33.7418458Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Text input field labeled 'Type text here.'\", \"verify\": \"The cursor should appear in the text field, and the on-screen keyboard should be visible.\",\"target\": \"\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4196311800,
+  "load_duration": 18480400,
+  "prompt_eval_count": 836,
+  "prompt_eval_cached_count": 794,
+  "prompt_eval_duration": 459431000,
+  "eval_count": 48,
+  "eval_duration": 3711173000,
+  "wall_seconds": 6.264999999999418
+}

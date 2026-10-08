@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:59:50.8359548Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Settings\", \"verify\": \"Settings screen should appear.\", \"target\": \"Network & internet\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3458339600,
+  "load_duration": 16178800,
+  "prompt_eval_count": 1384,
+  "prompt_eval_cached_count": 654,
+  "prompt_eval_duration": 824221000,
+  "eval_count": 30,
+  "eval_duration": 2397710000,
+  "wall_seconds": 5.546999999998661
+}

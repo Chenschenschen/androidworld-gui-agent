@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "point for the clipboard icon",
+    "verify": "The clipboard icon has been clicked, and the system should be ready to accept text input for copying.",
+    "point": "240,251"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 259,
+    "y": 602
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

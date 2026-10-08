@@ -1,0 +1,16 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Type",
+    "text": "Your dentist appointment is scheduled for 2 PM on Thursday."
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.008064778645833333,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 11.297000000005937,
+  "selected_gui_control": {
+    "label": "Type a message…",
+    "resource_id": "com.simplemobiletools.smsmessenger:id/thread_type_message"
+  }
+}

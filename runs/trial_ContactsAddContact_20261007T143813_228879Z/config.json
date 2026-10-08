@@ -1,0 +1,22 @@
+{
+  "version": "learning_gpu16_v1",
+  "prompt_version": "gelab_english_v2",
+  "model": "gelab-zero-4b-preview:latest",
+  "options": {
+    "temperature": 1,
+    "top_k": 20,
+    "top_p": 0.95,
+    "num_ctx": 4096,
+    "num_gpu": 16,
+    "num_predict": 256,
+    "seed": 42
+  },
+  "max_steps": 12,
+  "max_seconds": 900,
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "note": "Provisional learning settings; partial GPU offload tested at user request. Interface probes were invalid, so no baseline winner is established.",
+  "observation": "screenshot",
+  "task_seed": 42
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Timer screen is open and the keypad is visible. To set 20 hours, I should enter \"20\" by tapping \"2\" then \"0\". I'll start by tapping \"2\".\n\n\ndo(action=\"Tap\", element=[499,340])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791457675,
+  "id": "20261008190753a139dc5a5a7142ed",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008190753a139dc5a5a7142ed",
+  "usage": {
+    "completion_tokens": 57,
+    "prompt_tokens": 2660,
+    "prompt_tokens_details": {
+      "cached_tokens": 957
+    },
+    "total_tokens": 2717
+  },
+  "wall_seconds": 1.7340000000112923
+}

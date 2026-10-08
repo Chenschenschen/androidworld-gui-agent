@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "index=578,2254",
+    "verify": "A contact for Camila da Silva should be created and saved with the provided phone number.",
+    "index": "1"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 379,
+    "y": 211
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

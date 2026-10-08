@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The camera interface is still displayed, and a small thumbnail of the captured photo is visible in the bottom right corner, indicating that a photo has been taken. This满足s the completion condition for taking one photo.\nfinish(message=\"One photo has been successfully taken, as indicated by the presence of a thumbnail in the bottom right corner of the camera interface. Task completed.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406868,
+  "id": "202610080501074161dd8102f94438",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080501074161dd8102f94438",
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 2204,
+    "prompt_tokens_details": {
+      "cached_tokens": 901
+    },
+    "total_tokens": 2278
+  },
+  "wall_seconds": 1.4530000000013388
+}

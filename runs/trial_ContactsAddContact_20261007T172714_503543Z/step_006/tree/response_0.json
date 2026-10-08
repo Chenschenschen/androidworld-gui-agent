@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:29:06.9298382Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Camila da Silva\", \"verify\": \"The contact name 'Camila da Silva' should be selected.\", \"target\": \"Camila da Silva\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5445264100,
+  "load_duration": 18405100,
+  "prompt_eval_count": 2118,
+  "prompt_eval_cached_count": 672,
+  "prompt_eval_duration": 1731281000,
+  "eval_count": 42,
+  "eval_duration": 3535113000,
+  "wall_seconds": 7.485000000000582
+}

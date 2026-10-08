@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows 00h 00m 11s. I need to set it to 01h 18m 44s. The next digit to enter is \"8\" for the minutes. I'll tap the \"8\" button.\ndo(action=\"Tap\", element=[499,569])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791439553,
+  "id": "20261008140551dfaea8129aeb431f",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008140551dfaea8129aeb431f",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 4866,
+    "prompt_tokens_details": {
+      "cached_tokens": 2467
+    },
+    "total_tokens": 4932
+  },
+  "wall_seconds": 1.75
+}

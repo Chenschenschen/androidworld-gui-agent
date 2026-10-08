@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows 00h 20m 07s. I need 20:07:01, so I should enter \"1\" next. I'll tap the \"1\" button.\ndo(action=\"Tap\", element=[245,339])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406907,
+  "id": "20261008050146a7ea5513eda44355",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008050146a7ea5513eda44355",
+  "usage": {
+    "completion_tokens": 54,
+    "prompt_tokens": 2779,
+    "prompt_tokens_details": {
+      "cached_tokens": 1505
+    },
+    "total_tokens": 2833
+  },
+  "wall_seconds": 1.5
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The main Contacts screen is visible with \"No contacts yet\" and a floating action button (plus icon) in the bottom-right corner. To create a new contact, I should tap the plus button to open the create contact form.\ndo(action=\"Tap\", element=[876,835])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442585,
+  "id": "20261008145624dc727334441447fc",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008145624dc727334441447fc",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 2293,
+    "prompt_tokens_details": {
+      "cached_tokens": 989
+    },
+    "total_tokens": 2353
+  },
+  "wall_seconds": 1.6720000000059372
+}

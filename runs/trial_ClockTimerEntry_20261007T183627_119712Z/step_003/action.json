@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Clock",
+    "verify": "The Clock app screen should be displayed.",
+    "target": "Clock",
+    "index": "16",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 324,
+    "y": 2232
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

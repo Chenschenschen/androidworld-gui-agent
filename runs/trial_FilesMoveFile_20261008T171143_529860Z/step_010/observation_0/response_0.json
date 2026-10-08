@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I need to select the destination folder \"project_medium\" to move the file to it. The \"project_medium\" folder is visible at [59,592,489,645]; tapping it will set it as the destination for the move operation.\n\ndo(action=\"Tap\", element=[274,616])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791479658,
+  "id": "20261009011417c6a23a8cb0394a06",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261009011417c6a23a8cb0394a06",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 9049,
+    "prompt_tokens_details": {
+      "cached_tokens": 6489
+    },
+    "total_tokens": 9117
+  },
+  "wall_seconds": 1.7969999999913853
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants me to take one photo using the camera app. Looking at the current screenshot, I can see we're in the camera app with a shutter button visible. The screen shows a camera interface with a shutter button in the center.\n\nFrom the tree structure, I can see:\n- ImageView;click; Shutter;[0,0,999,999]\n\nThis shutter button should be tapped to take a photo. The coordinates for the shutter button are [0,0,999,999] according to the tree structure.\n\nI need to tap on this shutter button to take the photo.\ndo(action=\"Tap\", element=[499,512])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405725,
+  "id": "20261008044203ffe6ba4cb06941f4",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008044203ffe6ba4cb06941f4",
+  "usage": {
+    "completion_tokens": 137,
+    "prompt_tokens": 1814,
+    "prompt_tokens_details": {
+      "cached_tokens": 1556
+    },
+    "total_tokens": 1951
+  },
+  "wall_seconds": 1.9840000000040163
+}

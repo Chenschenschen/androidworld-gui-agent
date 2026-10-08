@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The name fields are filled. Next I need to add the phone number. I should scroll down to reveal the phone number field (usually labeled \"Phone\" or similar) below the current visible fields.\ndo(action=\"Swipe\", start=[499,548], end=[499,279])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438724,
+  "id": "2026100813520226bf3c0c38784802",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100813520226bf3c0c38784802",
+  "usage": {
+    "completion_tokens": 62,
+    "prompt_tokens": 2954,
+    "prompt_tokens_details": {
+      "cached_tokens": 1674
+    },
+    "total_tokens": 3016
+  },
+  "wall_seconds": 1.937999999994645
+}

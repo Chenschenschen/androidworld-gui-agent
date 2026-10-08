@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Fix & manage",
+    "verify": "The 'Fix & manage' screen should open, providing options to edit or manage contacts.",
+    "target": "Fix & manage",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 900,
+    "y": 2232
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The dialog for creating a new file is open, and the default name is \"my_note\". To proceed, I should confirm the creation by tapping the \"OK\" button at [775,603,930,663].\n\n\ndo(action=\"Tap\", element=[853,642])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791461544,
+  "id": "20261008201223573f3bc70aa24a84",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008201223573f3bc70aa24a84",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 3376,
+    "prompt_tokens_details": {
+      "cached_tokens": 1592
+    },
+    "total_tokens": 3442
+  },
+  "wall_seconds": 1.9070000000065193
+}

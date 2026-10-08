@@ -1,0 +1,16 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Long Press",
+    "element": [
+      274,
+      410
+    ]
+  },
+  "android": {
+    "action_type": "long_press",
+    "x": 295,
+    "y": 984
+  },
+  "observation_id": "observation_0"
+}

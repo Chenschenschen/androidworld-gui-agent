@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "com.android.phone:id/phone_number_input",
+    "verify": "The phone number input field should be focused and ready for text entry.",
+    "index": "10"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 535,
+    "y": 1503
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

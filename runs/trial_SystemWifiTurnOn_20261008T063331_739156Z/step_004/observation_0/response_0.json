@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Wi-Fi switch is currently off, as indicated by the toggle at [0,337,999,402]. To turn Wi-Fi on, I need to tap this toggle.\ndo(action=\"Tap\", element=[499,379])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441251,
+  "id": "20261008143410055e53d03c4f48fd",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008143410055e53d03c4f48fd",
+  "usage": {
+    "completion_tokens": 52,
+    "prompt_tokens": 2491,
+    "prompt_tokens_details": {
+      "cached_tokens": 1027
+    },
+    "total_tokens": 2543
+  },
+  "wall_seconds": 1.375
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The message \"I think, therefore I am.\" is visible in the conversation as an outgoing sent message (blue bubble with checkmark). The task is complete; I should finish now.\n\n\nfinish(message=\"Text message sent to +11043321819 successfully.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464919,
+  "id": "20261008210837e1f2f4c4298948ac",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008210837e1f2f4c4298948ac",
+  "usage": {
+    "completion_tokens": 57,
+    "prompt_tokens": 6066,
+    "prompt_tokens_details": {
+      "cached_tokens": 4308
+    },
+    "total_tokens": 6123
+  },
+  "wall_seconds": 1.6560000000026776
+}

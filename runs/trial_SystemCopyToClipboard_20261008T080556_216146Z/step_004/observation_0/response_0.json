@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The screen confirms that the \"Clipper\" service is started and provides instructions for copying to or pasting from the clipboard using ADB shell. To copy the text \"john.doe@example.com\" to the clipboard, I should paste it into the clipboard first. However, since there is no text input field or clipboard interface visible, I should try to paste the text using the ADB shell command as instructed. The next step is to go back to the home screen to access the clipboard or use the ADB shell if available.\n\nActually, to paste the text, I need to first have the text ready in the clipboard or input. Since the task is to copy the text, I should first input the text in some app (e.g., a text editor or the ADB shell). But the current screen doesn't provide such an interface. I'll go back to the home screen to proceed with the next steps.\n\nI'll use the Back action to return to the home screen and then proceed to launch the ADB shell or find another way to input the text.\n\n\ndo(action=\"Back\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791446788,
+  "id": "20261008160626964aaa07f82d4510",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008160626964aaa07f82d4510",
+  "usage": {
+    "completion_tokens": 225,
+    "prompt_tokens": 2535,
+    "prompt_tokens_details": {
+      "cached_tokens": 1288
+    },
+    "total_tokens": 2760
+  },
+  "wall_seconds": 2.6089999999967404
+}

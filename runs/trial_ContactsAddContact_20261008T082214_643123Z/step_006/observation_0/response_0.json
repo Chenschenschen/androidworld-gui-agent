@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Last name\" field is focused and empty. Type \"Ali\" into it as the last name.\n\n\ndo(action=\"Type\", text=\"Ali\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447771,
+  "id": "20261008162250b477a7d848aa4ddd",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008162250b477a7d848aa4ddd",
+  "usage": {
+    "completion_tokens": 32,
+    "prompt_tokens": 2707,
+    "prompt_tokens_details": {
+      "cached_tokens": 1431
+    },
+    "total_tokens": 2739
+  },
+  "wall_seconds": 1.375
+}

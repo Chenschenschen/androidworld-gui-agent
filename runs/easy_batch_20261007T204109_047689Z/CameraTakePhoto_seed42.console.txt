@@ -1,0 +1,60 @@
+D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Evidence: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_CameraTakePhoto_20261007T204109_646710Z
+Readable trajectory: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_CameraTakePhoto_20261007T204109_646710Z\trajectory.txt
+Step 1, screenshot, AutoGLM call 1
+Chosen: {'action_type': 'click', 'x': 160, 'y': 981}
+Step 2, screenshot, AutoGLM call 2
+Chosen: {'action_type': 'click', 'x': 538, 'y': 2332}
+Step 3, screenshot, AutoGLM call 3
+Chosen: {'action_type': 'click', 'x': 538, 'y': 1226}
+Step 4, screenshot, AutoGLM call 4
+Chosen: {'action_type': 'click', 'x': 538, 'y': 1228}
+Step 5, screenshot, AutoGLM call 5
+Chosen: {'action_type': 'click', 'x': 538, 'y': 1228}
+Step 6, screenshot, AutoGLM call 6
+Chosen: {'action_type': 'click', 'x': 538, 'y': 1226}
+Step 7, screenshot, AutoGLM call 7
+Chosen: {'action_type': 'click', 'x': 538, 'y': 1224}
+Step 8, screenshot, AutoGLM call 8
+Chosen: {'action_type': 'click', 'x': 538, 'y': 1224}
+Step 9, screenshot, AutoGLM call 9
+Chosen: {'action_type': 'click', 'x': 538, 'y': 1228}
+Step 10, screenshot, AutoGLM call 10
+Chosen: {'action_type': 'click', 'x': 538, 'y': 1224}
+Step 11, screenshot, AutoGLM call 11
+Chosen: {'action_type': 'click', 'x': 538, 'y': 1228}
+Step 12, screenshot, AutoGLM call 12
+Chosen: {'action_type': 'click', 'x': 538, 'y': 1226}
+{
+  "kind": "learning_trial",
+  "task": "CameraTakePhoto",
+  "run_id": "trial_CameraTakePhoto_20261007T204109_646710Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v5_labeled_completion",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v4_labeled_completion",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "step_budget",
+  "model_calls_attempted": 12,
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "clean_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 62.78199999999924,
+  "agent_phase_seconds": 58.31300000000192
+}

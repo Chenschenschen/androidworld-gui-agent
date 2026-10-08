@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I'm now in the Settings app. I can see the \"Network & internet\" option which contains \"Mobile, Wi‑Fi, hotspot\" according to the description. This is where I need to go to turn on Wi-Fi. I should tap on the \"Network & internet\" option to access the Wi-Fi settings.\ndo(action=\"Tap\", element=[499,379])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406232,
+  "id": "202610080450317f029867c7ee4e82",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080450317f029867c7ee4e82",
+  "usage": {
+    "completion_tokens": 79,
+    "prompt_tokens": 2036,
+    "prompt_tokens_details": {
+      "cached_tokens": 523
+    },
+    "total_tokens": 2115
+  },
+  "wall_seconds": 1.5940000000045984
+}

@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Battery",
+    "verify": "The screen should show the Battery settings page, which might contain a toggle switch for Wi-Fi.",
+    "target": "Battery",
+    "index": "48",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 284,
+    "y": 1938
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

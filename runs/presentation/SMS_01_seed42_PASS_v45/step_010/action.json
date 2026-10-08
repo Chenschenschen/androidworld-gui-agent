@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "finish",
+    "message": "Text message sent to +11043321819 successfully."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "Text message sent to +11043321819 successfully."
+  },
+  "observation_id": "observation_0"
+}

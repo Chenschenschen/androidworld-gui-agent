@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I'm in the Settings app and need to access the Wi-Fi settings. The \"Network & internet\" option shows \"Mobile, Wi‑Fi, hotspot\" in its description, which is where Wi-Fi controls are typically located. I should tap on \"Network & internet\" to proceed.\ndo(action=\"Tap\", element=[499,381])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441887,
+  "id": "20261008144446714fc96a295948da",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008144446714fc96a295948da",
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 1936,
+    "prompt_tokens_details": {
+      "cached_tokens": 699
+    },
+    "total_tokens": 2008
+  },
+  "wall_seconds": 1.5
+}

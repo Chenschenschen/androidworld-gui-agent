@@ -1,0 +1,13 @@
+{
+  "native": {
+    "allow": "brief visible evidence",
+    "action": "CLICK",
+    "point": "501,984",
+    "summary": "The task is to create a new contact for Camila da Silva. An initial attempt to open the app resulted in a notification permission dialog. The app is now open, but the dialog must be handled first. The current view is the main contacts list."
+  },
+  "android": {
+    "action_type": "click",
+    "x": 541,
+    "y": 2362
+  }
+}

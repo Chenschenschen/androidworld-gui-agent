@@ -1,5 +1,122 @@
 # Project decisions
 
+8 October publication: the user requested the complete project on branch
+`hayati`, excluding videos. Preserve non-video run archives, course originals,
+material extracts and project utilities. Keep credentials, installed environments,
+caches and separate dependency checkouts local. Retain original evidence bytes;
+do not rerun tasks for publication. Camera work was dropped at the user's request.
+The Files presentation tables refer to the exact user-named success/failure runs.
+
+Camera user-run failure: inspect Home/splash/onboarding frames and raw replies,
+preserve original trial190644. Add only Camera's package to existing checked
+GUI-label supplement (v57), keeping freshness/reobservation bounds and policy.
+Read-only real XML confirms actual NEXT/checkbox controls;43 checks pass. No
+task execution/model probe on user's behalf; user reruns same Camera command.
+New Camera success remains unestablished. CAMERA_SELF_RUN_REPAIR.md has evidence.
+
+Self-run HTTP400 diagnosis: inspect provider1210 body and compare actual failed
+request before retrying. Exact saved request succeeded in one API-only diagnostic
+with no GUI execution/parameter change. No API-key/model/sampling fix is supported;
+temporary provider rejection inferred. v56 improves only redacted error reporting,
+retains no automatic replay and passes43 checks. Let the user rerun their forward
+task; file remains in easy. Preserve original API failure and diagnostic logs.
+
+User reported videos ending before MOVE and requested self-run instructions.
+Inspection confirmed split screenrecord parts and continuation/post-move state
+in second clips. Provide one named complete playback file per successful Files
+run, preserving original clips/frames. v55 changes only packaging: FFmpeg concat
+after recorder finishes, complete_video summary field, separate packaging-error
+reporting. imageio-ffmpeg0.6.0 pinned/installed in project .venv. Four real joins
+decoded with all335/570/303/574 frames preserved;42 checks and pip check pass.
+No new GUI task run. Exact self-run command starts medium->easy from the checked
+current file location; RUNNING_TASKS.md provides reproduction instructions.
+
+Completed Files linked stage: fresh forward/reverse v53 clean PASS at20/12;
+third v53 failed (XML exit137 followed by model wrong-folder cycle). Diagnosed
+before changing one observation mechanism: v54 adds at most one additional
+read-only XML capture, with no GUI replay, prompt/sampling/budget change.42 tests
+passed before the seed44 retry, which finished at19 and officially passed.
+Recipe ends in medium with unchanged original hash. Three successful direction
+recordings across four attempts, using two versions; not a frozen3/3 gate.
+Videos named in PRESENTATION_EVIDENCE.md; all failures preserved. Stage complete,
+no next task started and no default-config promotion or speed tuning adopted.
+
+8 October FilesMoveFile stage: user requested one recipe moved forward, back,
+then forward, and named successful presentation evidence. SMS successes are
+copied with original provenance to runs/presentation. Files uses the same runner
+with editable --params JSON and --continue-state. Standard shared-storage clear
+was rejected by approval review; adopt scoped named-file creation for the first
+trial and preservation for linked moves. Unchanged official verifier determines
+success. These linked evaluations differ from independent benchmark resets.
+One v52 recipe forward PASS is preserved; reverse failed on inconsistent XML.
+Prepared v53 rejects out-of-container descendant labels and falls back to the
+screenshot. On continuation the file was already back in easy with unchanged
+hash and unknown transition provenance; start a fresh recorded v53 sequence
+without recreating/moving it in preparation. Read FILES_MOVE_TRIAL.md for results.
+
+SMS follow-up and user-requested repair: failed seeds43/44 now both cleanPASS
+on identical frozen v49 sources/settings, with model finish at step7. Use the
+existing SMS screenshot/XML supplement, observed editable hints and exact
+multilingual name mapping. Prompt-only and tighter scalar threshold retries
+failed and remain preserved. Global threshold restored0.08 with GUI-target checks.
+See SIMPLE_SMS_TRIAL.md. No new task started; v49 has2/2, not a three-run gate.
+
+8 October SimpleSmsSend request: run one screenshot trial through the existing
+runner with general_config.json and seed42. Use official app preparation and
+verification, a visible sent-message completion condition, and no SMS action
+recipe. Initial setup timeout and its bounded launch repair are recorded in
+SIMPLE_SMS_TRIAL.md. This task switch is explicitly requested by the user.
+
+8 October accepted general-guidance direction: implement reusable Android
+interaction rules, factual app capabilities, exact goal completion and bounded
+observation-based recovery in one existing AutoGLM step. Keep task-specific
+procedures optional and disable the unsuccessful extra assessment calls.
+general_config.json prepares v37 with a Markor editor for Clipboard; one changed
+bounded seed43 trial measures this integration bundle before any expansion.
+App and guidance both differ from v35; no isolated prompt-effect estimate or
+leaderboard equivalence is claimed. See GENERAL_GUIDANCE_EXPERIMENT.md.
+
+8 October explicit-guidance request: the user now authorizes clear procedural
+recommendations for every implemented warm-up. Prepare editable per-task guides
+and opt-in guided_config.json (v36); keep the recorded v35 default and original
+reference comparison intact. Prefer Markor QuickNote for Clipboard instead of
+Chrome menus. Messages was considered as the user suggested; its unsent-draft
+path is not yet tested, while Markor is a dedicated editor already in the agreed
+later-task scope and has official Android World preparation. This is a proposal
+implemented as a selectable experiment, not a measured success or final model
+capability judgment. 28 offline checks pass; no live guided trial has run.
+See [TASK_GUIDANCE_AND_GROUNDING.md](TASK_GUIDANCE_AND_GROUNDING.md).
+
+8 October authorized reference comparison: keep hosted AutoGLM and the existing
+runner; import pinned upstream PhoneAgent with its original English policy,
+full screenshots, streaming requests and ADB actions. This measures an
+integration bundle, followed by controlled isolation only if warranted. Keep
+model and adapter faults distinct. No goal or model change authorized at this
+stage. See [UPSTREAM_REFERENCE_COMPARISON.md](UPSTREAM_REFERENCE_COMPARISON.md).
+
+Reference outcome: Timer/Clipboard still failed under both measured policies.
+Retain the proven infrastructure repair in default v35: one bounded Chrome
+launch without retry/server restart, plus live-recorder monitoring. Model
+policy and prompts are unchanged,25 offline regressions pass, and no new task
+success gate is established. Original v34/default and native attempts remain
+in immutable run snapshots. Seven-attempt evidence audit completed.
+
+Assessment outcome, 8 October: v31 Timer/Clipboard had no clean success;
+v32/v33 Clipboard checks stopped on model argument/assessment-output errors.
+After inspecting and recording each failure, stop this unsuccessful experiment
+and defer later tasks. v34 retains assessment as opt-in, disabled by default;
+assessment_config.json preserves the tested final variant.20 offline checks,
+outside-project readiness and full four-trial evidence/video audit pass. No
+new live v34 success claim. See [STEP_ASSESSMENT_EXPERIMENT.md](STEP_ASSESSMENT_EXPERIMENT.md).
+
+8 October assessment stage: the user authorized implementing the researched
+M3A before/after assessment for failed Timer/Clipboard cases. Keep one agent,
+the same hosted AutoGLM and native actions; add read-only feedback, with separate
+official verification and no completion override. First saved-evidence probe
+exposed native operation output in a summary request; diagnosed and recorded
+before the compatibility correction. See [STEP_ASSESSMENT_EXPERIMENT.md](STEP_ASSESSMENT_EXPERIMENT.md).
+Do not advance to later tasks until the bounded gate and three-seed repeats pass.
+
 Evidence publication, 8 October: the user explicitly approved the previously
 blocked emulator screenshots and diagnostic artifacts. Publish the selected
 original export and its hash manifest; keep credentials and unrelated local

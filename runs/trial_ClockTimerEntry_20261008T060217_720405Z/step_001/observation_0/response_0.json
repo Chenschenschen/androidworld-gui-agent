@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to create a timer with 20 hours, 7 minutes, and 1 second without starting it. The Clock app is visible on the home screen. The first step is to launch the Clock app to access the timer feature. I should tap the Clock icon to open it.\ndo(action=\"Launch\", app=\"Clock\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791439343,
+  "id": "2026100814022140dac9dc8cb84172",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814022140dac9dc8cb84172",
+  "usage": {
+    "completion_tokens": 73,
+    "prompt_tokens": 2115,
+    "prompt_tokens_details": {
+      "cached_tokens": 520
+    },
+    "total_tokens": 2188
+  },
+  "wall_seconds": 2.0310000000026776
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see that Chrome is showing \"No internet\" and the search query shows \"google.com/search?q=john.com\" which means it's searching for \"john.com\" instead of \"john.doe@example.com\". I need to go back and search for the correct text. Let me tap the back button to go back to the search bar.\ndo(action=\"Back\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407887,
+  "id": "20261008051806d64b2751d7f44e46",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008051806d64b2751d7f44e46",
+  "usage": {
+    "completion_tokens": 76,
+    "prompt_tokens": 3115,
+    "prompt_tokens_details": {
+      "cached_tokens": 1797
+    },
+    "total_tokens": 3191
+  },
+  "wall_seconds": 1.6719999999986612
+}

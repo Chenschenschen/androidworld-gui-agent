@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Last name field is focused and the keyboard is visible. I should type \"Ali\" into this field.\ndo(action=\"Type\", text=\"Ali\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438840,
+  "id": "20261008135359176dded560c44577",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135359176dded560c44577",
+  "usage": {
+    "completion_tokens": 32,
+    "prompt_tokens": 2603,
+    "prompt_tokens_details": {
+      "cached_tokens": 1314
+    },
+    "total_tokens": 2635
+  },
+  "wall_seconds": 1.3430000000080327
+}

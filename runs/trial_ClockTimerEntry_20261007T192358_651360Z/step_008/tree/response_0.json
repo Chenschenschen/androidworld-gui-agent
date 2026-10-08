@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T19:25:50.932157Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Clock\", \"verify\": \"The Clock app screen should be displayed.\",\"target\": \"Clock\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3989634500,
+  "load_duration": 17443800,
+  "prompt_eval_count": 1334,
+  "prompt_eval_cached_count": 414,
+  "prompt_eval_duration": 1365964000,
+  "eval_count": 31,
+  "eval_duration": 2485656000,
+  "wall_seconds": 6.046999999998661
+}

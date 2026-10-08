@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "com.android.contacts:id/text_input_root",
+    "verify": "The text input for the contact's name should be focused, and the keyboard should appear, ready for text entry.",
+    "index": "7"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 535,
+    "y": 939
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

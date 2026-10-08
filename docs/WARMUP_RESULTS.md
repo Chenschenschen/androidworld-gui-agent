@@ -1,5 +1,21 @@
 # Recorded warm-up results, 8 October 2026
 
+Latest native-reference comparison: Timer seed42 and Clipboard seed43 each
+failed under both original native policy and project policy (corrected Clipboard
+transport). Four valid outcomes,0/4 clean successes; three additional setup,
+prerequisite or invalid-recording attempts are preserved separately. This small
+diagnostic sample establishes no new reliability gate. Exact traces, causes,
+versions and comparison limits: [UPSTREAM_REFERENCE_COMPARISON.md](UPSTREAM_REFERENCE_COMPARISON.md).
+
+Latest assessment experiment: M3A-style before/after feedback was implemented
+and tested with the same hosted AutoGLM. Timer v31 failed; Clipboard v31 falsely
+finished, v32 failed app validation before assessment, v33 stopped on a truncated
+assessment after one Launch. All are preserved and diagnosed in
+[STEP_ASSESSMENT_EXPERIMENT.md](STEP_ASSESSMENT_EXPERIMENT.md). No new success
+gate or later-task expansion. Current v34 disables the unsuccessful experiment
+by default;20 offline checks pass, with no live v34 success claim. Earlier gates
+and v29 details below remain historical.
+
 Success below means model finish **and** official Android World PASS, with valid
 initialization/video and no runtime error. Original failed runs are preserved.
 Three seeds are a small sample. Different versions are not a frozen 15/15 batch.

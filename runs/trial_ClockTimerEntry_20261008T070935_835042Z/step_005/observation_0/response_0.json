@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows \"00h 00m 20s\" and I have entered \"20\". To set 20:07:01, I need to enter \"7\" next. I will tap the \"7\" button to input the minute digit.\ndo(action=\"Tap\", element=[245,570])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791443427,
+  "id": "202610081510260124571bd9814217",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081510260124571bd9814217",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 5445,
+    "prompt_tokens_details": {
+      "cached_tokens": 2871
+    },
+    "total_tokens": 5511
+  },
+  "wall_seconds": 1.75
+}

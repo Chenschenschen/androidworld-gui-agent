@@ -1,0 +1,15 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.3133171530330882,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 4.219000000011874,
+  "selected_gui_control": {
+    "label": "OK",
+    "resource_id": "android:id/button1"
+  }
+}

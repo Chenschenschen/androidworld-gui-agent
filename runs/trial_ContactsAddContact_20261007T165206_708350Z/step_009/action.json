@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "text='Phone'",
+    "verify": "The 'Phone' field should be selected, allowing for phone number entry.",
+    "index": "10"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 535,
+    "y": 1503
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

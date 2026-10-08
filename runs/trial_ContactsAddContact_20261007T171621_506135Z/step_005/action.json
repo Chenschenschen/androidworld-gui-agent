@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "10",
+    "verify": "The 'Phone' field should be selected, and the keyboard should appear for text input.",
+    "target": "Phone",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 535,
+    "y": 1503
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

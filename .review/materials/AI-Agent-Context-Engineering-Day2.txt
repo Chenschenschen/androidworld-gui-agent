@@ -1,0 +1,795 @@
+=== PAGE 1 ===
+Context Engineering for AI Agents
+From Context to Memory
+Context engineering · Agent Skills · User Memory · Retrieval
+PART ONE
+What the model sees each round
+PART TWO
+How to control cost and behavior
+PART THREE
+How knowledge persists across sessions
+AGENTIC AI IN BUSINESS
+
+=== PAGE 2 ===
+OUTLINE
+Course Map
+Four parts, one information supply chain
+Context KV Cache & 
+Prompts
+Skill & Agent 
+Status
+Memory & 
+RAG
+Single Call One Agent Run Across Sessions Shared Knowledge
+From “what the model sees in this round” to “what the system knows in the long run.”
+• What is context
+• API-level Context 
+Structure
+• Context Design
+• Prompt engineering
+• Agentic skill
+• User memory
+• Basic RAG
+• KV Cache
+• Prompt engineering
+
+=== PAGE 3 ===
+OUTCOMES
+Learning Outcomes
+By the end, you should be able to make these engineering decisions
+Read Trajectories
+Identify system, user, 
+assistant, tool messages, 
+and differences between tool 
+definitions and tool results
+Understand the 
+Information Flow
+Know static prefixes, 
+dynamic states, skills, long -
+term memory, and retrieved 
+evidence
+Explain the Trade-offs
+Describe the costs and risks 
+between cache hits, retrieval 
+quality, status updates, and 
+long-term maintenance
+
+=== PAGE 4 ===
+PART 1 
+Context
+What is actually in the window, and who put it there
+
+=== PAGE 5 ===
+CONTEXT
+Context Sets the Performance Ceiling
+Context 1
+Only user goal: flight at 19:00
+“Y ou should leave early enough 
+to arrive at the airport around 
+16:30–17:00.”
+Context 2
+User goal + DB timetable / 
+planned route
+“T ake the 14:30 train via 
+Mannheim and arrive at Frankfurt 
+Airport at 16:25.”
+Context 3
+User goal + timetable + DB 
+might delay
+“The original route is now too 
+risky. Choose an alternative 
+connection or leave earlier.”
+Same model. Same question. Different context → Different decisions.
+Question: Plan my trip from Heilbronn to Frankfurt Airport. My flight departs at 19:00.
+
+=== PAGE 6 ===
+CONTEXT
+Information in Context
+Deliver the structured background information an agent needs to the model.
+The task
+Goal · Limits · what counts as 
+done
+The rules
+Policy · Order · What to check
+Right now
+Live data · What changed
+Without the task
+It answers a reasonable question 
+rather than yours: a route that 
+arrives on time, to the wrong 
+airport.
+Without the rules
+It takes the cheapest connection 
+and never checks the delay, 
+because nothing said checking 
+was part of the job.
+Without the current situation
+It recommends a train that left 
+an hour ago. Its timetable was 
+right in training and is wrong 
+today.
+Context tells the model what is happening out there.
+
+=== PAGE 7 ===
+CONTEXT
+Every Decision Depends on the Last One
+The next action depends on what has already happened.
+User 
+Request › Model Action › Tool 
+Observation › Model Action › Latest 
+Observation
+The API remembers nothing for you.
+Each round is a fresh call. Nothing carries over on its own.
+The simplest approach is to resend the entire message history.
+Production systems compress it — but whatever the next decision depends on must survive the compression.
+- Plan my trip from Heilbronn to Frankfurt Airport.
+- Search for a suitable DB connection.
+- Train A arrives at Frankfurt Airport at 16:30.
+- Check the real-time train status.
+- Train A is delayed by 70min.
+›
+So the question for the rest of today: how do you keep it informative and stop it getting expensive?
+
+=== PAGE 8 ===
+CONTEXT IN API
+Where does context enter the API call
+System 
+Prompt
+Who you are · How you should act · What rules to follow · What steps to take
+Tool Definition What the tool is called · What it does · What inputs it needs
+user assistant tool assistant
+Interaction [Conversation history / trajectory (grows with interaction →)]  
+› › ›
+Context Composition Each Time the Agent Calls the Model
+
+=== PAGE 9 ===
+CONTEXT IN API
+system Developers Define Identities, 
+Constraints, and Processes
+user
+End-User Requests and 
+Supplemental Inputs
+assistant Model Previous T ext Reply or 
+T ool Call Request
+tool Framework Results Returned 
+After T ool Execution
+“messages”: [
+  {
+    "role": "system",
+    "content": "Y ou are a travel assistant. Always check real-time train 
+status before recommending a route."
+  },
+  {
+    "role": "user",
+    "content": "Plan my trip from Heilbronn to Frankfurt Airport. My flight 
+departs at 19:00."
+  },
+  {
+    "role": "assistant",
+    "content": "I will check the available train connections first."
+  },
+  {
+    "role": "tool",
+    "content": "ICE 123 arrives at Frankfurt Airport at 16:30 and is 
+currently delayed by 70 minutes."
+  },
+  {
+    "role": "assistant",
+    "content": "The original connection is now risky. I recommend 
+checking an alternative route."
+  }
+]
+Role structure helps the model judge who 
+is speaking, what is instruction, and what is 
+just data.
+
+=== PAGE 10 ===
+CONTEXT IN API
+Single-Turn Call
+One API call: provide the required context, get one model response
+model
+Generate response
+Generate a response 
+from the provided context
+system
+    You are a travel assistant.
+User
+    “Plan my trip to Frankfurt Airport.”
+assistant
+    Here is a recommended 
+route...
+
+=== PAGE 11 ===
+CONTEXT IN API
+Multi-Turn Interaction with Tool Calls
+A tool call usually requires another model API call after the tool result is returned.
+Question “What’s the current time and weather in Vancouver?”
+The model decides what to call; the framework executes the tools; the results are 
+added to the context and sent back to the model.
+
+=== PAGE 12 ===
+CONTEXT IN API
+Tool Calls
+Parallel execution
+get_current_time (timezone)
+get_weather (city)
+Independent tool calls can run in parallel; 
+dependent calls must wait for earlier results.
+Tool ID
+tool_call_id
+tells the framework which result belongs to 
+which tool call
+
+
+=== PAGE 13 ===
+CONTEXT IN API
+Message History Grows with Each Round
+Round 0 system + user
+Round 1 + assistant tool_calls + tool results
+Round 2 + assistant final response
+Trajectory = the agent’s step -by-step work history.
+
+=== PAGE 14 ===
+CONTEXT IN API
+Context Composition
+Stable Prefix System Prompt  +  Core Tool Definitions
+Dynamic 
+Trajectory
+user  ·  assistant  ·  tool result ·  …
+appended every round, compressed if necessary
+Conversation history, i.e., the trajectory, grows with each interaction
+
+=== PAGE 15 ===
+PART 2 
+Caching and Prompt Design
+
+=== PAGE 16 ===
+CHAT TEMPLATE
+Chat Template
+• Use standard message roles, the chat template converts them into the 
+model’s expected format
+• This formatting happens before tokenization
+JSON message Model Token Stream
+
+=== PAGE 17 ===
+KV CACHE
+Attention
+Each token forms a Query, Key, and V alue. A new token uses its Query to find relevant information from previous tokens.
+• Each token produces a Query, Key, and Value.
+• The new token compares its Query with the Keys of previous tokens, and gets a weighted sum of the Values.
+• Each token can only attend to current and previous tokens.
+Causal mask M
+Rows are Queries. Columns are Keys.
+t₁ t₂ t₃ t₄ t₅
+t₁ × × × ×
+t₂ × × ×
+t₃ × ×
+t₄ ×
+t₅
+Allowed
+Future masked
+
+=== PAGE 18 ===
+KV CACHE
+What the cache actually stores
+The model is decoding one token at a time. It has finished t1 to t4 and is about to place t5. Ask what genuinely changes at this step.
+Token positions
+t1 t2 t3 t4 new t5
+past — already computed current position
+Recomputed at this step
+one new column, and nothing else
+q5 k5 v5
+The Query is fresh every step, because the thing doing the looking is new.
+Read back from the cache
+everything to the left of it
+k1 … k4 v1 … v4
+These were computed from tokens that have not changed — and, by the 
+causal mask, cannot change.
+q5 compare with k1 … k5 weights weighted sum of v1 … v5 z5 one step
+The past does not change, so its Keys and Values do not change. Store them once, append one column per step. That is the 
+entire idea — and the reason a stable prefix is worth money.
+
+=== PAGE 19 ===
+KV CACHE
+KV Cache
+KV cache removes repeated projection work
+Without KV cache
+Every decoding step forwards the whole prefix again.
+step 1    compute K₁ V₁
+step 2    recompute K₁ V₁ +  compute K₂ V₂
+step 3    recompute K₁ V₁ K₂ V₂ +  compute K₃ V₃
+step 4    recompute all earlier K/V  +  compute K₄ V₄
+With KV cache
+Read the stored history and append one new K/V pair.
+step 1    compute and store K₁ V₁
+step 2    read cache  +  append K₂ V₂
+step 3    read cache  +  append K₃ V₃
+step 4    read cache  +  append K₄ V₄
+A context-design rule: keep the prefix stable so the cached prefix states remain reusable
+https://huggingface.co/blog/not-lain/kv-caching
+
+=== PAGE 20 ===
+Stable Prefix
+KV CACHE
+• A token’s K/V depends not only on the token itself, but also on the prefix before it.
+• Modify the prefix → invalidate the cache from the point of change onward.
+
+=== PAGE 21 ===
+KV Cache vs. Prompt Cache
+KV CACHE
+
+
+=== PAGE 22 ===
+Common Context Patterns
+Anti-pattern What people do, and why it hurts Do this instead
+Some developers embed timestamps in the
+system prompt (e.g., “Current time: 2025-09-14 
+10:30:45.123456”)
+Put the time at the end,
+Dynamic 
+Rearrangement 
+Tool
+Dynamically reorder tools based on usage 
+frequency
+Keeping only the last N messages drops the oldest 
+one on every turn — which is the start of the prefix.
+With a window of 10, message 11 drop message 1 
+and the cache restarts from the top.
+Compress old turns
+Hand-rolled text 
+formatting
+Flattening roles into “USER: … ASSISTANT: …” by 
+hand produces a string the model was never trained 
+on.
+KV CACHE
+Sliding Window
+Dynamic System
+Prompt
+Fixed Sequence
+Using Standard 
+Message Structure
+
+=== PAGE 23 ===
+Cache-Friendly Design Principles
+1 Fixed Early Content
+Once the system prompt, the tool definitions and their order are set, leave them alone for 
+as long as you can.
+2 Append dynamic information
+Time, status and task progress belong at the end of the message list, never at the top.
+3 Keep the standard structure
+Let the chat template render roles, boundaries and tool results. Hand-formatting saves nothing 
+and breaks the cache.
+KV CACHE
+
+=== PAGE 24 ===
+PROMPT ENGINEERING
+Reduce content ambiguity and put the power of the model into what really needs reasoning .
+Format
+• Markdown organizes the content for 
+human and machine readers
+• XML tags precise, machine-parseable 
+semantics
+PROMPT ENGINEERING: Prompt Format
+
+=== PAGE 25 ===
+Organization
+Rule stacking
+Dozens of independent rules.
+The model has to work out the priority on the 
+spot, and when it goes wrong there is no step 
+to point at.
+Process Driven
+Validation → Classification → Preprocessing 
+→ Execution → Validation
+The model knows which stage it is in, what that 
+stage is for, and what comes next. So do you, 
+when it fails.
+PROMPT ENGINEERING
+Process-Driven vs. Rule Stacking
+
+=== PAGE 26 ===
+When to show examples, and when not to
+Provide examples
+• Writing style
+• Complex Report Format
+• Customer Service Tone and 
+Boundaries Cases
+Engineering 
+notes
+• 2–3 high-quality examples of coverage boundaries, often outperforming 
+10 near-repeat examples. 
+• Once the example is selected, the prefix should also be kept stable.
+PROMPT ENGINEERING
+Writing rules
+• T asks the model already knows how 
+to do
+• Clear judgment conditions
+• Simple output structure
+
+=== PAGE 27 ===
+Prompt Injection
+PROMPT ENGINEERING
+
+
+=== PAGE 28 ===
+Tool Definitions
+Keep tool discovery lightweight, and load detailed tool definitions only when needed .
+PROMPT ENGINEERING
+1 Load All T ools Upfront
+Every request carries every definition, used or not.
+System prompt
+(instructions, rules)
+Tool A full definition
+(name, purpose, inputs)
+Tool B full definition
+(name, purpose, inputs)
+Many more tool definitions …
+Simple, but 
+expensive
+• Long stable prefix
+• All tools sent every time
+• More tokens and cost
+2 Progressive Tool Loading
+A catalog upfront; full definitions on demand.
+System prompt
+(instructions, rules)
+Tool catalog
+(names + short descriptions)
+e.g., search_route, get_weather
+1. Model selects a tool
+“I should use get_weather.”
+2. Load selected tool definition
+(inputs, types, examples, usage rules)
+3. Append to conversation once
+It stays in the same position; later messages are added 
+after it.
+
+=== PAGE 29 ===
+PART 3
+Skills and Agent Status
+
+=== PAGE 30 ===
+SKILLS
+What is Skill
+Objective Modularize the Agent’s capabilities into independent, loadable knowledge packages
+Information Domain knowledge
+Collection of prompts and files
+Format
+• SKILL.md file
+• YAML frontmatter
+• Description
+• “Use when”
+• “Do not use when”
+https://github.com/anthropics/skills/blob/main/template/SKILL.md
+
+=== PAGE 31 ===
+What a Useful Skill Contains
+1 Who Who it serves, which tasks it covers, and what a good output 
+looks like
+2 core Step-by-step instructions ，The most important principle, matching 
+examples and counterexamples
+3 common 
+mistakes
+Forbidden actions, out-of-scope actions, and the exceptions 
+that are allowed
+4 completion 
+standard
+Stop conditions, confirmation points, and how to verify the 
+result
+5 Reference 
+resource
+Glossary, templates, worked examples, detailed sub-documents
+SKILLS
+https://github.com/agentskills/agentskills/blob/main/docs/specification.mdx?utm_source=chatgpt.com
+
+=== PAGE 32 ===
+Workflow
+SKILLS
+
+
+=== PAGE 33 ===
+SKILLS
+Skills vs Tools
+Skill
+A skill supplies the knowledge of how to proceed; a tool supplies the ability to act. Real tasks need both.
+a skill supplies the knowledge of how to proceed; a tool supplies the ability to act.
+
+=== PAGE 34 ===
+AGENT STATUS BAR
+AGENT STATUS BAR: Hidden State in Long Trajectories
+Managing Trajectories How the Agent can keep the model aware of task progress, 
+environment changes, and tool-call counts
+Without Status Bar With Status Bar
+1
+Call
+Xfinity
+2
+Search
+deals
+3
+Call
+Xfinity
+4
+Check
+account
+5
+Call
+Xfinity
+?
+Can you
+call again?
+Easy to miss in a 
+long trajectory
+Model must scan the full history and recount:  xfinity_calls = 3
+Agent Status Bar
+xfinity_calls: 3 / 3
+deal_search: completed
+account_checked: yes
+next_action: do_not_call_again
+current
+state is
+explicit
+1
+Call
+2
+Search
+3
+Check
+?
+Can you
+call again?
+No 
+limit reached
+
+=== PAGE 35 ===
+AGENT STATUS BAR
+Composition
+• Task Planning 
+• TODO List
+• Current Environment Observation Summary
+• Dynamic environment information
+• Abnormal operation alerts (“This tool has been 
+called N times repeatedly”)
+• Side-channel Information for Events
+• Events tool-ID, file-ID etc
+
+=== PAGE 36 ===
+
+
+=== PAGE 37 ===
+Update
+Replace each round
+Persistent appending
+AGENT STATUS BAR
+Previous call
+history new msgs
+Next call
+historystatus v1
+removed
+new msgs status v2
+cache after old status position may be recomputed
+history status v1 new msgs status v2
+all previous messages stay in place
+
+=== PAGE 38 ===
+Update
+Replace each round Persistent appending
+AGENT STATUS BAR
+Can you decide which update strategy should be used? 
+From the perspective of cache pricing
+status is small
+many messages are produced between 
+updates
+status updates are frequent
+status is large
+
+=== PAGE 39 ===
+Maintain 
+➢ Maintain the status bar with code whenever possible
+If an LLM is unavoidable, extract items one by one and aggregate them with 
+code; never ask it to perform a batch count in one shot
+➢ Do not delete the original context
+The status bar is a lossy projection of the trajectory. The moment a question 
+falls outside the fields you chose, the answer collapses — so keep the original 
+underneath it.
+AGENT STATUS BAR
+
+=== PAGE 40 ===
+PART 4
+User Memory and RAG
+
+=== PAGE 41 ===
+USER MEMORY
+Personalized service across sessions
+Three rules for what you extract Selective Abstraction Structured
+
+=== PAGE 42 ===
+Three Levels of Memory Capability
+Level 1 Basic Memories
+Accurately save and return clear facts
+Level 2 Retrieve
+associated entities, time, channels and composite events across sessions
+Level 3 Proactive services
+synthesizes old information to identify risks and backlogs ahead of time
+USER MEMORY
+LoCoMo (https://aclanthology.org/2024.acl-long.747.pdf )
+
+=== PAGE 43 ===
+USER MEMORY
+Where, how, and what to store
+1 Where does it live?
+Trajectory — this run, append-only
+User long-term memory — across 
+sessions
+2 How is it written?
+Simple notes  →  enhanced notes  →
+JSON cards  →  advanced JSON cards
+Cheap and lossy, or expressive and 
+costly.
+the next slide
+3 What kind of thing to write?
+Episodic — a specific event
+Semantic — a stable fact
+Procedural — a reusable routine
+Episodic
+what happened — one event, with a 
+time
+PERSON
+dinner with a colleague at that Italian 
+place, last Wednesday
+AGENT
+the user booked the ANA flight to 
+Tokyo for next Friday
+Semantic
+what is true — distilled from many
+Episodic
+PERSON
+the capital of Italy is Rome
+AGENT
+the user is vegetarian;
+prefers window seats
+Procedural
+how it is done — learned by repetition
+PERSON
+riding a bicycle
+AGENT
+search direct flights → confirm the
+seat → use the frequent-flyer number
+
+=== PAGE 44 ===
+Storage Formats
+USER MEMORY
+
+
+=== PAGE 45 ===
+Compression 
+USER MEMORY
+Keep memory useful without letting storage and retrieval cost grow without bound.
+Stage 1
+Importance filter
+Score memories
+Stage 2
+Cluster & Summarize
+Merge similar memories
+Stage 3
+Abstract & generalize
+Repeated episodes --> stable rules
+Access 
+frequency
+Time 
+decay
+Emotional 
+intensity
+Information
+uniqueness
+↓
+Keep high-score 
+memories
+Low score → compress / 
+archive / delete
+“Asked 
+about 
+rain”
+“Checked 
+weekend 
+weather”
+“Asked if an 
+umbrella is 
+needed”
+Representative 
+summary
+"Often checks weather 
+before outdoor plans"
+episode A episode B episode 
+C
+↓
+Semantic 
+memory
+"Prefers cost-
+effective 
+products."
+Procedural 
+memory
+"Check 
+reviews before 
+recommending 
+a product."
+Extract recurring pattern
+
+=== PAGE 46 ===
+RAG
+Retrieval-Augmented Generation
+https://dl.acm.org/doi/epdf/10.1145/3637528.3671470
+Without retrieval, the model answers from a snapshot that stopped at training time
+
+=== PAGE 47 ===
+RAG
+Retrieval-Augmented Generation
+https://dl.acm.org/doi/epdf/10.1145/3637528.3671470
+The pipeline
+
+=== PAGE 48 ===
+Embeddings
+RAG
+• Dense vector (list of numbers)
+• Token Embeddings
+• One vector per token 
+"What does this specific word mean in this exact context?"
+• Sentence Embedding
+• One vector for the entire sentence 
+"What is the overall meaning of the entire sentence?"
+
+=== PAGE 49 ===
+Chunking
+RAG
+Fixed-size
+Equal token windows
+Fast, but may cut meaning
+Structure-aware
+Natural document boundaries
+A strong production default
+Semantic
+Cuts where meaning changes
+Coherent, but costs more
+1 2 3 4
+Topic A Topic B Topic C
+Cut long documents into fragments (chunks)
+• The choice of chunk size and overlap is a trade-off
+
+=== PAGE 50 ===
+Evaluation
+Recall@k Is the correct evidence inside the top k results at all?
+MRR First relevant result ranked first
+nDCG Overall sort quality of all relevant results
+Evaluate whether the search found evidence before discussing whether the generated answer is well written.
+RAG
+
+=== PAGE 51 ===
+SUMMARY
+Course Summary
+1 Context The model acts on information visible in the current call
+2 KV Cache A stable prefix reduces repeated computation and cost
+3 Prompt & Skills Clear rules and expert knowledge loaded on demand
+4 Status Bar The framework converts hidden progress into explicit state
+5 Memory & RAG Cross-session facts and shared knowledge return to context on demand
+
+=== PAGE 52 ===
+T H E  L A B
+This afternoon: build the context
+Agentic AI  ·  Day 2: Context Engineering TUM School of Management
+Understand the supplied scripts, then choose your own modifications. Explain how your changes 
+affect the model’s context and responses.
+1 Understand and modify the tool -use conversation. Print each request and identify the system 
+prompt, tool definitions, assistant tool calls, and tool results.
+• Change the contents of tool to addition.
+2
+3
+Compare a stable prompt prefix with one that changes every turn. Move dynamic information to the 
+end and measure prompt -processing time across repeated runs.
+• Explain the code
+4
+Understand and modify a Skill with explicit trigger conditions and load it on demand. Maintain an 
+agent status record with code and inspect how both enter the next request.
+• Change the skill to translation: for example, translate text into German or Chinese.
+Understand how persistent facts are extracted and saved as structured memory. Start a new 
+session and compare responses with and without reloading that memory.

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "To proceed, I need to create a new file to enter the text \"john.doe@example.com\". The \"Create a new file or folder\" button is visible and selectable at [824,832,960,894].\n\ndo(action=\"Tap\", element=[893,864])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791461532,
+  "id": "202610082012108e6f87f6862b40b9",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082012108e6f87f6862b40b9",
+  "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 2930,
+    "prompt_tokens_details": {
+      "cached_tokens": 1434
+    },
+    "total_tokens": 2995
+  },
+  "wall_seconds": 1.764999999999418
+}

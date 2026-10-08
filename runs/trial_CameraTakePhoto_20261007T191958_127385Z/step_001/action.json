@@ -1,0 +1,13 @@
+{
+  "native": {
+    "action": "AWAKE",
+    "value": "camera",
+    "verify": "The camera application should open, displaying a live preview from the camera's lens, ready for capturing a photo."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "camera"
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "好的，现在Chrome已经打开了。我可以看到搜索框，上面写着\"Search or type web address\"。根据任务，我需要：\n1. 点击搜索框\n2. 输入\"Discount code: SAVE20\"\n3. 然后长按输入的文本，选择全部，点击复制\n\n首先，我需要点击搜索框。搜索框的位置大约在屏幕上方，坐标大约是(370, 326)左右。\ndo(action=\"Tap\", element=[370,326])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791439022,
+  "id": "202610081357012da5246aa99e45a0",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081357012da5246aa99e45a0",
+  "usage": {
+    "completion_tokens": 106,
+    "prompt_tokens": 2263,
+    "prompt_tokens_details": {
+      "cached_tokens": 681
+    },
+    "total_tokens": 2369
+  },
+  "wall_seconds": 1.9539999999979045
+}

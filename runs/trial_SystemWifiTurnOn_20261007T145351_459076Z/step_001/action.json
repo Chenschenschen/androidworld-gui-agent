@@ -1,0 +1,11 @@
+{
+  "native": {
+    "action": "AWAKE",
+    "value": "settings",
+    "{\"text\"": "\"Tap the gear icon on the home screen to open 'Settings'.\"}"
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  }
+}

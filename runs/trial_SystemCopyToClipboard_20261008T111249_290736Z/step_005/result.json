@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "finished": false,
+  "action": {
+    "_metadata": "do",
+    "action": "Long Press",
+    "element": [
+      499,
+      87
+    ]
+  },
+  "thinking": "The text \"john.doe@example.com\" has been entered in the search field. To copy it to the clipboard, I need to select the text first. A long press on the text field will bring up the context menu with options such as \"Copy.\" I will perform a long press on the search field to select the text and reveal the copy option.",
+  "message": null
+}

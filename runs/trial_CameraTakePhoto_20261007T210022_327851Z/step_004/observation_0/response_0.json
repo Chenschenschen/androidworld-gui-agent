@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The camera interface is still displayed, and the shutter button is still present, indicating the photo was taken and the camera returned to the normal state. The task is complete.\nfinish(message=\"One photo has been taken successfully. The camera interface is now back to normal, confirming the shutter action was successful and the task is complete.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406844,
+  "id": "20261008050043b0af33604d3d40b8",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008050043b0af33604d3d40b8",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 2157,
+    "prompt_tokens_details": {
+      "cached_tokens": 878
+    },
+    "total_tokens": 2223
+  },
+  "wall_seconds": 1.4690000000045984
+}

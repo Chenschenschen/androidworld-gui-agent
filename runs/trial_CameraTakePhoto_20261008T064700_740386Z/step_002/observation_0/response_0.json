@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app is open and the shutter button is visible at the center of the screen. To take a photo, I need to tap the shutter button. The shutter area is the blue circle with the camera icon at approximately [499,499,700,700].\ndo(action=\"Tap\", element=[499,499])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442033,
+  "id": "20261008144711f314d801bd1942f8",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008144711f314d801bd1942f8",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 1862,
+    "prompt_tokens_details": {
+      "cached_tokens": 766
+    },
+    "total_tokens": 1931
+  },
+  "wall_seconds": 1.562000000005355
+}

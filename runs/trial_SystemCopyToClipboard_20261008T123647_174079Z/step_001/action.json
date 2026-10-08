@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Launch",
+    "app": "markor"
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "markor"
+  },
+  "observation_id": "observation_0"
+}

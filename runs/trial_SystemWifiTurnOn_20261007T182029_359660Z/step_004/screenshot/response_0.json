@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:21:54.3013131Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"back\", \"verify\": \"The Settings app menu should be visible, containing options like 'Network & Internet'.\",\"point\": \"77,83\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 17991142600,
+  "load_duration": 41542400,
+  "prompt_eval_count": 1801,
+  "prompt_eval_cached_count": 269,
+  "prompt_eval_duration": 13437143000,
+  "eval_count": 44,
+  "eval_duration": 4399463000,
+  "wall_seconds": 20.0470000000023
+}

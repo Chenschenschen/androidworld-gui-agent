@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The file is selected, but there is no direct \"Move\" button visible. The \"More options\" button at [882,53,999,105] likely contains the Move option. I will tap it to check for the Move command.\n\n\ndo(action=\"Tap\", element=[941,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469224,
+  "id": "2026100822202366fdea660c8b4cd2",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100822202366fdea660c8b4cd2",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 5624,
+    "prompt_tokens_details": {
+      "cached_tokens": 3210
+    },
+    "total_tokens": 5691
+  },
+  "wall_seconds": 2.047000000005937
+}

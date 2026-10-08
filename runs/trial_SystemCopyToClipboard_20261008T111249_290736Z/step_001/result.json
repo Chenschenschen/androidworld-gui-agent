@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "finished": false,
+  "action": {
+    "_metadata": "do",
+    "action": "Launch",
+    "app": "Settings"
+  },
+  "thinking": "The user wants to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the home screen, and there is no clipboard or text input visible. To copy text to the clipboard, I need to first paste or enter the text in some input field, then copy it. However, the instruction is very specific and seems to want me to just copy the text, possibly from somewhere else. Since there is no input field or clipboard UI visible, the most logical first step is to launch the \"Settings\" app, as clipboard management is typically done there.",
+  "message": null
+}

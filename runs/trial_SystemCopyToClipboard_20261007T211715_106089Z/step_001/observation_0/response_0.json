@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the home screen of the device. To copy text to the clipboard, I need to first open an app that has text input fields (like Chrome or Messages) and then select the text and copy it.\n\nLooking at the available apps, I can see Chrome is available. I should launch Chrome first to access text input fields where I can copy the text.\n\nLet me launch Chrome first.\ndo(action=\"Launch\", app=\"Chrome\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407843,
+  "id": "2026100805172178dbd5ee79204c60",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100805172178dbd5ee79204c60",
+  "usage": {
+    "completion_tokens": 114,
+    "prompt_tokens": 1608,
+    "prompt_tokens_details": {
+      "cached_tokens": 535
+    },
+    "total_tokens": 1722
+  },
+  "wall_seconds": 1.9220000000059372
+}

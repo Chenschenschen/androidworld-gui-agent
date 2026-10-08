@@ -1,0 +1,30 @@
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261007T183212_244538Z",
+  "agent_done": true,
+  "verifier": "FAIL",
+  "steps": 3,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "five_easy_tasks_v9_wifi_xml",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_five_tasks_v8",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 3,
+  "stop_reason": "complete",
+  "model_calls_attempted": 3,
+  "verifier_score": 0.0,
+  "failure_class": "false_done",
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 64.76499999999942
+}

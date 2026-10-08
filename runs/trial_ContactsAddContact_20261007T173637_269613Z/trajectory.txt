@@ -1,0 +1,1208 @@
+
+--- 2026-10-07T17:36:37.271122+00:00 | RUN | RUN START ---
+{
+  "task": "ContactsAddContact",
+  "config": {
+    "version": "learning_single_name_v7_gpu22",
+    "prompt_version": "gelab_json_single_name_v7",
+    "action_format": "json_schema",
+    "observation": "tree_first",
+    "prompt_examples": false,
+    "max_screenshot_fallbacks": 2,
+    "model": "gelab-zero-4b-preview:latest",
+    "options": {
+      "temperature": 1,
+      "top_k": 20,
+      "top_p": 0.95,
+      "num_ctx": 4096,
+      "num_gpu": 22,
+      "num_predict": 256,
+      "seed": 42
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "note": "Compared with v6, change only the conditional contact guide: full exact name once in First name, Last name blank, avoiding the observed duplicated surname. Same task seed, model sampling, GPU22, action contract and budgets. One comparison is small-sample evidence, not general reliability.",
+    "contact_guidance": true,
+    "targeted_type": true,
+    "direct_type_only": true,
+    "label_grounding": true,
+    "task_seed": 42
+  }
+}
+
+--- 2026-10-07T17:36:58.159229+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Create a new contact for Camila da Silva. Their number is +10433218196.",
+  "parameters": {
+    "name": "Camila da Silva",
+    "number": "+10433218196"
+  },
+  "task_seed": 42,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-07T17:37:01.682111+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-07T17:37:03.744708+00:00 | STEP 001 | OBSERVATION ---
+{
+  "screenshot": "step_001/before.png",
+  "tree": "step_001/tree.json"
+}
+{"index":0,"is_scrollable":true}
+{"index":1,"content_description":"Home"}
+{"index":2,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":3,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":4,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":5,"text":"Gmail","content_description":"Predicted app: Gmail","is_clickable":true}
+{"index":6,"content_description":"Search","is_clickable":true}
+{"index":7,"text":"Sun, Oct 15","content_description":"Sun, Oct 15","is_clickable":true}
+{"index":8,"text":"Camera","content_description":"Camera","is_clickable":true}
+{"index":9,"text":"Files","content_description":"Files","is_clickable":true}
+{"index":10,"text":"Contacts","content_description":"Contacts","is_clickable":true}
+{"index":11,"text":"Calendar","content_description":"Calendar","is_clickable":true}
+{"index":12,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":13,"text":"Maps","content_description":"Maps","is_clickable":true}
+{"index":14,"text":"Clock","content_description":"Clock","is_clickable":true}
+{"index":15,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":16,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":17,"text":"Gmail","content_description":"Gmail","is_clickable":true}
+{"index":18,"text":"Photos","content_description":"Photos","is_clickable":true}
+{"index":19,"text":"Settings","content_description":"Settings","is_clickable":true}
+{"index":20,"content_description":"Google app","is_clickable":true}
+{"index":21,"content_description":"Voice search","is_clickable":true}
+{"index":22,"content_description":"Google Lens","is_clickable":true}
+{"index":23,"text":"15:34","content_description":"17:34"}
+{"index":24,"content_description":"Android System notification: Serial console enabled"}
+{"index":25,"content_description":"Wifi signal full.,No internet"}
+{"index":26,"content_description":"Phone signal full."}
+{"index":27,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:37:03.746883+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_001/tree/request_0.json",
+  "call": 1
+}
+
+--- 2026-10-07T17:37:09.537234+00:00 | STEP 001 | MODEL REPLY ---
+{"action": "CLICK", "value": "Contacts", "verify": "The Contacts app should open.","target": "Contacts"}
+
+--- 2026-10-07T17:37:09.537759+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.797000000002299,
+  "load_seconds": 0.0228413,
+  "prompt_seconds": 1.332853,
+  "generation_seconds": 2.197006,
+  "output_tokens": 29
+}
+
+--- 2026-10-07T17:37:09.538271+00:00 | STEP 001 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The Contacts app should open.",
+    "target": "Contacts",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 666,
+    "y": 987
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:37:09.538796+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 666,
+    "y": 987
+  }
+}
+
+--- 2026-10-07T17:37:11.000149+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The Contacts app should open.",
+    "target": "Contacts",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Contacts",
+    "hint_text": null,
+    "content_description": "Contacts"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 666,
+    "y": 987
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_001/after.png",
+  "execute_and_observe_seconds": 1.4689999999973224
+}
+
+--- 2026-10-07T17:37:13.178329+00:00 | STEP 002 | OBSERVATION ---
+{
+  "screenshot": "step_002/before.png",
+  "tree": "step_002/tree.json"
+}
+{"index":0,"is_clickable":true}
+{"index":1,"content_description":"Create contact","is_clickable":true}
+{"index":2,"content_description":"Contacts"}
+{"index":3,"content_description":"Highlights","is_clickable":true}
+{"index":4,"content_description":"Fix & manage","is_clickable":true}
+{"index":5,"is_scrollable":true}
+{"index":6,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":7,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":8,"text":"No contacts yet"}
+{"index":9,"text":"Phone contacts","is_clickable":true,"is_checked":false}
+{"index":10,"text":"Email contacts","is_clickable":true,"is_checked":false}
+{"index":11,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":12,"content_description":"Now you can find Settings and Help & feedback here\nOpen account and settings.","is_clickable":true}
+{"index":13,"text":"Now you can find Settings and Help & feedback here"}
+{"index":14,"text":"15:34","content_description":"17:34"}
+{"index":15,"content_description":"Android System notification: Serial console enabled"}
+{"index":16,"content_description":"Wifi signal full.,No internet"}
+{"index":17,"content_description":"Phone signal full."}
+{"index":18,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:37:13.180330+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_002/tree/request_0.json",
+  "call": 2
+}
+
+--- 2026-10-07T17:37:19.925600+00:00 | STEP 002 | MODEL REPLY ---
+{"action": "CLICK", "value": "Phone contacts", "verify": "The 'Create contact' screen should be displayed with fields for first name, last name, and phone number.","target": "Phone contacts"}
+
+--- 2026-10-07T17:37:19.925600+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.75,
+  "load_seconds": 0.0170694,
+  "prompt_seconds": 0.896931,
+  "generation_seconds": 3.669272,
+  "output_tokens": 47
+}
+
+--- 2026-10-07T17:37:19.926154+00:00 | STEP 002 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Phone contacts",
+    "verify": "The 'Create contact' screen should be displayed with fields for first name, last name, and phone number.",
+    "target": "Phone contacts",
+    "index": "9",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 262,
+    "y": 371
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:37:19.926690+00:00 | STEP 002 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 262,
+    "y": 371
+  }
+}
+
+--- 2026-10-07T17:37:21.288119+00:00 | STEP 002 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Phone contacts",
+    "verify": "The 'Create contact' screen should be displayed with fields for first name, last name, and phone number.",
+    "target": "Phone contacts",
+    "index": "9",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Phone contacts",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 262,
+    "y": 371
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_002/after.png",
+  "execute_and_observe_seconds": 1.3590000000003783
+}
+
+--- 2026-10-07T17:37:21.946356+00:00 | STEP 003 | OBSERVATION ---
+{
+  "screenshot": "step_003/before.png",
+  "tree": "step_003/tree.json"
+}
+{"index":0,"is_clickable":true}
+{"index":1,"content_description":"Create contact","is_clickable":true}
+{"index":2,"content_description":"Contacts"}
+{"index":3,"content_description":"Highlights","is_clickable":true}
+{"index":4,"content_description":"Fix & manage","is_clickable":true}
+{"index":5,"is_scrollable":true}
+{"index":6,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":7,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":8,"text":"No contacts yet"}
+{"index":9,"text":"Phone contacts","is_clickable":true,"is_checked":false}
+{"index":10,"text":"Email contacts","is_clickable":true,"is_checked":false}
+{"index":11,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":12,"content_description":"Now you can find Settings and Help & feedback here\nOpen account and settings.","is_clickable":true}
+{"index":13,"text":"Now you can find Settings and Help & feedback here"}
+{"index":14,"text":"15:34","content_description":"17:34"}
+{"index":15,"content_description":"Android System notification: Serial console enabled"}
+{"index":16,"content_description":"Wifi signal full.,No internet"}
+{"index":17,"content_description":"Phone signal full."}
+{"index":18,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:37:21.948371+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_003/tree/request_0.json",
+  "call": 3
+}
+
+--- 2026-10-07T17:37:27.512145+00:00 | STEP 003 | MODEL REPLY ---
+{"action": "CLICK", "value": "Company", "verify": "The 'Company' field should be selected in the new contact creation form.", "target": "Company"}
+
+--- 2026-10-07T17:37:27.512663+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.562999999998283,
+  "load_seconds": 0.0169959,
+  "prompt_seconds": 0.546466,
+  "generation_seconds": 2.940609,
+  "output_tokens": 38
+}
+
+--- 2026-10-07T17:37:27.513186+00:00 | STEP 003 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Company",
+    "verify": "The 'Company' field should be selected in the new contact creation form.",
+    "target": "Company",
+    "index": "11",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 1013,
+    "y": 371
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:37:27.513704+00:00 | STEP 003 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 1013,
+    "y": 371
+  }
+}
+
+--- 2026-10-07T17:37:29.869735+00:00 | STEP 003 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Company",
+    "verify": "The 'Company' field should be selected in the new contact creation form.",
+    "target": "Company",
+    "index": "11",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Company",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 1013,
+    "y": 371
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_003/after.png",
+  "execute_and_observe_seconds": 2.3590000000003783
+}
+
+--- 2026-10-07T17:37:30.542107+00:00 | STEP 004 | OBSERVATION ---
+{
+  "screenshot": "step_004/before.png",
+  "tree": "step_004/tree.json"
+}
+{"index":0,"content_description":"Close","is_clickable":true}
+{"index":1}
+{"index":2,"text":"Privacy Policy","is_clickable":true}
+{"index":3,"text":"Terms of Service","is_clickable":true}
+{"index":4,"text":"Device","content_description":"Signed in as Device"}
+{"index":5,"text":"Add another account"}
+{"index":6,"text":"Manage accounts on this device"}
+{"index":7,"text":"Contacts app settings"}
+{"index":8,"content_description":"Now you can find Settings and Help & feedback here"}
+{"index":9,"text":"Help & feedback"}
+{"index":10,"content_description":"Now you can find Settings and Help & feedback here"}
+{"index":11,"text":"15:34","content_description":"17:34"}
+{"index":12,"content_description":"Android System notification: Serial console enabled"}
+{"index":13,"content_description":"Wifi signal full.,No internet"}
+{"index":14,"content_description":"Phone signal full."}
+{"index":15,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:37:30.543365+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_004/tree/request_0.json",
+  "call": 4
+}
+
+--- 2026-10-07T17:37:36.573296+00:00 | STEP 004 | MODEL REPLY ---
+{"action": "CLICK", "value": "Manage accounts on this device", "verify": "The 'Manage accounts' screen should open.", "target": "Privacy Policy"}
+
+--- 2026-10-07T17:37:36.573296+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.03099999999904,
+  "load_seconds": 0.019231,
+  "prompt_seconds": 0.982559,
+  "generation_seconds": 2.857013,
+  "output_tokens": 37
+}
+
+--- 2026-10-07T17:37:36.573828+00:00 | STEP 004 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Manage accounts on this device",
+    "verify": "The 'Manage accounts' screen should open.",
+    "target": "Privacy Policy",
+    "index": "2",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 351,
+    "y": 1239
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:37:36.574909+00:00 | STEP 004 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 351,
+    "y": 1239
+  }
+}
+
+--- 2026-10-07T17:37:39.428383+00:00 | STEP 004 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Manage accounts on this device",
+    "verify": "The 'Manage accounts' screen should open.",
+    "target": "Privacy Policy",
+    "index": "2",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Privacy Policy",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 351,
+    "y": 1239
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_004/after.png",
+  "execute_and_observe_seconds": 2.860000000000582
+}
+
+--- 2026-10-07T17:37:40.085453+00:00 | STEP 005 | OBSERVATION ---
+{
+  "screenshot": "step_005/before.png",
+  "tree": "step_005/tree.json"
+}
+{"index":0,"text":"Accept & continue","is_clickable":true}
+{"index":1,"text":"Welcome to Chrome"}
+{"index":2,"text":"By using Chrome, you agree to the Google Terms of Service, and the Google Chrome and ChromeOS Additional Terms of Service."}
+{"index":3,"text":"Help make Chrome better by sending usage statistics and crash reports to Google.","is_clickable":true,"is_checked":true}
+{"index":4,"text":"15:34","content_description":"17:34"}
+{"index":5,"content_description":"Android System notification: Serial console enabled"}
+{"index":6,"content_description":"Wifi signal full.,No internet"}
+{"index":7,"content_description":"Phone signal full."}
+{"index":8,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:37:40.086958+00:00 | STEP 005 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_005/tree/request_0.json",
+  "call": 5
+}
+
+--- 2026-10-07T17:37:47.152589+00:00 | STEP 005 | MODEL REPLY ---
+{"action": "CLICK", "value": "Android System notification: Serial console enabled", "verify": "Android System notification: Serial console enabled should open.", "target": "Help make Chrome better by sending usage statistics and crash reports to Google."}
+
+--- 2026-10-07T17:37:47.153098+00:00 | STEP 005 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.061999999998079,
+  "load_seconds": 0.0155109,
+  "prompt_seconds": 0.878439,
+  "generation_seconds": 4.019028,
+  "output_tokens": 52
+}
+
+--- 2026-10-07T17:37:47.153679+00:00 | STEP 005 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Android System notification: Serial console enabled",
+    "verify": "Android System notification: Serial console enabled should open.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:37:47.154257+00:00 | STEP 005 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  }
+}
+
+--- 2026-10-07T17:37:49.729459+00:00 | STEP 005 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Android System notification: Serial console enabled",
+    "verify": "Android System notification: Serial console enabled should open.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_005/after.png",
+  "execute_and_observe_seconds": 2.5790000000015425
+}
+
+--- 2026-10-07T17:37:50.376513+00:00 | STEP 006 | OBSERVATION ---
+{
+  "screenshot": "step_006/before.png",
+  "tree": "step_006/tree.json"
+}
+{"index":0,"text":"Accept & continue","is_clickable":true}
+{"index":1,"text":"Welcome to Chrome"}
+{"index":2,"text":"By using Chrome, you agree to the Google Terms of Service, and the Google Chrome and ChromeOS Additional Terms of Service."}
+{"index":3,"text":"Help make Chrome better by sending usage statistics and crash reports to Google.","is_clickable":true,"is_checked":false}
+{"index":4,"text":"15:34","content_description":"17:34"}
+{"index":5,"content_description":"Android System notification: Serial console enabled"}
+{"index":6,"content_description":"Wifi signal full.,No internet"}
+{"index":7,"content_description":"Phone signal full."}
+{"index":8,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:37:50.377797+00:00 | STEP 006 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_006/tree/request_0.json",
+  "call": 6
+}
+
+--- 2026-10-07T17:37:57.687027+00:00 | STEP 006 | MODEL REPLY ---
+{"action": "CLICK", "value": "15:34", "verify": "The time '15:34' should change or be dismissed.","target": "Help make Chrome better by sending usage statistics and crash reports to Google."}
+
+--- 2026-10-07T17:37:57.687027+00:00 | STEP 006 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.297000000002299,
+  "load_seconds": 0.0202594,
+  "prompt_seconds": 0.916052,
+  "generation_seconds": 4.283234,
+  "output_tokens": 55
+}
+
+--- 2026-10-07T17:37:57.688100+00:00 | STEP 006 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "15:34",
+    "verify": "The time '15:34' should change or be dismissed.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:37:57.688629+00:00 | STEP 006 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  }
+}
+
+--- 2026-10-07T17:38:01.028718+00:00 | STEP 006 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "15:34",
+    "verify": "The time '15:34' should change or be dismissed.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_006/after.png",
+  "execute_and_observe_seconds": 3.327999999997701
+}
+
+--- 2026-10-07T17:38:01.686648+00:00 | STEP 007 | OBSERVATION ---
+{
+  "screenshot": "step_007/before.png",
+  "tree": "step_007/tree.json"
+}
+{"index":0,"text":"Accept & continue","is_clickable":true}
+{"index":1,"text":"Welcome to Chrome"}
+{"index":2,"text":"By using Chrome, you agree to the Google Terms of Service, and the Google Chrome and ChromeOS Additional Terms of Service."}
+{"index":3,"text":"Help make Chrome better by sending usage statistics and crash reports to Google.","is_clickable":true,"is_checked":true}
+{"index":4,"text":"15:35","content_description":"17:35"}
+{"index":5,"content_description":"Android System notification: Serial console enabled"}
+{"index":6,"content_description":"Wifi signal full.,No internet"}
+{"index":7,"content_description":"Phone signal full."}
+{"index":8,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:38:01.688661+00:00 | STEP 007 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_007/tree/request_0.json",
+  "call": 7
+}
+
+--- 2026-10-07T17:38:08.405431+00:00 | STEP 007 | MODEL REPLY ---
+{"action": "CLICK", "value": "Android System notification: Serial console enabled", "verify": "Android System notification: Serial console enabled should open.", "target": "Help make Chrome better by sending usage statistics and crash reports to Google."}
+
+--- 2026-10-07T17:38:08.405431+00:00 | STEP 007 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.702999999997701,
+  "load_seconds": 0.0169698,
+  "prompt_seconds": 0.608546,
+  "generation_seconds": 4.018386,
+  "output_tokens": 52
+}
+
+--- 2026-10-07T17:38:08.405948+00:00 | STEP 007 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Android System notification: Serial console enabled",
+    "verify": "Android System notification: Serial console enabled should open.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:38:08.406525+00:00 | STEP 007 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  }
+}
+
+--- 2026-10-07T17:38:10.784346+00:00 | STEP 007 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Android System notification: Serial console enabled",
+    "verify": "Android System notification: Serial console enabled should open.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_007/after.png",
+  "execute_and_observe_seconds": 2.375
+}
+
+--- 2026-10-07T17:38:11.443100+00:00 | STEP 008 | OBSERVATION ---
+{
+  "screenshot": "step_008/before.png",
+  "tree": "step_008/tree.json"
+}
+{"index":0,"text":"Accept & continue","is_clickable":true}
+{"index":1,"text":"Welcome to Chrome"}
+{"index":2,"text":"By using Chrome, you agree to the Google Terms of Service, and the Google Chrome and ChromeOS Additional Terms of Service."}
+{"index":3,"text":"Help make Chrome better by sending usage statistics and crash reports to Google.","is_clickable":true,"is_checked":false}
+{"index":4,"text":"15:35","content_description":"17:35"}
+{"index":5,"content_description":"Android System notification: Serial console enabled"}
+{"index":6,"content_description":"Wifi signal full.,No internet"}
+{"index":7,"content_description":"Phone signal full."}
+{"index":8,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:38:11.445113+00:00 | STEP 008 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_008/tree/request_0.json",
+  "call": 8
+}
+
+--- 2026-10-07T17:38:18.707245+00:00 | STEP 008 | MODEL REPLY ---
+{"action": "CLICK", "value": "Help make Chrome better by sending usage statistics and crash reports to Google.", "verify": "The 'Accept & continue' button should become visible.", "target": "Help make Chrome better by sending usage statistics and crash reports to Google."}
+
+--- 2026-10-07T17:38:18.707751+00:00 | STEP 008 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.265999999999622,
+  "load_seconds": 0.0202189,
+  "prompt_seconds": 0.604532,
+  "generation_seconds": 4.57366,
+  "output_tokens": 59
+}
+
+--- 2026-10-07T17:38:18.708317+00:00 | STEP 008 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "verify": "The 'Accept & continue' button should become visible.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:38:18.708824+00:00 | STEP 008 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  }
+}
+
+--- 2026-10-07T17:38:21.084041+00:00 | STEP 008 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "verify": "The 'Accept & continue' button should become visible.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_008/after.png",
+  "execute_and_observe_seconds": 2.375
+}
+
+--- 2026-10-07T17:38:21.754226+00:00 | STEP 009 | OBSERVATION ---
+{
+  "screenshot": "step_009/before.png",
+  "tree": "step_009/tree.json"
+}
+{"index":0,"text":"Accept & continue","is_clickable":true}
+{"index":1,"text":"Welcome to Chrome"}
+{"index":2,"text":"By using Chrome, you agree to the Google Terms of Service, and the Google Chrome and ChromeOS Additional Terms of Service."}
+{"index":3,"text":"Help make Chrome better by sending usage statistics and crash reports to Google.","is_clickable":true,"is_checked":true}
+{"index":4,"text":"15:35","content_description":"17:35"}
+{"index":5,"content_description":"Android System notification: Serial console enabled"}
+{"index":6,"content_description":"Wifi signal full.,No internet"}
+{"index":7,"content_description":"Phone signal full."}
+{"index":8,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:38:21.755231+00:00 | STEP 009 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_009/tree/request_0.json",
+  "call": 9
+}
+
+--- 2026-10-07T17:38:28.828599+00:00 | STEP 009 | MODEL REPLY ---
+{"action": "CLICK", "value": "Android System notification: Serial console enabled", "verify": "Android System notification: Serial console enabled should open or be dismissed.","target": "Help make Chrome better by sending usage statistics and crash reports to Google."}
+
+--- 2026-10-07T17:38:28.828599+00:00 | STEP 009 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.078000000001339,
+  "load_seconds": 0.0180845,
+  "prompt_seconds": 0.689976,
+  "generation_seconds": 4.300714,
+  "output_tokens": 55
+}
+
+--- 2026-10-07T17:38:28.829661+00:00 | STEP 009 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Android System notification: Serial console enabled",
+    "verify": "Android System notification: Serial console enabled should open or be dismissed.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:38:28.830186+00:00 | STEP 009 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  }
+}
+
+--- 2026-10-07T17:38:30.690663+00:00 | STEP 009 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Android System notification: Serial console enabled",
+    "verify": "Android System notification: Serial console enabled should open or be dismissed.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_009/after.png",
+  "execute_and_observe_seconds": 1.8590000000003783
+}
+
+--- 2026-10-07T17:38:31.357500+00:00 | STEP 010 | OBSERVATION ---
+{
+  "screenshot": "step_010/before.png",
+  "tree": "step_010/tree.json"
+}
+{"index":0,"text":"Accept & continue","is_clickable":true}
+{"index":1,"text":"Welcome to Chrome"}
+{"index":2,"text":"By using Chrome, you agree to the Google Terms of Service, and the Google Chrome and ChromeOS Additional Terms of Service."}
+{"index":3,"text":"Help make Chrome better by sending usage statistics and crash reports to Google.","is_clickable":true,"is_checked":false}
+{"index":4,"text":"15:35","content_description":"17:35"}
+{"index":5,"content_description":"Android System notification: Serial console enabled"}
+{"index":6,"content_description":"Wifi signal full.,No internet"}
+{"index":7,"content_description":"Phone signal full."}
+{"index":8,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:38:31.358500+00:00 | STEP 010 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_010/tree/request_0.json",
+  "call": 10
+}
+
+--- 2026-10-07T17:38:38.383886+00:00 | STEP 010 | MODEL REPLY ---
+{"action": "CLICK", "value": "Android System notification: Serial console enabled", "verify": "Android System notification: Serial console enabled should open or be dismissed.","target": "Help make Chrome better by sending usage statistics and crash reports to Google."}
+
+--- 2026-10-07T17:38:38.384399+00:00 | STEP 010 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.03099999999904,
+  "load_seconds": 0.0175707,
+  "prompt_seconds": 0.646382,
+  "generation_seconds": 4.304306,
+  "output_tokens": 55
+}
+
+--- 2026-10-07T17:38:38.384924+00:00 | STEP 010 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Android System notification: Serial console enabled",
+    "verify": "Android System notification: Serial console enabled should open or be dismissed.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:38:38.385486+00:00 | STEP 010 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  }
+}
+
+--- 2026-10-07T17:38:40.721899+00:00 | STEP 010 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Android System notification: Serial console enabled",
+    "verify": "Android System notification: Serial console enabled should open or be dismissed.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_010/after.png",
+  "execute_and_observe_seconds": 2.3440000000009604
+}
+
+--- 2026-10-07T17:38:41.387941+00:00 | STEP 011 | OBSERVATION ---
+{
+  "screenshot": "step_011/before.png",
+  "tree": "step_011/tree.json"
+}
+{"index":0,"text":"Accept & continue","is_clickable":true}
+{"index":1,"text":"Welcome to Chrome"}
+{"index":2,"text":"By using Chrome, you agree to the Google Terms of Service, and the Google Chrome and ChromeOS Additional Terms of Service."}
+{"index":3,"text":"Help make Chrome better by sending usage statistics and crash reports to Google.","is_clickable":true,"is_checked":true}
+{"index":4,"text":"15:35","content_description":"17:35"}
+{"index":5,"content_description":"Android System notification: Serial console enabled"}
+{"index":6,"content_description":"Wifi signal full.,No internet"}
+{"index":7,"content_description":"Phone three bars."}
+{"index":8,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:38:41.390092+00:00 | STEP 011 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_011/tree/request_0.json",
+  "call": 11
+}
+
+--- 2026-10-07T17:38:48.412049+00:00 | STEP 011 | MODEL REPLY ---
+{"action": "CLICK", "value": "15:35", "verify": "The time '15:35' should change or be dismissed.","target": "Help make Chrome better by sending usage statistics and crash reports to Google."}
+
+--- 2026-10-07T17:38:48.412049+00:00 | STEP 011 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.01600000000326,
+  "load_seconds": 0.015809,
+  "prompt_seconds": 0.625089,
+  "generation_seconds": 4.30716,
+  "output_tokens": 55
+}
+
+--- 2026-10-07T17:38:48.412632+00:00 | STEP 011 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "15:35",
+    "verify": "The time '15:35' should change or be dismissed.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:38:48.413193+00:00 | STEP 011 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  }
+}
+
+--- 2026-10-07T17:38:50.762457+00:00 | STEP 011 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "15:35",
+    "verify": "The time '15:35' should change or be dismissed.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_011/after.png",
+  "execute_and_observe_seconds": 2.3439999999973224
+}
+
+--- 2026-10-07T17:38:51.419425+00:00 | STEP 012 | OBSERVATION ---
+{
+  "screenshot": "step_012/before.png",
+  "tree": "step_012/tree.json"
+}
+{"index":0,"text":"Accept & continue","is_clickable":true}
+{"index":1,"text":"Welcome to Chrome"}
+{"index":2,"text":"By using Chrome, you agree to the Google Terms of Service, and the Google Chrome and ChromeOS Additional Terms of Service."}
+{"index":3,"text":"Help make Chrome better by sending usage statistics and crash reports to Google.","is_clickable":true,"is_checked":false}
+{"index":4,"text":"15:35","content_description":"17:35"}
+{"index":5,"content_description":"Android System notification: Serial console enabled"}
+{"index":6,"content_description":"Wifi signal full.,No internet"}
+{"index":7,"content_description":"Phone three bars."}
+{"index":8,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:38:51.421462+00:00 | STEP 012 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_012/tree/request_0.json",
+  "call": 12
+}
+
+--- 2026-10-07T17:38:58.762681+00:00 | STEP 012 | MODEL REPLY ---
+{"action": "CLICK", "value": "Help make Chrome better by sending usage statistics and crash reports to Google.", "verify": "The 'Accept & continue' button should become visible.","target": "Help make Chrome better by sending usage statistics and crash reports to Google."}
+
+--- 2026-10-07T17:38:58.762681+00:00 | STEP 012 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.327999999997701,
+  "load_seconds": 0.0188552,
+  "prompt_seconds": 0.682456,
+  "generation_seconds": 4.588711,
+  "output_tokens": 59
+}
+
+--- 2026-10-07T17:38:58.763684+00:00 | STEP 012 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "verify": "The 'Accept & continue' button should become visible.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:38:58.764186+00:00 | STEP 012 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  }
+}
+
+--- 2026-10-07T17:39:01.110998+00:00 | STEP 012 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "verify": "The 'Accept & continue' button should become visible.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_012/after.png",
+  "execute_and_observe_seconds": 2.3590000000003783
+}
+
+--- 2026-10-07T17:39:02.540108+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261007T173637_269613Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "learning_single_name_v7_gpu22",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_single_name_v7",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "step_budget",
+  "model_calls_attempted": 12,
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 119.75
+}

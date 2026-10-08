@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "To access the destination folder \"project_medium\", I need to open the \"Show roots\" menu. The \"Show roots\" button is at [0,53,135,105] and tapping it will allow me to navigate to the \"sdk_gphone64_x86_64\" storage area and then to \"project_medium\". I will tap \"Show roots\" to proceed.\n\n\ndo(action=\"Tap\", element=[68,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791475129,
+  "id": "202610082358476481b8c2cf8b4319",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082358476481b8c2cf8b4319",
+  "usage": {
+    "completion_tokens": 92,
+    "prompt_tokens": 12464,
+    "prompt_tokens_details": {
+      "cached_tokens": 10274
+    },
+    "total_tokens": 12556
+  },
+  "wall_seconds": 2.2039999999979045
+}

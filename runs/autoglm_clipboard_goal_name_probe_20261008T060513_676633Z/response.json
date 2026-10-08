@@ -1,0 +1,25 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "好的，现在键盘上方出现了一个剪贴板提示，显示\"Discount code...\"，这表明文本已经被复制到剪贴板了。根据任务要求，我需要确认文本已经成功复制到剪贴板。现在任务已经完成，我应该使用[finish]标签来结束任务。\nfinish(message=\"任务已完成！我已成功将\"Discount code: SAVE20\"复制到剪贴板。从屏幕上可以看到，键盘上方出现了剪贴板提示\"Discount code...\"，这表明文本已经成功复制。现在您可以在其他应用中粘贴这个优惠码了。\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791439515,
+  "id": "20261008140513d096d637fe0d4be7",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008140513d096d637fe0d4be7",
+  "usage": {
+    "completion_tokens": 124,
+    "prompt_tokens": 4123,
+    "prompt_tokens_details": {
+      "cached_tokens": 587
+    },
+    "total_tokens": 4247
+  }
+}

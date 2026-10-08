@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"sdk_gphone64_x86_64\" storage area is visible in the move dialog. To access the \"project_medium\" folder, I should first tap on \"sdk_gphone64_x86_64\" to open its contents. The \"sdk_gphone64_x86_64\" option is at [0, 203, 679, 264].\n\ndo(action=\"Tap\", element=[339,233])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791480180,
+  "id": "20261009012258f0fcee77387f48de",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261009012258f0fcee77387f48de",
+  "usage": {
+    "completion_tokens": 92,
+    "prompt_tokens": 8291,
+    "prompt_tokens_details": {
+      "cached_tokens": 6156
+    },
+    "total_tokens": 8383
+  },
+  "wall_seconds": 1.9059999999881256
+}

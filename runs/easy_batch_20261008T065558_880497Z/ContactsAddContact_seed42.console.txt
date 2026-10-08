@@ -1,0 +1,60 @@
+D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Evidence: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_ContactsAddContact_20261008T065559_412373Z
+Readable trajectory: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_ContactsAddContact_20261008T065559_412373Z\trajectory.txt
+Step 1, screenshot, AutoGLM call 1
+Chosen: {'action_type': 'click', 'x': 663, 'y': 972}
+Step 2, screenshot, AutoGLM call 2
+Chosen: {'action_type': 'click', 'x': 901, 'y': 199}
+Step 3, screenshot, AutoGLM call 3
+Chosen: {'action_type': 'click', 'x': 73, 'y': 208}
+Step 4, screenshot, AutoGLM call 4
+Chosen: {'action_type': 'click', 'x': 946, 'y': 2004}
+Step 5, screenshot, AutoGLM call 5
+Chosen: {'action_type': 'click', 'x': 533, 'y': 924}
+Step 6, screenshot, AutoGLM call 6
+Chosen: {'action_type': 'input_text', 'text': 'Camila', 'clear_text': True}
+Step 7, screenshot, AutoGLM call 7
+Chosen: {'action_type': 'click', 'x': 533, 'y': 1130}
+Step 8, screenshot, AutoGLM call 8
+Chosen: {'action_type': 'input_text', 'text': 'da Silva', 'clear_text': True}
+Step 9, screenshot, AutoGLM call 9
+Chosen: {'action_type': 'slide', 'start': (538, 1368), 'end': (538, 840)}
+Step 10, screenshot, AutoGLM call 10
+Chosen: {'action_type': 'click', 'x': 533, 'y': 1077}
+Step 11, screenshot, AutoGLM call 11
+Chosen: {'action_type': 'input_text', 'text': '+10433218196', 'clear_text': True}
+Step 12, screenshot, AutoGLM call 12
+Chosen: {'action_type': 'click', 'x': 818, 'y': 208}
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261008T065559_412373Z",
+  "agent_done": false,
+  "verifier": "PASS",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v20_unique_native_decision",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v15_point_or_box",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "step_budget",
+  "model_calls_attempted": 12,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 72.46899999999732,
+  "agent_phase_seconds": 66.6880000000092
+}

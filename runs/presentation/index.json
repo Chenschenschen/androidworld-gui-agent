@@ -1,0 +1,115 @@
+[
+  {
+    "label": "SMS_01_seed42_PASS_v45",
+    "original_run_id": "trial_SimpleSmsSend_20261008T130636_231233Z",
+    "files_verified_identical": 165,
+    "named_video": "runs\\presentation\\SMS_01_seed42_PASS_v45.mp4",
+    "video_sha256": "27aa6d1020e324e95085219ff7d685a064757065ab3b176b824854d2808a7910"
+  },
+  {
+    "label": "SMS_02_seed43_PASS_v49",
+    "original_run_id": "trial_SimpleSmsSend_20261008T132854_166582Z",
+    "files_verified_identical": 150,
+    "named_video": "runs\\presentation\\SMS_02_seed43_PASS_v49.mp4",
+    "video_sha256": "e28adf46008fd94f3355e7abe4d9038b570aa2e9048bf01eeae3a50932f1cf11"
+  },
+  {
+    "label": "SMS_03_seed44_PASS_v49",
+    "original_run_id": "trial_SimpleSmsSend_20261008T133321_726192Z",
+    "files_verified_identical": 150,
+    "named_video": "runs\\presentation\\SMS_03_seed44_PASS_v49.mp4",
+    "video_sha256": "e1a88b8e79779dd3b3e5a5c4619b21ed9d8c2c131b0b2629e9efac9d1b2f6e9c"
+  },
+  {
+    "label": "FILES_01_easy_to_medium_PASS_v52",
+    "original_run_id": "trial_FilesMoveFile_20261008T141450_696380Z",
+    "files_verified_identical": 228,
+    "videos": [
+      {
+        "named_video": "runs\\presentation\\FILES_01_easy_to_medium_PASS_v52_video_001.mp4",
+        "sha256": "4bf7053f8cb487524117580110dcda1ef0660c52c5c19774dfa21f3b42f8d5cf",
+        "decoded_frames": 320
+      },
+      {
+        "named_video": "runs\\presentation\\FILES_01_easy_to_medium_PASS_v52_video_002.mp4",
+        "sha256": "31bd30cb299658901aa2fd884d848b1113960bb17ff44e5593a50de98595441a",
+        "decoded_frames": 15
+      }
+    ],
+    "complete_video": {
+      "file": "runs\\presentation\\FILES_01_easy_to_medium_PASS_v52_complete.mp4",
+      "decoded_frames": 335,
+      "sha256": "d37a96c13a6ead4879d782f22d6452185916dc9b49bd3c93af3cc4d2d2438d1d",
+      "note": "Original parts concatenated without re-encoding; recorder rollover pauses remain omitted."
+    }
+  },
+  {
+    "label": "FILES_V53_01_easy_to_medium_PASS",
+    "original_run_id": "trial_FilesMoveFile_20261008T153825_684536Z",
+    "files_verified_identical": 348,
+    "videos": [
+      {
+        "named_video": "runs\\presentation\\FILES_V53_01_easy_to_medium_PASS_video_001.mp4",
+        "sha256": "6dcca56aceb267d008b6895517103cd4a1300f787cfc2d0b8f5b8aefb5f9e418",
+        "decoded_frames": 332
+      },
+      {
+        "named_video": "runs\\presentation\\FILES_V53_01_easy_to_medium_PASS_video_002.mp4",
+        "sha256": "380026efd0ad22278c0869579e1f3eacc3ca40b73a6706febae4271126fc8efc",
+        "decoded_frames": 238
+      }
+    ],
+    "complete_video": {
+      "file": "runs\\presentation\\FILES_V53_01_easy_to_medium_PASS_complete.mp4",
+      "decoded_frames": 570,
+      "sha256": "83f8ac8e5f3dd6f14074ede0bb8d3186387f51f6cab372edb7c608f00ce3f2ba",
+      "note": "Original parts concatenated without re-encoding; recorder rollover pauses remain omitted."
+    }
+  },
+  {
+    "label": "FILES_V53_02_medium_to_easy_PASS",
+    "original_run_id": "trial_FilesMoveFile_20261008T154346_710337Z",
+    "files_verified_identical": 221,
+    "videos": [
+      {
+        "named_video": "runs\\presentation\\FILES_V53_02_medium_to_easy_PASS_video_001.mp4",
+        "sha256": "4b030f65359abdeade4fc63e4ca1e8f088765b08c2953509222f02fd3b37eb6c",
+        "decoded_frames": 298
+      },
+      {
+        "named_video": "runs\\presentation\\FILES_V53_02_medium_to_easy_PASS_video_002.mp4",
+        "sha256": "74111994d31314b4de6b13351b9797f376e5ab764f9056fb13503b7e919c0db1",
+        "decoded_frames": 5
+      }
+    ],
+    "complete_video": {
+      "file": "runs\\presentation\\FILES_V53_02_medium_to_easy_PASS_complete.mp4",
+      "decoded_frames": 303,
+      "sha256": "da694058e3aef40099100e1eb5f949f2be5a02c9c69d71cadce48b38c2c547dd",
+      "note": "Original parts concatenated without re-encoding; recorder rollover pauses remain omitted."
+    }
+  },
+  {
+    "label": "FILES_V54_03_easy_to_medium_PASS",
+    "original_run_id": "trial_FilesMoveFile_20261008T155433_701814Z",
+    "files_verified_identical": 348,
+    "videos": [
+      {
+        "named_video": "runs\\presentation\\FILES_V54_03_easy_to_medium_PASS_video_001.mp4",
+        "sha256": "e5ec13d606cd74feca439f3a8049f2b0e5313eefa13bd5fbf7aa5629dbda8c15",
+        "decoded_frames": 348
+      },
+      {
+        "named_video": "runs\\presentation\\FILES_V54_03_easy_to_medium_PASS_video_002.mp4",
+        "sha256": "c94e5ac532df8f059542574dbe62837500cd84c6080f07f52eafac29174f9805",
+        "decoded_frames": 226
+      }
+    ],
+    "complete_video": {
+      "file": "runs\\presentation\\FILES_V54_03_easy_to_medium_PASS_complete.mp4",
+      "decoded_frames": 574,
+      "sha256": "f5adf7eac59ce0a3ca92f4a621e55a31762522d9f6b28806a899449806dc41c6",
+      "note": "Original parts concatenated without re-encoding; recorder rollover pauses remain omitted."
+    }
+  }
+]

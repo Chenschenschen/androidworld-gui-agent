@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The recipient phone number is entered and the checkmark icon is visible to confirm the recipient. I should tap the checkmark at [882,123,999,175] to proceed to the message composition screen.\n\n\ndo(action=\"Tap\", element=[940,149])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464885,
+  "id": "20261008210804b1f521f16aef4828",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008210804b1f521f16aef4828",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 4360,
+    "prompt_tokens_details": {
+      "cached_tokens": 2605
+    },
+    "total_tokens": 4420
+  },
+  "wall_seconds": 1.5310000000026776
+}

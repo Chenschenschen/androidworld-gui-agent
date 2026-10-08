@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe device is on the home screen. To move a file between folders in the Android filesystem, I need to open the Files app first. The \"Files\" app icon is visible in the first row, second column (bounds [285,385,480,485]).\n\n\ndo(action=\"Tap\", element=[382,409])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474237,
+  "id": "20261008234355ac2d2f33cb2b41e7",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008234355ac2d2f33cb2b41e7",
+  "usage": {
+    "completion_tokens": 77,
+    "prompt_tokens": 2604,
+    "prompt_tokens_details": {
+      "cached_tokens": 1498
+    },
+    "total_tokens": 2681
+  },
+  "wall_seconds": 2.8289999999979045
+}

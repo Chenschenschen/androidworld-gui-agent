@@ -1,0 +1,19 @@
+{
+  "native": {
+    "action": "TYPE",
+    "value": "da Silva",
+    "verify": "The text in the 'First name' field should remain 'Camila da Silva' as it is already correct.",
+    "target": "First name",
+    "index": "7",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "da Silva",
+    "x": 535,
+    "y": 939,
+    "clear_text": true
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

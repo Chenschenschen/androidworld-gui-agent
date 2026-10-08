@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn Wi-Fi on. Looking at the current screenshot, I can see we're in the Settings app under the \"Internet\" section. I can see there's a Wi-Fi toggle switch that appears to be currently OFF (the switch is on the left side and appears grayed out).\n\nThe Wi-Fi section shows:\n- \"Wi-Fi\" with a toggle switch that is currently OFF\n- \"AndroidWifi\" network listed as \"Saved / No internet access\"\n\nTo turn Wi-Fi on, I need to tap on the Wi-Fi toggle switch. Looking at the coordinates, the Wi-Fi toggle appears to be at approximately [583, 369, 679, 389] based on the layout.\n\nSince the task is to turn Wi-Fi on and the toggle is currently off, I should tap on it to enable Wi-Fi.\ndo(action=\"Tap\", element=[679,389])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405357,
+  "id": "2026100804355564f85690ad734ef3",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100804355564f85690ad734ef3",
+  "usage": {
+    "completion_tokens": 192,
+    "prompt_tokens": 1795,
+    "prompt_tokens_details": {
+      "cached_tokens": 524
+    },
+    "total_tokens": 1987
+  },
+  "wall_seconds": 2.4530000000013388
+}

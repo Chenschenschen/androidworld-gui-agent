@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nfinish(message=\"The file cooking-recipe.md has been successfully moved from project_easy to project_medium within the sdk_gphone_x86_64 storage area.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469082,
+  "id": "202610082218011e811e172411406f",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082218011e811e172411406f",
+  "usage": {
+    "completion_tokens": 34,
+    "prompt_tokens": 10333,
+    "prompt_tokens_details": {
+      "cached_tokens": 10272
+    },
+    "total_tokens": 10367
+  },
+  "wall_seconds": 1.2970000000059372
+}

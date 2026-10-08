@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "A confirmation message \"Maya Martin saved\" is visible, indicating the contact was saved successfully. The task is complete, so I should finish.\ndo(action=\"Tap\", element=[498,899])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438926,
+  "id": "202610081355255d3399bff0b54917",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081355255d3399bff0b54917",
+  "usage": {
+    "completion_tokens": 43,
+    "prompt_tokens": 3564,
+    "prompt_tokens_details": {
+      "cached_tokens": 2255
+    },
+    "total_tokens": 3607
+  },
+  "wall_seconds": 1.7039999999979045
+}

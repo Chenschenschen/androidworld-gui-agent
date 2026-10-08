@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "TYPE",
+    "value": "+10433218196",
+    "verify": "The phone number '+10433218196' should appear in the 'Phone' field.",
+    "index": "10"
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "+10433218196",
+    "x": 535,
+    "y": 1438,
+    "clear_text": true
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

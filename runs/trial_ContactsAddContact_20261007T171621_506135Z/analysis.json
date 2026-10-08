@@ -1,0 +1,22 @@
+{
+  "kind": "retrospective_analysis",
+  "failure_class": null,
+  "evidence": [
+    "Step 7 selected target Save, resolved from the current tree to index 2.",
+    "Step 8 inspected the saved profile and declared completion; official score 1.0.",
+    "Original summary grounding field says indices_with_conditional_coordinates; actual source/config/action files prove unique_visible_labels. Original summary preserved."
+  ],
+  "video_decode_check": [
+    {
+      "file": "video_001.mp4",
+      "decoded_frames": 729,
+      "last_timestamp_seconds": 96.204,
+      "size": [
+        540,
+        1200
+      ],
+      "limits": "Readable to EOF; variable frame timestamps are not a completeness proof."
+    }
+  ],
+  "actual_grounding": "unique_visible_labels"
+}

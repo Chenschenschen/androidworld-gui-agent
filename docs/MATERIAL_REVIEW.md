@@ -1,5 +1,97 @@
 # Course material review
 
+Camera failure review: read pinned CameraApp.setup (permissions, launch, attempt
+NEXT, close) and CameraTakePhoto initializer/verifier (exactly one new photo).
+Existing cached snapshot acceptance does not prove onboarding stays completed;
+actual trial showed first-use page. Real com.android.camera2 XML exposes NEXT
+and checked location option through existing official UIElement parser. Diagnose
+too-early/model grounding from concrete frames; do not assume virtual-camera
+backend fault without loading/service evidence. See CAMERA_SELF_RUN_REPAIR.md.
+
+8 October HTTP400 source check: Z.ai official api-reference/api-code defines
+1210 as generic invalid API parameter; unlike1214 it names no field. Current
+Open-AutoGLM README still prescribes api.z.ai/api/paas/v4 and the multilingual
+hosted name. The same saved request was accepted by the provider in an API-only
+diagnostic. Therefore no particular parameter fault was established; retain
+error details rather than guessing or changing policy. Sources:
+https://docs.z.ai/api-reference/api-code and
+https://github.com/zai-org/Open-AutoGLM/blob/main/README_en.md.
+
+FilesMoveFile source review: pinned single/files.py delegates to MoveFile in
+common_validators/file_validators.py; success checks source absent/destination
+present. Standard initialization clears shared storage before creating files.
+Use official create_file/mkdir only for scoped preparation and TaskEval base
+initialization for preserved linked files. app_snapshot.py restores private
+/data/data application data, not project_easy/project_medium in shared storage.
+FilesApp package is com.google.android.documentsui. Official UIElement parsing
+matches raw node counts, but actual UIAutomator captures contain out-of-parent
+descendant geometry; validate that geometry rather than trusting derived labels.
+The course one-observation/one-action loop and native AutoGLM contract remain.
+
+SMS repair source review: pinned Open-AutoGLM config/prompts_en.py requires exact
+Launch pseudo-calls and standalone finish; config/apps.py maps finite multilingual
+names to packages and includes SimpleSMSMessenger. Our two Chinese SMS aliases
+come from actual failed replies, not the upstream list. Existing Android World
+UIElement hint/editable/focus properties supply grounding; no task recipe added.
+Measured repair and preserved unsuccessful intermediate changes: SIMPLE_SMS_TRIAL.md.
+
+8 October SMS source review: read the installed pinned Android World SimpleSmsSend
+template, SimpleSMSSendSms initialization/verifier, and SimpleSMSMessengerApp
+setup. Inputs are number/message; official initialization clears test SMS and
+disables airplane mode. Success requires a recent matching sent message and
+the SMS app in the foreground. No sent-message database writes are agent actions.
+
+8 October general-guidance implementation: reread pinned M3A GUIDANCE in full,
+native AutoGLM prompt/Launch/Type contract and D4 observation/recovery/enforcement
+material. Upstream M3A prefers direct app launch over drawer search and exact
+text selection before Copy. Its retry suggestion is adapted to our existing
+no-uncertain-replay rule: the model chooses recovery from a fresh observation;
+the harness never retries an uncertain GUI execution automatically.
+android_interactions.md records attribution and omits task routes/coordinates.
+The earlier same-model before/after reflection failures remain evidence against
+assuming extra calls improve this model. Details: GENERAL_GUIDANCE_EXPERIMENT.md.
+
+8 October task-procedure preparation: revisited D2's step3_skill_status.py
+pattern (procedural skill separated from factual status), the D4 coding loop,
+pinned M3A visible targeting/full text-selection guidance, and AutoGLM's native
+coordinate/Type contract. Read official Android World MarkorApp setup and
+SystemCopyToClipboard schema: the actual parameter is clipboard_content.
+Markor's own README documents QuickNote and copying support. The five routes
+in task_guides.md are our user-authorized adaptations, with Timer buffer and
+partial-word selection warnings based on our trajectories. They are not quoted
+upstream benchmark policies. Their grounding limits, references and unmeasured
+status are explicit in TASK_GUIDANCE_AND_GROUNDING.md.
+
+8 October native reference implementation: inspected the full pinned
+Open-AutoGLM agent, model stream parser/builder, action parser/handler, device
+factory, ADB screenshot/input/device helpers, app map and timing/dependencies.
+Native screenshots remain full resolution; native Type needs ADB Keyboard,
+absent in the current emulator. The integration bundle differs from our
+adaptation and is being measured, not presumed superior.
+
+Live comparison completed: original native policy failed Timer padding/field
+planning and Clipboard whole-value selection. Our policy failed by repeated
+zeros and Chrome menu cycles. Inspected Android Env's execute_command retry
+and _restart_server after a recorded timeout/video loss; source shows why
+recording can disappear during a retried launch. The bounded transport repair
+was measured separately and retained without changing model guidance.
+
+Assessment source adaptation and experiment, 8 October: inspected pinned M3A
+SUMMARY_PROMPT_TEMPLATE and its shared PROMPT_PREFIX, compared them with the
+new same-model before/after request, then inspected every failed live variant
+before a changed check. Short visible assessments were inaccurate; restoring
+capability context did not establish a fix. Native placeholder copying and
+truncated assessment are preserved separately from semantic task failures.
+Report: [STEP_ASSESSMENT_EXPERIMENT.md](STEP_ASSESSMENT_EXPERIMENT.md).
+
+8 October leaderboard research: compared the official community scoreboard,
+MobileRun architecture, ARTEMIS README, Minitap and MAI-UI primary papers with
+current v29 and preserved Timer/Clipboard failures. Findings and bounded
+experiment proposals: [LEADERBOARD_COMPARISON.md](LEADERBOARD_COMPARISON.md).
+The locally inspected pinned M3A source includes a separate before/after model
+summary call that our adaptation has not implemented. Architecture descriptions
+are not causal proof of reported scores; no runtime/prompt changes were adopted.
+
 Repository export, 8 October: retain source hashes in the portable
 docs/sources/pinned_upstream.json manifest and preserve upstream prompt license
 and NOTICE. Course originals remain excluded; source/slide mapping and design

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer interface is open and the keypad is visible. To set 20 hours, 7 minutes, and 1 second, I need to input the digits in the order they will fill the fields. The target is 20:07:01, so the input sequence should be 2, 0, 0, 7, 0, 1. I will start by tapping \"2\" to begin entering the hour digits.\ndo(action=\"Tap\", element=[499,340])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791443404,
+  "id": "20261008151002026f471634c04cba",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008151002026f471634c04cba",
+  "usage": {
+    "completion_tokens": 103,
+    "prompt_tokens": 3735,
+    "prompt_tokens_details": {
+      "cached_tokens": 1365
+    },
+    "total_tokens": 3838
+  },
+  "wall_seconds": 1.8910000000032596
+}

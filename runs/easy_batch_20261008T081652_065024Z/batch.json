@@ -1,0 +1,17 @@
+{
+  "tasks": [
+    "ContactsAddContact",
+    "ClockTimerEntry"
+  ],
+  "task_seeds": [
+    42
+  ],
+  "source_hashes": {
+    "run_task.py": "f7c8ff825c9b4a9a4fc010b70169e8d66a1797ad7daa19865fc0a01109554cdf",
+    "autoglm_agent.py": "0b61f276cfd53a020d6ea7625899329c91a40555c7afef4c2a29dfb79bd45bf2",
+    "instructions/autoglm.md": "b729486f6c9fb982a7992efbf6a75790520cec0f2c5edd4deee8bf35d1a65b97",
+    "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+    "android_compat.py": "39d6c062518b6092bcd801d36fba1cf10e7642bc0f91ed7975d94dcc07935f20"
+  },
+  "purpose": "Three-case learning evaluation; failures are not discarded."
+}

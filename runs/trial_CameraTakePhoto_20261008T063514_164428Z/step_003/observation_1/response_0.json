@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app is now open and showing the camera interface. The shutter button is visible at the bottom center of the screen. To take a photo, I need to tap the shutter button, which is the ImageView element at [0,841,999,972].\ndo(action=\"Tap\", element=[499,906])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441337,
+  "id": "202610081435365d9cd3f43af74a94",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081435365d9cd3f43af74a94",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 2188,
+    "prompt_tokens_details": {
+      "cached_tokens": 1095
+    },
+    "total_tokens": 2257
+  },
+  "wall_seconds": 1.4529999999940628
+}

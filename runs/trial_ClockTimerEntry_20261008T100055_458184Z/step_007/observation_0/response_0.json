@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows 00h 20m 71s, which is 20:07:11. The target is 20:07:01, so I need to reduce the seconds from 11 to 01. Tapping \"1\" again will make the seconds 01, but the minutes will also shift. I should tap \"1\" at [122, 284, 368, 395] to correct the seconds.\n\n\ndo(action=\"Tap\", element=[245,340])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791453756,
+  "id": "202610081802342ffda73054be401a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081802342ffda73054be401a",
+  "usage": {
+    "completion_tokens": 110,
+    "prompt_tokens": 5520,
+    "prompt_tokens_details": {
+      "cached_tokens": 3342
+    },
+    "total_tokens": 5630
+  },
+  "wall_seconds": 2.25
+}

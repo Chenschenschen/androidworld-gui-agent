@@ -1,0 +1,25 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe Wi-Fi switch is currently OFF (the toggle is to the left and grayed out). To turn Wi-Fi on, I need to tap the switch area. The switch is located in the \"Wi-Fi\" row, which spans from the left edge to the right edge of the screen. The center of this row is approximately at y=378 and spans most of the width, so I should tap near the center of the switch area to enable Wi-Fi.\ndo(action=\"Tap\", element=[499,378])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405243,
+  "id": "20261008043401f0e1c8c722d74526",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008043401f0e1c8c722d74526",
+  "usage": {
+    "completion_tokens": 113,
+    "prompt_tokens": 1490,
+    "prompt_tokens_details": {
+      "cached_tokens": 1489
+    },
+    "total_tokens": 1603
+  }
+}

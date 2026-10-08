@@ -1,0 +1,16 @@
+{
+  "case": "settings",
+  "repeat": 2,
+  "valid": true,
+  "correct": true,
+  "executed": false,
+  "fields": {
+    "action": "AWAKE",
+    "value": "settings",
+    "verify": "The Settings app is open and displayed on the screen."
+  },
+  "action": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "We are on the conversation screen with the recipient +11043321819. The message input field \"Type a message…\" is visible and the keyboard is active. To compose the message, I should focus the message input field by tapping it (bounds [136,575,862,627]) so I can type the content next.\n\n\ndo(action=\"Tap\", element=[499,605])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464894,
+  "id": "202610082108120cb82d72f91d4879",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082108120cb82d72f91d4879",
+  "usage": {
+    "completion_tokens": 84,
+    "prompt_tokens": 4773,
+    "prompt_tokens_details": {
+      "cached_tokens": 3035
+    },
+    "total_tokens": 4857
+  },
+  "wall_seconds": 1.9839999999967404
+}

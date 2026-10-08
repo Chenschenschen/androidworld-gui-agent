@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app has opened and is showing a setup screen about remember photo locations with a \"NEXT\" button at the bottom. To proceed to the camera interface and take a photo, I need to tap the \"NEXT\" button.\ndo(action=\"Tap\", element=[499,927])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441680,
+  "id": "20261008144119356fadb24fa04bde",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008144119356fadb24fa04bde",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 1865,
+    "prompt_tokens_details": {
+      "cached_tokens": 766
+    },
+    "total_tokens": 1925
+  },
+  "wall_seconds": 1.5
+}

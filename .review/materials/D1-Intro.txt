@@ -1,0 +1,312 @@
+=== PAGE 1 ===
+TUM SCHOOL OF MANAGEMENT  
+Agentic AI In BusinessWelcome:)
+
+=== PAGE 2 ===
+BEFORE WE STARTTeaching team
+Haoyuan JiangLECTURERHaoyuanJiangisaPh.D.studentattheTUM,supervisedbyProf.ZiyueLi.HebuildAIalgorithmsattheintersectionofreinforcementlearning,largefoundationmodelsandautonomousagents.BeforejoiningTUM,heworkedasanAlgorithmExpertatAlibabaGroupandasaSeniorAlgorithmEngineeratBaidu,focusingonusingreinforcementlearningtoimprovemodelcapabilitiesandperformance,whichhasbeenusedinlargefoundationmodelsandend2endautonomousdriving.
+XueruiZhang
+XueruiZhang is a Ph.D. student at the Technical University of Munich (TUM), supervised by Prof. Ziyue Li.Her current research interests focus on representation learning, with particular emphasis on continual learning in dynamic environments. She is also interested in multimodal learning and its applications.Interests: Representation Learning | Continual Learning | Multimodal Learning
+ZhenyuWang
+ZhenyuWangisaPh.D.CandidateatTechnicalUniversityofMunich(TUM),supervisedbyProf.ZiyueLi.Hiscurrentresearchinterestsfocusoncausallearning,withparticularemphasisonsequentialdecision-makingandlearning-basedmodelingforcomplexsystems.Healsohasresearchexperienceandstronginterestsinreinforcementlearningandimitationlearning.Interests:CausalLearning|ReinforcementLearning|ImitationLearning
+LECTURERLECTURER
+
+
+=== PAGE 3 ===
+THE WEEKFive daysMonIntroductionwhat it computes,what it cannot do
+TueContextwhat you putin front of it
+WedToolshow it reachesoutside itself
+ThuCodingmake it, thenmeasure it
+FriTraininghow models are madebetter at thisThe week goes from the inside out: the model, then what surrounds it, then what it can touch, then how you judge it.
+Each day adds one layer, and each layer is something you can point at in a running system.
+
+=== PAGE 4 ===
+THE WEEKHow you are assessed
+The course readerAI Agents in Depth: Design Principles and Engineering Practice,BojieLi, v2.0 (2026) —open access. https://github.com/bojieli/ai-agent-book/blob/main/docs/en/README.md
+ComponentModeWeightWhenTwoexercises&OralexamIndividual40%Monday&TuesdayafternoonAI agent projectGroup of 3–540 %Announced today,doitateachafternoonPresentationGroup20 %Friday afternoon
+
+=== PAGE 5 ===
+GROUPPROJECTWatch this firstIt works“Text the address of the event to Anna that Ben just sent me.”It opens Messages, finds the right conversation, reads an address out of it, and carries that address into a new message to someone else. Nobody wrote that sequence of taps down anywhere.
+It does not“Create a calendar event for this Friday at 22PM.”
+It gets most of the way there. Butgetthewrongday
+Recordings from AndroidWorld (Google Research) 
+
+
+=== PAGE 6 ===
+GROUP PROJECTThe group project: build a GUI agent•Groupof 3–5•GELab-Zerovision-language GUI agent model, drives a real interface by looking at the screen and deciding where to tap•AndroidWorldisan open benchmark who has 116 tasks
+1One agentA class with a single step() method: read the screen,tasks,choose an action, say whether you are done.Any model you like —recorditsname  when you present.
+2ThreetasksChosen across at least three task fromall three difficulty rows on the next slide.Eachdifficultyhasatleastone.Three runs eachtask.Screen recording was performed during each evaluation process.
+https://github.com/stepfun-ai/gelab-zerohttps://github.com/google-research/android_world
+
+=== PAGE 7 ===
+TasksSelectedfrom AndroidWorld.  TASK NAMEWHAT THE AGENT IS TOLDSTEPSWarm-up 2–5 steps  ·easySystemWifiTurnOnTurn wifi on. 3CameraTakePhotoTake one photo. 2ClockTimerEntryCreate a timer with {hours} hours, {minutes} minutes, and {seconds} seconds. Do not start it.3ContactsAddContactCreate a new contact for {name}. Their number is {number}.5SystemCopyToClipboardCopy the following text to the clipboard: {clipboard_content}2Real work 6–20 steps  ·  this is where the failures startSimpleSmsSendSend a text message using Simple SMS Messenger to {number} with message: {message}6MarkorCreateNoteCreate a new note in Markor named {file_name} with the following text: {text}8FilesMoveFileMove the file {file_name} from {source_folder} to {destination_folder}.10SimpleCalendarAddOneEventCreate an event on {year}-{month}-{day} at {hour}h titled {event_title}, lasting {duration_mins} mins.17ExpenseAddMultipleAdd the following expenses into the arduia pro expense: {expenses}20Multi-app and memory 9–60 steps  ·mostdifficultyMarkorCreateNoteAndSmsCreate a note named {file_name} with {text}. Share its entire content with {number} via SMS.9BrowserMultiplyClick the button 5 times, remember the numbers displayed, and enter their product in the form.11ExpenseAddMultipleFromMarkorGo through the transactions in my_expenses.txt in Markor. Log the reimbursable ones in pro expense.15MarkorMergeNotesMerge the contents of {file1}, {file2} and {file3}, in that order, into a new note {new_file}.39OsmAndTrackSave a track with waypoints Ruggell, Liechtenstein and Bendern, Liechtenstein, in that order.60Pick across all three boxes. Each difficulty has at least one. 
+GROUP PROJECT
+
+=== PAGE 8 ===
+PresentationGROUP PROJECT
+•Project [Group, 40%] •Demo,selected user case, trajectory logs, an analysis of at least one failure…•Presentation [Group, 20%] •10-30 minute presentation •5-10 minute Q&A session
+
+=== PAGE 9 ===
+Day 1 —FoundationsWhat a language model is  ·  What turns one into an agent  ·  How to run one yourselfLecture AWhat a language model computesLecture BFrom a model to an agentPractice
+
+=== PAGE 10 ===
+LECTURE A · PART 1
+What a language model computesTokens, prediction, and why the same question gives different answers
+Agentic AI  ·  Day 1: Foundations
+
+=== PAGE 11 ===
+WHAT A MODEL COMPUTESTokens are not wordsrefundrefund 1 token
+refundablerefundable 2 tokens
+unenforceableunenforceable4 tokens
+RückerstattungRückerstattung4 tokens
+•You are billed and rate-limited in tokens, not words —and the ratio differs by language.•It explains a family of odd behaviours: a model miscounting letters never saw the letters, only somechunks.•Print what you actually sent, you will see it in tokens
+
+=== PAGE 12 ===
+WHAT A MODEL COMPUTESEvery token becomes a list of numberstokenrefund[ 0.42, −1.07, 0.11, … , 0.63 ]a few thousand numbers
+Similar use → nearby vectorsrefundreimbursereturninvoicereceipt
+banana
+•Tokens that are used as synonymsend up with similar vectors•That is why a model can respond sensibly to a sentence it has never seen. It is not looking anything up —it works in a space where meaning has geometry.
+
+=== PAGE 13 ===
+WHAT A MODEL COMPUTESIt predicts one token at a time"The capital of Germany is ___"
+Berlin 92 %Munich3 %the2 %a1 %…2 %
+Computation•One probability distribution over the next token.•Every token in the vocabulary gets a number; the numbers sum to one.
+
+=== PAGE 14 ===
+WHAT A MODEL COMPUTESRepeateThe capital of Germany isBerlinThe capital of Germany is Berlin,The capital of Germany is Berlin,whichThe capital of Germany is Berlin, whichhas
+the new tokenbecomes part ofthe next input
+Consequences•Cost and latency grow with length: every new token requires another pass over everything before it.•An early mistake is not corrected. This is why a confident but flawed opening sentence often leads to a whole paragraph of confident but flawed statements.•And the model‘s own output feeds back into its input.
+Autoregressivegeneration
+
+=== PAGE 15 ===
+WHAT A MODEL COMPUTESWhere the ability came from
+Agentic AI  ·  Day 1: FoundationsTUM School of Management11
+Trillions of tokensof textOne objective:predict the next tokenRepeated overand overGrammar, facts,argument, code,conversation
+Nothing here was taught explicitlyTo predict the next token well across that much text, a model has to pick up grammar, facts, the shape of an argument, how code is structured, and how a conversation usually goes. All of it comesfromthisoneobjective.
+Two consequencesThe knowledge is a by-product of predicting text —which is why it is broad, and unreliable at the edges.The cost is enormous and paid once, by whoever made the model.
+We spend moretimeon this stage and what comes after it on Friday.
+
+=== PAGE 16 ===
+WHAT A MODEL COMPUTESThe same prompt does not give the same answerSame model, same weights, same question:
+run 1Yes —order 41 is within the 45-daywindow, so a refund can be issued.
+run 2Order 41 was placed 30 days ago.That is inside the return window,so yes.
+run 3Let me check. The order date is2026-08-02, which is 30 days ago —refund is possible.The model produces a probability distribution, not an answer. •If you show me a working agent on Friday, my first question is “how many times did you run it?”•If you need reproducibility —a test, a benchmark, anything you will make a claim about —you have to control this.
+THE REQUEST —IDENTICAL ALL THREE TIMESuser:   Can I get a refund on order 41?Order 41 —placed 2026-08-02, 89.00, category electronics.Policy —electronics have a 45-day return window.
+temperature 0.7
+You will verify this yourself this afternoon.
+
+=== PAGE 17 ===
+WHAT A MODEL COMPUTESSampling: temperature and top-pOne score per tokenBerlin4.0Munich2.6the2.2
+exp( score / T )p(token)  =  ————————————————————————————Σ  exp( score / T )
+T → 0Berlin100 %Munich0 %the0 %the gap becomes infinite: always the top token. 
+T = 0.7Berlin83 %Munich11 %the6 %the usual working setting
+T = 2.0Berlin53 %Munich26 %the21 %the gap between is now almost nothingTop-p = 0.9keep  ·  total 92 %, the first to reach 0.9discard the tail48 %
+Berlin48
+21 %
+Munich69
+11 %Bonn80
+7 %the875 %Hamburg924 %and963 %a991 %Köln100
+Temperature controls how strongly probabilities differ.Top-p controls how much of the probability tail remains eligible.
+
+=== PAGE 18 ===
+WHAT A MODEL COMPUTES
+Fromtext to textA language model does not “answer” in one step. It repeatedly turns the current text into a probability distribution over the next token.Inputprompt + historyTokensnot wordsVectorsmeaning as geometryScoresone per next tokenSamplingtemperature / top-pAppendnew token joins inputOutputtext after many loops
+The whole machine is a loop: predict one next token → choose one → feed it back → repeat.
+Length costsEvery new token requires another pass over the context.Errors compoundA wrong early token becomes part of the next input.Runs varyThe same prompt can differ unless sampling is controlled.
+
+=== PAGE 19 ===
+LECTURE A · PART 2
+The context windowEverything the model knows right now —and nothing else
+14
+
+=== PAGE 20 ===
+THE CONTEXT WINDOWThe context window is the model’s entire worldleft for the answerone context window —a fixed maximum number of tokensit can look at in one call
+System promptConversation so farRetrieved documentsMemoryTool definitionsThe question
+•Everything the model knows about itssituation has to fit in here. Not most of it —all of it.•If a fact is not in this window, the model does not have it —no matter how many times you told it yesterday.
+
+=== PAGE 21 ===
+THE CONTEXT WINDOWThe model is stateless
+120turn 1
+260
+turn 2
+420
+turn 3
+590
+turn 4
+780
+turn 5
+prompt tokens sent, per turnHow a conversation worksTurn 1: you send your question.Turn 2: your question, the answer, and the new question.Turn 3: all of that, plus the new one.Every turn, the entire history is transmitted again, from scratch.•Cost and latency grow as a conversation goes on. •Eventually you hit the contextwindow, and something has to be dropped or summarised. •Memory is not a property of the model. Memory is something you build: store text outside, put it back in the window next call. There is no other trick.
+
+=== PAGE 22 ===
+THE CONTEXT WINDOWWhat falls out of the windowTruncateDrop the oldest turns.+ Cheap.− The agent forgets what youdropped.
+SummariseReplace the old part with a compressed version.+ Keeps the themainpoint.− Quietly loses the detail you did not think mattered —an order number, a promise.
+RetrieveKeep everything outside; pull back what is relevant now.+ Scales.− New failure mode: it brings back the wrong thing and the model confidently uses it.•Nothing here is free. All of the three throws something away. The design question is “what am I willing to lose, and what happens when I lose it?”•Models do not use a long context evenly. Material in the middle of a very long window is attended to less reliably than material at the start or the end. A bigger window is not a better memory.
+
+=== PAGE 23 ===
+THE CONTEXT WINDOWPrompting is choosing what goes into the windowDeciding what occupies a limited and expensive space.Where you put somethingWhat it costsWhat can go wrongIn the systemAlways present, always paid forBloat; it competes with everything elseRetrieved when neededNothing, most of the timeOnly if the retrieval istriggered correctlyAs a tool definitionTokens on every call, used or notTwenty tools = twenty descriptions, every timeIn long-term memoryA slice of the window each sessionOutdated facts and privacy issues
+Most of what people call prompt engineering turns into an allocation problem with a budget. 
+
+=== PAGE 24 ===
+THE CONTEXT WINDOWExampleSame model, same temperature, same question. Only the window changes. 1“Can I refund order 41?”Yes —order 41 qualifies, a credit of 89.00 has been processed.Fluent. Entirely invented.
+2+ the order record pasted inThe order is from 2 August for 89.00. Whether it can be refunded depends on the policy.Correct, and now useless in a different way: no decision.
+3+ the refund policy pasted inElectronics have a 45-day window. This order is 37 days old, so it is eligible.Right answer. Still a paragraph you have to read.
+4+ “answer in one word: eligible or not”EligibleParseable—it answers “Eligible.” with a full stop.
+5+ a schema for the answer{"eligible":true,"amount":89.00,"reason":"37 days < 45"}Machine-usable. And a broken answer is now an error, not a surprise.
+Context does two jobs: it gives the model the information it needs, and it constrains the form of the answer.
+
+=== PAGE 25 ===
+LECTURE A · PART 3
+Why it gets things wrong
+
+=== PAGE 26 ===
+FAILURE MODES1.HallucinationText so farProbability distributionover the next tokenPick a tokenAppend and repeat
+Nowhere in that chain is a step called “check whether this is true”. 
+https://dl.acm.org/doi/pdf/10.1145/3703155
+
+
+=== PAGE 27 ===
+FAILURE MODES2.Format driftYou asked for JSON. Across a thousand calls you get:Usually{"eligible": true, "days": 30}
+SometimesSure! Here is the result:{"eligible": true, "days": 30}Occasionally```json{"eligible": true, "days": 30}```Rarely{"eligible": true, "days": 30,}
+ReasonThe model samples from a distribution, and “a helpful sentence before the JSON” has non-zero probability.Formatting is a strong tendency, not a constraint.•An agent is a program that parses model output and acts on it. A parsing failure is not insignificant—it means that a certain step failure. •What helps: 1.constrain the decoding so invalid tokens cannot be produced; 2.validate and retry; 3.only then prompt more clearly. 
+
+=== PAGE 28 ===
+FAILURE MODESWhat it cannot do by itself
+?ActIt cannot send an email, query a database, or tap a screen. Anything that happens in the world happens because a program outside read its output and did something.
+?RememberNo state between calls. Anything that looks like memory is actually just the process of the system putting text back into the window.
+?VerifyThere is no truth signal in next-token prediction. It cannot tell you whether what it just produced is correct.
+Three gaps. Every one of them is filled by something outside the model —and that “something outside” is what the rest of this course is about.
+
+=== PAGE 29 ===
+SUMMARYLecture A in four sentences1One distribution, one tokenThe model produces a probability distribution over one next token. Paragraphs, reasoning and agency are built by repeating that2The window is the whole worldFor the duration of one call, nothing outside the context window exists.
+3There is no memoryNo state between calls. Memory is something you build outside the model and put back in.
+4It cannot act, remember, or verifyThose three gaps are what the next four and a half days are about.
+
+=== PAGE 30 ===
+LECTURE B · PART 4
+From a model to an agent
+
+=== PAGE 31 ===
+FROM MODEL TO AGENTAgent = model + context + toolsModelthe predictoryou mostly do not change it+Contextfills the memory gapyou change it constantly+Toolsfill the action gapyou change them constantly•Context fills the memory gap —not because the model remembers, but because you store things outside it and put them back at the right moment.•Tools fill the action gap —the model issued a request; a program outside actually calls something and puts the result back.•Almost all of your engineering effort lands in the second and third box. This is a course almostabout those two, with one day spent on the first.
+
+
+=== PAGE 32 ===
+FROM MODEL TO AGENTStart: nothing but the modelmodel+context+tools
+user:      Can I get a refund on order 41?model: Yes —order 41 qualifies for a refund.A credit of 89.00 has been processedand should appear within 3 working days.
+fluent  ·  specific  ·  names an amount  ·  says it is done 
+It never saw order 41No order in its context: no date, no amount, no category. Nothing was processedNo database was touched. There is no refund. 
+•Two different failures: it cannot see the situation, and it cannot act on it.
+
+=== PAGE 33 ===
+FROM MODEL TO AGENTIdealsituationwhat it can seeThe order record. The refund policy.What it may doget_order · get_policy · issue_refund
+AgentsObservation space —what it can seeAction space —what it may doA chat assistantText in the context windowProduce textYour groupproject agentScreenshotsandText. tap(x, y) ,type ,swipe,launch app ,wait ,doneA coding agentFiles, command output, test resultsRead ,edit ,run a command ,submit
+•Designing an agent is largely designing these•Whatever the agent cannot change at will is the environment: here, the policy and the database.But the model only produces text. When it writes “get_order(41)”, nothing happens. So who actually runs it?
+model+ +toolsContext
+
+=== PAGE 34 ===
+FROM MODEL TO AGENTSo who actually runs get_order?model+context+tools
+THE ANSWER
+1You declare the toolsname + a plain-English description + a schema of arguments —all of it text that goes into the context window
+2The model returns a tool callnot ordinary text: which tool, andarguments
+3Outsetprogram executes itthe model runs nothing. No network, no file system, no database. Outset code does the work
+4You append the resultas a new message with role “tool”, then call the model again
+Now:get_order(41)   →   { date: 2026-08-02, amount: 89.00, category: "electronics" }
+Get_order(41)
+
+=== PAGE 35 ===
+FROM MODEL TO AGENTLoop model+context+tools
+One step is not enough, so you repeatThinkreason about what to do next —written out as text
+Actoutputa structured request to use a toolObservea program outside runs it and appends the result
+The loop is not inside the modelThe model is called once per iteration, statelessly, with a longer context each time. The loop lives in your code.
+Attentionwhat accumulatesEvery iteration appends a thought, an action and an observation. Twenty steps of screenshots is a very full window.
+
+=== PAGE 36 ===
+FROM MODEL TO AGENTOne loop, traced(ReAct:Reasoning + Acting）1thinkI need the order details before I can decide.actget_order(id=41)observe{ date: 2026-08-02, amount: 89.00, category: "electronics" }2thinkThirty days old. I must check the policy for this category.actget_policy(category="electronics")observe{ window_days: 45, restocking_fee: 0 }3thinkInside the window. Eligible.actissue_refund(order=41, amount=89.00)observe{ status: "posted" }4replyYour refund of 89.00 has been issued.   → stop
+Four iterations = four calls, each re-sending everything above it. Notice the last word: something has to decide the loop is over —usually the model itself.
+user:      Can I get a refund on order 41?
+
+=== PAGE 37 ===
+FROM MODEL TO AGENTThree ways the loop breaksThe loop does not endThe model keeps calling tools, or calls the same one with the same arguments over and over. It is stuck: the observation it needs is not arriving, or it arrived and was not recognised.
+Limit the number of iterations.
+The tool is called wronglyRight tool, wrong arguments —or the wrong tool entirely
+Fixed by better descriptions and stricter schemas, not by a better system prompt. 
+It says it is done when it is notIt reports success without having verified anything.
+The most dangerous of the three, because it is silent. The other two show up in your logs; this one looks like success.
+None of the three is fixed by a smarter model. They are fixed by the loop, the tool definitions, and the check at the end.
+
+=== PAGE 38 ===
+FROM MODEL TO AGENTFailureexamplemodel+context+tools
+Task: “Five alarms are set. Delete the three earliest.”Clock   ·   Alarms05:00y 640 –80006:00y 810 –97007:00y 980 –114008:00y 1150 –131009:00y 1320 –1480
+✕tap (540, 735)
+1thinkThe list is open. I need the earliest one, at the top.act{"action_type":"click","x":540,"y":735}observescreenshot —identical to the previous one2thinkThat did not open. I will try again.act{"action_type":"click","x":540,"y":735}observescreenshot —identical again3thinkThe alarm has been deleted.act{"action_type":"status","goal_status":"complete"}verifierFAIL —five alarms still present
+◀step 2 repeats an action that changed nothing; step 3 claims completion without looking
+
+=== PAGE 39 ===
+FROM MODEL TO AGENTObservationbeyondtexts1   The pixelsClock   ·   Alarms
+07:15Mon–Fri08:45Sat21:00every dayone image
+2   The accessibility tree[0] TextView  "Alarms"[1] Switch    "07:15 Mon-Fri"  onbounds 72,320 -1008,470[2] Switch    "08:45 Sat"      onbounds 72,490 -1008,640[3] Switch    "21:00 daily"    offbounds 72,660 -1008,810[4] Button    "Add alarm"
+text and exact boxesPixels see everything, butmodelnot preciselyGames, WebViews, anything drawn by hand —all visible. But the model has to find the row itself.The tree is precise, and incompleteExact strings, exact pixel bounds, cheap. But whatever has no content description is simply not in it.
+You get both. Which one you put in the window is the first real design decision of your project
+what is an observation, when the world is a screen?
+
+=== PAGE 40 ===
+FROM MODEL TO AGENTHow expensive is that observationThe context-cost slide again —but with pictures this time, because images do not compress themselves and your agent produces one every single step.One full-resolution screenshot≈ 1,000 –2,000 tokens
+The same screen as a tree≈ 200 –400 tokens
+“The 08:45 alarm is on”≈ 10 tokensevery model bills images differently —find your model’s rule before you guess
+Keeping every screenshot gets expensive20 steps ×1 screenshot per step can mean 20k–40k tokens before prompts, tools, or reasoning.
+Keep the state, not every imageKeep the latest screenshot. Summarize older observations into compact text, and discard what no longer matters.
+
+=== PAGE 41 ===
+FROM MODEL TO AGENTGrounding / pointingTask/Decision：tap the third alarm. Which UI element or pixel position does the third alarm clock actually correspondto?
+By indexthe tree already gave you the boxes{"action_type":"click","index":3}Groundingis a table lookup. semantic target → UI element/index
+By coordinatethe model has to produce the numbers{"action_type":"click","x":540,"y":735}Groundingis now the model’s job. UI element/index → pixel coordinates•Most GUI-agent failures are pointing failures, not reasoning failures. The model knew which alarm it wanted.•A small vision model is much better at “which row do I want” than at “what pixel is that row at”. Take the index route unless the tree is empty.Where grounding happens decides who you can blame. In your code it is a bug you can find; in the model it is a number you cannot check.
+
+=== PAGE 42 ===
+LECTURE B · PART 5
+Running a model yourselfWhere it runs, what it costs in memory, and the harness around it
+
+=== PAGE 43 ===
+RUNNING A MODELThree places a model can runYour laptopA server you controlA cloud APICostFree after downloadHardware + maintenancePer tokenSpeedSlowFastFastModel sizeSmall onlyMedium to largeThe strongest availablePrivacyNothing leaves the machineStays in your networkData leaves your machine
+All three are allowedFor the practice and for the project. Use whatever your machine and your budget can sustain —a laptop model, a shared server, or a cloud API.
+For the project: name the model you used when you present. 
+
+=== PAGE 44 ===
+RUNNING A MODEL YOURSELFSomething has to run it4Your codeThe loop from this morning: build messages, POST, read the reply, append.step1_chat.py
+3The serverWraps the engine in HTTP,so anything can call it, from any language.ollamaserver 
+2The engineLoads the weights, renders the chat template, runs the forward pass, keeps the KV cache, samples a token. Repeats.llama.cpp · vLLM · MLX
+1The weightsA few gigabytes of numbers on a disk. Completely inert —it computes nothing on its own.qwen3-vl-4b
+
+=== PAGE 45 ===
+RUNNING A MODEL YOURSELFInference stacks you will meetAll of them do the same job. They differ in who they are built for —one person on a laptop, or a thousand people on a GPU.What it isReach for it whenOllamaA friendly wrapper around llama.cpp, plus a model registry and an HTTP server.One laptop, one user. It is what the lab uses, and it hides the knobs on purpose.llama.cppThe C++ engine underneath. runs on CPU, and on Apple silicon.You want the knobs back, or you are embedding inference inside something else.vLLM · SGLangServer engines built for throughput: continuous batching, paged KV cache, prefix caching.Many requests at once on a GPU box. This is where the caching from Tomorrowis a product feature.MLXApple silicon native, from Apple. Uses the GPU on an M-series chip directly.IthasmoreperformanceinApplesiliconA cloud APISomebody else’s engine, somebody else’s hardware, somebody else’s upgrade schedule.Those who do not have their own machines or want to access cutting-edge closed-source models.
+
+=== PAGE 46 ===
+RUNNING A MODELWhat a response contains{"choices": [{"message": {"role": "assistant","content": "Let me check that order…","tool_calls": [ … ]        },"finish_reason": "stop"}],"usage": {"prompt_tokens": 3412,"completion_tokens": 118}}
+messageThe text that came back. Structured information as well as ordinary text
+finish_reasonWhy generation stopped.
+usageHow much text went into and came out of this request.
+What did the model return? Why did it stop? How large was the request?
+
+=== PAGE 47 ===
+RUNNING A MODELHardware memorymemory for the weights  ≈  number of parameters  ×bytes per parameter4B model≈ 8 GB8B model≈ 16 GB70B model ≈ 140 GB400B model ≈ 800 GB
+•The parameter count is in the model’s name: a “4B” model has four billion. Add working space for the context on top of the weights.•Ifyour project uses the 4B one. On 16 GB of RAM that is tight but maybeworkable; on 8 GB it will not fit.
+
+=== PAGE 48 ===
+RUNNING A MODELQuantisation: the choice if you run locallyfull precision8.0 GBreference quality
+8-bit 4.4 GBhalf the size; quality loss most people cannot see
+4-bit 2.2 GB half again; loss is real
+How the loss shows upUsually as more formatting errors and worse behaviour on long or unusual inputs —rather than as obviously wrong facts.
+A rule beyond todayIf you change quantisation —or switch model, or switch provider —re-run your evaluation. It is a different model.
+
+=== PAGE 49 ===
+YOUR WORKLogyourrun:One row per run, and what goes in itWrite this while the run is happeningtask            MarkorDeleteNewestNoterun             3 of 3model           qwen2.5-vl:7b   (local, Ollama)observation     accessibility treegrounding       by indexsteps           9   (budget 12)verifier        PASSfailure_class   —recording       runs/markor-del/run3.mp4note            tapped the wrong note once,recovered on the next step
+
+=== PAGE 50 ===
+YOUR WORKFive ways a GUI agent failsUse these as your failure classes. Five words, fixed list, one per run.ClassWhat you see in the traceWhere it is actually fixedgroundingThe tap lands on nothing, or wrongplace.Switch to index-based actions, or a bigger vision model.too_earlyAn action on a screen that had not finished loading; the next observation is a spinner.A wait action, and a check that the screen changed before continuing.lost_valueCorrect until it had to carry a number into a second app, then it invents one.Keep the observation that held the value, or write it into a scratch note.wrong_appOften the launcher search matched something else. Use open_app with an exact name, never navigate the launcher.false_donestatus: complete, and the verifier says fail.A check step before status
+
+=== PAGE 51 ===
+THE LABThis afternoonpractice：Today’s exercise is not building an agent —Make sure you can call the large foundationmodel correctly.1Run a small model locally and chat with it in the terminal.You can call the API, deploy locallyorremote.Ifyouchoosethelasttwo,youneedtodownloadmodelandinstallyourengine.2
+3
+Sweep the temperature from 0 to 1.5 with afixorrandomseed. Eachrolloutseveraltimes.Find the points where the output cannot be reproduced.(optional)
+4
+Hold a five-turn conversation by hand, re-sending the full history. Plot prompt tokens per turn.(optional)
+Hand-write the rendered chat template and send it raw.(optional)
+Put your hand up any time this afternoon. If you have been stuck for more than 20minutes, that is not persistence —put it up then.

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user now needs to send a text message. There is an SMS button (send button) at the bottom right corner of the interface, corresponding to the element [872, 872, 988, 925]. Clicking this button will send the message. Therefore, execute the Tap action to click this send button. It is important to ensure that the message is sent successfully, so this step's action is to click the send button.\n\n\ndo(action=\"Tap\", element=[927,601])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469956,
+  "id": "20261008223234d69b353690614f51",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008223234d69b353690614f51",
+  "usage": {
+    "completion_tokens": 111,
+    "prompt_tokens": 5186,
+    "prompt_tokens_details": {
+      "cached_tokens": 3048
+    },
+    "total_tokens": 5297
+  },
+  "wall_seconds": 2.375
+}

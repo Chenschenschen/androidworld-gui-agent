@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "finished": true,
+  "action": {
+    "_metadata": "finish",
+    "message": "The text 'john.doe@example.com' has been copied to the clipboard."
+  },
+  "thinking": "The screen shows that the text has been copied, as the context menu is gone and the text field still contains \"john.doe@example.com.\" The task is complete. I should now finish the process and confirm the text was copied to the clipboard.",
+  "message": "The text 'john.doe@example.com' has been copied to the clipboard."
+}

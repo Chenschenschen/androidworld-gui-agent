@@ -1,0 +1,98 @@
+[
+  {
+    "case": "contacts",
+    "repeat": 1,
+    "valid": true,
+    "correct": true,
+    "executed": false,
+    "fields": {
+      "action": "TYPE",
+      "value": "Camila",
+      "verify": "The First name field should now contain the text 'Camila'."
+    },
+    "action": {
+      "action_type": "input_text",
+      "text": "Camila"
+    }
+  },
+  {
+    "case": "contacts",
+    "repeat": 2,
+    "valid": true,
+    "correct": true,
+    "executed": false,
+    "fields": {
+      "action": "TYPE",
+      "value": "Camila",
+      "verify": "The First name field should now contain the text 'Camila'."
+    },
+    "action": {
+      "action_type": "input_text",
+      "text": "Camila"
+    }
+  },
+  {
+    "case": "contacts",
+    "repeat": 3,
+    "valid": true,
+    "correct": true,
+    "executed": false,
+    "fields": {
+      "action": "TYPE",
+      "value": "Camila",
+      "verify": "The First name field should now contain the text 'Camila'."
+    },
+    "action": {
+      "action_type": "input_text",
+      "text": "Camila"
+    }
+  },
+  {
+    "case": "settings",
+    "repeat": 1,
+    "valid": true,
+    "correct": true,
+    "executed": false,
+    "fields": {
+      "action": "AWAKE",
+      "value": "Settings",
+      "verify": "The Settings application should be open and visible on the screen."
+    },
+    "action": {
+      "action_type": "open_app",
+      "app_name": "settings"
+    }
+  },
+  {
+    "case": "settings",
+    "repeat": 2,
+    "valid": true,
+    "correct": true,
+    "executed": false,
+    "fields": {
+      "action": "AWAKE",
+      "value": "settings",
+      "verify": "The Settings app is open and displayed on the screen."
+    },
+    "action": {
+      "action_type": "open_app",
+      "app_name": "settings"
+    }
+  },
+  {
+    "case": "settings",
+    "repeat": 3,
+    "valid": true,
+    "correct": true,
+    "executed": false,
+    "fields": {
+      "action": "AWAKE",
+      "value": "settings",
+      "verify": "The Settings app is open and displayed on the screen."
+    },
+    "action": {
+      "action_type": "open_app",
+      "app_name": "settings"
+    }
+  }
+]

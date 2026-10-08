@@ -1,0 +1,19 @@
+{
+  "kind": "learning_trial",
+  "task": "CameraTakePhoto",
+  "run_id": "trial_CameraTakePhoto_20261007T210022_327851Z",
+  "agent_done": false,
+  "verifier": "NOT_RUN",
+  "steps": 4,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v8_native_observation_turns",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v6_observation_turns",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 4
+}

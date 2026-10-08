@@ -1,0 +1,22 @@
+{
+  "kind": "retrospective_analysis",
+  "failure_class": "false_done",
+  "evidence": [
+    "Step 4 entered the full name correctly.",
+    "Steps 5-10 tapped name fields; Phone remained its empty placeholder throughout.",
+    "Step 11 pressed the actual Save control, saving a name without a phone.",
+    "Step 12 claimed the requested number was saved; official verifier returned 0.0."
+  ],
+  "video_decode_check": [
+    {
+      "file": "video_001.mp4",
+      "decoded_frames": 853,
+      "last_timestamp_seconds": 142.84,
+      "size": [
+        540,
+        1200
+      ],
+      "limits": "Readable to EOF; variable frame timestamps are not a completeness proof."
+    }
+  ]
+}

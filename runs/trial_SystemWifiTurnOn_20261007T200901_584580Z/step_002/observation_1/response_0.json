@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn WiFi on. I can see we're currently in the Settings app. I can see \"Network & internet\" option which should contain WiFi settings. I need to tap on that option first.\n\nLooking at the screenshot, I can see:\n- Settings title at the top\n- Search settings bar\n- Network & internet option with \"Mobile, Wi‑Fi, hotspot\" description\n- Connected devices\n- Apps\n- Notifications\n- Battery\n- Storage\n\nI need to tap on \"Network & internet\" to access WiFi settings.\ndo(action=\"Tap\", element=[499,376])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791403757,
+  "id": "202610080409165f3b6532c3724713",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080409165f3b6532c3724713",
+  "usage": {
+    "completion_tokens": 130,
+    "prompt_tokens": 1373,
+    "prompt_tokens_details": {
+      "cached_tokens": 291
+    },
+    "total_tokens": 1503
+  },
+  "wall_seconds": 1.9530000000013388
+}

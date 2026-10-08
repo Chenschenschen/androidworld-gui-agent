@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe screen shows the Clipper app with a clipboard service started and instructions. To copy the text \"john.doe@example.com\" to the clipboard, I need to paste it into the clipboard. The clipboard can be accessed via the adshell command \"am broadcast -a clipper.set -e text 'john.doe@example.com'\". I should open the clipboard first by running this command.\n\n\ndo(action=\"Launch\", app=\"adshell\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464169,
+  "id": "202610082056073c2aa1970e14409a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082056073c2aa1970e14409a",
+  "usage": {
+    "completion_tokens": 96,
+    "prompt_tokens": 2761,
+    "prompt_tokens_details": {
+      "cached_tokens": 1709
+    },
+    "total_tokens": 2857
+  },
+  "wall_seconds": 2.312999999994645
+}

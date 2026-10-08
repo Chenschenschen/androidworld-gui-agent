@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see that the search bar is now focused (it shows \"Search or type web address\" and has a cursor). I need to type the text \"john.doe@example.com\" in this field. I should use the Type action to enter the text.\n\n\ndo(action=\"Type\", text=\"john.doe@example.com\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447115,
+  "id": "20261008161154eff8f6f5d6364a41",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008161154eff8f6f5d6364a41",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 2984,
+    "prompt_tokens_details": {
+      "cached_tokens": 935
+    },
+    "total_tokens": 3055
+  },
+  "wall_seconds": 1.8909999999887077
+}

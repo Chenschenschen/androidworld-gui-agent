@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see that the text \"john.doe@example.com\" has been typed in the search bar. Now I need to copy this text to the clipboard. I can see there's a \"Copy text\" button in the toolbar at the top of the screen. I should tap on it to copy the text.\n\n\ndo(action=\"Tap\", element=[922,106])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447132,
+  "id": "202610081612100e9d1eba8892480d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081612100e9d1eba8892480d",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 3509,
+    "prompt_tokens_details": {
+      "cached_tokens": 1559
+    },
+    "total_tokens": 3589
+  },
+  "wall_seconds": 2.264999999999418
+}

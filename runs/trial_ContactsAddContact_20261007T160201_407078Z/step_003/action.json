@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "com.android.contacts:id/text_input_root",
+    "verify": "The text input for the new contact's name should become active, and the keyboard should appear.",
+    "index": "1"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1313
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

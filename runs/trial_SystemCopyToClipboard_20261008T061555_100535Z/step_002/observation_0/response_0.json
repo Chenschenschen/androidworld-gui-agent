@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"Discount code: SAVE20\" to the clipboard. The current screen is the Google Chrome app's home page. To copy text to the clipboard, I need to first focus on an input field where I can type the text. The \"Search or type web address\" EditText field is visible and can be tapped to focus. Once focused, I can type the required text. I should tap this field first.\ndo(action=\"Tap\", element=[377,326])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440175,
+  "id": "2026100814161433aab6b797774183",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814161433aab6b797774183",
+  "usage": {
+    "completion_tokens": 103,
+    "prompt_tokens": 2397,
+    "prompt_tokens_details": {
+      "cached_tokens": 748
+    },
+    "total_tokens": 2500
+  },
+  "wall_seconds": 1.9060000000026776
+}

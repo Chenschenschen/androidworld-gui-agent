@@ -1,0 +1,9 @@
+{
+  "model": "autoglm-phone-multilingual",
+  "provider": "zai",
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "provider_revision": "not exposed by API; response model/request IDs saved per call",
+  "python": "3.11.17 (main, Oct  3 2026, 01:03:09) [MSC v.1944 64 bit (AMD64)]",
+  "android_world": "0.1.0",
+  "android_env": "1.2.3"
+}

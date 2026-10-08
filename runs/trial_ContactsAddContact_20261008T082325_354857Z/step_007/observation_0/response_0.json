@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The phone number field is not visible yet. We need to scroll down within the ScrollView to reveal the phone number input area before entering the number.\n\n\ndo(action=\"Swipe\", start=[499,543], end=[499,213])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447847,
+  "id": "20261008162406612b404292b3411d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008162406612b404292b3411d",
+  "usage": {
+    "completion_tokens": 54,
+    "prompt_tokens": 2893,
+    "prompt_tokens_details": {
+      "cached_tokens": 1622
+    },
+    "total_tokens": 2947
+  },
+  "wall_seconds": 1.562999999994645
+}

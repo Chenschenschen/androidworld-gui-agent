@@ -1,0 +1,16 @@
+{
+  "action": {
+    "command": "finish",
+    "message": "Successfully copied john.doe@example.com to the clipboard."
+  },
+  "no_visible_effect": true,
+  "image_difference": 9.191176470588235e-05,
+  "dispatch_returned": false,
+  "visible_fields_after": [
+    {
+      "hint": null,
+      "text": "Search or type web address"
+    }
+  ],
+  "execute_and_observe_seconds": 3.312999999994645
+}

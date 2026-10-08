@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Wi-Fi is now turned on, as indicated by the toggle being checked and the appearance of available networks. The task is complete.\nfinish(message=\"Wi-Fi has been turned on successfully. The toggle is now enabled and available networks are displayed.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441264,
+  "id": "2026100814342343cb54c268084745",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814342343cb54c268084745",
+  "usage": {
+    "completion_tokens": 49,
+    "prompt_tokens": 2770,
+    "prompt_tokens_details": {
+      "cached_tokens": 1274
+    },
+    "total_tokens": 2819
+  },
+  "wall_seconds": 1.5160000000032596
+}

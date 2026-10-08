@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Markor app is open on the QuickNote tab, and the main editing area is available for input. To proceed, I should focus on the EditText area where the text \"john.doe@example.com\" will be entered. The EditText bounds are [0, 275, 1080, 2216], so tapping it will allow me to start typing the required text.\n\n\ndo(action=\"Tap\", element=[540,1188])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791462005,
+  "id": "2026100820200382d3f1af26b34f3c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100820200382d3f1af26b34f3c",
+  "usage": {
+    "completion_tokens": 97,
+    "prompt_tokens": 3591,
+    "prompt_tokens_details": {
+      "cached_tokens": 1604
+    },
+    "total_tokens": 3688
+  },
+  "wall_seconds": 2.062999999994645
+}

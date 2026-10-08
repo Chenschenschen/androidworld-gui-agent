@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Wi-Fi toggle switch",
+    "verify": "Toggle switch for Wi-Fi turns on or off.",
+    "target": "100%",
+    "index": "49",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 240,
+    "y": 2007
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

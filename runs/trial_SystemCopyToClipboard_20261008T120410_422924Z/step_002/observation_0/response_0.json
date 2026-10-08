@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The current screen is the \"All files access\" permission page for Markor. To proceed with copying text in Markor, I need to grant the app the required file access. The toggle for \"Allow access to manage all files\" is already enabled, so the permission is granted. I should now navigate back to return to Markor and continue the task.\n\n\ndo(action=\"Tap\", element=[67,83])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791461100,
+  "id": "2026100820045826bb6f5008ba4b65",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100820045826bb6f5008ba4b65",
+  "usage": {
+    "completion_tokens": 88,
+    "prompt_tokens": 2761,
+    "prompt_tokens_details": {
+      "cached_tokens": 1434
+    },
+    "total_tokens": 2849
+  },
+  "wall_seconds": 1.875
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Perfect! I can see the Internet settings page now. I can see the Wi-Fi toggle switch which is currently OFF (the toggle appears to be in the OFF position based on the description). I need to tap on this Wi-Fi toggle to turn it on.\n\nLooking at the screen, I can see:\n- \"Wi-Fi\" text with a toggle switch that appears to be OFF\n- The toggle switch is located to the right of the \"Wi-Fi\" text\n\nI should tap on the Wi-Fi toggle to turn it on. The toggle appears to be at approximately [846, 372, 955, 415] based on the layout.\ndo(action=\"Tap\", element=[897,379])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440715,
+  "id": "20261008142513c3b337595b054096",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008142513c3b337595b054096",
+  "usage": {
+    "completion_tokens": 149,
+    "prompt_tokens": 2575,
+    "prompt_tokens_details": {
+      "cached_tokens": 1099
+    },
+    "total_tokens": 2724
+  },
+  "wall_seconds": 2.2339999999967404
+}

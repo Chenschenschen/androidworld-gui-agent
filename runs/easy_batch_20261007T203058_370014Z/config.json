@@ -1,0 +1,31 @@
+{
+  "version": "autoglm_api_v4_observed_completion",
+  "provider": "zai",
+  "prompt_version": "autoglm_native_en_v3_observed_completion",
+  "model": "autoglm-phone-multilingual",
+  "observation": "screenshot",
+  "tree_backend": "none",
+  "supplemental_tree_packages": [
+    "com.android.settings"
+  ],
+  "action_format": "native_pseudocall",
+  "sampling": {
+    "temperature": 0,
+    "top_p": 0.85,
+    "frequency_penalty": 0.2,
+    "max_tokens": 1024
+  },
+  "max_steps": 12,
+  "max_seconds": 900,
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "max_reobservations": 1,
+  "freshness_global_difference": 0.08,
+  "freshness_target_difference": 0.08,
+  "no_effect_difference": 0.001,
+  "note": "Explicit completion conditions plus fresh Settings GUI labels/checkable state alongside screenshots. Checked unique XML dumps are paired with visually unchanged fresh screenshots; unavailable XML falls back to screenshots. Model-issued finish, no Python forced success or per-step verifier feedback. Prompt-only and full-resolution probes failed. Require three clean Wi-Fi repeats before other warm-ups.",
+  "visual_stability_checks": 3,
+  "visual_stability_pause": 0.5,
+  "visual_stability_difference": 0.01
+}

@@ -1,0 +1,78 @@
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": {
+    "text": "Type a message…",
+    "content_description": "",
+    "class_name": "android.widget.EditText",
+    "bbox": {
+      "x_min": 148,
+      "x_max": 932,
+      "y_min": 1391,
+      "y_max": 1517
+    },
+    "bbox_pixels": {
+      "x_min": 148,
+      "x_max": 932,
+      "y_min": 1391,
+      "y_max": 1517
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": true,
+    "is_enabled": true,
+    "is_focused": true,
+    "is_focusable": true,
+    "is_long_clickable": true,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.simplemobiletools.smsmessenger",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "com.simplemobiletools.smsmessenger:id/thread_type_message",
+    "metadata": {
+      "editable_from_observed_class": true
+    }
+  },
+  "selected_target_fresh": {
+    "text": "Type a message…",
+    "content_description": "",
+    "class_name": "android.widget.EditText",
+    "bbox": {
+      "x_min": 148,
+      "x_max": 932,
+      "y_min": 1391,
+      "y_max": 1517
+    },
+    "bbox_pixels": {
+      "x_min": 148,
+      "x_max": 932,
+      "y_min": 1391,
+      "y_max": 1517
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": true,
+    "is_enabled": true,
+    "is_focused": true,
+    "is_focusable": true,
+    "is_long_clickable": true,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.simplemobiletools.smsmessenger",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "com.simplemobiletools.smsmessenger:id/thread_type_message",
+    "metadata": {
+      "editable_from_observed_class": true
+    }
+  }
+}

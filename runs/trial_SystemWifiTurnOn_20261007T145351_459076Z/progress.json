@@ -1,0 +1,19 @@
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261007T145351_459076Z",
+  "agent_done": false,
+  "verifier": "NOT_RUN",
+  "steps": 1,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "learning_gpu16_v3",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_english_v2",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 1
+}

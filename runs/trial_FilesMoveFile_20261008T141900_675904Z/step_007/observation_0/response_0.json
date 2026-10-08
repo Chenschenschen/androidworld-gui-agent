@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Move to…\" option is available in the menu at [513,315,989,367]. Tapping it will open the destination folder selection dialog, allowing me to choose \"project_easy\" as the destination.\n\ndo(action=\"Tap\", element=[751,341])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469239,
+  "id": "20261008222037f842dbb5cce64c1c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008222037f842dbb5cce64c1c",
+  "usage": {
+    "completion_tokens": 63,
+    "prompt_tokens": 6137,
+    "prompt_tokens_details": {
+      "cached_tokens": 3889
+    },
+    "total_tokens": 6200
+  },
+  "wall_seconds": 2.047000000005937
+}

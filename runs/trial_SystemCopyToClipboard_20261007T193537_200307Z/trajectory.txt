@@ -1,0 +1,448 @@
+
+--- 2026-10-07T19:35:37.201311+00:00 | RUN | RUN START ---
+{
+  "task": "SystemCopyToClipboard",
+  "config": {
+    "version": "five_easy_tasks_v10_launch_guard",
+    "prompt_version": "gelab_json_five_tasks_v8",
+    "wifi_tree_backend": "uiautomator",
+    "task_observations": {
+      "SystemWifiTurnOn": "screenshot"
+    },
+    "action_format": "json_schema",
+    "observation": "tree_first",
+    "prompt_examples": false,
+    "max_screenshot_fallbacks": 2,
+    "model": "gelab-zero-4b-preview:latest",
+    "options": {
+      "temperature": 1,
+      "top_k": 20,
+      "top_p": 0.95,
+      "num_ctx": 4096,
+      "num_gpu": 22,
+      "num_predict": 256,
+      "seed": 42
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "note": "After v9's fifteen-trial batch: restrict position freshness checks to pointing/typing actions, allowing fixed app launches despite changing trees. Camera/Timer/Contacts/Clipboard retain tree-first, so their comparison changes only the launch guard. Wi-Fi uses screenshot input after three valid tree-first failures; this is an interface-plus-guard diagnostic comparison. Same model/GPU/sampling/budgets/seeds. Every failure retained.",
+    "contact_guidance": true,
+    "targeted_type": true,
+    "direct_type_only": true,
+    "label_grounding": true,
+    "task_seed": 44
+  }
+}
+
+--- 2026-10-07T19:35:59.521774+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Copy the following text to the clipboard: alex.jordan@example.net",
+  "parameters": {
+    "clipboard_content": "alex.jordan@example.net"
+  },
+  "task_seed": 44,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-07T19:36:06.785890+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-07T19:36:14.497589+00:00 | STEP 001 | OBSERVATION ---
+{
+  "screenshot": "step_001/before.png",
+  "tree": "step_001/tree.json"
+}
+{"index":0,"is_scrollable":true}
+{"index":1,"content_description":"Home"}
+{"index":2,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":3,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":4,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":5,"text":"Clipper","content_description":"Predicted app: Clipper","is_clickable":true}
+{"index":6,"content_description":"Search","is_clickable":true}
+{"index":7,"text":"51:25","content_description":"51:25","is_clickable":true}
+{"index":8,"text":"Camera","content_description":"Camera","is_clickable":true}
+{"index":9,"text":"Files","content_description":"Files","is_clickable":true}
+{"index":10,"text":"Contacts","content_description":"Contacts","is_clickable":true}
+{"index":11,"text":"Calendar","content_description":"Calendar","is_clickable":true}
+{"index":12,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":13,"text":"Maps","content_description":"Maps","is_clickable":true}
+{"index":14,"text":"Clock","content_description":"Clock","is_clickable":true}
+{"index":15,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":16,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":17,"text":"Gmail","content_description":"Gmail","is_clickable":true}
+{"index":18,"text":"Photos","content_description":"Photos","is_clickable":true}
+{"index":19,"text":"Settings","content_description":"Settings","is_clickable":true}
+{"index":20,"content_description":"Google app","is_clickable":true}
+{"index":21,"content_description":"Voice search","is_clickable":true}
+{"index":22,"content_description":"Google Lens","is_clickable":true}
+{"index":23,"text":"15:34","content_description":"17:34"}
+{"index":24,"content_description":"Android System notification: Serial console enabled"}
+{"index":25,"content_description":"Wifi signal full.,No internet"}
+{"index":26,"content_description":"Phone signal full."}
+{"index":27,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T19:36:14.499608+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_001/tree/request_0.json",
+  "call": 1
+}
+
+--- 2026-10-07T19:36:21.785833+00:00 | STEP 001 | MODEL REPLY ---
+{"action": "AWAKE", "value": "clipper", "verify": "The Clipper application should be open and its main interface should be visible on the screen.","target": "Clipper"}
+
+--- 2026-10-07T19:36:21.786344+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.280999999995402,
+  "load_seconds": 0.0183378,
+  "prompt_seconds": 1.055805,
+  "generation_seconds": 3.606373,
+  "output_tokens": 44
+}
+
+--- 2026-10-07T19:36:21.787385+00:00 | STEP 001 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "AWAKE",
+    "value": "clipper",
+    "verify": "The Clipper application should be open and its main interface should be visible on the screen."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "clipper"
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T19:36:21.788510+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "open_app",
+    "app_name": "clipper"
+  }
+}
+
+--- 2026-10-07T19:36:29.960942+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "AWAKE",
+    "value": "clipper",
+    "verify": "The Clipper application should be open and its main interface should be visible on the screen."
+  },
+  "target": null,
+  "android": {
+    "action_type": "open_app",
+    "app_name": "clipper"
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_001/after.png",
+  "execute_and_observe_seconds": 8.171999999998661
+}
+
+--- 2026-10-07T19:36:30.647098+00:00 | STEP 002 | OBSERVATION ---
+{
+  "screenshot": "step_002/before.png",
+  "tree": "step_002/tree.json"
+}
+{"index":0,"text":"Clipper"}
+{"index":1,"text":"Clipper service is started."}
+{"index":2,"text":"You can now copy to or paste from clipboard using the following commands in adb shell:\n \n 1. am broadcast -a clipper.set -e text 'This may be pasted now' \n 2. am broadcast -a clipper.get"}
+{"index":3,"text":"15:34","content_description":"17:34"}
+{"index":4,"content_description":"Android System notification: Serial console enabled"}
+{"index":5,"content_description":"Wifi signal full.,No internet"}
+{"index":6,"content_description":"Phone signal full."}
+{"index":7,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T19:36:30.648346+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_002/tree/request_0.json",
+  "call": 2
+}
+
+--- 2026-10-07T19:36:36.376666+00:00 | STEP 002 | MODEL REPLY ---
+{"action": "CLICK", "value": "clipper service is started.", "verify": "The text 'copy' is now visible on the screen.","target": ""}
+
+--- 2026-10-07T19:36:36.377221+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.735000000000582,
+  "load_seconds": 0.016672,
+  "prompt_seconds": 0.467007,
+  "generation_seconds": 2.984257,
+  "output_tokens": 38
+}
+
+--- 2026-10-07T19:36:36.378275+00:00 | STEP 002 | VALIDATION ERROR ---
+{
+  "error": "Target label '' matches 0 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T19:36:36.379338+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_002/tree/request_1.json",
+  "call": 3
+}
+
+--- 2026-10-07T19:36:43.053335+00:00 | STEP 002 | MODEL REPLY ---
+{"action": "CLICK", "value": "You can now copy to or paste from clipboard using the following commands in adb shell", "verify": "The text 'copy' is now visible on the screen.","target": ""}
+
+--- 2026-10-07T19:36:43.054378+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.671999999998661,
+  "load_seconds": 0.0189744,
+  "prompt_seconds": 0.513732,
+  "generation_seconds": 4.06767,
+  "output_tokens": 49
+}
+
+--- 2026-10-07T19:36:43.061330+00:00 | STEP 002 | VALIDATION ERROR ---
+{
+  "error": "Target label '' matches 0 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T19:36:43.062756+00:00 | STEP 002 | SCREENSHOT FALLBACK ---
+{
+  "step": 2,
+  "reason": "Tree/interface validation failed: Target label '' matches 0 controls; use an unambiguous visible label",
+  "from": "tree",
+  "to": "screenshot"
+}
+
+--- 2026-10-07T19:36:43.682554+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "screenshot",
+  "context_and_settings": "step_002/screenshot/request_0.json",
+  "call": 4
+}
+
+--- 2026-10-07T19:37:03.361893+00:00 | STEP 002 | MODEL REPLY ---
+{"action": "CLICK", "value": "point for the clipboard icon", "verify": "The clipboard icon has been clicked, and the system should be ready to accept text input for copying.","point": "240,251" }
+
+--- 2026-10-07T19:37:03.362416+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "mode": "screenshot",
+  "wall_seconds": 19.68699999999808,
+  "load_seconds": 0.0257025,
+  "prompt_seconds": 12.640197,
+  "generation_seconds": 4.844947,
+  "output_tokens": 54
+}
+
+--- 2026-10-07T19:37:03.365041+00:00 | STEP 002 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "point for the clipboard icon",
+    "verify": "The clipboard icon has been clicked, and the system should be ready to accept text input for copying.",
+    "point": "240,251"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 259,
+    "y": 602
+  },
+  "observation": "screenshot",
+  "executed_yet": false
+}
+
+--- 2026-10-07T19:37:03.366088+00:00 | STEP 002 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 259,
+    "y": 602
+  }
+}
+
+--- 2026-10-07T19:37:05.308573+00:00 | STEP 002 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "point for the clipboard icon",
+    "verify": "The clipboard icon has been clicked, and the system should be ready to accept text input for copying.",
+    "point": "240,251"
+  },
+  "target": null,
+  "android": {
+    "action_type": "click",
+    "x": 259,
+    "y": 602
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_002/after.png",
+  "execute_and_observe_seconds": 1.9380000000019209
+}
+
+--- 2026-10-07T19:37:06.002519+00:00 | STEP 003 | OBSERVATION ---
+{
+  "screenshot": "step_003/before.png",
+  "tree": "step_003/tree.json"
+}
+{"index":0,"text":"Clipper"}
+{"index":1,"text":"Clipper service is started."}
+{"index":2,"text":"You can now copy to or paste from clipboard using the following commands in adb shell:\n \n 1. am broadcast -a clipper.set -e text 'This may be pasted now' \n 2. am broadcast -a clipper.get"}
+{"index":3,"text":"15:35","content_description":"17:35"}
+{"index":4,"content_description":"Android System notification: Serial console enabled"}
+{"index":5,"content_description":"Wifi signal full.,No internet"}
+{"index":6,"content_description":"Phone signal full."}
+{"index":7,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T19:37:06.003519+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_003/tree/request_0.json",
+  "call": 5
+}
+
+--- 2026-10-07T19:37:12.783146+00:00 | STEP 003 | MODEL REPLY ---
+{"action": "CLICK", "value": "element with coordinates 250,300", "verify": "A new dialog or window should appear, allowing me to enter the text to be copied.","target": ""}
+
+--- 2026-10-07T19:37:12.783710+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.780999999995402,
+  "load_seconds": 0.0170775,
+  "prompt_seconds": 0.527349,
+  "generation_seconds": 4.026831,
+  "output_tokens": 50
+}
+
+--- 2026-10-07T19:37:12.784725+00:00 | STEP 003 | VALIDATION ERROR ---
+{
+  "error": "Target label '' matches 0 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T19:37:12.785757+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_003/tree/request_1.json",
+  "call": 6
+}
+
+--- 2026-10-07T19:37:18.767006+00:00 | STEP 003 | MODEL REPLY ---
+{"action": "CLICK", "value": "Clipboard button", "verify": "A new dialog or input field should appear, allowing me to enter the text to be copied.","target": ""}
+
+--- 2026-10-07T19:37:18.768009+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.984000000004016,
+  "load_seconds": 0.0167344,
+  "prompt_seconds": 0.486632,
+  "generation_seconds": 3.391057,
+  "output_tokens": 42
+}
+
+--- 2026-10-07T19:37:18.775562+00:00 | STEP 003 | VALIDATION ERROR ---
+{
+  "error": "Target label '' matches 0 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T19:37:18.776730+00:00 | STEP 003 | SCREENSHOT FALLBACK ---
+{
+  "step": 3,
+  "reason": "Tree/interface validation failed: Target label '' matches 0 controls; use an unambiguous visible label",
+  "from": "tree",
+  "to": "screenshot"
+}
+
+--- 2026-10-07T19:37:19.376510+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "screenshot",
+  "context_and_settings": "step_003/screenshot/request_0.json",
+  "call": 7
+}
+
+--- 2026-10-07T19:37:37.772253+00:00 | STEP 003 | MODEL REPLY ---
+{"action": "TYPE", "value": "alex.jordan@example.net", "verify": "The text 'alex.jordan@example.net' should be visible in the input field.","point": "247,367"}
+
+--- 2026-10-07T19:37:37.773081+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "mode": "screenshot",
+  "wall_seconds": 18.389999999999418,
+  "load_seconds": 0.0186078,
+  "prompt_seconds": 11.930506,
+  "generation_seconds": 4.241694999,
+  "output_tokens": 50
+}
+
+--- 2026-10-07T19:37:37.774132+00:00 | STEP 003 | VALIDATION ERROR ---
+{
+  "error": "TYPE target must be a visible enabled editable field, not a keyboard key",
+  "executed": false
+}
+
+--- 2026-10-07T19:37:37.783525+00:00 | STEP 003 | RUN ERROR ---
+{
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 221, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 476, in step\n    fields, action, mode = self.choose_action(state, folder, goal, status)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 455, in choose_action\n    fields, action = self.ask_action(state, folder, \"screenshot\", goal, {**status, \"fallback\": event})\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 397, in ask_action\n    action = validate_action(fields, state, mode, targeted)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 261, in validate_action\n    raise ValueError(\"TYPE target must be a visible enabled editable field, not a keyboard key\")\nValueError: TYPE target must be a visible enabled editable field, not a keyboard key\n",
+  "class": "validation_error"
+}
+
+--- 2026-10-07T19:37:38.674839+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "SystemCopyToClipboard",
+  "run_id": "trial_SystemCopyToClipboard_20261007T193537_200307Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 2,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "five_easy_tasks_v10_launch_guard",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_five_tasks_v8",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 3,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 221, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 476, in step\n    fields, action, mode = self.choose_action(state, folder, goal, status)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 455, in choose_action\n    fields, action = self.ask_action(state, folder, \"screenshot\", goal, {**status, \"fallback\": event})\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 397, in ask_action\n    action = validate_action(fields, state, mode, targeted)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 261, in validate_action\n    raise ValueError(\"TYPE target must be a visible enabled editable field, not a keyboard key\")\nValueError: TYPE target must be a visible enabled editable field, not a keyboard key\n",
+  "error_class": "validation_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 7,
+  "screenshot_fallbacks": [
+    {
+      "step": 2,
+      "reason": "Tree/interface validation failed: Target label '' matches 0 controls; use an unambiguous visible label",
+      "from": "tree",
+      "to": "screenshot"
+    },
+    {
+      "step": 3,
+      "reason": "Tree/interface validation failed: Target label '' matches 0 controls; use an unambiguous visible label",
+      "from": "tree",
+      "to": "screenshot"
+    }
+  ],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 90.70300000000134
+}

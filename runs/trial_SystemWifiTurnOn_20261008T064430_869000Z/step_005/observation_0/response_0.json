@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Perfect! I can see that the Wi-Fi toggle is now ON (the switch is blue and checked). The task was to turn Wi-Fi on, and I have successfully enabled it. The completion condition states to finish if Wi-Fi is already on, so I should finish the task now.\nfinish(message=\"Wi-Fi has been successfully turned on. The Wi-Fi toggle is now enabled (blue and checked) and available networks are now visible. Task completed.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441925,
+  "id": "20261008144523d1ad2a6cc7a34d5e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008144523d1ad2a6cc7a34d5e",
+  "usage": {
+    "completion_tokens": 92,
+    "prompt_tokens": 2816,
+    "prompt_tokens_details": {
+      "cached_tokens": 1300
+    },
+    "total_tokens": 2908
+  },
+  "wall_seconds": 2.1710000000020955
+}

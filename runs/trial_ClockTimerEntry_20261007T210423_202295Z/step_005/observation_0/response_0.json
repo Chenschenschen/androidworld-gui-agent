@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see the timer now shows \"00h 00m 20s\". I need to continue entering the time to get 20 hours, 7 minutes, and 1 second. I need to enter \"7\" next to continue building the time.\ndo(action=\"Tap\", element=[245,569])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407092,
+  "id": "202610080504501d46d4ee175a40f6",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080504501d46d4ee175a40f6",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 2851,
+    "prompt_tokens_details": {
+      "cached_tokens": 1424
+    },
+    "total_tokens": 2917
+  },
+  "wall_seconds": 1.4530000000013388
+}

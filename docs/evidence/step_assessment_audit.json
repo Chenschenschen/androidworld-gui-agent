@@ -1,0 +1,248 @@
+[
+  {
+    "run_id": "trial_ClockTimerEntry_20261008T100055_458184Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ClockTimerEntry",
+      "run_id": "trial_ClockTimerEntry_20261008T100055_458184Z",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 12,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v31_native_read_only_assessment",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 12,
+      "stop_reason": "step_budget",
+      "model_calls_attempted": 27,
+      "verifier_score": 0.0,
+      "failure_class": null,
+      "assessment_calls_attempted": 12,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4",
+        "video_002.mp4"
+      ],
+      "duration_seconds": 260.7810000000027,
+      "agent_phase_seconds": 256.2649999999994
+    },
+    "json_errors": [],
+    "credential_present": false,
+    "base64_in_readable_requests": false,
+    "gui_dispatches_from_results": 12,
+    "assessment_files": 12,
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 285,
+        "duration_seconds": 173.8871111111111
+      },
+      {
+        "file": "video_002.mp4",
+        "frames_decoded": 59,
+        "duration_seconds": 80.68992222222222
+      }
+    ],
+    "source_hashes": {
+      "android_compat.py": "39d6c062518b6092bcd801d36fba1cf10e7642bc0f91ed7975d94dcc07935f20",
+      "autoglm_agent.py": "8bc32705e799b5edeb582543f74f453c7a2e6b8e9743642c8171d508376afe01",
+      "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+      "run.ps1": "afcd91049e4a4673981c0aded9e683ba519090aa8d34ed6764f70bf7c66fe6e5",
+      "run_task.py": "0a1f7e68b6fd93ca2e7f1c6e10fbaff90e69276a5b47f19de98928cd283968e3",
+      "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+      "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+      "instructions\\autoglm.md": "b729486f6c9fb982a7992efbf6a75790520cec0f2c5edd4deee8bf35d1a65b97"
+    },
+    "assessment_prompt_snapshotted": true
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261008T100628_570867Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemCopyToClipboard",
+      "run_id": "trial_SystemCopyToClipboard_20261008T100628_570867Z",
+      "agent_done": true,
+      "verifier": "FAIL",
+      "steps": 2,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v31_native_read_only_assessment",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 2,
+      "stop_reason": "complete",
+      "model_calls_attempted": 4,
+      "verifier_score": 0.0,
+      "failure_class": "false_done",
+      "assessment_calls_attempted": 1,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 38.79700000000594,
+      "agent_phase_seconds": 28.093999999997322
+    },
+    "json_errors": [],
+    "credential_present": false,
+    "base64_in_readable_requests": false,
+    "gui_dispatches_from_results": 1,
+    "assessment_files": 1,
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 84,
+        "duration_seconds": 25.37388888888889
+      }
+    ],
+    "source_hashes": {
+      "android_compat.py": "39d6c062518b6092bcd801d36fba1cf10e7642bc0f91ed7975d94dcc07935f20",
+      "autoglm_agent.py": "8bc32705e799b5edeb582543f74f453c7a2e6b8e9743642c8171d508376afe01",
+      "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+      "run.ps1": "afcd91049e4a4673981c0aded9e683ba519090aa8d34ed6764f70bf7c66fe6e5",
+      "run_task.py": "0a1f7e68b6fd93ca2e7f1c6e10fbaff90e69276a5b47f19de98928cd283968e3",
+      "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+      "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+      "instructions\\autoglm.md": "b729486f6c9fb982a7992efbf6a75790520cec0f2c5edd4deee8bf35d1a65b97"
+    },
+    "assessment_prompt_snapshotted": true
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261008T100911_808026Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemCopyToClipboard",
+      "run_id": "trial_SystemCopyToClipboard_20261008T100911_808026Z",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 0,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v32_assessment_shared_action_context",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 1,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 335, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 525, in step\n    fields, action = self.ask_action(state, observed, goal, step)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 500, in ask_action\n    action = convert_action(fields, state, self.config[\"allowed_apps\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 143, in convert_action\n    raise ValueError(f\"Launch app {app!r} is unavailable; allowed app values: {json.dumps(allowed_apps)}\")\nValueError: Launch app 'app_name' is unavailable; allowed app values: [\"chrome\"]\n",
+      "error_class": "validation_error",
+      "stop_reason": "error",
+      "verifier_score": 0.0,
+      "failure_class": null,
+      "model_calls_attempted": 2,
+      "assessment_calls_attempted": 0,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 16.65700000000652,
+      "agent_phase_seconds": 8.610000000000582
+    },
+    "json_errors": [],
+    "credential_present": false,
+    "base64_in_readable_requests": false,
+    "gui_dispatches_from_results": 0,
+    "assessment_files": 0,
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 28,
+        "duration_seconds": 6.910488888888889
+      }
+    ],
+    "source_hashes": {
+      "android_compat.py": "39d6c062518b6092bcd801d36fba1cf10e7642bc0f91ed7975d94dcc07935f20",
+      "autoglm_agent.py": "1e0c5e9eafc22e9f884ad1f12938850baa555075fbc064ce3ae90c8a51275616",
+      "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+      "run.ps1": "afcd91049e4a4673981c0aded9e683ba519090aa8d34ed6764f70bf7c66fe6e5",
+      "run_task.py": "0a1f7e68b6fd93ca2e7f1c6e10fbaff90e69276a5b47f19de98928cd283968e3",
+      "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+      "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+      "instructions\\autoglm.md": "b729486f6c9fb982a7992efbf6a75790520cec0f2c5edd4deee8bf35d1a65b97"
+    },
+    "assessment_prompt_snapshotted": true
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261008T101351_637369Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemCopyToClipboard",
+      "run_id": "trial_SystemCopyToClipboard_20261008T101351_637369Z",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 0,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v33_valid_native_launch_example",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v20_allowed_launch_example",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 1,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 335, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 596, in step\n    result[\"model_assessment\"] = self.assess_step(state, after, folder, goal, action, result, step)\n                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 415, in assess_step\n    raw = self.request_model([{\"role\": \"system\", \"content\": prompt}, {\"role\": \"user\", \"content\": content}], folder, \"assessment\", step)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 390, in request_model\n    raise ValueError(\"Truncated model reply\")\nValueError: Truncated model reply\n",
+      "error_class": "validation_error",
+      "stop_reason": "error",
+      "verifier_score": 0.0,
+      "failure_class": null,
+      "model_calls_attempted": 3,
+      "assessment_calls_attempted": 1,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 48.01600000000326,
+      "agent_phase_seconds": 41.29700000000594
+    },
+    "json_errors": [],
+    "credential_present": false,
+    "base64_in_readable_requests": false,
+    "gui_dispatches_from_results": 1,
+    "assessment_files": 0,
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 86,
+        "duration_seconds": 39.71493333333333
+      }
+    ],
+    "source_hashes": {
+      "android_compat.py": "39d6c062518b6092bcd801d36fba1cf10e7642bc0f91ed7975d94dcc07935f20",
+      "autoglm_agent.py": "7e8acb0406be16c36dfb48beae15b0e141573c7521dce48b2fc5d51a3693e9c9",
+      "probe_connection.py": "05413afba2a36e2f41f6182d83e2d220fc19f5a6483677f302d237f14968011a",
+      "run.ps1": "afcd91049e4a4673981c0aded9e683ba519090aa8d34ed6764f70bf7c66fe6e5",
+      "run_task.py": "0a1f7e68b6fd93ca2e7f1c6e10fbaff90e69276a5b47f19de98928cd283968e3",
+      "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+      "instructions\\assessment.md": "c9cb4a5561dd897df1a9a3917fddb89daf62a0af5c633e366b93df58c057beac",
+      "instructions\\autoglm.md": "b729486f6c9fb982a7992efbf6a75790520cec0f2c5edd4deee8bf35d1a65b97"
+    },
+    "assessment_prompt_snapshotted": true
+  }
+]

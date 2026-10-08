@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "30",
+    "verify": "The Wi-Fi toggle switch should change to the 'on' state (likely turning blue or grey with the handle on the right side).",
+    "point": "883,381"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 954,
+    "y": 914
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

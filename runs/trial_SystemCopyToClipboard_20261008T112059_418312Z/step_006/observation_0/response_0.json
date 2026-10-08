@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the Chrome \"More options\" menu, but there is no direct clipboard option visible here. To access clipboard features, I should switch to the \"Settings\" menu, as it may contain clipboard or text editing options. I will tap the \"Settings\" option at [388, 539, 943, 593].\n\n\ndo(action=\"Tap\", element=[630,565])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791458567,
+  "id": "202610081922459a97065782be4041",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081922459a97065782be4041",
+  "usage": {
+    "completion_tokens": 105,
+    "prompt_tokens": 3724,
+    "prompt_tokens_details": {
+      "cached_tokens": 2250
+    },
+    "total_tokens": 3829
+  },
+  "wall_seconds": 2.4530000000086147
+}

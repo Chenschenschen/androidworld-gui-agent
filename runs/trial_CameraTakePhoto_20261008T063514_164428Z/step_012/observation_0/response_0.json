@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to take one photo. The Camera app is open and the shutter button is available. I need to tap the shutter button to take a photo. The shutter button is the ImageView element at [0,841,999,972].\ndo(action=\"Tap\", element=[499,906])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441404,
+  "id": "20261008143643a8543ccc83634ee8",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008143643a8543ccc83634ee8",
+  "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 3977,
+    "prompt_tokens_details": {
+      "cached_tokens": 2675
+    },
+    "total_tokens": 4042
+  },
+  "wall_seconds": 1.5939999999973224
+}

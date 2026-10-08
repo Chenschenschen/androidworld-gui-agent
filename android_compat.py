@@ -1,10 +1,33 @@
 """Work around AndroidEnv 1.2.3's temporary APK issue on Windows/Python 3.11."""
 
 from pathlib import Path
+import subprocess
 import sys
 import tempfile
 import uuid
 import xml.etree.ElementTree as ET
+
+
+def enable_single_attempt_adb():
+    """Keep SDK ADB failures from replaying actions or killing the owned recorder."""
+    from android_env.components import adb_controller, errors
+
+    def execute_once(self, args, timeout=None, device_specific=True):
+        """Preserve the SDK command/return contract with one bounded subprocess."""
+        command = self.command_prefix(include_device_name=device_specific) + args
+        timeout = self._config.default_timeout if timeout is None else timeout
+        # Cold app starts can exceed the SDK's five-second limit; still dispatch once.
+        if args[:3] == ["shell", "am", "start"]:
+            timeout = max(timeout, 30)
+        try:
+            return subprocess.check_output(command, stderr=subprocess.STDOUT,
+                timeout=timeout, env=self._os_env_vars)
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as error:
+            raise errors.AdbControllerError("Single-attempt ADB command failed; no replay or server restart: "
+                                           + str(error)) from error
+
+    # Process-local adapter: installed dependency files and other ADB clients stay unchanged.
+    adb_controller.AdbController.execute_command = execute_once
 
 
 def enable_windows_compat():

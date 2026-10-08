@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user now needs to confirm the entered phone number and enter the chat interface. There is a checkmark button (ImageView) at the top right corner of the interface, corresponding to the element [882, 123, 999, 175]. Clicking this checkmark will confirm the number and proceed to the next step. Therefore, execute the Tap action to click this checkmark element.\n\n\ndo(action=\"Tap\", element=[940,149])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469922,
+  "id": "20261008223200a01492feaf8144a5",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008223200a01492feaf8144a5",
+  "usage": {
+    "completion_tokens": 97,
+    "prompt_tokens": 3922,
+    "prompt_tokens_details": {
+      "cached_tokens": 2056
+    },
+    "total_tokens": 4019
+  },
+  "wall_seconds": 2.202999999994063
+}

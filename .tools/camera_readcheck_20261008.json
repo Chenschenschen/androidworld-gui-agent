@@ -1,0 +1,23 @@
+{
+  "packages": [
+    "com.android.camera2"
+  ],
+  "controls": [
+    [
+      "Remember photo locations?",
+      "",
+      false
+    ],
+    [
+      "Tag your photos and videos with the locations where they're taken.",
+      "",
+      true
+    ],
+    [
+      "NEXT",
+      "",
+      true
+    ]
+  ],
+  "gui_actions": 0
+}

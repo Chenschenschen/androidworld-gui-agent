@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the home screen, and there is no clipboard interface visible. To proceed, I should first launch the Google app, as it typically provides access to the clipboard in Android. I will launch the Google app first.\n\n\ndo(action=\"Launch\", app=\"google\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791454003,
+  "id": "20261008180642b97099cb52a34457",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008180642b97099cb52a34457",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 1858,
+    "prompt_tokens_details": {
+      "cached_tokens": 817
+    },
+    "total_tokens": 1938
+  },
+  "wall_seconds": 2.2660000000032596
+}

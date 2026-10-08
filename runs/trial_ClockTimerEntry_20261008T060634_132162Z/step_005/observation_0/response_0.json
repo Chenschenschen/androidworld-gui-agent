@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows \"00h 00m 13s\". The next digit to input is \"3\" for the minute, as the target is 13:33:34. I need to tap the \"3\" button to continue setting the minute.\ndo(action=\"Tap\", element=[755,340])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791439645,
+  "id": "202610081407239fd235edf97847de",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081407239fd235edf97847de",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 4918,
+    "prompt_tokens_details": {
+      "cached_tokens": 2505
+    },
+    "total_tokens": 4984
+  },
+  "wall_seconds": 1.7810000000026776
+}

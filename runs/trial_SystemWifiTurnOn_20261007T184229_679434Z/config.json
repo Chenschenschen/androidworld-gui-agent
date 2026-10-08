@@ -1,0 +1,34 @@
+{
+  "version": "five_easy_tasks_v9_wifi_xml",
+  "prompt_version": "gelab_json_five_tasks_v8",
+  "wifi_tree_backend": "uiautomator",
+  "action_format": "json_schema",
+  "observation": "tree_first",
+  "prompt_examples": false,
+  "max_screenshot_fallbacks": 2,
+  "model": "gelab-zero-4b-preview:latest",
+  "options": {
+    "temperature": 1,
+    "top_k": 20,
+    "top_p": 0.95,
+    "num_ctx": 4096,
+    "num_gpu": 22,
+    "num_predict": 256,
+    "seed": 42
+  },
+  "max_steps": 12,
+  "max_seconds": 900,
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "note": "After captured stale launcher trees with Wi-Fi off, use Android World's official UIAutomator tree backend for Wi-Fi only. It has no forwarder recovery that can enable Wi-Fi. Labels inside clickable rows are groundable. Other tasks retain gRPC capture. Same model/GPU/sampling/budgets; three distinct task seeds 42/43/44. Failures retained.",
+  "contact_guidance": true,
+  "targeted_type": true,
+  "direct_type_only": true,
+  "label_grounding": true,
+  "task_seed": 42,
+  "tree_backend": "uiautomator",
+  "allowed_apps": [
+    "settings"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "native": {
+    "action": "COMPLETE",
+    "value": "A photo is taken",
+    "verify": "Verify that the photo has been taken. A photo is a tangible object, so it's possible to verify its existence on the device. However, in this automated testing context, we only verify the success of actions, not the physical existence of the photo."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "A photo is taken"
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

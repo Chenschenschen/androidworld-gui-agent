@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app has opened and is showing a setup screen with a location Tags option that is already checked. To proceed to the camera interface and take a photo, I need to tap the \"NEXT\" button at the bottom.\ndo(action=\"Tap\", element=[499,927])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406833,
+  "id": "202610080500322015c3012bc54075",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080500322015c3012bc54075",
+  "usage": {
+    "completion_tokens": 59,
+    "prompt_tokens": 1786,
+    "prompt_tokens_details": {
+      "cached_tokens": 1729
+    },
+    "total_tokens": 1845
+  },
+  "wall_seconds": 1.3280000000013388
+}

@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Shutter",
+    "verify": "The shutter icon should be clicked, possibly resulting in the camera taking a photo or opening a photo gallery view.",
+    "target": "Shutter",
+    "index": "2",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 2179
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

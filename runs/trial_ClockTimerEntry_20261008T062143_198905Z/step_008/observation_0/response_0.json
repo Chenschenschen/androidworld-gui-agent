@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows 01h 33m 33s. I need to set it to 13:33:34. The next digit in the sequence is 4, so I will tap the \"4\" button at [122, 399, 368, 510].\ndo(action=\"Tap\", element=[245,455])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440589,
+  "id": "2026100814230759eea4c1833c4f41",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814230759eea4c1833c4f41",
+  "usage": {
+    "completion_tokens": 75,
+    "prompt_tokens": 7551,
+    "prompt_tokens_details": {
+      "cached_tokens": 5037
+    },
+    "total_tokens": 7626
+  },
+  "wall_seconds": 1.8119999999908032
+}

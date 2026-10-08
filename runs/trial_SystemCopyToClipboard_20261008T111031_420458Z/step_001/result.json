@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "finished": false,
+  "action": {
+    "_metadata": "do",
+    "action": "Launch",
+    "app": "Settings"
+  },
+  "thinking": "The user wants to copy the text \"john.doe@example.com\" to the clipboard. I am on the home screen. To do this, I need to open the clipboard app or use a method to access the clipboard. The most direct way is to launch the \"Settings\" app to find the clipboard settings, but typically, I should look for a way to access the clipboard directly or use a known method like long-pressing text in some apps. However, there is no direct clipboard icon on the home screen. The most reliable method is to launch the \"Settings\" app to find the clipboard option.",
+  "message": null
+}

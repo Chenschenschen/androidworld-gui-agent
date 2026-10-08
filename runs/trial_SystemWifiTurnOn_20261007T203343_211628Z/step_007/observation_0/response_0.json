@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe user wants to turn WiFi on. Looking at the screenshot, I can see we're in the Settings app, specifically in the Internet settings section. I can see there's a Wi-Fi toggle switch that appears to be currently off (the toggle is on the left side based on the layout).\n\nLooking at the tree structure, I can see:\n- There's a Wi-Fi section with a toggle switch\n- The toggle appears to be in the off position based on the description\n\nI need to tap on the Wi-Fi toggle to turn it on. The Wi-Fi toggle appears to be located at coordinates around [583, 362, 678, 417] based on the tree structure description.\n\nLet me tap on the Wi-Fi toggle to turn it on.\ndo(action=\"Tap\", element=[630,377])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405307,
+  "id": "20261008043505fdcc1aaed7ab49bf",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008043505fdcc1aaed7ab49bf",
+  "usage": {
+    "completion_tokens": 176,
+    "prompt_tokens": 2769,
+    "prompt_tokens_details": {
+      "cached_tokens": 554
+    },
+    "total_tokens": 2945
+  },
+  "wall_seconds": 2.547000000005937
+}

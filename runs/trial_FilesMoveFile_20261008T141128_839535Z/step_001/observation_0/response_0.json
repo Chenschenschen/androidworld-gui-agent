@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe user wants to move a file named \"cooking-recipe.md\" from the \"project_easy\" folder to the \"project_medium\" folder using the Files app. Currently, we are on the home screen and the Files app is visible as an icon. The first step should be to launch the Files app to begin the file management task.\n\n\ndo(action=\"Launch\", app=\"Files\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791468700,
+  "id": "202610082211393ffff9a578e34525",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082211393ffff9a578e34525",
+  "usage": {
+    "completion_tokens": 85,
+    "prompt_tokens": 2604,
+    "prompt_tokens_details": {
+      "cached_tokens": 1498
+    },
+    "total_tokens": 2689
+  },
+  "wall_seconds": 2.360000000000582
+}

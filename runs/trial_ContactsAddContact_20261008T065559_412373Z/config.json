@@ -1,0 +1,38 @@
+{
+  "version": "autoglm_api_v20_unique_native_decision",
+  "provider": "zai",
+  "prompt_version": "autoglm_native_en_v15_point_or_box",
+  "model": "autoglm-phone-multilingual",
+  "observation": "screenshot",
+  "tree_backend": "none",
+  "supplemental_tree_packages": [
+    "com.android.settings",
+    "com.google.android.deskclock"
+  ],
+  "action_format": "native_pseudocall",
+  "sampling": {
+    "temperature": 0,
+    "top_p": 0.85,
+    "frequency_penalty": 0.2,
+    "max_tokens": 1024
+  },
+  "max_steps": 12,
+  "max_seconds": 900,
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "max_reobservations": 1,
+  "freshness_global_difference": 0.08,
+  "freshness_target_difference": 0.08,
+  "no_effect_difference": 0.001,
+  "note": "v19 frozen Wifi3/3; Camera43 chose correct finish after first capture but repeated the identical call twice. Strict rejection/correction caused extra captures. v20 collapses exact duplicate literal calls to one decision and logs it, rejecting different actions/messages. One action maximum, no replay or forced completion. Box/point validation, stateless GUI digit observations and optional Copy chip retained. Thirteen offline checks pass.",
+  "visual_stability_checks": 3,
+  "visual_stability_pause": 0.5,
+  "visual_stability_difference": 0.01,
+  "api_base_url": "https://api.z.ai/api/paas/v4",
+  "task_seed": 42,
+  "task_name": "ContactsAddContact",
+  "allowed_apps": [
+    "contacts"
+  ]
+}

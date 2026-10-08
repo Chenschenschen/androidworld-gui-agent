@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Internet\" option, which contains Wi-Fi settings, is visible at [0,248,999,334]. To proceed with enabling Wi-Fi, I need to tap on the \"Internet\" option.\ndo(action=\"Tap\", element=[499,298])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441239,
+  "id": "2026100814335890ae92ec37734a36",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814335890ae92ec37734a36",
+  "usage": {
+    "completion_tokens": 58,
+    "prompt_tokens": 2183,
+    "prompt_tokens_details": {
+      "cached_tokens": 771
+    },
+    "total_tokens": 2241
+  },
+  "wall_seconds": 1.4529999999940628
+}

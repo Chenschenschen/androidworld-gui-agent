@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe user wants to turn WiFi on. I can see we're currently in the Settings app. Looking at the screenshot, I can see there's a \"Network & internet\" option which mentions \"Mobile, Wi-Fi, hotspot\". This is where I would need to go to turn on WiFi.\n\nI need to tap on the \"Network & internet\" option to access the WiFi settings.\n\nThe coordinates for \"Network & internet\" appear to be around [0,324,999,416] based on the tree structure description.\ndo(action=\"Tap\", element=[499,379])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405240,
+  "id": "202610080433581225cdfbdde84aef",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080433581225cdfbdde84aef",
+  "usage": {
+    "completion_tokens": 126,
+    "prompt_tokens": 2380,
+    "prompt_tokens_details": {
+      "cached_tokens": 1584
+    },
+    "total_tokens": 2506
+  },
+  "wall_seconds": 2.0939999999973224
+}

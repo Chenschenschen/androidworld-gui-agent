@@ -1,0 +1,11 @@
+{
+  "model_requested": "autoglm-phone-multilingual",
+  "endpoint": "https://api.z.ai/api/paas/v4/chat/completions",
+  "probe_type": "text_connectivity_only",
+  "gui_actions": 0,
+  "retries": 0,
+  "task_verifier": "NOT_RUN",
+  "status": "NETWORK_ERROR",
+  "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+  "duration_seconds": 0.031
+}

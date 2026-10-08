@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T15:33:14.7213779Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"AWAKE\", \"index\": 0, \"value\": \"settings\", \"verify\": \"The Settings app is open and displayed on the screen.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5615275400,
+  "load_duration": 18609600,
+  "prompt_eval_count": 812,
+  "prompt_eval_cached_count": 811,
+  "prompt_eval_duration": 160945000,
+  "eval_count": 38,
+  "eval_duration": 5428795000,
+  "wall_seconds": 7.687999999998283
+}

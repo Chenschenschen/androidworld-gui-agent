@@ -3,16 +3,22 @@
 .env.*
 !.env.example
 
-# Local environments, upstream checkout, course originals and review tooling.
+# Installed environments, dependency checkouts and downloaded tooling stay local.
 /.venv/
-/.tools/
-/.review/
 /android_world/
-/course_content/
+/.tools/python/
+/.tools/Open-AutoGLM/
+/.tools/ADBKeyBoard/
+/.tools/publish-pip-cache/
+/.tools/uv-cache/
+/.tools/tmp/
+/.tools/publish_check_*/
+/.review/venv/
+/.review/gelab_reference/
+/.review/upstream_*/
+node_modules/
 
-# Generated experiments stay local; the small evidence export is under docs/.
-/runs/
-# The approved evidence subset under docs/evidence is versioned separately.
+# The hayati branch preserves course materials, utilities and non-video runs.
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -21,6 +27,18 @@ build/
 dist/
 .idea/
 .vscode/
-*.mp4
+# Exclude video files in all folders, including uppercase extensions.
+*.[mM][pP]4
+*.[mM][oO][vV]
+*.[aA][vV][iI]
+*.[mM][kK][vV]
+*.[wW][eE][bB][mM]
+*.[mM]4[vV]
+*.[wW][mM][vV]
+*.[mM][pP][eE][gG]
+*.[mM][pP][gG]
+*.3[gG][pP]
+*.3[gG]2
+*.[fF][lL][vV]
+*.[tT][sS]
 *.apk
-*.log

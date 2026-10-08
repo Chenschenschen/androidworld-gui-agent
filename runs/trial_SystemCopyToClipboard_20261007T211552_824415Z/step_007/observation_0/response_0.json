@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I am back at the home screen. The \"Clipper\" app is not currently open, and there is no clipboard content visible on this screen. To copy the clipboard content, I need to access the clipboard. The most direct way is to use the \"Settings\" app to open the clipboard or access the clipboard content. I'll launch the \"Settings\" app to find the clipboard options.\ndo(action=\"Launch\", app=\"Settings\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407831,
+  "id": "20261008051709c20600ac779b4c1e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008051709c20600ac779b4c1e",
+  "usage": {
+    "completion_tokens": 89,
+    "prompt_tokens": 3010,
+    "prompt_tokens_details": {
+      "cached_tokens": 1691
+    },
+    "total_tokens": 3099
+  },
+  "wall_seconds": 1.7660000000032596
+}

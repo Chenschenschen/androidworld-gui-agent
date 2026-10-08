@@ -1,0 +1,16 @@
+{
+  "native": {
+    "action": "CLICK",
+    "point": "614,393",
+    "annotations": [
+      "Contacts"
+    ]
+  },
+  "android": {
+    "action_type": "click",
+    "x": 663,
+    "y": 943
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

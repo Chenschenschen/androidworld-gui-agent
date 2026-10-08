@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Move to…\" option is now visible in the menu. To move the file, we should tap on \"Move to…\" which will allow us to select the destination folder (\"project_medium\") for the file.\n\n\ndo(action=\"Tap\", element=[751,341])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474011,
+  "id": "20261008234009b76396edda254a73",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008234009b76396edda254a73",
+  "usage": {
+    "completion_tokens": 57,
+    "prompt_tokens": 7035,
+    "prompt_tokens_details": {
+      "cached_tokens": 4741
+    },
+    "total_tokens": 7092
+  },
+  "wall_seconds": 1.6560000000026776
+}

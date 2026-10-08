@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Cyan",
+    "verify": "The 'Network' section should be open, revealing network-related settings like Wi-Fi.",
+    "target": "Cyan",
+    "index": "20",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1229
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

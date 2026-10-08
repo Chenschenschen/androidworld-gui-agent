@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Save",
+    "verify": "The contact creation screen should close, and the app should return to the main contact list, where the new contact 'Camila da Silva' should be visible.",
+    "target": "Save",
+    "index": "2",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 838,
+    "y": 211
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

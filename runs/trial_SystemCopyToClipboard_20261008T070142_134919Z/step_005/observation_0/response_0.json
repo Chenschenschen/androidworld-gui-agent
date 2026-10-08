@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Perfect! I can see that the long press worked and now there's a context menu with options including \"Copy\". I can see the \"Copy\" button in the menu. Now I need to tap on the \"Copy\" button to copy the text to the clipboard.\ndo(action=\"Tap\", element=[243,180])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442943,
+  "id": "20261008150221126a8edbfa5a43d2",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008150221126a8edbfa5a43d2",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 3998,
+    "prompt_tokens_details": {
+      "cached_tokens": 2222
+    },
+    "total_tokens": 4065
+  },
+  "wall_seconds": 1.5779999999940628
+}

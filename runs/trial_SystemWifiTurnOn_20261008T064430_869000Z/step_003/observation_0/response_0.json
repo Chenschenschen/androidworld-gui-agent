@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I'm in the Network & internet settings. To turn on Wi-Fi, I need to access the \"Internet\" section which shows \"Networks available\" - this is where Wi-Fi networks and the Wi-Fi toggle are typically located. I should tap on the \"Internet\" option.\ndo(action=\"Tap\", element=[499,296])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441900,
+  "id": "202610081444589d0fd0d0cb7b4a61",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081444589d0fd0d0cb7b4a61",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 2196,
+    "prompt_tokens_details": {
+      "cached_tokens": 776
+    },
+    "total_tokens": 2267
+  },
+  "wall_seconds": 1.7039999999979045
+}

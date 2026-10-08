@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe current screen shows the Clipper app with a notification that \"Clipper service is started.\" and instructions for copying to clipboard using ADB shell. To copy the text \"john.doe@example.com\" to the clipboard, I need to open the Markor app, enter the text in its editor, long-press the editor to select it, and then use the clipboard copy command. The first step is to launch the Markor app.\n\n\ndo(action=\"Launch\", app=\"markor\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791463027,
+  "id": "20261008203705ea71f68abc8946c2",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008203705ea71f68abc8946c2",
+  "usage": {
+    "completion_tokens": 106,
+    "prompt_tokens": 2761,
+    "prompt_tokens_details": {
+      "cached_tokens": 1443
+    },
+    "total_tokens": 2867
+  },
+  "wall_seconds": 2.2660000000032596
+}

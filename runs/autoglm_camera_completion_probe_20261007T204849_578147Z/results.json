@@ -1,0 +1,30 @@
+[
+  {
+    "state": "BEFORE",
+    "native": {
+      "command": "do",
+      "action": "Tap",
+      "element": [
+        499,
+        877
+      ]
+    },
+    "android": {
+      "action_type": "click",
+      "x": 538,
+      "y": 2104
+    }
+  },
+  {
+    "state": "AFTER_ONE",
+    "native": {
+      "command": "finish",
+      "message": "Photo successfully taken! I can see the thumbnail preview icon in the bottom right corner of the screen, which indicates that a new photo has been captured and saved. The task is complete - exactly one photo has been taken as requested."
+    },
+    "android": {
+      "action_type": "status",
+      "goal_status": "complete",
+      "reason": "Photo successfully taken! I can see the thumbnail preview icon in the bottom right corner of the screen, which indicates that a new photo has been captured and saved. The task is complete - exactly one photo has been taken as requested."
+    }
+  }
+]

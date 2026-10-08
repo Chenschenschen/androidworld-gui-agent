@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "To verify the file is in the destination, I need to enter the \"sdk_gphone64_x86_64\" storage area. The clickable area for \"sdk_gphone64_x86_64\" is [0,203,679,264].\n\n\ndo(action=\"Tap\", element=[340,233])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791475083,
+  "id": "20261008235802a88dd158716345ec",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008235802a88dd158716345ec",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 10531,
+    "prompt_tokens_details": {
+      "cached_tokens": 8299
+    },
+    "total_tokens": 10597
+  },
+  "wall_seconds": 1.9529999999940628
+}

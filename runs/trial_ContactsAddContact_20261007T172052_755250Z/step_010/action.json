@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The 'Contacts' app should open, displaying an interface to manage contacts.",
+    "target": "Contacts",
+    "index": "1",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 180,
+    "y": 2232
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

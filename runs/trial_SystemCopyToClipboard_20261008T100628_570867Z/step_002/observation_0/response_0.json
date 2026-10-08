@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nfinish(message=\"The current screen doesn't show the text to be copied. I need to know where the text 'john.doe@example.com' is located to copy it to the clipboard.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791454021,
+  "id": "202610081807008452ee09f65f43ac",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081807008452ee09f65f43ac",
+  "usage": {
+    "completion_tokens": 41,
+    "prompt_tokens": 2523,
+    "prompt_tokens_details": {
+      "cached_tokens": 897
+    },
+    "total_tokens": 2564
+  },
+  "wall_seconds": 1.360000000000582
+}

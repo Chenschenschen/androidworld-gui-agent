@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Copy\" option has been tapped, and the text \"alex.jordan@example.net\" is now copied to the clipboard. The task is complete, as the text has been successfully copied to the clipboard as required.\nfinish(message=\"The text 'alex.jordan@example.net' has been successfully copied to the clipboard as requested. Task completed.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440499,
+  "id": "2026100814213754cf4b2c5dac47ca",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814213754cf4b2c5dac47ca",
+  "usage": {
+    "completion_tokens": 70,
+    "prompt_tokens": 4263,
+    "prompt_tokens_details": {
+      "cached_tokens": 2498
+    },
+    "total_tokens": 4333
+  },
+  "wall_seconds": 1.9529999999940628
+}

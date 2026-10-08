@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The new file \"my_note.md\" is created, but it is not open yet. To enter the text, I need to open this file by tapping on it in the list. The file \"my_note.md\" is located at [0, 114, 999, 180].\n\ndo(action=\"Tap\", element=[499,144])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791461558,
+  "id": "20261008201235752c76a734114892",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008201235752c76a734114892",
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 4012,
+    "prompt_tokens_details": {
+      "cached_tokens": 2026
+    },
+    "total_tokens": 4086
+  },
+  "wall_seconds": 3.110000000000582
+}

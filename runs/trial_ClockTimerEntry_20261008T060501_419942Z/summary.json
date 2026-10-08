@@ -1,0 +1,32 @@
+{
+  "kind": "learning_trial",
+  "task": "ClockTimerEntry",
+  "run_id": "trial_ClockTimerEntry_20261008T060501_419942Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 8,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v16_native_key_centers_copy_stop",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v12_visible_completion",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 8,
+  "stop_reason": "complete",
+  "model_calls_attempted": 8,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 92.09300000000803,
+  "agent_phase_seconds": 88.20300000000861
+}

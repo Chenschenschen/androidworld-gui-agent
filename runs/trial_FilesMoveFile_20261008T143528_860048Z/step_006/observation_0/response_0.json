@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I have sci_fi_book.mp3 selected. To move it, I need to open the \"More options\" menu, which typically contains the Move or Copy command. The \"More options\" button is at [882,53,999,105]. I will tap it to access additional actions like Move or Copy.\n\n\ndo(action=\"Tap\", element=[941,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791470211,
+  "id": "20261008223649003f6d0d21444be0",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008223649003f6d0d21444be0",
+  "usage": {
+    "completion_tokens": 82,
+    "prompt_tokens": 6550,
+    "prompt_tokens_details": {
+      "cached_tokens": 4064
+    },
+    "total_tokens": 6632
+  },
+  "wall_seconds": 2.172000000005937
+}

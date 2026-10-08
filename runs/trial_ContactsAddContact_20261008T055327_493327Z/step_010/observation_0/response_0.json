@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The phone number \"+1 275-179-7908\" is entered in the Phone field. The contact form now has the required name and number. I should tap the Save button at the top-right to save the contact.\ndo(action=\"Tap\", element=[758,87])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438859,
+  "id": "202610081354188443b9b6ccd84e26",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081354188443b9b6ccd84e26",
+  "usage": {
+    "completion_tokens": 61,
+    "prompt_tokens": 3332,
+    "prompt_tokens_details": {
+      "cached_tokens": 2041
+    },
+    "total_tokens": 3393
+  },
+  "wall_seconds": 1.5469999999913853
+}

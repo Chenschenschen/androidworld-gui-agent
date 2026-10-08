@@ -1,0 +1,885 @@
+[
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T191041_360830Z",
+    "task": "SystemWifiTurnOn",
+    "issues": [],
+    "trace_events": 39,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 459,
+        "last_timestamp_seconds": 174.664,
+        "dimensions": [
+          540,
+          1200
+        ]
+      },
+      {
+        "path": "video_002.mp4",
+        "frames_decoded": 855,
+        "last_timestamp_seconds": 36.635,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "CLICK",
+          "value": "154",
+          "verify": "The screen should display the main page of the Settings application.",
+          "point": "834,666"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "114",
+          "verify": "The 'Network & internet' section should be expanded to show Wi-Fi options.",
+          "point": "500,381"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_003",
+        "action": {
+          "action": "CLICK",
+          "value": "109",
+          "verify": "The 'Internet' page should be opened, displaying network connection options.",
+          "point": "109,291"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_004",
+        "action": {
+          "action": "CLICK",
+          "value": "30",
+          "verify": "The Wi-Fi toggle switch should change to the 'on' state (likely turning blue or grey with the handle on the right side).",
+          "point": "883,381"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_005",
+        "action": {
+          "action": "COMPLETE",
+          "value": "Successfully turned wifi on.",
+          "verify": "On the Internet settings screen, the Wi-Fi toggle is active and blue, and the phone is searching for networks."
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T191444_496364Z",
+    "task": "SystemWifiTurnOn",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 127,
+        "last_timestamp_seconds": 56.017,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "CLICK",
+          "value": "219,656",
+          "verify": "The Settings application should be opened.",
+          "point": "219,656"
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T191610_718892Z",
+    "task": "SystemWifiTurnOn",
+    "issues": [],
+    "trace_events": 11,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 131,
+        "last_timestamp_seconds": 55.325,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "CLICK",
+          "value": "154",
+          "verify": "The screen should display the main page of the Settings application.",
+          "point": "154,654"
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T191735_810079Z",
+    "task": "CameraTakePhoto",
+    "issues": [],
+    "trace_events": 25,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 122,
+        "last_timestamp_seconds": 34.573,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "camera",
+          "verify": "The camera application should open, displaying a live preview from the camera's lens and providing controls for taking a photo."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "Shutter",
+          "verify": "The shutter icon should be clicked, possibly resulting in the camera taking a photo or opening a photo gallery view.",
+          "target": "Shutter",
+          "index": "2",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_003",
+        "action": {
+          "action": "COMPLETE",
+          "value": "A photo is taken",
+          "verify": "Verify that the photo has been taken. A photo is a tangible object, so it's possible to verify its existence on the device. However, in this automated testing context, we only verify the success of actions, not the physical existence of the photo."
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T191849_841156Z",
+    "task": "CameraTakePhoto",
+    "issues": [],
+    "trace_events": 25,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 97,
+        "last_timestamp_seconds": 29.408,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "camera",
+          "verify": "The camera application should open, displaying a live preview from the camera's lens and providing controls for taking a photo."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "Shutter",
+          "verify": "The shutter icon should be clicked, possibly resulting in the camera taking a photo or opening a photo gallery view.",
+          "target": "Shutter",
+          "index": "2",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_003",
+        "action": {
+          "action": "COMPLETE",
+          "value": "A photo is taken",
+          "verify": "Verify that the photo has been taken. A photo is a tangible object, so it's possible to verify its existence on the device. However, in this automated testing context, we only verify the success of actions, not the physical existence of the photo."
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T191958_127385Z",
+    "task": "CameraTakePhoto",
+    "issues": [],
+    "trace_events": 25,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 107,
+        "last_timestamp_seconds": 33.395,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "camera",
+          "verify": "The camera application should open, displaying a live preview from the camera's lens, ready for capturing a photo."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "Shutter",
+          "verify": "The shutter icon should be clicked, possibly resulting in the camera taking a photo or opening a photo gallery view.",
+          "target": "Shutter",
+          "index": "2",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_003",
+        "action": {
+          "action": "COMPLETE",
+          "value": "A photo is taken",
+          "verify": "Verify that the photo has been taken. A photo is a tangible object, so it's possible to verify its existence on the device. However, in this automated testing context, we only verify the success of actions, not the physical existence of the photo."
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T192111_512833Z",
+    "task": "ClockTimerEntry",
+    "issues": [],
+    "trace_events": 92,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 346,
+        "last_timestamp_seconds": 131.561,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "clock",
+          "verify": "The Clock app should open, displaying its main interface."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "Timer",
+          "verify": "The timer interface with hour, minute, and second selectors should be visible.",
+          "target": "Timer",
+          "index": "5",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_003",
+        "action": {
+          "action": "CLICK",
+          "value": "Clock",
+          "verify": "The Clock app screen should be displayed.",
+          "target": "Clock",
+          "index": "16",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_004",
+        "action": {
+          "action": "CLICK",
+          "value": "15:34",
+          "verify": "The clock face, including numbers and hands, is visible.",
+          "target": "Alarm",
+          "index": "3",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_005",
+        "action": {
+          "action": "CLICK",
+          "value": "08:30",
+          "verify": "The alarm at 8:30 AM should open for editing.",
+          "target": "08:30",
+          "index": "3",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_006",
+        "action": {
+          "action": "CLICK",
+          "value": "17 hours",
+          "verify": "The value of the 'hours' field should be set to '17'.",
+          "target": "17 hours",
+          "index": "26",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_007",
+        "action": {
+          "action": "CLICK",
+          "value": "00 minutes",
+          "verify": "The seconds field should now display 00.",
+          "target": "00 minutes",
+          "index": "6",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_008",
+        "action": {
+          "action": "CLICK",
+          "value": "17",
+          "verify": "The hour selector should be displayed, ready for selection.",
+          "target": "17",
+          "index": "0",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_009",
+        "action": {
+          "action": "CLICK",
+          "value": "20",
+          "verify": "The hour selector should now display '20'.",
+          "target": "20 hours",
+          "index": "17",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_010",
+        "action": {
+          "action": "CLICK",
+          "value": "30",
+          "verify": "The timer setting should be set to 20 hours, 00 minutes, and 30 seconds.",
+          "target": "30 minutes",
+          "index": "14",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_011",
+        "action": {
+          "action": "CLICK",
+          "value": "8",
+          "verify": "The minutes field should be set to 1.",
+          "target": "10 minutes",
+          "index": "9",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_012",
+        "action": {
+          "action": "COMPLETE",
+          "value": "Timer setup is complete.",
+          "verify": "Timer setup is complete."
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T192358_651360Z",
+    "task": "ClockTimerEntry",
+    "issues": [],
+    "trace_events": 82,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 437,
+        "last_timestamp_seconds": 120.847,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "clock",
+          "verify": "The Clock app should open, displaying its main interface."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "Timer",
+          "verify": "The timer interface with hour, minute, and second selection fields should be displayed.",
+          "target": "Timer",
+          "index": "5",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_003",
+        "action": {
+          "action": "CLICK",
+          "value": "Timer",
+          "verify": "Timer should be visible on the screen.",
+          "target": "1",
+          "index": "3",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_004",
+        "action": {
+          "action": "CLICK",
+          "value": "Timer",
+          "verify": "Timer section should become active.",
+          "target": "1",
+          "index": "3",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_005",
+        "action": {
+          "action": "CLICK",
+          "value": "9",
+          "verify": "The timer display should change from '00h 00m 11s' to '00h 00m 19s'.",
+          "target": "1",
+          "index": "3",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_006",
+        "action": {
+          "action": "CLICK",
+          "value": "5",
+          "verify": "The timer display should change from '01h 11m 15s' to '01h 15m 15s'.",
+          "target": "5",
+          "index": "7",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_007",
+        "action": {
+          "action": "CLICK",
+          "value": "5",
+          "verify": "The timer display should change from '00h 11m 15s' to '01h 11m 15s'.",
+          "target": "2",
+          "index": "4",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_008",
+        "action": {
+          "action": "CLICK",
+          "value": "Clock",
+          "verify": "The Clock app screen should be displayed.",
+          "target": "Clock",
+          "index": "17",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_009",
+        "action": {
+          "action": "CLICK",
+          "value": "1",
+          "verify": "The hour input for the timer should be changed to 1.",
+          "target": "More options",
+          "index": "1",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T192636_081966Z",
+    "task": "ClockTimerEntry",
+    "issues": [],
+    "trace_events": 40,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 182,
+        "last_timestamp_seconds": 58.095,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "clock",
+          "verify": "The Clock app should open, displaying the main screen with options for Alarm, Timer, Stopwatch, etc."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "Timer",
+          "verify": "The timer interface with hour, minute, and second selection dials should appear.",
+          "target": "Timer",
+          "index": "5",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_003",
+        "action": {
+          "action": "CLICK",
+          "value": "More options",
+          "verify": "The 'Timer' screen should remain, but an options menu should be displayed.",
+          "target": "More options",
+          "index": "1",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T192819_171100Z",
+    "task": "ContactsAddContact",
+    "issues": [],
+    "trace_events": 62,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 620,
+        "last_timestamp_seconds": 117.589,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "Contacts",
+          "verify": "The Contacts app should open, displaying the main contact list."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "Create contact",
+          "verify": "The 'Create contact' screen should be displayed.",
+          "target": "Create contact",
+          "index": "1",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_003",
+        "action": {
+          "action": "TYPE",
+          "value": "Camila da Silva",
+          "verify": "The name 'Camila da Silva' has been entered into the 'First name' field.",
+          "target": "First name",
+          "index": "7",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_004",
+        "action": {
+          "action": "TYPE",
+          "value": "Camila",
+          "verify": "The 'Last name' field should now contain the text 'Camila'.",
+          "target": "Last name",
+          "index": "8",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_005",
+        "action": {
+          "action": "TYPE",
+          "value": "da Silva",
+          "verify": "The text in the 'First name' field should remain 'Camila da Silva' as it is already correct.",
+          "target": "First name",
+          "index": "7",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_006",
+        "action": {
+          "action": "TYPE",
+          "value": "+10433218196",
+          "verify": "The Phone field should contain the text '+10433218196'.",
+          "target": "Phone",
+          "index": "10",
+          "grounded_by": "unique_visible_label"
+        },
+        "executed_result_recorded": false
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T193045_459484Z",
+    "task": "ContactsAddContact",
+    "issues": [],
+    "trace_events": 22,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 132,
+        "last_timestamp_seconds": 21.643,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "contacts",
+          "verify": "The Contacts app should open, displaying the main contact list."
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T193201_502151Z",
+    "task": "ContactsAddContact",
+    "issues": [],
+    "trace_events": 22,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 129,
+        "last_timestamp_seconds": 22.99,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "contacts",
+          "verify": "The Contacts app should open, displaying the main contact list."
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T193303_671369Z",
+    "task": "SystemCopyToClipboard",
+    "issues": [],
+    "trace_events": 26,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 51,
+        "last_timestamp_seconds": 24.113,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "clipper",
+          "verify": "The clipper app should be launched and visible on the screen."
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T193427_865452Z",
+    "task": "SystemCopyToClipboard",
+    "issues": [],
+    "trace_events": 26,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 239,
+        "last_timestamp_seconds": 40.535,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "Chrome",
+          "verify": "The Chrome browser interface should be visible on the screen."
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T193537_200307Z",
+    "task": "SystemCopyToClipboard",
+    "issues": [],
+    "trace_events": 42,
+    "video_decode_checks": [
+      {
+        "path": "video_001.mp4",
+        "frames_decoded": 60,
+        "last_timestamp_seconds": 74.564,
+        "dimensions": [
+          540,
+          1200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "step": "step_001",
+        "action": {
+          "action": "AWAKE",
+          "value": "clipper",
+          "verify": "The Clipper application should be open and its main interface should be visible on the screen."
+        },
+        "executed_result_recorded": true
+      },
+      {
+        "step": "step_002",
+        "action": {
+          "action": "CLICK",
+          "value": "point for the clipboard icon",
+          "verify": "The clipboard icon has been clicked, and the system should be ready to accept text input for copying.",
+          "point": "240,251"
+        },
+        "executed_result_recorded": true
+      }
+    ],
+    "timer_start_actions": [],
+    "limits": "Video decoding checks readability, not complete temporal coverage. Start-action checks use saved GUI labels; inspect video for ambiguous cases."
+  }
+]

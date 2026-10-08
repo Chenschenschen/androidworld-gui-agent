@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:37:19.9244225Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Phone contacts\", \"verify\": \"The 'Create contact' screen should be displayed with fields for first name, last name, and phone number.\",\"target\": \"Phone contacts\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4711588900,
+  "load_duration": 17069400,
+  "prompt_eval_count": 1231,
+  "prompt_eval_cached_count": 504,
+  "prompt_eval_duration": 896931000,
+  "eval_count": 47,
+  "eval_duration": 3669272000,
+  "wall_seconds": 6.75
+}

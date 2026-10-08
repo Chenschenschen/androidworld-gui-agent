@@ -1,0 +1,59 @@
+D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Evidence: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_ContactsAddContact_20261008T055428_595115Z
+Readable trajectory: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_ContactsAddContact_20261008T055428_595115Z\trajectory.txt
+Step 1, screenshot, AutoGLM call 1
+Chosen: {'action_type': 'click', 'x': 663, 'y': 981}
+Step 2, screenshot, AutoGLM call 2
+Chosen: {'action_type': 'click', 'x': 946, 'y': 2006}
+Step 3, screenshot, AutoGLM call 3
+Chosen: {'action_type': 'click', 'x': 533, 'y': 924}
+Step 4, screenshot, AutoGLM call 4
+Chosen: {'action_type': 'input_text', 'text': 'Maya', 'clear_text': True}
+Step 5, screenshot, AutoGLM call 5
+Chosen: {'action_type': 'click', 'x': 533, 'y': 1130}
+Step 6, screenshot, AutoGLM call 6
+Chosen: {'action_type': 'input_text', 'text': 'Martin', 'clear_text': True}
+Step 7, screenshot, AutoGLM call 7
+Chosen: {'action_type': 'slide', 'start': (538, 1315), 'end': (538, 787)}
+Step 8, screenshot, AutoGLM call 8
+Chosen: {'action_type': 'click', 'x': 533, 'y': 849}
+Step 9, screenshot, AutoGLM call 9
+Chosen: {'action_type': 'input_text', 'text': '+18126340319', 'clear_text': True}
+Step 10, screenshot, AutoGLM call 10
+Chosen: {'action_type': 'click', 'x': 825, 'y': 208}
+Step 11, screenshot, AutoGLM call 11
+Step 11, screenshot, AutoGLM call 12
+Chosen: {'action_type': 'status', 'goal_status': 'complete', 'reason': 'Contact for Maya Martin with phone number +18126340319 has been created successfully. The contact is now saved and displayed in the Contacts app.'}
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261008T055428_595115Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 11,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v14_contacts_unicode_setup",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v10_timer_labels",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 11,
+  "stop_reason": "complete",
+  "model_calls_attempted": 12,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 63.63999999999942,
+  "agent_phase_seconds": 58.34399999999732
+}

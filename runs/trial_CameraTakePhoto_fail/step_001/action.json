@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Launch",
+    "app": "camera"
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "camera"
+  },
+  "observation_id": "observation_0"
+}

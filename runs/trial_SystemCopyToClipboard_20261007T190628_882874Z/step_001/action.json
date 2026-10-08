@@ -1,0 +1,13 @@
+{
+  "native": {
+    "action": "AWAKE",
+    "value": "Clipper",
+    "verify": "The Clipper application should be open and its main interface should be visible on the screen."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "clipper"
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

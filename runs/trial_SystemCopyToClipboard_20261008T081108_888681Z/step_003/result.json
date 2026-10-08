@@ -1,0 +1,17 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Type",
+    "text": "john.doe@example.com"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.005268650428921569,
+  "dispatch_returned": true,
+  "visible_fields_after": [
+    {
+      "hint": null,
+      "text": "john.doe@example.com"
+    }
+  ],
+  "execute_and_observe_seconds": 8.203000000008615
+}

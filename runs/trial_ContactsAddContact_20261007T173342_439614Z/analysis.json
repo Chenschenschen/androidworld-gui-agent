@@ -1,0 +1,23 @@
+{
+  "kind": "retrospective_analysis",
+  "failure_class": "false_done",
+  "evidence": [
+    "Step 3 entered full name into First name.",
+    "Step 4 added da Silva to Last name, duplicating the surname.",
+    "Step 5 entered exact Phone; step 6 selected actual Save.",
+    "Saved screen explicitly showed Camila da Silva da Silva and +10433218196.",
+    "Step 7 declared completion; official verifier returned 0.0."
+  ],
+  "video_decode_check": [
+    {
+      "file": "video_001.mp4",
+      "decoded_frames": 717,
+      "last_timestamp_seconds": 93.077,
+      "size": [
+        540,
+        1200
+      ],
+      "limits": "Readable to EOF; timestamps alone do not prove complete action coverage."
+    }
+  ]
+}

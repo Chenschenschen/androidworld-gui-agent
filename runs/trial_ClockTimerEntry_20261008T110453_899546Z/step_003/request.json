@@ -1,0 +1,55 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "The current date: 2026-10-08, Thursday\n# Setup\nYou are a professional Android operation agent assistant that can fulfill the user's high-level instructions. Given a screenshot of the Android interface at each step, you first analyze the situation, then plan the best course of action using Python-style pseudo-code.\n\n# More details about the code\nYour response format must be structured as follows:\n\nThink first: Use <think>...</think> to analyze the current screen, identify key elements, and determine the most efficient action.\nProvide the action: Use <answer>...</answer> to return a single line of pseudo-code representing the operation.\n\nYour output should STRICTLY follow the format:\n<think>\n[Your thought]\n</think>\n<answer>\n[Your operation code]\n</answer>\n\n- **Tap**\n  Perform a tap action on a specified screen area. The element is a list of 2 integers, representing the coordinates of the tap point.\n  **Example**:\n  <answer>\n  do(action=\"Tap\", element=[x,y])\n  </answer>\n- **Type**\n  Enter text into the currently focused input field.\n  **Example**:\n  <answer>\n  do(action=\"Type\", text=\"Hello World\")\n  </answer>\n- **Swipe**\n  Perform a swipe action with start point and end point.\n  **Examples**:\n  <answer>\n  do(action=\"Swipe\", start=[x1,y1], end=[x2,y2])\n  </answer>\n- **Long Press**\n  Perform a long press action on a specified screen area.\n  You can add the element to the action to specify the long press area. The element is a list of 2 integers, representing the coordinates of the long press point.\n  **Example**:\n  <answer>\n  do(action=\"Long Press\", element=[x,y])\n  </answer>\n- **Launch**\n  Launch an app. Try to use launch action when you need to launch an app. Check the instruction to choose the right app before you use this action.\n  **Example**:\n  <answer>\n  do(action=\"Launch\", app=\"Settings\")\n  </answer>\n- **Back**\n  Press the Back button to navigate to the previous screen.\n  **Example**:\n  <answer>\n  do(action=\"Back\")\n  </answer>\n- **Finish**\n  Terminate the program and optionally print a message.\n  **Example**:\n  <answer>\n  finish(message=\"Task completed.\")\n  </answer>\n\n\nREMEMBER:\n- Think before you act: Always analyze the current UI and the best course of action before executing any step, and output in <think> part.\n- Only ONE LINE of action in <answer> part per response: Each step must contain exactly one line of executable code.\n- Generate execution code strictly according to format requirements.\n"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Create a timer with 20 hours, 7 minutes, and 1 seconds. Do not start the timer.\n\n{\"current_app\": \"System Home\"}"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The user wants to create a timer with specific values. The Clock app is visible on the home screen and should be launched to access the timer functionality.</think><answer>do(action=\"Launch\", app=\"Clock\")\n</answer>"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "** Screen Info **\n\n{\"current_app\": \"System Home\"}"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The Clock app icon is visible on the home screen at [518,518,713,639]. To proceed with creating the timer, I need to open the Clock app first.</think><answer>do(action=\"Tap\", element=[615,540])\n</answer>"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "[screen.png]"
+          }
+        },
+        {
+          "type": "text",
+          "text": "** Screen Info **\n\n{\"current_app\": \"Clock\"}"
+        }
+      ]
+    }
+  ],
+  "stream": true,
+  "model": "autoglm-phone-multilingual",
+  "temperature": 0,
+  "top_p": 0.85,
+  "frequency_penalty": 0.2,
+  "max_tokens": 3000
+}

@@ -1,0 +1,16 @@
+{
+  "valid": true,
+  "correct": true,
+  "fields": {
+    "verify": "Typed \"Camila\" into the First name field",
+    "action": "TYPE",
+    "value": "Camila",
+    "ARGUMENTS": "{\"value\": \"Camila\", \"element_index\": 7}",
+    "key_process": "entering first name"
+  },
+  "action": {
+    "action_type": "input_text",
+    "text": "Camila"
+  },
+  "executed": false
+}

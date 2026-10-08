@@ -1,0 +1,13 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Type",
+    "text": "Ali"
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "Ali",
+    "clear_text": true
+  },
+  "observation_id": "observation_0"
+}

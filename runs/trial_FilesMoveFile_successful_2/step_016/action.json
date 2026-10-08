@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "finish",
+    "message": "The file 'cooking-recipe.md' has been successfully moved from 'project_easy' to 'project_medium'."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "The file 'cooking-recipe.md' has been successfully moved from 'project_easy' to 'project_medium'."
+  },
+  "observation_id": "observation_0"
+}

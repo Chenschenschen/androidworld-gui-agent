@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The long press action has brought up the context menu with options including \"Copy\". To copy the text \"alex.jordan@example.net\" to the clipboard, I need to tap the \"Copy\" option in the menu. The \"Copy\" button is located at [201,165,295,191].\ndo(action=\"Tap\", element=[201,165])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440493,
+  "id": "20261008142132609317331ba140f5",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008142132609317331ba140f5",
+  "usage": {
+    "completion_tokens": 75,
+    "prompt_tokens": 3827,
+    "prompt_tokens_details": {
+      "cached_tokens": 2038
+    },
+    "total_tokens": 3902
+  },
+  "wall_seconds": 1.764999999999418
+}

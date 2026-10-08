@@ -1,0 +1,13 @@
+{
+  "native": {
+    "action": "AWAKE",
+    "value": "Contacts",
+    "verify": "The Contacts app should open, displaying the main contact list."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "contacts"
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

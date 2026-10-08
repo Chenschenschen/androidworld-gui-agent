@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Move to...\" option is available in the menu, which is the correct choice to move the selected file to the \"project_medium\" folder. The \"Move to...\" option is located at [513, 315, 989, 367], so I should tap it next.\n\n\ndo(action=\"Tap\", element=[739,341])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791468434,
+  "id": "20261008220712aac8ae609d57416d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008220712aac8ae609d57416d",
+  "usage": {
+    "completion_tokens": 79,
+    "prompt_tokens": 6366,
+    "prompt_tokens_details": {
+      "cached_tokens": 4120
+    },
+    "total_tokens": 6445
+  },
+  "wall_seconds": 2.2659999999887077
+}

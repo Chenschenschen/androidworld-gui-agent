@@ -1,0 +1,32 @@
+{
+  "kind": "learning_trial",
+  "task": "CameraTakePhoto",
+  "run_id": "trial_CameraTakePhoto_20261007T205626_958365Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v7_native_finish_text",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v5_history_completion",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "step_budget",
+  "model_calls_attempted": 12,
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "clean_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 76.31200000000536,
+  "agent_phase_seconds": 72.98400000000402
+}

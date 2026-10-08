@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I need to navigate to the root directory or storage areas to access the sdk_gphone_x86_64 storage and locate the source and destination folders. The \"Show roots\" button (hamburger menu) at [0,53,135,105] will open the navigation drawer to access storage locations.\n\ndo(action=\"Tap\", element=[68,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469167,
+  "id": "202610082219264f7cd17d0f854d5f",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082219264f7cd17d0f854d5f",
+  "usage": {
+    "completion_tokens": 75,
+    "prompt_tokens": 3064,
+    "prompt_tokens_details": {
+      "cached_tokens": 1519
+    },
+    "total_tokens": 3139
+  },
+  "wall_seconds": 1.8589999999967404
+}

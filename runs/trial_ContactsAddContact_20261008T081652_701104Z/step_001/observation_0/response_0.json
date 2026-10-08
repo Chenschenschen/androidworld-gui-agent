@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe home screen is visible with the Contacts app icon. To create a new contact, first launch the Contacts app.\n\n\ndo(action=\"Launch\", app=\"Contacts\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447422,
+  "id": "20261008161701d9501810b2e44b7c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008161701d9501810b2e44b7c",
+  "usage": {
+    "completion_tokens": 39,
+    "prompt_tokens": 1843,
+    "prompt_tokens_details": {
+      "cached_tokens": 746
+    },
+    "total_tokens": 1882
+  },
+  "wall_seconds": 3.0
+}

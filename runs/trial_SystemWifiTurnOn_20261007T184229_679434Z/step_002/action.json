@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "WiFi",
+    "verify": "The WiFi toggle is now in the 'ON' position.",
+    "target": "App info",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1270
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

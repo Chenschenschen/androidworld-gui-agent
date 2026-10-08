@@ -1,0 +1,21 @@
+{
+  "kind": "retrospective_analysis",
+  "failure_class": "grounding",
+  "evidence": [
+    "Contact-filter and tab wandering; no text entry occurred.",
+    "A No contacts yet heading was offered as a target and tapped.",
+    "GPU16 to GPU22 live runs also changed prompt wording; quality comparison is confounded."
+  ],
+  "video_decode_check": [
+    {
+      "file": "video_001.mp4",
+      "decoded_frames": 1691,
+      "last_timestamp_seconds": 149.255,
+      "size": [
+        540,
+        1200
+      ],
+      "limits": "Readable to EOF; variable frame timestamps are not a completeness proof."
+    }
+  ]
+}

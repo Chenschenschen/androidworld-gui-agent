@@ -1,0 +1,36 @@
+{
+  "version": "autoglm_api_v28_actual_control_feedback",
+  "provider": "zai",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "model": "autoglm-phone-multilingual",
+  "observation": "screenshot",
+  "tree_backend": "none",
+  "supplemental_tree_packages": [
+    "com.android.settings",
+    "com.google.android.deskclock",
+    "com.android.chrome"
+  ],
+  "action_format": "native_pseudocall",
+  "sampling": {
+    "temperature": 0,
+    "top_p": 0.85,
+    "frequency_penalty": 0.2,
+    "max_tokens": 3000
+  },
+  "max_steps": 12,
+  "task_step_budgets": {
+    "ContactsAddContact": 16
+  },
+  "max_seconds": 900,
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "max_reobservations": 1,
+  "freshness_global_difference": 0.08,
+  "freshness_target_difference": 0.08,
+  "no_effect_difference": 0.001,
+  "note": "v23 follows pinned Open-AutoGLM English prompt/3000-token cap and sourced Android World completion/recovery/text-selection guidance. Long task recipes and unsupported Clock Type exception withdrawn. Short visible completion goals, original task once, ordered native history, latest image and factual GUI status. Chrome paired field centers repair observed wrong suggestion grounding; Contacts16-step budget follows real Saveat12. Scheduler always stops first failed clean trial for logged diagnosis before another run. Sources and slide mapping: docs/COURSE_AND_UPSTREAM_REVIEW.md.",
+  "visual_stability_checks": 3,
+  "visual_stability_pause": 0.5,
+  "visual_stability_difference": 0.01
+}

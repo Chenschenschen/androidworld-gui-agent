@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe user wants to turn Wi-Fi on. The current screen is the home screen of the Android device. To enable Wi-Fi, I need to open the Settings app first, then navigate to the Internet settings to turn on Wi-Fi.\n\nLooking at the screenshot, I can see the Settings app icon in the bottom right area. I should tap on it to open the Settings app.\n\nThe Settings app icon appears to be at coordinates around [846, 666, 946, 715] based on the layout.\ndo(action=\"Tap\", element=[846,666,946,715])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440740,
+  "id": "2026100814253876d4e9315d304646",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814253876d4e9315d304646",
+  "usage": {
+    "completion_tokens": 132,
+    "prompt_tokens": 1647,
+    "prompt_tokens_details": {
+      "cached_tokens": 620
+    },
+    "total_tokens": 1779
+  },
+  "wall_seconds": 2.187000000005355
+}

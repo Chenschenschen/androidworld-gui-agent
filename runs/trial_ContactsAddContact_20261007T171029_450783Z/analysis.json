@@ -1,0 +1,21 @@
+{
+  "kind": "retrospective_analysis",
+  "failure_class": "false_done",
+  "evidence": [
+    "Step 6 entered the exact phone number with targeted TYPE.",
+    "Step 7 selected heading Create contact (index 1), while Save was index 2.",
+    "Step 8 claimed COMPLETE with the creation form still open."
+  ],
+  "video_decode_check": [
+    {
+      "file": "video_001.mp4",
+      "decoded_frames": 651,
+      "last_timestamp_seconds": 102.393,
+      "size": [
+        540,
+        1200
+      ],
+      "limits": "Readable to EOF; variable frame timestamps are not a completeness proof."
+    }
+  ]
+}

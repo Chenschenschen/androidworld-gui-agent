@@ -1,0 +1,19 @@
+{
+  "native": {
+    "action": "TYPE",
+    "value": "Camila",
+    "verify": "The 'Last name' field should now contain the text 'Camila'.",
+    "target": "Last name",
+    "index": "8",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "Camila",
+    "x": 535,
+    "y": 1135,
+    "clear_text": true
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "correct": false,
+  "fields": {
+    "verify": "Wi-Fi is enabled on the device.",
+    "note": "The Wi-Fi is already on, so no further steps are needed.",
+    "action": "COMPLETE",
+    "return": "The Wi-Fi is already turned on.",
+    "summary": "The task is to turn on Wi-Fi. The previous action of scrolling down in the settings was incorrect and unnecessary. After observing the current screen, it is clear that the Wi-Fi is already enabled. The task is complete."
+  },
+  "action": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "The Wi-Fi is already turned on."
+  },
+  "executed": false
+}

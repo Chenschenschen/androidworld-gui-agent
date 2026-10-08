@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "00 minutes",
+    "verify": "The seconds field should now display 00.",
+    "target": "00 minutes",
+    "index": "6",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 541,
+    "y": 1093
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

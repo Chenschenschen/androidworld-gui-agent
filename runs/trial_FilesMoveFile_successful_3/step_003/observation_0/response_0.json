@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "We are now in the \"Show roots\" view, which displays the available storage locations. To access the \"sdk_gphone_x86_64\" storage area and locate the \"project_easy\" and \"project_medium\" folders, we should tap on \"sdk_gphone64_x86_64\".\n\n\ndo(action=\"Tap\", element=[340,540])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791483952,
+  "id": "202610090225512277c17ca87e4a86",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610090225512277c17ca87e4a86",
+  "usage": {
+    "completion_tokens": 77,
+    "prompt_tokens": 3823,
+    "prompt_tokens_details": {
+      "cached_tokens": 1714
+    },
+    "total_tokens": 3900
+  },
+  "wall_seconds": 1.7810000000026776
+}

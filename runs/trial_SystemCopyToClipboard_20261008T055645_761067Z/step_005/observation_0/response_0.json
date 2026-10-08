@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "好的，长按后出现了上下文菜单，我可以看到\"Cut\"、\"Copy\"、\"Paste\"、\"Share\"等选项。现在我需要点击\"Copy\"按钮来复制文本。Copy按钮的位置大约在(238, 201)左右。\ndo(action=\"Tap\", element=[238,201])\ndo(action=\"Tap\", element=[238,201])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791439041,
+  "id": "202610081357199047b0cb194544c3",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081357199047b0cb194544c3",
+  "usage": {
+    "completion_tokens": 77,
+    "prompt_tokens": 3352,
+    "prompt_tokens_details": {
+      "cached_tokens": 1756
+    },
+    "total_tokens": 3429
+  },
+  "wall_seconds": 1.6720000000059372
+}

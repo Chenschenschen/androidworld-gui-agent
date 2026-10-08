@@ -1,0 +1,6433 @@
+[
+  {
+    "row": 1,
+    "cells": [
+      {
+        "value": "\u26a0\ufe0f Community-submitted results. No independent verification is performed. Scores are self-reported and may be inaccurate. Use at your own risk.",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 2,
+    "cells": [
+      {
+        "value": "Rank",
+        "link": null
+      },
+      {
+        "value": "Release Date",
+        "link": null
+      },
+      {
+        "value": "Result Source",
+        "link": null
+      },
+      {
+        "value": "Model Type",
+        "link": null
+      },
+      {
+        "value": "Open?",
+        "link": null
+      },
+      {
+        "value": "Model Size",
+        "link": null
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "Screen\nRepresentation",
+        "link": null
+      },
+      {
+        "value": "Success Rate\n(pass@1)",
+        "link": null
+      },
+      {
+        "value": "Number\nof trials",
+        "link": null
+      },
+      {
+        "value": "Success Rate\n(pass@k)",
+        "link": null
+      },
+      {
+        "value": "Trajectory\nsubmissions",
+        "link": null
+      },
+      {
+        "value": "Note",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 3,
+    "cells": [
+      {
+        "value": "1",
+        "link": null
+      },
+      {
+        "value": "2026-08-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "FluizAI",
+        "link": "https://fluiz.ai/benchmark"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "gpt-4o / gpt-5.6-sol",
+        "link": null
+      },
+      {
+        "value": "Screenshot + A11y tree",
+        "link": null
+      },
+      {
+        "value": "100.0",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://android-world.fluiz.ai/",
+        "link": "https://android-world.fluiz.ai/"
+      },
+      {
+        "value": "Code is not open-sourced yet.",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 4,
+    "cells": [
+      {
+        "value": "1",
+        "link": null
+      },
+      {
+        "value": "2026-08-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Kirk Engine",
+        "link": "https://abhishekdh.github.io/kirk-engine/"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "gpt-4o / gpt-5.4",
+        "link": null
+      },
+      {
+        "value": "Screenshot + A11y tree",
+        "link": null
+      },
+      {
+        "value": "100.0",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://abhishekdh.github.io/kirk-engine/",
+        "link": "https://abhishekdh.github.io/kirk-engine/"
+      },
+      {
+        "value": "Code is not open-sourced yet.",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 5,
+    "cells": [
+      {
+        "value": "1",
+        "link": null
+      },
+      {
+        "value": "2026-09-28 00:00:00",
+        "link": null
+      },
+      {
+        "value": "MobileRun",
+        "link": "https://mobilerun.ai/benchmark/"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "GPT6 Astra",
+        "link": null
+      },
+      {
+        "value": "Screenshot + A11y tree",
+        "link": null
+      },
+      {
+        "value": "100.0",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "Trajectories",
+        "link": "https://mobilerun.ai/benchmark/"
+      },
+      {
+        "value": "[09/30/2026] 91.4 --> Updated harness and using GPT-6 Astra\n[10/6/2025]: 78.4 --> 91.4; details here\n[09/19/2025]: Updated score from 63.0 --> 78.4. For this run, we used GPT-5 for reasoning in combination with Gemini-2.5-Pro for acting, while continuing to rely on a hybrid method of the Accessibility (A11y) tree plus corresponding screenshots to provide both structural and visual context to the agent.\n",
+        "link": "https://droidrun.ai/benchmark/method/"
+      }
+    ]
+  },
+  {
+    "row": 6,
+    "cells": [
+      {
+        "value": "1",
+        "link": null
+      },
+      {
+        "value": "2025-10-07 00:00:00",
+        "link": null
+      },
+      {
+        "value": "AGI-0",
+        "link": "https://www.theagi.company/blog/android-world"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "AGI-0",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "100.0",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "Trajectories",
+        "link": "https://drive.google.com/file/d/1zLDr1jpp3fOMP2y5Dxo1Rk6J_iO5Zn-N/view"
+      },
+      {
+        "value": "[09/2026]: 97.4 --> 100. Qwen3.5-27B trained with using our novel training technique on AndroidWorld tasks. Code and model will be open-sourced upon publication.\n[10/14/2025] Changed from model --> agent, based on description in blog post. https://www.theagi.company/blog/android-world",
+        "link": "https://www.theagi.company/blog/android-world"
+      }
+    ]
+  },
+  {
+    "row": 7,
+    "cells": [
+      {
+        "value": "5",
+        "link": null
+      },
+      {
+        "value": "2026-08-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Artemis",
+        "link": "https://github.com/google/artemis"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Gemini 3.7 Flash, Gemini Robotics ER 2",
+        "link": null
+      },
+      {
+        "value": "Screenshot + A11y tree",
+        "link": null
+      },
+      {
+        "value": "99.1",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "Open-source project available at https://github.com/google/artemis ",
+        "link": "https://github.com/google/artemis"
+      }
+    ]
+  },
+  {
+    "row": 8,
+    "cells": [
+      {
+        "value": "6",
+        "link": null
+      },
+      {
+        "value": "2026-02-15 00:00:00",
+        "link": null
+      },
+      {
+        "value": "MobileUseAgent",
+        "link": "https://github.com/volcengine/vePhone/tree/main/Quick%20Start/MobileUse"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Seed1.8-GUI",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "97.4",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 9,
+    "cells": [
+      {
+        "value": "6",
+        "link": null
+      },
+      {
+        "value": "2026-03-07 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Finalrun",
+        "link": "https://finalrun.app/benchmark/"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Gemini 3 flash, Gemini 3 flash lite",
+        "link": null
+      },
+      {
+        "value": "Screenshot + A11y tree",
+        "link": null
+      },
+      {
+        "value": "97.4",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://drive.google.com/file/d/1NITEkiYb3itSq46I8BYsmzefEddzYbqm/view?usp=sharing",
+        "link": "https://drive.google.com/file/d/1NITEkiYb3itSq46I8BYsmzefEddzYbqm/view?usp=sharing"
+      },
+      {
+        "value": "04/2026: Project is open-source at https://github.com/final-run/finalrun-agent\n03/2026: Updated results: https://blogs.finalrun.app/finalrun-achieves-the-new-1-sota-mobile-agent-eclipsing-benchmarks-at-97-4\n08/2025: The technical doc/approach can be found here: https://github.com/final-run/finalrun-android-world-benchmark",
+        "link": "https://github.com/final-run/finalrun-agent"
+      }
+    ]
+  },
+  {
+    "row": 10,
+    "cells": [
+      {
+        "value": "8",
+        "link": null
+      },
+      {
+        "value": "2025-10-24 00:00:00",
+        "link": null
+      },
+      {
+        "value": "askui AndroidVisionAgent",
+        "link": "https://www.askui.com/blog-posts/askui-vision-agent-achieves-2nd-place-on-androidworld-benchmark"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "askui AndroidVisionAgent, Claude 4.5 Sonnet + Claude 4.0 Sonnet",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "94.8",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "n/a",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 11,
+    "cells": [
+      {
+        "value": "8",
+        "link": null
+      },
+      {
+        "value": "2026-01-15 00:00:00",
+        "link": null
+      },
+      {
+        "value": "AutoDevice",
+        "link": "https://autodevice.io/benchmark/"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "gemini 3 pro + sonnet 4.5",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "94.8",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://autodevice.io/benchmark/",
+        "link": "https://autodevice.io/benchmark/"
+      },
+      {
+        "value": "Agent code is available on https://github.com/autodevice/android_world",
+        "link": "https://github.com/autodevice/android_world"
+      }
+    ]
+  },
+  {
+    "row": 12,
+    "cells": [
+      {
+        "value": "10",
+        "link": null
+      },
+      {
+        "value": "2026-06-15 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Midscene.js",
+        "link": "https://midscenejs.com/android-world-benchmark-report"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Gemini-3.5-Flash",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "93.1",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "pass@2 95.69, pass@3 97.41",
+        "link": null
+      },
+      {
+        "value": "Trajectory submissions: https://midscenejs.com/android-world-benchmark-report",
+        "link": "https://midscenejs.com/android-world-benchmark-report"
+      }
+    ]
+  },
+  {
+    "row": 13,
+    "cells": [
+      {
+        "value": "11",
+        "link": null
+      },
+      {
+        "value": "2025-09-11 00:00:00",
+        "link": null
+      },
+      {
+        "value": "mobile-use",
+        "link": "https://minitap.ai/benchmark"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Llama 4-scout, Gemini 2.5 pro, GPT-5 nano",
+        "link": null
+      },
+      {
+        "value": "Screenshot + A11y tree",
+        "link": null
+      },
+      {
+        "value": "91.4",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://minitap.ai/benchmark",
+        "link": null
+      },
+      {
+        "value": "[12/16/2025] 84.5% -> 91.4%\n[10/1/2025]: 77.6% -> 84.5%\n[09/12/2025]: Updated score from 74.1% --> 77.6%\n[08/19/2025]: Initial trajectory labeling issue (MarkorCreateNoteFromClipboard) has been corrected by the authors. They provide Discord support for setup issues.\n[08/18/2025]: Repo has been reported broken by some users (not independently verified). Some trajectories (e.g., MarkorCreateNoteFromClipboard, BrowserMaze) are labeled as successful by the authors but contain incorrect actions",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 14,
+    "cells": [
+      {
+        "value": "12",
+        "link": null
+      },
+      {
+        "value": "2025-12-31 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Agent-Visco",
+        "link": "https://github.com/sys-reasoner/Visco"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "88.8",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://work.aliyun.com/alimail/openLinks/downloadMimeMetaDiskBigAttach?id=netdiskid%3Av001%3Afile%3ADzzzzzzNqZy%3BG8EhE7UV7U9nk2t2O6opysa%2BgRf5Zm6eTqXqtVApm1nDD8W%2BxnLAgdDsJsOSlxfXTx44NU7qRM%2BkJMuIA0smltxGWspXGX2Ox228yqp07rNX%2FIm2QehcGJBgHwUs0f81cz2sX76WNxvxnhpZnqmxiYxHNHRd2hybrPLi2DRQ8bM5ORhI%2BtGG%2B7n%2BcxdY1Ji0",
+        "link": "https://work.aliyun.com/alimail/openLinks/downloadMimeMetaDiskBigAttach?id=netdiskid%3Av001%3Afile%3ADzzzzzzNqZy%3BG8EhE7UV7U9nk2t2O6opysa%2BgRf5Zm6eTqXqtVApm1nDD8W%2BxnLAgdDsJsOSlxfXTx44NU7qRM%2BkJMuIA0smltxGWspXGX2Ox228yqp07rNX%2FIm2QehcGJBgHwUs0f81cz2sX76WNxvxnhpZnqmxiYxHNHRd2hybrPLi2DRQ8bM5ORhI%2BtGG%2B7n%2BcxdY1Ji0"
+      },
+      {
+        "value": "Research paper and codes will be open-source in early months.",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 15,
+    "cells": [
+      {
+        "value": "13",
+        "link": null
+      },
+      {
+        "value": "2025-10-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Surfer 2",
+        "link": "https://www.hcompany.ai/blog/surfer-2"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "o3 + holo1.5-72b",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "87.1",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "pass@3 93.1",
+        "link": null
+      },
+      {
+        "value": "https://hcompai.github.io/android-world-traces/",
+        "link": "https://hcompai.github.io/android-world-traces/"
+      },
+      {
+        "value": "Agent is based on https://github.com/hcompai/surfer-h-cli - same architecture, but with modifications to prompt and action space",
+        "link": "https://github.com/hcompai/surfer-h-cli"
+      }
+    ]
+  },
+  {
+    "row": 16,
+    "cells": [
+      {
+        "value": "14",
+        "link": null
+      },
+      {
+        "value": "2025-10-06 00:00:00",
+        "link": null
+      },
+      {
+        "value": "gbox.ai",
+        "link": "http://gbox.ai/"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Sonnet 4.5 + Sonnet 4",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "86.2",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://github.com/babelcloud/android_world_benchmark/tree/main/GBOX/trajectory",
+        "link": "https://github.com/babelcloud/android_world_benchmark/tree/main/GBOX/trajectory"
+      },
+      {
+        "value": "GBOX uses Claude code as the agent with GBOX mcp. Link to report -> https://github.com/babelcloud/android_world_benchmark/blob/main/GBOX/report.md",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 17,
+    "cells": [
+      {
+        "value": "15",
+        "link": null
+      },
+      {
+        "value": "2025-08-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "AutoGLM-Mobile",
+        "link": "https://arxiv.org/abs/2509.18119"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "9B",
+        "link": null
+      },
+      {
+        "value": "AutoGLM-Mobile",
+        "link": null
+      },
+      {
+        "value": "Screenshot + A11y tree",
+        "link": null
+      },
+      {
+        "value": "80.2",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "autoglm-mobile-aw-ckpt.zip",
+        "link": "https://drive.google.com/file/d/17VvochIjiu10i_EnoX1iRHqWQnjZj3--/view?usp=sharing"
+      },
+      {
+        "value": "[9/26/2025]: Updated score from 75.8 --> 80.2 This is an updated version of AutoGLM-Mobile. In this version, we added more pretraining data and trained the VLM at full image resolution.",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 18,
+    "cells": [
+      {
+        "value": "16",
+        "link": null
+      },
+      {
+        "value": "2025-09-09 00:00:00",
+        "link": null
+      },
+      {
+        "value": "LX-GUIAgent",
+        "link": "https://github.com/LX-GUIAgent/LX-GUIAgent"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "LX-GUIAgent",
+        "link": null
+      },
+      {
+        "value": "Screenshot + A11y tree",
+        "link": null
+      },
+      {
+        "value": "79.3",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "androidworld-trajectories.zip",
+        "link": "https://drive.google.com/file/d/1W7pE3omDKGxKV07AYj1rdDC8iWQBoQUi/view?usp=sharing"
+      },
+      {
+        "value": "[9/23/2025]: Updated score from 75.0 --> 79.3. Added trajectories.",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 19,
+    "cells": [
+      {
+        "value": "17",
+        "link": null
+      },
+      {
+        "value": "2025-12-15 00:00:00",
+        "link": null
+      },
+      {
+        "value": "AgentProg",
+        "link": "https://github.com/MobileLLM/AgentProg)"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Gemini-2.5-Pro+UI-TARS-1.5",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "78.0",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "AgentProg_AndroidWorld.zip",
+        "link": "https://drive.google.com/file/d/1lFmKOWi8npQ9jsmR25fhBLuqu4dyyLxG/view?usp=drive_link"
+      },
+      {
+        "value": "Paper: https://arxiv.org/pdf/2512.10371; Code: https://github.com/MobileLLM/AgentProg",
+        "link": "https://arxiv.org/pdf/2512.10371;"
+      }
+    ]
+  },
+  {
+    "row": 20,
+    "cells": [
+      {
+        "value": "18",
+        "link": null
+      },
+      {
+        "value": "2025-09-11 00:00:00",
+        "link": null
+      },
+      {
+        "value": "K\u00b2-Agent",
+        "link": "https://github.com/k2-agent/k2-agent"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "72B + 7B",
+        "link": null
+      },
+      {
+        "value": "Qwen2.5-VL-72B + Qwen2.5-VL-7B",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "76.7",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://github.com/k2-agent/k2-agent/blob/main/androidworld-trajectories.zip",
+        "link": "https://github.com/k2-agent/k2-agent/blob/main/androidworld-trajectories.zip"
+      },
+      {
+        "value": "K\u00b2-Agent, a hierarchical approach that self-evolves a Qwen2.5-VL-72B for high-level planning and post-trains a Qwen2.5-VL-7B for low-level execution.\nOur GitHub repository, which contains a detailed description of our approach, can be found here: https://github.com/k2-agent/k2-agent.",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 21,
+    "cells": [
+      {
+        "value": "18",
+        "link": null
+      },
+      {
+        "value": "2026-01-09 00:00:00",
+        "link": null
+      },
+      {
+        "value": "MAI-UI",
+        "link": "https://tongyi-mai.github.io/MAI-UI-blog/"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "235B",
+        "link": null
+      },
+      {
+        "value": "MAI-UI-235B-A22B",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "76.7",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 22,
+    "cells": [
+      {
+        "value": "20",
+        "link": null
+      },
+      {
+        "value": "2025-09-06 00:00:00",
+        "link": null
+      },
+      {
+        "value": "MobileUse-v2",
+        "link": "https://github.com/MadeAgents/mobile-use"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "32B",
+        "link": null
+      },
+      {
+        "value": "Hammer-UI-32B",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "75.0",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "MobileUse-v2-aw-ckpt.zip",
+        "link": "https://drive.google.com/file/d/13TLIwX4LgdNwp2m2entfwXf8S2MjhOdM/view?usp=sharing"
+      },
+      {
+        "value": "Make further post-training based on the GUI-Owl-32b model. Optimize the memory and knowledge module of the MobileUse framework.",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 23,
+    "cells": [
+      {
+        "value": "21",
+        "link": null
+      },
+      {
+        "value": "2025-08-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Mobile-Agent-v3",
+        "link": "https://arxiv.org/pdf/2508.15144"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "32B",
+        "link": null
+      },
+      {
+        "value": "GUI-Owl-32B",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "73.3",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://github.com/X-PLUG/MobileAgent/tree/main",
+        "link": "https://github.com/X-PLUG/MobileAgent/tree/main"
+      }
+    ]
+  },
+  {
+    "row": 24,
+    "cells": [
+      {
+        "value": "21",
+        "link": null
+      },
+      {
+        "value": "2026-01-09 00:00:00",
+        "link": null
+      },
+      {
+        "value": "MAI-UI",
+        "link": "https://tongyi-mai.github.io/MAI-UI-blog/"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "32B",
+        "link": null
+      },
+      {
+        "value": "MAI-UI-32B",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "73.3",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 25,
+    "cells": [
+      {
+        "value": "23",
+        "link": null
+      },
+      {
+        "value": "2026-01-09 00:00:00",
+        "link": null
+      },
+      {
+        "value": "MAI-UI",
+        "link": "https://tongyi-mai.github.io/MAI-UI-blog/"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "8B",
+        "link": null
+      },
+      {
+        "value": "MAI-UI-8B",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "70.7",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 26,
+    "cells": [
+      {
+        "value": "24",
+        "link": null
+      },
+      {
+        "value": "2025-10-07 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Gemini 2.5 Computer Use ",
+        "link": "https://blog.google/technology/google-deepmind/gemini-computer-use-model/"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Gemini 2.5 Computer Use ",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "69.7",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 27,
+    "cells": [
+      {
+        "value": "25",
+        "link": null
+      },
+      {
+        "value": "2025-06-17 00:00:00",
+        "link": null
+      },
+      {
+        "value": "JT-GUIAgent-V2",
+        "link": "https://github.com/JT-GUIAgent/JT-GUIAgent-V1/tree/main"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "JT-GUIAgent-V2",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "67.24",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 28,
+    "cells": [
+      {
+        "value": "26",
+        "link": null
+      },
+      {
+        "value": "2025-08-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "GUI-Owl-7B",
+        "link": "https://arxiv.org/pdf/2508.15144"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "7B",
+        "link": null
+      },
+      {
+        "value": "GUI-Owl-7B",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "66.4",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://github.com/X-PLUG/MobileAgent/tree/main",
+        "link": "https://github.com/X-PLUG/MobileAgent/tree/main"
+      }
+    ]
+  },
+  {
+    "row": 29,
+    "cells": [
+      {
+        "value": "27",
+        "link": null
+      },
+      {
+        "value": "2025-08-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "UI-Venus",
+        "link": "https://arxiv.org/abs/2508.10833"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "72B",
+        "link": null
+      },
+      {
+        "value": "UI-Venus-Navi-72B",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "65.9",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://github.com/inclusionAI/UI-Venus/blob/main/vis_androidworld/UI-Venus-androidworld.zip",
+        "link": "https://github.com/inclusionAI/UI-Venus/blob/main/vis_androidworld/UI-Venus-androidworld.zip"
+      },
+      {
+        "value": "https://huggingface.co/inclusionAI/UI-Venus-Navi-72B",
+        "link": "https://huggingface.co/inclusionAI/UI-Venus-Navi-72B"
+      }
+    ]
+  },
+  {
+    "row": 30,
+    "cells": [
+      {
+        "value": "28",
+        "link": null
+      },
+      {
+        "value": "2025-07-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "MobileUse",
+        "link": "https://arxiv.org/abs/2507.16853"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "72B",
+        "link": null
+      },
+      {
+        "value": "Qwen2.5-VL-72B",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "62.9",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 31,
+    "cells": [
+      {
+        "value": "29",
+        "link": null
+      },
+      {
+        "value": "2025-05-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Seed1.5-VL",
+        "link": "https://github.com/ByteDance-Seed/Seed1.5-VL"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "20.B",
+        "link": null
+      },
+      {
+        "value": "Seed1.5-VL",
+        "link": null
+      },
+      {
+        "value": "Screenshot + A11y tree",
+        "link": null
+      },
+      {
+        "value": "62.1",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 32,
+    "cells": [
+      {
+        "value": "30",
+        "link": null
+      },
+      {
+        "value": "2025-06-17 00:00:00",
+        "link": null
+      },
+      {
+        "value": "JT-GUIAgent-V1",
+        "link": "https://github.com/JT-GUIAgent/JT-GUIAgent-V1/tree/main"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "JT-GUIAgent-V1",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "60.0",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 33,
+    "cells": [
+      {
+        "value": "31",
+        "link": null
+      },
+      {
+        "value": "2025-03-20 00:00:00",
+        "link": null
+      },
+      {
+        "value": "V-Droid Paper",
+        "link": "https://arxiv.org/abs/2503.15937"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "8B",
+        "link": null
+      },
+      {
+        "value": "V-Droid (Llama8B)",
+        "link": null
+      },
+      {
+        "value": "A11y tree",
+        "link": null
+      },
+      {
+        "value": "59.5",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Training data consists of apps and tasks from the AndroidWorld benchmark. Code.",
+        "link": "https://github.com/V-Droid-Agent/V-Droid"
+      }
+    ]
+  },
+  {
+    "row": 34,
+    "cells": [
+      {
+        "value": "32",
+        "link": null
+      },
+      {
+        "value": "2025-04-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Agent S2",
+        "link": "https://github.com/simular-ai/agent-S"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Agent S2",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "54.3",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 35,
+    "cells": [
+      {
+        "value": "33",
+        "link": null
+      },
+      {
+        "value": "2025-08-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "UI-Venus",
+        "link": "https://arxiv.org/abs/2508.10833"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "7B",
+        "link": null
+      },
+      {
+        "value": "Venus-Navi-7B",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "49.1",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "https://github.com/inclusionAI/UI-Venus/blob/main/vis_androidworld/UI-Venus-androidworld.zip",
+        "link": "https://github.com/inclusionAI/UI-Venus/blob/main/vis_androidworld/UI-Venus-androidworld.zip"
+      },
+      {
+        "value": "https://huggingface.co/inclusionAI/UI-Venus-Navi-7B",
+        "link": "https://huggingface.co/inclusionAI/UI-Venus-Navi-7B"
+      }
+    ]
+  },
+  {
+    "row": 36,
+    "cells": [
+      {
+        "value": "33",
+        "link": null
+      },
+      {
+        "value": "2026-01-09 00:00:00",
+        "link": null
+      },
+      {
+        "value": "MAI-UI",
+        "link": "https://tongyi-mai.github.io/MAI-UI-blog/"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "2B",
+        "link": null
+      },
+      {
+        "value": "MAI-UI-2B",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "49.1",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 37,
+    "cells": [
+      {
+        "value": "35",
+        "link": null
+      },
+      {
+        "value": "2025-05-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "GUI-Explorer",
+        "link": "https://github.com/JiuTian-VL/GUI-explorer"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "GPT-4o",
+        "link": null
+      },
+      {
+        "value": "Screenshot + A11y tree",
+        "link": null
+      },
+      {
+        "value": "47.4",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 38,
+    "cells": [
+      {
+        "value": "36",
+        "link": null
+      },
+      {
+        "value": "2025-04-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "AndroidGen",
+        "link": "https://github.com/THUDM/AndroidGen"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "GPT-4o",
+        "link": null
+      },
+      {
+        "value": "A11y tree",
+        "link": null
+      },
+      {
+        "value": "46.8",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 39,
+    "cells": [
+      {
+        "value": "37",
+        "link": null
+      },
+      {
+        "value": "2025-01-21 00:00:00",
+        "link": null
+      },
+      {
+        "value": "UI-TARS",
+        "link": "https://arxiv.org/pdf/2501.12326"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "72B",
+        "link": null
+      },
+      {
+        "value": "UI-TARS",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "46.6",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 40,
+    "cells": [
+      {
+        "value": "38",
+        "link": null
+      },
+      {
+        "value": "2024-12-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Aria-UI",
+        "link": "https://ariaui.github.io/"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "GPT-4o + Aria-UI",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "44.8",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 41,
+    "cells": [
+      {
+        "value": "39",
+        "link": null
+      },
+      {
+        "value": "2025-04-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "ScaleTrack",
+        "link": "https://arxiv.org/abs/2505.00416"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "8B",
+        "link": null
+      },
+      {
+        "value": "ScaleTrack-7B",
+        "link": null
+      },
+      {
+        "value": "A11y tree",
+        "link": null
+      },
+      {
+        "value": "44.0",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 42,
+    "cells": [
+      {
+        "value": "39",
+        "link": null
+      },
+      {
+        "value": "2025-01-23 00:00:00",
+        "link": null
+      },
+      {
+        "value": "UGround",
+        "link": "https://arxiv.org/abs/2410.05243"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "GPT-4o + UGround",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "44.0",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Trajectories",
+        "link": "https://huggingface.co/datasets/BoyuNLP/Misc/tree/main/Experiments/AndroidWorld"
+      },
+      {
+        "value": "Code for reproduction",
+        "link": "https://github.com/boyugou/android_world_seeact_v"
+      }
+    ]
+  },
+  {
+    "row": 43,
+    "cells": [
+      {
+        "value": "41",
+        "link": null
+      },
+      {
+        "value": "2025-06-12 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Mirage-1",
+        "link": "https://cybertronagent.github.io/Mirage-1.github.io/"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "GPT-4o",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "42.2",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "With Mirage-1-O; uses OS-Atlas grounder",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 44,
+    "cells": [
+      {
+        "value": "42",
+        "link": null
+      },
+      {
+        "value": "2024-12-02 00:00:00",
+        "link": null
+      },
+      {
+        "value": "Ponder & Press",
+        "link": "https://invinciblewyq.github.io/ponder-press-page/"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "GPT-4o",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "34.5",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Code is not yet open-sourced",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 45,
+    "cells": [
+      {
+        "value": "43",
+        "link": null
+      },
+      {
+        "value": "2024-05-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "AndroidWorld",
+        "link": "https://arxiv.org/abs/2405.14573"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "GPT-4 Turbo",
+        "link": null
+      },
+      {
+        "value": "A11y tree",
+        "link": null
+      },
+      {
+        "value": "30.6",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 46,
+    "cells": [
+      {
+        "value": "44",
+        "link": null
+      },
+      {
+        "value": "2025-06-05 00:00:00",
+        "link": null
+      },
+      {
+        "value": "GUI-Critic-R1",
+        "link": "https://github.com/X-PLUG/MobileAgent/tree/main/GUI-Critic-R1"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "7B",
+        "link": null
+      },
+      {
+        "value": "Qwen-2.5-VL-7B",
+        "link": null
+      },
+      {
+        "value": "Screenshot + A11y tree",
+        "link": null
+      },
+      {
+        "value": "27.6",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 47,
+    "cells": [
+      {
+        "value": "44",
+        "link": null
+      },
+      {
+        "value": "2024-05-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "EcoAgent",
+        "link": "https://arxiv.org/abs/2505.05440"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "GPT-4o, OS-Atlas-Pro 4B, Qwen2-VL-2B-Instruct",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "27.6",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 48,
+    "cells": [
+      {
+        "value": "46",
+        "link": null
+      },
+      {
+        "value": "2025-01-29 00:00:00",
+        "link": null
+      },
+      {
+        "value": "InfiGUIAgent",
+        "link": "https://arxiv.org/abs/2501.04575"
+      },
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "\u2714",
+        "link": null
+      },
+      {
+        "value": "2B",
+        "link": null
+      },
+      {
+        "value": "Qwen2-VL-2B (fine-tuned)",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "9.0",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 49,
+    "cells": [
+      {
+        "value": "2024-10-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "OSCAR",
+        "link": "https://arxiv.org/abs/2410.18963"
+      },
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "\u2717",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "GPT-4o",
+        "link": null
+      },
+      {
+        "value": "Screenshot",
+        "link": null
+      },
+      {
+        "value": "1.0",
+        "link": null
+      },
+      {
+        "value": "61.6 (k=4)",
+        "link": null
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Code will be open-source upon publication.",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 50,
+    "cells": []
+  },
+  {
+    "row": 51,
+    "cells": [
+      {
+        "value": "Human Performance",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 52,
+    "cells": [
+      {
+        "value": "2024-05-01 00:00:00",
+        "link": null
+      },
+      {
+        "value": "AndroidWorld",
+        "link": "https://arxiv.org/abs/2405.14573"
+      },
+      {
+        "value": "-",
+        "link": null
+      },
+      {
+        "value": "Human",
+        "link": null
+      },
+      {
+        "value": "80.0",
+        "link": null
+      },
+      {
+        "value": "3.0",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 53,
+    "cells": []
+  },
+  {
+    "row": 54,
+    "cells": [
+      {
+        "value": "Comment here or email crawles@gmail.com to submit your work! Please attach how should the data entry look like.",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 55,
+    "cells": []
+  },
+  {
+    "row": 56,
+    "cells": [
+      {
+        "value": "Definitions",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 57,
+    "cells": [
+      {
+        "value": "Model",
+        "link": null
+      },
+      {
+        "value": "A relatively simple prompt involving one LLM /VLM call ",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 58,
+    "cells": [
+      {
+        "value": "AI agent",
+        "link": null
+      },
+      {
+        "value": "A multi-agent architecture involving several LLM calls and a protocol to coordinate the various agents or an LLM wrapped into an advanced agent with memory, subgoal planning, etc.",
+        "link": null
+      }
+    ]
+  },
+  {
+    "row": 59,
+    "cells": []
+  },
+  {
+    "row": 60,
+    "cells": []
+  },
+  {
+    "row": 61,
+    "cells": []
+  },
+  {
+    "row": 62,
+    "cells": []
+  },
+  {
+    "row": 63,
+    "cells": []
+  },
+  {
+    "row": 64,
+    "cells": []
+  },
+  {
+    "row": 65,
+    "cells": []
+  },
+  {
+    "row": 66,
+    "cells": []
+  },
+  {
+    "row": 67,
+    "cells": []
+  },
+  {
+    "row": 68,
+    "cells": []
+  },
+  {
+    "row": 69,
+    "cells": []
+  },
+  {
+    "row": 70,
+    "cells": []
+  },
+  {
+    "row": 71,
+    "cells": []
+  },
+  {
+    "row": 72,
+    "cells": []
+  },
+  {
+    "row": 73,
+    "cells": []
+  },
+  {
+    "row": 74,
+    "cells": []
+  },
+  {
+    "row": 75,
+    "cells": []
+  },
+  {
+    "row": 76,
+    "cells": []
+  },
+  {
+    "row": 77,
+    "cells": []
+  },
+  {
+    "row": 78,
+    "cells": []
+  },
+  {
+    "row": 79,
+    "cells": []
+  },
+  {
+    "row": 80,
+    "cells": []
+  },
+  {
+    "row": 81,
+    "cells": []
+  },
+  {
+    "row": 82,
+    "cells": []
+  },
+  {
+    "row": 83,
+    "cells": []
+  },
+  {
+    "row": 84,
+    "cells": []
+  },
+  {
+    "row": 85,
+    "cells": []
+  },
+  {
+    "row": 86,
+    "cells": []
+  },
+  {
+    "row": 87,
+    "cells": []
+  },
+  {
+    "row": 88,
+    "cells": []
+  },
+  {
+    "row": 89,
+    "cells": []
+  },
+  {
+    "row": 90,
+    "cells": []
+  },
+  {
+    "row": 91,
+    "cells": []
+  },
+  {
+    "row": 92,
+    "cells": []
+  },
+  {
+    "row": 93,
+    "cells": []
+  },
+  {
+    "row": 94,
+    "cells": []
+  },
+  {
+    "row": 95,
+    "cells": []
+  },
+  {
+    "row": 96,
+    "cells": []
+  },
+  {
+    "row": 97,
+    "cells": []
+  },
+  {
+    "row": 98,
+    "cells": []
+  },
+  {
+    "row": 99,
+    "cells": []
+  },
+  {
+    "row": 100,
+    "cells": []
+  },
+  {
+    "row": 101,
+    "cells": []
+  },
+  {
+    "row": 102,
+    "cells": []
+  },
+  {
+    "row": 103,
+    "cells": []
+  },
+  {
+    "row": 104,
+    "cells": []
+  },
+  {
+    "row": 105,
+    "cells": []
+  },
+  {
+    "row": 106,
+    "cells": []
+  },
+  {
+    "row": 107,
+    "cells": []
+  },
+  {
+    "row": 108,
+    "cells": []
+  },
+  {
+    "row": 109,
+    "cells": []
+  },
+  {
+    "row": 110,
+    "cells": []
+  },
+  {
+    "row": 111,
+    "cells": []
+  },
+  {
+    "row": 112,
+    "cells": []
+  },
+  {
+    "row": 113,
+    "cells": []
+  },
+  {
+    "row": 114,
+    "cells": []
+  },
+  {
+    "row": 115,
+    "cells": []
+  },
+  {
+    "row": 116,
+    "cells": []
+  },
+  {
+    "row": 117,
+    "cells": []
+  },
+  {
+    "row": 118,
+    "cells": []
+  },
+  {
+    "row": 119,
+    "cells": []
+  },
+  {
+    "row": 120,
+    "cells": []
+  },
+  {
+    "row": 121,
+    "cells": []
+  },
+  {
+    "row": 122,
+    "cells": []
+  },
+  {
+    "row": 123,
+    "cells": []
+  },
+  {
+    "row": 124,
+    "cells": []
+  },
+  {
+    "row": 125,
+    "cells": []
+  },
+  {
+    "row": 126,
+    "cells": []
+  },
+  {
+    "row": 127,
+    "cells": []
+  },
+  {
+    "row": 128,
+    "cells": []
+  },
+  {
+    "row": 129,
+    "cells": []
+  },
+  {
+    "row": 130,
+    "cells": []
+  },
+  {
+    "row": 131,
+    "cells": []
+  },
+  {
+    "row": 132,
+    "cells": []
+  },
+  {
+    "row": 133,
+    "cells": []
+  },
+  {
+    "row": 134,
+    "cells": []
+  },
+  {
+    "row": 135,
+    "cells": []
+  },
+  {
+    "row": 136,
+    "cells": []
+  },
+  {
+    "row": 137,
+    "cells": []
+  },
+  {
+    "row": 138,
+    "cells": []
+  },
+  {
+    "row": 139,
+    "cells": []
+  },
+  {
+    "row": 140,
+    "cells": []
+  },
+  {
+    "row": 141,
+    "cells": []
+  },
+  {
+    "row": 142,
+    "cells": []
+  },
+  {
+    "row": 143,
+    "cells": []
+  },
+  {
+    "row": 144,
+    "cells": []
+  },
+  {
+    "row": 145,
+    "cells": []
+  },
+  {
+    "row": 146,
+    "cells": []
+  },
+  {
+    "row": 147,
+    "cells": []
+  },
+  {
+    "row": 148,
+    "cells": []
+  },
+  {
+    "row": 149,
+    "cells": []
+  },
+  {
+    "row": 150,
+    "cells": []
+  },
+  {
+    "row": 151,
+    "cells": []
+  },
+  {
+    "row": 152,
+    "cells": []
+  },
+  {
+    "row": 153,
+    "cells": []
+  },
+  {
+    "row": 154,
+    "cells": []
+  },
+  {
+    "row": 155,
+    "cells": []
+  },
+  {
+    "row": 156,
+    "cells": []
+  },
+  {
+    "row": 157,
+    "cells": []
+  },
+  {
+    "row": 158,
+    "cells": []
+  },
+  {
+    "row": 159,
+    "cells": []
+  },
+  {
+    "row": 160,
+    "cells": []
+  },
+  {
+    "row": 161,
+    "cells": []
+  },
+  {
+    "row": 162,
+    "cells": []
+  },
+  {
+    "row": 163,
+    "cells": []
+  },
+  {
+    "row": 164,
+    "cells": []
+  },
+  {
+    "row": 165,
+    "cells": []
+  },
+  {
+    "row": 166,
+    "cells": []
+  },
+  {
+    "row": 167,
+    "cells": []
+  },
+  {
+    "row": 168,
+    "cells": []
+  },
+  {
+    "row": 169,
+    "cells": []
+  },
+  {
+    "row": 170,
+    "cells": []
+  },
+  {
+    "row": 171,
+    "cells": []
+  },
+  {
+    "row": 172,
+    "cells": []
+  },
+  {
+    "row": 173,
+    "cells": []
+  },
+  {
+    "row": 174,
+    "cells": []
+  },
+  {
+    "row": 175,
+    "cells": []
+  },
+  {
+    "row": 176,
+    "cells": []
+  },
+  {
+    "row": 177,
+    "cells": []
+  },
+  {
+    "row": 178,
+    "cells": []
+  },
+  {
+    "row": 179,
+    "cells": []
+  },
+  {
+    "row": 180,
+    "cells": []
+  },
+  {
+    "row": 181,
+    "cells": []
+  },
+  {
+    "row": 182,
+    "cells": []
+  },
+  {
+    "row": 183,
+    "cells": []
+  },
+  {
+    "row": 184,
+    "cells": []
+  },
+  {
+    "row": 185,
+    "cells": []
+  },
+  {
+    "row": 186,
+    "cells": []
+  },
+  {
+    "row": 187,
+    "cells": []
+  },
+  {
+    "row": 188,
+    "cells": []
+  },
+  {
+    "row": 189,
+    "cells": []
+  },
+  {
+    "row": 190,
+    "cells": []
+  },
+  {
+    "row": 191,
+    "cells": []
+  },
+  {
+    "row": 192,
+    "cells": []
+  },
+  {
+    "row": 193,
+    "cells": []
+  },
+  {
+    "row": 194,
+    "cells": []
+  },
+  {
+    "row": 195,
+    "cells": []
+  },
+  {
+    "row": 196,
+    "cells": []
+  },
+  {
+    "row": 197,
+    "cells": []
+  },
+  {
+    "row": 198,
+    "cells": []
+  },
+  {
+    "row": 199,
+    "cells": []
+  },
+  {
+    "row": 200,
+    "cells": []
+  },
+  {
+    "row": 201,
+    "cells": []
+  },
+  {
+    "row": 202,
+    "cells": []
+  },
+  {
+    "row": 203,
+    "cells": []
+  },
+  {
+    "row": 204,
+    "cells": []
+  },
+  {
+    "row": 205,
+    "cells": []
+  },
+  {
+    "row": 206,
+    "cells": []
+  },
+  {
+    "row": 207,
+    "cells": []
+  },
+  {
+    "row": 208,
+    "cells": []
+  },
+  {
+    "row": 209,
+    "cells": []
+  },
+  {
+    "row": 210,
+    "cells": []
+  },
+  {
+    "row": 211,
+    "cells": []
+  },
+  {
+    "row": 212,
+    "cells": []
+  },
+  {
+    "row": 213,
+    "cells": []
+  },
+  {
+    "row": 214,
+    "cells": []
+  },
+  {
+    "row": 215,
+    "cells": []
+  },
+  {
+    "row": 216,
+    "cells": []
+  },
+  {
+    "row": 217,
+    "cells": []
+  },
+  {
+    "row": 218,
+    "cells": []
+  },
+  {
+    "row": 219,
+    "cells": []
+  },
+  {
+    "row": 220,
+    "cells": []
+  },
+  {
+    "row": 221,
+    "cells": []
+  },
+  {
+    "row": 222,
+    "cells": []
+  },
+  {
+    "row": 223,
+    "cells": []
+  },
+  {
+    "row": 224,
+    "cells": []
+  },
+  {
+    "row": 225,
+    "cells": []
+  },
+  {
+    "row": 226,
+    "cells": []
+  },
+  {
+    "row": 227,
+    "cells": []
+  },
+  {
+    "row": 228,
+    "cells": []
+  },
+  {
+    "row": 229,
+    "cells": []
+  },
+  {
+    "row": 230,
+    "cells": []
+  },
+  {
+    "row": 231,
+    "cells": []
+  },
+  {
+    "row": 232,
+    "cells": []
+  },
+  {
+    "row": 233,
+    "cells": []
+  },
+  {
+    "row": 234,
+    "cells": []
+  },
+  {
+    "row": 235,
+    "cells": []
+  },
+  {
+    "row": 236,
+    "cells": []
+  },
+  {
+    "row": 237,
+    "cells": []
+  },
+  {
+    "row": 238,
+    "cells": []
+  },
+  {
+    "row": 239,
+    "cells": []
+  },
+  {
+    "row": 240,
+    "cells": []
+  },
+  {
+    "row": 241,
+    "cells": []
+  },
+  {
+    "row": 242,
+    "cells": []
+  },
+  {
+    "row": 243,
+    "cells": []
+  },
+  {
+    "row": 244,
+    "cells": []
+  },
+  {
+    "row": 245,
+    "cells": []
+  },
+  {
+    "row": 246,
+    "cells": []
+  },
+  {
+    "row": 247,
+    "cells": []
+  },
+  {
+    "row": 248,
+    "cells": []
+  },
+  {
+    "row": 249,
+    "cells": []
+  },
+  {
+    "row": 250,
+    "cells": []
+  },
+  {
+    "row": 251,
+    "cells": []
+  },
+  {
+    "row": 252,
+    "cells": []
+  },
+  {
+    "row": 253,
+    "cells": []
+  },
+  {
+    "row": 254,
+    "cells": []
+  },
+  {
+    "row": 255,
+    "cells": []
+  },
+  {
+    "row": 256,
+    "cells": []
+  },
+  {
+    "row": 257,
+    "cells": []
+  },
+  {
+    "row": 258,
+    "cells": []
+  },
+  {
+    "row": 259,
+    "cells": []
+  },
+  {
+    "row": 260,
+    "cells": []
+  },
+  {
+    "row": 261,
+    "cells": []
+  },
+  {
+    "row": 262,
+    "cells": []
+  },
+  {
+    "row": 263,
+    "cells": []
+  },
+  {
+    "row": 264,
+    "cells": []
+  },
+  {
+    "row": 265,
+    "cells": []
+  },
+  {
+    "row": 266,
+    "cells": []
+  },
+  {
+    "row": 267,
+    "cells": []
+  },
+  {
+    "row": 268,
+    "cells": []
+  },
+  {
+    "row": 269,
+    "cells": []
+  },
+  {
+    "row": 270,
+    "cells": []
+  },
+  {
+    "row": 271,
+    "cells": []
+  },
+  {
+    "row": 272,
+    "cells": []
+  },
+  {
+    "row": 273,
+    "cells": []
+  },
+  {
+    "row": 274,
+    "cells": []
+  },
+  {
+    "row": 275,
+    "cells": []
+  },
+  {
+    "row": 276,
+    "cells": []
+  },
+  {
+    "row": 277,
+    "cells": []
+  },
+  {
+    "row": 278,
+    "cells": []
+  },
+  {
+    "row": 279,
+    "cells": []
+  },
+  {
+    "row": 280,
+    "cells": []
+  },
+  {
+    "row": 281,
+    "cells": []
+  },
+  {
+    "row": 282,
+    "cells": []
+  },
+  {
+    "row": 283,
+    "cells": []
+  },
+  {
+    "row": 284,
+    "cells": []
+  },
+  {
+    "row": 285,
+    "cells": []
+  },
+  {
+    "row": 286,
+    "cells": []
+  },
+  {
+    "row": 287,
+    "cells": []
+  },
+  {
+    "row": 288,
+    "cells": []
+  },
+  {
+    "row": 289,
+    "cells": []
+  },
+  {
+    "row": 290,
+    "cells": []
+  },
+  {
+    "row": 291,
+    "cells": []
+  },
+  {
+    "row": 292,
+    "cells": []
+  },
+  {
+    "row": 293,
+    "cells": []
+  },
+  {
+    "row": 294,
+    "cells": []
+  },
+  {
+    "row": 295,
+    "cells": []
+  },
+  {
+    "row": 296,
+    "cells": []
+  },
+  {
+    "row": 297,
+    "cells": []
+  },
+  {
+    "row": 298,
+    "cells": []
+  },
+  {
+    "row": 299,
+    "cells": []
+  },
+  {
+    "row": 300,
+    "cells": []
+  },
+  {
+    "row": 301,
+    "cells": []
+  },
+  {
+    "row": 302,
+    "cells": []
+  },
+  {
+    "row": 303,
+    "cells": []
+  },
+  {
+    "row": 304,
+    "cells": []
+  },
+  {
+    "row": 305,
+    "cells": []
+  },
+  {
+    "row": 306,
+    "cells": []
+  },
+  {
+    "row": 307,
+    "cells": []
+  },
+  {
+    "row": 308,
+    "cells": []
+  },
+  {
+    "row": 309,
+    "cells": []
+  },
+  {
+    "row": 310,
+    "cells": []
+  },
+  {
+    "row": 311,
+    "cells": []
+  },
+  {
+    "row": 312,
+    "cells": []
+  },
+  {
+    "row": 313,
+    "cells": []
+  },
+  {
+    "row": 314,
+    "cells": []
+  },
+  {
+    "row": 315,
+    "cells": []
+  },
+  {
+    "row": 316,
+    "cells": []
+  },
+  {
+    "row": 317,
+    "cells": []
+  },
+  {
+    "row": 318,
+    "cells": []
+  },
+  {
+    "row": 319,
+    "cells": []
+  },
+  {
+    "row": 320,
+    "cells": []
+  },
+  {
+    "row": 321,
+    "cells": []
+  },
+  {
+    "row": 322,
+    "cells": []
+  },
+  {
+    "row": 323,
+    "cells": []
+  },
+  {
+    "row": 324,
+    "cells": []
+  },
+  {
+    "row": 325,
+    "cells": []
+  },
+  {
+    "row": 326,
+    "cells": []
+  },
+  {
+    "row": 327,
+    "cells": []
+  },
+  {
+    "row": 328,
+    "cells": []
+  },
+  {
+    "row": 329,
+    "cells": []
+  },
+  {
+    "row": 330,
+    "cells": []
+  },
+  {
+    "row": 331,
+    "cells": []
+  },
+  {
+    "row": 332,
+    "cells": []
+  },
+  {
+    "row": 333,
+    "cells": []
+  },
+  {
+    "row": 334,
+    "cells": []
+  },
+  {
+    "row": 335,
+    "cells": []
+  },
+  {
+    "row": 336,
+    "cells": []
+  },
+  {
+    "row": 337,
+    "cells": []
+  },
+  {
+    "row": 338,
+    "cells": []
+  },
+  {
+    "row": 339,
+    "cells": []
+  },
+  {
+    "row": 340,
+    "cells": []
+  },
+  {
+    "row": 341,
+    "cells": []
+  },
+  {
+    "row": 342,
+    "cells": []
+  },
+  {
+    "row": 343,
+    "cells": []
+  },
+  {
+    "row": 344,
+    "cells": []
+  },
+  {
+    "row": 345,
+    "cells": []
+  },
+  {
+    "row": 346,
+    "cells": []
+  },
+  {
+    "row": 347,
+    "cells": []
+  },
+  {
+    "row": 348,
+    "cells": []
+  },
+  {
+    "row": 349,
+    "cells": []
+  },
+  {
+    "row": 350,
+    "cells": []
+  },
+  {
+    "row": 351,
+    "cells": []
+  },
+  {
+    "row": 352,
+    "cells": []
+  },
+  {
+    "row": 353,
+    "cells": []
+  },
+  {
+    "row": 354,
+    "cells": []
+  },
+  {
+    "row": 355,
+    "cells": []
+  },
+  {
+    "row": 356,
+    "cells": []
+  },
+  {
+    "row": 357,
+    "cells": []
+  },
+  {
+    "row": 358,
+    "cells": []
+  },
+  {
+    "row": 359,
+    "cells": []
+  },
+  {
+    "row": 360,
+    "cells": []
+  },
+  {
+    "row": 361,
+    "cells": []
+  },
+  {
+    "row": 362,
+    "cells": []
+  },
+  {
+    "row": 363,
+    "cells": []
+  },
+  {
+    "row": 364,
+    "cells": []
+  },
+  {
+    "row": 365,
+    "cells": []
+  },
+  {
+    "row": 366,
+    "cells": []
+  },
+  {
+    "row": 367,
+    "cells": []
+  },
+  {
+    "row": 368,
+    "cells": []
+  },
+  {
+    "row": 369,
+    "cells": []
+  },
+  {
+    "row": 370,
+    "cells": []
+  },
+  {
+    "row": 371,
+    "cells": []
+  },
+  {
+    "row": 372,
+    "cells": []
+  },
+  {
+    "row": 373,
+    "cells": []
+  },
+  {
+    "row": 374,
+    "cells": []
+  },
+  {
+    "row": 375,
+    "cells": []
+  },
+  {
+    "row": 376,
+    "cells": []
+  },
+  {
+    "row": 377,
+    "cells": []
+  },
+  {
+    "row": 378,
+    "cells": []
+  },
+  {
+    "row": 379,
+    "cells": []
+  },
+  {
+    "row": 380,
+    "cells": []
+  },
+  {
+    "row": 381,
+    "cells": []
+  },
+  {
+    "row": 382,
+    "cells": []
+  },
+  {
+    "row": 383,
+    "cells": []
+  },
+  {
+    "row": 384,
+    "cells": []
+  },
+  {
+    "row": 385,
+    "cells": []
+  },
+  {
+    "row": 386,
+    "cells": []
+  },
+  {
+    "row": 387,
+    "cells": []
+  },
+  {
+    "row": 388,
+    "cells": []
+  },
+  {
+    "row": 389,
+    "cells": []
+  },
+  {
+    "row": 390,
+    "cells": []
+  },
+  {
+    "row": 391,
+    "cells": []
+  },
+  {
+    "row": 392,
+    "cells": []
+  },
+  {
+    "row": 393,
+    "cells": []
+  },
+  {
+    "row": 394,
+    "cells": []
+  },
+  {
+    "row": 395,
+    "cells": []
+  },
+  {
+    "row": 396,
+    "cells": []
+  },
+  {
+    "row": 397,
+    "cells": []
+  },
+  {
+    "row": 398,
+    "cells": []
+  },
+  {
+    "row": 399,
+    "cells": []
+  },
+  {
+    "row": 400,
+    "cells": []
+  },
+  {
+    "row": 401,
+    "cells": []
+  },
+  {
+    "row": 402,
+    "cells": []
+  },
+  {
+    "row": 403,
+    "cells": []
+  },
+  {
+    "row": 404,
+    "cells": []
+  },
+  {
+    "row": 405,
+    "cells": []
+  },
+  {
+    "row": 406,
+    "cells": []
+  },
+  {
+    "row": 407,
+    "cells": []
+  },
+  {
+    "row": 408,
+    "cells": []
+  },
+  {
+    "row": 409,
+    "cells": []
+  },
+  {
+    "row": 410,
+    "cells": []
+  },
+  {
+    "row": 411,
+    "cells": []
+  },
+  {
+    "row": 412,
+    "cells": []
+  },
+  {
+    "row": 413,
+    "cells": []
+  },
+  {
+    "row": 414,
+    "cells": []
+  },
+  {
+    "row": 415,
+    "cells": []
+  },
+  {
+    "row": 416,
+    "cells": []
+  },
+  {
+    "row": 417,
+    "cells": []
+  },
+  {
+    "row": 418,
+    "cells": []
+  },
+  {
+    "row": 419,
+    "cells": []
+  },
+  {
+    "row": 420,
+    "cells": []
+  },
+  {
+    "row": 421,
+    "cells": []
+  },
+  {
+    "row": 422,
+    "cells": []
+  },
+  {
+    "row": 423,
+    "cells": []
+  },
+  {
+    "row": 424,
+    "cells": []
+  },
+  {
+    "row": 425,
+    "cells": []
+  },
+  {
+    "row": 426,
+    "cells": []
+  },
+  {
+    "row": 427,
+    "cells": []
+  },
+  {
+    "row": 428,
+    "cells": []
+  },
+  {
+    "row": 429,
+    "cells": []
+  },
+  {
+    "row": 430,
+    "cells": []
+  },
+  {
+    "row": 431,
+    "cells": []
+  },
+  {
+    "row": 432,
+    "cells": []
+  },
+  {
+    "row": 433,
+    "cells": []
+  },
+  {
+    "row": 434,
+    "cells": []
+  },
+  {
+    "row": 435,
+    "cells": []
+  },
+  {
+    "row": 436,
+    "cells": []
+  },
+  {
+    "row": 437,
+    "cells": []
+  },
+  {
+    "row": 438,
+    "cells": []
+  },
+  {
+    "row": 439,
+    "cells": []
+  },
+  {
+    "row": 440,
+    "cells": []
+  },
+  {
+    "row": 441,
+    "cells": []
+  },
+  {
+    "row": 442,
+    "cells": []
+  },
+  {
+    "row": 443,
+    "cells": []
+  },
+  {
+    "row": 444,
+    "cells": []
+  },
+  {
+    "row": 445,
+    "cells": []
+  },
+  {
+    "row": 446,
+    "cells": []
+  },
+  {
+    "row": 447,
+    "cells": []
+  },
+  {
+    "row": 448,
+    "cells": []
+  },
+  {
+    "row": 449,
+    "cells": []
+  },
+  {
+    "row": 450,
+    "cells": []
+  },
+  {
+    "row": 451,
+    "cells": []
+  },
+  {
+    "row": 452,
+    "cells": []
+  },
+  {
+    "row": 453,
+    "cells": []
+  },
+  {
+    "row": 454,
+    "cells": []
+  },
+  {
+    "row": 455,
+    "cells": []
+  },
+  {
+    "row": 456,
+    "cells": []
+  },
+  {
+    "row": 457,
+    "cells": []
+  },
+  {
+    "row": 458,
+    "cells": []
+  },
+  {
+    "row": 459,
+    "cells": []
+  },
+  {
+    "row": 460,
+    "cells": []
+  },
+  {
+    "row": 461,
+    "cells": []
+  },
+  {
+    "row": 462,
+    "cells": []
+  },
+  {
+    "row": 463,
+    "cells": []
+  },
+  {
+    "row": 464,
+    "cells": []
+  },
+  {
+    "row": 465,
+    "cells": []
+  },
+  {
+    "row": 466,
+    "cells": []
+  },
+  {
+    "row": 467,
+    "cells": []
+  },
+  {
+    "row": 468,
+    "cells": []
+  },
+  {
+    "row": 469,
+    "cells": []
+  },
+  {
+    "row": 470,
+    "cells": []
+  },
+  {
+    "row": 471,
+    "cells": []
+  },
+  {
+    "row": 472,
+    "cells": []
+  },
+  {
+    "row": 473,
+    "cells": []
+  },
+  {
+    "row": 474,
+    "cells": []
+  },
+  {
+    "row": 475,
+    "cells": []
+  },
+  {
+    "row": 476,
+    "cells": []
+  },
+  {
+    "row": 477,
+    "cells": []
+  },
+  {
+    "row": 478,
+    "cells": []
+  },
+  {
+    "row": 479,
+    "cells": []
+  },
+  {
+    "row": 480,
+    "cells": []
+  },
+  {
+    "row": 481,
+    "cells": []
+  },
+  {
+    "row": 482,
+    "cells": []
+  },
+  {
+    "row": 483,
+    "cells": []
+  },
+  {
+    "row": 484,
+    "cells": []
+  },
+  {
+    "row": 485,
+    "cells": []
+  },
+  {
+    "row": 486,
+    "cells": []
+  },
+  {
+    "row": 487,
+    "cells": []
+  },
+  {
+    "row": 488,
+    "cells": []
+  },
+  {
+    "row": 489,
+    "cells": []
+  },
+  {
+    "row": 490,
+    "cells": []
+  },
+  {
+    "row": 491,
+    "cells": []
+  },
+  {
+    "row": 492,
+    "cells": []
+  },
+  {
+    "row": 493,
+    "cells": []
+  },
+  {
+    "row": 494,
+    "cells": []
+  },
+  {
+    "row": 495,
+    "cells": []
+  },
+  {
+    "row": 496,
+    "cells": []
+  },
+  {
+    "row": 497,
+    "cells": []
+  },
+  {
+    "row": 498,
+    "cells": []
+  },
+  {
+    "row": 499,
+    "cells": []
+  },
+  {
+    "row": 500,
+    "cells": []
+  },
+  {
+    "row": 501,
+    "cells": []
+  },
+  {
+    "row": 502,
+    "cells": []
+  },
+  {
+    "row": 503,
+    "cells": []
+  },
+  {
+    "row": 504,
+    "cells": []
+  },
+  {
+    "row": 505,
+    "cells": []
+  },
+  {
+    "row": 506,
+    "cells": []
+  },
+  {
+    "row": 507,
+    "cells": []
+  },
+  {
+    "row": 508,
+    "cells": []
+  },
+  {
+    "row": 509,
+    "cells": []
+  },
+  {
+    "row": 510,
+    "cells": []
+  },
+  {
+    "row": 511,
+    "cells": []
+  },
+  {
+    "row": 512,
+    "cells": []
+  },
+  {
+    "row": 513,
+    "cells": []
+  },
+  {
+    "row": 514,
+    "cells": []
+  },
+  {
+    "row": 515,
+    "cells": []
+  },
+  {
+    "row": 516,
+    "cells": []
+  },
+  {
+    "row": 517,
+    "cells": []
+  },
+  {
+    "row": 518,
+    "cells": []
+  },
+  {
+    "row": 519,
+    "cells": []
+  },
+  {
+    "row": 520,
+    "cells": []
+  },
+  {
+    "row": 521,
+    "cells": []
+  },
+  {
+    "row": 522,
+    "cells": []
+  },
+  {
+    "row": 523,
+    "cells": []
+  },
+  {
+    "row": 524,
+    "cells": []
+  },
+  {
+    "row": 525,
+    "cells": []
+  },
+  {
+    "row": 526,
+    "cells": []
+  },
+  {
+    "row": 527,
+    "cells": []
+  },
+  {
+    "row": 528,
+    "cells": []
+  },
+  {
+    "row": 529,
+    "cells": []
+  },
+  {
+    "row": 530,
+    "cells": []
+  },
+  {
+    "row": 531,
+    "cells": []
+  },
+  {
+    "row": 532,
+    "cells": []
+  },
+  {
+    "row": 533,
+    "cells": []
+  },
+  {
+    "row": 534,
+    "cells": []
+  },
+  {
+    "row": 535,
+    "cells": []
+  },
+  {
+    "row": 536,
+    "cells": []
+  },
+  {
+    "row": 537,
+    "cells": []
+  },
+  {
+    "row": 538,
+    "cells": []
+  },
+  {
+    "row": 539,
+    "cells": []
+  },
+  {
+    "row": 540,
+    "cells": []
+  },
+  {
+    "row": 541,
+    "cells": []
+  },
+  {
+    "row": 542,
+    "cells": []
+  },
+  {
+    "row": 543,
+    "cells": []
+  },
+  {
+    "row": 544,
+    "cells": []
+  },
+  {
+    "row": 545,
+    "cells": []
+  },
+  {
+    "row": 546,
+    "cells": []
+  },
+  {
+    "row": 547,
+    "cells": []
+  },
+  {
+    "row": 548,
+    "cells": []
+  },
+  {
+    "row": 549,
+    "cells": []
+  },
+  {
+    "row": 550,
+    "cells": []
+  },
+  {
+    "row": 551,
+    "cells": []
+  },
+  {
+    "row": 552,
+    "cells": []
+  },
+  {
+    "row": 553,
+    "cells": []
+  },
+  {
+    "row": 554,
+    "cells": []
+  },
+  {
+    "row": 555,
+    "cells": []
+  },
+  {
+    "row": 556,
+    "cells": []
+  },
+  {
+    "row": 557,
+    "cells": []
+  },
+  {
+    "row": 558,
+    "cells": []
+  },
+  {
+    "row": 559,
+    "cells": []
+  },
+  {
+    "row": 560,
+    "cells": []
+  },
+  {
+    "row": 561,
+    "cells": []
+  },
+  {
+    "row": 562,
+    "cells": []
+  },
+  {
+    "row": 563,
+    "cells": []
+  },
+  {
+    "row": 564,
+    "cells": []
+  },
+  {
+    "row": 565,
+    "cells": []
+  },
+  {
+    "row": 566,
+    "cells": []
+  },
+  {
+    "row": 567,
+    "cells": []
+  },
+  {
+    "row": 568,
+    "cells": []
+  },
+  {
+    "row": 569,
+    "cells": []
+  },
+  {
+    "row": 570,
+    "cells": []
+  },
+  {
+    "row": 571,
+    "cells": []
+  },
+  {
+    "row": 572,
+    "cells": []
+  },
+  {
+    "row": 573,
+    "cells": []
+  },
+  {
+    "row": 574,
+    "cells": []
+  },
+  {
+    "row": 575,
+    "cells": []
+  },
+  {
+    "row": 576,
+    "cells": []
+  },
+  {
+    "row": 577,
+    "cells": []
+  },
+  {
+    "row": 578,
+    "cells": []
+  },
+  {
+    "row": 579,
+    "cells": []
+  },
+  {
+    "row": 580,
+    "cells": []
+  },
+  {
+    "row": 581,
+    "cells": []
+  },
+  {
+    "row": 582,
+    "cells": []
+  },
+  {
+    "row": 583,
+    "cells": []
+  },
+  {
+    "row": 584,
+    "cells": []
+  },
+  {
+    "row": 585,
+    "cells": []
+  },
+  {
+    "row": 586,
+    "cells": []
+  },
+  {
+    "row": 587,
+    "cells": []
+  },
+  {
+    "row": 588,
+    "cells": []
+  },
+  {
+    "row": 589,
+    "cells": []
+  },
+  {
+    "row": 590,
+    "cells": []
+  },
+  {
+    "row": 591,
+    "cells": []
+  },
+  {
+    "row": 592,
+    "cells": []
+  },
+  {
+    "row": 593,
+    "cells": []
+  },
+  {
+    "row": 594,
+    "cells": []
+  },
+  {
+    "row": 595,
+    "cells": []
+  },
+  {
+    "row": 596,
+    "cells": []
+  },
+  {
+    "row": 597,
+    "cells": []
+  },
+  {
+    "row": 598,
+    "cells": []
+  },
+  {
+    "row": 599,
+    "cells": []
+  },
+  {
+    "row": 600,
+    "cells": []
+  },
+  {
+    "row": 601,
+    "cells": []
+  },
+  {
+    "row": 602,
+    "cells": []
+  },
+  {
+    "row": 603,
+    "cells": []
+  },
+  {
+    "row": 604,
+    "cells": []
+  },
+  {
+    "row": 605,
+    "cells": []
+  },
+  {
+    "row": 606,
+    "cells": []
+  },
+  {
+    "row": 607,
+    "cells": []
+  },
+  {
+    "row": 608,
+    "cells": []
+  },
+  {
+    "row": 609,
+    "cells": []
+  },
+  {
+    "row": 610,
+    "cells": []
+  },
+  {
+    "row": 611,
+    "cells": []
+  },
+  {
+    "row": 612,
+    "cells": []
+  },
+  {
+    "row": 613,
+    "cells": []
+  },
+  {
+    "row": 614,
+    "cells": []
+  },
+  {
+    "row": 615,
+    "cells": []
+  },
+  {
+    "row": 616,
+    "cells": []
+  },
+  {
+    "row": 617,
+    "cells": []
+  },
+  {
+    "row": 618,
+    "cells": []
+  },
+  {
+    "row": 619,
+    "cells": []
+  },
+  {
+    "row": 620,
+    "cells": []
+  },
+  {
+    "row": 621,
+    "cells": []
+  },
+  {
+    "row": 622,
+    "cells": []
+  },
+  {
+    "row": 623,
+    "cells": []
+  },
+  {
+    "row": 624,
+    "cells": []
+  },
+  {
+    "row": 625,
+    "cells": []
+  },
+  {
+    "row": 626,
+    "cells": []
+  },
+  {
+    "row": 627,
+    "cells": []
+  },
+  {
+    "row": 628,
+    "cells": []
+  },
+  {
+    "row": 629,
+    "cells": []
+  },
+  {
+    "row": 630,
+    "cells": []
+  },
+  {
+    "row": 631,
+    "cells": []
+  },
+  {
+    "row": 632,
+    "cells": []
+  },
+  {
+    "row": 633,
+    "cells": []
+  },
+  {
+    "row": 634,
+    "cells": []
+  },
+  {
+    "row": 635,
+    "cells": []
+  },
+  {
+    "row": 636,
+    "cells": []
+  },
+  {
+    "row": 637,
+    "cells": []
+  },
+  {
+    "row": 638,
+    "cells": []
+  },
+  {
+    "row": 639,
+    "cells": []
+  },
+  {
+    "row": 640,
+    "cells": []
+  },
+  {
+    "row": 641,
+    "cells": []
+  },
+  {
+    "row": 642,
+    "cells": []
+  },
+  {
+    "row": 643,
+    "cells": []
+  },
+  {
+    "row": 644,
+    "cells": []
+  },
+  {
+    "row": 645,
+    "cells": []
+  },
+  {
+    "row": 646,
+    "cells": []
+  },
+  {
+    "row": 647,
+    "cells": []
+  },
+  {
+    "row": 648,
+    "cells": []
+  },
+  {
+    "row": 649,
+    "cells": []
+  },
+  {
+    "row": 650,
+    "cells": []
+  },
+  {
+    "row": 651,
+    "cells": []
+  },
+  {
+    "row": 652,
+    "cells": []
+  },
+  {
+    "row": 653,
+    "cells": []
+  },
+  {
+    "row": 654,
+    "cells": []
+  },
+  {
+    "row": 655,
+    "cells": []
+  },
+  {
+    "row": 656,
+    "cells": []
+  },
+  {
+    "row": 657,
+    "cells": []
+  },
+  {
+    "row": 658,
+    "cells": []
+  },
+  {
+    "row": 659,
+    "cells": []
+  },
+  {
+    "row": 660,
+    "cells": []
+  },
+  {
+    "row": 661,
+    "cells": []
+  },
+  {
+    "row": 662,
+    "cells": []
+  },
+  {
+    "row": 663,
+    "cells": []
+  },
+  {
+    "row": 664,
+    "cells": []
+  },
+  {
+    "row": 665,
+    "cells": []
+  },
+  {
+    "row": 666,
+    "cells": []
+  },
+  {
+    "row": 667,
+    "cells": []
+  },
+  {
+    "row": 668,
+    "cells": []
+  },
+  {
+    "row": 669,
+    "cells": []
+  },
+  {
+    "row": 670,
+    "cells": []
+  },
+  {
+    "row": 671,
+    "cells": []
+  },
+  {
+    "row": 672,
+    "cells": []
+  },
+  {
+    "row": 673,
+    "cells": []
+  },
+  {
+    "row": 674,
+    "cells": []
+  },
+  {
+    "row": 675,
+    "cells": []
+  },
+  {
+    "row": 676,
+    "cells": []
+  },
+  {
+    "row": 677,
+    "cells": []
+  },
+  {
+    "row": 678,
+    "cells": []
+  },
+  {
+    "row": 679,
+    "cells": []
+  },
+  {
+    "row": 680,
+    "cells": []
+  },
+  {
+    "row": 681,
+    "cells": []
+  },
+  {
+    "row": 682,
+    "cells": []
+  },
+  {
+    "row": 683,
+    "cells": []
+  },
+  {
+    "row": 684,
+    "cells": []
+  },
+  {
+    "row": 685,
+    "cells": []
+  },
+  {
+    "row": 686,
+    "cells": []
+  },
+  {
+    "row": 687,
+    "cells": []
+  },
+  {
+    "row": 688,
+    "cells": []
+  },
+  {
+    "row": 689,
+    "cells": []
+  },
+  {
+    "row": 690,
+    "cells": []
+  },
+  {
+    "row": 691,
+    "cells": []
+  },
+  {
+    "row": 692,
+    "cells": []
+  },
+  {
+    "row": 693,
+    "cells": []
+  },
+  {
+    "row": 694,
+    "cells": []
+  },
+  {
+    "row": 695,
+    "cells": []
+  },
+  {
+    "row": 696,
+    "cells": []
+  },
+  {
+    "row": 697,
+    "cells": []
+  },
+  {
+    "row": 698,
+    "cells": []
+  },
+  {
+    "row": 699,
+    "cells": []
+  },
+  {
+    "row": 700,
+    "cells": []
+  },
+  {
+    "row": 701,
+    "cells": []
+  },
+  {
+    "row": 702,
+    "cells": []
+  },
+  {
+    "row": 703,
+    "cells": []
+  },
+  {
+    "row": 704,
+    "cells": []
+  },
+  {
+    "row": 705,
+    "cells": []
+  },
+  {
+    "row": 706,
+    "cells": []
+  },
+  {
+    "row": 707,
+    "cells": []
+  },
+  {
+    "row": 708,
+    "cells": []
+  },
+  {
+    "row": 709,
+    "cells": []
+  },
+  {
+    "row": 710,
+    "cells": []
+  },
+  {
+    "row": 711,
+    "cells": []
+  },
+  {
+    "row": 712,
+    "cells": []
+  },
+  {
+    "row": 713,
+    "cells": []
+  },
+  {
+    "row": 714,
+    "cells": []
+  },
+  {
+    "row": 715,
+    "cells": []
+  },
+  {
+    "row": 716,
+    "cells": []
+  },
+  {
+    "row": 717,
+    "cells": []
+  },
+  {
+    "row": 718,
+    "cells": []
+  },
+  {
+    "row": 719,
+    "cells": []
+  },
+  {
+    "row": 720,
+    "cells": []
+  },
+  {
+    "row": 721,
+    "cells": []
+  },
+  {
+    "row": 722,
+    "cells": []
+  },
+  {
+    "row": 723,
+    "cells": []
+  },
+  {
+    "row": 724,
+    "cells": []
+  },
+  {
+    "row": 725,
+    "cells": []
+  },
+  {
+    "row": 726,
+    "cells": []
+  },
+  {
+    "row": 727,
+    "cells": []
+  },
+  {
+    "row": 728,
+    "cells": []
+  },
+  {
+    "row": 729,
+    "cells": []
+  },
+  {
+    "row": 730,
+    "cells": []
+  },
+  {
+    "row": 731,
+    "cells": []
+  },
+  {
+    "row": 732,
+    "cells": []
+  },
+  {
+    "row": 733,
+    "cells": []
+  },
+  {
+    "row": 734,
+    "cells": []
+  },
+  {
+    "row": 735,
+    "cells": []
+  },
+  {
+    "row": 736,
+    "cells": []
+  },
+  {
+    "row": 737,
+    "cells": []
+  },
+  {
+    "row": 738,
+    "cells": []
+  },
+  {
+    "row": 739,
+    "cells": []
+  },
+  {
+    "row": 740,
+    "cells": []
+  },
+  {
+    "row": 741,
+    "cells": []
+  },
+  {
+    "row": 742,
+    "cells": []
+  },
+  {
+    "row": 743,
+    "cells": []
+  },
+  {
+    "row": 744,
+    "cells": []
+  },
+  {
+    "row": 745,
+    "cells": []
+  },
+  {
+    "row": 746,
+    "cells": []
+  },
+  {
+    "row": 747,
+    "cells": []
+  },
+  {
+    "row": 748,
+    "cells": []
+  },
+  {
+    "row": 749,
+    "cells": []
+  },
+  {
+    "row": 750,
+    "cells": []
+  },
+  {
+    "row": 751,
+    "cells": []
+  },
+  {
+    "row": 752,
+    "cells": []
+  },
+  {
+    "row": 753,
+    "cells": []
+  },
+  {
+    "row": 754,
+    "cells": []
+  },
+  {
+    "row": 755,
+    "cells": []
+  },
+  {
+    "row": 756,
+    "cells": []
+  },
+  {
+    "row": 757,
+    "cells": []
+  },
+  {
+    "row": 758,
+    "cells": []
+  },
+  {
+    "row": 759,
+    "cells": []
+  },
+  {
+    "row": 760,
+    "cells": []
+  },
+  {
+    "row": 761,
+    "cells": []
+  },
+  {
+    "row": 762,
+    "cells": []
+  },
+  {
+    "row": 763,
+    "cells": []
+  },
+  {
+    "row": 764,
+    "cells": []
+  },
+  {
+    "row": 765,
+    "cells": []
+  },
+  {
+    "row": 766,
+    "cells": []
+  },
+  {
+    "row": 767,
+    "cells": []
+  },
+  {
+    "row": 768,
+    "cells": []
+  },
+  {
+    "row": 769,
+    "cells": []
+  },
+  {
+    "row": 770,
+    "cells": []
+  },
+  {
+    "row": 771,
+    "cells": []
+  },
+  {
+    "row": 772,
+    "cells": []
+  },
+  {
+    "row": 773,
+    "cells": []
+  },
+  {
+    "row": 774,
+    "cells": []
+  },
+  {
+    "row": 775,
+    "cells": []
+  },
+  {
+    "row": 776,
+    "cells": []
+  },
+  {
+    "row": 777,
+    "cells": []
+  },
+  {
+    "row": 778,
+    "cells": []
+  },
+  {
+    "row": 779,
+    "cells": []
+  },
+  {
+    "row": 780,
+    "cells": []
+  },
+  {
+    "row": 781,
+    "cells": []
+  },
+  {
+    "row": 782,
+    "cells": []
+  },
+  {
+    "row": 783,
+    "cells": []
+  },
+  {
+    "row": 784,
+    "cells": []
+  },
+  {
+    "row": 785,
+    "cells": []
+  },
+  {
+    "row": 786,
+    "cells": []
+  },
+  {
+    "row": 787,
+    "cells": []
+  },
+  {
+    "row": 788,
+    "cells": []
+  },
+  {
+    "row": 789,
+    "cells": []
+  },
+  {
+    "row": 790,
+    "cells": []
+  },
+  {
+    "row": 791,
+    "cells": []
+  },
+  {
+    "row": 792,
+    "cells": []
+  },
+  {
+    "row": 793,
+    "cells": []
+  },
+  {
+    "row": 794,
+    "cells": []
+  },
+  {
+    "row": 795,
+    "cells": []
+  },
+  {
+    "row": 796,
+    "cells": []
+  },
+  {
+    "row": 797,
+    "cells": []
+  },
+  {
+    "row": 798,
+    "cells": []
+  },
+  {
+    "row": 799,
+    "cells": []
+  },
+  {
+    "row": 800,
+    "cells": []
+  },
+  {
+    "row": 801,
+    "cells": []
+  },
+  {
+    "row": 802,
+    "cells": []
+  },
+  {
+    "row": 803,
+    "cells": []
+  },
+  {
+    "row": 804,
+    "cells": []
+  },
+  {
+    "row": 805,
+    "cells": []
+  },
+  {
+    "row": 806,
+    "cells": []
+  },
+  {
+    "row": 807,
+    "cells": []
+  },
+  {
+    "row": 808,
+    "cells": []
+  },
+  {
+    "row": 809,
+    "cells": []
+  },
+  {
+    "row": 810,
+    "cells": []
+  },
+  {
+    "row": 811,
+    "cells": []
+  },
+  {
+    "row": 812,
+    "cells": []
+  },
+  {
+    "row": 813,
+    "cells": []
+  },
+  {
+    "row": 814,
+    "cells": []
+  },
+  {
+    "row": 815,
+    "cells": []
+  },
+  {
+    "row": 816,
+    "cells": []
+  },
+  {
+    "row": 817,
+    "cells": []
+  },
+  {
+    "row": 818,
+    "cells": []
+  },
+  {
+    "row": 819,
+    "cells": []
+  },
+  {
+    "row": 820,
+    "cells": []
+  },
+  {
+    "row": 821,
+    "cells": []
+  },
+  {
+    "row": 822,
+    "cells": []
+  },
+  {
+    "row": 823,
+    "cells": []
+  },
+  {
+    "row": 824,
+    "cells": []
+  },
+  {
+    "row": 825,
+    "cells": []
+  },
+  {
+    "row": 826,
+    "cells": []
+  },
+  {
+    "row": 827,
+    "cells": []
+  },
+  {
+    "row": 828,
+    "cells": []
+  },
+  {
+    "row": 829,
+    "cells": []
+  },
+  {
+    "row": 830,
+    "cells": []
+  },
+  {
+    "row": 831,
+    "cells": []
+  },
+  {
+    "row": 832,
+    "cells": []
+  },
+  {
+    "row": 833,
+    "cells": []
+  },
+  {
+    "row": 834,
+    "cells": []
+  },
+  {
+    "row": 835,
+    "cells": []
+  },
+  {
+    "row": 836,
+    "cells": []
+  },
+  {
+    "row": 837,
+    "cells": []
+  },
+  {
+    "row": 838,
+    "cells": []
+  },
+  {
+    "row": 839,
+    "cells": []
+  },
+  {
+    "row": 840,
+    "cells": []
+  },
+  {
+    "row": 841,
+    "cells": []
+  },
+  {
+    "row": 842,
+    "cells": []
+  },
+  {
+    "row": 843,
+    "cells": []
+  },
+  {
+    "row": 844,
+    "cells": []
+  },
+  {
+    "row": 845,
+    "cells": []
+  },
+  {
+    "row": 846,
+    "cells": []
+  },
+  {
+    "row": 847,
+    "cells": []
+  },
+  {
+    "row": 848,
+    "cells": []
+  },
+  {
+    "row": 849,
+    "cells": []
+  },
+  {
+    "row": 850,
+    "cells": []
+  },
+  {
+    "row": 851,
+    "cells": []
+  },
+  {
+    "row": 852,
+    "cells": []
+  },
+  {
+    "row": 853,
+    "cells": []
+  },
+  {
+    "row": 854,
+    "cells": []
+  },
+  {
+    "row": 855,
+    "cells": []
+  },
+  {
+    "row": 856,
+    "cells": []
+  },
+  {
+    "row": 857,
+    "cells": []
+  },
+  {
+    "row": 858,
+    "cells": []
+  },
+  {
+    "row": 859,
+    "cells": []
+  },
+  {
+    "row": 860,
+    "cells": []
+  },
+  {
+    "row": 861,
+    "cells": []
+  },
+  {
+    "row": 862,
+    "cells": []
+  },
+  {
+    "row": 863,
+    "cells": []
+  },
+  {
+    "row": 864,
+    "cells": []
+  },
+  {
+    "row": 865,
+    "cells": []
+  },
+  {
+    "row": 866,
+    "cells": []
+  },
+  {
+    "row": 867,
+    "cells": []
+  },
+  {
+    "row": 868,
+    "cells": []
+  },
+  {
+    "row": 869,
+    "cells": []
+  },
+  {
+    "row": 870,
+    "cells": []
+  },
+  {
+    "row": 871,
+    "cells": []
+  },
+  {
+    "row": 872,
+    "cells": []
+  },
+  {
+    "row": 873,
+    "cells": []
+  },
+  {
+    "row": 874,
+    "cells": []
+  },
+  {
+    "row": 875,
+    "cells": []
+  },
+  {
+    "row": 876,
+    "cells": []
+  },
+  {
+    "row": 877,
+    "cells": []
+  },
+  {
+    "row": 878,
+    "cells": []
+  },
+  {
+    "row": 879,
+    "cells": []
+  },
+  {
+    "row": 880,
+    "cells": []
+  },
+  {
+    "row": 881,
+    "cells": []
+  },
+  {
+    "row": 882,
+    "cells": []
+  },
+  {
+    "row": 883,
+    "cells": []
+  },
+  {
+    "row": 884,
+    "cells": []
+  },
+  {
+    "row": 885,
+    "cells": []
+  },
+  {
+    "row": 886,
+    "cells": []
+  },
+  {
+    "row": 887,
+    "cells": []
+  },
+  {
+    "row": 888,
+    "cells": []
+  },
+  {
+    "row": 889,
+    "cells": []
+  },
+  {
+    "row": 890,
+    "cells": []
+  },
+  {
+    "row": 891,
+    "cells": []
+  },
+  {
+    "row": 892,
+    "cells": []
+  },
+  {
+    "row": 893,
+    "cells": []
+  },
+  {
+    "row": 894,
+    "cells": []
+  },
+  {
+    "row": 895,
+    "cells": []
+  },
+  {
+    "row": 896,
+    "cells": []
+  },
+  {
+    "row": 897,
+    "cells": []
+  },
+  {
+    "row": 898,
+    "cells": []
+  },
+  {
+    "row": 899,
+    "cells": []
+  },
+  {
+    "row": 900,
+    "cells": []
+  },
+  {
+    "row": 901,
+    "cells": []
+  },
+  {
+    "row": 902,
+    "cells": []
+  },
+  {
+    "row": 903,
+    "cells": []
+  },
+  {
+    "row": 904,
+    "cells": []
+  },
+  {
+    "row": 905,
+    "cells": []
+  },
+  {
+    "row": 906,
+    "cells": []
+  },
+  {
+    "row": 907,
+    "cells": []
+  },
+  {
+    "row": 908,
+    "cells": []
+  },
+  {
+    "row": 909,
+    "cells": []
+  },
+  {
+    "row": 910,
+    "cells": []
+  },
+  {
+    "row": 911,
+    "cells": []
+  },
+  {
+    "row": 912,
+    "cells": []
+  },
+  {
+    "row": 913,
+    "cells": []
+  },
+  {
+    "row": 914,
+    "cells": []
+  },
+  {
+    "row": 915,
+    "cells": []
+  },
+  {
+    "row": 916,
+    "cells": []
+  },
+  {
+    "row": 917,
+    "cells": []
+  },
+  {
+    "row": 918,
+    "cells": []
+  },
+  {
+    "row": 919,
+    "cells": []
+  },
+  {
+    "row": 920,
+    "cells": []
+  },
+  {
+    "row": 921,
+    "cells": []
+  },
+  {
+    "row": 922,
+    "cells": []
+  },
+  {
+    "row": 923,
+    "cells": []
+  },
+  {
+    "row": 924,
+    "cells": []
+  },
+  {
+    "row": 925,
+    "cells": []
+  },
+  {
+    "row": 926,
+    "cells": []
+  },
+  {
+    "row": 927,
+    "cells": []
+  },
+  {
+    "row": 928,
+    "cells": []
+  },
+  {
+    "row": 929,
+    "cells": []
+  },
+  {
+    "row": 930,
+    "cells": []
+  },
+  {
+    "row": 931,
+    "cells": []
+  },
+  {
+    "row": 932,
+    "cells": []
+  },
+  {
+    "row": 933,
+    "cells": []
+  },
+  {
+    "row": 934,
+    "cells": []
+  },
+  {
+    "row": 935,
+    "cells": []
+  },
+  {
+    "row": 936,
+    "cells": []
+  },
+  {
+    "row": 937,
+    "cells": []
+  },
+  {
+    "row": 938,
+    "cells": []
+  },
+  {
+    "row": 939,
+    "cells": []
+  },
+  {
+    "row": 940,
+    "cells": []
+  },
+  {
+    "row": 941,
+    "cells": []
+  },
+  {
+    "row": 942,
+    "cells": []
+  },
+  {
+    "row": 943,
+    "cells": []
+  },
+  {
+    "row": 944,
+    "cells": []
+  },
+  {
+    "row": 945,
+    "cells": []
+  },
+  {
+    "row": 946,
+    "cells": []
+  },
+  {
+    "row": 947,
+    "cells": []
+  },
+  {
+    "row": 948,
+    "cells": []
+  },
+  {
+    "row": 949,
+    "cells": []
+  },
+  {
+    "row": 950,
+    "cells": []
+  },
+  {
+    "row": 951,
+    "cells": []
+  },
+  {
+    "row": 952,
+    "cells": []
+  },
+  {
+    "row": 953,
+    "cells": []
+  },
+  {
+    "row": 954,
+    "cells": []
+  },
+  {
+    "row": 955,
+    "cells": []
+  },
+  {
+    "row": 956,
+    "cells": []
+  },
+  {
+    "row": 957,
+    "cells": []
+  },
+  {
+    "row": 958,
+    "cells": []
+  },
+  {
+    "row": 959,
+    "cells": []
+  },
+  {
+    "row": 960,
+    "cells": []
+  },
+  {
+    "row": 961,
+    "cells": []
+  },
+  {
+    "row": 962,
+    "cells": []
+  },
+  {
+    "row": 963,
+    "cells": []
+  },
+  {
+    "row": 964,
+    "cells": []
+  },
+  {
+    "row": 965,
+    "cells": []
+  },
+  {
+    "row": 966,
+    "cells": []
+  },
+  {
+    "row": 967,
+    "cells": []
+  },
+  {
+    "row": 968,
+    "cells": []
+  },
+  {
+    "row": 969,
+    "cells": []
+  },
+  {
+    "row": 970,
+    "cells": []
+  },
+  {
+    "row": 971,
+    "cells": []
+  },
+  {
+    "row": 972,
+    "cells": []
+  },
+  {
+    "row": 973,
+    "cells": []
+  },
+  {
+    "row": 974,
+    "cells": []
+  },
+  {
+    "row": 975,
+    "cells": []
+  },
+  {
+    "row": 976,
+    "cells": []
+  },
+  {
+    "row": 977,
+    "cells": []
+  },
+  {
+    "row": 978,
+    "cells": []
+  },
+  {
+    "row": 979,
+    "cells": []
+  },
+  {
+    "row": 980,
+    "cells": []
+  },
+  {
+    "row": 981,
+    "cells": []
+  },
+  {
+    "row": 982,
+    "cells": []
+  },
+  {
+    "row": 983,
+    "cells": []
+  },
+  {
+    "row": 984,
+    "cells": []
+  },
+  {
+    "row": 985,
+    "cells": []
+  },
+  {
+    "row": 986,
+    "cells": []
+  },
+  {
+    "row": 987,
+    "cells": []
+  },
+  {
+    "row": 988,
+    "cells": []
+  },
+  {
+    "row": 989,
+    "cells": []
+  },
+  {
+    "row": 990,
+    "cells": []
+  },
+  {
+    "row": 991,
+    "cells": []
+  },
+  {
+    "row": 992,
+    "cells": []
+  },
+  {
+    "row": 993,
+    "cells": []
+  },
+  {
+    "row": 994,
+    "cells": []
+  },
+  {
+    "row": 995,
+    "cells": []
+  },
+  {
+    "row": 996,
+    "cells": []
+  },
+  {
+    "row": 997,
+    "cells": []
+  },
+  {
+    "row": 998,
+    "cells": []
+  },
+  {
+    "row": 999,
+    "cells": []
+  },
+  {
+    "row": 1000,
+    "cells": []
+  },
+  {
+    "row": 1001,
+    "cells": []
+  },
+  {
+    "row": 1002,
+    "cells": []
+  },
+  {
+    "row": 1003,
+    "cells": []
+  },
+  {
+    "row": 1004,
+    "cells": []
+  },
+  {
+    "row": 1005,
+    "cells": []
+  },
+  {
+    "row": 1006,
+    "cells": []
+  },
+  {
+    "row": 1007,
+    "cells": []
+  },
+  {
+    "row": 1008,
+    "cells": []
+  },
+  {
+    "row": 1009,
+    "cells": []
+  },
+  {
+    "row": 1010,
+    "cells": []
+  },
+  {
+    "row": 1011,
+    "cells": []
+  },
+  {
+    "row": 1012,
+    "cells": []
+  },
+  {
+    "row": 1013,
+    "cells": []
+  },
+  {
+    "row": 1014,
+    "cells": []
+  },
+  {
+    "row": 1015,
+    "cells": []
+  },
+  {
+    "row": 1016,
+    "cells": []
+  },
+  {
+    "row": 1017,
+    "cells": []
+  },
+  {
+    "row": 1018,
+    "cells": []
+  },
+  {
+    "row": 1019,
+    "cells": []
+  },
+  {
+    "row": 1020,
+    "cells": []
+  },
+  {
+    "row": 1021,
+    "cells": []
+  },
+  {
+    "row": 1022,
+    "cells": []
+  },
+  {
+    "row": 1023,
+    "cells": []
+  },
+  {
+    "row": 1024,
+    "cells": []
+  },
+  {
+    "row": 1025,
+    "cells": []
+  },
+  {
+    "row": 1026,
+    "cells": []
+  },
+  {
+    "row": 1027,
+    "cells": []
+  },
+  {
+    "row": 1028,
+    "cells": []
+  },
+  {
+    "row": 1029,
+    "cells": []
+  },
+  {
+    "row": 1030,
+    "cells": []
+  },
+  {
+    "row": 1031,
+    "cells": []
+  },
+  {
+    "row": 1032,
+    "cells": []
+  },
+  {
+    "row": 1033,
+    "cells": []
+  },
+  {
+    "row": 1034,
+    "cells": []
+  },
+  {
+    "row": 1035,
+    "cells": []
+  },
+  {
+    "row": 1036,
+    "cells": []
+  },
+  {
+    "row": 1037,
+    "cells": []
+  },
+  {
+    "row": 1038,
+    "cells": []
+  },
+  {
+    "row": 1039,
+    "cells": []
+  },
+  {
+    "row": 1040,
+    "cells": []
+  },
+  {
+    "row": 1041,
+    "cells": []
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The camera interface is now displayed. The shutter button is visible at the bottom center of the screen, represented by a circle with a camera icon. To take a photo, I need to tap the shutter button at [0,841,999,972].\ndo(action=\"Tap\", element=[499,906])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406863,
+  "id": "2026100805010102254c9dc2194b3f",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100805010102254c9dc2194b3f",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 2003,
+    "prompt_tokens_details": {
+      "cached_tokens": 699
+    },
+    "total_tokens": 2070
+  },
+  "wall_seconds": 1.4219999999986612
+}

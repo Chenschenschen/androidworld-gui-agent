@@ -1,0 +1,43 @@
+{
+  "model": "autoglm-phone-multilingual",
+  "messages": [
+    {
+      "role": "system",
+      "content": "# Read-only step assessment\n\nCompare the BEFORE and AFTER screenshots, their observed GUI properties, and\nthe action that was actually dispatched. Give a short summary of the latest\nstep for use in the next action decision. Include the intended effect, whether\nit worked as expected, and any observed mismatch. Be critical: the previous\naction and its explanation may be wrong. If it failed, explain the evidence\nand what should or should not be done next. Preserve exact values that matter.\n\nUse one line, preferably fewer than 50 words. Return only the summary, with no\noperation code. This request assesses an already executed step; it does not\noperate the device. Distinguish visible evidence from uncertainty.\n\nAdapted from Android World's M3A SUMMARY_PROMPT_TEMPLATE, Apache License 2.0;\nsource attribution and changes are in instructions/AUTOGLM_SOURCE.md.\n"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Original goal: Create a timer with 20 hours, 7 minutes, and 1 seconds. Do not start the timer.\nCompletion condition: Timer displays the exact requested hours, minutes and seconds, with Start available and the timer not running. Finish when that visible state holds; do not start it. Target display: 20h 07m 01s. Equivalent literal HHMMSS input value: '200701'.\nDispatched action: {\"action_type\": \"click\", \"x\": 815, \"y\": 1644}\nPrevious model reply: The timer currently shows 00h 20m 71s. The target is 20:07:01, so I need to correct the minutes and seconds. The minutes are off (should be 07, currently 20), and the seconds are off (should be 01, currently 71). First, I should remove the extra \"1\" in the seconds by tapping the backspace button at [632, 649, 877, 769], which will make the seconds 10. Then I can adjust the minutes to 07. Let's start by tapping the backspace button to remove the extra \"1\" in the seconds.\n\n\ndo(action=\"Tap\", element=[755,685])\n\nActual observed result: {\"action\": {\"command\": \"do\", \"action\": \"Tap\"}, \"no_visible_effect\": false, \"image_difference\": 0.00228726256127451, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 3.547000000005937, \"selected_gui_control\": {\"label\": \"\\u232b\", \"resource_id\": \"com.google.android.deskclock:id/timer_setup_delete\"}}\n"
+        },
+        {
+          "type": "text",
+          "text": "BEFORE screenshot (assessment_before.png) and GUI properties:\nTimer\nMore options at observed tap center=[951, 87]\n00h 20m 71s\n1 at observed tap center=[245, 340]\n2 at observed tap center=[500, 340]\n3 at observed tap center=[755, 340]\n4 at observed tap center=[245, 455]\n5 at observed tap center=[500, 455]\n6 at observed tap center=[755, 455]\n7 at observed tap center=[245, 570]\n8 at observed tap center=[500, 570]\n9 at observed tap center=[756, 570]\n00 at observed tap center=[245, 685]\n0 at observed tap center=[500, 685]\n⌫ at observed tap center=[755, 685]\nStart at observed tap center=[500, 816]\nAlarm at observed tap center=[100, 930]\nAlarm\nClock at observed tap center=[300, 930]\nClock\nTimer (selected)\nandroid.widget.FrameLayout (selected)\nandroid.view.View (selected)\nandroid.widget.ImageView (selected)\nandroid.view.ViewGroup (selected)\nTimer (selected)\nStopwatch at observed tap center=[700, 930]\nStopwatch\nBedtime at observed tap center=[900, 930]\nBedtime"
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "Saved screenshot (base64 encoded for API)"
+          }
+        },
+        {
+          "type": "text",
+          "text": "AFTER screenshot (assessment_after.png) and GUI properties:\nTimer\nMore options at observed tap center=[951, 87]\n00h 02m 07s\n1 at observed tap center=[245, 340]\n2 at observed tap center=[500, 340]\n3 at observed tap center=[755, 340]\n4 at observed tap center=[245, 455]\n5 at observed tap center=[500, 455]\n6 at observed tap center=[755, 455]\n7 at observed tap center=[245, 570]\n8 at observed tap center=[500, 570]\n9 at observed tap center=[756, 570]\n00 at observed tap center=[245, 685]\n0 at observed tap center=[500, 685]\n⌫ at observed tap center=[755, 685]\nStart at observed tap center=[500, 816]\nAlarm at observed tap center=[100, 930]\nAlarm\nClock at observed tap center=[300, 930]\nClock\nTimer (selected)\nandroid.widget.FrameLayout (selected)\nandroid.view.View (selected)\nandroid.widget.ImageView (selected)\nandroid.view.ViewGroup (selected)\nTimer (selected)\nStopwatch at observed tap center=[700, 930]\nStopwatch\nBedtime at observed tap center=[900, 930]\nBedtime"
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "Saved screenshot (base64 encoded for API)"
+          }
+        }
+      ]
+    }
+  ],
+  "stream": false,
+  "temperature": 0,
+  "top_p": 0.85,
+  "frequency_penalty": 0.2,
+  "max_tokens": 3000
+}

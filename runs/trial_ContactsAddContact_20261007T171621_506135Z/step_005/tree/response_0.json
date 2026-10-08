@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:17:47.7481021Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"10\", \"verify\": \"The 'Phone' field should be selected, and the keyboard should appear for text input.\",\"target\": \"Phone\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7707632900,
+  "load_duration": 17808200,
+  "prompt_eval_count": 2533,
+  "prompt_eval_cached_count": 424,
+  "prompt_eval_duration": 2569180000,
+  "eval_count": 42,
+  "eval_duration": 4893033000,
+  "wall_seconds": 9.764999999999418
+}

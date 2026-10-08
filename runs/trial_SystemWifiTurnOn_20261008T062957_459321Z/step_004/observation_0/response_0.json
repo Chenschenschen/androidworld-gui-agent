@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I am now in the \"Internet\" settings. The Wi-Fi toggle switch is currently off (unchecked). To turn Wi-Fi on, I need to tap the Wi-Fi toggle, which is located to the right of the \"Wi-Fi\" label. The bounds for the Wi-Fi toggle are [822,354,960,399]. I should tap this area to enable Wi-Fi.\ndo(action=\"Tap\", element=[890,379])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441039,
+  "id": "20261008143038d80166fd1a264293",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008143038d80166fd1a264293",
+  "usage": {
+    "completion_tokens": 95,
+    "prompt_tokens": 2532,
+    "prompt_tokens_details": {
+      "cached_tokens": 1051
+    },
+    "total_tokens": 2627
+  },
+  "wall_seconds": 1.7970000000059372
+}

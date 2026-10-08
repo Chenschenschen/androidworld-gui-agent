@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The contact details screen shows the saved contact \"Hugo Ali\" with phone number +1 275-179-7908, confirming the task is complete. No further actions are needed; finish the task.\n\n\nfinish(message=\"Contact for Hugo Ali with phone number +12751797908 has been created successfully.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447801,
+  "id": "202610081623190358f49f4f084a6c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081623190358f49f4f084a6c",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 3633,
+    "prompt_tokens_details": {
+      "cached_tokens": 2532
+    },
+    "total_tokens": 3704
+  },
+  "wall_seconds": 1.5310000000026776
+}

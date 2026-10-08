@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants me to take one photo using the camera app. Looking at the screenshot, I can see we're in the camera app with a shutter button at the bottom. The camera viewfinder is showing a scene with what appears to be a green structure.\n\nLooking at the tree structure, I can see:\n- ImageView;click; Shutter;[0,841,999,972]\n- ImageView;click; Options;[851,775,969,828]\n- ImageView;click; Zoom in;[851,757,969,810]\n- ImageView;click; Zoom out;[851,757,969,810]\n\nThe shutter button is the main element I need to tap to take a photo. According to the tree structure, it's at coordinates [0,841,999,972].\n\nI should tap this shutter button to take the photo.\ndo(action=\"Tap\", element=[499,906])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405987,
+  "id": "202610080446250ba64748a14e4ac2",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080446250ba64748a14e4ac2",
+  "usage": {
+    "completion_tokens": 209,
+    "prompt_tokens": 1843,
+    "prompt_tokens_details": {
+      "cached_tokens": 511
+    },
+    "total_tokens": 2052
+  },
+  "wall_seconds": 2.5160000000032596
+}

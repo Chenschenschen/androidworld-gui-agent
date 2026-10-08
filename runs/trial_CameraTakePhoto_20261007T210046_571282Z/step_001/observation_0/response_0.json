@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to take one photo. The Camera app icon is visible on the home screen at coordinates approximately [56,346,246,466]. The first step should be to launch the Camera app. Since the Camera app is already available as an icon on the home screen, I will tap it to open the camera interface.\ndo(action=\"Tap\", element=[145,409])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406852,
+  "id": "2026100805005001cb0be117a14f26",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100805005001cb0be117a14f26",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 1584,
+    "prompt_tokens_details": {
+      "cached_tokens": 1583
+    },
+    "total_tokens": 1670
+  },
+  "wall_seconds": 1.7340000000040163
+}

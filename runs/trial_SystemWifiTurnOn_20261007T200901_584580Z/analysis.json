@@ -1,0 +1,31 @@
+{
+  "run_id": "trial_SystemWifiTurnOn_20261007T200901_584580Z",
+  "official_verifier": "PASS",
+  "agent_done": false,
+  "stop_reason": "step_budget",
+  "model_calls": 13,
+  "api_seconds_total": 30.53299999999581,
+  "api_seconds_median": 2.25,
+  "prompt_tokens_total": 19179,
+  "completion_tokens_total": 2290,
+  "truncated_responses": 0,
+  "reobservations": 1,
+  "missing_step_artifacts": [],
+  "videos": [
+    {
+      "run": "trial_SystemWifiTurnOn_20261007T200901_584580Z",
+      "video": "video_001.mp4",
+      "decoded_frames": 767,
+      "fps": 9.171139196848412,
+      "decoded_duration_seconds": 83.63192222222223
+    },
+    {
+      "run": "trial_SystemWifiTurnOn_20261007T200520_214952Z",
+      "video": "video_001.mp4",
+      "decoded_frames": 26,
+      "fps": 2.299184870184485,
+      "decoded_duration_seconds": 11.308355555555556
+    }
+  ],
+  "assessment": "Official PASS after 12 GUI actions, but no model finish. Step 9 screenshot shows the enabled Wi-Fi switch; reply incorrectly calls it off and taps again. This is a model visual-state/stopping error, not evidence that every screenshot was stale. Step 2 discarded an unexecuted loading-screen choice and requested a fresh action."
+}

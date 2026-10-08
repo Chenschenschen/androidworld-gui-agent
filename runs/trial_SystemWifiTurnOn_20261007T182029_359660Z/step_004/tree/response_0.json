@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:21:33.6286282Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Settings\", \"verify\": \"Settings page should be opened.\", \"target\": \"Settings\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3795402700,
+  "load_duration": 16988100,
+  "prompt_eval_count": 1370,
+  "prompt_eval_cached_count": 717,
+  "prompt_eval_duration": 1045586000,
+  "eval_count": 29,
+  "eval_duration": 2716721000,
+  "wall_seconds": 5.8439999999973224
+}

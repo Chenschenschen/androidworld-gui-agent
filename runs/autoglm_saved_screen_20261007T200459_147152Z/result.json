@@ -1,0 +1,19 @@
+{
+  "probe_type": "saved_screen_action_compatibility",
+  "gui_actions": 0,
+  "task_verifier": "NOT_RUN",
+  "native": {
+    "command": "do",
+    "action": "Tap",
+    "element": [
+      847,
+      668
+    ]
+  },
+  "android": {
+    "action_type": "click",
+    "x": 914,
+    "y": 1603
+  },
+  "payload_inspection": "Visually inspected generic benchmark emulator Home; no sensitive content"
+}

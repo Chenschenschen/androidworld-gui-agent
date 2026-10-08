@@ -1,0 +1,6 @@
+{
+  "original_interpretation": "General validator accepted COMPLETE as a legal terminal action.",
+  "corrected_interpretation": "This probe required selecting Settings with CLICK. COMPLETE is a failed target probe.",
+  "note": "validation.json was corrected during the live review; raw API response was unchanged.",
+  "executed": false
+}

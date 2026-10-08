@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "To locate the file cooking-recipe.md, I need to open the source folder \"project_medium\" first. The \"project_medium\" folder is visible at [59,654,489,707]; tapping it will open its contents.\n\n\ndo(action=\"Tap\", element=[278,680])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469194,
+  "id": "2026100822195223218e8b5ddd41c0",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100822195223218e8b5ddd41c0",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 4113,
+    "prompt_tokens_details": {
+      "cached_tokens": 2170
+    },
+    "total_tokens": 4181
+  },
+  "wall_seconds": 1.937000000005355
+}

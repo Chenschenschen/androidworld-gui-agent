@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe user wants to turn Wi-Fi on. The completion condition says to finish if Wi-Fi is already on. I need to open the Settings app to check and toggle the Wi-Fi switch. I can see the Settings app icon on the home screen at coordinates [731,641,932,728]. I should tap it to open Settings.\ndo(action=\"Tap\", element=[848,668])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441877,
+  "id": "202610081444355f3d7fed19eb4292",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081444355f3d7fed19eb4292",
+  "usage": {
+    "completion_tokens": 91,
+    "prompt_tokens": 1657,
+    "prompt_tokens_details": {
+      "cached_tokens": 630
+    },
+    "total_tokens": 1748
+  },
+  "wall_seconds": 1.8439999999973224
+}

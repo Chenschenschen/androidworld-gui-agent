@@ -1,5 +1,12 @@
 # Published results and approved evidence
 
+Latest local stage audit: [files_move_audit.json](files_move_audit.json) records
+all13 preserved Files attempts,1208 parsed JSON artifacts and16 decoded clips.
+The requested recipe sequence has three clean successful recordings after one
+failed third attempt (v53/v53/v54), with unchanged file contents. See
+../FILES_MOVE_TRIAL.md and ../PRESENTATION_EVIDENCE.md for the linked evaluation
+limits and named local recordings. These new artifacts have not been pushed.
+
 The aggregate reports below contain selected outcome fields. Following the
 user's explicit approval on 8 October 2026, the previously blocked evidence
 subset is also published. Full original files in local `runs/` remain unchanged.

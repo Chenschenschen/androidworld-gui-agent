@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I need to navigate to the root directory to access the sdk_gphone_x86_64 storage area and locate the Recordings and Audiobooks folders. The \"Show roots\" button (hamburger menu) at [0,53,135,105] will open the navigation drawer to access storage locations.\n\n\ndo(action=\"Tap\", element=[68,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791470155,
+  "id": "2026100822355351fb8bb7a903450b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100822355351fb8bb7a903450b",
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 3177,
+    "prompt_tokens_details": {
+      "cached_tokens": 1513
+    },
+    "total_tokens": 3255
+  },
+  "wall_seconds": 2.110000000000582
+}

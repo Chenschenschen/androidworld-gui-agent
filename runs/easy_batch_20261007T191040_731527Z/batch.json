@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    "SystemWifiTurnOn",
+    "CameraTakePhoto",
+    "ClockTimerEntry",
+    "ContactsAddContact",
+    "SystemCopyToClipboard"
+  ],
+  "task_seeds": [
+    42,
+    43,
+    44
+  ],
+  "source_hashes": {
+    "run_task.py": "04f9a8611d542d75aa3d3cb0eeaa0f6767d20c4b4db654cad69b3269fa225eec",
+    "gelab_agent.py": "af1e95ea7a95ae559aff9d250951c0a3d0e4168e799165aff35f097bdb082be2",
+    "instructions/agent.md": "d825b688863c5e69ede9998f988a2542d7cb7df349e54a78c9a0d2be9cbb553b",
+    "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+    "android_compat.py": "671616a903ec99dedd0a8c89e676b4c9846af7902fa8a960385aa41b8783a1d4"
+  },
+  "purpose": "Three-case learning evaluation; failures are not discarded."
+}

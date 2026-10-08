@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Save button is visible at the top-right. Tap it to save the contact and complete the task.\n\n\ndo(action=\"Tap\", element=[764,87])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447798,
+  "id": "202610081623173ffa71c9dabc454f",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081623173ffa71c9dabc454f",
+  "usage": {
+    "completion_tokens": 38,
+    "prompt_tokens": 3633,
+    "prompt_tokens_details": {
+      "cached_tokens": 2343
+    },
+    "total_tokens": 3671
+  },
+  "wall_seconds": 1.3910000000032596
+}

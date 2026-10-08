@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Allow notification dot",
+    "verify": "The checkbox for 'Allow notification dot' should become checked.",
+    "target": "Allow notification dot",
+    "index": "41",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 346,
+    "y": 2201
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

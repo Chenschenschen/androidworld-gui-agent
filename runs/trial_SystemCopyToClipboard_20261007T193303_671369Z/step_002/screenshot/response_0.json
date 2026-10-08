@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T19:34:25.4703597Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"190 352\", \"verify\": \"The input field labeled 'Set text...' should be focused and ready for text entry.\",\"point\": \"190 352\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 18686361800,
+  "load_duration": 28600300,
+  "prompt_eval_count": 1720,
+  "prompt_eval_cached_count": 459,
+  "prompt_eval_duration": 13857826000,
+  "eval_count": 52,
+  "eval_duration": 4535189000,
+  "wall_seconds": 20.75
+}

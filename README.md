@@ -8,20 +8,60 @@ finish. Android World's official verifier evaluates the result independently.
 This is a course project for **Agentic AI in Modern Business**. It is an
 experimental implementation with recorded successes and preserved failures.
 
+The `hayati` branch preserves the project source, course materials, review
+utilities and complete non-video trial evidence under `runs/`. Video files
+remain local, so recording links in the archived reports require the original
+local recordings. Credentials, installed environments, caches and separate
+dependency checkouts are excluded; use the installation steps below to rebuild
+the environment.
+
 ## Current results
+
+For self-run commands and complete video playback, start with
+[RUNNING_TASKS.md](docs/RUNNING_TASKS.md). The runner now joins recorder parts
+into recording_complete.mp4 after the trial; original clips remain. A first
+three-minute part alone may end before MOVE. Packaging v55 does not change the
+measured v54 model policy; no new GUI trial was run for this recording fix.
+
+Latest user-directed trials use `general_config.json` with reusable Android
+interaction guidance and checked screenshot/XML grounding. SMS has three named
+successful recordings (seed42 v45, seeds43/44 v49); the latest two share frozen
+v49 sources. FilesMoveFile now supports editable exact parameters and linked
+state via the same Python runner. Read [running commands](docs/RUNNING_TASKS.md),
+[Files trials](docs/FILES_MOVE_TRIAL.md) and
+[named presentation evidence](docs/PRESENTATION_EVIDENCE.md) for current outcomes.
+Older experiments below remain historical; omitting `--config` selects v35.
+The requested Files forward/back/forward directions all passed with model
+finish, across four fresh attempts using v53/v53/v54 for the successes. The
+failed third v53 attempt and bounded read-only XML recovery repair are preserved;
+this is not a frozen3/3 benchmark claim.42 offline checks pass.
+
+[Explicit task procedures and grounding](docs/TASK_GUIDANCE_AND_GROUNDING.md)
+are now prepared in editable `instructions/task_guides.md`. The optional
+`guided_config.json` enables them for the same runner, using Markor QuickNote
+for Clipboard. 28 offline checks pass; guided live outcomes are unmeasured.
+The default remains the recorded v35 baseline.
+
+The actual pinned upstream PhoneAgent was also tested: both native and project
+policies failed the compared Timer and Clipboard instances. See the
+[reference comparison](docs/UPSTREAM_REFERENCE_COMPARISON.md) for task/model
+errors, prerequisite/recording repairs and limits.25 offline checks pass;
+the model remains hosted AutoGLM. No new clean task gate was established.
 
 | Warm-up | Recorded clean results | Version |
 | --- | --- | --- |
 | Turn Wi-Fi on | 3/3 | v20 |
 | Take one photo | 3/3 | v20 |
 | Add a contact | 3/3 | v28 |
-| Enter an unstarted timer | Latest bounded trial failed | v28 |
-| Copy exact text | Latest bounded trial falsely finished | v27 |
+| Enter an unstarted timer | Before/after assessment trial failed | v31 |
+| Copy exact text | Assessment variants failed; no new clean gate | v31–v33 |
 
 Clean means valid initialization and recording, model finish, official PASS and
 no runtime error. These are task-specific results on different versions, not a
-single successful 15-trial batch. The current v29 adds a bounded no-progress
-cycle stop and passes 16 offline adapter checks; it has no live success claim.
+single successful 15-trial batch. Previous v34 passed20 offline adapter checks;
+the unsuccessful same-model assessment experiment is disabled by default, with
+its opt-in configuration and evidence preserved. It has no live v34 success claim.
+See [assessment diagnosis](docs/STEP_ASSESSMENT_EXPERIMENT.md).
 See [results and limitations](docs/WARMUP_RESULTS.md) and the
 [aggregate results](docs/evidence/README.md).
 

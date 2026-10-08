@@ -1,0 +1,8 @@
+{
+  "thinking": "The search input field is now focused and the keyboard is visible. To copy the text \"john.doe@example.com\" to the clipboard, I should type it into the search field first. This will allow me to then copy the text using the clipboard function. I will type the email address into the search field.",
+  "action": "do(action=\"Type\", text=\"john.doe@example.com\")\n",
+  "raw_content": "The search input field is now focused and the keyboard is visible. To copy the text \"john.doe@example.com\" to the clipboard, I should type it into the search field first. This will allow me to then copy the text using the clipboard function. I will type the email address into the search field.\ndo(action=\"Type\", text=\"john.doe@example.com\")\n",
+  "time_to_first_token": 2.5714097023010254,
+  "time_to_thinking_end": 2.6444334983825684,
+  "total_time": 2.6611363887786865
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Perfect! I can see that Wi-Fi has been successfully turned on. The Wi-Fi toggle is now blue and in the ON position (checked), and I can see that there's an \"AndroidWifi\" network showing with \"Limited connection\" status, and it shows \"Wifi signal full.\" This indicates that Wi-Fi is now active and scanning for networks. The task has been completed successfully.\nfinish(message=\"Wi-Fi has been successfully turned on! I can see the Wi-Fi toggle is now enabled (blue and in the ON position), and the device is showing available networks including \"AndroidWifi\" with a full signal. The task is complete - Wi-Fi is now active and ready to connect to networks.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406269,
+  "id": "20261008045107c165ad0cd1234fdf",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008045107c165ad0cd1234fdf",
+  "usage": {
+    "completion_tokens": 142,
+    "prompt_tokens": 3337,
+    "prompt_tokens_details": {
+      "cached_tokens": 554
+    },
+    "total_tokens": 3479
+  },
+  "wall_seconds": 2.2810000000026776
+}

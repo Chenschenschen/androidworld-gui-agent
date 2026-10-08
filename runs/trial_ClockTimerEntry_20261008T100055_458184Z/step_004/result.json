@@ -1,0 +1,16 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.001172353707107843,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 3.7960000000020955,
+  "selected_gui_control": {
+    "label": "0",
+    "resource_id": "com.google.android.deskclock:id/timer_setup_digit_0"
+  },
+  "model_assessment": "The timer currently shows 00h 00m 20s. To reach 20:07:01, I need to enter the digits in the order they will fill the fields (h, m, s): 2, 0, 0, 7, 0, 1. The next digit should be \"7\" to make the minutes 07. I'll tap \"7\" at [123,514,368,624]."
+}

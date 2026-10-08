@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "We are on the \"New conversation\" screen with an input field \"Add Contact or Number…\" at the top. To start composing the message, first enter the recipient's phone number +11043321819 into this field.\n\n\ndo(action=\"Tap\", element=[499,149])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464860,
+  "id": "20261008210739e801f03c15b0436a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008210739e801f03c15b0436a",
+  "usage": {
+    "completion_tokens": 63,
+    "prompt_tokens": 3104,
+    "prompt_tokens_details": {
+      "cached_tokens": 1857
+    },
+    "total_tokens": 3167
+  },
+  "wall_seconds": 1.4839999999967404
+}

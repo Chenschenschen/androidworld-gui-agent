@@ -1,0 +1,26 @@
+{
+  "kind": "setup_check",
+  "run_id": "setup_20261007T130234_730990Z",
+  "python": "3.11.17 (main, Oct  3 2026, 01:03:09) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Scripts\\python.exe",
+  "adb_path": "C:\\Users\\koc\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+  "benchmark_run": false,
+  "registered_task_count": 116,
+  "selected_tasks": {
+    "SystemWifiTurnOn": true,
+    "MarkorCreateNote": true,
+    "MarkorCreateNoteAndSms": true,
+    "SimpleCalendarAddOneEvent": true,
+    "MarkorMergeNotes": true,
+    "OsmAndTrack": true
+  },
+  "screen_shape": [
+    2400,
+    1080,
+    3
+  ],
+  "ui_element_count": 25,
+  "screenshot": "screen.png",
+  "connection_ok": true,
+  "verifier_executed": false
+}

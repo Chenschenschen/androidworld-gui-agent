@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:45:21.6996193Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"16.76 MB used in internal storage\", \"verify\": \"The task to turn on WiFi has been completed.\", \"target\": \"16.76 MB used in internal storage\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5194726900,
+  "load_duration": 16996000,
+  "prompt_eval_count": 1327,
+  "prompt_eval_cached_count": 635,
+  "prompt_eval_duration": 932347000,
+  "eval_count": 51,
+  "eval_duration": 4010741000,
+  "wall_seconds": 7.264999999999418
+}

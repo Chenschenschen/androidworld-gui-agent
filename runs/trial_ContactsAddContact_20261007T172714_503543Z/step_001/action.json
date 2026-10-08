@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The Contacts app opens to its main screen, displaying a list of existing contacts.",
+    "point": "616,405"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 665,
+    "y": 972
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

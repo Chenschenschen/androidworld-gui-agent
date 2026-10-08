@@ -1,0 +1,32 @@
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261008T055051_890271Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v14_contacts_unicode_setup",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v10_timer_labels",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "complete",
+  "model_calls_attempted": 12,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 95.78199999999197,
+  "agent_phase_seconds": 61.15699999999197
+}

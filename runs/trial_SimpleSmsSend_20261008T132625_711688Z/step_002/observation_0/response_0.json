@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user now needs to send a text message, and first must enter the interface to start a conversation. The current interface has a clickable TextView labeled \"Start a conversation,\" so the first step should be to click it. The corresponding element coordinates need to be selected; according to the provided structure, the bounds of this TextView are [286, 168, 711, 227], so execute the Tap action.\n\n\ndo(action=\"Tap\", element=[498,205])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791466013,
+  "id": "20261008212652674950e71adf4b07",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008212652674950e71adf4b07",
+  "usage": {
+    "completion_tokens": 103,
+    "prompt_tokens": 2849,
+    "prompt_tokens_details": {
+      "cached_tokens": 1486
+    },
+    "total_tokens": 2952
+  },
+  "wall_seconds": 1.75
+}

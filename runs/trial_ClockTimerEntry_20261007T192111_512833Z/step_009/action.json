@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "20",
+    "verify": "The hour selector should now display '20'.",
+    "target": "20 hours",
+    "index": "17",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 391,
+    "y": 1441
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

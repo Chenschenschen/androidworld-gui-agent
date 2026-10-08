@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:58:38.4118065Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Settings\", \"verify\": \"Settings should be visible on the screen.\", \"target\": \"SIM name & color\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3986626400,
+  "load_duration": 17471200,
+  "prompt_eval_count": 1355,
+  "prompt_eval_cached_count": 374,
+  "prompt_eval_duration": 1098829000,
+  "eval_count": 34,
+  "eval_duration": 2704638000,
+  "wall_seconds": 6.046999999998661
+}

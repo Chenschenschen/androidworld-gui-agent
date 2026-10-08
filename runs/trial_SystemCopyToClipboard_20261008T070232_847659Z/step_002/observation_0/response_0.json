@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. I have launched Chrome, and now I need to focus on the search bar to type the text. The search bar is labeled \"Search or type web address\" and is located at [38,300,960,353]. I should tap on this search bar to activate it for text input.\ndo(action=\"Tap\", element=[499,326])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442972,
+  "id": "20261008150251df8df649837b4651",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008150251df8df649837b4651",
+  "usage": {
+    "completion_tokens": 93,
+    "prompt_tokens": 2506,
+    "prompt_tokens_details": {
+      "cached_tokens": 793
+    },
+    "total_tokens": 2599
+  },
+  "wall_seconds": 1.9210000000020955
+}

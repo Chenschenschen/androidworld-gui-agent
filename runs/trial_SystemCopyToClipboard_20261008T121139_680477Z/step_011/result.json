@@ -1,0 +1,15 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.001565850949754902,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 3.735000000000582,
+  "selected_gui_control": {
+    "label": "Folder .. /storage/emulated/0/Documents/markor/.app",
+    "resource_id": "net.gsantner.markor:id/opoc_filesystem_item__root"
+  }
+}

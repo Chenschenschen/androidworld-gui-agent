@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "com.android.vending/com.google.android.finsky.auction.AuctionDetailsActivity",
+    "verify": "The new contact creation screen should appear.",
+    "index": "1"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 943,
+    "y": 2011
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

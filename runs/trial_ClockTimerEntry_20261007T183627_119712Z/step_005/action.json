@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "3",
+    "verify": "The number '20' should be set in the hour field.",
+    "target": "3",
+    "index": "5",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 816,
+    "y": 817
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

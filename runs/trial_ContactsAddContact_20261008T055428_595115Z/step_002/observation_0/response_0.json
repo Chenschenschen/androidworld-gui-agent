@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Contacts app is open and shows \"No contacts yet\". There's a floating action button (plus icon) at the bottom-right to add a new contact. I should tap that button to start creating a new contact.\ndo(action=\"Tap\", element=[876,836])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438882,
+  "id": "20261008135441e43484e43457435e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135441e43484e43457435e",
+  "usage": {
+    "completion_tokens": 58,
+    "prompt_tokens": 1861,
+    "prompt_tokens_details": {
+      "cached_tokens": 621
+    },
+    "total_tokens": 1919
+  },
+  "wall_seconds": 1.5310000000026776
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261008T062431_367115Z",
+  "agent_done": false,
+  "verifier": "NOT_RUN",
+  "steps": 5,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v18_observed_digits_optional_copy_chip",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v14_observed_progress",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 5
+}

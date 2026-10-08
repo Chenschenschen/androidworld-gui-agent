@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The file \"cooking-recipe.md\" is selected, and the \"More options\" button is available at [882, 79, 999, 129]. This button typically contains the \"Move\" or \"Copy\" options for the selected file. I should tap \"More options\" to proceed with moving the file.\n\n\ndo(action=\"Tap\", element=[941,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791468420,
+  "id": "202610082206588b257edb7f824b58",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082206588b257edb7f824b58",
+  "usage": {
+    "completion_tokens": 84,
+    "prompt_tokens": 5814,
+    "prompt_tokens_details": {
+      "cached_tokens": 3472
+    },
+    "total_tokens": 5898
+  },
+  "wall_seconds": 2.077999999994063
+}

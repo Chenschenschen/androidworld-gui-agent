@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Cancel",
+    "verify": "The 'Rename device' dialog should close and the previous screen should be displayed.",
+    "target": "CANCEL",
+    "index": "15",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 635,
+    "y": 1003
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

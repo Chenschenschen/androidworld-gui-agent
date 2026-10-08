@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:30:23.2742007Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Wi-Fi toggle switch\", \"verify\": \"Toggle switch for Wi-Fi turns on or off.\",\"target\": \"100%\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4172890000,
+  "load_duration": 18712200,
+  "prompt_eval_count": 1262,
+  "prompt_eval_cached_count": 374,
+  "prompt_eval_duration": 940021000,
+  "eval_count": 39,
+  "eval_duration": 3072888000,
+  "wall_seconds": 6.234000000004016
+}

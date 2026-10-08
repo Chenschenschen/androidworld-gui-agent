@@ -1,0 +1,10 @@
+{
+  "category": "stale_observation_stop",
+  "failure_class": "lost_value",
+  "evidence": "Step 5 typed Camila; step 7 typed only da from da Silva. Phone and save never executed. Step 9 selected Cancel but freshness guard stopped execution.",
+  "limitation": "The mismatching fresh observation was not saved; do not invent its changed element.",
+  "official_verifier_score": 0.0,
+  "verified_agent_success": false,
+  "tree_calls": 9,
+  "image_calls": 0
+}

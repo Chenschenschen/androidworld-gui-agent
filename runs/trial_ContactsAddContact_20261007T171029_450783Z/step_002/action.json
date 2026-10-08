@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "create contact icon",
+    "verify": "The interface should change to the new contact creation form.",
+    "index": "1"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 943,
+    "y": 2011
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

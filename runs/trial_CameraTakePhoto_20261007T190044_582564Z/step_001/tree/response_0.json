@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T19:01:26.3177196Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"AWAKE\", \"value\": \"camera\", \"verify\": \"The camera application should open, displaying a live preview from the camera's lens and showing the shutter button.\",\"target\": \"Camera\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4557624500,
+  "load_duration": 18596800,
+  "prompt_eval_count": 1240,
+  "prompt_eval_cached_count": 375,
+  "prompt_eval_duration": 897825000,
+  "eval_count": 45,
+  "eval_duration": 3470837000,
+  "wall_seconds": 6.609000000004016
+}

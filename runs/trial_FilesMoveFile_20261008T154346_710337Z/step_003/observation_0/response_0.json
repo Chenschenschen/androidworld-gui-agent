@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The navigation drawer is open, and the \"sdk_gphone64_x86_64\" storage area is visible as a selectable item (bounds [0,509,679,570]). To access the source and destination folders within this storage area, I should tap on \"sdk_gphone64_x86_64\" to open its contents.\n\n\ndo(action=\"Tap\", element=[339,539])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474268,
+  "id": "202610082344264b0ed9254cfe4b6d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082344264b0ed9254cfe4b6d",
+  "usage": {
+    "completion_tokens": 89,
+    "prompt_tokens": 3502,
+    "prompt_tokens_details": {
+      "cached_tokens": 1709
+    },
+    "total_tokens": 3591
+  },
+  "wall_seconds": 1.9060000000026776
+}

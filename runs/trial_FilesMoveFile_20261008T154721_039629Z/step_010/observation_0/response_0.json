@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "We are now in the sdk_gphone64_x86_64 storage area and can see the \"project_easy\" folder. The next step is to enter the \"project_easy\" folder to locate the file \"cooking-recipe.md\" for moving.\n\n\ndo(action=\"Tap\", element=[275,618])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474593,
+  "id": "2026100823495199e22e737a3a423b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100823495199e22e737a3a423b",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 7696,
+    "prompt_tokens_details": {
+      "cached_tokens": 5717
+    },
+    "total_tokens": 7760
+  },
+  "wall_seconds": 1.735000000000582
+}

@@ -1,7 +1,9 @@
 {
-  "version": "autoglm_api_v29_bounded_no_progress_cycles",
+  "version": "autoglm_api_v35_clipboard_transport",
+  "step_assessment": false,
+  "assessment_prompt_version": "m3a_summary_adaptation_v2_shared_prefix",
   "provider": "zai",
-  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "prompt_version": "autoglm_native_en_v20_allowed_launch_example",
   "model": "autoglm-phone-multilingual",
   "observation": "screenshot",
   "tree_backend": "none",
@@ -18,7 +20,9 @@
     "max_tokens": 3000
   },
   "max_steps": 12,
-  "task_step_budgets": {"ContactsAddContact": 16},
+  "task_step_budgets": {
+    "ContactsAddContact": 16
+  },
   "max_seconds": 900,
   "request_timeout": 120,
   "recent_actions": 3,
@@ -27,8 +31,9 @@
   "freshness_global_difference": 0.08,
   "freshness_target_difference": 0.08,
   "no_effect_difference": 0.001,
-  "note": "v29 follows pinned Open-AutoGLM English contract and sourced Android World guidance. Long task recipes and Clock keypad Type exception withdrawn. Short visible goals, ordered native history, latest screenshot, checked GUI state and actual selected-control feedback. Bounded recorder readiness and observed EditText recognition repair recorded adapter faults. Scheduler stops at the first failed clean trial; repeated unchanged action cycles stop without forcing completion. Sixteen offline checks; live task-specific v20/v28 gates and unresolved Timer/Clipboard errors are in docs/WARMUP_RESULTS.md. Sources/slide mapping: docs/COURSE_AND_UPSTREAM_REVIEW.md.",
+  "note": "Same v34 model policy; single-attempt 30-second Chrome launch and live recorder-process monitoring after documented ADB restart/video-loss failure.",
   "visual_stability_checks": 3,
   "visual_stability_pause": 0.5,
-  "visual_stability_difference": 0.01
+  "visual_stability_difference": 0.01,
+  "chrome_launch_timeout": 30
 }

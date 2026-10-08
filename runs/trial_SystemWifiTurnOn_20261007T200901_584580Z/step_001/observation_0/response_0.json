@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn WiFi on. I can see the home screen with various app icons. To turn WiFi on, I need to go to the Settings app first, then navigate to WiFi settings.\n\nI can see the Settings app icon in the bottom right area of the screen. Let me tap on it to launch the Settings app.\n\nLooking at the coordinates, the Settings app appears to be at approximately [821,675,960,728] based on the icon position.\ndo(action=\"Tap\", element=[847,675])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791403747,
+  "id": "20261008040905ff4a03cf4d9d4db1",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008040905ff4a03cf4d9d4db1",
+  "usage": {
+    "completion_tokens": 117,
+    "prompt_tokens": 1302,
+    "prompt_tokens_details": {
+      "cached_tokens": 291
+    },
+    "total_tokens": 1419
+  },
+  "wall_seconds": 2.0469999999986612
+}

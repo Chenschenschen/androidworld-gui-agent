@@ -1,5 +1,119 @@
 # Run the agent yourself
 
+Camera self-run after recorded startup failure:
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 run_task.py --task CameraTakePhoto --seed 42 --config general_config.json
+```
+
+Current v57 includes Camera in existing checked GUI-label capture so its
+first-use controls can be distinguished from the launch logo.43 checks and a
+read-only actual XML check pass; no new live success yet. Read
+CAMERA_SELF_RUN_REPAIR.md before comparing with historical Camera3/3 results.
+
+Latest self-run check,8 October: recipe is now only in project_easy. Run the
+forward --params task_inputs/files_easy_to_medium.json command with
+--continue-state. Earlier medium-location instructions below describe the
+previous state. A user trial's first API request returned HTTP400/provider1210;
+the exact saved request then returned200 in an API-only diagnostic. No GUI
+action occurred in the failed trial or diagnostic. Current v56 prints redacted
+provider errors directly;43 checks pass. The pydub FFmpeg discovery warning
+is unrelated to that HTTP rejection; video packaging uses bundled FFmpeg.
+If a request fails, inspect *_api_error.json before changing configuration;
+the runner does not replay a request or GUI action automatically.
+
+Current self-run command (recipe is in project_medium as checked on8 October):
+
+```powershell
+Set-Location "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project"
+.\.venv\Scripts\python.exe -X utf8 run_task.py --task FilesMoveFile --seed 43 --config general_config.json --params task_inputs/files_medium_to_easy.json --continue-state
+```
+
+After clean success, change --params to task_inputs/files_easy_to_medium.json
+to move it forward again. The same Python script runs every supported task;
+JSON selects the exact file and direction. Keep AndroidWorldAvd running with
+gRPC8554 and leave its screen untouched while the agent runs. Existing .env
+contains the API settings. Check the printed Evidence folder's summary.json:
+clean_agent_success:true requires official PASS plus model finish.
+
+Recording packaging v55 leaves the v54 model/observation policy unchanged.
+Android screenrecord is split into roughly three-minute parts; video_001.mp4
+is not the complete trial when video_002.mp4 exists. The runner now creates
+recording_complete.mp4 after recording and reports complete_video in the
+summary. Original parts remain. FFmpeg joins existing frames without re-encoding;
+rollover pauses are not recorded time. Packaging errors are reported separately
+without discarding original clips or altering the official task result.
+imageio-ffmpeg0.6.0 is installed in project .venv and pinned in the dependency
+lock.42 checks pass; complete files were decoded and verified against all part
+frame counts. No additional agent trial was run for this packaging-only change.
+
+Latest Files results: requested forward/back/forward sequence succeeded after
+one failed third attempt and repair (v53/v53/v54, three successes/four attempts).
+The recipe now exists only in project_medium. To run again from this state,
+start with the reverse command below; the forward precondition intentionally
+fails until the recipe is back in easy. Do not delete/recreate the existing file.
+Measured model stage used v54;42 offline checks pass. See the complete
+results and named videos in FILES_MOVE_TRIAL.md and PRESENTATION_EVIDENCE.md.
+
+FilesMoveFile uses this same runner. Exact file/folder inputs live in
+task_inputs/files_easy_to_medium.json and files_medium_to_easy.json. For an
+existing source recipe, preserve it:
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 run_task.py --task FilesMoveFile --seed 42 --config general_config.json --params task_inputs/files_easy_to_medium.json --continue-state
+.\.venv\Scripts\python.exe -X utf8 run_task.py --task FilesMoveFile --seed 43 --config general_config.json --params task_inputs/files_medium_to_easy.json --continue-state
+.\.venv\Scripts\python.exe -X utf8 run_task.py --task FilesMoveFile --seed 44 --config general_config.json --params task_inputs/files_easy_to_medium.json --continue-state
+```
+
+Run each command only after the preceding trial's clean PASS. Without
+--continue-state, Files prepares only a missing named source file and destination
+folder; existing source/destination files are rejected, never overwritten.
+Linked moves preserve contents and use the official verifier but are not
+independent benchmark resets. Read FILES_MOVE_TRIAL.md for current measured
+results. Named successful recordings are indexed in PRESENTATION_EVIDENCE.md.
+
+SimpleSmsSend uses the same runner with screenshots and checked fresh SMS GUI
+labels/centres, without a task procedure. Latest v49 seeds43/44 both cleanPASS
+with model finish at step7 (two runs, not a three-run gate):
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 run_task.py --task SimpleSmsSend --seed 42 --config general_config.json
+```
+
+See [SIMPLE_SMS_TRIAL.md](SIMPLE_SMS_TRIAL.md) for results and the preserved setup
+failure. Leave the test emulator untouched while the recorded agent runs.
+
+Newest prepared variant: [TASK_GUIDANCE_AND_GROUNDING.md](TASK_GUIDANCE_AND_GROUNDING.md)
+describes explicit procedures for all five warm-ups. Use the same Python runner:
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 run_task.py --task SystemCopyToClipboard --seed 43 --config guided_config.json
+```
+
+Change the task/seed arguments for another warm-up; no separate task script is
+needed. Guided Clipboard uses Markor, installed/prepared by official Android
+World setup on its first run. The selected guide is logged and snapshotted.
+28 offline checks pass. No live guided outcome is established; omitting
+`--config` still selects the measured v35 baseline.
+
+Latest stage: [UPSTREAM_REFERENCE_COMPARISON.md](UPSTREAM_REFERENCE_COMPARISON.md)
+documents the actual original AutoGLM PhoneAgent comparison. Native/project
+Timer and Clipboard each failed one valid paired instance. Prerequisite and
+invalid-recording attempts are preserved separately.25 offline checks pass.
+Default v35 retains the measured Chrome transport and recorder repair, with
+the same model policy. One runner supports every task: add `--config reference_config.json` for the
+optional pinned native reference, or `--config comparison_config.json` for the
+measured project Chrome transport repair. These are known failed task variants,
+not new success gates. No task-specific script is needed.
+
+Previous v34 kept the independent entry point and disabled the unsuccessful
+before/after assessment by default.20 offline checks pass; standalone readiness
+from outside the project passed. The separate assessment_config.json preserves
+the failed v33 experiment for inspection, not an improved baseline. Read
+[STEP_ASSESSMENT_EXPERIMENT.md](STEP_ASSESSMENT_EXPERIMENT.md) before considering
+another trial. Its original source/settings snapshots and videos are preserved.
+Earlier v29/v34 descriptions below are historical; no batch is running.
+
 The default agent now uses Z.ai's hosted `autoglm-phone-multilingual`, with
 screenshots and native AutoGLM actions. Ollama is not required. Project Python
 remains `.venv`, with the existing Android World installation and Windows APK

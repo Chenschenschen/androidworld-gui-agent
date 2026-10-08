@@ -1,0 +1,19 @@
+{
+  "native": {
+    "action": "TYPE",
+    "value": "Camila da Silva",
+    "verify": "The text 'Camila da Silva' should appear in the 'First name' input field.",
+    "target": "First name",
+    "index": "7",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "Camila da Silva",
+    "x": 535,
+    "y": 939,
+    "clear_text": true
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

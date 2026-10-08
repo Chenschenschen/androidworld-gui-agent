@@ -1,0 +1,13 @@
+{
+  "native": {
+    "action": "AWAKE",
+    "value": "Chrome",
+    "verify": "The Chrome browser interface should be visible on the screen."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "chrome"
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

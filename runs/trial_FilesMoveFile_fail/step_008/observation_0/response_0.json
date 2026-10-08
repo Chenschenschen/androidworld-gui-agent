@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Move to...\" dialog is open, currently showing the Downloads folder. To select the destination folder \"project_medium\" within the \"sdk_gphone64_x86_64\" storage area, I need to open the navigation drawer by tapping the \"Show roots\" button at [0, 53, 135, 105].\n\n\ndo(action=\"Tap\", element=[68,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791468448,
+  "id": "2026100822072762633da8bf3d4010",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100822072762633da8bf3d4010",
+  "usage": {
+    "completion_tokens": 83,
+    "prompt_tokens": 6861,
+    "prompt_tokens_details": {
+      "cached_tokens": 4927
+    },
+    "total_tokens": 6944
+  },
+  "wall_seconds": 2.062000000005355
+}

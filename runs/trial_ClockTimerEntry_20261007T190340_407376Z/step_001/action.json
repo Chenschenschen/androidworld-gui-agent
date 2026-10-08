@@ -1,0 +1,13 @@
+{
+  "native": {
+    "action": "AWAKE",
+    "value": "Clock",
+    "verify": "The Clock app should open, displaying its main interface."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "clock"
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

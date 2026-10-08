@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "15:35",
+    "verify": "The time '15:35' should change or be dismissed.",
+    "target": "Help make Chrome better by sending usage statistics and crash reports to Google.",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1639
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,15 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.0011393229166666667,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 3.639999999999418,
+  "selected_gui_control": {
+    "label": "0",
+    "resource_id": "com.google.android.deskclock:id/timer_setup_digit_0"
+  }
+}

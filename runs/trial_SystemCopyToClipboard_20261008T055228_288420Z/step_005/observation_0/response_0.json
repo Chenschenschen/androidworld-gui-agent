@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see the search bar is now focused and shows \"Text you copied\" as a suggestion. I need to tap on the search bar to select all the text so I can copy it. Let me tap on the search bar area.\ndo(action=\"Tap\", element=[499,106])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438779,
+  "id": "20261008135258a725911119b64717",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135258a725911119b64717",
+  "usage": {
+    "completion_tokens": 61,
+    "prompt_tokens": 2527,
+    "prompt_tokens_details": {
+      "cached_tokens": 1225
+    },
+    "total_tokens": 2588
+  },
+  "wall_seconds": 1.514999999999418
+}

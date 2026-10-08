@@ -1,0 +1,270 @@
+
+--- 2026-10-07T19:30:45.460489+00:00 | RUN | RUN START ---
+{
+  "task": "ContactsAddContact",
+  "config": {
+    "version": "five_easy_tasks_v10_launch_guard",
+    "prompt_version": "gelab_json_five_tasks_v8",
+    "wifi_tree_backend": "uiautomator",
+    "task_observations": {
+      "SystemWifiTurnOn": "screenshot"
+    },
+    "action_format": "json_schema",
+    "observation": "tree_first",
+    "prompt_examples": false,
+    "max_screenshot_fallbacks": 2,
+    "model": "gelab-zero-4b-preview:latest",
+    "options": {
+      "temperature": 1,
+      "top_k": 20,
+      "top_p": 0.95,
+      "num_ctx": 4096,
+      "num_gpu": 22,
+      "num_predict": 256,
+      "seed": 42
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "note": "After v9's fifteen-trial batch: restrict position freshness checks to pointing/typing actions, allowing fixed app launches despite changing trees. Camera/Timer/Contacts/Clipboard retain tree-first, so their comparison changes only the launch guard. Wi-Fi uses screenshot input after three valid tree-first failures; this is an interface-plus-guard diagnostic comparison. Same model/GPU/sampling/budgets/seeds. Every failure retained.",
+    "contact_guidance": true,
+    "targeted_type": true,
+    "direct_type_only": true,
+    "label_grounding": true,
+    "task_seed": 43
+  }
+}
+
+--- 2026-10-07T19:31:06.544523+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Create a new contact for Hugo Ali. Their number is +12751797908.",
+  "parameters": {
+    "name": "Hugo Ali",
+    "number": "+12751797908"
+  },
+  "task_seed": 43,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-07T19:31:27.548835+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-07T19:31:29.770610+00:00 | STEP 001 | OBSERVATION ---
+{
+  "screenshot": "step_001/before.png",
+  "tree": "step_001/tree.json"
+}
+{"index":0,"is_scrollable":true}
+{"index":1,"content_description":"Home"}
+{"index":2,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":3,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":4,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":5,"text":"Clipper","content_description":"Predicted app: Clipper","is_clickable":true}
+{"index":6,"content_description":"Search","is_clickable":true}
+{"index":7,"text":"51:31","content_description":"51:31","is_clickable":true}
+{"index":8,"text":"Camera","content_description":"Camera","is_clickable":true}
+{"index":9,"text":"Files","content_description":"Files","is_clickable":true}
+{"index":10,"text":"Contacts","content_description":"Contacts","is_clickable":true}
+{"index":11,"text":"Calendar","content_description":"Calendar","is_clickable":true}
+{"index":12,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":13,"text":"Maps","content_description":"Maps","is_clickable":true}
+{"index":14,"text":"Clock","content_description":"Clock","is_clickable":true}
+{"index":15,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":16,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":17,"text":"Gmail","content_description":"Gmail","is_clickable":true}
+{"index":18,"text":"Photos","content_description":"Photos","is_clickable":true}
+{"index":19,"text":"Settings","content_description":"Settings","is_clickable":true}
+{"index":20,"content_description":"Google app","is_clickable":true}
+{"index":21,"content_description":"Voice search","is_clickable":true}
+{"index":22,"content_description":"Google Lens","is_clickable":true}
+{"index":23,"text":"15:34","content_description":"17:34"}
+{"index":24,"content_description":"Android System notification: Serial console enabled"}
+{"index":25,"content_description":"Wifi signal full.,No internet"}
+{"index":26,"content_description":"Phone three bars."}
+{"index":27,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T19:31:29.772615+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_001/tree/request_0.json",
+  "call": 1
+}
+
+--- 2026-10-07T19:31:36.605481+00:00 | STEP 001 | MODEL REPLY ---
+{"action": "AWAKE", "value": "contacts", "verify": "The Contacts app should open, displaying the main contact list.","target": "Contacts"}
+
+--- 2026-10-07T19:31:36.606564+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.8289999999979045,
+  "load_seconds": 0.0167743,
+  "prompt_seconds": 0.992719,
+  "generation_seconds": 2.886237,
+  "output_tokens": 36
+}
+
+--- 2026-10-07T19:31:36.607568+00:00 | STEP 001 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "AWAKE",
+    "value": "contacts",
+    "verify": "The Contacts app should open, displaying the main contact list."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "contacts"
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T19:31:36.607568+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "open_app",
+    "app_name": "contacts"
+  }
+}
+
+--- 2026-10-07T19:31:45.163033+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "AWAKE",
+    "value": "contacts",
+    "verify": "The Contacts app should open, displaying the main contact list."
+  },
+  "target": null,
+  "android": {
+    "action_type": "open_app",
+    "app_name": "contacts"
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_001/after.png",
+  "execute_and_observe_seconds": 8.56199999999808
+}
+
+--- 2026-10-07T19:31:45.924719+00:00 | STEP 002 | OBSERVATION ---
+{
+  "screenshot": "step_002/before.png",
+  "tree": "step_002/tree.json"
+}
+{"index":0,"text":"15:34","content_description":"17:34"}
+{"index":1,"content_description":"Android System notification: Serial console enabled"}
+{"index":2,"content_description":"Wifi signal full.,No internet"}
+{"index":3,"content_description":"Phone three bars."}
+{"index":4,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T19:31:45.926723+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_002/tree/request_0.json",
+  "call": 2
+}
+
+--- 2026-10-07T19:31:52.287176+00:00 | STEP 002 | MODEL REPLY ---
+{"action": "CLICK", "value": "hugo Ali", "verify": "The Contacts app should open, likely displaying the main contact list or a prompt to create a new contact.","target": ""}
+
+--- 2026-10-07T19:31:52.287695+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.35899999999674,
+  "load_seconds": 0.014104,
+  "prompt_seconds": 0.567327,
+  "generation_seconds": 3.545785,
+  "output_tokens": 45
+}
+
+--- 2026-10-07T19:31:52.288786+00:00 | STEP 002 | VALIDATION ERROR ---
+{
+  "error": "Target label '' matches 0 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T19:31:52.289821+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_002/tree/request_1.json",
+  "call": 3
+}
+
+--- 2026-10-07T19:31:58.374814+00:00 | STEP 002 | MODEL REPLY ---
+{"action": "CLICK", "value": "hugo ali", "verify": "The Contacts app should open, likely displaying the main contact list or a prompt to create a new contact.","target": ""}
+
+--- 2026-10-07T19:31:58.375321+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.094000000004598,
+  "load_seconds": 0.0160097,
+  "prompt_seconds": 0.486689,
+  "generation_seconds": 3.508988,
+  "output_tokens": 45
+}
+
+--- 2026-10-07T19:31:58.376352+00:00 | STEP 002 | VALIDATION ERROR ---
+{
+  "error": "Target label '' matches 0 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T19:31:58.377779+00:00 | STEP 002 | SCREENSHOT FALLBACK ---
+{
+  "step": 2,
+  "reason": "Tree/interface validation failed: Target label '' matches 0 controls; use an unambiguous visible label",
+  "from": "tree",
+  "to": "screenshot"
+}
+
+--- 2026-10-07T19:31:59.495741+00:00 | STEP 002 | RUN ERROR ---
+{
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 221, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 476, in step\n    fields, action, mode = self.choose_action(state, folder, goal, status)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 454, in choose_action\n    raise RuntimeError(\"UI changed before screenshot fallback; stopping\")\nRuntimeError: UI changed before screenshot fallback; stopping\n",
+  "class": "environment_or_execution_error"
+}
+
+--- 2026-10-07T19:32:00.859649+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261007T193045_459484Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 1,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "five_easy_tasks_v10_launch_guard",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_five_tasks_v8",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 2,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 221, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 476, in step\n    fields, action, mode = self.choose_action(state, folder, goal, status)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 454, in choose_action\n    raise RuntimeError(\"UI changed before screenshot fallback; stopping\")\nRuntimeError: UI changed before screenshot fallback; stopping\n",
+  "error_class": "environment_or_execution_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 3,
+  "screenshot_fallbacks": [
+    {
+      "step": 2,
+      "reason": "Tree/interface validation failed: Target label '' matches 0 controls; use an unambiguous visible label",
+      "from": "tree",
+      "to": "screenshot"
+    }
+  ],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 32.20300000000134
+}

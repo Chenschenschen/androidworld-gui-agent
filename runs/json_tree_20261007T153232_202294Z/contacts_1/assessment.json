@@ -1,0 +1,16 @@
+{
+  "case": "contacts",
+  "repeat": 1,
+  "valid": true,
+  "correct": true,
+  "executed": false,
+  "fields": {
+    "action": "TYPE",
+    "value": "Camila",
+    "verify": "The First name field should now contain the text 'Camila'."
+  },
+  "action": {
+    "action_type": "input_text",
+    "text": "Camila"
+  }
+}

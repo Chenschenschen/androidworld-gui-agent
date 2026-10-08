@@ -1,0 +1,20 @@
+[
+  {
+    "case": "on",
+    "android": {
+      "action_type": "status",
+      "goal_status": "complete",
+      "reason": "Wi-Fi is now turned on as requested."
+    },
+    "gui_actions": 0
+  },
+  {
+    "case": "off",
+    "android": {
+      "action_type": "status",
+      "goal_status": "complete",
+      "reason": "Wi-Fi is now turned on as requested."
+    },
+    "gui_actions": 0
+  }
+]

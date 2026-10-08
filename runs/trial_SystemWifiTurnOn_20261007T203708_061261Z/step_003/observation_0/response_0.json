@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "用户想要打开Wi-Fi。当前在Android的Settings应用中，显示的是\"Network & internet\"页面。\n\n从截图中我可以看到：\n- 页面标题是\"Network & internet\"\n- 有一个\"Internet\"选项，显示\"Networks available\"\n- 还有其他选项如 Calls & SMS、SIMs、Airplane mode、Hotspot & tethering、Data Saver、VPN、Mobile plan、Private DNS等\n\n要打开Wi-Fi，我需要点击\"Internet\"选项，因为Wi-Fi设置通常在Internet选项里面。\n\n让我点击\"Internet\"这一项。\ndo(action=\"Tap\", element=[499,298])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405460,
+  "id": "2026100804373850c97d06d510431b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100804373850c97d06d510431b",
+  "usage": {
+    "completion_tokens": 137,
+    "prompt_tokens": 1850,
+    "prompt_tokens_details": {
+      "cached_tokens": 524
+    },
+    "total_tokens": 1987
+  },
+  "wall_seconds": 2.0
+}

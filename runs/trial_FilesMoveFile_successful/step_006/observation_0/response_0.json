@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The file \"cooking-recipe.md\" is selected, and the \"More options\" menu is available. To move the file, I should open the \"More options\" menu to look for the move or copy option. The \"More options\" button is at [882, 79, 999, 129].\n\n\ndo(action=\"Tap\", element=[941,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791480116,
+  "id": "202610090121544fbd1878c9bc4d01",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610090121544fbd1878c9bc4d01",
+  "usage": {
+    "completion_tokens": 83,
+    "prompt_tokens": 6504,
+    "prompt_tokens_details": {
+      "cached_tokens": 4018
+    },
+    "total_tokens": 6587
+  },
+  "wall_seconds": 1.8119999999908032
+}

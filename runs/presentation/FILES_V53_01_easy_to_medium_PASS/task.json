@@ -1,0 +1,15 @@
+{
+  "name": "FilesMoveFile",
+  "goal": "Move the file cooking-recipe.md from project_easy within the sdk_gphone_x86_64 storage area to the project_medium within the same sdk_gphone_x86_64 storage area in the Android filesystem.",
+  "parameters": {
+    "file_name": "cooking-recipe.md",
+    "source_folder": "project_easy",
+    "destination_folder": "project_medium",
+    "noise_candidates": [
+      "cooking-recipe.md"
+    ]
+  },
+  "seed": 42,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7",
+  "initialization_mode": "linked_existing_file"
+}

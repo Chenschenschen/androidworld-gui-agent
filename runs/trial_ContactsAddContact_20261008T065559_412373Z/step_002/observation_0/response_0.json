@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Contacts app is open and shows \"No contacts yet\". To create a new contact, I need to find the \"Create contact\" button, which is typically in the top-right corner of the app. I'll tap the top-right area to look for the create button.\ndo(action=\"Tap\", element=[835,83])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442574,
+  "id": "20261008145612b160bd4f7316440a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008145612b160bd4f7316440a",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 1888,
+    "prompt_tokens_details": {
+      "cached_tokens": 645
+    },
+    "total_tokens": 1956
+  },
+  "wall_seconds": 1.625
+}

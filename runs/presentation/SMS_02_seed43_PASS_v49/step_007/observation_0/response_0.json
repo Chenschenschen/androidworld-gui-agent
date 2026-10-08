@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The message \"Your dentist appointment is scheduled for 2 PM on Thursday.\" has been sent successfully to +10427517979, as shown in the conversation thread. The task is complete and no further actions are needed.\n\n\nfinish(message=\"Text message sent successfully.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791466263,
+  "id": "2026100821310271d6d5b695394068",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100821310271d6d5b695394068",
+  "usage": {
+    "completion_tokens": 58,
+    "prompt_tokens": 5783,
+    "prompt_tokens_details": {
+      "cached_tokens": 3580
+    },
+    "total_tokens": 5841
+  },
+  "wall_seconds": 1.875
+}

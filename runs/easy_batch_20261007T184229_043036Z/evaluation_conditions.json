@@ -1,0 +1,12 @@
+{
+  "manual_interaction_policy": "User instructed to leave emulator untouched after reporting interaction in preceding batch",
+  "task_seeds": [
+    42,
+    43,
+    44
+  ],
+  "model_seed": 42,
+  "speed_tuning": "paused; num_gpu22 unchanged",
+  "task_success": "Official Android World verifier; valid initialization and video required",
+  "scope": "Five easy warm-up tasks; medium/hard course scope remains pending"
+}

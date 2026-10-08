@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe screen shows the home screen with the Camera app icon visible at the top-left (coordinates [52,341,246,448]). To take a photo, I need to open the Camera app first. The best next action is to tap the Camera icon to launch the app.\n\n\ndo(action=\"Tap\", element=[149,409])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791486413,
+  "id": "20261009030651f2ae326602134128",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261009030651f2ae326602134128",
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 2502,
+    "prompt_tokens_details": {
+      "cached_tokens": 408
+    },
+    "total_tokens": 2580
+  },
+  "wall_seconds": 1.860000000000582
+}

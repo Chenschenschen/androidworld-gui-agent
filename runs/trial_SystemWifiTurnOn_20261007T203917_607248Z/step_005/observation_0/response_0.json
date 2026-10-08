@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe Wi-Fi switch is already toggled ON (checked), as indicated by the blue toggle and the \"Wi-Fi: switch ON\" label. No further action is needed. I will finish the task.\nfinish(message=\"Wi-Fi is already turned ON as shown by the blue toggle switch and the 'Wi-Fi: switch ON' indicator. No further action is required.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405615,
+  "id": "20261008044014be9a1cba48cc4800",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008044014be9a1cba48cc4800",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 1966,
+    "prompt_tokens_details": {
+      "cached_tokens": 524
+    },
+    "total_tokens": 2046
+  },
+  "wall_seconds": 1.7340000000040163
+}

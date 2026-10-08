@@ -1,0 +1,13 @@
+{
+  "native": {
+    "action": "TYPE",
+    "value": "Camila da Silva",
+    "verify": "The name 'Camila da Silva' should be visible in the name fields."
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "Camila da Silva"
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

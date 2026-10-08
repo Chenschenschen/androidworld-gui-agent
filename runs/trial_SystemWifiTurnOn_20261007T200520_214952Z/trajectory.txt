@@ -1,0 +1,96 @@
+
+--- 2026-10-07T20:05:20.215953+00:00 | RUN | RUN START ---
+{
+  "task": "SystemWifiTurnOn",
+  "config": {
+    "version": "autoglm_api_v1_screenshot",
+    "provider": "zai",
+    "prompt_version": "autoglm_native_en_v1",
+    "model": "autoglm-phone-multilingual",
+    "observation": "screenshot",
+    "tree_backend": "uiautomator",
+    "action_format": "native_pseudocall",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 0.85,
+      "frequency_penalty": 0.2,
+      "max_tokens": 1024
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "max_reobservations": 1,
+    "freshness_global_difference": 0.08,
+    "freshness_target_difference": 0.08,
+    "no_effect_difference": 0.001,
+    "note": "User-authorized AutoGLM migration. Native screenshot/pseudo-call input/output, normal focus taps, unique fresh XML and selected-target checks. Provisional budgets and image thresholds. Model plus interface/infrastructure comparison, not an isolated model effect. One trial before expansion.",
+    "api_base_url": "https://api.z.ai/api/paas/v4",
+    "task_seed": 42
+  }
+}
+
+--- 2026-10-07T20:05:20.452508+00:00 | RUN | OBSERVATION INFRASTRUCTURE ---
+{
+  "backend": "uiautomator",
+  "accessibility_services_before": "com.google.androidenv.accessibilityforwarder/com.google.androidenv.accessibilityforwarder.AccessibilityForwarder",
+  "accessibility_services_after": "null",
+  "fresh_xml": "unique path, checked dump/read and XML parsing",
+  "task_state_modified": false
+}
+
+--- 2026-10-07T20:05:20.987983+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Turn wifi on.",
+  "parameters": {
+    "on_or_off": "on"
+  },
+  "task_seed": 42,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-07T20:05:26.820868+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-07T20:05:39.150441+00:00 | STEP 001 | RUN ERROR ---
+{
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 242, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 255, in step\n    state = self.env.get_state(wait_to_stabilize=True)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\interface.py\", line 294, in get_state\n    return self._get_stable_state()\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\interface.py\", line 262, in _get_stable_state\n    self._prior_state = self._get_state()\n                        ^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\interface.py\", line 241, in _get_state\n    return _process_timestep(self.controller.step(_get_no_op_action()))\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_env\\wrappers\\base_wrapper.py\", line 43, in step\n    return self._process_timestep(self._env.step(action))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\android_world_controller.py\", line 249, in _process_timestep\n    ui_elements = self.get_ui_elements()\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\android_world_controller.py\", line 234, in get_ui_elements\n    adb_utils.uiautomator_dump(self._env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\android_compat.py\", line 57, in fresh_dump\n    raise RuntimeError(\"UIAutomator did not confirm writing this observation\")\nRuntimeError: UIAutomator did not confirm writing this observation\n",
+  "class": "environment_or_execution_error"
+}
+
+--- 2026-10-07T20:05:39.645691+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261007T200520_214952Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 0,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v1_screenshot",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v1",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 1,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 242, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 255, in step\n    state = self.env.get_state(wait_to_stabilize=True)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\interface.py\", line 294, in get_state\n    return self._get_stable_state()\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\interface.py\", line 262, in _get_stable_state\n    self._prior_state = self._get_state()\n                        ^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\interface.py\", line 241, in _get_state\n    return _process_timestep(self.controller.step(_get_no_op_action()))\n                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_env\\wrappers\\base_wrapper.py\", line 43, in step\n    return self._process_timestep(self._env.step(action))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\android_world_controller.py\", line 249, in _process_timestep\n    ui_elements = self.get_ui_elements()\n                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\android_world_controller.py\", line 234, in get_ui_elements\n    adb_utils.uiautomator_dump(self._env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\android_compat.py\", line 57, in fresh_dump\n    raise RuntimeError(\"UIAutomator did not confirm writing this observation\")\nRuntimeError: UIAutomator did not confirm writing this observation\n",
+  "error_class": "environment_or_execution_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 0,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 11.734000000004016
+}

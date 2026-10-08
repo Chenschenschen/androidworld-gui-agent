@@ -1,0 +1,7 @@
+{
+  "summary": "The timer now shows 20:70:01, which is incorrect. The desired time is 20:07:01, so I need to adjust the minutes from 70 to 07. I should tap \"7\" to set the minutes to 07. The \"7\" button is at [123,514,368,624].",
+  "kind": "model_assessment",
+  "verifier_feedback": false,
+  "discarded_operation_lines": [],
+  "operations_executed": 0
+}

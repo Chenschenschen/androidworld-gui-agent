@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the home screen, and there is no clipboard interface visible. To proceed, I should first launch the Chrome app, which typically provides access to the clipboard in its input fields.\n\n\ndo(action=\"Launch\", app=\"chrome\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791458121,
+  "id": "202610081915196b3ad3315a7b4377",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081915196b3ad3315a7b4377",
+  "usage": {
+    "completion_tokens": 73,
+    "prompt_tokens": 1857,
+    "prompt_tokens_details": {
+      "cached_tokens": 816
+    },
+    "total_tokens": 1930
+  },
+  "wall_seconds": 1.9369999999908032
+}

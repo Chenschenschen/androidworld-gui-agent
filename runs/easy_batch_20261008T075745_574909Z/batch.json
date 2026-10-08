@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    "SystemCopyToClipboard"
+  ],
+  "task_seeds": [
+    43
+  ],
+  "source_hashes": {
+    "run_task.py": "c2d4f06f80a01e14b8605f0c6857d4d62ef1d14200ff963956bf77a917903284",
+    "autoglm_agent.py": "a8623e4185b51bfa2028b0ebeaa788be0d546b7cc83c5c5272aac32f89212a36",
+    "instructions/autoglm.md": "bf8d3a9d95779a1b1db8e6426e44b19d90464ecd7bb7d5875a975d7fa3002a76",
+    "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+    "android_compat.py": "39d6c062518b6092bcd801d36fba1cf10e7642bc0f91ed7975d94dcc07935f20"
+  },
+  "purpose": "Three-case learning evaluation; failures are not discarded."
+}

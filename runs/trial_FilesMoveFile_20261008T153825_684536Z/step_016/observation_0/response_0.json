@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Show roots\" menu is open, and the \"sdk_gphone64_x86_64\" storage area is visible and clickable. To verify the file has been moved, we should tap on \"sdk_gphone64_x86_64\" to open it and check the contents of \"project_medium\" for the moved file. This will confirm the task is complete.\n\n\ndo(action=\"Tap\", element=[338,540])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474140,
+  "id": "20261008234218f8ba97e709734597",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008234218f8ba97e709734597",
+  "usage": {
+    "completion_tokens": 93,
+    "prompt_tokens": 13107,
+    "prompt_tokens_details": {
+      "cached_tokens": 10805
+    },
+    "total_tokens": 13200
+  },
+  "wall_seconds": 2.0939999999973224
+}

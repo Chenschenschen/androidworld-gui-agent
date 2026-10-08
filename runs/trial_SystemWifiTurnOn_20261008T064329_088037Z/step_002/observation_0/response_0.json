@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Settings app is now open. I can see the \"Network & internet\" option which contains Wi-Fi settings. I need to tap on \"Network & internet\" to access Wi-Fi controls.\ndo(action=\"Tap\", element=[499,376])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441826,
+  "id": "202610081443458c48fa3c0c124632",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081443458c48fa3c0c124632",
+  "usage": {
+    "completion_tokens": 53,
+    "prompt_tokens": 1932,
+    "prompt_tokens_details": {
+      "cached_tokens": 773
+    },
+    "total_tokens": 1985
+  },
+  "wall_seconds": 1.4839999999967404
+}

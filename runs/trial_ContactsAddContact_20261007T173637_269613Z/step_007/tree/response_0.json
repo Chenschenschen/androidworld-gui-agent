@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:38:08.4043835Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Android System notification: Serial console enabled\", \"verify\": \"Android System notification: Serial console enabled should open.\", \"target\": \"Help make Chrome better by sending usage statistics and crash reports to Google.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4655555900,
+  "load_duration": 16969800,
+  "prompt_eval_count": 1212,
+  "prompt_eval_cached_count": 750,
+  "prompt_eval_duration": 608546000,
+  "eval_count": 52,
+  "eval_duration": 4018386000,
+  "wall_seconds": 6.702999999997701
+}

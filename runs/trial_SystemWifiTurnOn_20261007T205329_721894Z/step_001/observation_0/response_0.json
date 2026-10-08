@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn Wi-Fi on. The task is to enable Wi-Fi in Settings > Internet. I can see the Settings app icon on the home screen at coordinates [731,640,932,728]. I need to tap it to open Settings first, then navigate to Internet settings to turn on Wi-Fi.\n\nSince the task is to turn Wi-Fi on and I can see the Settings app is available, the first step should be to launch the Settings app.\ndo(action=\"Tap\", element=[848,668])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406415,
+  "id": "202610080453331ea9c2bd74354b30",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080453331ea9c2bd74354b30",
+  "usage": {
+    "completion_tokens": 116,
+    "prompt_tokens": 1657,
+    "prompt_tokens_details": {
+      "cached_tokens": 524
+    },
+    "total_tokens": 1773
+  },
+  "wall_seconds": 2.0780000000013388
+}

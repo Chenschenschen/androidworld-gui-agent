@@ -1,6 +1,6 @@
 # Start one learning task with the project's Python, or check readiness only.
 param(
-    [ValidateSet('ContactsAddContact', 'SystemWifiTurnOn', 'CameraTakePhoto', 'ClockTimerEntry', 'SystemCopyToClipboard')]
+    [ValidateSet('ContactsAddContact', 'SystemWifiTurnOn', 'CameraTakePhoto', 'ClockTimerEntry', 'SystemCopyToClipboard', 'SimpleSmsSend', 'FilesMoveFile')]
     [string]$Task = 'ContactsAddContact',
     [int]$Seed = 42,
     [ValidateSet('tree_first', 'tree', 'screenshot')]

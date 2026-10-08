@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "14",
+    "verify": "The text 'Camila' should be entered in the last name field.",
+    "index": "8"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 535,
+    "y": 1135
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

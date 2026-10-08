@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T19:29:52.4218587Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Last name\", \"verify\": \"The 'Last name' field should become focused for input.\", \"target\": \"Last name\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5367119400,
+  "load_duration": 26199200,
+  "prompt_eval_count": 2233,
+  "prompt_eval_cached_count": 551,
+  "prompt_eval_duration": 1836545000,
+  "eval_count": 38,
+  "eval_duration": 3287763000,
+  "wall_seconds": 7.421999999998661
+}

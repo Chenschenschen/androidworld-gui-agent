@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see the search bar is now active and I can type in it. I need to type the text \"john.doe@example.com\" to set it up for copying. Let me type this text.\ndo(action=\"Type\", text=\"john.doe@example.com\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407875,
+  "id": "202610080517544237e62401d045f6",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080517544237e62401d045f6",
+  "usage": {
+    "completion_tokens": 56,
+    "prompt_tokens": 2708,
+    "prompt_tokens_details": {
+      "cached_tokens": 1434
+    },
+    "total_tokens": 2764
+  },
+  "wall_seconds": 1.4690000000045984
+}

@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "finish",
+    "message": "Timer set to 20:07:01 successfully. Timer is not started, as requested. Task complete."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "Timer set to 20:07:01 successfully. Timer is not started, as requested. Task complete."
+  },
+  "observation_id": "observation_0"
+}

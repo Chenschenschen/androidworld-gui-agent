@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "We are in the \"Move to…\" dialog and can see the \"sdk_gphone64_x86_64\" storage area with the \"project_medium\" folder listed. The next step is to tap on the \"project_medium\" folder to select it as the destination for moving the file \"cooking-recipe.md\" from \"project_easy\".\n\n\ndo(action=\"Tap\", element=[274,628])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474734,
+  "id": "20261008235212d25583d05d184bd6",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008235212d25583d05d184bd6",
+  "usage": {
+    "completion_tokens": 84,
+    "prompt_tokens": 14679,
+    "prompt_tokens_details": {
+      "cached_tokens": 12138
+    },
+    "total_tokens": 14763
+  },
+  "wall_seconds": 2.0160000000032596
+}

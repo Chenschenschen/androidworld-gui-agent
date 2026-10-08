@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows \"00h 00m 13s\". The next digit to input is \"3\" for the minutes, so I should tap the \"3\" button on the keypad to continue setting the desired timer value.\ndo(action=\"Tap\", element=[754,339])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407610,
+  "id": "202610080513299bd68d6a38874264",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080513299bd68d6a38874264",
+  "usage": {
+    "completion_tokens": 61,
+    "prompt_tokens": 3783,
+    "prompt_tokens_details": {
+      "cached_tokens": 1947
+    },
+    "total_tokens": 3844
+  },
+  "wall_seconds": 1.687000000005355
+}

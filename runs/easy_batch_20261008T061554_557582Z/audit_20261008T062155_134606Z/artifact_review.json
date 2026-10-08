@@ -1,0 +1,102 @@
+[
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261008T061555_100535Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemCopyToClipboard",
+      "run_id": "trial_SystemCopyToClipboard_20261008T061555_100535Z",
+      "agent_done": false,
+      "verifier": "PASS",
+      "steps": 5,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v17_requested_clipboard_text",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v13_requested_text",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 6,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 319, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 442, in step\n    fields, action = self.ask_action(state, observed, goal, step)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 418, in ask_action\n    raise ValueError(\"Truncated model reply\")\nValueError: Truncated model reply\n",
+      "error_class": "validation_error",
+      "stop_reason": "error",
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "model_calls_attempted": 7,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 64.81299999999464,
+      "agent_phase_seconds": 56.25
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 7,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Chrome"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          377,
+          326
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Type",
+        "text": "Discount code: SAVE20"
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Long Press",
+        "element": [
+          499,
+          106
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          191,
+          165
+        ]
+      }
+    ],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 350,
+        "fps": 6.315286783187384,
+        "duration_seconds": 55.421077777777775
+      }
+    ],
+    "incomplete_steps": [
+      {
+        "step": "step_006",
+        "execution_started": false,
+        "note": "Expected interrupted/failed step; inspect saved request, error and stop reason."
+      }
+    ]
+  }
+]

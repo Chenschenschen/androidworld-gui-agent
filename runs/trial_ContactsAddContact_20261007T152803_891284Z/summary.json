@@ -1,0 +1,45 @@
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261007T152803_891284Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 2,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "learning_tree_first_v1",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_english_tree_v1",
+  "observation": "tree_first",
+  "grounding": "indices_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 3,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 161, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 283, in step\n    fields, action, mode = self.choose_action(state, folder, goal, status)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 255, in choose_action\n    raise ValueError(reason + \"; screenshot fallback unavailable or exhausted\")\nValueError: Tree/interface validation failed: Malformed field or unrecognized annotation; screenshot fallback unavailable or exhausted\n",
+  "error_class": "validation_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 8,
+  "screenshot_fallbacks": [
+    {
+      "step": 1,
+      "reason": "Tree/interface validation failed: Missing or unsupported action",
+      "from": "tree",
+      "to": "screenshot"
+    },
+    {
+      "step": 2,
+      "reason": "Tree/interface validation failed: Tree action requires an index and no point",
+      "from": "tree",
+      "to": "screenshot"
+    }
+  ],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 121.35900000000038
+}

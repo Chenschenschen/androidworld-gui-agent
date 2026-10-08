@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Perfect! I can see that the Wi-Fi has been successfully turned on. The Wi-Fi toggle is now in the ON position (checked), and I can see that there's an available Wi-Fi network called \"AndroidWifi\" that shows \"Saved / Won't automatically connect\" and has a full Wi-Fi signal icon. The task was to turn Wi-Fi on, and this has been accomplished.\nfinish(message=\"Wi-Fi has been successfully turned on! I can see the Wi-Fi toggle is now enabled (checked) and there's an available network \"AndroidWifi\" showing as saved. The task is complete - Wi-Fi is now on in the Settings > Internet section.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406582,
+  "id": "2026100804562056132136e8a74c48",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100804562056132136e8a74c48",
+  "usage": {
+    "completion_tokens": 135,
+    "prompt_tokens": 3353,
+    "prompt_tokens_details": {
+      "cached_tokens": 586
+    },
+    "total_tokens": 3488
+  },
+  "wall_seconds": 2.2819999999992433
+}

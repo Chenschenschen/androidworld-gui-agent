@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:35:02.1943316Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"TYPE\", \"value\": \"da Silva\", \"verify\": \"the text 'da Silva' is entered into the 'Last name' field.\", \"target\": \"Last name\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4210270200,
+  "load_duration": 14783600,
+  "prompt_eval_count": 2287,
+  "prompt_eval_cached_count": 2226,
+  "prompt_eval_duration": 468839000,
+  "eval_count": 41,
+  "eval_duration": 3712760000,
+  "wall_seconds": 6.264999999999418
+}

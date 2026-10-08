@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer now shows 20:70:01, which is incorrect. The desired time is 20:07:01, so I need to adjust the minutes from 70 to 07. I should tap \"7\" to set the minutes to 07. The \"7\" button is at [123,514,368,624].",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791453874,
+  "id": "202610081804323ca4786a262841ec",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081804323ca4786a262841ec",
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 2936,
+    "prompt_tokens_details": {
+      "cached_tokens": 302
+    },
+    "total_tokens": 3010
+  },
+  "wall_seconds": 2.125
+}

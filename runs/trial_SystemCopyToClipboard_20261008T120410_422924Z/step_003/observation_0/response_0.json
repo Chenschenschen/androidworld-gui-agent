@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The previous action was tapping the \"Navigate up\" button, which returned to the home screen. To continue using Markor for the text copying task, I need to relaunch the Markor app.\n\n\ndo(action=\"Launch\", app=\"markor\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791461109,
+  "id": "20261008200507b4f20e0240464ce6",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008200507b4f20e0240464ce6",
+  "usage": {
+    "completion_tokens": 55,
+    "prompt_tokens": 3000,
+    "prompt_tokens_details": {
+      "cached_tokens": 1585
+    },
+    "total_tokens": 3055
+  },
+  "wall_seconds": 1.514999999999418
+}

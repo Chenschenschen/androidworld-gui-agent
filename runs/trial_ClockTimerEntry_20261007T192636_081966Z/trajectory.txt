@@ -1,0 +1,506 @@
+
+--- 2026-10-07T19:26:36.084809+00:00 | RUN | RUN START ---
+{
+  "task": "ClockTimerEntry",
+  "config": {
+    "version": "five_easy_tasks_v10_launch_guard",
+    "prompt_version": "gelab_json_five_tasks_v8",
+    "wifi_tree_backend": "uiautomator",
+    "task_observations": {
+      "SystemWifiTurnOn": "screenshot"
+    },
+    "action_format": "json_schema",
+    "observation": "tree_first",
+    "prompt_examples": false,
+    "max_screenshot_fallbacks": 2,
+    "model": "gelab-zero-4b-preview:latest",
+    "options": {
+      "temperature": 1,
+      "top_k": 20,
+      "top_p": 0.95,
+      "num_ctx": 4096,
+      "num_gpu": 22,
+      "num_predict": 256,
+      "seed": 42
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "note": "After v9's fifteen-trial batch: restrict position freshness checks to pointing/typing actions, allowing fixed app launches despite changing trees. Camera/Timer/Contacts/Clipboard retain tree-first, so their comparison changes only the launch guard. Wi-Fi uses screenshot input after three valid tree-first failures; this is an interface-plus-guard diagnostic comparison. Same model/GPU/sampling/budgets/seeds. Every failure retained.",
+    "contact_guidance": true,
+    "targeted_type": true,
+    "direct_type_only": true,
+    "label_grounding": true,
+    "task_seed": 44
+  }
+}
+
+--- 2026-10-07T19:26:57.378417+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Create a timer with 13 hours, 33 minutes, and 34 seconds. Do not start the timer.",
+  "parameters": {
+    "hours": 13,
+    "minutes": 33,
+    "seconds": 34
+  },
+  "task_seed": 44,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-07T19:27:00.907890+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-07T19:27:08.560600+00:00 | STEP 001 | OBSERVATION ---
+{
+  "screenshot": "step_001/before.png",
+  "tree": "step_001/tree.json"
+}
+{"index":0,"is_scrollable":true}
+{"index":1,"content_description":"Home"}
+{"index":2,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":3,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":4,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":5,"text":"Clipper","content_description":"Predicted app: Clipper","is_clickable":true}
+{"index":6,"content_description":"Search","is_clickable":true}
+{"index":7,"text":"51:27","content_description":"51:27","is_clickable":true}
+{"index":8,"text":"Camera","content_description":"Camera","is_clickable":true}
+{"index":9,"text":"Files","content_description":"Files","is_clickable":true}
+{"index":10,"text":"Contacts","content_description":"Contacts","is_clickable":true}
+{"index":11,"text":"Calendar","content_description":"Calendar","is_clickable":true}
+{"index":12,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":13,"text":"Maps","content_description":"Maps","is_clickable":true}
+{"index":14,"text":"Clock","content_description":"Clock","is_clickable":true}
+{"index":15,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":16,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":17,"text":"Gmail","content_description":"Gmail","is_clickable":true}
+{"index":18,"text":"Photos","content_description":"Photos","is_clickable":true}
+{"index":19,"text":"Settings","content_description":"Settings","is_clickable":true}
+{"index":20,"content_description":"Google app","is_clickable":true}
+{"index":21,"content_description":"Voice search","is_clickable":true}
+{"index":22,"content_description":"Google Lens","is_clickable":true}
+{"index":23,"text":"15:34","content_description":"17:34"}
+{"index":24,"content_description":"Android System notification: Serial console enabled"}
+{"index":25,"content_description":"Wifi signal full.,No internet"}
+{"index":26,"content_description":"Phone three bars."}
+{"index":27,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T19:27:08.563104+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_001/tree/request_0.json",
+  "call": 1
+}
+
+--- 2026-10-07T19:27:15.404140+00:00 | STEP 001 | MODEL REPLY ---
+{"action": "AWAKE", "value": "clock", "verify": "The Clock app should open, displaying the main screen with options for Alarm, Timer, Stopwatch, etc.","target": "Clock"}
+
+--- 2026-10-07T19:27:15.404682+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.828000000001339,
+  "load_seconds": 0.0185178,
+  "prompt_seconds": 0.763194,
+  "generation_seconds": 3.65714,
+  "output_tokens": 45
+}
+
+--- 2026-10-07T19:27:15.405710+00:00 | STEP 001 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "AWAKE",
+    "value": "clock",
+    "verify": "The Clock app should open, displaying the main screen with options for Alarm, Timer, Stopwatch, etc."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "clock"
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T19:27:15.406738+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "open_app",
+    "app_name": "clock"
+  }
+}
+
+--- 2026-10-07T19:27:24.964497+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "AWAKE",
+    "value": "clock",
+    "verify": "The Clock app should open, displaying the main screen with options for Alarm, Timer, Stopwatch, etc."
+  },
+  "target": null,
+  "android": {
+    "action_type": "open_app",
+    "app_name": "clock"
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_001/after.png",
+  "execute_and_observe_seconds": 9.546999999998661
+}
+
+--- 2026-10-07T19:27:25.643639+00:00 | STEP 002 | OBSERVATION ---
+{
+  "screenshot": "step_002/before.png",
+  "tree": "step_002/tree.json"
+}
+{"index":0,"text":"Clock"}
+{"index":1,"content_description":"More options","is_clickable":true}
+{"index":2,"content_description":"Add city","is_clickable":true}
+{"index":3,"content_description":"Alarm","is_clickable":true}
+{"index":4,"content_description":"Clock"}
+{"index":5,"content_description":"Timer","is_clickable":true}
+{"index":6,"content_description":"Stopwatch","is_clickable":true}
+{"index":7,"content_description":"Bedtime","is_clickable":true}
+{"index":8,"text":"15:34","content_description":"15:34"}
+{"index":9,"text":"Sun, Oct 15","content_description":"Sunday, October 15"}
+{"index":10,"text":"You can find the privacy policy here"}
+{"index":11,"text":"15:34","content_description":"17:34"}
+{"index":12,"content_description":"Android System notification: Serial console enabled"}
+{"index":13,"content_description":"Wifi signal full.,No internet"}
+{"index":14,"content_description":"Phone three bars."}
+{"index":15,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T19:27:25.645150+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_002/tree/request_0.json",
+  "call": 2
+}
+
+--- 2026-10-07T19:27:31.642982+00:00 | STEP 002 | MODEL REPLY ---
+{"action": "CLICK", "value": "Timer", "verify": "The timer interface with hour, minute, and second selection dials should appear.","target": "Timer"}
+
+--- 2026-10-07T19:27:31.643502+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.0,
+  "load_seconds": 0.0175734,
+  "prompt_seconds": 0.467914,
+  "generation_seconds": 3.235441,
+  "output_tokens": 39
+}
+
+--- 2026-10-07T19:27:31.645064+00:00 | STEP 002 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Timer",
+    "verify": "The timer interface with hour, minute, and second selection dials should appear.",
+    "target": "Timer",
+    "index": "5",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 2232
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T19:27:31.645570+00:00 | STEP 002 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 2232
+  }
+}
+
+--- 2026-10-07T19:27:35.052601+00:00 | STEP 002 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Timer",
+    "verify": "The timer interface with hour, minute, and second selection dials should appear.",
+    "target": "Timer",
+    "index": "5",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": null,
+    "hint_text": null,
+    "content_description": "Timer"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 2232
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_002/after.png",
+  "execute_and_observe_seconds": 3.4069999999992433
+}
+
+--- 2026-10-07T19:27:35.766551+00:00 | STEP 003 | OBSERVATION ---
+{
+  "screenshot": "step_003/before.png",
+  "tree": "step_003/tree.json"
+}
+{"index":0,"text":"Timer"}
+{"index":1,"content_description":"More options","is_clickable":true}
+{"index":2,"text":"00h 00m 00s","content_description":"0 hours, 0 minutes, 0 seconds"}
+{"index":3,"text":"1","is_clickable":true}
+{"index":4,"text":"2","is_clickable":true}
+{"index":5,"text":"3","is_clickable":true}
+{"index":6,"text":"4","is_clickable":true}
+{"index":7,"text":"5","is_clickable":true}
+{"index":8,"text":"6","is_clickable":true}
+{"index":9,"text":"7","is_clickable":true}
+{"index":10,"text":"8","is_clickable":true}
+{"index":11,"text":"9","is_clickable":true}
+{"index":12,"text":"00","is_clickable":true}
+{"index":13,"text":"0","is_clickable":true}
+{"index":14,"text":"⌫","content_description":"Backspace","is_clickable":true}
+{"index":15,"content_description":"Alarm","is_clickable":true}
+{"index":16,"content_description":"Clock","is_clickable":true}
+{"index":17,"content_description":"Timer"}
+{"index":18,"content_description":"Stopwatch","is_clickable":true}
+{"index":19,"content_description":"Bedtime","is_clickable":true}
+{"index":20,"text":"15:34","content_description":"17:34"}
+{"index":21,"content_description":"Android System notification: Serial console enabled"}
+{"index":22,"content_description":"Wifi signal full.,No internet"}
+{"index":23,"content_description":"Phone signal full."}
+{"index":24,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T19:27:35.769596+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_003/tree/request_0.json",
+  "call": 3
+}
+
+--- 2026-10-07T19:27:42.079584+00:00 | STEP 003 | MODEL REPLY ---
+{"action": "CLICK", "value": "More options", "verify": "The 'Timer' screen should remain, but an options menu should be displayed.","target": "More options"}
+
+--- 2026-10-07T19:27:42.080152+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.312999999994645,
+  "load_seconds": 0.0164508,
+  "prompt_seconds": 0.955107,
+  "generation_seconds": 3.176744,
+  "output_tokens": 41
+}
+
+--- 2026-10-07T19:27:42.081297+00:00 | STEP 003 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "More options",
+    "verify": "The 'Timer' screen should remain, but an options menu should be displayed.",
+    "target": "More options",
+    "index": "1",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 1027,
+    "y": 211
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T19:27:42.082343+00:00 | STEP 003 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 1027,
+    "y": 211
+  }
+}
+
+--- 2026-10-07T19:27:44.446577+00:00 | STEP 003 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "More options",
+    "verify": "The 'Timer' screen should remain, but an options menu should be displayed.",
+    "target": "More options",
+    "index": "1",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": null,
+    "hint_text": null,
+    "content_description": "More options"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 1027,
+    "y": 211
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_003/after.png",
+  "execute_and_observe_seconds": 2.3590000000040163
+}
+
+--- 2026-10-07T19:27:45.113088+00:00 | STEP 004 | OBSERVATION ---
+{
+  "screenshot": "step_004/before.png",
+  "tree": "step_004/tree.json"
+}
+{"index":0,"text":"Screen saver"}
+{"index":1,"text":"Settings"}
+{"index":2,"text":"Privacy policy"}
+{"index":3,"text":"Send feedback"}
+{"index":4,"text":"Help"}
+{"index":5,"text":"15:34","content_description":"17:34"}
+{"index":6,"content_description":"Android System notification: Serial console enabled"}
+{"index":7,"content_description":"Wifi signal full.,No internet"}
+{"index":8,"content_description":"Phone signal full."}
+{"index":9,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T19:27:45.114071+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_004/tree/request_0.json",
+  "call": 4
+}
+
+--- 2026-10-07T19:27:51.756105+00:00 | STEP 004 | MODEL REPLY ---
+{"action": "CLICK", "value": "More options", "verify": "The 'Timer' screen should be selected and the interface should change from the 'Alarm' view to the 'Timer' view.","target": ""}
+
+--- 2026-10-07T19:27:51.756624+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.625,
+  "load_seconds": 0.0231849,
+  "prompt_seconds": 0.617151,
+  "generation_seconds": 3.786851,
+  "output_tokens": 49
+}
+
+--- 2026-10-07T19:27:51.757677+00:00 | STEP 004 | VALIDATION ERROR ---
+{
+  "error": "Target label '' matches 0 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T19:27:51.758703+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_004/tree/request_1.json",
+  "call": 5
+}
+
+--- 2026-10-07T19:27:57.264536+00:00 | STEP 004 | MODEL REPLY ---
+{"action": "CLICK", "value": "Timer", "verify": "The 'Timer' tab should be selected, showing the timer creation interface.", "target": ""}
+
+--- 2026-10-07T19:27:57.264536+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.5,
+  "load_seconds": 0.0179217,
+  "prompt_seconds": 0.498503,
+  "generation_seconds": 2.921674,
+  "output_tokens": 37
+}
+
+--- 2026-10-07T19:27:57.272580+00:00 | STEP 004 | VALIDATION ERROR ---
+{
+  "error": "Target label '' matches 0 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T19:27:57.273585+00:00 | STEP 004 | SCREENSHOT FALLBACK ---
+{
+  "step": 4,
+  "reason": "Tree/interface validation failed: Target label '' matches 0 controls; use an unambiguous visible label",
+  "from": "tree",
+  "to": "screenshot"
+}
+
+--- 2026-10-07T19:27:57.853538+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "screenshot",
+  "context_and_settings": "step_004/screenshot/request_0.json",
+  "call": 6
+}
+
+--- 2026-10-07T19:28:18.150223+00:00 | STEP 004 | MODEL REPLY ---
+{"action": "CLICK", "value": "Timer", "verify": "The timer display on the screen should update from '00h 00m 00s' to '00h 01m 00s'.","point": "478,196}, {"}
+
+--- 2026-10-07T19:28:18.150804+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "mode": "screenshot",
+  "wall_seconds": 20.296000000002095,
+  "load_seconds": 0.0312408,
+  "prompt_seconds": 12.259009,
+  "generation_seconds": 5.818082,
+  "output_tokens": 68
+}
+
+--- 2026-10-07T19:28:18.151857+00:00 | STEP 004 | VALIDATION ERROR ---
+{
+  "error": "Point must contain two integer coordinates: x,y",
+  "executed": false
+}
+
+--- 2026-10-07T19:28:18.161111+00:00 | STEP 004 | RUN ERROR ---
+{
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 221, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 476, in step\n    fields, action, mode = self.choose_action(state, folder, goal, status)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 455, in choose_action\n    fields, action = self.ask_action(state, folder, \"screenshot\", goal, {**status, \"fallback\": event})\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 397, in ask_action\n    action = validate_action(fields, state, mode, targeted)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 238, in validate_action\n    x, y = pixel_point(fields.get(\"point\", \"\"), width, height)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 211, in pixel_point\n    raise ValueError(\"Point must contain two integer coordinates: x,y\")\nValueError: Point must contain two integer coordinates: x,y\n",
+  "class": "validation_error"
+}
+
+--- 2026-10-07T19:28:18.526408+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "ClockTimerEntry",
+  "run_id": "trial_ClockTimerEntry_20261007T192636_081966Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 3,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "five_easy_tasks_v10_launch_guard",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_five_tasks_v8",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 4,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 221, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 476, in step\n    fields, action, mode = self.choose_action(state, folder, goal, status)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 455, in choose_action\n    fields, action = self.ask_action(state, folder, \"screenshot\", goal, {**status, \"fallback\": event})\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 397, in ask_action\n    action = validate_action(fields, state, mode, targeted)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 238, in validate_action\n    x, y = pixel_point(fields.get(\"point\", \"\"), width, height)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 211, in pixel_point\n    raise ValueError(\"Point must contain two integer coordinates: x,y\")\nValueError: Point must contain two integer coordinates: x,y\n",
+  "error_class": "validation_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 6,
+  "screenshot_fallbacks": [
+    {
+      "step": 4,
+      "reason": "Tree/interface validation failed: Target label '' matches 0 controls; use an unambiguous visible label",
+      "from": "tree",
+      "to": "screenshot"
+    }
+  ],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 76.40600000000268
+}

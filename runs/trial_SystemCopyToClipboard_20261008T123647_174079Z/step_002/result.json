@@ -1,0 +1,15 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.01776146982230392,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 24.843999999997322,
+  "selected_gui_control": {
+    "label": "QuickNote",
+    "resource_id": "net.gsantner.markor:id/nav_quicknote"
+  }
+}

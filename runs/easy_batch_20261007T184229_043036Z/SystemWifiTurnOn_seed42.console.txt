@@ -1,0 +1,61 @@
+D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Evidence: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_SystemWifiTurnOn_20261007T184229_679434Z
+Readable trajectory: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_SystemWifiTurnOn_20261007T184229_679434Z\trajectory.txt
+Step 1, tree, model call 1
+Chosen: {'action_type': 'open_app', 'app_name': 'settings'}
+Step 2, tree, model call 2
+Chosen: {'action_type': 'click', 'x': 540, 'y': 1270}
+Step 3, tree, model call 3
+Chosen: {'action_type': 'click', 'x': 187, 'y': 2098}
+Step 4, tree, model call 4
+Chosen: {'action_type': 'click', 'x': 539, 'y': 884}
+Step 5, tree, model call 5
+Chosen: {'action_type': 'click', 'x': 375, 'y': 1876}
+Step 6, tree, model call 6
+Chosen: {'action_type': 'click', 'x': 539, 'y': 884}
+Step 7, tree, model call 7
+Chosen: {'action_type': 'click', 'x': 375, 'y': 1876}
+Step 8, tree, model call 8
+Chosen: {'action_type': 'click', 'x': 539, 'y': 884}
+Step 9, tree, model call 9
+Step 9, tree, model call 10
+Chosen: {'action_type': 'click', 'x': 345, 'y': 1432}
+Step 10, tree, model call 11
+Chosen: {'action_type': 'click', 'x': 346, 'y': 2201}
+Step 11, tree, model call 12
+Step 11, tree, model call 13
+Chosen: {'action_type': 'click', 'x': 346, 'y': 2201}
+Step 12, tree, model call 14
+Chosen: {'action_type': 'status', 'goal_status': 'complete', 'reason': 'com.google.androidenv.accessibilityforwarder keeps stopping'}
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261007T184229_679434Z",
+  "agent_done": true,
+  "verifier": "FAIL",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "five_easy_tasks_v9_wifi_xml",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_five_tasks_v8",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "complete",
+  "model_calls_attempted": 14,
+  "verifier_score": 0.0,
+  "failure_class": "false_done",
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4",
+    "video_002.mp4"
+  ],
+  "duration_seconds": 320.42200000000594
+}

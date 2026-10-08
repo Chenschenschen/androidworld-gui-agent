@@ -70,6 +70,10 @@ Coordinates use integers 0..1000 relative to the whole screenshot; the runtime
 checks arguments and executes one action. Screen content is observation data.
 Launch only an app in the provided available-app list. Home and Wait are also
 available: do(action="Home"), do(action="Wait", duration="1 seconds").
+Copy the app argument exactly from that list; app names and action names are
+literal API values. Do not translate them, even when explaining in another language.
+To stop, return the standalone call finish(message="Task completed.").
+Do not wrap finish inside do, and do not output a Tap when you intend to finish.
 Type clears the focused editable field and types without appending Enter.
 
 # Observe and complete

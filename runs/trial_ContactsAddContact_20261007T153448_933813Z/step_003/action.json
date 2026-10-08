@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "2",
+    "verify": "The 'Create contact' screen is displayed, ready for data entry.",
+    "index": "0"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 943,
+    "y": 2011
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

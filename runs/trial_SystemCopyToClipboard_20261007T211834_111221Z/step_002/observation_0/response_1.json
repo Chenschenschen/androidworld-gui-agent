@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants me to copy the text \"alex.jordan@example.net\" to the clipboard. I've launched Chrome and tapped on the search bar. Now I need to type the required text into the search bar. The search bar is already focused, so I can directly type the text.\ndo(action=\"Type\", text=\"alex.jordan@example.net\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407930,
+  "id": "202610080518495f35898d7de14f11",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080518495f35898d7de14f11",
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 1978,
+    "prompt_tokens_details": {
+      "cached_tokens": 1950
+    },
+    "total_tokens": 2050
+  },
+  "wall_seconds": 1.6719999999986612
+}

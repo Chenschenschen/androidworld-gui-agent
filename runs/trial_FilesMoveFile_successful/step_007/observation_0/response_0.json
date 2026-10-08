@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Move to…\" option is available in the menu. To move the file, I should tap on \"Move to…\" to start selecting the destination folder. The \"Move to…\" option is at [513, 315, 989, 367].\n\ndo(action=\"Tap\", element=[746,341])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791480137,
+  "id": "20261009012215c5262b01e8414785",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261009012215c5262b01e8414785",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 7054,
+    "prompt_tokens_details": {
+      "cached_tokens": 4736
+    },
+    "total_tokens": 7125
+  },
+  "wall_seconds": 1.8430000000080327
+}

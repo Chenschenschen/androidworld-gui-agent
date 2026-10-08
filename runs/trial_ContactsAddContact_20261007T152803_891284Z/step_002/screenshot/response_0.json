@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T15:30:06.4091432Z",
+  "message": {
+    "role": "assistant",
+    "content": "allow:513,547\tnote:A notification permission pop-up is displayed, blocking further action until a choice is made.\taction:CLICK\tpoint:494,548"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 22889735600,
+  "load_duration": 33647600,
+  "prompt_eval_count": 1503,
+  "prompt_eval_cached_count": 114,
+  "prompt_eval_duration": 18016921000,
+  "eval_count": 42,
+  "eval_duration": 4761205000,
+  "wall_seconds": 24.937000000001717
+}

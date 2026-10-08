@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Wi-Fi is now turned on, as indicated by the switch being toggled to the right and colored. The task is to turn Wi-Fi on, which has been accomplished. The completion condition is now met.\nfinish(message=\"Wi-Fi has been turned on successfully. The switch is now toggled to the right and colored, indicating that Wi-Fi is enabled. Task completed.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441207,
+  "id": "2026100814332507a07af4f25a45a1",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814332507a07af4f25a45a1",
+  "usage": {
+    "completion_tokens": 76,
+    "prompt_tokens": 2819,
+    "prompt_tokens_details": {
+      "cached_tokens": 1310
+    },
+    "total_tokens": 2895
+  },
+  "wall_seconds": 1.812000000005355
+}

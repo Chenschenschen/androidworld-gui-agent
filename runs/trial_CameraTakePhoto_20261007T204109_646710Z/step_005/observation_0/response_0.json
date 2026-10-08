@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe current screen shows the Camera app interface with a shutter button (ImageView at [0,378,999,642]). The previous actions indicate multiple taps, but the current state does not show a captured photo (no thumbnail or preview). To take a photo, I should tap the shutter button. I'll tap the shutter at its center to attempt capture.\ndo(action=\"Tap\", element=[499,512])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405697,
+  "id": "202610080441359760a14a05c74c6d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080441359760a14a05c74c6d",
+  "usage": {
+    "completion_tokens": 91,
+    "prompt_tokens": 1823,
+    "prompt_tokens_details": {
+      "cached_tokens": 511
+    },
+    "total_tokens": 1914
+  },
+  "wall_seconds": 1.625
+}

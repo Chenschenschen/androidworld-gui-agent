@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I need to access the sdk_gphone64_x86_64 storage area to locate the source and destination folders. The \"sdk_gphone64_x86_64\" entry is visible in the navigation drawer at [0,509,679,570]; tapping it will open the root directory of that storage.\n\n\ndo(action=\"Tap\", element=[339,539])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469181,
+  "id": "20261008221940940df390e71148cf",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008221940940df390e71148cf",
+  "usage": {
+    "completion_tokens": 83,
+    "prompt_tokens": 3652,
+    "prompt_tokens_details": {
+      "cached_tokens": 1709
+    },
+    "total_tokens": 3735
+  },
+  "wall_seconds": 1.7659999999887077
+}

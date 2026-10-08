@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"sdk_gphone64_x86_64\" storage area is open, and the \"project_medium\" folder is visible. To set it as the destination for moving the file, I should tap on the \"project_medium\" folder to select it as the destination location in the \"Move to\" dialog.\n\n\ndo(action=\"Tap\", element=[274,628])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791483291,
+  "id": "202610090214497e0bde3c6bd4470b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610090214497e0bde3c6bd4470b",
+  "usage": {
+    "completion_tokens": 76,
+    "prompt_tokens": 9278,
+    "prompt_tokens_details": {
+      "cached_tokens": 6731
+    },
+    "total_tokens": 9354
+  },
+  "wall_seconds": 1.875
+}

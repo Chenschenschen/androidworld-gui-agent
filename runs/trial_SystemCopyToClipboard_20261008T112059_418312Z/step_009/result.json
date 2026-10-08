@@ -1,0 +1,15 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.15674641927083333,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 5.327999999994063,
+  "selected_gui_control": {
+    "label": "android.widget.LinearLayout",
+    "resource_id": "com.android.chrome:id/preferences_id"
+  }
+}

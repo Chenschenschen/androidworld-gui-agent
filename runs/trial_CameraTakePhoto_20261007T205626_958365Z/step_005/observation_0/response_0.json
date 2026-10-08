@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see that the camera app is now open and showing the camera interface. I can see the shutter button at the bottom of the screen. The task is to take one photo, so I need to tap on the shutter button to take a photo. Looking at the coordinates, the shutter button appears to be at [0,841,999,972] based on the tree structure description.\ndo(action=\"Tap\", element=[499,904])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406615,
+  "id": "202610080456532681208d7b8940e1",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080456532681208d7b8940e1",
+  "usage": {
+    "completion_tokens": 95,
+    "prompt_tokens": 3154,
+    "prompt_tokens_details": {
+      "cached_tokens": 570
+    },
+    "total_tokens": 3249
+  },
+  "wall_seconds": 1.8439999999973224
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Good, Chrome has opened and I can see the Google homepage. I can see there's a search bar that says \"Search or type web address\". I need to tap on this search bar to focus it and then type the text \"Discount code: SAVE20\".\n\nLooking at the screen, I can see the search bar is located at coordinates around [38,300,960,353] based on the tree structure description.\ndo(action=\"Tap\", element=[38,300,960,353])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442921,
+  "id": "20261008150159cf058f0c5981434e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008150159cf058f0c5981434e",
+  "usage": {
+    "completion_tokens": 105,
+    "prompt_tokens": 2621,
+    "prompt_tokens_details": {
+      "cached_tokens": 793
+    },
+    "total_tokens": 2726
+  },
+  "wall_seconds": 1.8589999999967404
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe user wants to send a text message using Simple SMS Messenger. I am on the home screen and need to launch the Simple SMS Messenger app first. It is not visible among the main icons, so I should use the Launch action to open it directly.\n\n\ndo(action=\"Launch\", app=\"简单短信消息\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791465890,
+  "id": "202610082124481703f432fb744814",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082124481703f432fb744814",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 2570,
+    "prompt_tokens_details": {
+      "cached_tokens": 617
+    },
+    "total_tokens": 2639
+  },
+  "wall_seconds": 2.9839999999967404
+}

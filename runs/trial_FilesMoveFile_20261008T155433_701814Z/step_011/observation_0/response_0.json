@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The destination folder is now selected. To complete the move operation, I need to tap the \"MOVE\" button at [280,920,513,972] to finalize moving the file to \"project_medium\". This is the last step before the move is executed and the task can be checked for completion.\n\ndo(action=\"Tap\", element=[407,947])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791475050,
+  "id": "2026100823572986bc090d57a14286",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100823572986bc090d57a14286",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 9188,
+    "prompt_tokens_details": {
+      "cached_tokens": 7294
+    },
+    "total_tokens": 9268
+  },
+  "wall_seconds": 1.9689999999973224
+}

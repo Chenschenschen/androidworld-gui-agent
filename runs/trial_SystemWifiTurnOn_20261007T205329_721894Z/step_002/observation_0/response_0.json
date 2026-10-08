@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see the Settings app is now open. I need to navigate to the \"Network & internet\" section to access Wi-Fi settings. I can see the \"Network & internet\" option with the description \"Mobile, Wi‑Fi, hotspot\" at coordinates [0,324,999,416]. I should tap on this to proceed to the network settings where I can turn on Wi-Fi.\ndo(action=\"Tap\", element=[499,382])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406426,
+  "id": "20261008045344099484a48dd24e65",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008045344099484a48dd24e65",
+  "usage": {
+    "completion_tokens": 98,
+    "prompt_tokens": 2059,
+    "prompt_tokens_details": {
+      "cached_tokens": 736
+    },
+    "total_tokens": 2157
+  },
+  "wall_seconds": 2.186999999998079
+}

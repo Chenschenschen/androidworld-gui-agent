@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "finish",
+    "message": "Wi-Fi has been successfully turned on! I can see the Wi-Fi toggle is now enabled (checked) and there's an available network \"AndroidWifi\" showing as saved. The task is complete - Wi-Fi is now on in the Settings > Internet section."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "Wi-Fi has been successfully turned on! I can see the Wi-Fi toggle is now enabled (checked) and there's an available network \"AndroidWifi\" showing as saved. The task is complete - Wi-Fi is now on in the Settings > Internet section."
+  },
+  "observation_id": "observation_0"
+}

@@ -1,0 +1,1533 @@
+
+--- 2026-10-07T18:48:20.470238+00:00 | RUN | RUN START ---
+{
+  "task": "SystemWifiTurnOn",
+  "config": {
+    "version": "five_easy_tasks_v9_wifi_xml",
+    "prompt_version": "gelab_json_five_tasks_v8",
+    "wifi_tree_backend": "uiautomator",
+    "action_format": "json_schema",
+    "observation": "tree_first",
+    "prompt_examples": false,
+    "max_screenshot_fallbacks": 2,
+    "model": "gelab-zero-4b-preview:latest",
+    "options": {
+      "temperature": 1,
+      "top_k": 20,
+      "top_p": 0.95,
+      "num_ctx": 4096,
+      "num_gpu": 22,
+      "num_predict": 256,
+      "seed": 42
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "note": "After captured stale launcher trees with Wi-Fi off, use Android World's official UIAutomator tree backend for Wi-Fi only. It has no forwarder recovery that can enable Wi-Fi. Labels inside clickable rows are groundable. Other tasks retain gRPC capture. Same model/GPU/sampling/budgets; three distinct task seeds 42/43/44. Failures retained.",
+    "contact_guidance": true,
+    "targeted_type": true,
+    "direct_type_only": true,
+    "label_grounding": true,
+    "task_seed": 43
+  }
+}
+
+--- 2026-10-07T18:48:25.152286+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Turn wifi on.",
+  "parameters": {
+    "on_or_off": "on"
+  },
+  "task_seed": 43,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-07T18:48:49.817106+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-07T18:49:10.029820+00:00 | STEP 001 | OBSERVATION ---
+{
+  "screenshot": "step_001/before.png",
+  "tree": "step_001/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3}
+{"index":4}
+{"index":5}
+{"index":6,"is_scrollable":true}
+{"index":7}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12,"is_clickable":true}
+{"index":13}
+{"index":14}
+{"index":15,"text":"1:04:20","content_description":"1:04:20","is_clickable":true}
+{"index":16}
+{"index":17,"text":"Camera","content_description":"Camera","is_clickable":true}
+{"index":18,"text":"Files","content_description":"Files","is_clickable":true}
+{"index":19,"text":"Contacts","content_description":"Contacts","is_clickable":true}
+{"index":20,"text":"Calendar","content_description":"Calendar","is_clickable":true}
+{"index":21,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":22,"text":"Maps","content_description":"Maps","is_clickable":true}
+{"index":23,"text":"Clock","content_description":"Clock","is_clickable":true}
+{"index":24,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":25,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":26,"text":"Gmail","content_description":"Gmail","is_clickable":true}
+{"index":27,"text":"Photos","content_description":"Photos","is_clickable":true}
+{"index":28,"text":"Settings","content_description":"Settings","is_clickable":true}
+{"index":29,"content_description":"Home"}
+{"index":30}
+{"index":31}
+{"index":32}
+{"index":33,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":34,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":35,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":36,"text":"Gmail","content_description":"Predicted app: Gmail","is_clickable":true}
+{"index":37,"content_description":"Search","is_clickable":true}
+{"index":38,"content_description":"Google app","is_clickable":true}
+{"index":39}
+{"index":40,"content_description":"Voice search","is_clickable":true}
+{"index":41,"content_description":"Google Lens","is_clickable":true}
+{"index":42}
+
+--- 2026-10-07T18:49:10.032323+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_001/tree/request_0.json",
+  "call": 1
+}
+
+--- 2026-10-07T18:49:15.907218+00:00 | STEP 001 | MODEL REPLY ---
+{"action": "AWAKE", "value": "settings", "verify": "The Settings app should open, displaying the main settings menu.","target":""}
+
+--- 2026-10-07T18:49:15.907218+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.875,
+  "load_seconds": 0.0226842,
+  "prompt_seconds": 1.07228,
+  "generation_seconds": 2.61789,
+  "output_tokens": 34
+}
+
+--- 2026-10-07T18:49:15.907763+00:00 | STEP 001 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "AWAKE",
+    "value": "settings",
+    "verify": "The Settings app should open, displaying the main settings menu."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:49:15.914912+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  }
+}
+
+--- 2026-10-07T18:49:47.033111+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "AWAKE",
+    "value": "settings",
+    "verify": "The Settings app should open, displaying the main settings menu."
+  },
+  "target": null,
+  "android": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_001/after.png",
+  "execute_and_observe_seconds": 31.125
+}
+
+--- 2026-10-07T18:49:51.182332+00:00 | STEP 002 | OBSERVATION ---
+{
+  "screenshot": "step_002/before.png",
+  "tree": "step_002/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5}
+{"index":6}
+{"index":7,"content_description":"Profile picture, double tap to open Google Account","is_clickable":true}
+{"index":8,"text":"Settings"}
+{"index":9}
+{"index":10}
+{"index":11,"is_clickable":true}
+{"index":12}
+{"index":13,"text":"Search settings"}
+{"index":14,"is_scrollable":true}
+{"index":15}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19}
+{"index":20,"is_clickable":true}
+{"index":21}
+{"index":22}
+{"index":23}
+{"index":24,"text":"Network & internet"}
+{"index":25,"text":"Mobile, Wi‑Fi, hotspot"}
+{"index":26,"is_clickable":true}
+{"index":27}
+{"index":28}
+{"index":29}
+{"index":30,"text":"Connected devices"}
+{"index":31,"text":"Bluetooth, pairing"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34}
+{"index":35}
+{"index":36,"text":"Apps"}
+{"index":37,"text":"Assistant, recent apps, default apps"}
+{"index":38,"is_clickable":true}
+{"index":39}
+{"index":40}
+{"index":41}
+{"index":42,"text":"Notifications"}
+{"index":43,"text":"Notification history, conversations"}
+{"index":44,"is_clickable":true}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48,"text":"Battery"}
+{"index":49,"text":"100%"}
+{"index":50,"is_clickable":true}
+{"index":51}
+{"index":52}
+{"index":53}
+{"index":54,"text":"Storage"}
+{"index":55,"text":"41% used - 9.36 GB free"}
+{"index":56,"is_clickable":true}
+{"index":57}
+{"index":58}
+
+--- 2026-10-07T18:49:51.186956+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_002/tree/request_0.json",
+  "call": 2
+}
+
+--- 2026-10-07T18:49:57.491146+00:00 | STEP 002 | MODEL REPLY ---
+{"action": "CLICK", "value": "Connected devices", "verify": "The 'Network & internet' settings menu should be visible on the screen.","target": "Connected devices"}
+
+--- 2026-10-07T18:49:57.491719+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.296999999998661,
+  "load_seconds": 0.0197536,
+  "prompt_seconds": 0.880047,
+  "generation_seconds": 3.110726,
+  "output_tokens": 40
+}
+
+--- 2026-10-07T18:49:57.492302+00:00 | STEP 002 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Connected devices",
+    "verify": "The 'Network & internet' settings menu should be visible on the screen.",
+    "target": "Connected devices",
+    "index": "30",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 442,
+    "y": 1140
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:49:57.492834+00:00 | STEP 002 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 442,
+    "y": 1140
+  }
+}
+
+--- 2026-10-07T18:50:10.689684+00:00 | STEP 002 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Connected devices",
+    "verify": "The 'Network & internet' settings menu should be visible on the screen.",
+    "target": "Connected devices",
+    "index": "30",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Connected devices",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 442,
+    "y": 1140
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_002/after.png",
+  "execute_and_observe_seconds": 13.203000000001339
+}
+
+--- 2026-10-07T18:50:14.821008+00:00 | STEP 003 | OBSERVATION ---
+{
+  "screenshot": "step_003/before.png",
+  "tree": "step_003/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Connected devices"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14,"is_scrollable":true}
+{"index":15,"is_clickable":true}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19,"text":"Pair new device"}
+{"index":20,"text":"Bluetooth will turn on to pair"}
+{"index":21}
+{"index":22}
+{"index":23,"text":"Saved devices"}
+{"index":24,"is_clickable":true}
+{"index":25}
+{"index":26}
+{"index":27}
+{"index":28,"text":"See all"}
+{"index":29,"text":"Bluetooth will turn on"}
+{"index":30,"is_clickable":true}
+{"index":31}
+{"index":32,"text":"Connection preferences"}
+{"index":33,"text":"Bluetooth, Android Auto"}
+{"index":34}
+{"index":35}
+{"index":36}
+{"index":37}
+{"index":38,"text":"Turn on Bluetooth to connect to other devices."}
+
+--- 2026-10-07T18:50:14.823334+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_003/tree/request_0.json",
+  "call": 3
+}
+
+--- 2026-10-07T18:50:21.570440+00:00 | STEP 003 | MODEL REPLY ---
+{"action": "CLICK", "value": "Bluetooth, Android Auto", "verify": "Ensure Bluetooth is enabled and confirm that Bluetooth will turn on if not already active.", "target": "Bluetooth, Android Auto"}
+
+--- 2026-10-07T18:50:21.570440+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.75,
+  "load_seconds": 0.0186745,
+  "prompt_seconds": 0.959265,
+  "generation_seconds": 3.591849,
+  "output_tokens": 45
+}
+
+--- 2026-10-07T18:50:21.570986+00:00 | STEP 003 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Bluetooth, Android Auto",
+    "verify": "Ensure Bluetooth is enabled and confirm that Bluetooth will turn on if not already active.",
+    "target": "Bluetooth, Android Auto",
+    "index": "33",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 283,
+    "y": 1334
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:50:21.571524+00:00 | STEP 003 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 283,
+    "y": 1334
+  }
+}
+
+--- 2026-10-07T18:50:34.657938+00:00 | STEP 003 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Bluetooth, Android Auto",
+    "verify": "Ensure Bluetooth is enabled and confirm that Bluetooth will turn on if not already active.",
+    "target": "Bluetooth, Android Auto",
+    "index": "33",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Bluetooth, Android Auto",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 283,
+    "y": 1334
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_003/after.png",
+  "execute_and_observe_seconds": 13.093999999997322
+}
+
+--- 2026-10-07T18:50:38.805160+00:00 | STEP 004 | OBSERVATION ---
+{
+  "screenshot": "step_004/before.png",
+  "tree": "step_004/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Connection preferences"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15,"is_clickable":true}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19,"text":"Bluetooth"}
+{"index":20,"is_clickable":true}
+{"index":21}
+{"index":22}
+{"index":23}
+{"index":24,"text":"Cast"}
+{"index":25,"text":"Not connected"}
+{"index":26,"is_clickable":true}
+{"index":27}
+{"index":28}
+{"index":29}
+{"index":30,"text":"Printing"}
+{"index":31,"text":"1 print service on"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34}
+{"index":35}
+{"index":36,"text":"Chromebook"}
+{"index":37,"text":"Your phone is not linked to a Chromebook"}
+{"index":38,"is_clickable":true}
+{"index":39}
+{"index":40}
+{"index":41}
+{"index":42,"text":"Nearby Share"}
+{"index":43,"text":"Share files with nearby devices"}
+{"index":44,"is_clickable":true}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48,"text":"Android Auto"}
+{"index":49,"text":"Use apps on your car screen"}
+
+--- 2026-10-07T18:50:38.808124+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_004/tree/request_0.json",
+  "call": 4
+}
+
+--- 2026-10-07T18:50:44.526766+00:00 | STEP 004 | MODEL REPLY ---
+{"action": "CLICK", "value": "Cast", "verify": "Cast button should navigate to the cast settings.", "target": "Cast"}
+
+--- 2026-10-07T18:50:44.527291+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.718000000000757,
+  "load_seconds": 0.0182856,
+  "prompt_seconds": 1.021609,
+  "generation_seconds": 2.49658,
+  "output_tokens": 32
+}
+
+--- 2026-10-07T18:50:44.528308+00:00 | STEP 004 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Cast",
+    "verify": "Cast button should navigate to the cast settings.",
+    "target": "Cast",
+    "index": "24",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 250,
+    "y": 956
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:50:44.528833+00:00 | STEP 004 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 250,
+    "y": 956
+  }
+}
+
+--- 2026-10-07T18:50:57.519872+00:00 | STEP 004 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Cast",
+    "verify": "Cast button should navigate to the cast settings.",
+    "target": "Cast",
+    "index": "24",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Cast",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 250,
+    "y": 956
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_004/after.png",
+  "execute_and_observe_seconds": 13.0
+}
+
+--- 2026-10-07T18:51:01.660685+00:00 | STEP 005 | OBSERVATION ---
+{
+  "screenshot": "step_005/before.png",
+  "tree": "step_005/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Cast"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13,"text":"No nearby devices were found."}
+
+--- 2026-10-07T18:51:01.662194+00:00 | STEP 005 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_005/tree/request_0.json",
+  "call": 5
+}
+
+--- 2026-10-07T18:51:07.052645+00:00 | STEP 005 | MODEL REPLY ---
+{"action": "CLICK", "value": "Cast", "verify": "Cast button should now be selected.", "target": "Navigate up"}
+
+--- 2026-10-07T18:51:07.053151+00:00 | STEP 005 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.39100000000326,
+  "load_seconds": 0.0168519,
+  "prompt_seconds": 0.786192,
+  "generation_seconds": 2.357432,
+  "output_tokens": 31
+}
+
+--- 2026-10-07T18:51:07.053724+00:00 | STEP 005 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Cast",
+    "verify": "Cast button should now be selected.",
+    "target": "Navigate up",
+    "index": "7",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 73,
+    "y": 201
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:51:07.054246+00:00 | STEP 005 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 73,
+    "y": 201
+  }
+}
+
+--- 2026-10-07T18:51:19.873132+00:00 | STEP 005 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Cast",
+    "verify": "Cast button should now be selected.",
+    "target": "Navigate up",
+    "index": "7",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "",
+    "hint_text": null,
+    "content_description": "Navigate up"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 73,
+    "y": 201
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_005/after.png",
+  "execute_and_observe_seconds": 12.81199999999808
+}
+
+--- 2026-10-07T18:51:24.032711+00:00 | STEP 006 | OBSERVATION ---
+{
+  "screenshot": "step_006/before.png",
+  "tree": "step_006/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Connection preferences"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15,"is_clickable":true}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19,"text":"Bluetooth"}
+{"index":20,"is_clickable":true}
+{"index":21}
+{"index":22}
+{"index":23}
+{"index":24,"text":"Cast"}
+{"index":25,"text":"Not connected"}
+{"index":26,"is_clickable":true}
+{"index":27}
+{"index":28}
+{"index":29}
+{"index":30,"text":"Printing"}
+{"index":31,"text":"1 print service on"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34}
+{"index":35}
+{"index":36,"text":"Chromebook"}
+{"index":37,"text":"Your phone is not linked to a Chromebook"}
+{"index":38,"is_clickable":true}
+{"index":39}
+{"index":40}
+{"index":41}
+{"index":42,"text":"Nearby Share"}
+{"index":43,"text":"Share files with nearby devices"}
+{"index":44,"is_clickable":true}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48,"text":"Android Auto"}
+{"index":49,"text":"Use apps on your car screen"}
+
+--- 2026-10-07T18:51:24.036782+00:00 | STEP 006 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_006/tree/request_0.json",
+  "call": 6
+}
+
+--- 2026-10-07T18:51:30.124056+00:00 | STEP 006 | MODEL REPLY ---
+{"action": "CLICK", "value": "Nearby Share", "verify": "The Wi-Fi toggle should be displayed on the screen.", "target": "Nearby Share"}
+
+--- 2026-10-07T18:51:30.124613+00:00 | STEP 006 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.078000000001339,
+  "load_seconds": 0.0170799,
+  "prompt_seconds": 0.85997,
+  "generation_seconds": 2.957056,
+  "output_tokens": 38
+}
+
+--- 2026-10-07T18:51:30.125182+00:00 | STEP 006 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Nearby Share",
+    "verify": "The Wi-Fi toggle should be displayed on the screen.",
+    "target": "Nearby Share",
+    "index": "42",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 368,
+    "y": 1622
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:51:30.126237+00:00 | STEP 006 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 368,
+    "y": 1622
+  }
+}
+
+--- 2026-10-07T18:51:44.175895+00:00 | STEP 006 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Nearby Share",
+    "verify": "The Wi-Fi toggle should be displayed on the screen.",
+    "target": "Nearby Share",
+    "index": "42",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Nearby Share",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 368,
+    "y": 1622
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_006/after.png",
+  "execute_and_observe_seconds": 14.046999999998661
+}
+
+--- 2026-10-07T18:51:48.337099+00:00 | STEP 007 | OBSERVATION ---
+{
+  "screenshot": "step_007/before.png",
+  "tree": "step_007/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Nearby Share"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12,"is_focused":true}
+{"index":13}
+{"index":14}
+{"index":15,"text":"Account & device"}
+{"index":16,"is_clickable":true}
+{"index":17}
+{"index":18}
+{"index":19}
+{"index":20}
+{"index":21,"text":"No account found"}
+{"index":22,"text":"Tap to choose an account"}
+{"index":23,"is_clickable":true}
+{"index":24}
+{"index":25}
+{"index":26}
+{"index":27,"text":"Device name"}
+{"index":28,"text":"sdk_gphone64_x86_64"}
+{"index":29,"is_clickable":true}
+{"index":30,"is_clickable":true}
+{"index":31,"text":"Device visibility"}
+{"index":32,"text":"No one can share with you until you make yourself visible"}
+{"index":33}
+{"index":34,"content_description":"Device visibility","is_clickable":true,"is_checked":false}
+{"index":35,"is_clickable":true}
+{"index":36}
+{"index":37,"text":"Data"}
+{"index":38,"text":"Data may be used for small files \n(charges may apply)"}
+{"index":39,"is_clickable":true}
+{"index":40}
+{"index":41,"text":"Show notification"}
+{"index":42,"text":"When devices are sharing nearby"}
+{"index":43}
+{"index":44,"is_checked":true}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48}
+{"index":49,"text":"Nearby Share uses Bluetooth scanning to find nearby devices. \n\nIf “Show notification” is turned on, Bluetooth scanning is used to notify you if someone wants to share with you, even when Nearby Share is turned off."}
+{"index":50,"text":"Learn more about Nearby Share"}
+
+--- 2026-10-07T18:51:48.340112+00:00 | STEP 007 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_007/tree/request_0.json",
+  "call": 7
+}
+
+--- 2026-10-07T18:51:58.369066+00:00 | STEP 007 | MODEL REPLY ---
+{"action": "CLICK", "value": "Settings", "verify": "Settings screen should appear with various options like Network & Internet, etc.", "target": "sdk_gphone64_x86_64"}
+
+--- 2026-10-07T18:51:58.369066+00:00 | STEP 007 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 10.031000000002678,
+  "load_seconds": 0.0176584,
+  "prompt_seconds": 3.218231,
+  "generation_seconds": 4.559155,
+  "output_tokens": 47
+}
+
+--- 2026-10-07T18:51:58.370130+00:00 | STEP 007 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "Settings screen should appear with various options like Network & Internet, etc.",
+    "target": "sdk_gphone64_x86_64",
+    "index": "28",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 403,
+    "y": 1065
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:51:58.370645+00:00 | STEP 007 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 403,
+    "y": 1065
+  }
+}
+
+--- 2026-10-07T18:52:11.680913+00:00 | STEP 007 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "Settings screen should appear with various options like Network & Internet, etc.",
+    "target": "sdk_gphone64_x86_64",
+    "index": "28",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "sdk_gphone64_x86_64",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 403,
+    "y": 1065
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_007/after.png",
+  "execute_and_observe_seconds": 13.31300000000192
+}
+
+--- 2026-10-07T18:52:15.835979+00:00 | STEP 008 | OBSERVATION ---
+{
+  "screenshot": "step_008/before.png",
+  "tree": "step_008/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3}
+{"index":4}
+{"index":5}
+{"index":6}
+{"index":7}
+{"index":8,"text":"Device name"}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12,"text":"sdk_gphone64_x86_64","is_clickable":true,"is_focused":true}
+{"index":13}
+{"index":14}
+{"index":15,"text":"CANCEL","is_clickable":true}
+{"index":16,"text":"RENAME","is_clickable":true}
+
+--- 2026-10-07T18:52:15.838083+00:00 | STEP 008 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_008/tree/request_0.json",
+  "call": 8
+}
+
+--- 2026-10-07T18:52:21.935468+00:00 | STEP 008 | MODEL REPLY ---
+{"action": "CLICK", "value": "Cancel", "verify": "The 'Rename device' dialog should close and the previous screen should be displayed.","target": "CANCEL"}
+
+--- 2026-10-07T18:52:21.935468+00:00 | STEP 008 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.094000000004598,
+  "load_seconds": 0.0170705,
+  "prompt_seconds": 0.862146,
+  "generation_seconds": 2.993976,
+  "output_tokens": 39
+}
+
+--- 2026-10-07T18:52:21.935992+00:00 | STEP 008 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Cancel",
+    "verify": "The 'Rename device' dialog should close and the previous screen should be displayed.",
+    "target": "CANCEL",
+    "index": "15",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 635,
+    "y": 1003
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:52:21.936515+00:00 | STEP 008 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 635,
+    "y": 1003
+  }
+}
+
+--- 2026-10-07T18:52:34.364577+00:00 | STEP 008 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Cancel",
+    "verify": "The 'Rename device' dialog should close and the previous screen should be displayed.",
+    "target": "CANCEL",
+    "index": "15",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "CANCEL",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 635,
+    "y": 1003
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_008/after.png",
+  "execute_and_observe_seconds": 12.43699999999808
+}
+
+--- 2026-10-07T18:52:38.502527+00:00 | STEP 009 | OBSERVATION ---
+{
+  "screenshot": "step_009/before.png",
+  "tree": "step_009/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Nearby Share"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12,"is_focused":true}
+{"index":13}
+{"index":14}
+{"index":15,"text":"Account & device"}
+{"index":16,"is_clickable":true}
+{"index":17}
+{"index":18}
+{"index":19}
+{"index":20}
+{"index":21,"text":"No account found"}
+{"index":22,"text":"Tap to choose an account"}
+{"index":23,"is_clickable":true}
+{"index":24}
+{"index":25}
+{"index":26}
+{"index":27,"text":"Device name"}
+{"index":28,"text":"sdk_gphone64_x86_64"}
+{"index":29,"is_clickable":true}
+{"index":30,"is_clickable":true}
+{"index":31,"text":"Device visibility"}
+{"index":32,"text":"No one can share with you until you make yourself visible"}
+{"index":33}
+{"index":34,"content_description":"Device visibility","is_clickable":true,"is_checked":false}
+{"index":35,"is_clickable":true}
+{"index":36}
+{"index":37,"text":"Data"}
+{"index":38,"text":"Data may be used for small files \n(charges may apply)"}
+{"index":39,"is_clickable":true}
+{"index":40}
+{"index":41,"text":"Show notification"}
+{"index":42,"text":"When devices are sharing nearby"}
+{"index":43}
+{"index":44,"is_checked":true}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48}
+{"index":49,"text":"Nearby Share uses Bluetooth scanning to find nearby devices. \n\nIf “Show notification” is turned on, Bluetooth scanning is used to notify you if someone wants to share with you, even when Nearby Share is turned off."}
+{"index":50,"text":"Learn more about Nearby Share"}
+
+--- 2026-10-07T18:52:38.505501+00:00 | STEP 009 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_009/tree/request_0.json",
+  "call": 9
+}
+
+--- 2026-10-07T18:52:45.495545+00:00 | STEP 009 | MODEL REPLY ---
+{"action": "CLICK", "value": "When devices are sharing nearby", "verify": "The 'When devices are sharing nearby' toggle should become visible or change state.", "target": "When devices are sharing nearby"}
+
+--- 2026-10-07T18:52:45.495545+00:00 | STEP 009 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.98399999999674,
+  "load_seconds": 0.0190383,
+  "prompt_seconds": 0.987208,
+  "generation_seconds": 3.718939,
+  "output_tokens": 47
+}
+
+--- 2026-10-07T18:52:45.496720+00:00 | STEP 009 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "When devices are sharing nearby",
+    "verify": "The 'When devices are sharing nearby' toggle should become visible or change state.",
+    "target": "When devices are sharing nearby",
+    "index": "42",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 368,
+    "y": 1819
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:52:45.497246+00:00 | STEP 009 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 368,
+    "y": 1819
+  }
+}
+
+--- 2026-10-07T18:52:57.974476+00:00 | STEP 009 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "When devices are sharing nearby",
+    "verify": "The 'When devices are sharing nearby' toggle should become visible or change state.",
+    "target": "When devices are sharing nearby",
+    "index": "42",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "When devices are sharing nearby",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 368,
+    "y": 1819
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_009/after.png",
+  "execute_and_observe_seconds": 12.485000000000582
+}
+
+--- 2026-10-07T18:53:02.130915+00:00 | STEP 010 | OBSERVATION ---
+{
+  "screenshot": "step_010/before.png",
+  "tree": "step_010/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Nearby Share"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12,"is_focused":true}
+{"index":13}
+{"index":14}
+{"index":15,"text":"Account & device"}
+{"index":16,"is_clickable":true}
+{"index":17}
+{"index":18}
+{"index":19}
+{"index":20}
+{"index":21,"text":"No account found"}
+{"index":22,"text":"Tap to choose an account"}
+{"index":23,"is_clickable":true}
+{"index":24}
+{"index":25}
+{"index":26}
+{"index":27,"text":"Device name"}
+{"index":28,"text":"sdk_gphone64_x86_64"}
+{"index":29,"is_clickable":true}
+{"index":30,"is_clickable":true}
+{"index":31,"text":"Device visibility"}
+{"index":32,"text":"No one can share with you until you make yourself visible"}
+{"index":33}
+{"index":34,"content_description":"Device visibility","is_clickable":true,"is_checked":false}
+{"index":35,"is_clickable":true}
+{"index":36}
+{"index":37,"text":"Data"}
+{"index":38,"text":"Data may be used for small files \n(charges may apply)"}
+{"index":39,"is_clickable":true}
+{"index":40}
+{"index":41,"text":"Show notification"}
+{"index":42,"text":"When devices are sharing nearby"}
+{"index":43}
+{"index":44,"is_checked":false}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48}
+{"index":49,"text":"Nearby Share uses Bluetooth scanning to find nearby devices. \n\nIf “Show notification” is turned on, Bluetooth scanning is used to notify you if someone wants to share with you, even when Nearby Share is turned off."}
+{"index":50,"text":"Learn more about Nearby Share"}
+
+--- 2026-10-07T18:53:02.133926+00:00 | STEP 010 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_010/tree/request_0.json",
+  "call": 10
+}
+
+--- 2026-10-07T18:53:10.531251+00:00 | STEP 010 | MODEL REPLY ---
+{"action": "CLICK", "value": "Data may be used for small files \n(charges may apply)", "verify": "Data may be used for small files \n(charges may apply) was clicked.", "target": "Data may be used for small files \n(charges may apply)"}
+
+--- 2026-10-07T18:53:10.531786+00:00 | STEP 010 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 8.389999999999418,
+  "load_seconds": 0.0252992,
+  "prompt_seconds": 0.984858,
+  "generation_seconds": 5.150537,
+  "output_tokens": 65
+}
+
+--- 2026-10-07T18:53:10.532332+00:00 | STEP 010 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Data may be used for small files \n(charges may apply)",
+    "verify": "Data may be used for small files \n(charges may apply) was clicked.",
+    "target": "Data may be used for small files \n(charges may apply)",
+    "index": "38",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 366,
+    "y": 1578
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:53:10.533440+00:00 | STEP 010 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 366,
+    "y": 1578
+  }
+}
+
+--- 2026-10-07T18:53:22.970099+00:00 | STEP 010 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Data may be used for small files \n(charges may apply)",
+    "verify": "Data may be used for small files \n(charges may apply) was clicked.",
+    "target": "Data may be used for small files \n(charges may apply)",
+    "index": "38",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Data may be used for small files \n(charges may apply)",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 366,
+    "y": 1578
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_010/after.png",
+  "execute_and_observe_seconds": 12.43800000000192
+}
+
+--- 2026-10-07T18:53:27.126895+00:00 | STEP 011 | OBSERVATION ---
+{
+  "screenshot": "step_011/before.png",
+  "tree": "step_011/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3}
+{"index":4}
+{"index":5}
+{"index":6}
+{"index":7}
+{"index":8,"text":"Data usage"}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14,"is_clickable":true,"is_checked":true}
+{"index":15,"is_clickable":true,"is_checked":true}
+{"index":16}
+{"index":17,"text":"Data"}
+{"index":18,"text":"Data may be used for small files \n(charges may apply)"}
+{"index":19,"is_clickable":true,"is_checked":false}
+{"index":20,"is_clickable":true,"is_checked":false}
+{"index":21}
+{"index":22,"text":"Wi-Fi only"}
+{"index":23,"text":"Never use data to share"}
+{"index":24,"is_clickable":true,"is_checked":false}
+{"index":25,"is_clickable":true,"is_checked":false}
+{"index":26}
+{"index":27,"text":"Without internet"}
+{"index":28,"text":"Files will always be shared offline"}
+{"index":29}
+{"index":30}
+{"index":31,"text":"CANCEL","is_clickable":true}
+{"index":32,"text":"UPDATE","is_clickable":true}
+
+--- 2026-10-07T18:53:27.129882+00:00 | STEP 011 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_011/tree/request_0.json",
+  "call": 11
+}
+
+--- 2026-10-07T18:53:33.856793+00:00 | STEP 011 | MODEL REPLY ---
+{"action": "CLICK", "value": "Never use data to share", "verify": "The 'Never use data to share' option should now be selected.","target": "Never use data to share"}
+
+--- 2026-10-07T18:53:33.856793+00:00 | STEP 011 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.7189999999973224,
+  "load_seconds": 0.0158916,
+  "prompt_seconds": 0.981386,
+  "generation_seconds": 3.480738,
+  "output_tokens": 45
+}
+
+--- 2026-10-07T18:53:33.857312+00:00 | STEP 011 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Never use data to share",
+    "verify": "The 'Never use data to share' option should now be selected.",
+    "target": "Never use data to share",
+    "index": "23",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 542,
+    "y": 1279
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:53:33.858362+00:00 | STEP 011 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 542,
+    "y": 1279
+  }
+}
+
+--- 2026-10-07T18:53:46.271985+00:00 | STEP 011 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Never use data to share",
+    "verify": "The 'Never use data to share' option should now be selected.",
+    "target": "Never use data to share",
+    "index": "23",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Never use data to share",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 542,
+    "y": 1279
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_011/after.png",
+  "execute_and_observe_seconds": 12.421000000002095
+}
+
+--- 2026-10-07T18:53:50.406621+00:00 | STEP 012 | OBSERVATION ---
+{
+  "screenshot": "step_012/before.png",
+  "tree": "step_012/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3}
+{"index":4}
+{"index":5}
+{"index":6}
+{"index":7}
+{"index":8,"text":"Data usage"}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14,"is_clickable":true,"is_checked":false}
+{"index":15,"is_clickable":true,"is_checked":false}
+{"index":16}
+{"index":17,"text":"Data"}
+{"index":18,"text":"Data may be used for small files \n(charges may apply)"}
+{"index":19,"is_clickable":true,"is_checked":true}
+{"index":20,"is_clickable":true,"is_checked":true}
+{"index":21}
+{"index":22,"text":"Wi-Fi only"}
+{"index":23,"text":"Never use data to share"}
+{"index":24,"is_clickable":true,"is_checked":false}
+{"index":25,"is_clickable":true,"is_checked":false}
+{"index":26}
+{"index":27,"text":"Without internet"}
+{"index":28,"text":"Files will always be shared offline"}
+{"index":29}
+{"index":30}
+{"index":31,"text":"CANCEL","is_clickable":true}
+{"index":32,"text":"UPDATE","is_clickable":true}
+
+--- 2026-10-07T18:53:50.408624+00:00 | STEP 012 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_012/tree/request_0.json",
+  "call": 12
+}
+
+--- 2026-10-07T18:53:56.956831+00:00 | STEP 012 | MODEL REPLY ---
+{"action": "CLICK", "value": "Never use data to share", "verify": "The 'Never use data to share' option should remain selected.","target": "Never use data to share"}
+
+--- 2026-10-07T18:53:56.956831+00:00 | STEP 012 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.546999999998661,
+  "load_seconds": 0.0209064,
+  "prompt_seconds": 0.983189,
+  "generation_seconds": 3.39727,
+  "output_tokens": 44
+}
+
+--- 2026-10-07T18:53:56.959014+00:00 | STEP 012 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Never use data to share",
+    "verify": "The 'Never use data to share' option should remain selected.",
+    "target": "Never use data to share",
+    "index": "23",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 542,
+    "y": 1279
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:53:56.960098+00:00 | STEP 012 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 542,
+    "y": 1279
+  }
+}
+
+--- 2026-10-07T18:54:07.276790+00:00 | STEP 012 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Never use data to share",
+    "verify": "The 'Never use data to share' option should remain selected.",
+    "target": "Never use data to share",
+    "index": "23",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Never use data to share",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 542,
+    "y": 1279
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_012/after.png",
+  "execute_and_observe_seconds": 10.312000000005355
+}
+
+--- 2026-10-07T18:54:07.553996+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261007T184820_469228Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "five_easy_tasks_v9_wifi_xml",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_five_tasks_v8",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "step_budget",
+  "model_calls_attempted": 12,
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4",
+    "video_002.mp4"
+  ],
+  "duration_seconds": 316.54699999999866
+}

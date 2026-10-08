@@ -1,0 +1,43 @@
+{
+  "model": "autoglm-phone-multilingual",
+  "messages": [
+    {
+      "role": "system",
+      "content": "# Read-only step assessment\n\nCompare the BEFORE and AFTER screenshots, their observed GUI properties, and\nthe action that was actually dispatched. Give a short summary of the latest\nstep for use in the next action decision. Include the intended effect, whether\nit worked as expected, and any observed mismatch. Be critical: the previous\naction and its explanation may be wrong. If it failed, explain the evidence\nand what should or should not be done next. Preserve exact values that matter.\n\nUse one line, preferably fewer than 50 words. Return only the summary, with no\noperation code. This request assesses an already executed step; it does not\noperate the device. Distinguish visible evidence from uncertainty.\n\nAdapted from Android World's M3A SUMMARY_PROMPT_TEMPLATE, Apache License 2.0;\nsource attribution and changes are in instructions/AUTOGLM_SOURCE.md.\n"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Original goal: Copy the following text to the clipboard: john.doe@example.com\nCompletion condition: The exact requested text has been fully selected and copied through the visible Copy command; the selection menu has closed afterwards. Finish on that observed result. A transient clipboard chip or toast is optional. The task input is text to copy, not current clipboard state. Clipper is verifier infrastructure.\nDispatched action: {\"action_type\": \"open_app\", \"app_name\": \"chrome\"}\nPrevious model reply: \ndo(action=\"Launch\", app=\"chrome\")\n\nActual observed result: {\"action\": {\"command\": \"do\", \"action\": \"Launch\", \"app\": \"chrome\"}, \"no_visible_effect\": false, \"image_difference\": 0.609576535692402, \"dispatch_returned\": true, \"visible_fields_after\": [{\"hint\": null, \"text\": \"Search or type web address\"}], \"execute_and_observe_seconds\": 8.75}\n"
+        },
+        {
+          "type": "text",
+          "text": "BEFORE screenshot (assessment_before.png) and GUI properties:\nNo GUI tree available; inspect the screenshot."
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "Saved screenshot (base64 encoded for API)"
+          }
+        },
+        {
+          "type": "text",
+          "text": "AFTER screenshot (assessment_after.png) and GUI properties:\nSearch or type web address (editable, not focused) at observed tap center=[380, 326]\nStart voice search at observed tap center=[775, 326]\nSearch with your camera using Google Lens at observed tap center=[892, 326]\nNavigate: Facebook: m.facebook.com at observed tap center=[164, 423]\nFacebook\nNavigate: YouTube: m.youtube.com at observed tap center=[387, 423]\nYouTube\nNavigate: Amazon.com: www.amazon.com at observed tap center=[611, 423]\nAmazon.com\nNavigate: Wikipedia: en.m.wikipedia.org at observed tap center=[834, 423]\nWikipedia\nNavigate: ESPN.com: www.espn.com at observed tap center=[164, 517]\nESPN.com\nNavigate: Yahoo: www.yahoo.com at observed tap center=[387, 517]\nYahoo\nNavigate: eBay: m.ebay.com at observed tap center=[611, 517]\neBay\nNavigate: Instagram: www.instagram.com at observed tap center=[834, 517]\nInstagram\nDiscover\nOptions for Discover at observed tap center=[936, 613]\nClose at observed tap center=[892, 670]\nTo get personalized content suggested by Google, sign in and turn on sync\nTurn on sync at observed tap center=[500, 786]\nCan't refresh Discover\nCheck back later for new stories\nNo internet connection\nHome at observed tap center=[58, 106]\nSwitch or close tabs at observed tap center=[825, 106]\nMore options at observed tap center=[941, 106]"
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "Saved screenshot (base64 encoded for API)"
+          }
+        }
+      ]
+    }
+  ],
+  "stream": false,
+  "temperature": 0,
+  "top_p": 0.85,
+  "frequency_penalty": 0.2,
+  "max_tokens": 3000
+}

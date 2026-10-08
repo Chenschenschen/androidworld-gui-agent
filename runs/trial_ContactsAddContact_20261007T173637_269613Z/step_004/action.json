@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Manage accounts on this device",
+    "verify": "The 'Manage accounts' screen should open.",
+    "target": "Privacy Policy",
+    "index": "2",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 351,
+    "y": 1239
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

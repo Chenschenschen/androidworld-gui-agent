@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T15:32:50.2839502Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"TYPE\", \"index\": 33, \"value\": \"Camila\", \"verify\": \"The First name field should now contain the text 'Camila'.\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6980453600,
+  "load_duration": 20922200,
+  "prompt_eval_count": 1422,
+  "prompt_eval_cached_count": 1421,
+  "prompt_eval_duration": 155982000,
+  "eval_count": 40,
+  "eval_duration": 6791033000,
+  "wall_seconds": 9.062000000001717
+}

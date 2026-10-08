@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to copy the text \"john.doe@example.com\" to the clipboard. I need to first launch the Chrome app as instructed, but I notice that the current screen shows Chrome's home page with a search bar. There's no text input field visible that I can select and copy. \n\nLooking at the task, I need to copy text to the clipboard. To do this, I should first type the text in some input field and then copy it. However, I don't see any text input field on the current screen. I should first tap on the search bar to focus it and then type the text.\n\nThe search bar is at coordinates [38, 296, 960, 359] according to the tree structure.\n\n\ndo(action=\"Tap\", element=[499,326])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447102,
+  "id": "20261008161140e09799993ed84122",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008161140e09799993ed84122",
+  "usage": {
+    "completion_tokens": 171,
+    "prompt_tokens": 2359,
+    "prompt_tokens_details": {
+      "cached_tokens": 902
+    },
+    "total_tokens": 2530
+  },
+  "wall_seconds": 2.7339999999967404
+}

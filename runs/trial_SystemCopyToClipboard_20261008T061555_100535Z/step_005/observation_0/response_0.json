@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"Discount code: SAVE20\" to the clipboard. The current screen shows the Google Chrome app with the text \"Discount code: SAVE20\" selected (highlighted in blue) and a context menu with options including \"Copy\". The next step, according to the clipboard input contract, is to tap the \"Copy\" option to copy the selected text to the clipboard. The \"Copy\" button is located at [191,165,308,204]. I should tap this button to complete the copy operation.\ndo(action=\"Tap\", element=[191,165])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440196,
+  "id": "2026100814163404e4d600a1b04c5a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814163404e4d600a1b04c5a",
+  "usage": {
+    "completion_tokens": 123,
+    "prompt_tokens": 3726,
+    "prompt_tokens_details": {
+      "cached_tokens": 1981
+    },
+    "total_tokens": 3849
+  },
+  "wall_seconds": 2.062999999994645
+}

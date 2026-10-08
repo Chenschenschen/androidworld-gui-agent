@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Start",
+    "verify": "The timer should display 1 hour, 18 minutes, and 44 seconds.",
+    "target": "Start",
+    "index": "15",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1959
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

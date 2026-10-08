@@ -1,0 +1,120 @@
+
+--- 2026-10-08T12:00:06.303657+00:00 | RUN | RUN START ---
+{
+  "task": "SystemCopyToClipboard",
+  "config": {
+    "version": "autoglm_api_v37_general_interactions",
+    "step_assessment": false,
+    "assessment_prompt_version": "m3a_summary_adaptation_v2_shared_prefix",
+    "provider": "zai",
+    "prompt_version": "autoglm_native_en_v22_general_interactions",
+    "model": "autoglm-phone-multilingual",
+    "observation": "screenshot",
+    "tree_backend": "none",
+    "supplemental_tree_packages": [
+      "com.android.settings",
+      "com.google.android.deskclock",
+      "com.android.chrome",
+      "net.gsantner.markor"
+    ],
+    "action_format": "native_pseudocall",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 0.85,
+      "frequency_penalty": 0.2,
+      "max_tokens": 3000
+    },
+    "max_steps": 12,
+    "task_step_budgets": {
+      "ContactsAddContact": 16
+    },
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "max_reobservations": 1,
+    "freshness_global_difference": 0.08,
+    "freshness_target_difference": 0.08,
+    "no_effect_difference": 0.001,
+    "note": "Reusable Android interaction guidance and factual app capabilities; task recipes and separate reflection calls disabled. Markor editor prepared officially for Clipboard. Native model action choices and official final verification.",
+    "visual_stability_checks": 3,
+    "visual_stability_pause": 0.5,
+    "visual_stability_difference": 0.01,
+    "chrome_launch_timeout": 30,
+    "task_guidance": false,
+    "clipboard_input_app": "markor",
+    "interaction_guidance": true,
+    "interaction_guidance_version": "android_interactions_v1",
+    "app_capabilities": {
+      "settings": "Android system settings",
+      "camera": "Camera with photo capture",
+      "clock": "Clock with timer and alarms",
+      "contacts": "Contact records and editable contact forms",
+      "markor": "Plain-text editor with editable notes and standard text selection"
+    },
+    "api_base_url": "https://api.z.ai/api/paas/v4",
+    "task_seed": 43,
+    "task_name": "SystemCopyToClipboard"
+  }
+}
+
+--- 2026-10-08T12:00:06.443544+00:00 | RUN | OBSERVATION INFRASTRUCTURE ---
+{
+  "backend": "none",
+  "accessibility_services_before": "null",
+  "accessibility_services_after": "null",
+  "tree_used_for_model": false,
+  "task_state_modified": false
+}
+
+--- 2026-10-08T12:00:59.492459+00:00 | RUN | OFFICIAL APP SETUP ---
+{
+  "app": "markor",
+  "complete": true,
+  "backend": "uiautomator"
+}
+
+--- 2026-10-08T12:00:59.494465+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Copy the following text to the clipboard: john.doe@example.com",
+  "parameters": {
+    "clipboard_content": "john.doe@example.com"
+  },
+  "task_seed": 43,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-08T12:01:10.597087+00:00 | RUN | RUN ERROR ---
+{
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 335, in main\n    task.initialize_task(env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\task_evals\\single\\system.py\", line 323, in initialize_task\n    self._clear_clipboard(env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\task_evals\\single\\system.py\", line 319, in _clear_clipboard\n    adb_utils.set_clipboard_contents('~~~RESET~~~', env.controller)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\adb_utils.py\", line 1225, in set_clipboard_contents\n    _extract_clipper_output(output_str)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\adb_utils.py\", line 1124, in _extract_clipper_output\n    raise RuntimeError(\nRuntimeError: Clipper app must be in the foreground to access clipboard. Additionally, app privileges must be granted manually by opening the clipper app and granting them.\n",
+  "class": "environment_setup_error"
+}
+
+--- 2026-10-08T12:01:11.263456+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "SystemCopyToClipboard",
+  "run_id": "trial_SystemCopyToClipboard_20261008T120006_301144Z",
+  "agent_done": false,
+  "verifier": "ERROR",
+  "steps": 0,
+  "manual_intervention": false,
+  "evaluation_valid": false,
+  "version": "autoglm_api_v37_general_interactions",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v22_general_interactions",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 335, in main\n    task.initialize_task(env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\task_evals\\single\\system.py\", line 323, in initialize_task\n    self._clear_clipboard(env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\task_evals\\single\\system.py\", line 319, in _clear_clipboard\n    adb_utils.set_clipboard_contents('~~~RESET~~~', env.controller)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\adb_utils.py\", line 1225, in set_clipboard_contents\n    _extract_clipper_output(output_str)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\adb_utils.py\", line 1124, in _extract_clipper_output\n    raise RuntimeError(\nRuntimeError: Clipper app must be in the foreground to access clipboard. Additionally, app privileges must be granted manually by opening the clipper app and granting them.\n",
+  "error_class": "environment_setup_error",
+  "stop_reason": "error",
+  "verifier_error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 381, in main\n    score = verify_task(task, env, output)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 94, in verify_task\n    return task.is_successful(env)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\task_evals\\single\\system.py\", line 327, in is_successful\n    actual_clipboard_content = adb_utils.get_clipboard_contents(env.controller)\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\adb_utils.py\", line 1159, in get_clipboard_contents\n    result = _extract_clipper_output(output_str)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\adb_utils.py\", line 1124, in _extract_clipper_output\n    raise RuntimeError(\nRuntimeError: Clipper app must be in the foreground to access clipboard. Additionally, app privileges must be granted manually by opening the clipper app and granting them.\n",
+  "video_errors": [],
+  "verified_agent_success": false,
+  "clean_agent_success": false,
+  "videos": [],
+  "duration_seconds": 64.96899999999732,
+  "agent_phase_seconds": null
+}

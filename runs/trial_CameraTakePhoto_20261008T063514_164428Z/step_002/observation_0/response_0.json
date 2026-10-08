@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app is now open and I can see the camera interface with the shutter button. The shutter button is the large circular button in the center of the screen. According to the completion condition, I need to take one photo. The shutter button appears to be at approximately [499, 498] based on the blue circle with the camera icon. I should tap this shutter button to take the photo.\ndo(action=\"Tap\", element=[499,498])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441327,
+  "id": "202610081435255c554918906645f3",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081435255c554918906645f3",
+  "usage": {
+    "completion_tokens": 97,
+    "prompt_tokens": 1980,
+    "prompt_tokens_details": {
+      "cached_tokens": 741
+    },
+    "total_tokens": 2077
+  },
+  "wall_seconds": 1.7970000000059372
+}

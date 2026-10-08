@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the home screen, and no app is open. The first step should be to launch the Markor app, as it is the only available app that can handle clipboard operations according to the instructions.\n\n\ndo(action=\"Launch\", app=\"markor\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791462358,
+  "id": "20261008202556785216c8edc445ff",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008202556785216c8edc445ff",
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 2499,
+    "prompt_tokens_details": {
+      "cached_tokens": 1447
+    },
+    "total_tokens": 2577
+  },
+  "wall_seconds": 1.7660000000032596
+}

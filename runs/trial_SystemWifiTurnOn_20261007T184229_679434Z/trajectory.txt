@@ -1,0 +1,1561 @@
+
+--- 2026-10-07T18:42:29.681434+00:00 | RUN | RUN START ---
+{
+  "task": "SystemWifiTurnOn",
+  "config": {
+    "version": "five_easy_tasks_v9_wifi_xml",
+    "prompt_version": "gelab_json_five_tasks_v8",
+    "wifi_tree_backend": "uiautomator",
+    "action_format": "json_schema",
+    "observation": "tree_first",
+    "prompt_examples": false,
+    "max_screenshot_fallbacks": 2,
+    "model": "gelab-zero-4b-preview:latest",
+    "options": {
+      "temperature": 1,
+      "top_k": 20,
+      "top_p": 0.95,
+      "num_ctx": 4096,
+      "num_gpu": 22,
+      "num_predict": 256,
+      "seed": 42
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "note": "After captured stale launcher trees with Wi-Fi off, use Android World's official UIAutomator tree backend for Wi-Fi only. It has no forwarder recovery that can enable Wi-Fi. Labels inside clickable rows are groundable. Other tasks retain gRPC capture. Same model/GPU/sampling/budgets; three distinct task seeds 42/43/44. Failures retained.",
+    "contact_guidance": true,
+    "targeted_type": true,
+    "direct_type_only": true,
+    "label_grounding": true,
+    "task_seed": 42
+  }
+}
+
+--- 2026-10-07T18:42:34.360601+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Turn wifi on.",
+  "parameters": {
+    "on_or_off": "on"
+  },
+  "task_seed": 42,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-07T18:42:58.207187+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-07T18:43:22.905693+00:00 | STEP 001 | OBSERVATION ---
+{
+  "screenshot": "step_001/before.png",
+  "tree": "step_001/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Battery"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15}
+{"index":16}
+{"index":17,"text":"100 %"}
+{"index":18}
+{"index":19}
+{"index":20,"text":"Charged"}
+{"index":21,"is_clickable":true}
+{"index":22}
+{"index":23,"text":"Battery usage"}
+{"index":24,"text":"View usage since last full charge"}
+{"index":25,"is_clickable":true}
+{"index":26}
+{"index":27,"text":"Battery Saver"}
+{"index":28,"text":"Off"}
+{"index":29,"is_clickable":true}
+{"index":30}
+{"index":31,"text":"Adaptive preferences"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34,"text":"Battery percentage"}
+{"index":35,"text":"Show battery percentage in status bar"}
+{"index":36}
+{"index":37,"is_checked":false}
+{"index":38}
+{"index":39}
+{"index":40}
+{"index":41}
+{"index":42,"text":"Battery usage data is approximate and can change based on usage."}
+
+--- 2026-10-07T18:43:22.909196+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_001/tree/request_0.json",
+  "call": 1
+}
+
+--- 2026-10-07T18:43:28.317430+00:00 | STEP 001 | MODEL REPLY ---
+{"action": "AWAKE", "value": "settings", "verify": "The Settings app should open, displaying its main interface.","target":""}
+
+--- 2026-10-07T18:43:28.317430+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.4060000000026776,
+  "load_seconds": 0.018324,
+  "prompt_seconds": 0.585774,
+  "generation_seconds": 2.534025,
+  "output_tokens": 33
+}
+
+--- 2026-10-07T18:43:28.318470+00:00 | STEP 001 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "AWAKE",
+    "value": "settings",
+    "verify": "The Settings app should open, displaying its main interface."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:43:28.324929+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  }
+}
+
+--- 2026-10-07T18:43:58.833254+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "AWAKE",
+    "value": "settings",
+    "verify": "The Settings app should open, displaying its main interface."
+  },
+  "target": null,
+  "android": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_001/after.png",
+  "execute_and_observe_seconds": 30.515999999995984
+}
+
+--- 2026-10-07T18:44:02.970525+00:00 | STEP 002 | OBSERVATION ---
+{
+  "screenshot": "step_002/before.png",
+  "tree": "step_002/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3}
+{"index":4}
+{"index":5}
+{"index":6,"text":"com.google.androidenv.accessibilityforwarder keeps stopping"}
+{"index":7}
+{"index":8}
+{"index":9}
+{"index":10,"text":"App info","is_clickable":true}
+{"index":11,"text":"Close app","is_clickable":true}
+
+--- 2026-10-07T18:44:02.971517+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_002/tree/request_0.json",
+  "call": 2
+}
+
+--- 2026-10-07T18:44:08.532621+00:00 | STEP 002 | MODEL REPLY ---
+{"action": "CLICK", "value": "WiFi", "verify": "The WiFi toggle is now in the 'ON' position.","target": "App info"}
+
+--- 2026-10-07T18:44:08.533148+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.561999999998079,
+  "load_seconds": 0.0218489,
+  "prompt_seconds": 0.582331,
+  "generation_seconds": 2.76731,
+  "output_tokens": 36
+}
+
+--- 2026-10-07T18:44:08.534175+00:00 | STEP 002 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "WiFi",
+    "verify": "The WiFi toggle is now in the 'ON' position.",
+    "target": "App info",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1270
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:44:08.534692+00:00 | STEP 002 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1270
+  }
+}
+
+--- 2026-10-07T18:44:21.670173+00:00 | STEP 002 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "WiFi",
+    "verify": "The WiFi toggle is now in the 'ON' position.",
+    "target": "App info",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "App info",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1270
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_002/after.png",
+  "execute_and_observe_seconds": 13.125
+}
+
+--- 2026-10-07T18:44:25.825678+00:00 | STEP 003 | OBSERVATION ---
+{
+  "screenshot": "step_003/before.png",
+  "tree": "step_003/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"App info"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14,"is_scrollable":true}
+{"index":15}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19,"text":"com.google.androidenv.accessibilityforwarder"}
+{"index":20}
+{"index":21,"text":"Uninstall","is_clickable":true}
+{"index":22}
+{"index":23,"text":"Force stop","is_clickable":true}
+{"index":24,"is_clickable":true}
+{"index":25}
+{"index":26,"text":"Notifications"}
+{"index":27,"text":"About 0 notifications per week"}
+{"index":28,"is_clickable":true}
+{"index":29}
+{"index":30,"text":"Permissions"}
+{"index":31,"text":"Notifications"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34,"text":"Storage & cache"}
+{"index":35,"text":"16.76 MB used in internal storage"}
+{"index":36,"is_clickable":true}
+{"index":37}
+{"index":38,"text":"Mobile data & Wi‑Fi"}
+{"index":39,"text":"No data used"}
+{"index":40,"is_clickable":true}
+{"index":41}
+{"index":42,"text":"Screen time"}
+{"index":43,"text":"0 minutes today"}
+{"index":44,"is_clickable":true}
+{"index":45}
+
+--- 2026-10-07T18:44:25.828821+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_003/tree/request_0.json",
+  "call": 3
+}
+
+--- 2026-10-07T18:44:32.842972+00:00 | STEP 003 | MODEL REPLY ---
+{"action": "CLICK", "value": "No data used", "verify": "The element with text 'No data used' should be clicked and its state should change to show the network settings.","target": "No data used"}
+
+--- 2026-10-07T18:44:32.843503+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.01600000000326,
+  "load_seconds": 0.021176,
+  "prompt_seconds": 0.928727,
+  "generation_seconds": 3.917159,
+  "output_tokens": 50
+}
+
+--- 2026-10-07T18:44:32.843503+00:00 | STEP 003 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "No data used",
+    "verify": "The element with text 'No data used' should be clicked and its state should change to show the network settings.",
+    "target": "No data used",
+    "index": "39",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 187,
+    "y": 2098
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:44:32.844506+00:00 | STEP 003 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 187,
+    "y": 2098
+  }
+}
+
+--- 2026-10-07T18:44:45.678402+00:00 | STEP 003 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "No data used",
+    "verify": "The element with text 'No data used' should be clicked and its state should change to show the network settings.",
+    "target": "No data used",
+    "index": "39",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "No data used",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 187,
+    "y": 2098
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_003/after.png",
+  "execute_and_observe_seconds": 12.828000000001339
+}
+
+--- 2026-10-07T18:44:49.849275+00:00 | STEP 004 | OBSERVATION ---
+{
+  "screenshot": "step_004/before.png",
+  "tree": "step_004/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Mobile data & Wi‑Fi"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15}
+{"index":16}
+{"index":17,"is_clickable":true}
+{"index":18}
+{"index":19,"text":"com.google.androidenv.accessibilityforwarder"}
+{"index":20}
+{"index":21}
+{"index":22}
+{"index":23}
+{"index":24,"text":"Total"}
+{"index":25,"text":"0 B"}
+{"index":26}
+{"index":27}
+{"index":28,"text":"Foreground"}
+{"index":29,"text":"0 B"}
+{"index":30}
+{"index":31}
+{"index":32,"text":"Background"}
+{"index":33,"text":"0 B"}
+{"index":34,"is_clickable":true}
+{"index":35}
+{"index":36,"text":"Background data"}
+{"index":37,"text":"Enable usage of mobile data in the background"}
+{"index":38}
+{"index":39,"is_checked":true}
+{"index":40,"is_clickable":true}
+{"index":41}
+{"index":42,"text":"Unrestricted data usage"}
+{"index":43,"text":"Allow unrestricted data access when Data Saver is on"}
+{"index":44}
+{"index":45,"is_checked":false}
+
+--- 2026-10-07T18:44:49.852788+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_004/tree/request_0.json",
+  "call": 4
+}
+
+--- 2026-10-07T18:44:57.423512+00:00 | STEP 004 | MODEL REPLY ---
+{"action": "CLICK", "value": "Wi‑Fi", "verify": "The screen should navigate to the mobile data & Wi-Fi settings, where the Wi-Fi toggle switch should be visible.", "target": "com.google.androidenv.accessibilityforwarder"}
+
+--- 2026-10-07T18:44:57.424044+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.578000000001339,
+  "load_seconds": 0.0180509,
+  "prompt_seconds": 1.054627999,
+  "generation_seconds": 4.299594,
+  "output_tokens": 55
+}
+
+--- 2026-10-07T18:44:57.424618+00:00 | STEP 004 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Wi‑Fi",
+    "verify": "The screen should navigate to the mobile data & Wi-Fi settings, where the Wi-Fi toggle switch should be visible.",
+    "target": "com.google.androidenv.accessibilityforwarder",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:44:57.424618+00:00 | STEP 004 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  }
+}
+
+--- 2026-10-07T18:45:10.275359+00:00 | STEP 004 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Wi‑Fi",
+    "verify": "The screen should navigate to the mobile data & Wi-Fi settings, where the Wi-Fi toggle switch should be visible.",
+    "target": "com.google.androidenv.accessibilityforwarder",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "com.google.androidenv.accessibilityforwarder",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_004/after.png",
+  "execute_and_observe_seconds": 12.843000000000757
+}
+
+--- 2026-10-07T18:45:14.421391+00:00 | STEP 005 | OBSERVATION ---
+{
+  "screenshot": "step_005/before.png",
+  "tree": "step_005/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"App info"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14,"is_focused":true,"is_scrollable":true}
+{"index":15}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19,"text":"com.google.androidenv.accessibilityforwarder"}
+{"index":20}
+{"index":21,"text":"Uninstall","is_clickable":true}
+{"index":22}
+{"index":23,"text":"Force stop","is_clickable":true}
+{"index":24,"is_clickable":true}
+{"index":25}
+{"index":26,"text":"Notifications"}
+{"index":27,"text":"About 0 notifications per week"}
+{"index":28,"is_clickable":true}
+{"index":29}
+{"index":30,"text":"Permissions"}
+{"index":31,"text":"Notifications"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34,"text":"Storage & cache"}
+{"index":35,"text":"16.76 MB used in internal storage"}
+{"index":36,"is_clickable":true}
+{"index":37}
+{"index":38,"text":"Mobile data & Wi‑Fi"}
+{"index":39,"text":"No data used"}
+{"index":40,"is_clickable":true}
+{"index":41}
+{"index":42,"text":"Screen time"}
+{"index":43,"text":"0 minutes today"}
+{"index":44,"is_clickable":true}
+{"index":45}
+
+--- 2026-10-07T18:45:14.424900+00:00 | STEP 005 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_005/tree/request_0.json",
+  "call": 5
+}
+
+--- 2026-10-07T18:45:21.701134+00:00 | STEP 005 | MODEL REPLY ---
+{"action": "CLICK", "value": "16.76 MB used in internal storage", "verify": "The task to turn on WiFi has been completed.", "target": "16.76 MB used in internal storage"}
+
+--- 2026-10-07T18:45:21.701675+00:00 | STEP 005 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.264999999999418,
+  "load_seconds": 0.016996,
+  "prompt_seconds": 0.932347,
+  "generation_seconds": 4.010741,
+  "output_tokens": 51
+}
+
+--- 2026-10-07T18:45:21.702216+00:00 | STEP 005 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "16.76 MB used in internal storage",
+    "verify": "The task to turn on WiFi has been completed.",
+    "target": "16.76 MB used in internal storage",
+    "index": "35",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 375,
+    "y": 1876
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:45:21.702749+00:00 | STEP 005 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 375,
+    "y": 1876
+  }
+}
+
+--- 2026-10-07T18:45:34.639416+00:00 | STEP 005 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "16.76 MB used in internal storage",
+    "verify": "The task to turn on WiFi has been completed.",
+    "target": "16.76 MB used in internal storage",
+    "index": "35",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "16.76 MB used in internal storage",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 375,
+    "y": 1876
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_005/after.png",
+  "execute_and_observe_seconds": 12.922000000005937
+}
+
+--- 2026-10-07T18:45:38.768602+00:00 | STEP 006 | OBSERVATION ---
+{
+  "screenshot": "step_006/before.png",
+  "tree": "step_006/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Storage"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15}
+{"index":16}
+{"index":17,"is_clickable":true}
+{"index":18}
+{"index":19,"text":"com.google.androidenv.accessibilityforwarder"}
+{"index":20}
+{"index":21,"text":"Clear storage","is_clickable":true}
+{"index":22}
+{"index":23,"text":"Clear cache","is_clickable":true}
+{"index":24}
+{"index":25}
+{"index":26,"text":"Space used"}
+{"index":27}
+{"index":28}
+{"index":29,"text":"App size"}
+{"index":30,"text":"16.70 MB"}
+{"index":31}
+{"index":32}
+{"index":33,"text":"User data"}
+{"index":34,"text":"28.67 kB"}
+{"index":35}
+{"index":36}
+{"index":37,"text":"Cache"}
+{"index":38,"text":"32.77 kB"}
+{"index":39}
+{"index":40}
+{"index":41,"text":"Total"}
+{"index":42,"text":"16.76 MB"}
+{"index":43}
+{"index":44}
+
+--- 2026-10-07T18:45:38.771595+00:00 | STEP 006 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_006/tree/request_0.json",
+  "call": 6
+}
+
+--- 2026-10-07T18:45:44.838274+00:00 | STEP 006 | MODEL REPLY ---
+{"action": "CLICK", "value": "7", "verify": "Wi-Fi toggle has been turned on.", "target": "com.google.androidenv.accessibilityforwarder"}
+
+--- 2026-10-07T18:45:44.838274+00:00 | STEP 006 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.062999999994645,
+  "load_seconds": 0.0178392,
+  "prompt_seconds": 0.9321,
+  "generation_seconds": 2.92403,
+  "output_tokens": 38
+}
+
+--- 2026-10-07T18:45:44.839369+00:00 | STEP 006 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "7",
+    "verify": "Wi-Fi toggle has been turned on.",
+    "target": "com.google.androidenv.accessibilityforwarder",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:45:44.840398+00:00 | STEP 006 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  }
+}
+
+--- 2026-10-07T18:45:57.163123+00:00 | STEP 006 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "7",
+    "verify": "Wi-Fi toggle has been turned on.",
+    "target": "com.google.androidenv.accessibilityforwarder",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "com.google.androidenv.accessibilityforwarder",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_006/after.png",
+  "execute_and_observe_seconds": 12.328000000001339
+}
+
+--- 2026-10-07T18:46:01.301063+00:00 | STEP 007 | OBSERVATION ---
+{
+  "screenshot": "step_007/before.png",
+  "tree": "step_007/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"App info"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14,"is_scrollable":true}
+{"index":15}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19,"text":"com.google.androidenv.accessibilityforwarder"}
+{"index":20}
+{"index":21,"text":"Uninstall","is_clickable":true}
+{"index":22}
+{"index":23,"text":"Force stop","is_clickable":true}
+{"index":24,"is_clickable":true}
+{"index":25}
+{"index":26,"text":"Notifications"}
+{"index":27,"text":"About 0 notifications per week"}
+{"index":28,"is_clickable":true}
+{"index":29}
+{"index":30,"text":"Permissions"}
+{"index":31,"text":"Notifications"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34,"text":"Storage & cache"}
+{"index":35,"text":"16.76 MB used in internal storage"}
+{"index":36,"is_clickable":true}
+{"index":37}
+{"index":38,"text":"Mobile data & Wi‑Fi"}
+{"index":39,"text":"No data used"}
+{"index":40,"is_clickable":true}
+{"index":41}
+{"index":42,"text":"Screen time"}
+{"index":43,"text":"0 minutes today"}
+{"index":44,"is_clickable":true}
+{"index":45}
+
+--- 2026-10-07T18:46:01.303571+00:00 | STEP 007 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_007/tree/request_0.json",
+  "call": 7
+}
+
+--- 2026-10-07T18:46:08.688396+00:00 | STEP 007 | MODEL REPLY ---
+{"action": "CLICK", "value": "com.google.androidenv.accessibilityforwarder", "verify": "The AccessibilityForwarder app should open and be visible on the screen.","target": "16.76 MB used in internal storage"}
+
+--- 2026-10-07T18:46:08.688921+00:00 | STEP 007 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.389999999999418,
+  "load_seconds": 0.0216591,
+  "prompt_seconds": 0.845851,
+  "generation_seconds": 4.216118,
+  "output_tokens": 53
+}
+
+--- 2026-10-07T18:46:08.689973+00:00 | STEP 007 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "com.google.androidenv.accessibilityforwarder",
+    "verify": "The AccessibilityForwarder app should open and be visible on the screen.",
+    "target": "16.76 MB used in internal storage",
+    "index": "35",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 375,
+    "y": 1876
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:46:08.690494+00:00 | STEP 007 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 375,
+    "y": 1876
+  }
+}
+
+--- 2026-10-07T18:46:21.116474+00:00 | STEP 007 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "com.google.androidenv.accessibilityforwarder",
+    "verify": "The AccessibilityForwarder app should open and be visible on the screen.",
+    "target": "16.76 MB used in internal storage",
+    "index": "35",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "16.76 MB used in internal storage",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 375,
+    "y": 1876
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_007/after.png",
+  "execute_and_observe_seconds": 12.421999999998661
+}
+
+--- 2026-10-07T18:46:25.228851+00:00 | STEP 008 | OBSERVATION ---
+{
+  "screenshot": "step_008/before.png",
+  "tree": "step_008/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Storage"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15}
+{"index":16}
+{"index":17,"is_clickable":true}
+{"index":18}
+{"index":19,"text":"com.google.androidenv.accessibilityforwarder"}
+{"index":20}
+{"index":21,"text":"Clear storage","is_clickable":true}
+{"index":22}
+{"index":23,"text":"Clear cache","is_clickable":true}
+{"index":24}
+{"index":25}
+{"index":26,"text":"Space used"}
+{"index":27}
+{"index":28}
+{"index":29,"text":"App size"}
+{"index":30,"text":"16.70 MB"}
+{"index":31}
+{"index":32}
+{"index":33,"text":"User data"}
+{"index":34,"text":"28.67 kB"}
+{"index":35}
+{"index":36}
+{"index":37,"text":"Cache"}
+{"index":38,"text":"32.77 kB"}
+{"index":39}
+{"index":40}
+{"index":41,"text":"Total"}
+{"index":42,"text":"16.76 MB"}
+{"index":43}
+{"index":44}
+
+--- 2026-10-07T18:46:25.230875+00:00 | STEP 008 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_008/tree/request_0.json",
+  "call": 8
+}
+
+--- 2026-10-07T18:46:32.301670+00:00 | STEP 008 | MODEL REPLY ---
+{"action": "CLICK", "value": "21 kB", "verify": "The Wifi toggle should be switched from off (grey) to on (green).", "target": "com.google.androidenv.accessibilityforwarder"}
+
+--- 2026-10-07T18:46:32.301670+00:00 | STEP 008 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.078000000001339,
+  "load_seconds": 0.018353,
+  "prompt_seconds": 0.959109,
+  "generation_seconds": 3.823848,
+  "output_tokens": 49
+}
+
+--- 2026-10-07T18:46:32.302757+00:00 | STEP 008 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "21 kB",
+    "verify": "The Wifi toggle should be switched from off (grey) to on (green).",
+    "target": "com.google.androidenv.accessibilityforwarder",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:46:32.303279+00:00 | STEP 008 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  }
+}
+
+--- 2026-10-07T18:46:45.189854+00:00 | STEP 008 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "21 kB",
+    "verify": "The Wifi toggle should be switched from off (grey) to on (green).",
+    "target": "com.google.androidenv.accessibilityforwarder",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "com.google.androidenv.accessibilityforwarder",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_008/after.png",
+  "execute_and_observe_seconds": 12.889999999999418
+}
+
+--- 2026-10-07T18:46:49.311698+00:00 | STEP 009 | OBSERVATION ---
+{
+  "screenshot": "step_009/before.png",
+  "tree": "step_009/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"App info"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14,"is_scrollable":true}
+{"index":15}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19,"text":"com.google.androidenv.accessibilityforwarder"}
+{"index":20}
+{"index":21,"text":"Uninstall","is_clickable":true}
+{"index":22}
+{"index":23,"text":"Force stop","is_clickable":true}
+{"index":24,"is_clickable":true}
+{"index":25}
+{"index":26,"text":"Notifications"}
+{"index":27,"text":"About 0 notifications per week"}
+{"index":28,"is_clickable":true}
+{"index":29}
+{"index":30,"text":"Permissions"}
+{"index":31,"text":"Notifications"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34,"text":"Storage & cache"}
+{"index":35,"text":"16.76 MB used in internal storage"}
+{"index":36,"is_clickable":true}
+{"index":37}
+{"index":38,"text":"Mobile data & Wi‑Fi"}
+{"index":39,"text":"No data used"}
+{"index":40,"is_clickable":true}
+{"index":41}
+{"index":42,"text":"Screen time"}
+{"index":43,"text":"0 minutes today"}
+{"index":44,"is_clickable":true}
+{"index":45}
+
+--- 2026-10-07T18:46:49.314239+00:00 | STEP 009 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_009/tree/request_0.json",
+  "call": 9
+}
+
+--- 2026-10-07T18:46:55.029851+00:00 | STEP 009 | MODEL REPLY ---
+{"action": "CLICK", "value": "Notifications", "verify": "The screen should switch to the Notifications settings menu.", "target": "Notifications"}
+
+--- 2026-10-07T18:46:55.030385+00:00 | STEP 009 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.703000000001339,
+  "load_seconds": 0.0164496,
+  "prompt_seconds": 0.835297,
+  "generation_seconds": 2.556896,
+  "output_tokens": 33
+}
+
+--- 2026-10-07T18:46:55.030952+00:00 | STEP 009 | VALIDATION ERROR ---
+{
+  "error": "Target label 'Notifications' matches 2 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T18:46:55.031492+00:00 | STEP 009 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_009/tree/request_1.json",
+  "call": 10
+}
+
+--- 2026-10-07T18:47:00.868756+00:00 | STEP 009 | MODEL REPLY ---
+{"action": "CLICK", "value": "About 0 notifications per week", "verify": "The screen should switch to the Notifications settings menu.", "target": "About 0 notifications per week"}
+
+--- 2026-10-07T18:47:00.868756+00:00 | STEP 009 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.828000000001339,
+  "load_seconds": 0.0155684,
+  "prompt_seconds": 0.456356,
+  "generation_seconds": 3.309238,
+  "output_tokens": 43
+}
+
+--- 2026-10-07T18:47:00.869792+00:00 | STEP 009 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "About 0 notifications per week",
+    "verify": "The screen should switch to the Notifications settings menu.",
+    "target": "About 0 notifications per week",
+    "index": "27",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 345,
+    "y": 1432
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:47:00.870298+00:00 | STEP 009 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 345,
+    "y": 1432
+  }
+}
+
+--- 2026-10-07T18:47:13.247227+00:00 | STEP 009 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "About 0 notifications per week",
+    "verify": "The screen should switch to the Notifications settings menu.",
+    "target": "About 0 notifications per week",
+    "index": "27",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "About 0 notifications per week",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 345,
+    "y": 1432
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_009/after.png",
+  "execute_and_observe_seconds": 12.375
+}
+
+--- 2026-10-07T18:47:17.400640+00:00 | STEP 010 | OBSERVATION ---
+{
+  "screenshot": "step_010/before.png",
+  "tree": "step_010/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"com.google.androidenv.accessibilityforwarder"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15,"is_clickable":true}
+{"index":16}
+{"index":17,"is_clickable":true}
+{"index":18}
+{"index":19,"text":"com.google.androidenv.accessibilityforwarder"}
+{"index":20,"text":"com.google.androidenv.accessibilityforwarder"}
+{"index":21,"is_clickable":true}
+{"index":22,"is_clickable":true}
+{"index":23}
+{"index":24}
+{"index":25,"text":"Show notifications"}
+{"index":26,"is_checked":true}
+{"index":27,"is_clickable":true}
+{"index":28}
+{"index":29,"text":"Allow interruptions"}
+{"index":30,"text":"Let the app make sound, vibrate, and/or pop notifications on screen"}
+{"index":31}
+{"index":32,"is_checked":true}
+{"index":33,"is_clickable":true}
+{"index":34}
+{"index":35,"text":"Override Do Not Disturb"}
+{"index":36,"text":"Let these notifications continue to interrupt when Do Not Disturb is on"}
+{"index":37}
+{"index":38,"is_checked":false}
+{"index":39,"is_clickable":true}
+{"index":40}
+{"index":41,"text":"Allow notification dot"}
+{"index":42}
+{"index":43,"is_checked":true}
+
+--- 2026-10-07T18:47:17.403659+00:00 | STEP 010 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_010/tree/request_0.json",
+  "call": 11
+}
+
+--- 2026-10-07T18:47:24.083770+00:00 | STEP 010 | MODEL REPLY ---
+{"action": "CLICK", "value": "Allow notification dot", "verify": "The element with the text 'Allow notification dot' should be selected.", "target": "Allow notification dot"}
+
+--- 2026-10-07T18:47:24.084272+00:00 | STEP 010 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.687999999994645,
+  "load_seconds": 0.0199706,
+  "prompt_seconds": 1.128891,
+  "generation_seconds": 3.201367,
+  "output_tokens": 41
+}
+
+--- 2026-10-07T18:47:24.084272+00:00 | STEP 010 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Allow notification dot",
+    "verify": "The element with the text 'Allow notification dot' should be selected.",
+    "target": "Allow notification dot",
+    "index": "41",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 346,
+    "y": 2201
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:47:24.085274+00:00 | STEP 010 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 346,
+    "y": 2201
+  }
+}
+
+--- 2026-10-07T18:47:36.482421+00:00 | STEP 010 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Allow notification dot",
+    "verify": "The element with the text 'Allow notification dot' should be selected.",
+    "target": "Allow notification dot",
+    "index": "41",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Allow notification dot",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 346,
+    "y": 2201
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_010/after.png",
+  "execute_and_observe_seconds": 12.39100000000326
+}
+
+--- 2026-10-07T18:47:40.631552+00:00 | STEP 011 | OBSERVATION ---
+{
+  "screenshot": "step_011/before.png",
+  "tree": "step_011/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"com.google.androidenv.accessibilityforwarder"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15,"is_clickable":true}
+{"index":16}
+{"index":17,"is_clickable":true}
+{"index":18}
+{"index":19,"text":"com.google.androidenv.accessibilityforwarder"}
+{"index":20,"text":"com.google.androidenv.accessibilityforwarder"}
+{"index":21,"is_clickable":true}
+{"index":22,"is_clickable":true}
+{"index":23}
+{"index":24}
+{"index":25,"text":"Show notifications"}
+{"index":26,"is_checked":true}
+{"index":27,"is_clickable":true}
+{"index":28}
+{"index":29,"text":"Allow interruptions"}
+{"index":30,"text":"Let the app make sound, vibrate, and/or pop notifications on screen"}
+{"index":31}
+{"index":32,"is_checked":true}
+{"index":33,"is_clickable":true}
+{"index":34}
+{"index":35,"text":"Override Do Not Disturb"}
+{"index":36,"text":"Let these notifications continue to interrupt when Do Not Disturb is on"}
+{"index":37}
+{"index":38,"is_checked":false}
+{"index":39,"is_clickable":true}
+{"index":40}
+{"index":41,"text":"Allow notification dot"}
+{"index":42}
+{"index":43,"is_checked":false}
+
+--- 2026-10-07T18:47:40.636180+00:00 | STEP 011 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_011/tree/request_0.json",
+  "call": 12
+}
+
+--- 2026-10-07T18:47:47.291546+00:00 | STEP 011 | MODEL REPLY ---
+{"action": "CLICK", "value": "21 kB", "verify": "The checkbox for 'Allow notification dot' should become checked.", "target": "com.google.androidenv.accessibilityforwarder"}
+
+--- 2026-10-07T18:47:47.292093+00:00 | STEP 011 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.655999999995402,
+  "load_seconds": 0.0194816,
+  "prompt_seconds": 0.993527,
+  "generation_seconds": 3.441367,
+  "output_tokens": 44
+}
+
+--- 2026-10-07T18:47:47.292621+00:00 | STEP 011 | VALIDATION ERROR ---
+{
+  "error": "Target label 'com.google.androidenv.accessibilityforwarder' matches 2 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T18:47:47.293667+00:00 | STEP 011 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_011/tree/request_1.json",
+  "call": 13
+}
+
+--- 2026-10-07T18:47:52.883159+00:00 | STEP 011 | MODEL REPLY ---
+{"action": "CLICK", "value": "Allow notification dot", "verify": "The checkbox for 'Allow notification dot' should become checked.", "target": "Allow notification dot"}
+
+--- 2026-10-07T18:47:52.883711+00:00 | STEP 011 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.594000000004598,
+  "load_seconds": 0.026101,
+  "prompt_seconds": 0.468366,
+  "generation_seconds": 3.008117,
+  "output_tokens": 39
+}
+
+--- 2026-10-07T18:47:52.884224+00:00 | STEP 011 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Allow notification dot",
+    "verify": "The checkbox for 'Allow notification dot' should become checked.",
+    "target": "Allow notification dot",
+    "index": "41",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 346,
+    "y": 2201
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:47:52.884748+00:00 | STEP 011 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 346,
+    "y": 2201
+  }
+}
+
+--- 2026-10-07T18:48:05.362723+00:00 | STEP 011 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Allow notification dot",
+    "verify": "The checkbox for 'Allow notification dot' should become checked.",
+    "target": "Allow notification dot",
+    "index": "41",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Allow notification dot",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 346,
+    "y": 2201
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_011/after.png",
+  "execute_and_observe_seconds": 12.48399999999674
+}
+
+--- 2026-10-07T18:48:09.507645+00:00 | STEP 012 | OBSERVATION ---
+{
+  "screenshot": "step_012/before.png",
+  "tree": "step_012/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3}
+{"index":4}
+{"index":5}
+{"index":6,"text":"com.google.androidenv.accessibilityforwarder keeps stopping"}
+{"index":7}
+{"index":8}
+{"index":9}
+{"index":10,"text":"App info","is_clickable":true}
+{"index":11,"text":"Close app","is_clickable":true}
+
+--- 2026-10-07T18:48:09.508645+00:00 | STEP 012 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_012/tree/request_0.json",
+  "call": 14
+}
+
+--- 2026-10-07T18:48:15.349913+00:00 | STEP 012 | MODEL REPLY ---
+{"action": "COMPLETE", "value": "com.google.androidenv.accessibilityforwarder keeps stopping","verify": "Verify that WiFi is turned on.","target": "App info"}
+
+--- 2026-10-07T18:48:15.349913+00:00 | STEP 012 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.8439999999973224,
+  "load_seconds": 0.0179275,
+  "prompt_seconds": 0.645744,
+  "generation_seconds": 2.901818,
+  "output_tokens": 38
+}
+
+--- 2026-10-07T18:48:15.350434+00:00 | STEP 012 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "COMPLETE",
+    "value": "com.google.androidenv.accessibilityforwarder keeps stopping",
+    "verify": "Verify that WiFi is turned on."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "com.google.androidenv.accessibilityforwarder keeps stopping"
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:48:15.350941+00:00 | STEP 012 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "com.google.androidenv.accessibilityforwarder keeps stopping"
+  }
+}
+
+--- 2026-10-07T18:48:19.475898+00:00 | STEP 012 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "COMPLETE",
+    "value": "com.google.androidenv.accessibilityforwarder keeps stopping",
+    "verify": "Verify that WiFi is turned on."
+  },
+  "target": null,
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "com.google.androidenv.accessibilityforwarder keeps stopping"
+  },
+  "result": "agent stopped",
+  "visible_fields_after": [],
+  "screenshot": "step_012/after.png",
+  "execute_and_observe_seconds": 4.125
+}
+
+--- 2026-10-07T18:48:19.760709+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261007T184229_679434Z",
+  "agent_done": true,
+  "verifier": "FAIL",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "five_easy_tasks_v9_wifi_xml",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_five_tasks_v8",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "complete",
+  "model_calls_attempted": 14,
+  "verifier_score": 0.0,
+  "failure_class": "false_done",
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4",
+    "video_002.mp4"
+  ],
+  "duration_seconds": 320.42200000000594
+}

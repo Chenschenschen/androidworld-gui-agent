@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The full name is entered. Now we need to add the phone number. Scroll down to reveal the \"Phone\" field.\n\ndo(action=\"Swipe\", start=[499,543], end=[499,269])\n\n\ndo(action=\"Swipe\", start=[499,543], end=[499,269])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447457,
+  "id": "202610081617354c6329c88d6b4e8e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081617354c6329c88d6b4e8e",
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 2887,
+    "prompt_tokens_details": {
+      "cached_tokens": 1611
+    },
+    "total_tokens": 2959
+  },
+  "wall_seconds": 1.75
+}

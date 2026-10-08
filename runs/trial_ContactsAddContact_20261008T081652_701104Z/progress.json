@@ -1,0 +1,19 @@
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261008T081652_701104Z",
+  "agent_done": false,
+  "verifier": "NOT_RUN",
+  "steps": 11,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v28_actual_control_feedback",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 16,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 11
+}

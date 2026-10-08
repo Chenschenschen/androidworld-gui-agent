@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The contact details screen shows the newly created contact \"Camila da Silva\" with the phone number +10433218196. The task is complete, so I should finish.\nfinish(message=\"Contact for Camila da Silva with phone number +10433218196 has been successfully created and saved in the Contacts app.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438745,
+  "id": "2026100813522354fbace9d98a47e7",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100813522354fbace9d98a47e7",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 3700,
+    "prompt_tokens_details": {
+      "cached_tokens": 2404
+    },
+    "total_tokens": 3766
+  },
+  "wall_seconds": 1.6560000000026776
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the Chrome Settings page, but there is no direct clipboard option visible. To access clipboard features, I should go back to the previous screen and try another approach. I will tap the \"Navigate up\" button at [0, 57, 135, 118] to return to the previous screen.\n\n\ndo(action=\"Tap\", element=[67,83])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791458584,
+  "id": "20261008192302271aa5df346c49b7",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008192302271aa5df346c49b7",
+  "usage": {
+    "completion_tokens": 95,
+    "prompt_tokens": 4075,
+    "prompt_tokens_details": {
+      "cached_tokens": 2509
+    },
+    "total_tokens": 4170
+  },
+  "wall_seconds": 1.8589999999967404
+}

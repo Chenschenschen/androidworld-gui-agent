@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"First name\" field is focused and the keyboard is visible. I should type \"Camila\" into this field.\ndo(action=\"Type\", text=\"Camila\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438710,
+  "id": "20261008135149d9164422a6e54d5c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135149d9164422a6e54d5c",
+  "usage": {
+    "completion_tokens": 36,
+    "prompt_tokens": 2413,
+    "prompt_tokens_details": {
+      "cached_tokens": 1131
+    },
+    "total_tokens": 2449
+  },
+  "wall_seconds": 1.3439999999973224
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see that Chrome has opened and is showing the Google homepage. I can see a search bar at the top that says \"Search or type web address\". To copy text from the clipboard, I need to first select all the text in the search bar and then copy it. Let me tap on the search bar first to focus it, then select all the text and copy it.\n\nThe search bar is located at coordinates [38,300,960,353] based on the tree structure.\ndo(action=\"Tap\", element=[38,300,960,353])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438763,
+  "id": "202610081352429f6b422df795490c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081352429f6b422df795490c",
+  "usage": {
+    "completion_tokens": 119,
+    "prompt_tokens": 1942,
+    "prompt_tokens_details": {
+      "cached_tokens": 626
+    },
+    "total_tokens": 2061
+  },
+  "wall_seconds": 1.9069999999919673
+}

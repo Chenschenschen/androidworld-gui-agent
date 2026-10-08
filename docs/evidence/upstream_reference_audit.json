@@ -1,0 +1,231 @@
+[
+  {
+    "task": "ClockTimerEntry",
+    "version": "upstream_reference_v1",
+    "agent_done": false,
+    "verifier": "FAIL",
+    "evaluation_valid": false,
+    "clean_agent_success": false,
+    "steps": 0,
+    "steps_attempted": null,
+    "model_calls_attempted": null,
+    "gui_actions_dispatched": null,
+    "duration_seconds": 5.297000000005937,
+    "agent_phase_seconds": null,
+    "stop_reason": "error",
+    "error_class": "environment_setup_error",
+    "video_errors": [
+      "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 197, in record_video\n    raise RuntimeError(\"Recording file missing or empty\")\nRuntimeError: Recording file missing or empty\n"
+    ],
+    "run_id": "trial_ClockTimerEntry_20261008T110331_988395Z",
+    "json_files": 5,
+    "credential_found": false,
+    "request_contains_image_data": false,
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 0,
+        "frames_reported": 0.0,
+        "fps": 0.0,
+        "seconds": null,
+        "complete_decode": false
+      }
+    ]
+  },
+  {
+    "task": "ClockTimerEntry",
+    "version": "upstream_reference_v2_windows_import",
+    "agent_done": false,
+    "verifier": "FAIL",
+    "evaluation_valid": true,
+    "clean_agent_success": false,
+    "steps": 12,
+    "steps_attempted": 12,
+    "model_calls_attempted": 12,
+    "gui_actions_dispatched": 12,
+    "duration_seconds": 69.09399999999732,
+    "agent_phase_seconds": 65.18799999999464,
+    "stop_reason": "step_budget",
+    "error_class": null,
+    "video_errors": [],
+    "run_id": "trial_ClockTimerEntry_20261008T110453_899546Z",
+    "json_files": 79,
+    "credential_found": false,
+    "request_contains_image_data": false,
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 247,
+        "frames_reported": 247.0,
+        "fps": 3.8011565912363077,
+        "seconds": 64.98022222222222,
+        "complete_decode": true
+      }
+    ]
+  },
+  {
+    "task": "ClockTimerEntry",
+    "version": "autoglm_api_v34_assessment_opt_in",
+    "agent_done": false,
+    "verifier": "FAIL",
+    "evaluation_valid": true,
+    "clean_agent_success": false,
+    "steps": 10,
+    "steps_attempted": 11,
+    "model_calls_attempted": 11,
+    "gui_actions_dispatched": 10,
+    "duration_seconds": 135.51600000000326,
+    "agent_phase_seconds": 131.43799999999464,
+    "stop_reason": "error",
+    "error_class": "control_no_progress",
+    "video_errors": [],
+    "run_id": "trial_ClockTimerEntry_20261008T110722_819990Z",
+    "json_files": 102,
+    "credential_found": false,
+    "request_contains_image_data": false,
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 290,
+        "frames_reported": 290.0,
+        "fps": 2.2182622133820367,
+        "seconds": 130.73296666666667,
+        "complete_decode": true
+      }
+    ]
+  },
+  {
+    "task": "SystemCopyToClipboard",
+    "version": "upstream_reference_v2_windows_import",
+    "agent_done": false,
+    "verifier": "FAIL",
+    "evaluation_valid": true,
+    "clean_agent_success": false,
+    "steps": 7,
+    "steps_attempted": 8,
+    "model_calls_attempted": 8,
+    "gui_actions_dispatched": 7,
+    "duration_seconds": 52.078000000008615,
+    "agent_phase_seconds": 42.51499999999942,
+    "stop_reason": "error",
+    "error_class": "validation_error",
+    "video_errors": [],
+    "run_id": "trial_SystemCopyToClipboard_20261008T111031_420458Z",
+    "json_files": 54,
+    "credential_found": false,
+    "request_contains_image_data": false,
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 241,
+        "frames_reported": 241.0,
+        "fps": 5.742975247750205,
+        "seconds": 41.96431111111111,
+        "complete_decode": true
+      }
+    ]
+  },
+  {
+    "task": "SystemCopyToClipboard",
+    "version": "upstream_reference_v3_prerequisite_preflight",
+    "agent_done": true,
+    "verifier": "FAIL",
+    "evaluation_valid": true,
+    "clean_agent_success": false,
+    "steps": 8,
+    "steps_attempted": 8,
+    "model_calls_attempted": 8,
+    "gui_actions_dispatched": 7,
+    "duration_seconds": 63.719000000011874,
+    "agent_phase_seconds": 51.23400000001129,
+    "stop_reason": "complete",
+    "error_class": null,
+    "video_errors": [],
+    "run_id": "trial_SystemCopyToClipboard_20261008T111249_290736Z",
+    "json_files": 55,
+    "credential_found": false,
+    "request_contains_image_data": false,
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 259,
+        "frames_reported": 259.0,
+        "fps": 5.229726564498166,
+        "seconds": 49.52457777777778,
+        "complete_decode": true
+      }
+    ]
+  },
+  {
+    "task": "SystemCopyToClipboard",
+    "version": "autoglm_api_v34_assessment_opt_in",
+    "agent_done": false,
+    "verifier": "FAIL",
+    "evaluation_valid": false,
+    "clean_agent_success": false,
+    "steps": 3,
+    "steps_attempted": 4,
+    "model_calls_attempted": 5,
+    "gui_actions_dispatched": 3,
+    "duration_seconds": 58.46899999999732,
+    "agent_phase_seconds": 45.92200000000594,
+    "stop_reason": "error",
+    "error_class": "control_no_progress",
+    "video_errors": [
+      "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 192, in record_video\n    subprocess.run(prefix + [\"shell\", \"kill\", \"-2\", pid], check=True, capture_output=True)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.tools\\python\\cpython-3.11.17-windows-x86_64-none\\Lib\\subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['C:\\\\Users\\\\koc\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe', '-s', 'emulator-5554', 'shell', 'kill', '-2', '25371']' returned non-zero exit status 1.\n"
+    ],
+    "run_id": "trial_SystemCopyToClipboard_20261008T111502_200837Z",
+    "json_files": 36,
+    "credential_found": false,
+    "request_contains_image_data": false,
+    "videos": [
+      {
+        "file": "recovered_video_001.mp4",
+        "frames_decoded": 48,
+        "frames_reported": 48.0,
+        "fps": 4.715961564913246,
+        "seconds": 10.1782,
+        "complete_decode": true
+      }
+    ]
+  },
+  {
+    "task": "SystemCopyToClipboard",
+    "version": "autoglm_api_v35_clipboard_transport",
+    "agent_done": false,
+    "verifier": "FAIL",
+    "evaluation_valid": true,
+    "clean_agent_success": false,
+    "steps": 12,
+    "steps_attempted": 12,
+    "model_calls_attempted": 12,
+    "gui_actions_dispatched": 12,
+    "duration_seconds": 207.59399999999732,
+    "agent_phase_seconds": 194.36000000000058,
+    "stop_reason": "step_budget",
+    "error_class": null,
+    "video_errors": [],
+    "run_id": "trial_SystemCopyToClipboard_20261008T112059_418312Z",
+    "json_files": 113,
+    "credential_found": false,
+    "request_contains_image_data": false,
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 345,
+        "frames_reported": 345.0,
+        "fps": 1.9883920171535794,
+        "seconds": 173.50703333333334,
+        "complete_decode": true
+      },
+      {
+        "file": "video_002.mp4",
+        "frames_decoded": 43,
+        "frames_reported": 43.0,
+        "fps": 2.3192345447288654,
+        "seconds": 18.540599999999998,
+        "complete_decode": true
+      }
+    ]
+  }
+]

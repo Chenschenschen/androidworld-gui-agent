@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe user wants to send a text via Simple SMS Messenger. The app is not currently open. The home screen is visible with no indication that the app is running. The best first action is to launch the Simple SMS Messenger app.\n\n\ndo(action=\"Launch\", app=\"simple sms messenger\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464842,
+  "id": "2026100821072094c5364f1b244cf4",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100821072094c5364f1b244cf4",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 2495,
+    "prompt_tokens_details": {
+      "cached_tokens": 408
+    },
+    "total_tokens": 2559
+  },
+  "wall_seconds": 2.672000000005937
+}

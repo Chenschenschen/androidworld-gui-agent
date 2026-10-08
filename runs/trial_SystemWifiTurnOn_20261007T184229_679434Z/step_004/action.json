@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Wi‑Fi",
+    "verify": "The screen should navigate to the mobile data & Wi-Fi settings, where the Wi-Fi toggle switch should be visible.",
+    "target": "com.google.androidenv.accessibilityforwarder",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

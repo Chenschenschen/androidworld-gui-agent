@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "T-Mobile",
+    "verify": "The Wi‑Fi toggle should be visible and likely already in the ON position, as the task is to confirm it is on.",
+    "target": "T-Mobile",
+    "index": "21",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 303,
+    "y": 688
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

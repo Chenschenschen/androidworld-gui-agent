@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Phone field is focused and the keyboard is visible. I should type the phone number \"+12751797908\" into this field.\ndo(action=\"Type\", text=\"+12751797908\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438854,
+  "id": "20261008135413b27bb13334ba4441",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135413b27bb13334ba4441",
+  "usage": {
+    "completion_tokens": 44,
+    "prompt_tokens": 3142,
+    "prompt_tokens_details": {
+      "cached_tokens": 1863
+    },
+    "total_tokens": 3186
+  },
+  "wall_seconds": 1.4060000000026776
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows \"13h 33m 33s\". The next digit to input is \"4\" for the second, as the target is 13:33:34. I need to tap the \"4\" button to complete the second digit.\ndo(action=\"Tap\", element=[245,455])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791439713,
+  "id": "202610081408312dd86aa907494662",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081408312dd86aa907494662",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 9439,
+    "prompt_tokens_details": {
+      "cached_tokens": 7037
+    },
+    "total_tokens": 9505
+  },
+  "wall_seconds": 2.2660000000032596
+}

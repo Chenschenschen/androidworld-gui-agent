@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I'm now in the Network & internet settings. I can see the \"Internet\" option which shows \"Networks available\" - this is where I can access Wi-Fi settings. I need to tap on \"Internet\" to proceed to the Wi-Fi controls.\ndo(action=\"Tap\", element=[499,295])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406496,
+  "id": "202610080454549c155fd876714ff9",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080454549c155fd876714ff9",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 2456,
+    "prompt_tokens_details": {
+      "cached_tokens": 760
+    },
+    "total_tokens": 2522
+  },
+  "wall_seconds": 1.6089999999967404
+}

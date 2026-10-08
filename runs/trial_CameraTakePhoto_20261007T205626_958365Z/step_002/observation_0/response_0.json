@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants me to take one photo. I can see that the camera app has opened and is showing a settings screen asking \"Remember photo locations?\" with a checkbox that appears to be checked, and a \"NEXT\" button at the bottom. \n\nI need to tap the NEXT button to proceed with the camera setup, and then I'll be able to take a photo.\ndo(action=\"Tap\", element=[499,927])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406598,
+  "id": "20261008045637a3fb4ad03cf24eaf",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008045637a3fb4ad03cf24eaf",
+  "usage": {
+    "completion_tokens": 91,
+    "prompt_tokens": 2052,
+    "prompt_tokens_details": {
+      "cached_tokens": 592
+    },
+    "total_tokens": 2143
+  },
+  "wall_seconds": 1.625
+}

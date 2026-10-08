@@ -1,0 +1,12 @@
+{
+  "model": "autoglm-phone-multilingual",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Reply with OK. This is an API connectivity check, not a phone task."
+    }
+  ],
+  "max_tokens": 64,
+  "temperature": 0,
+  "stream": false
+}

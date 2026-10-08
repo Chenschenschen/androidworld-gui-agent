@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe current screen shows the Camera app interface with a shutter button (ImageView;click; Shutter;[0,375,999,740]). To take a photo, I need to tap the shutter button. The previous actions did not successfully capture a photo, so I will tap the shutter button again to attempt to take a new photo.\ndo(action=\"Tap\", element=[499,510])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405710,
+  "id": "202610080441499b1b0b3820904459",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080441499b1b0b3820904459",
+  "usage": {
+    "completion_tokens": 89,
+    "prompt_tokens": 1816,
+    "prompt_tokens_details": {
+      "cached_tokens": 511
+    },
+    "total_tokens": 1905
+  },
+  "wall_seconds": 1.687999999994645
+}

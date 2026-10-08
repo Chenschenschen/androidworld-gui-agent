@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Company",
+    "verify": "The 'Company' field should be selected in the new contact creation form.",
+    "target": "Company",
+    "index": "11",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 1013,
+    "y": 371
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

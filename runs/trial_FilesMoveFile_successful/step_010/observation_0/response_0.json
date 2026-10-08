@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"project_medium\" folder is visible in the sdk_gphone64_x86_64 storage area. To move the file to the correct destination, I should tap on the \"project_medium\" folder to select it as the destination. The \"project_medium\" folder is at [59, 592, 489, 645].\n\n\ndo(action=\"Tap\", element=[274,627])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791480206,
+  "id": "20261009012325b68180256e834da2",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261009012325b68180256e834da2",
+  "usage": {
+    "completion_tokens": 88,
+    "prompt_tokens": 8768,
+    "prompt_tokens_details": {
+      "cached_tokens": 6777
+    },
+    "total_tokens": 8856
+  },
+  "wall_seconds": 1.9689999999973224
+}

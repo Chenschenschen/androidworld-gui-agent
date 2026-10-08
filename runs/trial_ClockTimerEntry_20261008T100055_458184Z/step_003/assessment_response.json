@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows 00h 00m 02s, only 2 seconds have been entered. To reach 20:07:01, I need to continue entering digits. The next digit should be \"0\" to make the seconds 20, then proceed with the minutes and seconds. I'll tap \"0\" at [377, 685, 622, 740].\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791453707,
+  "id": "20261008180140a9ed00e7f4d44de6",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008180140a9ed00e7f4d44de6",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 3006,
+    "prompt_tokens_details": {
+      "cached_tokens": 296
+    },
+    "total_tokens": 3092
+  },
+  "wall_seconds": 7.187000000005355
+}

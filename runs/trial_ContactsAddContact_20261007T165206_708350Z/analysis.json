@@ -1,0 +1,14 @@
+{
+  "kind": "retrospective_analysis",
+  "failure_class": "grounding",
+  "official_verifier": "FAIL",
+  "stop_reason": "step_budget",
+  "evidence": [
+    "steps 5-7 repeated already-filled name field",
+    "step 8 screenshot tap inserted a space",
+    "step 11 index 19 was keyboard Dash, not Phone",
+    "final Phone text was -+10433218196; form unsaved"
+  ],
+  "guard_change": "Measured cursor-only false stop did not recur; task success remained FAIL",
+  "next_proposal": "Targeted TYPE(index, exact value), not implemented"
+}

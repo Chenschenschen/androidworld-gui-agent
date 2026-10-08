@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see that Chrome is now showing a search result page for \"john.com\" (it shows \"google.com/search?q=john.com\" in the address bar). I need to copy the text \"john.doe@example.com\" to the clipboard. However, I notice that I typed \"john.com\" but the task asks for \"john.doe@example.com\". \n\nI need to go back and search for the correct text. Let me tap the back button to go back to the search bar and search for the correct text.\ndo(action=\"Back\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407865,
+  "id": "2026100805174406928217f287465a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100805174406928217f287465a",
+  "usage": {
+    "completion_tokens": 113,
+    "prompt_tokens": 2288,
+    "prompt_tokens_details": {
+      "cached_tokens": 986
+    },
+    "total_tokens": 2401
+  },
+  "wall_seconds": 1.9069999999992433
+}

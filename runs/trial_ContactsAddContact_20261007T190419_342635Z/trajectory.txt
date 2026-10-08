@@ -1,0 +1,169 @@
+
+--- 2026-10-07T19:04:19.343725+00:00 | RUN | RUN START ---
+{
+  "task": "ContactsAddContact",
+  "config": {
+    "version": "five_easy_tasks_v9_wifi_xml",
+    "prompt_version": "gelab_json_five_tasks_v8",
+    "wifi_tree_backend": "uiautomator",
+    "action_format": "json_schema",
+    "observation": "tree_first",
+    "prompt_examples": false,
+    "max_screenshot_fallbacks": 2,
+    "model": "gelab-zero-4b-preview:latest",
+    "options": {
+      "temperature": 1,
+      "top_k": 20,
+      "top_p": 0.95,
+      "num_ctx": 4096,
+      "num_gpu": 22,
+      "num_predict": 256,
+      "seed": 42
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "note": "After captured stale launcher trees with Wi-Fi off, use Android World's official UIAutomator tree backend for Wi-Fi only. It has no forwarder recovery that can enable Wi-Fi. Labels inside clickable rows are groundable. Other tasks retain gRPC capture. Same model/GPU/sampling/budgets; three distinct task seeds 42/43/44. Failures retained.",
+    "contact_guidance": true,
+    "targeted_type": true,
+    "direct_type_only": true,
+    "label_grounding": true,
+    "task_seed": 42
+  }
+}
+
+--- 2026-10-07T19:04:40.412614+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Create a new contact for Camila da Silva. Their number is +10433218196.",
+  "parameters": {
+    "name": "Camila da Silva",
+    "number": "+10433218196"
+  },
+  "task_seed": 42,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-07T19:04:45.313652+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-07T19:04:47.392069+00:00 | STEP 001 | OBSERVATION ---
+{
+  "screenshot": "step_001/before.png",
+  "tree": "step_001/tree.json"
+}
+{"index":0,"is_scrollable":true}
+{"index":1,"content_description":"Home"}
+{"index":2,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":3,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":4,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":5,"text":"Settings","content_description":"Predicted app: Settings","is_clickable":true}
+{"index":6,"content_description":"Search","is_clickable":true}
+{"index":7,"text":"51:32","content_description":"51:32","is_clickable":true}
+{"index":8,"text":"Camera","content_description":"Camera","is_clickable":true}
+{"index":9,"text":"Files","content_description":"Files","is_clickable":true}
+{"index":10,"text":"Contacts","content_description":"Contacts","is_clickable":true}
+{"index":11,"text":"Calendar","content_description":"Calendar","is_clickable":true}
+{"index":12,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":13,"text":"Maps","content_description":"Maps","is_clickable":true}
+{"index":14,"text":"Clock","content_description":"Clock","is_clickable":true}
+{"index":15,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":16,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":17,"text":"Gmail","content_description":"Gmail","is_clickable":true}
+{"index":18,"text":"Photos","content_description":"Photos","is_clickable":true}
+{"index":19,"text":"Settings","content_description":"Settings","is_clickable":true}
+{"index":20,"content_description":"Google app","is_clickable":true}
+{"index":21,"content_description":"Voice search","is_clickable":true}
+{"index":22,"content_description":"Google Lens","is_clickable":true}
+{"index":23,"text":"15:34","content_description":"17:34"}
+{"index":24,"content_description":"Android System notification: Serial console enabled"}
+{"index":25,"content_description":"Wifi signal full.,No internet"}
+{"index":26,"content_description":"Phone signal full."}
+{"index":27,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T19:04:47.394631+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_001/tree/request_0.json",
+  "call": 1
+}
+
+--- 2026-10-07T19:04:54.406922+00:00 | STEP 001 | MODEL REPLY ---
+{"action": "AWAKE", "value": "Contacts", "verify": "The Contacts app should open, displaying the main contact list or a prompt to add a new contact.","target": "Contacts"}
+
+--- 2026-10-07T19:04:54.407454+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.015999999995984,
+  "load_seconds": 0.0248029,
+  "prompt_seconds": 1.291703,
+  "generation_seconds": 3.463497,
+  "output_tokens": 44
+}
+
+--- 2026-10-07T19:04:54.407454+00:00 | STEP 001 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "AWAKE",
+    "value": "Contacts",
+    "verify": "The Contacts app should open, displaying the main contact list or a prompt to add a new contact."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "contacts"
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T19:04:54.408456+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "open_app",
+    "app_name": "contacts"
+  }
+}
+
+--- 2026-10-07T19:05:00.619156+00:00 | STEP 001 | RUN ERROR ---
+{
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 221, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 509, in step\n    raise RuntimeError(\"UI changed during inference; action not executed\")\nRuntimeError: UI changed during inference; action not executed\n",
+  "class": "environment_or_execution_error"
+}
+
+--- 2026-10-07T19:05:02.058215+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261007T190419_342635Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 0,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "five_easy_tasks_v9_wifi_xml",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_five_tasks_v8",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 1,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 221, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\gelab_agent.py\", line 509, in step\n    raise RuntimeError(\"UI changed during inference; action not executed\")\nRuntimeError: UI changed during inference; action not executed\n",
+  "error_class": "environment_or_execution_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 1,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 15.64100000000326
+}

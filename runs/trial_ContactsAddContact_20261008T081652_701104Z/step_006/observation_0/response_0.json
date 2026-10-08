@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Last name\" field is focused and empty. Type \"da Silva\" into this field.\n\ndo(action=\"Type\", text=\"da Silva\")\n\n\ndo(action=\"Type\", text=\"da Silva\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447451,
+  "id": "20261008161730bb82ac04576b45e6",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008161730bb82ac04576b45e6",
+  "usage": {
+    "completion_tokens": 45,
+    "prompt_tokens": 2705,
+    "prompt_tokens_details": {
+      "cached_tokens": 1434
+    },
+    "total_tokens": 2750
+  },
+  "wall_seconds": 1.5779999999940628
+}

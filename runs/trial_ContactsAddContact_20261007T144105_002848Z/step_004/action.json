@@ -1,0 +1,13 @@
+{
+  "native": {
+    "explain": "Click on the 'First name' field to activate the input focus for typing the first name.",
+    "action": "CLICK",
+    "point": "226,390",
+    "{\"element_id\"": "\"First name\"}"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 244,
+    "y": 936
+  }
+}

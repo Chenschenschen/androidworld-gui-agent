@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "finish(message=\"Wi-Fi has been successfully turned on! I can see the Wi-Fi toggle is now enabled (blue and in the ON position), and the device is showing available networks including \"AndroidWifi\" with a full signal. The task is complete - Wi-Fi is now active and ready to connect to networks.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406271,
+  "id": "20261008045109c99038674857460b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008045109c99038674857460b",
+  "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 3499,
+    "prompt_tokens_details": {
+      "cached_tokens": 3478
+    },
+    "total_tokens": 3564
+  },
+  "wall_seconds": 1.3589999999967404
+}

@@ -1,0 +1,15 @@
+{
+  "native": {
+    "allow": "513,547",
+    "note": "A notification permission pop-up is displayed, blocking further action until a choice is made.",
+    "action": "CLICK",
+    "point": "494,548"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 534,
+    "y": 1315
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

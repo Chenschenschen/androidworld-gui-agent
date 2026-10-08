@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\ndo(action=\"Launch\", app=\"clipper\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791446782,
+  "id": "2026100816062272ef72aeb7194f88",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100816062272ef72aeb7194f88",
+  "usage": {
+    "completion_tokens": 13,
+    "prompt_tokens": 2497,
+    "prompt_tokens_details": {
+      "cached_tokens": 2450
+    },
+    "total_tokens": 2510
+  },
+  "wall_seconds": 1.1560000000026776
+}

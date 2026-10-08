@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The first name \"Maya\" and last name \"Martin\" are entered. Next, I need to enter the phone number \"+18126340319\". I should scroll down to reveal the Phone field, then tap it to focus.\ndo(action=\"Swipe\", start=[499,548], end=[499,328])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438905,
+  "id": "20261008135504916428efbacf42cc",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135504916428efbacf42cc",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 2799,
+    "prompt_tokens_details": {
+      "cached_tokens": 1525
+    },
+    "total_tokens": 2870
+  },
+  "wall_seconds": 1.5779999999940628
+}

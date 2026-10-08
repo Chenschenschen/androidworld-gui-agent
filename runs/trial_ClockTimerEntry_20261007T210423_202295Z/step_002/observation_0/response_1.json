@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants me to create a timer with 20 hours, 7 minutes, and 1 seconds. I can see that I'm currently in the Clock app and I need to navigate to the Timer section. Looking at the screenshot, I can see there's a Timer tab at the bottom of the screen. I need to tap on it to access the timer functionality.\n\nLooking at the coordinates, I can see:\n- FrameLayout;click; Timer|Timer;[399,886,599,972]\n\nThis seems to be the Timer tab. Let me tap on it.\ndo(action=\"Tap\", element=[499,918])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407075,
+  "id": "2026100805043443dc0e2b1bda4557",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100805043443dc0e2b1bda4557",
+  "usage": {
+    "completion_tokens": 135,
+    "prompt_tokens": 2104,
+    "prompt_tokens_details": {
+      "cached_tokens": 2076
+    },
+    "total_tokens": 2239
+  },
+  "wall_seconds": 1.889999999999418
+}

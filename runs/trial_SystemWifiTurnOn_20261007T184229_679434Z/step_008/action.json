@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "21 kB",
+    "verify": "The Wifi toggle should be switched from off (grey) to on (green).",
+    "target": "com.google.androidenv.accessibilityforwarder",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 539,
+    "y": 884
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

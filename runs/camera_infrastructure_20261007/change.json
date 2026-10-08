@@ -1,0 +1,16 @@
+{
+  "trial": "trial_CameraTakePhoto_20261007T204109_646710Z",
+  "args": [
+    "-avd",
+    "AndroidWorldAvd",
+    "-no-snapshot",
+    "-grpc",
+    "8554",
+    "-camera-back",
+    "emulated",
+    "-camera-front",
+    "emulated"
+  ],
+  "reason": "Repeated non-increasing Camera3 frame timestamps and loading screen",
+  "change": "Rear camera virtualscene to emulated; no AVD files edited"
+}

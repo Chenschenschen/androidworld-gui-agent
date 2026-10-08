@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn WiFi on. I can see the current screen is the Internet settings page in the Settings app. I can see there's a \"Wi-Fi\" option with a toggle switch that appears to be currently off (the toggle is on the right side and appears dark/disabled). \n\nLooking at the screen, I can see:\n- Internet settings page\n- T-Mobile (Mobile data won't auto-connect)\n- Wi-Fi with a toggle switch that appears to be off\n- AndroidWifi (Saved / No internet access)\n- Network preferences\n- Saved networks\n- Non-carrier data usage\n\nTo turn WiFi on, I need to tap on the Wi-Fi toggle switch. The toggle appears to be located at approximately coordinates [846, 377] based on the layout.\n\nLet me tap on the Wi-Fi toggle to turn it on.\ndo(action=\"Tap\", element=[846,377])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791403796,
+  "id": "2026100804095324ccb0c76f5a4da3",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100804095324ccb0c76f5a4da3",
+  "usage": {
+    "completion_tokens": 192,
+    "prompt_tokens": 1521,
+    "prompt_tokens_details": {
+      "cached_tokens": 291
+    },
+    "total_tokens": 1713
+  },
+  "wall_seconds": 2.452999999994063
+}

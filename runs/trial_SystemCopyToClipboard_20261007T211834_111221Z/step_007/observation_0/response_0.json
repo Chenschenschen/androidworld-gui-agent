@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to copy the text \"alex.jordan@example.net\" to the clipboard. I've typed the text into the Chrome search bar, but now there's a dialog asking to allow Chrome to record audio. This is irrelevant to the task of copying text to the clipboard. I should dismiss this dialog by tapping \"Don't allow\" to get back to the search interface.\ndo(action=\"Tap\", element=[499,647])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407962,
+  "id": "20261008051920dce7a1dee73a44f9",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008051920dce7a1dee73a44f9",
+  "usage": {
+    "completion_tokens": 90,
+    "prompt_tokens": 2927,
+    "prompt_tokens_details": {
+      "cached_tokens": 1629
+    },
+    "total_tokens": 3017
+  },
+  "wall_seconds": 1.7340000000040163
+}

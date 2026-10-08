@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see the camera interface now. There's a shutter button at the bottom of the screen (the circular button with camera icon). I need to tap on it to take a photo. The shutter button appears to be at coordinates around [499,877] based on the tree structure description.\ndo(action=\"Tap\", element=[499,877])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406131,
+  "id": "20261008044849e50853cb771d414b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008044849e50853cb771d414b",
+  "usage": {
+    "completion_tokens": 75,
+    "prompt_tokens": 2416,
+    "prompt_tokens_details": {
+      "cached_tokens": 459
+    },
+    "total_tokens": 2491
+  },
+  "wall_seconds": 1.6880000000019209
+}

@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "finished": false,
+  "action": {
+    "_metadata": "do",
+    "action": "Tap",
+    "element": [
+      499,
+      274
+    ]
+  },
+  "thinking": "I am now in the Settings app, but there is no direct option for clipboard here. To copy text to the clipboard, I need to paste it into an input field first. Since the user just provided the text to copy and no context for where to paste it, I should look for a way to input or paste text. The search bar (\"Search settings\") is a likely candidate for an input field. I will tap on the search bar to focus it and then paste or type the text.",
+  "message": null
+}

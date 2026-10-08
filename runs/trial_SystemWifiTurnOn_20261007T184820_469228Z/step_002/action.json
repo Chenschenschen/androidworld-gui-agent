@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Connected devices",
+    "verify": "The 'Network & internet' settings menu should be visible on the screen.",
+    "target": "Connected devices",
+    "index": "30",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 442,
+    "y": 1140
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

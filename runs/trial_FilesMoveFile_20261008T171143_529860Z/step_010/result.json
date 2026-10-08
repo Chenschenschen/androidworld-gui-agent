@@ -1,0 +1,15 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.020075539981617648,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 5.203000000008615,
+  "selected_gui_control": {
+    "label": "project_medium",
+    "resource_id": "com.google.android.documentsui:id/item_root"
+  }
+}

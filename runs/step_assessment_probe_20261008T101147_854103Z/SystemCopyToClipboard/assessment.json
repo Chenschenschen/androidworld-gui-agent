@@ -1,0 +1,9 @@
+{
+  "summary": "The user wants to copy the text \"john.doe@example.com\" to the clipboard. Looking at the current screen, I can see that the text has been typed in the search bar and there's a \"Copy text\" option visible. I need to tap on the \"Copy text\" button to copy the text to the clipboard. Looking at the tree structure, I can see: - ViewGroup;click long-click;Copy text;[823,106,896,161] This appears to be the copy text button that I need to tap. Let me tap on it.",
+  "kind": "model_assessment",
+  "verifier_feedback": false,
+  "discarded_operation_lines": [
+    "\n\ndo(action=\"Tap\", element=[896,106])"
+  ],
+  "operations_executed": 0
+}

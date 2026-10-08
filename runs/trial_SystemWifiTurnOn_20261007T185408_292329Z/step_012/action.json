@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "Settings screen should appear.",
+    "target": "Network & internet",
+    "index": "24",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 437,
+    "y": 874
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

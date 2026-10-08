@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Move to…\" dialog is open, currently showing the Downloads folder. To select the destination folder \"project_medium\", we need to navigate to the \"sdk_gphone64_x86_64\" storage area and then to the \"project_medium\" folder. The first step is to tap on \"Show roots\" to access the storage locations list.\n\n\ndo(action=\"Tap\", element=[68,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791484034,
+  "id": "2026100902271337bcbb35b948496a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100902271337bcbb35b948496a",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 7558,
+    "prompt_tokens_details": {
+      "cached_tokens": 5566
+    },
+    "total_tokens": 7644
+  },
+  "wall_seconds": 1.8439999999973224
+}

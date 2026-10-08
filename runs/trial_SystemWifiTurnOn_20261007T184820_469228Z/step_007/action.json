@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "Settings screen should appear with various options like Network & Internet, etc.",
+    "target": "sdk_gphone64_x86_64",
+    "index": "28",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 403,
+    "y": 1065
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

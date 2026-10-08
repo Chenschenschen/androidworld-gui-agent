@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:27:51.1123774Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Contacts\", \"verify\": \"The Contacts app should open.\", \"target\": \"\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 2622573300,
+  "load_duration": 17664100,
+  "prompt_eval_count": 1362,
+  "prompt_eval_cached_count": 1320,
+  "prompt_eval_duration": 459351000,
+  "eval_count": 28,
+  "eval_duration": 2133853999,
+  "wall_seconds": 4.671999999998661
+}

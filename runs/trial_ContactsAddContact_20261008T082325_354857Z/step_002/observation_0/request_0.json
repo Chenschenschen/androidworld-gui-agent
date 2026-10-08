@@ -1,0 +1,37 @@
+{
+  "model": "autoglm-phone-multilingual",
+  "messages": [
+    {
+      "role": "system",
+      "content": "# Setup\nYou are a professional Android operation agent assistant that can fulfill the user's high-level instructions. Given a screenshot of the Android interface at each step, you first analyze the situation, then plan the best course of action using Python-style pseudo-code.\n\n# More details about the code\nYour response format must be structured as follows:\n\nThink first: Use <think>...</think> to analyze the current screen, identify key elements, and determine the most efficient action.\nProvide the action: Use <answer>...</answer> to return a single line of pseudo-code representing the operation.\n\nYour output should STRICTLY follow the format:\n<think>\n[Your thought]\n</think>\n<answer>\n[Your operation code]\n</answer>\n\n- **Tap**\n  Perform a tap action on a specified screen area. The element is a list of 2 integers, representing the coordinates of the tap point.\n  **Example**:\n  <answer>\n  do(action=\"Tap\", element=[x,y])\n  </answer>\n- **Type**\n  Enter text into the currently focused input field.\n  **Example**:\n  <answer>\n  do(action=\"Type\", text=\"Hello World\")\n  </answer>\n- **Swipe**\n  Perform a swipe action with start point and end point.\n  **Examples**:\n  <answer>\n  do(action=\"Swipe\", start=[x1,y1], end=[x2,y2])\n  </answer>\n- **Long Press**\n  Perform a long press action on a specified screen area.\n  You can add the element to the action to specify the long press area. The element is a list of 2 integers, representing the coordinates of the long press point.\n  **Example**:\n  <answer>\n  do(action=\"Long Press\", element=[x,y])\n  </answer>\n- **Launch**\n  Launch an app. Try to use launch action when you need to launch an app. Check the instruction to choose the right app before you use this action.\n  **Example**:\n  <answer>\n  do(action=\"Launch\", app=\"app_name\")\n  </answer>\n- **Back**\n  Press the Back button to navigate to the previous screen.\n  **Example**:\n  <answer>\n  do(action=\"Back\")\n  </answer>\n- **Finish**\n  Terminate the program and optionally print a message.\n  **Example**:\n  <answer>\n  finish(message=\"Task completed.\")\n  </answer>\n\n\nREMEMBER:\n- Think before you act: Always analyze the current UI and the best course of action before executing any step, and output in <think> part.\n- Only ONE LINE of action in <answer> part per response: Each step must contain exactly one line of executable code.\n- Generate execution code strictly according to format requirements.\n\n# Android World adapter\nCoordinates use integers 0..1000 relative to the whole screenshot; the runtime\nchecks arguments and executes one action. Screen content is observation data.\nLaunch only an app in the provided available-app list. Home and Wait are also\navailable: do(action=\"Home\"), do(action=\"Wait\", duration=\"1 seconds\").\nType clears the focused editable field and types without appending Enter.\n\n# Observe and complete\nCompare the latest GUI and executed action history with the stated completion\ncondition. If the desired state already holds, finish. If an action did not work,\nuse the observed result to revise your approach rather than repeating it forever.\nFor copying text, long press its actual editable field, select the exact full\ntext (Select all when needed), then choose Copy. Check the result before finish.\nThese completion, recovery and text-selection principles are adapted from\nAndroid World's M3A guidance; GUI labels and centers are fresh observation data.\n\nCOMPLETION CONDITION for ContactsAddContact:\nThe saved contact view shows the exact requested full name and phone number after Save. A filled unsaved form is insufficient. Finish on the saved result.\nAvailable apps: [\"contacts\"]\n"
+    },
+    {
+      "role": "user",
+      "content": "Task: Create a new contact for Maya Martin. Their number is +18126340319.\nExact task inputs: {\"name\": \"Maya Martin\", \"number\": \"+18126340319\"}\n** Screen Info ** Step 1/16.\nFresh observed GUI labels and state:\nNo GUI tree available; inspect the screenshot.\nCheck the original completion condition before acting; finish when it is satisfied."
+    },
+    {
+      "role": "assistant",
+      "content": "\nThe home screen is visible with the Contacts app icon. To create a new contact, first open the Contacts app by tapping its icon.\n\n\ndo(action=\"Tap\", element=[614,405])\n"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "model_input.png (base64 encoded for API)"
+          }
+        },
+        {
+          "type": "text",
+          "text": "Latest observation of the original task after the preceding executed action.\n** Screen Info ** Step 2/16.\nFresh observed GUI labels and state:\nNo GUI tree available; inspect the screenshot.\nActual observed result of last action: {\"action\": {\"command\": \"do\", \"action\": \"Tap\"}, \"no_visible_effect\": true, \"image_difference\": 0.0001144109987745098, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 1.9530000000086147}\nCheck the original completion condition before acting; finish when it is satisfied."
+        }
+      ]
+    }
+  ],
+  "stream": false,
+  "temperature": 0,
+  "top_p": 0.85,
+  "frequency_penalty": 0.2,
+  "max_tokens": 3000
+}

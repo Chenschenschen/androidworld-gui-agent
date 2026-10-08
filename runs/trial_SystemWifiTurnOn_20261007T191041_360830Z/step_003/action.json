@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "109",
+    "verify": "The 'Internet' page should be opened, displaying network connection options.",
+    "point": "109,291"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 118,
+    "y": 698
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

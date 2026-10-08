@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "We have selected the file \"cooking-recipe.md\". The next step is to open the \"More options\" menu to look for the \"Move\" option. The \"More options\" button is at the top right of the screen.\n\n\ndo(action=\"Tap\", element=[941,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474678,
+  "id": "20261008235116d3fa62a06c7e4ace",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008235116d3fa62a06c7e4ace",
+  "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 12037,
+    "prompt_tokens_details": {
+      "cached_tokens": 9620
+    },
+    "total_tokens": 12102
+  },
+  "wall_seconds": 1.9220000000059372
+}

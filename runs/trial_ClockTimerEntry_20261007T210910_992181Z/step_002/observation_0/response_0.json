@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Clock app has been launched and I can see the main clock interface. I need to navigate to the Timer section to create a timer. I can see there's a Timer tab at the bottom of the screen. Let me tap on it to access the timer functionality.\ndo(action=\"Tap\", element=[499,928])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407367,
+  "id": "2026100805092690fbb20956794181",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100805092690fbb20956794181",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 2423,
+    "prompt_tokens_details": {
+      "cached_tokens": 680
+    },
+    "total_tokens": 2491
+  },
+  "wall_seconds": 1.562000000005355
+}

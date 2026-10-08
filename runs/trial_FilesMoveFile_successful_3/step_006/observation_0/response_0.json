@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The file \"cooking-recipe.md\" is now selected, and the top bar shows options such as Share and Delete. To move the file, we should tap on \"More options\" (three dots) to access additional file actions, which typically include the move or cut option in the Files app.\n\n\ndo(action=\"Tap\", element=[941,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791484003,
+  "id": "2026100902264117ef827aa5fa4b3d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100902264117ef827aa5fa4b3d",
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 6459,
+    "prompt_tokens_details": {
+      "cached_tokens": 4042
+    },
+    "total_tokens": 6533
+  },
+  "wall_seconds": 1.7660000000032596
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app is open and the shutter button is visible at the center of the screen (bounds [396,464,601,595]). To take a photo, I should tap the shutter button.\n\ndo(action=\"Tap\", element=[499,501])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791486424,
+  "id": "202610090307028558c95bad8f470e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610090307028558c95bad8f470e",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 2731,
+    "prompt_tokens_details": {
+      "cached_tokens": 1608
+    },
+    "total_tokens": 2791
+  },
+  "wall_seconds": 1.4689999999973224
+}

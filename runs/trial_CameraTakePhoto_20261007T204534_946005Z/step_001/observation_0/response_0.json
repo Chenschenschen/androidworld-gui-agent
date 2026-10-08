@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to take one photo. I can see the camera app icon on the home screen at coordinates [52,341,246,448]. I need to tap on it to open the camera app, then take a photo. Let me start by tapping the camera icon to open the camera app.\ndo(action=\"Tap\", element=[149,409])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405958,
+  "id": "2026100804455658bdd9ac60414757",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100804455658bdd9ac60414757",
+  "usage": {
+    "completion_tokens": 81,
+    "prompt_tokens": 1625,
+    "prompt_tokens_details": {
+      "cached_tokens": 511
+    },
+    "total_tokens": 1706
+  },
+  "wall_seconds": 2.0
+}

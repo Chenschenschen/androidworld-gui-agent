@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The text \"john.doe@example.com\" is already in the editor. To copy it, I need to select it first. I will long press on the EditText area to bring up the selection menu.\n\n\ndo(action=\"Long Press\", element=[540,1245])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791463283,
+  "id": "202610082041216fd7d89552cc414d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082041216fd7d89552cc414d",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 3807,
+    "prompt_tokens_details": {
+      "cached_tokens": 1878
+    },
+    "total_tokens": 3867
+  },
+  "wall_seconds": 1.687999999994645
+}

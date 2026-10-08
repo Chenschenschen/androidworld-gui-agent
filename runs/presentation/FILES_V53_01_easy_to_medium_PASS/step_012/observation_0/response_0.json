@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The move operation is complete, and the \"project_easy\" folder is now empty, confirming the file has been moved to \"project_medium\". The task is complete and should be finished now.\n\n\ndo(action=\"Tap\", element=[68,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474084,
+  "id": "20261008234122b1d98f499255449e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008234122b1d98f499255449e",
+  "usage": {
+    "completion_tokens": 50,
+    "prompt_tokens": 9847,
+    "prompt_tokens_details": {
+      "cached_tokens": 7739
+    },
+    "total_tokens": 9897
+  },
+  "wall_seconds": 2.0160000000032596
+}

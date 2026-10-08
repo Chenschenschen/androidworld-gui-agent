@@ -1,0 +1,21 @@
+{
+  "kind": "retrospective_analysis",
+  "official_success": true,
+  "gui_actions": 10,
+  "model_calls": 11,
+  "observed_issues": {
+    "grounding": [
+      "step_002: battery index selected while describing create-contact",
+      "step_003: Allow notification button selected while describing name input"
+    ],
+    "model_claims": "verify often describes future effects; use observations and official verifier"
+  },
+  "corrections": [
+    "semantic action/result context",
+    "TYPE Enter description",
+    "conditional contact procedure",
+    "missing official snapshot repair"
+  ],
+  "comparison_limit": "Several corrections and onboarding state changed; guide-only benefit not measured",
+  "next": "Understand one complete step before expansion; later controlled ablation and fresh instances"
+}

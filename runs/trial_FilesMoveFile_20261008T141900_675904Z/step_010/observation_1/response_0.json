@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The destination folder \"project_easy\" is visible at [509,539,939,592]. Tapping it will select it as the move destination, and the \"MOVE\" button will become active for confirmation.\n\n\ndo(action=\"Tap\", element=[725,566])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469288,
+  "id": "2026100822212787567b3fabd14bf0",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100822212787567b3fabd14bf0",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 8257,
+    "prompt_tokens_details": {
+      "cached_tokens": 7698
+    },
+    "total_tokens": 8317
+  },
+  "wall_seconds": 1.4060000000026776
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "好的，文本已经输入到搜索框中了，我可以看到\"Discount code: SAVE20\"显示在搜索框中。现在我需要长按这个文本，选择全部，然后点击复制。首先，我需要长按搜索框中的文本。搜索框的位置大约在(370, 106)左右。\ndo(action=\"Long Press\", element=[370,106])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791439035,
+  "id": "20261008135714504c85303e544f8b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135714504c85303e544f8b",
+  "usage": {
+    "completion_tokens": 76,
+    "prompt_tokens": 3005,
+    "prompt_tokens_details": {
+      "cached_tokens": 1400
+    },
+    "total_tokens": 3081
+  },
+  "wall_seconds": 1.7179999999934807
+}

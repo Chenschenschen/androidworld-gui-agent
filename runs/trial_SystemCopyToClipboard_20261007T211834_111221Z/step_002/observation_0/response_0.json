@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"alex.jordan@example.net\" to the clipboard. The Chrome app is now open, and I can see the search bar at the top labeled \"Search or type web address.\" To proceed, I need to tap on the search bar to activate it and then type the required text. The search bar is located at [38,300,960,353].\ndo(action=\"Tap\", element=[38,300,960,353])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407929,
+  "id": "202610080518470c9da45062cb478f",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080518470c9da45062cb478f",
+  "usage": {
+    "completion_tokens": 99,
+    "prompt_tokens": 1852,
+    "prompt_tokens_details": {
+      "cached_tokens": 567
+    },
+    "total_tokens": 1951
+  },
+  "wall_seconds": 1.7660000000032596
+}

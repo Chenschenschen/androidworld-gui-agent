@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:51:07.0514834Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Cast\", \"verify\": \"Cast button should now be selected.\", \"target\": \"Navigate up\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3330954600,
+  "load_duration": 16851900,
+  "prompt_eval_count": 915,
+  "prompt_eval_cached_count": 374,
+  "prompt_eval_duration": 786192000,
+  "eval_count": 31,
+  "eval_duration": 2357432000,
+  "wall_seconds": 5.39100000000326
+}

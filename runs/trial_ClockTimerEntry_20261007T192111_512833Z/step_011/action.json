@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "8",
+    "verify": "The minutes field should be set to 1.",
+    "target": "10 minutes",
+    "index": "9",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 767,
+    "y": 1223
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    "CameraTakePhoto"
+  ],
+  "task_seeds": [
+    43
+  ],
+  "source_hashes": {
+    "run_task.py": "a5dd34eb7156283b27813443fff46a843c9fe5485b44b9cfeba475208c5be8e7",
+    "autoglm_agent.py": "851e047075ab06eab1348cbb7a95ecaaa0874a452476ee24be71b2e2980b2ad7",
+    "instructions/autoglm.md": "e8d3e81dff9403cc65622a74232ef30391792cf4904d6d7346de17e0862bf268",
+    "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+    "android_compat.py": "39d6c062518b6092bcd801d36fba1cf10e7642bc0f91ed7975d94dcc07935f20"
+  },
+  "purpose": "Three-case learning evaluation; failures are not discarded."
+}

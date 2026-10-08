@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. I have tapped the search bar, and now the keyboard is visible. The search bar is focused, so I can type the text directly. I need to type the exact text \"john.doe@example.com\" into the search bar.\ndo(action=\"Type\", text=\"john.doe@example.com\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442978,
+  "id": "20261008150257f62b7a489cd7457a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008150257f62b7a489cd7457a",
+  "usage": {
+    "completion_tokens": 79,
+    "prompt_tokens": 2958,
+    "prompt_tokens_details": {
+      "cached_tokens": 1180
+    },
+    "total_tokens": 3037
+  },
+  "wall_seconds": 1.7339999999967404
+}

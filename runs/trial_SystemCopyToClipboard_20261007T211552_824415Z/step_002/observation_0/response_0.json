@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Clipper\" app has launched and is showing a service start confirmation screen. The app is ready for clipboard operations. To proceed with copying the clipboard content (\"Discount code: SAVE20\") to the clipboard, I need to access the clipboard content. However, the app's interface is not yet fully loaded for direct clipboard interaction, and no clipboard content is visible on this screen. I should wait for the app to fully load or check if there is a way to access the clipboard directly from the app. Since the app is still starting, I'll wait a moment for it to fully load before proceeding.\ndo(action=\"Wait\", duration=\"1 seconds\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407804,
+  "id": "20261008051642651eec6d94a04c3f",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008051642651eec6d94a04c3f",
+  "usage": {
+    "completion_tokens": 133,
+    "prompt_tokens": 1860,
+    "prompt_tokens_details": {
+      "cached_tokens": 567
+    },
+    "total_tokens": 1993
+  },
+  "wall_seconds": 2.047000000005937
+}

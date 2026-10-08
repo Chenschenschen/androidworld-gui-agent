@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the Chrome home page, and there is no direct clipboard interface visible. To access clipboard features, I should open the \"More options\" menu in the top right corner, as it likely contains the clipboard or text editing options. I will tap the \"More options\" button at [901, 62, 999, 114].\n\n\ndo(action=\"Tap\", element=[940,106])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791458551,
+  "id": "20261008192229834b032535a24e4b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008192229834b032535a24e4b",
+  "usage": {
+    "completion_tokens": 107,
+    "prompt_tokens": 3372,
+    "prompt_tokens_details": {
+      "cached_tokens": 1906
+    },
+    "total_tokens": 3479
+  },
+  "wall_seconds": 1.985000000000582
+}

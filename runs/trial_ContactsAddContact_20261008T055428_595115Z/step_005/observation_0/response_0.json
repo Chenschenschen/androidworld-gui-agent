@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"First name\" field now contains \"Maya\". Next, I need to enter the last name \"Martin\" in the \"Last name\" field. I'll tap the \"Last name\" field to focus it.\ndo(action=\"Tap\", element=[494,471])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438897,
+  "id": "20261008135455ace8d8d469304bf5",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135455ace8d8d469304bf5",
+  "usage": {
+    "completion_tokens": 59,
+    "prompt_tokens": 2433,
+    "prompt_tokens_details": {
+      "cached_tokens": 1156
+    },
+    "total_tokens": 2492
+  },
+  "wall_seconds": 1.514999999999418
+}

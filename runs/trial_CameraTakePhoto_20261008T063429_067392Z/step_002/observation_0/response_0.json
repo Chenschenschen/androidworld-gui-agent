@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app is loading, showing the camera icon and no viewfinder yet. The shutter button is not yet available. I should wait for the camera to fully load before proceeding to take a photo.\ndo(action=\"Wait\", duration=\"1 seconds\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441293,
+  "id": "202610081434523875b6dc2d284737",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081434523875b6dc2d284737",
+  "usage": {
+    "completion_tokens": 51,
+    "prompt_tokens": 1868,
+    "prompt_tokens_details": {
+      "cached_tokens": 645
+    },
+    "total_tokens": 1919
+  },
+  "wall_seconds": 1.4219999999913853
+}

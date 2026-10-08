@@ -1,0 +1,923 @@
+
+--- 2026-10-08T08:08:05.841140+00:00 | RUN | RUN START ---
+{
+  "task": "SystemCopyToClipboard",
+  "config": {
+    "version": "autoglm_api_v26_gui_app_catalog",
+    "provider": "zai",
+    "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+    "model": "autoglm-phone-multilingual",
+    "observation": "screenshot",
+    "tree_backend": "none",
+    "supplemental_tree_packages": [
+      "com.android.settings",
+      "com.google.android.deskclock",
+      "com.android.chrome"
+    ],
+    "action_format": "native_pseudocall",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 0.85,
+      "frequency_penalty": 0.2,
+      "max_tokens": 3000
+    },
+    "max_steps": 12,
+    "task_step_budgets": {
+      "ContactsAddContact": 16
+    },
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "max_reobservations": 1,
+    "freshness_global_difference": 0.08,
+    "freshness_target_difference": 0.08,
+    "no_effect_difference": 0.001,
+    "note": "v23 follows pinned Open-AutoGLM English prompt/3000-token cap and sourced Android World completion/recovery/text-selection guidance. Long task recipes and unsupported Clock Type exception withdrawn. Short visible completion goals, original task once, ordered native history, latest image and factual GUI status. Chrome paired field centers repair observed wrong suggestion grounding; Contacts16-step budget follows real Saveat12. Scheduler always stops first failed clean trial for logged diagnosis before another run. Sources and slide mapping: docs/COURSE_AND_UPSTREAM_REVIEW.md.",
+    "visual_stability_checks": 3,
+    "visual_stability_pause": 0.5,
+    "visual_stability_difference": 0.01,
+    "api_base_url": "https://api.z.ai/api/paas/v4",
+    "task_seed": 43,
+    "task_name": "SystemCopyToClipboard"
+  }
+}
+
+--- 2026-10-08T08:08:05.944386+00:00 | RUN | OBSERVATION INFRASTRUCTURE ---
+{
+  "backend": "none",
+  "accessibility_services_before": "null",
+  "accessibility_services_after": "null",
+  "tree_used_for_model": false,
+  "task_state_modified": false
+}
+
+--- 2026-10-08T08:08:06.535949+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Copy the following text to the clipboard: john.doe@example.com",
+  "parameters": {
+    "clipboard_content": "john.doe@example.com"
+  },
+  "task_seed": 43,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-08T08:08:12.716603+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-08T08:08:15.387195+00:00 | STEP 001 | VISUAL SETTLING ---
+{
+  "difference": 0.0015380859375,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:08:15.466112+00:00 | STEP 001 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 1,
+  "used": false,
+  "activity": "com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity"
+}
+
+--- 2026-10-08T08:08:15.859599+00:00 | STEP 001 | OBSERVATION ---
+{
+  "observation_id": "step_001\\observation_0",
+  "screenshot": "step_001\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:08:15.875814+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "call": 1,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_001\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:08:18.153694+00:00 | STEP 001 | MODEL REPLY ---
+
+The task is to copy the text "john.doe@example.com" to the clipboard. The current screen is the home screen, and there is no clipboard interface visible. To proceed, I should first launch the app that will allow me to interact with the clipboard, typically "Settings" for clipboard management or any app with a clipboard feature. However, since the exact app is not specified, I'll start by launching the "Settings" app, as it commonly provides clipboard options.
+
+
+do(action="Launch", app="Settings")
+
+
+--- 2026-10-08T08:08:18.154695+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "wall_seconds": 2.264999999999418,
+  "usage": {
+    "completion_tokens": 112,
+    "prompt_tokens": 1858,
+    "prompt_tokens_details": {
+      "cached_tokens": 812
+    },
+    "total_tokens": 1970
+  }
+}
+
+--- 2026-10-08T08:08:18.161769+00:00 | STEP 001 | VALIDATION ERROR ---
+{
+  "error": "Launch app 'Settings' is unavailable; allowed app values: [\"chrome\"]",
+  "executed": false
+}
+
+--- 2026-10-08T08:08:18.163773+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "call": 2,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_001\\observation_0\\request_1.json"
+}
+
+--- 2026-10-08T08:08:19.245685+00:00 | STEP 001 | MODEL REPLY ---
+
+do(action="Launch", app="Chrome")
+
+
+--- 2026-10-08T08:08:19.247358+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "wall_seconds": 1.0779999999940628,
+  "usage": {
+    "completion_tokens": 12,
+    "prompt_tokens": 1994,
+    "prompt_tokens_details": {
+      "cached_tokens": 1857
+    },
+    "total_tokens": 2006
+  }
+}
+
+--- 2026-10-08T08:08:19.248366+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action_type": "open_app",
+  "app_name": "chrome"
+}
+
+--- 2026-10-08T08:08:24.495415+00:00 | STEP 001 | VISUAL SETTLING ---
+{
+  "difference": 0.0038330078125,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:08:27.735850+00:00 | STEP 001 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 2,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+  "xml": "ui_capture_002.xml",
+  "image_difference": 0.09209702435661765
+}
+
+--- 2026-10-08T08:08:27.954832+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Launch",
+    "app": "Chrome"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.5987524892769608,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 8.702999999994063
+}
+
+--- 2026-10-08T08:08:28.663496+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:08:30.947058+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 3,
+  "used": true,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+  "xml": "ui_capture_003.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-08T08:08:31.039492+00:00 | STEP 002 | OBSERVATION ---
+{
+  "observation_id": "step_002\\observation_0",
+  "screenshot": "step_002\\observation_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-08T08:08:31.050615+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "call": 3,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_002\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:08:32.718445+00:00 | STEP 002 | MODEL REPLY ---
+
+do(action="Tap", element=[499,326])
+
+
+--- 2026-10-08T08:08:32.720028+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "wall_seconds": 1.6720000000059372,
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 2339,
+    "prompt_tokens_details": {
+      "cached_tokens": 816
+    },
+    "total_tokens": 2355
+  }
+}
+
+--- 2026-10-08T08:08:33.406753+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:08:35.721509+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 4,
+  "used": true,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+  "xml": "ui_capture_004.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-08T08:08:35.816821+00:00 | STEP 002 | OBSERVATION ---
+{
+  "observation_id": "step_002\\freshness_0",
+  "screenshot": "step_002\\freshness_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-08T08:08:35.964680+00:00 | STEP 002 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": {
+    "text": "Search or type web address",
+    "content_description": "",
+    "class_name": "android.widget.EditText",
+    "bbox": {
+      "x_min": 78,
+      "x_max": 743,
+      "y_min": 721,
+      "y_max": 847
+    },
+    "bbox_pixels": {
+      "x_min": 78,
+      "x_max": 743,
+      "y_min": 721,
+      "y_max": 847
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": false,
+    "is_long_clickable": true,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.chrome",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "com.android.chrome:id/search_box_text",
+    "metadata": null
+  },
+  "selected_target_fresh": {
+    "text": "Search or type web address",
+    "content_description": "",
+    "class_name": "android.widget.EditText",
+    "bbox": {
+      "x_min": 78,
+      "x_max": 743,
+      "y_min": 721,
+      "y_max": 847
+    },
+    "bbox_pixels": {
+      "x_min": 78,
+      "x_max": 743,
+      "y_min": 721,
+      "y_max": 847
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": false,
+    "is_long_clickable": true,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.chrome",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "com.android.chrome:id/search_box_text",
+    "metadata": null
+  }
+}
+
+--- 2026-10-08T08:08:35.965681+00:00 | STEP 002 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 538,
+  "y": 782
+}
+
+--- 2026-10-08T08:08:37.652348+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.0002020143995098039,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:08:40.200218+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 5,
+  "used": false,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+  "xml": "ui_capture_005.xml",
+  "image_difference": 0.022527477787990195
+}
+
+--- 2026-10-08T08:08:40.438897+00:00 | STEP 002 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.07089939491421568,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 4.48399999999674
+}
+
+--- 2026-10-08T08:08:41.131171+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 0.00010100719975490195,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:08:43.437913+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 6,
+  "used": true,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+  "xml": "ui_capture_006.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-08T08:08:43.534269+00:00 | STEP 003 | OBSERVATION ---
+{
+  "observation_id": "step_003\\observation_0",
+  "screenshot": "step_003\\observation_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-08T08:08:43.544967+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "call": 4,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_003\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:08:44.873939+00:00 | STEP 003 | MODEL REPLY ---
+
+do(action="Type", text="john.doe@example.com")
+
+
+--- 2026-10-08T08:08:44.873939+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "wall_seconds": 1.3280000000086147,
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 2789,
+    "prompt_tokens_details": {
+      "cached_tokens": 901
+    },
+    "total_tokens": 2805
+  }
+}
+
+--- 2026-10-08T08:08:44.876447+00:00 | STEP 003 | VALIDATION ERROR ---
+{
+  "error": "No focused editable field; tap the real field first",
+  "executed": false
+}
+
+--- 2026-10-08T08:08:44.877452+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "call": 5,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_003\\observation_0\\request_1.json"
+}
+
+--- 2026-10-08T08:08:45.938169+00:00 | STEP 003 | MODEL REPLY ---
+
+do(action="Tap", element=[427,106])
+
+
+--- 2026-10-08T08:08:45.939171+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "wall_seconds": 1.0619999999908032,
+  "usage": {
+    "completion_tokens": 15,
+    "prompt_tokens": 2829,
+    "prompt_tokens_details": {
+      "cached_tokens": 2788
+    },
+    "total_tokens": 2844
+  }
+}
+
+--- 2026-10-08T08:08:46.642350+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 0.00010100719975490195,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:08:48.908566+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 7,
+  "used": true,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+  "xml": "ui_capture_007.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-08T08:08:49.014341+00:00 | STEP 003 | OBSERVATION ---
+{
+  "observation_id": "step_003\\freshness_0",
+  "screenshot": "step_003\\freshness_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-08T08:08:49.166308+00:00 | STEP 003 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.00010100719975490195,
+  "target_image_difference": 0.0,
+  "selected_target_before": {
+    "text": "Search or type web address",
+    "content_description": "",
+    "class_name": "android.widget.EditText",
+    "bbox": {
+      "x_min": 148,
+      "x_max": 775,
+      "y_min": 191,
+      "y_max": 322
+    },
+    "bbox_pixels": {
+      "x_min": 148,
+      "x_max": 775,
+      "y_min": 191,
+      "y_max": 322
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": true,
+    "is_focusable": true,
+    "is_long_clickable": true,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.chrome",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "com.android.chrome:id/url_bar",
+    "metadata": null
+  },
+  "selected_target_fresh": {
+    "text": "Search or type web address",
+    "content_description": "",
+    "class_name": "android.widget.EditText",
+    "bbox": {
+      "x_min": 148,
+      "x_max": 775,
+      "y_min": 191,
+      "y_max": 322
+    },
+    "bbox_pixels": {
+      "x_min": 148,
+      "x_max": 775,
+      "y_min": 191,
+      "y_max": 322
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": true,
+    "is_focusable": true,
+    "is_long_clickable": true,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.chrome",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "com.android.chrome:id/url_bar",
+    "metadata": null
+  }
+}
+
+--- 2026-10-08T08:08:49.167353+00:00 | STEP 003 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 461,
+  "y": 254
+}
+
+--- 2026-10-08T08:08:50.034916+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 2.3935355392156862e-06,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:08:52.353986+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 8,
+  "used": true,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+  "xml": "ui_capture_008.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-08T08:08:52.589667+00:00 | STEP 003 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": true,
+  "image_difference": 2.8722426470588235e-06,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 3.4219999999913853
+}
+
+--- 2026-10-08T08:08:53.283007+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.00010100719975490195,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:08:55.625468+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 9,
+  "used": true,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+  "xml": "ui_capture_009.xml",
+  "image_difference": 0.00010100719975490195
+}
+
+--- 2026-10-08T08:08:55.712244+00:00 | STEP 004 | OBSERVATION ---
+{
+  "observation_id": "step_004\\observation_0",
+  "screenshot": "step_004\\observation_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-08T08:08:55.722488+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "call": 6,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_004\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:08:57.230533+00:00 | STEP 004 | MODEL REPLY ---
+ 
+I'll type the required email address into the focused search bar to proceed with the task.
+
+
+do(action="Type", text="john.doe@example.com")
+
+
+--- 2026-10-08T08:08:57.231534+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "wall_seconds": 1.5,
+  "usage": {
+    "completion_tokens": 37,
+    "prompt_tokens": 3244,
+    "prompt_tokens_details": {
+      "cached_tokens": 1386
+    },
+    "total_tokens": 3281
+  }
+}
+
+--- 2026-10-08T08:08:57.238248+00:00 | STEP 004 | VALIDATION ERROR ---
+{
+  "error": "No focused editable field; tap the real field first",
+  "executed": false
+}
+
+--- 2026-10-08T08:08:57.239264+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "call": 7,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_004\\observation_0\\request_1.json"
+}
+
+--- 2026-10-08T08:08:58.271175+00:00 | STEP 004 | MODEL REPLY ---
+
+do(action="Tap", element=[427,106])
+
+
+--- 2026-10-08T08:08:58.271175+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "wall_seconds": 1.0310000000026776,
+  "usage": {
+    "completion_tokens": 15,
+    "prompt_tokens": 3302,
+    "prompt_tokens_details": {
+      "cached_tokens": 3243
+    },
+    "total_tokens": 3317
+  }
+}
+
+--- 2026-10-08T08:08:58.986279+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.00010100719975490195,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:09:01.342542+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 10,
+  "used": true,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+  "xml": "ui_capture_010.xml",
+  "image_difference": 0.00010100719975490195
+}
+
+--- 2026-10-08T08:09:01.448461+00:00 | STEP 004 | OBSERVATION ---
+{
+  "observation_id": "step_004\\freshness_0",
+  "screenshot": "step_004\\freshness_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-08T08:09:01.613046+00:00 | STEP 004 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.00010100719975490195,
+  "target_image_difference": 0.0,
+  "selected_target_before": {
+    "text": "Search or type web address",
+    "content_description": "",
+    "class_name": "android.widget.EditText",
+    "bbox": {
+      "x_min": 148,
+      "x_max": 775,
+      "y_min": 191,
+      "y_max": 322
+    },
+    "bbox_pixels": {
+      "x_min": 148,
+      "x_max": 775,
+      "y_min": 191,
+      "y_max": 322
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": true,
+    "is_focusable": true,
+    "is_long_clickable": true,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.chrome",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "com.android.chrome:id/url_bar",
+    "metadata": null
+  },
+  "selected_target_fresh": {
+    "text": "Search or type web address",
+    "content_description": "",
+    "class_name": "android.widget.EditText",
+    "bbox": {
+      "x_min": 148,
+      "x_max": 775,
+      "y_min": 191,
+      "y_max": 322
+    },
+    "bbox_pixels": {
+      "x_min": 148,
+      "x_max": 775,
+      "y_min": 191,
+      "y_max": 322
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": true,
+    "is_focusable": true,
+    "is_long_clickable": true,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.chrome",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "com.android.chrome:id/url_bar",
+    "metadata": null
+  }
+}
+
+--- 2026-10-08T08:09:01.614051+00:00 | STEP 004 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 461,
+  "y": 254
+}
+
+--- 2026-10-08T08:09:02.468853+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.00010100719975490195,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:09:04.767758+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 11,
+  "used": true,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+  "xml": "ui_capture_011.xml",
+  "image_difference": 0.00010100719975490195
+}
+
+--- 2026-10-08T08:09:05.002603+00:00 | STEP 004 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": true,
+  "image_difference": 0.0,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 3.3910000000032596
+}
+
+--- 2026-10-08T08:09:05.699799+00:00 | STEP 005 | VISUAL SETTLING ---
+{
+  "difference": 0.00010100719975490195,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:09:07.989168+00:00 | STEP 005 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 12,
+  "used": true,
+  "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+  "xml": "ui_capture_012.xml",
+  "image_difference": 0.0
+}
+
+--- 2026-10-08T08:09:08.091769+00:00 | STEP 005 | OBSERVATION ---
+{
+  "observation_id": "step_005\\observation_0",
+  "screenshot": "step_005\\observation_0\\screen.png",
+  "tree_used_for_model": true
+}
+
+--- 2026-10-08T08:09:08.105427+00:00 | STEP 005 | MODEL REQUEST ---
+{
+  "call": 8,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_005\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:09:09.444748+00:00 | STEP 005 | MODEL REPLY ---
+
+
+--- 2026-10-08T08:09:09.444748+00:00 | STEP 005 | MODEL TIMING ---
+{
+  "wall_seconds": 1.3429999999934807,
+  "usage": {
+    "completion_tokens": 1,
+    "prompt_tokens": 3686,
+    "prompt_tokens_details": {
+      "cached_tokens": 1835
+    },
+    "total_tokens": 3687
+  }
+}
+
+--- 2026-10-08T08:09:09.451780+00:00 | STEP 005 | VALIDATION ERROR ---
+{
+  "error": "Expected exactly one do(...) or finish(...) action",
+  "executed": false
+}
+
+--- 2026-10-08T08:09:09.452783+00:00 | STEP 005 | MODEL REQUEST ---
+{
+  "call": 9,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_005\\observation_0\\request_1.json"
+}
+
+--- 2026-10-08T08:09:10.559701+00:00 | STEP 005 | MODEL REPLY ---
+
+do(action="Type", text="john.doe@example.com")
+
+
+--- 2026-10-08T08:09:10.561346+00:00 | STEP 005 | MODEL TIMING ---
+{
+  "wall_seconds": 1.0939999999973224,
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 3712,
+    "prompt_tokens_details": {
+      "cached_tokens": 3686
+    },
+    "total_tokens": 3728
+  }
+}
+
+--- 2026-10-08T08:09:10.562350+00:00 | STEP 005 | VALIDATION ERROR ---
+{
+  "error": "No focused editable field; tap the real field first",
+  "executed": false
+}
+
+--- 2026-10-08T08:09:10.563863+00:00 | STEP 005 | RUN ERROR ---
+{
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 334, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 449, in step\n    fields, action = self.ask_action(state, observed, goal, step)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 424, in ask_action\n    action = convert_action(fields, state, self.config[\"allowed_apps\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 138, in convert_action\n    raise ValueError(\"No focused editable field; tap the real field first\")\nValueError: No focused editable field; tap the real field first\n",
+  "class": "validation_error"
+}
+
+--- 2026-10-08T08:09:12.862632+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "SystemCopyToClipboard",
+  "run_id": "trial_SystemCopyToClipboard_20261008T080805_828247Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 4,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v26_gui_app_catalog",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 5,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 334, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 449, in step\n    fields, action = self.ask_action(state, observed, goal, step)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 424, in ask_action\n    action = convert_action(fields, state, self.config[\"allowed_apps\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 138, in convert_action\n    raise ValueError(\"No focused editable field; tap the real field first\")\nValueError: No focused editable field; tap the real field first\n",
+  "error_class": "validation_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 9,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "clean_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 67.01499999999942,
+  "agent_phase_seconds": 59.90600000000268
+}

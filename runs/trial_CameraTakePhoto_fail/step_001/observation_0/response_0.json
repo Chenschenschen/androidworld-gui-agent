@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe task is to take one photo. The Camera app icon is visible on the home screen at [52,341,246,448]. The most efficient next step is to launch the Camera app.\n\n\ndo(action=\"Launch\", app=\"camera\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791487536,
+  "id": "2026100903253583450ebae8f0441c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100903253583450ebae8f0441c",
+  "usage": {
+    "completion_tokens": 59,
+    "prompt_tokens": 2502,
+    "prompt_tokens_details": {
+      "cached_tokens": 1471
+    },
+    "total_tokens": 2561
+  },
+  "wall_seconds": 1.610000000000582
+}

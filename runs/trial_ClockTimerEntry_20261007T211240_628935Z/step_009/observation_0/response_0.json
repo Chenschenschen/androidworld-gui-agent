@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows \"13h 33m 33s\". The next digit to input is \"4\" for the seconds, so I should tap the \"4\" button on the keypad to complete the desired timer value.\ndo(action=\"Tap\", element=[245,454])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407654,
+  "id": "202610080514131563a3a83b524073",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080514131563a3a83b524073",
+  "usage": {
+    "completion_tokens": 59,
+    "prompt_tokens": 5637,
+    "prompt_tokens_details": {
+      "cached_tokens": 3802
+    },
+    "total_tokens": 5696
+  },
+  "wall_seconds": 1.6090000000040163
+}

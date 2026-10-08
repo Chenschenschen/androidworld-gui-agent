@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the home screen, and there is no clipboard interface visible. To proceed, I should first launch the \"Settings\" app, as clipboard operations are typically found there.\n\n\ndo(action=\"Launch\", app=\"Settings\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791446278,
+  "id": "20261008155756615c49d553bf410d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008155756615c49d553bf410d",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 1861,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 1932
+  },
+  "wall_seconds": 2.0159999999887077
+}

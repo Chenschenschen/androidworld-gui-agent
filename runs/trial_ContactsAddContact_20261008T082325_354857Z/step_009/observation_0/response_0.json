@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The phone field is focused and the keyboard is visible. Enter the phone number \"+18126340319\" to fill the phone field.\n\n\ndo(action=\"Type\", text=\"+18126340319\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447858,
+  "id": "202610081624161eea2ebb9294435c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081624161eea2ebb9294435c",
+  "usage": {
+    "completion_tokens": 48,
+    "prompt_tokens": 3257,
+    "prompt_tokens_details": {
+      "cached_tokens": 1976
+    },
+    "total_tokens": 3305
+  },
+  "wall_seconds": 1.7660000000032596
+}

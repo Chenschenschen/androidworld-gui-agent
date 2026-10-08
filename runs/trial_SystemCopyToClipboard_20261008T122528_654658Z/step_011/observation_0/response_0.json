@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The dialog for creating a new file is open, and the name field is focused with \"my_note\" as the default. To create a new file for entering the text, I should confirm by tapping the \"OK\" button at [775,603,930,663].\n\n\ndo(action=\"Tap\", element=[853,642])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791462507,
+  "id": "2026100820282581b2680442bd464c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100820282581b2680442bd464c",
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 8530,
+    "prompt_tokens_details": {
+      "cached_tokens": 6358
+    },
+    "total_tokens": 8604
+  },
+  "wall_seconds": 2.2969999999913853
+}

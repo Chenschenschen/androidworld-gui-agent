@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T19:30:41.784669Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"TYPE\", \"value\": \"+10433218196\", \"verify\": \"The Phone field should contain the text '+10433218196'.\", \"target\": \"Phone\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5479603600,
+  "load_duration": 17402800,
+  "prompt_eval_count": 2378,
+  "prompt_eval_cached_count": 2317,
+  "prompt_eval_duration": 562354000,
+  "eval_count": 54,
+  "eval_duration": 4881109000,
+  "wall_seconds": 7.515999999995984
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\ndo(action=\"Launch\", app=\"app_name\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791454166,
+  "id": "202610081809252c403fde5b484c86",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081809252c403fde5b484c86",
+  "usage": {
+    "completion_tokens": 13,
+    "prompt_tokens": 2008,
+    "prompt_tokens_details": {
+      "cached_tokens": 1857
+    },
+    "total_tokens": 2021
+  },
+  "wall_seconds": 1.0939999999973224
+}

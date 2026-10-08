@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The message \"I think, therefore I am.\" is typed in the input field. To send it, I should tap the \"SMS OK\" send button on the right side of the input field (bounds [872,575,988,627]).\n\n\ndo(action=\"Tap\", element=[936,605])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464912,
+  "id": "20261008210830edd623c1e3f940f1",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008210830edd623c1e3f940f1",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 5636,
+    "prompt_tokens_details": {
+      "cached_tokens": 3890
+    },
+    "total_tokens": 5705
+  },
+  "wall_seconds": 2.2189999999973224
+}

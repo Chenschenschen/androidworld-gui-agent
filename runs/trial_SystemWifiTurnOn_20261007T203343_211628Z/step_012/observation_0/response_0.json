@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe user wants to turn WiFi on. Looking at the current screenshot, I can see we're in the Settings app, specifically in the Internet section. I can see there's a Wi-Fi toggle switch that appears to be currently OFF (the switch looks grayed out). \n\nThe task is to turn WiFi on, and I can see the Wi-Fi toggle switch in the interface. I need to tap on it to turn it on.\n\nLooking at the coordinates, the Wi-Fi toggle switch appears to be at approximately [583, 366, 679, 387] based on the layout. Let me tap on that to turn WiFi on.\ndo(action=\"Tap\", element=[679,366])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405379,
+  "id": "2026100804361758355a555d674e46",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100804361758355a555d674e46",
+  "usage": {
+    "completion_tokens": 152,
+    "prompt_tokens": 2781,
+    "prompt_tokens_details": {
+      "cached_tokens": 554
+    },
+    "total_tokens": 2933
+  },
+  "wall_seconds": 2.3430000000007567
+}

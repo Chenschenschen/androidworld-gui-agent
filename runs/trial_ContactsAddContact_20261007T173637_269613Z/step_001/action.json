@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The Contacts app should open.",
+    "target": "Contacts",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 666,
+    "y": 987
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

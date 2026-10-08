@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Launch",
+    "app": "简单短信消息"
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "simple sms messenger"
+  },
+  "observation_id": "observation_0"
+}

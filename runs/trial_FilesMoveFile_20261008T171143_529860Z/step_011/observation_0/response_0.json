@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The destination folder \"project_medium\" is selected, and the \"MOVE\" button at [280,920,513,972] will complete the move operation. Tapping it will finalize moving the file cooking-recipe.md to the destination folder.\n\ndo(action=\"Tap\", element=[407,947])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791479672,
+  "id": "202610090114314f79261e2a37436b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610090114314f79261e2a37436b",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 9647,
+    "prompt_tokens_details": {
+      "cached_tokens": 7116
+    },
+    "total_tokens": 9713
+  },
+  "wall_seconds": 1.75
+}

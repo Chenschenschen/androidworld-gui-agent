@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:23:20.5523892Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Contacts\", \"verify\": \"The 'Contacts' application should open, displaying existing contacts and providing an option to create a new one.\", \"target\": \"Contacts\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4525699000,
+  "load_duration": 18148600,
+  "prompt_eval_count": 1367,
+  "prompt_eval_cached_count": 686,
+  "prompt_eval_duration": 983902000,
+  "eval_count": 44,
+  "eval_duration": 3452429000,
+  "wall_seconds": 6.563000000001921
+}

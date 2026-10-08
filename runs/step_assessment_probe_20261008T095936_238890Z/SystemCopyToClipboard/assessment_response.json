@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see that the text \"john.doe@example.com\" has been successfully copied to the clipboard. The search bar now shows \"Search or type web address\" and there's a search result showing \"Text you copied\" which indicates the clipboard content has been saved. The task has been completed successfully - the exact text \"john.doe@example.com\" was selected and copied through the visible interface.\n\nThe clipboard content is now available for use in other applications. The task is complete.\nfinish(message=\"Task completed successfully. The text 'john.doe@example.com' has been copied to the clipboard. You can see the search result now shows 'Text you copied', indicating the clipboard content has been saved. The clipboard is now available for use in other applications.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791453581,
+  "id": "20261008175938739cca91a76e4cd5",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008175938739cca91a76e4cd5",
+  "usage": {
+    "completion_tokens": 156,
+    "prompt_tokens": 3072,
+    "prompt_tokens_details": {
+      "cached_tokens": 190
+    },
+    "total_tokens": 3228
+  },
+  "wall_seconds": 2.672000000005937
+}

@@ -1,0 +1,11 @@
+{
+  "name": "ClockTimerEntry",
+  "goal": "Create a timer with 13 hours, 33 minutes, and 34 seconds. Do not start the timer.",
+  "parameters": {
+    "hours": 13,
+    "minutes": 33,
+    "seconds": 34
+  },
+  "seed": 44,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

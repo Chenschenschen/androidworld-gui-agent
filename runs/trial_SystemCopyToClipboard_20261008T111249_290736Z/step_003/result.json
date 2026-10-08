@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "finished": false,
+  "action": {
+    "_metadata": "do",
+    "action": "Tap",
+    "element": [
+      499,
+      274
+    ]
+  },
+  "thinking": "The screen is mostly blank, likely due to a loading or transition state. To proceed with copying the text, I need to ensure the input field is ready for text entry. Since the previous action was to tap the search bar, and now the screen is blank, it's possible the search input is focused but the UI is still loading. I should wait a moment for the UI to fully load before proceeding with typing the text.",
+  "message": null
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn Wi-Fi on. I can see the Settings app icon on the home screen. The task is to turn Wi-Fi on, which requires going to the Settings app and then to the Wi-Fi section.\n\nLooking at the screenshot, I can see the Settings app icon in the bottom right area of the screen. I need to tap on it to open the Settings app.\n\nThe Settings app icon appears to be at coordinates around [824,665,960,718] based on the visual layout.\n\nLet me start by tapping the Settings app to open it.\ndo(action=\"Tap\", element=[847,668])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791403501,
+  "id": "20261008040459e0f70e0cffeb49cc",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008040459e0f70e0cffeb49cc",
+  "usage": {
+    "completion_tokens": 137,
+    "prompt_tokens": 1296,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 1433
+  },
+  "wall_seconds": 2.5160000000032596
+}

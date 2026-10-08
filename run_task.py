@@ -24,13 +24,13 @@ import urllib.error
 import urllib.request
 from PIL import Image
 
-from android_compat import enable_windows_compat, enable_fresh_xml
+from android_compat import enable_windows_compat, enable_fresh_xml, enable_single_attempt_adb
 from probe_connection import save_json
 from trajectory import log_event
 
 PROJECT = Path(__file__).resolve().parent
 TASKS = ["SystemWifiTurnOn", "CameraTakePhoto", "ClockTimerEntry",
-         "ContactsAddContact", "SystemCopyToClipboard"]
+         "ContactsAddContact", "SystemCopyToClipboard", "SimpleSmsSend", "FilesMoveFile"]
 # Keep external/manual emulator interaction visible in evaluation review notes.
 
 
@@ -147,6 +147,71 @@ def setup_required_app(app, env, output):
         env.controller._a11y_method = original
 
 
+def ensure_required_app(app, env, output):
+    """Require an installed package and successful snapshot before task initialization."""
+    from android_world.env.setup_device import setup
+    from android_world.utils import app_snapshot, file_utils
+    installed = setup.is_package_installed(app.package_name(), env)
+    snapshot = file_utils.check_directory_exists(app_snapshot._snapshot_path(app.app_name), env.controller)
+    log_event(output, "APP PREREQUISITES", {"app": app.app_name, "installed": installed, "snapshot": snapshot})
+    # Data snapshots can survive an APK removal; neither check alone proves readiness.
+    if not installed or not snapshot:
+        setup_required_app(app, env, output)
+        if not setup.is_package_installed(app.package_name(), env) or not file_utils.check_directory_exists(
+                app_snapshot._snapshot_path(app.app_name), env.controller):
+            raise RuntimeError(f"Official preparation did not establish {app.app_name} readiness")
+    save_json(PROJECT / ".tools" / f"setup_app_{app.app_name}.json",
+              {"app": app.app_name, "package_installed": True, "snapshot_exists": True})
+
+
+def reset_clipboard_editor(env, output):
+    """Reset only our synthetic external note using the official file-reset utility."""
+    from android_world.env import adb_utils
+    from android_world.utils import file_utils
+    base = "/storage/emulated/0/Documents/markor"
+    name = "QuickNote.md"  # Verified backing file of this installed test app, not a task input.
+    adb_utils.close_app("markor", env.controller)
+    file_utils.remove_single_file(name, base, env.controller)
+    if file_utils.check_file_exists(base + "/" + name, env.controller):
+        raise RuntimeError("Synthetic QuickNote reset did not remove the old note")
+    log_event(output, "EDITOR RESET", {"kind":"environment_preparation", "app":"markor",
+        "method":"official remove_single_file", "target":base + "/" + name,
+        "task_value_written":False, "copied":False, "old_note_absent":True})
+
+
+def watch_recording(process, stop, ready, seconds=174):
+    """Stop GUI readiness promptly if the owned recorder exits before rollover."""
+    deadline = time.monotonic() + seconds
+    # Poll the process while waiting: a set ready flag must mean a live recorder.
+    while not stop.is_set() and time.monotonic() < deadline:
+        if process.poll() is not None:
+            ready.clear()
+            raise RuntimeError("Our screen recorder exited before the trial/rollover ended")
+        stop.wait(.25)
+
+
+def finish_recording(prefix, process, pid, remote, local):
+    """Bound recorder shutdown/transfer and preserve the phase of any failure."""
+    started = time.monotonic()
+
+    def checkpoint(phase):
+        """Save shutdown progress separately from the concurrently written trajectory."""
+        save_json(local.with_suffix(".shutdown.json"), {"phase": phase, "elapsed_seconds": time.monotonic() - started})
+
+    checkpoint("signal")
+    subprocess.run(prefix + ["shell", "kill", "-2", pid], check=True, capture_output=True, timeout=5)
+    checkpoint("wait")
+    process.wait(timeout=15)
+    checkpoint("pull")
+    subprocess.run(prefix + ["pull", remote, str(local)], check=True, capture_output=True, timeout=20)
+    if not local.is_file() or local.stat().st_size < 1000:
+        raise RuntimeError("Recording file missing or empty")
+    checkpoint("remove_pulled_remote")
+    # Remove only this already-pulled generated clip, retaining it if transfer fails.
+    subprocess.run(prefix + ["shell", "rm", remote], check=True, capture_output=True, timeout=5)
+    checkpoint("complete")
+
+
 def record_video(adb, output, stop, ready, errors):
     """Record consecutive emulator clips, because Android screenrecord has a limit."""
     prefix = [str(adb), "-s", "emulator-5554"]
@@ -187,20 +252,62 @@ def record_video(adb, output, stop, ready, errors):
                     process.wait(timeout=5)
                     raise RuntimeError("Our screen recorder did not become ready within its bounded wait")
                 ready.set()
-                stop.wait(174)
+                watch_recording(process, stop, ready)
                 ready.clear()  # Pause GUI execution during rollover/pulling.
-                subprocess.run(prefix + ["shell", "kill", "-2", pid], check=True, capture_output=True)
-                process.wait(timeout=15)
-            local = output / f"video_{number:03d}.mp4"
-            subprocess.run(prefix + ["pull", remote, str(local)], check=True, capture_output=True)
-            if not local.is_file() or local.stat().st_size < 1000:
-                raise RuntimeError("Recording file missing or empty")
-            # Remove only this already-pulled generated clip from the emulator.
-            subprocess.run(prefix + ["shell", "rm", remote], check=True, capture_output=True)
+                finish_recording(prefix, process, pid, remote, output / f"video_{number:03d}.mp4")
     except Exception:
         errors.append(traceback.format_exc())
         stop.set()
         ready.set()
+
+
+def combine_recordings(output):
+    """Create one playback file from recorded parts, preserving every original clip."""
+    clips = sorted(output.glob("video_[0-9][0-9][0-9].mp4"))
+    if not clips:
+        return None
+    complete = output / "recording_complete.mp4"
+    if len(clips) == 1:
+        shutil.copy2(clips[0], complete)
+    else:
+        import imageio_ffmpeg
+        # Relative generated names avoid Windows path escaping in the concat list.
+        playlist = output / "video_parts.txt"
+        playlist.write_text("".join(f"file '{clip.name}'\n" for clip in clips), encoding="utf-8")
+        subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-hide_banner", "-loglevel", "error",
+            "-n", "-f", "concat", "-safe", "1", "-i", playlist.name,
+            "-map", "0:v:0", "-c", "copy", "-movflags", "+faststart", complete.name],
+            cwd=output, check=True, capture_output=True, timeout=60)
+    return complete.name
+
+
+def initialize_existing_move(task, env, prepare_source=False):
+    """Prepare one new test file or preserve the previous move, without clearing storage."""
+    from android_world.task_evals import task_eval
+    from android_world.utils import file_utils
+    if task.name != "FilesMoveFile":
+        raise ValueError("--continue-state is only supported for FilesMoveFile")
+    # Linked trials accept simple storage names, never arbitrary paths or traversal.
+    for key in ("file_name", "source_folder", "destination_folder"):
+        value = task.params[key]
+        if not isinstance(value, str) or value in {"", ".", ".."} or "/" in value or "\\" in value:
+            raise ValueError("Linked move requires simple file/folder names")
+    move = task.move_file_task
+    exists = file_utils.check_file_or_folder_exists
+    if exists(task.params["file_name"], move.dest_directory, env.controller):
+        raise RuntimeError("Linked move destination already contains the file")
+    source_exists = exists(task.params["file_name"], move.source_directory, env.controller)
+    if prepare_source:
+        if source_exists:
+            raise RuntimeError("Source already exists; use --continue-state to preserve it")
+        file_utils.create_file(task.params["file_name"], move.source_directory, env.controller)
+        file_utils.mkdir(move.dest_directory, env.controller)
+    elif not source_exists:
+        raise RuntimeError("Linked move source file is missing")
+    # Official base initialization restores app state/time and marks both evaluators
+    # initialized. Skip MoveFile's storage clear/create so the actual file carries over.
+    task_eval.TaskEval.initialize_task(task, env)
+    task_eval.TaskEval.initialize_task(move, env)
 
 
 def main():
@@ -210,6 +317,8 @@ def main():
     parser.add_argument("--observation", choices=["screenshot", "tree", "tree_first"], default=None)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--config", type=Path, default=PROJECT / "agent_config.json")
+    parser.add_argument("--params", type=Path, help="JSON file containing exact official task parameters")
+    parser.add_argument("--continue-state", action="store_true", help="Preserve the previous FilesMoveFile result for a linked reverse move")
     args = parser.parse_args()
     if Path(sys.prefix).resolve() != (PROJECT / ".venv").resolve():
         raise RuntimeError("Use .venv\\Scripts\\python.exe")
@@ -227,6 +336,19 @@ def main():
     print(f"Evidence: {output}", flush=True)
     adb = Path(os.environ["LOCALAPPDATA"]) / "Android/Sdk/platform-tools/adb.exe"
     config = json.loads(args.config.read_text(encoding="utf-8"))
+    if config.get("single_attempt_adb"):
+        enable_single_attempt_adb()
+    if args.task == "SystemCopyToClipboard" and config.get("task_guidance") and config.get("clipboard_input_app") != "markor":
+        raise ValueError("The guided Clipboard procedure requires clipboard_input_app=markor")
+    agent_class = AutoGLMAgent
+    if config.get("text_input_backend") == "adb_keyboard":
+        enabled = subprocess.check_output([str(adb), "-s", "emulator-5554", "shell", "ime", "list", "-s"], timeout=5).decode()
+        if "com.android.adbkeyboard/.AdbIME" not in enabled.splitlines():
+            raise RuntimeError("Enable ADB Keyboard before this variant; see docs/UPSTREAM_REFERENCE_COMPARISON.md")
+    if config.get("agent_backend") == "upstream":
+        from upstream_reference import UpstreamReference, reference_preflight
+        reference_preflight(adb)
+        agent_class = UpstreamReference
     # Contacts' observed Save at step 12 needs a subsequent model inspection.
     config["max_steps"] = config.get("task_step_budgets", {}).get(args.task, config["max_steps"])
     if config.get("provider") != "zai" or config["observation"] != "screenshot" or args.observation not in {None, "screenshot"}:
@@ -257,10 +379,13 @@ def main():
         # Preserve the exact small program and dependency/model identities per run.
         source = output / "source"
         source.mkdir()
-        for filename in ("run_task.py", "autoglm_agent.py", "probe_connection.py", "android_compat.py", "run.ps1", "trajectory.py"):
+        for filename in ("run_task.py", "autoglm_agent.py", "upstream_reference.py", "probe_connection.py", "android_compat.py", "run.ps1", "trajectory.py"):
             shutil.copyfile(PROJECT / filename, source / filename)
         (source / "instructions").mkdir()
         shutil.copyfile(PROJECT / "instructions/autoglm.md", source / "instructions/autoglm.md")
+        shutil.copyfile(PROJECT / "instructions/assessment.md", source / "instructions/assessment.md")
+        shutil.copyfile(PROJECT / "instructions/task_guides.md", source / "instructions/task_guides.md")
+        shutil.copyfile(PROJECT / "instructions/android_interactions.md", source / "instructions/android_interactions.md")
         save_json(output / "versions.json", {"model": model, "provider": "zai", "endpoint": endpoint,
             "provider_revision": "not exposed by API; response model/request IDs saved per call",
             "python": sys.version, "android_world": importlib.metadata.version("android-world"),
@@ -275,42 +400,50 @@ def main():
             "SystemWifiTurnOn": (apps.SettingsApp,),
             "CameraTakePhoto": (apps.CameraApp,),
             "ClockTimerEntry": (apps.ClockApp,),
-            # Clipper supports the official verifier; Chrome provides a GUI text
-            # field for selecting/copying. No direct clipboard write is an action.
-            "SystemCopyToClipboard": (apps.ClipperApp, apps.ChromeApp),
+            "SimpleSmsSend": (apps.SimpleSMSMessengerApp,),
+            "FilesMoveFile": (apps.FilesApp,),
+            # Clipper supports the verifier. The selected GUI editor supplies
+            # text selection/copy; official setup/reset is separate from actions.
+            "SystemCopyToClipboard": (apps.ClipperApp,
+                apps.MarkorApp if config.get("clipboard_input_app") == "markor" else apps.ChromeApp),
         }
         required = (apps.AndroidWorldApp,) + task_apps[args.task]
         from android_world.utils import app_snapshot, file_utils
         # Check each app separately, including clipboard verifier infrastructure.
         for app in required:
-            marker = PROJECT / ".tools" / f"setup_app_{app.app_name}.json"
-            snapshot_exists = file_utils.check_directory_exists(
-                app_snapshot._snapshot_path(app.app_name), env.controller)
-            if not snapshot_exists:
-                setup_required_app(app, env, output)
-            save_json(marker, {"app": app.app_name, "snapshot_exists_or_setup_attempted": True})
+            ensure_required_app(app, env, output)
         random.seed(args.seed)
         task_class = registry.TaskRegistry().get_registry("android_world")[args.task]
-        params = task_class.generate_random_params()
+        params = json.loads(args.params.read_text(encoding="utf-8")) if args.params else task_class.generate_random_params()
         task = task_class(params)
         # Clipper is official verifier infrastructure, not an interactive GUI app.
         config["allowed_apps"] = [app.app_name for app in task_apps[args.task] if app.app_name != "clipper"]
         save_json(output / "config.json", config)
         save_json(output / "task.json", {"name": args.task, "goal": task.goal, "parameters": params,
-                  "seed": args.seed, "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"})
+                  "seed": args.seed, "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7",
+                  "initialization_mode": "linked_existing_file" if args.continue_state else
+                      "scoped_new_file" if args.task == "FilesMoveFile" else "official_task_reset"})
         log_event(output, "OFFICIAL TASK INPUT", {"goal": task.goal, "parameters": params,
                   "task_seed": args.seed, "model_metadata": "versions.json"})
         # Match the official runner: reset BEFORE task-specific initialization.
         # A reset after initialization was measured to turn Wi-Fi back on.
         env.reset(go_home=True)
         # Official task initialization resets its own apps. Also restore the
-        # extra GUI app used for clipboard entry, avoiding cross-run Chrome state.
+        # extra GUI app used for clipboard entry, avoiding cross-run editor state.
         for app in task_apps[args.task]:
             if app.app_name not in task.app_names and app.app_name != "clipper":
                 app_snapshot.restore_snapshot(app.app_name, env.controller)
+        if args.task == "SystemCopyToClipboard" and config.get("reset_clipboard_editor"):
+            reset_clipboard_editor(env, output)
         env.reset(go_home=True)
         # Official initialization clears test contacts/sets Wi-Fi state and device time.
-        task.initialize_task(env)
+        if args.task == "FilesMoveFile" or args.continue_state:
+            initialize_existing_move(task, env, prepare_source=args.task == "FilesMoveFile" and not args.continue_state)
+            log_event(output, "LINKED FILE INITIALIZATION", {"mode":"official_base_initialization",
+                "storage_reset":False, "source_file_created":not args.continue_state,
+                "file_moved_by_preparation":False})
+        else:
+            task.initialize_task(env)
         summary["initial_verifier_score"] = verify_task(task, env, output)
         log_event(output, "INITIAL VERIFIER", {"score": summary["initial_verifier_score"]})
         if summary["initial_verifier_score"] != 0.0:
@@ -320,7 +453,7 @@ def main():
         recorder.start()
         if not ready.wait(timeout=15) or video_errors:
             raise RuntimeError("Recording failed to start: " + str(video_errors))
-        agent = AutoGLMAgent(env, output, config, params)
+        agent = agent_class(env, output, config, params)
         agent.recording_ready = ready
         agent.recording_errors = video_errors
         start = time.monotonic()
@@ -347,6 +480,8 @@ def main():
     except Exception as error:
         summary["error"] = traceback.format_exc()
         summary["error_class"] = "environment_setup_error" if agent is None else "validation_error" if isinstance(error, ValueError) else "api_error" if isinstance(error, urllib.error.URLError) else "control_no_progress" if str(error) == "Repeated action without visible effect; stopping" else "environment_or_execution_error"
+        if agent is not None and agent.assessment_errors:
+            summary["error_class"] = "assessment_error"
         summary["stop_reason"] = "error"
         log_event(output, "RUN ERROR", {"error": summary["error"], "class": summary["error_class"]}, summary.get("steps_attempted"))
         print(summary["error"], flush=True)
@@ -364,9 +499,12 @@ def main():
         stop.set()
         if agent is not None:
             summary["model_calls_attempted"] = agent.calls
+            summary["assessment_calls_attempted"] = agent.assessment_calls
+            summary["assessment_errors"] = agent.assessment_errors
+            summary["gui_actions_dispatched"] = sum(action["action_type"] != "status" for action in agent.executed_actions)
             summary["screenshot_fallbacks"] = agent.fallback_events
         if recorder is not None:
-            recorder.join(timeout=30)
+            recorder.join(timeout=55)  # Shutdown's bounded phases total at most 45 seconds.
         summary["video_errors"] = video_errors
         if video_errors or (recorder is not None and recorder.is_alive()):
             summary["evaluation_valid"] = False
@@ -374,6 +512,12 @@ def main():
         summary["verified_agent_success"] = summary["evaluation_valid"] and summary["verifier"] == "PASS"
         summary["clean_agent_success"] = summary["verified_agent_success"] and summary["agent_done"] and summary.get("stop_reason") == "complete" and not summary.get("error")
         summary["videos"] = [path.name for path in sorted(output.glob("video_*.mp4"))]
+        if summary["videos"] and recorder is not None and not video_errors and not recorder.is_alive():
+            try:
+                summary["complete_video"] = combine_recordings(output)
+            except Exception:
+                # Packaging failure does not erase valid original recordings or task evidence.
+                summary["video_packaging_error"] = traceback.format_exc()
         summary["duration_seconds"] = time.monotonic() - run_start
         summary["agent_phase_seconds"] = time.monotonic() - agent_start if agent_start is not None else None
         save_json(output / "summary.json", summary)

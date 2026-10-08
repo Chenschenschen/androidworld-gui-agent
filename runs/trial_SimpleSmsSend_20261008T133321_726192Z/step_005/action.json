@@ -1,0 +1,13 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Type",
+    "text": "Gym membership renewal due on the 20th."
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "Gym membership renewal due on the 20th.",
+    "clear_text": true
+  },
+  "observation_id": "observation_1"
+}

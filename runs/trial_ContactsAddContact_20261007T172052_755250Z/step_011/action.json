@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "No results",
+    "verify": "The 'No results' screen should open.",
+    "target": "No results",
+    "index": "7",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1526
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

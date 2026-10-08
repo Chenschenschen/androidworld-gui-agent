@@ -6,10 +6,18 @@ zai-org/Open-AutoGLM, Copyright 2025 Zhipu AI, Apache License 2.0.
 The original license is retained in instructions/LICENSE_AutoGLM.txt.
 Adaptations are documented in instructions/AUTOGLM_SOURCE.md.
 
+upstream_reference.py imports the original external Open-AutoGLM PhoneAgent
+at a pinned commit for comparison; it does not vendor or replace that policy.
+The reference checkout retains its upstream Apache-2.0 license.
+
 Android World is an external dependency from google-research/android_world,
 Apache License 2.0. This repository does not vendor its source; clone the
 recorded commit and retain its upstream license. Android World's official
 agents informed completion/recovery guidance and environment integration.
+instructions/assessment.md adapts M3A's SUMMARY_PROMPT_TEMPLATE from the
+pinned Android World source (Copyright 2026 the android_world Authors),
+Apache License 2.0. Changes: native AutoGLM action context, message-order
+image labels, plain read-only output, and explicit uncertainty handling.
 
 Course example structure and D1–D4 teaching material informed the simple
 agent/step loop, context, feedback and experiment design. Original course

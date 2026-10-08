@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The 'Contacts' application should open, displaying existing contacts and providing an option to create a new one.",
+    "target": "Contacts",
+    "index": "1",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 180,
+    "y": 2232
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

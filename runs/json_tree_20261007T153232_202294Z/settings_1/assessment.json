@@ -1,0 +1,16 @@
+{
+  "case": "settings",
+  "repeat": 1,
+  "valid": true,
+  "correct": true,
+  "executed": false,
+  "fields": {
+    "action": "AWAKE",
+    "value": "Settings",
+    "verify": "The Settings application should be open and visible on the screen."
+  },
+  "action": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  }
+}

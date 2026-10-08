@@ -1,0 +1,19 @@
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261007T165206_708350Z",
+  "agent_done": false,
+  "verifier": "NOT_RUN",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "learning_context_feedback_v2_1",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_feedback_v2",
+  "observation": "tree_first",
+  "grounding": "indices_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12
+}

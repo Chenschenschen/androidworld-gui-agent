@@ -1,0 +1,7 @@
+{
+  "attempts": 1,
+  "timeout": 30,
+  "returncode": 0,
+  "output": "Starting: Intent { cmp=com.android.chrome/com.google.android.apps.chrome.Main }\r\nStatus: ok\r\nLaunchState: COLD\r\nActivity: com.android.chrome/org.chromium.chrome.browser.ChromeTabbedActivity\r\nTotalTime: 7880\r\nWaitTime: 7897\r\nComplete\r\n",
+  "automatic_retry": false
+}

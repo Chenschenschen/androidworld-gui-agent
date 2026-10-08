@@ -1,0 +1,14 @@
+{
+  "native": {
+    "action": "COMPLETE",
+    "value": "com.google.androidenv.accessibilityforwarder keeps stopping",
+    "verify": "Verify that WiFi is turned on."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "com.google.androidenv.accessibilityforwarder keeps stopping"
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

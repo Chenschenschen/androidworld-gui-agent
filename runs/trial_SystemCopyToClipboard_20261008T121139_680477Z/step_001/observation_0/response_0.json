@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe screen shows the Clipper app with a clipboard service started and instructions. To copy the text \"john.doe@example.com\" to the clipboard, I need to paste it into the clipboard first. The current screen has a text input area at [174,846,821,918] with the placeholder \"Clipper pasted from your clipboard\". I should tap this area to focus it before pasting the required text.\n\n\ndo(action=\"Tap\", element=[499,896])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791461516,
+  "id": "20261008201154613b81aa4f54435b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008201154613b81aa4f54435b",
+  "usage": {
+    "completion_tokens": 109,
+    "prompt_tokens": 2487,
+    "prompt_tokens_details": {
+      "cached_tokens": 1435
+    },
+    "total_tokens": 2596
+  },
+  "wall_seconds": 2.2189999999973224
+}

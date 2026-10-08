@@ -1,0 +1,9 @@
+{
+  "kind": "retrospective_analysis",
+  "failure_class": "too_early",
+  "agent_failure": "Repeated first-name clicks after the full name was entered",
+  "stop_cause": "Noninteractive cursor handle disappeared at step 6; selected target unchanged",
+  "official_verifier": "FAIL",
+  "launcher": "Executed task program, logging and verifier without Codex dependency",
+  "fix": "v2_1 signature compares labelled/interactive app controls; replay accepts cursor change and rejects moved target"
+}

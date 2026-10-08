@@ -1,0 +1,213 @@
+[
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261008T062431_367115Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemWifiTurnOn",
+      "run_id": "trial_SystemWifiTurnOn_20261008T062431_367115Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 5,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v18_observed_digits_optional_copy_chip",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v14_observed_progress",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 5,
+      "stop_reason": "complete",
+      "model_calls_attempted": 5,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 62.437999999994645,
+      "agent_phase_seconds": 58.921999999991385
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 5,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          847,
+          669
+        ]
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          378
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          296
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          897,
+          379
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_005",
+        "command": "finish",
+        "message": "Wi-Fi has been successfully turned on! I can see the Wi-Fi toggle is now in the ON position (checked), and there's an available network \"AndroidWifi\" showing as saved. The device is now scanning for Wi-Fi networks and can connect to available networks."
+      }
+    ],
+    "switch_transitions": [
+      {
+        "step": "step_002",
+        "before": [],
+        "after": [
+          {
+            "label": "Airplane mode",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "step": "step_003",
+        "before": [
+          {
+            "label": "Airplane mode",
+            "checked": false
+          }
+        ],
+        "after": [
+          {
+            "label": "Wi-Fi",
+            "checked": false
+          }
+        ]
+      },
+      {
+        "step": "step_004",
+        "before": [
+          {
+            "label": "Wi-Fi",
+            "checked": false
+          }
+        ],
+        "after": [
+          {
+            "label": "Wi-Fi",
+            "checked": true
+          }
+        ]
+      },
+      {
+        "step": "step_005",
+        "before": [
+          {
+            "label": "Wi-Fi",
+            "checked": true
+          }
+        ],
+        "after": [
+          {
+            "label": "Wi-Fi",
+            "checked": true
+          }
+        ]
+      }
+    ],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 639,
+        "fps": 10.78130632838873,
+        "duration_seconds": 59.26925555555555
+      }
+    ],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261008T062534_516124Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "SystemWifiTurnOn",
+      "run_id": "trial_SystemWifiTurnOn_20261008T062534_516124Z",
+      "agent_done": false,
+      "verifier": "FAIL",
+      "steps": 0,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v18_observed_digits_optional_copy_chip",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v14_observed_progress",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 1,
+      "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 319, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 455, in step\n    fields, action = self.ask_action(state, observed, goal, step)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 433, in ask_action\n    action = convert_action(fields, state, self.config[\"allowed_apps\"])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 135, in convert_action\n    x, y = pixel_point(fields[\"element\"], state)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 108, in pixel_point\n    raise ValueError(\"Coordinates must be two integers in 0..1000\")\nValueError: Coordinates must be two integers in 0..1000\n",
+      "error_class": "validation_error",
+      "stop_reason": "error",
+      "verifier_score": 0.0,
+      "failure_class": null,
+      "model_calls_attempted": 2,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": false,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 8.75,
+      "agent_phase_seconds": 5.343000000008033
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 2,
+    "gui_actions": [],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 12,
+        "fps": 1.201698400405907,
+        "duration_seconds": 9.985866666666666
+      }
+    ],
+    "incomplete_steps": [
+      {
+        "step": "step_001",
+        "execution_started": false,
+        "note": "Expected interrupted/failed step; inspect saved request, error and stop reason."
+      }
+    ]
+  }
+]

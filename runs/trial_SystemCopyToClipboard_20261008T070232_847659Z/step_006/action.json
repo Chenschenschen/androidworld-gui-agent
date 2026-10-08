@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Wait",
+    "duration": "1 seconds"
+  },
+  "android": {
+    "action_type": "wait",
+    "seconds": 1.0
+  },
+  "observation_id": "observation_0"
+}

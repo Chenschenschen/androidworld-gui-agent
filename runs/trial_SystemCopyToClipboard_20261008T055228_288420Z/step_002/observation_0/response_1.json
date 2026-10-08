@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Looking at the tree structure, I can see the search bar is at coordinates [38,300,960,353]. I need to tap on it to focus it so I can select all the text and copy it.\ndo(action=\"Tap\", element=[499,326])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438765,
+  "id": "2026100813524471ddd8bb1cf54d11",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100813524471ddd8bb1cf54d11",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 2088,
+    "prompt_tokens_details": {
+      "cached_tokens": 2060
+    },
+    "total_tokens": 2148
+  },
+  "wall_seconds": 1.312000000005355
+}

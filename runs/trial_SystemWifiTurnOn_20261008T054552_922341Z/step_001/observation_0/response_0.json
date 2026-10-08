@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe user wants to turn Wi-Fi on. The completion condition says to finish if Wi-Fi is already on. However, I don't see a Wi-Fi toggle in the current home screen screenshot. To turn Wi-Fi on, I need to open the Settings app first. I can see the Settings icon on the home screen at coordinates [735,646,932,715]. I should tap it to open Settings.\ndo(action=\"Tap\", element=[848,668])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438359,
+  "id": "2026100813455798e08733c3254988",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100813455798e08733c3254988",
+  "usage": {
+    "completion_tokens": 106,
+    "prompt_tokens": 1634,
+    "prompt_tokens_details": {
+      "cached_tokens": 249
+    },
+    "total_tokens": 1740
+  },
+  "wall_seconds": 2.313000000009197
+}

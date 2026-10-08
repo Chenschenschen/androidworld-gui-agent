@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Email contacts",
+    "verify": "The 'Email contacts' screen should open.",
+    "target": "Email contacts",
+    "index": "9",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 762,
+    "y": 371
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

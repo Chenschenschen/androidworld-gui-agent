@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The sdk_gphone64_x86_64 storage area is open, and both the \"project_medium\" and \"project_easy\" folders are visible. To begin moving the file, I should enter the \"project_medium\" folder by tapping its card (bounds [59,654,489,707]) to locate the file cooking-recipe.md inside it.\n\n\ndo(action=\"Tap\", element=[274,681])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474282,
+  "id": "202610082344406920ff32ea5841c4",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082344406920ff32ea5841c4",
+  "usage": {
+    "completion_tokens": 92,
+    "prompt_tokens": 4588,
+    "prompt_tokens_details": {
+      "cached_tokens": 2019
+    },
+    "total_tokens": 4680
+  },
+  "wall_seconds": 2.1719999999913853
+}

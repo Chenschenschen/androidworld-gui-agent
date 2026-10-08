@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn Wi-Fi on. The task is to enable Wi-Fi in Settings > Internet. I can see the Settings app icon on the home screen. The first step is to launch the Settings app. I can see the Settings icon in the bottom right area of the screen.\n\nLooking at the coordinates, the Settings app icon appears to be at approximately [735,670,932,735] based on the layout.\n\nI should tap on the Settings app to open it.\ndo(action=\"Tap\", element=[848,668])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405435,
+  "id": "202610080437136dcd494b404d42f5",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080437136dcd494b404d42f5",
+  "usage": {
+    "completion_tokens": 119,
+    "prompt_tokens": 1657,
+    "prompt_tokens_details": {
+      "cached_tokens": 524
+    },
+    "total_tokens": 1776
+  },
+  "wall_seconds": 2.375
+}

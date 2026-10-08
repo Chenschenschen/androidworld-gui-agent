@@ -1,0 +1,74 @@
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": {
+    "text": "",
+    "content_description": "Navigate up",
+    "class_name": "android.widget.ImageButton",
+    "bbox": {
+      "x_min": 0,
+      "x_max": 147,
+      "y_min": 128,
+      "y_max": 275
+    },
+    "bbox_pixels": {
+      "x_min": 0,
+      "x_max": 147,
+      "y_min": 128,
+      "y_max": 275
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.chrome",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "",
+    "metadata": null
+  },
+  "selected_target_fresh": {
+    "text": "",
+    "content_description": "Navigate up",
+    "class_name": "android.widget.ImageButton",
+    "bbox": {
+      "x_min": 0,
+      "x_max": 147,
+      "y_min": 128,
+      "y_max": 275
+    },
+    "bbox_pixels": {
+      "x_min": 0,
+      "x_max": 147,
+      "y_min": 128,
+      "y_max": 275
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "com.android.chrome",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "",
+    "metadata": null
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "The 'Settings' app should be opened to the main settings screen.",
+    "point": "164,189"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 177,
+    "y": 454
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

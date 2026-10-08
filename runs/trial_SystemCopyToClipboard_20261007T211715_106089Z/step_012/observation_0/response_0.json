@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see that Chrome is showing \"No internet\" and there's a dialog asking if Chrome will let you know when this page is ready. I need to cancel this dialog and try a different approach. Let me tap \"Cancel\" to dismiss this dialog.\ndo(action=\"Tap\", element=[499,476])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407909,
+  "id": "20261008051828bac0e122cf784e01",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008051828bac0e122cf784e01",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 3898,
+    "prompt_tokens_details": {
+      "cached_tokens": 2595
+    },
+    "total_tokens": 3964
+  },
+  "wall_seconds": 1.5310000000026776
+}

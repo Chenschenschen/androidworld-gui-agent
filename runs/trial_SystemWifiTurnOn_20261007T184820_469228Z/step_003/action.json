@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Bluetooth, Android Auto",
+    "verify": "Ensure Bluetooth is enabled and confirm that Bluetooth will turn on if not already active.",
+    "target": "Bluetooth, Android Auto",
+    "index": "33",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 283,
+    "y": 1334
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "Settings should be visible on the screen.",
+    "target": "SIM name & color",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 1017,
+    "y": 201
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

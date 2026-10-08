@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Create contact\" form is open with fields for First name, Last name, Company, Phone, etc. To enter Hugo Ali, I should first focus the \"First name\" field so I can type \"Hugo\".\ndo(action=\"Tap\", element=[494,386])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438827,
+  "id": "202610081353451834ca5aeb0546d3",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081353451834ca5aeb0546d3",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 2054,
+    "prompt_tokens_details": {
+      "cached_tokens": 759
+    },
+    "total_tokens": 2114
+  },
+  "wall_seconds": 1.4219999999913853
+}

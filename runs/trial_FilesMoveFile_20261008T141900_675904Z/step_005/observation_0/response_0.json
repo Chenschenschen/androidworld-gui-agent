@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "To move the file cooking-recipe.md, I need to select it first. A long press on the file will bring up the selection/context menu with options like Move. The file is at [59,282,489,532]; I will long press it to select it.\n\n\ndo(action=\"Long Press\", element=[278,407])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469209,
+  "id": "20261008222007dab095f8a5504f32",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008222007dab095f8a5504f32",
+  "usage": {
+    "completion_tokens": 78,
+    "prompt_tokens": 4782,
+    "prompt_tokens_details": {
+      "cached_tokens": 2764
+    },
+    "total_tokens": 4860
+  },
+  "wall_seconds": 1.75
+}

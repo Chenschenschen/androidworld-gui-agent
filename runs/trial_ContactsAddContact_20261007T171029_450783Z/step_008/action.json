@@ -1,0 +1,14 @@
+{
+  "native": {
+    "action": "COMPLETE",
+    "value": "I have saved the new contact for Camila da Silva with the phone number +10433218196.",
+    "verify": "The task is complete, and no further actions are required."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "I have saved the new contact for Camila da Silva with the phone number +10433218196."
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

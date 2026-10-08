@@ -1,0 +1,29 @@
+{
+  "version": "learning_direct_type_v6_gpu22",
+  "prompt_version": "gelab_json_direct_type_v6",
+  "action_format": "json_schema",
+  "observation": "tree_first",
+  "prompt_examples": false,
+  "max_screenshot_fallbacks": 2,
+  "model": "gelab-zero-4b-preview:latest",
+  "options": {
+    "temperature": 1,
+    "top_k": 20,
+    "top_p": 0.95,
+    "num_ctx": 4096,
+    "num_gpu": 22,
+    "num_predict": 256,
+    "seed": 42
+  },
+  "max_steps": 12,
+  "max_seconds": 900,
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "note": "Diagnostic repair of repeated editable-field CLICKs: require targeted TYPE to enter text and omit model predictions from factual history. The model still chooses the field, exact text and Save. GPU22 retained for the modest measured speed gain. Combined diagnostic repair; not a controlled one-variable quality comparison.",
+  "contact_guidance": true,
+  "targeted_type": true,
+  "direct_type_only": true,
+  "label_grounding": true,
+  "task_seed": 42
+}

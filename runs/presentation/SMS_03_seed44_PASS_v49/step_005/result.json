@@ -1,0 +1,16 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Type",
+    "text": "Gym membership renewal due on the 20th."
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.007142788756127451,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 11.796999999991385,
+  "selected_gui_control": {
+    "label": "Type a message…",
+    "resource_id": "com.simplemobiletools.smsmessenger:id/thread_type_message"
+  }
+}

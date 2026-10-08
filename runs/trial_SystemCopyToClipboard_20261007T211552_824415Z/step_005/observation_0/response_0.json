@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The app drawer is now visible, and the \"Clipper\" app is present. To proceed with copying the clipboard content, I need to open the \"Clipper\" app by tapping its icon.\ndo(action=\"Tap\", element=[165,471])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407820,
+  "id": "20261008051658388eb06bc0c14531",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008051658388eb06bc0c14531",
+  "usage": {
+    "completion_tokens": 53,
+    "prompt_tokens": 2605,
+    "prompt_tokens_details": {
+      "cached_tokens": 1285
+    },
+    "total_tokens": 2658
+  },
+  "wall_seconds": 1.4680000000007567
+}

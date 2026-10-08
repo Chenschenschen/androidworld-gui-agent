@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Phone\" field is focused and the keyboard is visible. Enter the phone number \"+10433218196\".\n\ndo(action=\"Type\", text=\"+10433218196\")\n\n\ndo(action=\"Type\", text=\"+10433218196\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447467,
+  "id": "20261008161746e41d0fa726044b67",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008161746e41d0fa726044b67",
+  "usage": {
+    "completion_tokens": 55,
+    "prompt_tokens": 3263,
+    "prompt_tokens_details": {
+      "cached_tokens": 1988
+    },
+    "total_tokens": 3318
+  },
+  "wall_seconds": 1.562000000005355
+}

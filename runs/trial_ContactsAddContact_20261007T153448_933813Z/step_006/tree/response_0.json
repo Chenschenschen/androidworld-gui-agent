@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T15:36:17.7047632Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"14\", \"verify\": \"The text 'Camila' should be entered in the last name field.\",\"index\":8}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6331036000,
+  "load_duration": 19193500,
+  "prompt_eval_count": 1514,
+  "prompt_eval_cached_count": 342,
+  "prompt_eval_duration": 1798655000,
+  "eval_count": 38,
+  "eval_duration": 4367171000,
+  "wall_seconds": 8.375
+}

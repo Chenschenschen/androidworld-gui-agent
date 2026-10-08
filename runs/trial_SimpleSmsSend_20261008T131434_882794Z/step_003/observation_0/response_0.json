@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user now needs to enter the interface to start a conversation, and the previous click on \"Start a conversation\" has not yet entered the interface. Therefore, it is necessary to click the \"Start a conversation\" button again. The corresponding element is [286, 168, 711, 227], and the Tap action will be executed. This is to ensure entering the interface for creating a new conversation, so that the phone number can be entered and the message sent.\n\n\ndo(action=\"Tap\", element=[498,205])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791465311,
+  "id": "2026100821150903bec3debd194200",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100821150903bec3debd194200",
+  "usage": {
+    "completion_tokens": 116,
+    "prompt_tokens": 3153,
+    "prompt_tokens_details": {
+      "cached_tokens": 1600
+    },
+    "total_tokens": 3269
+  },
+  "wall_seconds": 2.25
+}

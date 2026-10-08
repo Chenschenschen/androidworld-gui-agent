@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "No data used",
+    "verify": "The element with text 'No data used' should be clicked and its state should change to show the network settings.",
+    "target": "No data used",
+    "index": "39",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 187,
+    "y": 2098
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

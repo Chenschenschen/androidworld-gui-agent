@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T19:29:31.2789624Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"First name field\", \"verify\": \"The contact creation form is displayed. The first name field is visible and ready for input.\", \"target\": \"First name\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7567410500,
+  "load_duration": 19350600,
+  "prompt_eval_count": 1578,
+  "prompt_eval_cached_count": 542,
+  "prompt_eval_duration": 3096834000,
+  "eval_count": 44,
+  "eval_duration": 4328423000,
+  "wall_seconds": 9.609000000004016
+}

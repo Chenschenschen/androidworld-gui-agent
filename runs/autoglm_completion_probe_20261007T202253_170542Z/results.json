@@ -1,0 +1,40 @@
+[
+  {
+    "case": "on",
+    "source": "runs\\trial_SystemWifiTurnOn_20261007T200901_584580Z\\step_009\\observation_0\\screen.png",
+    "native": {
+      "command": "do",
+      "action": "Tap",
+      "element": [
+        499,
+        379
+      ]
+    },
+    "android": {
+      "action_type": "click",
+      "x": 538,
+      "y": 909
+    },
+    "gui_actions": 0,
+    "verifier": "NOT_RUN"
+  },
+  {
+    "case": "off",
+    "source": "runs\\trial_SystemWifiTurnOn_20261007T200901_584580Z\\step_008\\observation_0\\screen.png",
+    "native": {
+      "command": "do",
+      "action": "Tap",
+      "element": [
+        846,
+        377
+      ]
+    },
+    "android": {
+      "action_type": "click",
+      "x": 913,
+      "y": 904
+    },
+    "gui_actions": 0,
+    "verifier": "NOT_RUN"
+  }
+]

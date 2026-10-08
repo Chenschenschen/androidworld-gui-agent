@@ -1,0 +1,30 @@
+[
+  {
+    "state": "BEFORE",
+    "native": {
+      "command": "do",
+      "action": "Tap",
+      "element": [
+        499,
+        904
+      ]
+    },
+    "android": {
+      "action_type": "click",
+      "x": 538,
+      "y": 2169
+    }
+  },
+  {
+    "state": "AFTER_ONE",
+    "native": {
+      "command": "finish",
+      "message": "Photo taken successfully! I can see a thumbnail image in the bottom right corner of the screen, which indicates that a photo has been captured. The task to take one photo has been completed."
+    },
+    "android": {
+      "action_type": "status",
+      "goal_status": "complete",
+      "reason": "Photo taken successfully! I can see a thumbnail image in the bottom right corner of the screen, which indicates that a photo has been captured. The task to take one photo has been completed."
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "17 hours",
+    "verify": "The value of the 'hours' field should be set to '17'.",
+    "target": "17 hours",
+    "index": "26",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 627,
+    "y": 1504
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

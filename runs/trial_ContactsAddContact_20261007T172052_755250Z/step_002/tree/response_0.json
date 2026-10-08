@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:21:44.6374378Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Phone contacts\", \"verify\": \"The 'Phone contacts' screen should open, showing existing contacts or an option to add a new one.\", \"target\": \"Phone contacts\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4848903600,
+  "load_duration": 16839000,
+  "prompt_eval_count": 1225,
+  "prompt_eval_cached_count": 405,
+  "prompt_eval_duration": 964422000,
+  "eval_count": 46,
+  "eval_duration": 3743082000,
+  "wall_seconds": 6.875
+}

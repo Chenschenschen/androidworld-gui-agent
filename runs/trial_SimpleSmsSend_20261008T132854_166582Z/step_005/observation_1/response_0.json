@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The message input field \"Type a message…\" is focused and ready for text input. I need to type the message \"Your dentist appointment is scheduled for 2 PM on Thursday.\" into this field to compose the SMS message.\n\n\ndo(action=\"Type\", text=\"Your dentist appointment is scheduled for 2 PM on Thursday.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791466230,
+  "id": "20261008213028651d57b382f1488e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008213028651d57b382f1488e",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 4482,
+    "prompt_tokens_details": {
+      "cached_tokens": 2974
+    },
+    "total_tokens": 4551
+  },
+  "wall_seconds": 1.639999999999418
+}

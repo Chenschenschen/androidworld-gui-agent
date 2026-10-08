@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The phone number has been entered. To proceed, I need to confirm the number entry by tapping the checkmark icon, which is the clickable ImageView at [882, 123, 999, 175].\n\n\ndo(action=\"Tap\", element=[940,149])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791466209,
+  "id": "20261008213008caff356332fe4318",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008213008caff356332fe4318",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 3883,
+    "prompt_tokens_details": {
+      "cached_tokens": 2024
+    },
+    "total_tokens": 3943
+  },
+  "wall_seconds": 1.7810000000026776
+}

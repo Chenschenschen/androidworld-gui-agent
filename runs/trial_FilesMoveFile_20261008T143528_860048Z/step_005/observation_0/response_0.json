@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "To move sci_fi_book.mp3, I need to select it first. I will long press on sci_fi_book.mp3 at [59,282,489,532] to bring up the file options and selection mode.\n\n\ndo(action=\"Long Press\", element=[274,407])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791470197,
+  "id": "202610082236359a5b9c7bb07e4edd",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082236359a5b9c7bb07e4edd",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 5680,
+    "prompt_tokens_details": {
+      "cached_tokens": 2938
+    },
+    "total_tokens": 5749
+  },
+  "wall_seconds": 2.3440000000118744
+}

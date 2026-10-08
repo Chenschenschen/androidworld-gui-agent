@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app has opened and is showing a setup screen asking \"Remember photo locations?\" with a checkbox checked for \"Tag your photos and videos with the locations where they're taken.\" There's a \"NEXT\" button at the bottom. To proceed with taking a photo, I need to go through this setup by tapping the NEXT button.\ndo(action=\"Tap\", element=[499,927])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441329,
+  "id": "202610081435283bbcd53ecef34cc1",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081435283bbcd53ecef34cc1",
+  "usage": {
+    "completion_tokens": 81,
+    "prompt_tokens": 1980,
+    "prompt_tokens_details": {
+      "cached_tokens": 885
+    },
+    "total_tokens": 2061
+  },
+  "wall_seconds": 1.610000000000582
+}

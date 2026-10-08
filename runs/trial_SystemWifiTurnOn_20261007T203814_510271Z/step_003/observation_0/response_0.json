@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn WiFi on. I can see we're in the Network & internet settings page. I can see there's an \"Internet\" option that shows \"Networks available\" which suggests WiFi networks are available but likely not connected. I need to tap on the Internet option to access WiFi settings.\n\nLooking at the tree structure, I can see:\nLinearLayout;click;Internet|Networks available;[0,248,999,334]\n\nThis is the Internet option I need to tap to access WiFi settings.\ndo(action=\"Tap\", element=[499,298])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405525,
+  "id": "202610080438434ca35fb0846842f0",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080438434ca35fb0846842f0",
+  "usage": {
+    "completion_tokens": 125,
+    "prompt_tokens": 1850,
+    "prompt_tokens_details": {
+      "cached_tokens": 524
+    },
+    "total_tokens": 1975
+  },
+  "wall_seconds": 1.8910000000032596
+}

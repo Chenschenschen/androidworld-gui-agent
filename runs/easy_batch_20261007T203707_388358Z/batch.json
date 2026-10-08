@@ -1,0 +1,18 @@
+{
+  "tasks": [
+    "SystemWifiTurnOn"
+  ],
+  "task_seeds": [
+    42,
+    43,
+    44
+  ],
+  "source_hashes": {
+    "run_task.py": "a7bc4c971aa5167b5d9d03486dcedc85eeb291d96803565ffb98aa7cea964e29",
+    "autoglm_agent.py": "b2a0755bad2086d1994283becc76d13b7fc94d8c729660e93220c4c4f0a0c0e2",
+    "instructions/autoglm.md": "24d6ae60051a7f97bdcdfd5de2cc866d45c948a09fde6cc137ae655f7cfbaef7",
+    "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+    "android_compat.py": "39d6c062518b6092bcd801d36fba1cf10e7642bc0f91ed7975d94dcc07935f20"
+  },
+  "purpose": "Three-case learning evaluation; failures are not discarded."
+}

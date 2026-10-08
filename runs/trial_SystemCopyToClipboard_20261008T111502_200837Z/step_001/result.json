@@ -1,0 +1,17 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Launch",
+    "app": "chrome"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.6095789292279412,
+  "dispatch_returned": true,
+  "visible_fields_after": [
+    {
+      "hint": null,
+      "text": "Search or type web address"
+    }
+  ],
+  "execute_and_observe_seconds": 14.922000000005937
+}

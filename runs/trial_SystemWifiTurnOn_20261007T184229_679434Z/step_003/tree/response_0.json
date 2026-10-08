@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:44:32.8414707Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"No data used\", \"verify\": \"The element with text 'No data used' should be clicked and its state should change to show the network settings.\",\"target\": \"No data used\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4962821500,
+  "load_duration": 21176000,
+  "prompt_eval_count": 1218,
+  "prompt_eval_cached_count": 374,
+  "prompt_eval_duration": 928727000,
+  "eval_count": 50,
+  "eval_duration": 3917159000,
+  "wall_seconds": 7.01600000000326
+}

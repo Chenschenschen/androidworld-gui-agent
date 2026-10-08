@@ -1,0 +1,46 @@
+D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Evidence: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_ContactsAddContact_20261007T211530_303827Z
+Readable trajectory: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_ContactsAddContact_20261007T211530_303827Z\trajectory.txt
+Traceback (most recent call last):
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\run_task.py", line 244, in main
+    setup_required_app(app, env, output)
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\run_task.py", line 109, in setup_required_app
+    app.setup(env)
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\android_world\env\setup_device\apps.py", line 211, in setup
+    controller.click_element("Don't allow")
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\android_world\env\tools.py", line 50, in click_element
+    actuation.find_and_click_element(element_text, self._env)
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\android_world\env\actuation.py", line 242, in find_and_click_element
+    action = _wait_and_find_click_element(element_text, env, case_sensitive)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\android_world\env\actuation.py", line 270, in _wait_and_find_click_element
+    raise ValueError(f'Target text "{target_text}" not found.')
+ValueError: Target text "Don't allow" not found.
+
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261007T211530_303827Z",
+  "agent_done": false,
+  "verifier": "NOT_RUN",
+  "steps": 0,
+  "manual_intervention": false,
+  "evaluation_valid": false,
+  "version": "autoglm_api_v10_timer_gui_observation",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v8_timer_observation",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 244, in main\n    setup_required_app(app, env, output)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 109, in setup_required_app\n    app.setup(env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\setup_device\\apps.py\", line 211, in setup\n    controller.click_element(\"Don't allow\")\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\tools.py\", line 50, in click_element\n    actuation.find_and_click_element(element_text, self._env)\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\actuation.py\", line 242, in find_and_click_element\n    action = _wait_and_find_click_element(element_text, env, case_sensitive)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.venv\\Lib\\site-packages\\android_world\\env\\actuation.py\", line 270, in _wait_and_find_click_element\n    raise ValueError(f'Target text \"{target_text}\" not found.')\nValueError: Target text \"Don't allow\" not found.\n",
+  "error_class": "validation_error",
+  "stop_reason": "error",
+  "video_errors": [],
+  "verified_agent_success": false,
+  "clean_agent_success": false,
+  "videos": [],
+  "duration_seconds": 21.7809999999954,
+  "agent_phase_seconds": null
+}

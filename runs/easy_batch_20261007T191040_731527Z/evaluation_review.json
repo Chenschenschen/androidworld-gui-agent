@@ -1,0 +1,18 @@
+{
+  "kind": "post_run_review",
+  "original_summaries_unchanged": true,
+  "completed_attempts": 15,
+  "official_passes": 1,
+  "repeatability_established": false,
+  "model_only_evaluation_suitable": false,
+  "reason": "The batch contains accessibility-service crashes, camera loading/tree mismatch, overbroad freshness stops and genuine model/validation errors. Runtime evaluation_valid checks initial state and recording, not observation health.",
+  "artifact_review": "artifact_review.json",
+  "analysis_document": "../../docs/FIVE_TASK_EVALUATION.md",
+  "manual_interaction_review": "Earlier user-confirmed interaction batch is excluded separately; this is the fresh batch scheduled after requesting an untouched emulator.",
+  "notes": [
+    "Wifi seed42 earned an official GUI-agent PASS.",
+    "Contacts seed42 steps4/5 overwrite a correct exact name; lost_value.",
+    "Contacts seed42 step6 unchanged Phone target blocked by Gboard suggestions.",
+    "Camera tree Shutter does not prove readiness: saved screenshot and video show loading."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "native": {
+    "action": "COMPLETE",
+    "value": "I have set the battery percentage to be displayed in the status bar.",
+    "verify": "I have set the battery percentage to be displayed in the status bar."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "I have set the battery percentage to be displayed in the status bar."
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

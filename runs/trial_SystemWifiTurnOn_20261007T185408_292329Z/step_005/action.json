@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Internet",
+    "verify": "The Wi-Fi toggle switch within the 'Internet' menu changes from 'OFF' to 'ON'.",
+    "target": "Internet",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 292,
+    "y": 680
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The phone number has been entered in the \"Add Contact or Number…\" field. To proceed, I should confirm the recipient by tapping the checkmark icon on the right side of the input field (bounds [882,123,999,175]) to open the message composition screen.\n\n\ndo(action=\"Tap\", element=[940,149])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464878,
+  "id": "202610082107575aaf15bf2611456b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082107575aaf15bf2611456b",
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 3932,
+    "prompt_tokens_details": {
+      "cached_tokens": 2196
+    },
+    "total_tokens": 4006
+  },
+  "wall_seconds": 1.9219999999913853
+}

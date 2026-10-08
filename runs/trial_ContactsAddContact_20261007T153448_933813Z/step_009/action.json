@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "15",
+    "verify": "The contact creation screen shows the name 'Camila da Silva' and the number '+10433218196'.",
+    "index": "0"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 73,
+    "y": 211
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

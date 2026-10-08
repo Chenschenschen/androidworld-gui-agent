@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "好的，搜索框已经被激活了，我可以看到键盘出现了，而且搜索框中显示\"Text you copied\"。现在我需要输入\"Discount code: SAVE20\"。根据任务，我需要先输入文本，然后长按选择全部，再点击复制。\n\n首先，我需要输入文本。我使用Type操作来输入\"Discount code: SAVE20\"。\ndo(action=\"Type\", text=\"Discount code: SAVE20\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791439029,
+  "id": "20261008135707a2e5a0e22ae243d1",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135707a2e5a0e22ae243d1",
+  "usage": {
+    "completion_tokens": 87,
+    "prompt_tokens": 2636,
+    "prompt_tokens_details": {
+      "cached_tokens": 1019
+    },
+    "total_tokens": 2723
+  },
+  "wall_seconds": 1.7810000000026776
+}

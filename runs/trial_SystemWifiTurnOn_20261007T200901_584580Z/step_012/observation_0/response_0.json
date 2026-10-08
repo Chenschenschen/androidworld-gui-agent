@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn WiFi on. I can see the current screen is the Internet settings page in the Settings app. I can see there's a Wi-Fi toggle switch that appears to be currently off (the toggle is on the right side and appears to be in the off position based on the description).\n\nLooking at the screen, I can see:\n- \"Wi-Fi\" text with a toggle switch on the right\n- The toggle appears to be in the off position (based on the description)\n- The coordinates for the Wi-Fi section are [0,337,999,402] according to the tree structure\n\nI need to tap on the Wi-Fi toggle to turn it on. The toggle switch should be on the right side of the Wi-Fi row. Looking at the coordinates, the Wi-Fi row is at [0,337,999,402], so I should tap somewhere on that row to toggle the Wi-Fi on.\n\nLet me tap on the Wi-Fi toggle area to turn it on.\ndo(action=\"Tap\", element=[897,379])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791403823,
+  "id": "2026100804102027d47dcd9b1c4adb",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100804102027d47dcd9b1c4adb",
+  "usage": {
+    "completion_tokens": 224,
+    "prompt_tokens": 1523,
+    "prompt_tokens_details": {
+      "cached_tokens": 291
+    },
+    "total_tokens": 1747
+  },
+  "wall_seconds": 2.6569999999992433
+}

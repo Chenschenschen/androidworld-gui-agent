@@ -1,0 +1,164 @@
+[
+  {
+    "case": "contacts",
+    "repeat": 1,
+    "condition": "base",
+    "first_valid": true,
+    "first_correct": true,
+    "final_valid": true,
+    "final_correct": true,
+    "executed": false,
+    "calls": [
+      17.9529999999977
+    ]
+  },
+  {
+    "case": "contacts",
+    "repeat": 1,
+    "condition": "examples",
+    "first_valid": false,
+    "first_correct": false,
+    "final_valid": false,
+    "final_correct": false,
+    "executed": false,
+    "calls": [
+      11.953000000001339,
+      14.171999999998661
+    ]
+  },
+  {
+    "case": "contacts",
+    "repeat": 2,
+    "condition": "examples",
+    "first_valid": false,
+    "first_correct": false,
+    "final_valid": false,
+    "final_correct": false,
+    "executed": false,
+    "calls": [
+      11.389999999999418,
+      13.375
+    ]
+  },
+  {
+    "case": "contacts",
+    "repeat": 2,
+    "condition": "base",
+    "first_valid": true,
+    "first_correct": true,
+    "final_valid": true,
+    "final_correct": true,
+    "executed": false,
+    "calls": [
+      10.2970000000023
+    ]
+  },
+  {
+    "case": "contacts",
+    "repeat": 3,
+    "condition": "base",
+    "first_valid": true,
+    "first_correct": true,
+    "final_valid": true,
+    "final_correct": true,
+    "executed": false,
+    "calls": [
+      9.671999999998661
+    ]
+  },
+  {
+    "case": "contacts",
+    "repeat": 3,
+    "condition": "examples",
+    "first_valid": false,
+    "first_correct": false,
+    "final_valid": false,
+    "final_correct": false,
+    "executed": false,
+    "calls": [
+      11.390999999999622,
+      13.109000000000378
+    ]
+  },
+  {
+    "case": "settings",
+    "repeat": 1,
+    "condition": "base",
+    "first_valid": false,
+    "first_correct": false,
+    "final_valid": true,
+    "final_correct": false,
+    "executed": false,
+    "calls": [
+      9.860000000000582,
+      14.389999999999418
+    ]
+  },
+  {
+    "case": "settings",
+    "repeat": 1,
+    "condition": "examples",
+    "first_valid": true,
+    "first_correct": false,
+    "final_valid": true,
+    "final_correct": false,
+    "executed": false,
+    "calls": [
+      12.31300000000192
+    ]
+  },
+  {
+    "case": "settings",
+    "repeat": 2,
+    "condition": "examples",
+    "first_valid": true,
+    "first_correct": false,
+    "final_valid": true,
+    "final_correct": false,
+    "executed": false,
+    "calls": [
+      14.18699999999808
+    ]
+  },
+  {
+    "case": "settings",
+    "repeat": 2,
+    "condition": "base",
+    "first_valid": false,
+    "first_correct": false,
+    "final_valid": false,
+    "final_correct": false,
+    "executed": false,
+    "calls": [
+      9.640999999999622,
+      10.0779999999977
+    ]
+  },
+  {
+    "case": "settings",
+    "repeat": 3,
+    "condition": "base",
+    "first_valid": false,
+    "first_correct": false,
+    "final_valid": false,
+    "final_correct": false,
+    "executed": false,
+    "calls": [
+      9.734000000000378,
+      12.28099999999904
+    ]
+  },
+  {
+    "case": "settings",
+    "repeat": 3,
+    "condition": "examples",
+    "first_valid": true,
+    "first_correct": false,
+    "final_valid": true,
+    "final_correct": false,
+    "executed": false,
+    "calls": [
+      15.89100000000326
+    ]
+  }
+]

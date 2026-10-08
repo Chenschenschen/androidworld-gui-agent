@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe screen shows the Clipper app with a service started notification and instructions for copying to clipboard using ADB shell. To copy the text \"john.doe@example.com\" to the clipboard, I should first long-press the EditText field where the text will be entered (likely the clipboard input area). This will bring up the copy/paste menu. I need to long-press the EditText at [0,114,999,874].\n\n\ndo(action=\"Long Press\", element=[499,495])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791446766,
+  "id": "2026100816060568fa77283cc5406b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100816060568fa77283cc5406b",
+  "usage": {
+    "completion_tokens": 110,
+    "prompt_tokens": 1862,
+    "prompt_tokens_details": {
+      "cached_tokens": 408
+    },
+    "total_tokens": 1972
+  },
+  "wall_seconds": 3.0
+}

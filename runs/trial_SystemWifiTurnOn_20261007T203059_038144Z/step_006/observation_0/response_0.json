@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe Wi-Fi switch is currently OFF (gray track and left thumbs). To turn Wi-Fi on, I need to tap the Wi-Fi switch area. The switch is located in the \"Wi-Fi\" row, which is at coordinates [0,337,999,402] based on the tree structure. This will toggle the switch to the ON position.\ndo(action=\"Tap\", element=[499,379])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405131,
+  "id": "2026100804321063a637866e604f10",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100804321063a637866e604f10",
+  "usage": {
+    "completion_tokens": 92,
+    "prompt_tokens": 2774,
+    "prompt_tokens_details": {
+      "cached_tokens": 554
+    },
+    "total_tokens": 2866
+  },
+  "wall_seconds": 1.985000000000582
+}

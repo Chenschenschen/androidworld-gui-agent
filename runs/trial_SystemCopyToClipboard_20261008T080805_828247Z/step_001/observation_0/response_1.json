@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\ndo(action=\"Launch\", app=\"Chrome\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791446898,
+  "id": "20261008160817ae29a306321c4226",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008160817ae29a306321c4226",
+  "usage": {
+    "completion_tokens": 12,
+    "prompt_tokens": 1994,
+    "prompt_tokens_details": {
+      "cached_tokens": 1857
+    },
+    "total_tokens": 2006
+  },
+  "wall_seconds": 1.0779999999940628
+}

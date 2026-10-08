@@ -1,0 +1,152 @@
+[
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T191041_360830Z",
+    "task": "SystemWifiTurnOn",
+    "seed": 42,
+    "runtime_seconds": 212.21899999999732,
+    "logged_model_api_seconds": 91.891,
+    "logged_model_calls": 5,
+    "official_outcome": "PASS",
+    "error_class": null
+  },
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T191444_496364Z",
+    "task": "SystemWifiTurnOn",
+    "seed": 43,
+    "runtime_seconds": 55.63999999999942,
+    "logged_model_api_seconds": 17.485,
+    "logged_model_calls": 1,
+    "official_outcome": "FAIL",
+    "error_class": "environment_or_execution_error"
+  },
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T191610_718892Z",
+    "task": "SystemWifiTurnOn",
+    "seed": 44,
+    "runtime_seconds": 54.875,
+    "logged_model_api_seconds": 17.516,
+    "logged_model_calls": 1,
+    "official_outcome": "FAIL",
+    "error_class": "environment_or_execution_error"
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T191735_810079Z",
+    "task": "CameraTakePhoto",
+    "seed": 42,
+    "runtime_seconds": 45.48500000000058,
+    "logged_model_api_seconds": 24.125,
+    "logged_model_calls": 3,
+    "official_outcome": "FAIL",
+    "error_class": null
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T191849_841156Z",
+    "task": "CameraTakePhoto",
+    "seed": 43,
+    "runtime_seconds": 41.18699999999808,
+    "logged_model_api_seconds": 24.298,
+    "logged_model_calls": 3,
+    "official_outcome": "FAIL",
+    "error_class": null
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T191958_127385Z",
+    "task": "CameraTakePhoto",
+    "seed": 44,
+    "runtime_seconds": 46.34399999999732,
+    "logged_model_api_seconds": 24.765,
+    "logged_model_calls": 3,
+    "official_outcome": "FAIL",
+    "error_class": null
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T192111_512833Z",
+    "task": "ClockTimerEntry",
+    "seed": 42,
+    "runtime_seconds": 140.10899999999674,
+    "logged_model_api_seconds": 88.453,
+    "logged_model_calls": 13,
+    "official_outcome": "FAIL",
+    "error_class": null
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T192358_651360Z",
+    "task": "ClockTimerEntry",
+    "seed": 43,
+    "runtime_seconds": 130.875,
+    "logged_model_api_seconds": 91.625,
+    "logged_model_calls": 12,
+    "official_outcome": "FAIL",
+    "error_class": "validation_error"
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T192636_081966Z",
+    "task": "ClockTimerEntry",
+    "seed": 44,
+    "runtime_seconds": 76.40600000000268,
+    "logged_model_api_seconds": 51.562,
+    "logged_model_calls": 6,
+    "official_outcome": "FAIL",
+    "error_class": "validation_error"
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T192819_171100Z",
+    "task": "ContactsAddContact",
+    "seed": 42,
+    "runtime_seconds": 117.39100000000326,
+    "logged_model_api_seconds": 75.109,
+    "logged_model_calls": 10,
+    "official_outcome": "FAIL",
+    "error_class": "environment_or_execution_error"
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T193045_459484Z",
+    "task": "ContactsAddContact",
+    "seed": 43,
+    "runtime_seconds": 32.20300000000134,
+    "logged_model_api_seconds": 19.282,
+    "logged_model_calls": 3,
+    "official_outcome": "FAIL",
+    "error_class": "environment_or_execution_error"
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T193201_502151Z",
+    "task": "ContactsAddContact",
+    "seed": 44,
+    "runtime_seconds": 33.78100000000268,
+    "logged_model_api_seconds": 19.281,
+    "logged_model_calls": 3,
+    "official_outcome": "FAIL",
+    "error_class": "environment_or_execution_error"
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T193303_671369Z",
+    "task": "SystemCopyToClipboard",
+    "seed": 42,
+    "runtime_seconds": 53.984000000004016,
+    "logged_model_api_seconds": 41.375,
+    "logged_model_calls": 4,
+    "official_outcome": "FAIL",
+    "error_class": "validation_error"
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T193427_865452Z",
+    "task": "SystemCopyToClipboard",
+    "seed": 43,
+    "runtime_seconds": 40.95300000000134,
+    "logged_model_api_seconds": 24.859,
+    "logged_model_calls": 4,
+    "official_outcome": "FAIL",
+    "error_class": "environment_or_execution_error"
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T193537_200307Z",
+    "task": "SystemCopyToClipboard",
+    "seed": 44,
+    "runtime_seconds": 90.70300000000134,
+    "logged_model_api_seconds": 70.53,
+    "logged_model_calls": 7,
+    "official_outcome": "FAIL",
+    "error_class": "validation_error"
+  }
+]

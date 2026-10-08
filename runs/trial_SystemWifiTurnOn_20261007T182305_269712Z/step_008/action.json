@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "The Settings app opens, displaying the main configuration menu with various options like 'Network & internet', 'Connected devices', etc.",
+    "target": "Settings",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 918,
+    "y": 1615
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

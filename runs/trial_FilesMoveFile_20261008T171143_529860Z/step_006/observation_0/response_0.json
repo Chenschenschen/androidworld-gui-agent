@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The file is selected, and the \"More options\" menu typically contains the Move action. The \"More options\" button is at [882,53,999,105]; tapping it will open the menu with the Move option.\n\n\ndo(action=\"Tap\", element=[941,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791479597,
+  "id": "20261009011315d7ba3f8403514794",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261009011315d7ba3f8403514794",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 6281,
+    "prompt_tokens_details": {
+      "cached_tokens": 3843
+    },
+    "total_tokens": 6345
+  },
+  "wall_seconds": 2.125
+}

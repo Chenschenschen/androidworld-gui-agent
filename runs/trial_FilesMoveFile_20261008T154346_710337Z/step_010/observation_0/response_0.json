@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The sdk_gphone64_x86_64 storage area is open, and both the \"project_medium\" and \"project_easy\" folders are visible. To move the file to the correct destination, I should select the \"project_easy\" folder by tapping its card (bounds [509,539,939,592]) before confirming the move.\n\n\ndo(action=\"Tap\", element=[725,565])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474377,
+  "id": "20261008234616690407962d39494f",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008234616690407962d39494f",
+  "usage": {
+    "completion_tokens": 90,
+    "prompt_tokens": 8300,
+    "prompt_tokens_details": {
+      "cached_tokens": 6311
+    },
+    "total_tokens": 8390
+  },
+  "wall_seconds": 1.985000000000582
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to copy the text \"alex.jordan@example.net\" to the clipboard. I'm in the Chrome search interface and there's a dialog asking if Chrome will let you know when this page is ready. This is irrelevant to the task of copying text to the clipboard. I should dismiss this dialog by tapping \"Cancel\" to get back to the search interface where I can type the text.\ndo(action=\"Tap\", element=[499,482])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407967,
+  "id": "202610080519251fb92ca75713487f",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080519251fb92ca75713487f",
+  "usage": {
+    "completion_tokens": 94,
+    "prompt_tokens": 3154,
+    "prompt_tokens_details": {
+      "cached_tokens": 1823
+    },
+    "total_tokens": 3248
+  },
+  "wall_seconds": 1.687999999994645
+}

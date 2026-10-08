@@ -1,0 +1,15 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.055283490349264705,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 7.3439999999973224,
+  "selected_gui_control": {
+    "label": "File QuickNote.md ",
+    "resource_id": "net.gsantner.markor:id/opoc_filesystem_item__root"
+  }
+}

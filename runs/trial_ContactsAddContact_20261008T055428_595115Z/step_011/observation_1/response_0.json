@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The contact details screen shows \"Maya Martin\" with phone number \"+1 812-634-0319\" and \"Added Oct 15, 2023\". The contact has been successfully created and saved. I will finish the task.\nfinish(message=\"Contact for Maya Martin with phone number +18126340319 has been created successfully. The contact is now saved and displayed in the Contacts app.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438929,
+  "id": "20261008135528eb3630b50430433d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135528eb3630b50430433d",
+  "usage": {
+    "completion_tokens": 87,
+    "prompt_tokens": 3564,
+    "prompt_tokens_details": {
+      "cached_tokens": 2462
+    },
+    "total_tokens": 3651
+  },
+  "wall_seconds": 1.7339999999967404
+}

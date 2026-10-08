@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "219,656",
+    "verify": "The Settings application should be opened.",
+    "point": "219,656"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 237,
+    "y": 1574
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

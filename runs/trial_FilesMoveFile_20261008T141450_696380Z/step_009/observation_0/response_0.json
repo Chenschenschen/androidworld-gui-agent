@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "We are in the \"Move to…\" dialog and need to select the destination folder. The \"sdk_gphone64_x86_64\" storage area is visible and should be selected to access its folders, including \"project_medium\". We should tap on \"sdk_gphone64_x86_64\" to open its contents and locate the destination folder for the move operation.\n\n\ndo(action=\"Tap\", element=[339,233])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469026,
+  "id": "202610082217048870425393a24a24",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082217048870425393a24a24",
+  "usage": {
+    "completion_tokens": 88,
+    "prompt_tokens": 7904,
+    "prompt_tokens_details": {
+      "cached_tokens": 5890
+    },
+    "total_tokens": 7992
+  },
+  "wall_seconds": 1.7970000000059372
+}

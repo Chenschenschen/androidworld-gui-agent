@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows \"02h 00m 70s\", so I have entered '2', '0', '0', '7', and '0'. The next digit in the target \"200701\" is '1', so I should tap the '1' button to complete the sequence.\ndo(action=\"Tap\", element=[245,340])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791439425,
+  "id": "202610081403437be7aa4b9d124aa1",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081403437be7aa4b9d124aa1",
+  "usage": {
+    "completion_tokens": 75,
+    "prompt_tokens": 7164,
+    "prompt_tokens_details": {
+      "cached_tokens": 4745
+    },
+    "total_tokens": 7239
+  },
+  "wall_seconds": 1.75
+}

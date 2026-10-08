@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Network & internet\" screen is open. To turn Wi-Fi on, I need to access the \"Internet\" section, which is the first clickable item labeled \"Internet | Networks available\" at [0,248,999,334]. This is where Wi-Fi networks can be managed.\ndo(action=\"Tap\", element=[499,296])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441182,
+  "id": "20261008143300e3921f58f1214b94",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008143300e3921f58f1214b94",
+  "usage": {
+    "completion_tokens": 75,
+    "prompt_tokens": 2202,
+    "prompt_tokens_details": {
+      "cached_tokens": 771
+    },
+    "total_tokens": 2277
+  },
+  "wall_seconds": 1.7029999999940628
+}

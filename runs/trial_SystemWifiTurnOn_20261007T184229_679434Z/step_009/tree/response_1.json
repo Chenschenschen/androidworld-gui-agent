@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:47:00.8677346Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"About 0 notifications per week\", \"verify\": \"The screen should switch to the Notifications settings menu.\", \"target\": \"About 0 notifications per week\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3792644600,
+  "load_duration": 15568400,
+  "prompt_eval_count": 1419,
+  "prompt_eval_cached_count": 1380,
+  "prompt_eval_duration": 456356000,
+  "eval_count": 43,
+  "eval_duration": 3309238000,
+  "wall_seconds": 5.828000000001339
+}

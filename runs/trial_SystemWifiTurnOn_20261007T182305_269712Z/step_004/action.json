@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "back",
+    "verify": "The Settings app menu should be visible, likely showing the 'Network & Internet' option.",
+    "point": "77,82"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 83,
+    "y": 197
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user now needs to confirm whether the task is complete. The text message has been sent successfully, and the content is \"I think, therefore I am.\" The task objective has been achieved. Therefore, the finish function needs to be called to indicate that the task is complete. It is important to ensure that the completion message is returned correctly, so execute the finish action with the message being the task completion prompt text.\n\n\nfinish(message=\"Text message sent successfully.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791469970,
+  "id": "20261008223248fd1e5236fe3e4ea3",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008223248fd1e5236fe3e4ea3",
+  "usage": {
+    "completion_tokens": 93,
+    "prompt_tokens": 5934,
+    "prompt_tokens_details": {
+      "cached_tokens": 3627
+    },
+    "total_tokens": 6027
+  },
+  "wall_seconds": 2.061999999990803
+}

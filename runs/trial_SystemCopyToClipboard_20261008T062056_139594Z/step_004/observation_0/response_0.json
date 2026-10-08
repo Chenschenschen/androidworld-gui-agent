@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The text \"alex.jordan@example.net\" has been entered in the search field, and the keyboard is still visible. To proceed with copying the text to the clipboard, I need to long press on the entered text in the search field to bring up the context menu that includes the \"Copy\" option. The search field is located at [136,62,881,114].\ndo(action=\"Long Press\", element=[493,106])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440487,
+  "id": "2026100814212697dce8dd9ebf4af1",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814212697dce8dd9ebf4af1",
+  "usage": {
+    "completion_tokens": 91,
+    "prompt_tokens": 3374,
+    "prompt_tokens_details": {
+      "cached_tokens": 1638
+    },
+    "total_tokens": 3465
+  },
+  "wall_seconds": 1.8439999999973224
+}

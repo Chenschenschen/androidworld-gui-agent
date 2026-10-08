@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Never use data to share",
+    "verify": "The 'Never use data to share' option should remain selected.",
+    "target": "Never use data to share",
+    "index": "23",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 542,
+    "y": 1279
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,13 @@
+{
+  "native": {
+    "action": "TYPE",
+    "value": "da",
+    "verify": "The text 'da' is typed into the Last Name field."
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "da"
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

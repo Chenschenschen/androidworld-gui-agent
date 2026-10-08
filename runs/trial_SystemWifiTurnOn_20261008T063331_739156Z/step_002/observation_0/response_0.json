@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Settings app is open and the \"Network & internet\" option is visible, which contains Wi-Fi settings. To proceed with turning Wi-Fi on, I need to tap on \"Network & internet\" at [0,320,999,416].\ndo(action=\"Tap\", element=[499,379])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441227,
+  "id": "20261008143345ab43872e499740d9",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008143345ab43872e499740d9",
+  "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 1929,
+    "prompt_tokens_details": {
+      "cached_tokens": 741
+    },
+    "total_tokens": 1994
+  },
+  "wall_seconds": 1.5159999999887077
+}

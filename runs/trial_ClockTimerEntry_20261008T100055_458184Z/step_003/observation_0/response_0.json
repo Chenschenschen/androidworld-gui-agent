@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Timer tab is open and the keypad is visible. To set 20 hours, 7 minutes, and 1 second, I should enter the digits in the order they will fill the fields (h, m, s): 2, 0, 0, 7, 0, 1. I'll start by tapping \"2\" at [377,285,622,395].\n\n\ndo(action=\"Tap\", element=[499,340])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791453692,
+  "id": "2026100818013142c156d5c03e43bd",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100818013142c156d5c03e43bd",
+  "usage": {
+    "completion_tokens": 103,
+    "prompt_tokens": 2882,
+    "prompt_tokens_details": {
+      "cached_tokens": 1156
+    },
+    "total_tokens": 2985
+  },
+  "wall_seconds": 1.889999999999418
+}

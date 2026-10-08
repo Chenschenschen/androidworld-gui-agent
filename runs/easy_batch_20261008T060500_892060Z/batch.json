@@ -1,0 +1,17 @@
+{
+  "tasks": [
+    "ClockTimerEntry"
+  ],
+  "task_seeds": [
+    43,
+    44
+  ],
+  "source_hashes": {
+    "run_task.py": "a5dd34eb7156283b27813443fff46a843c9fe5485b44b9cfeba475208c5be8e7",
+    "autoglm_agent.py": "bc8c0b317e74942739fea4c61a6c737934a6b82192f5223ff9e6c50f526895fa",
+    "instructions/autoglm.md": "12f4c9d419f8046b19c7ba3e01b88cc309c89d82bf5fbd83bb34aa03cbcf13bf",
+    "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+    "android_compat.py": "39d6c062518b6092bcd801d36fba1cf10e7642bc0f91ed7975d94dcc07935f20"
+  },
+  "purpose": "Three-case learning evaluation; failures are not discarded."
+}

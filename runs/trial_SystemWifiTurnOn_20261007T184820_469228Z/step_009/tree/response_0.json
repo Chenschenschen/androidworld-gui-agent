@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:52:45.4945083Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"When devices are sharing nearby\", \"verify\": \"The 'When devices are sharing nearby' toggle should become visible or change state.\", \"target\": \"When devices are sharing nearby\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4940478300,
+  "load_duration": 19038300,
+  "prompt_eval_count": 1432,
+  "prompt_eval_cached_count": 651,
+  "prompt_eval_duration": 987208000,
+  "eval_count": 47,
+  "eval_duration": 3718939000,
+  "wall_seconds": 6.98399999999674
+}

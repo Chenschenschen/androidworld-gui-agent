@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn WiFi on. I can see we're currently in the Settings app, and there's a settings icon displayed. The screen shows a gear icon in the center, which is typically the main settings page. \n\nTo turn WiFi on, I need to:\n1. Navigate to the WiFi settings\n2. Turn on WiFi\n\nSince I'm already in Settings, I should look for WiFi options. I can see there's a settings icon displayed, so I should tap on it to access the main settings menu where WiFi options would be located.\n\nLooking at the tree structure, I can see there's a LinearLayout with \"Settings\" at coordinates [0,194,999,972]. This seems to be the main settings interface. I should tap on this to access the settings menu where I can find WiFi options.\n\nActually, wait - looking more carefully at the tree structure, I see there's a \"Settings\" LinearLayout at [0,194,999,972]. But I also see there's a \"Settings\" option in the \"App\" section at [0,248,999,328]. Let me tap on the main Settings option first to access the main settings menu where WiFi would be located.\n\nActually, looking at the current screen, I can see there's a gear icon in the center. This is typically the main settings page. I should tap on this gear icon to access the settings menu where I can find WiFi options.\n\nLet me tap on the gear icon at coordinates [0,194,999,972].\ndo(action=\"Tap\", element=[499,499])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791403754,
+  "id": "2026100804091171e31b3d11dc4d42",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100804091171e31b3d11dc4d42",
+  "usage": {
+    "completion_tokens": 336,
+    "prompt_tokens": 1373,
+    "prompt_tokens_details": {
+      "cached_tokens": 291
+    },
+    "total_tokens": 1709
+  },
+  "wall_seconds": 3.5309999999954016
+}

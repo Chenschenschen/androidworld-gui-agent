@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Wi-Fi switch is currently off. To turn Wi-Fi on, I need to tap the Wi-Fi toggle switch, which is located to the right of the \"Wi-Fi\" label. The clickable area for the Wi-Fi switch is [0,337,999,402].\ndo(action=\"Tap\", element=[499,381])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441194,
+  "id": "20261008143312293f43f620bb4bf6",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008143312293f43f620bb4bf6",
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 2527,
+    "prompt_tokens_details": {
+      "cached_tokens": 1046
+    },
+    "total_tokens": 2599
+  },
+  "wall_seconds": 1.7339999999967404
+}

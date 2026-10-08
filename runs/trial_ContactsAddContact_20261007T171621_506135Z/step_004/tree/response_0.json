@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:17:31.8344544Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"TYPE\", \"value\": \"Camila da Silva\", \"verify\": \"The text 'Camila da Silva' should appear in the 'First name' field.\", \"target\": \"First name\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8495658000,
+  "load_duration": 16750900,
+  "prompt_eval_count": 2441,
+  "prompt_eval_cached_count": 369,
+  "prompt_eval_duration": 2833171000,
+  "eval_count": 45,
+  "eval_duration": 5528663000,
+  "wall_seconds": 10.546999999998661
+}

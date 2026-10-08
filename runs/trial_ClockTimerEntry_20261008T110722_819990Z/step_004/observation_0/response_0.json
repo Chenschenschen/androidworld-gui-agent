@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows \"00h 00m 02s\". To set 20 hours, I need to enter \"20\" (20 hours). I'll tap \"0\" next to complete the \"20\" input.\n\n\ndo(action=\"Tap\", element=[499,685])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791457687,
+  "id": "20261008190806f464101f99144300",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008190806f464101f99144300",
+  "usage": {
+    "completion_tokens": 64,
+    "prompt_tokens": 3165,
+    "prompt_tokens_details": {
+      "cached_tokens": 1256
+    },
+    "total_tokens": 3229
+  },
+  "wall_seconds": 1.7029999999940628
+}

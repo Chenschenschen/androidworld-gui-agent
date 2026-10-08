@@ -1,0 +1,107 @@
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "The current date: 2026-10-08, Thursday\n# Setup\nYou are a professional Android operation agent assistant that can fulfill the user's high-level instructions. Given a screenshot of the Android interface at each step, you first analyze the situation, then plan the best course of action using Python-style pseudo-code.\n\n# More details about the code\nYour response format must be structured as follows:\n\nThink first: Use <think>...</think> to analyze the current screen, identify key elements, and determine the most efficient action.\nProvide the action: Use <answer>...</answer> to return a single line of pseudo-code representing the operation.\n\nYour output should STRICTLY follow the format:\n<think>\n[Your thought]\n</think>\n<answer>\n[Your operation code]\n</answer>\n\n- **Tap**\n  Perform a tap action on a specified screen area. The element is a list of 2 integers, representing the coordinates of the tap point.\n  **Example**:\n  <answer>\n  do(action=\"Tap\", element=[x,y])\n  </answer>\n- **Type**\n  Enter text into the currently focused input field.\n  **Example**:\n  <answer>\n  do(action=\"Type\", text=\"Hello World\")\n  </answer>\n- **Swipe**\n  Perform a swipe action with start point and end point.\n  **Examples**:\n  <answer>\n  do(action=\"Swipe\", start=[x1,y1], end=[x2,y2])\n  </answer>\n- **Long Press**\n  Perform a long press action on a specified screen area.\n  You can add the element to the action to specify the long press area. The element is a list of 2 integers, representing the coordinates of the long press point.\n  **Example**:\n  <answer>\n  do(action=\"Long Press\", element=[x,y])\n  </answer>\n- **Launch**\n  Launch an app. Try to use launch action when you need to launch an app. Check the instruction to choose the right app before you use this action.\n  **Example**:\n  <answer>\n  do(action=\"Launch\", app=\"Settings\")\n  </answer>\n- **Back**\n  Press the Back button to navigate to the previous screen.\n  **Example**:\n  <answer>\n  do(action=\"Back\")\n  </answer>\n- **Finish**\n  Terminate the program and optionally print a message.\n  **Example**:\n  <answer>\n  finish(message=\"Task completed.\")\n  </answer>\n\n\nREMEMBER:\n- Think before you act: Always analyze the current UI and the best course of action before executing any step, and output in <think> part.\n- Only ONE LINE of action in <answer> part per response: Each step must contain exactly one line of executable code.\n- Generate execution code strictly according to format requirements.\n"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Copy the following text to the clipboard: john.doe@example.com\n\n{\"current_app\": \"System Home\"}"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The user wants to copy the text \"john.doe@example.com\" to the clipboard. I am on the home screen. To do this, I need to open the clipboard app or use a method to access the clipboard. The most direct way is to launch the \"Settings\" app to find the clipboard settings, but typically, I should look for a way to access the clipboard directly or use a known method like long-pressing text in some apps. However, there is no direct clipboard icon on the home screen. The most reliable method is to launch the \"Settings\" app to find the clipboard option.</think><answer>do(action=\"Launch\", app=\"Settings\")\n</answer>"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "** Screen Info **\n\n{\"current_app\": \"AndroidSystemSettings\"}"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<think>I have launched the Settings app, but the screen is mostly blank, likely still loading. To proceed, I should wait for the content to appear or try to access the clipboard settings directly. Since there is no visible content yet, I'll wait for the settings to fully load before proceeding.</think><answer>do(action=\"Tap\", element=[499,498])\n</answer>"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "** Screen Info **\n\n{\"current_app\": \"AndroidSystemSettings\"}"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The Settings main menu is now visible. To find the clipboard, I should use the search function at the top labeled \"Search settings\" to quickly locate the clipboard option. This is the most efficient way rather than scrolling through all categories.</think><answer>do(action=\"Tap\", element=[499,274])\n</answer>"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "** Screen Info **\n\n{\"current_app\": \"AndroidSystemSettings\"}"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<think>The search did not work as expected and instead navigated to \"Connected devices.\" I need to go back to the main Settings menu to try the search again or find the clipboard option another way. The back button is visible at the top left.</think><answer>do(action=\"Tap\", element=[67,83])\n</answer>"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "** Screen Info **\n\n{\"current_app\": \"AndroidSystemSettings\"}"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<think>I am on the \"Pair new device\" screen. To get back to the main Settings menu and try the search again, I should tap the back arrow at the top left.</think><answer>do(action=\"Tap\", element=[67,83])\n</answer>"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "** Screen Info **\n\n{\"current_app\": \"AndroidSystemSettings\"}"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "<think>I'm on the \"Connected devices\" screen. To return to the main Settings menu and access the search function, I should tap the back arrow at the top left.</think><answer>do(action=\"Tap\", element=[67,83])\n</answer>"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "[screen.png]"
+          }
+        },
+        {
+          "type": "text",
+          "text": "** Screen Info **\n\n{\"current_app\": \"AndroidSystemSettings\"}"
+        }
+      ]
+    }
+  ],
+  "stream": true,
+  "model": "autoglm-phone-multilingual",
+  "temperature": 0,
+  "top_p": 0.85,
+  "frequency_penalty": 0.2,
+  "max_tokens": 3000
+}

@@ -1,0 +1,25 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see the search bar is now focused and I can see the keyboard is displayed. I need to type the discount code \"Discount code: SAVE20\" into the search field. I'll type this exact text.\ndo(action=\"Type\", text=\"Discount code: SAVE20\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438861,
+  "id": "202610081354195cb488be47e34ece",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081354195cb488be47e34ece",
+  "usage": {
+    "completion_tokens": 58,
+    "prompt_tokens": 2369,
+    "prompt_tokens_details": {
+      "cached_tokens": 623
+    },
+    "total_tokens": 2427
+  }
+}

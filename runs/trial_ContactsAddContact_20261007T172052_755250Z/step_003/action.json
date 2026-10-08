@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "No contacts yet",
+    "verify": "The 'New contact' screen should appear, showing input fields for contact details.",
+    "target": "No contacts yet",
+    "index": "8",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1526
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

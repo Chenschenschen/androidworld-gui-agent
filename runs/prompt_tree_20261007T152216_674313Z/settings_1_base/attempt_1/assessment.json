@@ -1,0 +1,23 @@
+{
+  "valid": true,
+  "correct": false,
+  "fields": {
+    "verify": "Settings app is open. note:App opened from settings menu after launcher scroll. WiFi toggle not visible; need to navigate further in settings. explain:WiFi settings are typically under \"Network & internet,\" so scroll down in Settings to locate this section.",
+    "action": "SLIDE",
+    "point1": "965,685",
+    "point2": "972,421",
+    "{\"scrollDirection\"": "\"down\"}"
+  },
+  "action": {
+    "action_type": "slide",
+    "start": [
+      1042,
+      1644
+    ],
+    "end": [
+      1050,
+      1010
+    ]
+  },
+  "executed": false
+}

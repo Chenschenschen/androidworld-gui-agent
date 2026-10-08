@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to turn WiFi on. I'm currently in the Settings app, in the \"Network & internet\" section. I can see the \"Internet\" option at the top which shows \"Networks available\". This is likely where I can access WiFi settings.\n\nLooking at the tree structure, I can see:\n- LinearLayout;click;Internet|Networks available;[0,248,999,334]\n\nThis appears to be the Internet/WiFi option I need to tap to access WiFi settings.\ndo(action=\"Tap\", element=[499,298])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791403764,
+  "id": "2026100804092253c10952e66d48e4",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100804092253c10952e66d48e4",
+  "usage": {
+    "completion_tokens": 122,
+    "prompt_tokens": 1445,
+    "prompt_tokens_details": {
+      "cached_tokens": 291
+    },
+    "total_tokens": 1567
+  },
+  "wall_seconds": 1.9219999999986612
+}

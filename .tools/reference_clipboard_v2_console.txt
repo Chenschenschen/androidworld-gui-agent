@@ -1,0 +1,194 @@
+D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Evidence: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_SystemCopyToClipboard_20261008T111031_420458Z
+Readable trajectory: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_SystemCopyToClipboard_20261008T111031_420458Z\trajectory.txt
+
+==================================================
+💭 Thinking:
+--------------------------------------------------
+
+The user wants to copy the text "john.doe@example.com" to the clipboard. I am on the home screen. To do this, I need to open the clipboard app or use a method to access the clipboard. The most direct way is to launch the "Settings" app to find the clipboard settings, but typically, I should look for a way to access the clipboard directly or use a known method like long-pressing text in some apps. However, there is no direct clipboard icon on the home screen. The most reliable method is to launch the "Settings" app to find the clipboard option.
+
+
+
+
+==================================================
+⏱️  Performance Metrics:
+--------------------------------------------------
+Time to First Token (TTFT): 2.875s
+Time to Thinking End:        3.447s
+Total Inference Time:          3.463s
+==================================================
+Parsing action: do(action="Launch", app="Settings")
+
+
+==================================================
+💭 Thinking:
+--------------------------------------------------
+I have launched the Settings app, but the screen is mostly blank, likely still loading. To proceed, I should wait for the content to appear or try to access the clipboard settings directly. Since there is no visible content yet, I'll wait for the settings to fully load before proceeding.
+
+
+==================================================
+⏱️  Performance Metrics:
+--------------------------------------------------
+Time to First Token (TTFT): 2.561s
+Time to Thinking End:        2.614s
+Total Inference Time:          2.628s
+==================================================
+Parsing action: do(action="Tap", element=[499,498])
+
+
+==================================================
+💭 Thinking:
+--------------------------------------------------
+The Settings main menu is now visible. To find the clipboard, I should use the search function at the top labeled "Search settings" to quickly locate the clipboard option. This is the most efficient way rather than scrolling through all categories.
+
+
+==================================================
+⏱️  Performance Metrics:
+--------------------------------------------------
+Time to First Token (TTFT): 2.428s
+Time to Thinking End:        2.475s
+Total Inference Time:          2.493s
+==================================================
+Parsing action: do(action="Tap", element=[499,274])
+
+
+==================================================
+💭 Thinking:
+--------------------------------------------------
+The search did not work as expected and instead navigated to "Connected devices." I need to go back to the main Settings menu to try the search again or find the clipboard option another way. The back button is visible at the top left.
+
+==================================================
+⏱️  Performance Metrics:
+--------------------------------------------------
+Time to First Token (TTFT): 2.541s
+Time to Thinking End:        2.597s
+Total Inference Time:          2.611s
+==================================================
+Parsing action: do(action="Tap", element=[67,83])
+
+
+==================================================
+💭 Thinking:
+--------------------------------------------------
+I am on the "Pair new device" screen. To get back to the main Settings menu and try the search again, I should tap the back arrow at the top left.
+
+==================================================
+⏱️  Performance Metrics:
+--------------------------------------------------
+Time to First Token (TTFT): 2.424s
+Time to Thinking End:        2.458s
+Total Inference Time:          2.470s
+==================================================
+Parsing action: do(action="Tap", element=[67,83])
+
+
+==================================================
+💭 Thinking:
+--------------------------------------------------
+I'm on the "Connected devices" screen. To return to the main Settings menu and access the search function, I should tap the back arrow at the top left.
+
+==================================================
+⏱️  Performance Metrics:
+--------------------------------------------------
+Time to First Token (TTFT): 2.636s
+Time to Thinking End:        2.660s
+Total Inference Time:          2.670s
+==================================================
+Parsing action: do(action="Tap", element=[67,83])
+
+
+==================================================
+💭 Thinking:
+--------------------------------------------------
+I'm back at the main Settings menu. To find the clipboard, I should tap the "Search settings" bar at the top to activate the search field and type "clipboard" to locate the clipboard settings.
+
+==================================================
+⏱️  Performance Metrics:
+--------------------------------------------------
+Time to First Token (TTFT): 2.508s
+Time to Thinking End:        2.542s
+Total Inference Time:          2.555s
+==================================================
+Parsing action: do(action="Tap", element=[499,274])
+
+
+==================================================
+💭 Thinking:
+--------------------------------------------------
+The search field is now active. I should type "clipboard" to search for clipboard settings and find the option to copy text to the clipboard.
+
+==================================================
+⏱️  Performance Metrics:
+--------------------------------------------------
+Time to First Token (TTFT): 2.282s
+Time to Thinking End:        2.302s
+Total Inference Time:          2.309s
+==================================================
+Parsing action: do(action="Type", text="clipboard")
+
+Traceback (most recent call last):
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.tools\Open-AutoGLM\phone_agent\agent.py", line 209, in _execute_step
+    result = self.action_handler.execute(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\upstream_reference.py", line 198, in checked_execute
+    raise RuntimeError("Native Type requires ADB Keyboard; missing emulator prerequisite")
+RuntimeError: Native Type requires ADB Keyboard; missing emulator prerequisite
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\run_task.py", line 339, in main
+    result = agent.step(task.goal)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\upstream_reference.py", line 218, in step
+    result = self.native.step(goal)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.tools\Open-AutoGLM\phone_agent\agent.py", line 129, in step
+    return self._execute_step(task, is_first)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.tools\Open-AutoGLM\phone_agent\agent.py", line 215, in _execute_step
+    result = self.action_handler.execute(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\upstream_reference.py", line 189, in checked_execute
+    raise ValueError("Native parser altered the call or substituted finish after an error")
+ValueError: Native parser altered the call or substituted finish after an error
+
+{
+  "kind": "learning_trial",
+  "task": "SystemCopyToClipboard",
+  "run_id": "trial_SystemCopyToClipboard_20261008T111031_420458Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 7,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "upstream_reference_v2_windows_import",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "official_en_86f5538",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 8,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.tools\\Open-AutoGLM\\phone_agent\\agent.py\", line 209, in _execute_step\n    result = self.action_handler.execute(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\upstream_reference.py\", line 198, in checked_execute\n    raise RuntimeError(\"Native Type requires ADB Keyboard; missing emulator prerequisite\")\nRuntimeError: Native Type requires ADB Keyboard; missing emulator prerequisite\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 339, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\upstream_reference.py\", line 218, in step\n    result = self.native.step(goal)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.tools\\Open-AutoGLM\\phone_agent\\agent.py\", line 129, in step\n    return self._execute_step(task, is_first)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.tools\\Open-AutoGLM\\phone_agent\\agent.py\", line 215, in _execute_step\n    result = self.action_handler.execute(\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\upstream_reference.py\", line 189, in checked_execute\n    raise ValueError(\"Native parser altered the call or substituted finish after an error\")\nValueError: Native parser altered the call or substituted finish after an error\n",
+  "error_class": "validation_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 8,
+  "assessment_calls_attempted": 0,
+  "assessment_errors": [],
+  "gui_actions_dispatched": 7,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "clean_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 52.078000000008615,
+  "agent_phase_seconds": 42.51499999999942
+}

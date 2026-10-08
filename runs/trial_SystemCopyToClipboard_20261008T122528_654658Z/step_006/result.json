@@ -1,0 +1,15 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.3078067555147059,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 5.937000000005355,
+  "selected_gui_control": {
+    "label": "Create a new file or folder",
+    "resource_id": "net.gsantner.markor:id/fab_add_new_item"
+  }
+}

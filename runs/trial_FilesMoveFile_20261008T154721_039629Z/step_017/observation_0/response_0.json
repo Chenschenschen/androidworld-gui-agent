@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "We have the \"Move to…\" option in the menu, which is the correct choice to initiate moving the file to another folder. We should tap on \"Move to…\" to proceed with selecting the destination folder.\n\n\ndo(action=\"Tap\", element=[751,341])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791474691,
+  "id": "202610082351302e0cefd2e3c845cb",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082351302e0cefd2e3c845cb",
+  "usage": {
+    "completion_tokens": 60,
+    "prompt_tokens": 12557,
+    "prompt_tokens_details": {
+      "cached_tokens": 10298
+    },
+    "total_tokens": 12617
+  },
+  "wall_seconds": 1.7189999999973224
+}

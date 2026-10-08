@@ -1,0 +1,13 @@
+{
+  "native": {
+    "action": "AWAKE",
+    "value": "settings",
+    "verify": "The Settings app should open, displaying the main settings menu."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,7 @@
+{
+  "backend": "uiautomator",
+  "accessibility_services_before": "com.google.androidenv.accessibilityforwarder/com.google.androidenv.accessibilityforwarder.AccessibilityForwarder",
+  "accessibility_services_after": "null",
+  "fresh_xml": "unique path, checked dump/read and XML parsing",
+  "task_state_modified": false
+}

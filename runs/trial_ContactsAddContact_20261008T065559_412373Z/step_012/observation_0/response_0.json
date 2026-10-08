@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "All required fields (First name, Last name, Phone) are filled. To save the contact, I should tap the \"Save\" button in the top-right corner.\ndo(action=\"Tap\", element=[758,87])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442626,
+  "id": "20261008145705ff7ce8150cff4132",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008145705ff7ce8150cff4132",
+  "usage": {
+    "completion_tokens": 47,
+    "prompt_tokens": 3782,
+    "prompt_tokens_details": {
+      "cached_tokens": 2492
+    },
+    "total_tokens": 3829
+  },
+  "wall_seconds": 1.5
+}

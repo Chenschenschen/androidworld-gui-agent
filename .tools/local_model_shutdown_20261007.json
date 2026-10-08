@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-07T19:58:01.6468545Z",
+  "stopped": [
+    {
+      "Id": 16148,
+      "ProcessName": "ollama",
+      "WorkingSet64": 33026048
+    },
+    {
+      "Id": 12296,
+      "ProcessName": "ollama app",
+      "WorkingSet64": 27275264
+    }
+  ],
+  "gpu_after": [
+    "memory.used [MiB], memory.total [MiB]",
+    "2281 MiB, 8188 MiB"
+  ],
+  "remaining_model_processes": []
+}

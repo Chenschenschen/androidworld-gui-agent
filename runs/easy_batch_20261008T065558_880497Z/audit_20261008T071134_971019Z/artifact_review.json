@@ -1,0 +1,158 @@
+[
+  {
+    "run_id": "trial_ContactsAddContact_20261008T065559_412373Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ContactsAddContact",
+      "run_id": "trial_ContactsAddContact_20261008T065559_412373Z",
+      "agent_done": false,
+      "verifier": "PASS",
+      "steps": 12,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v20_unique_native_decision",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v15_point_or_box",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 12,
+      "stop_reason": "step_budget",
+      "model_calls_attempted": 12,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": false,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 72.46899999999732,
+      "agent_phase_seconds": 66.6880000000092
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 12,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          614,
+          405
+        ]
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          835,
+          83
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          68,
+          87
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          876,
+          835
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          494,
+          385
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Type",
+        "text": "Camila"
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          494,
+          471
+        ]
+      },
+      {
+        "step": "step_008",
+        "command": "do",
+        "action": "Type",
+        "text": "da Silva"
+      },
+      {
+        "step": "step_009",
+        "command": "do",
+        "action": "Swipe",
+        "start": [
+          499,
+          570
+        ],
+        "end": [
+          499,
+          350
+        ]
+      },
+      {
+        "step": "step_010",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          494,
+          449
+        ]
+      },
+      {
+        "step": "step_011",
+        "command": "do",
+        "action": "Type",
+        "text": "+10433218196"
+      },
+      {
+        "step": "step_012",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          758,
+          87
+        ]
+      }
+    ],
+    "model_finish": [],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 366,
+        "fps": 5.473160908272216,
+        "duration_seconds": 66.87177777777778
+      }
+    ],
+    "incomplete_steps": []
+  }
+]

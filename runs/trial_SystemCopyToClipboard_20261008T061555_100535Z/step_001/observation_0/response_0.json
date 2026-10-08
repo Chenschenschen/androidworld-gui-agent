@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"Discount code: SAVE20\" to the clipboard. The current screen is the home screen with various app icons. To copy text to the clipboard, I need to first open an app that can handle text input and clipboard operations. The most suitable app would be Google Chrome, as it has text editing features and clipboard support. I should launch the Chrome app first.\ndo(action=\"Launch\", app=\"Chrome\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440167,
+  "id": "20261008141605d6255d992ebd466b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008141605d6255d992ebd466b",
+  "usage": {
+    "completion_tokens": 94,
+    "prompt_tokens": 1979,
+    "prompt_tokens_details": {
+      "cached_tokens": 749
+    },
+    "total_tokens": 2073
+  },
+  "wall_seconds": 2.0469999999913853
+}

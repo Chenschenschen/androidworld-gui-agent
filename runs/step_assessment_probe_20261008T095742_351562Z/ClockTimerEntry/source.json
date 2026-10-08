@@ -1,0 +1,20 @@
+{
+  "run_id": "trial_ClockTimerEntry_20261008T081804_857919Z",
+  "step": 5,
+  "executed": false,
+  "actual_result": {
+    "action": {
+      "command": "do",
+      "action": "Tap"
+    },
+    "no_visible_effect": false,
+    "image_difference": 0.002089556525735294,
+    "dispatch_returned": true,
+    "visible_fields_after": [],
+    "execute_and_observe_seconds": 4.265999999988708,
+    "selected_gui_control": {
+      "label": "7",
+      "resource_id": "com.google.android.deskclock:id/timer_setup_digit_7"
+    }
+  }
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "run_id": "trial_ContactsAddContact_20261008T055327_493327Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ContactsAddContact",
+      "run_id": "trial_ContactsAddContact_20261008T055327_493327Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 11,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v14_contacts_unicode_setup",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v10_timer_labels",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 11,
+      "stop_reason": "complete",
+      "model_calls_attempted": 11,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 60.5,
+      "agent_phase_seconds": 55.42200000000594
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 11,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          614,
+          409
+        ]
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          876,
+          836
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          494,
+          386
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Type",
+        "text": "Hugo"
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          494,
+          472
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Type",
+        "text": "Ali"
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Swipe",
+        "start": [
+          499,
+          570
+        ],
+        "end": [
+          499,
+          350
+        ]
+      },
+      {
+        "step": "step_008",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          494,
+          342
+        ]
+      },
+      {
+        "step": "step_009",
+        "command": "do",
+        "action": "Type",
+        "text": "+12751797908"
+      },
+      {
+        "step": "step_010",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          758,
+          87
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_011",
+        "command": "finish",
+        "message": "Contact for Hugo Ali with phone number +12751797908 has been successfully created and saved in the Contacts app."
+      }
+    ],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 562,
+        "fps": 10.757042268498157,
+        "duration_seconds": 52.244844444444446
+      }
+    ],
+    "incomplete_steps": []
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261008T055428_595115Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ContactsAddContact",
+      "run_id": "trial_ContactsAddContact_20261008T055428_595115Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 11,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v14_contacts_unicode_setup",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v10_timer_labels",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 11,
+      "stop_reason": "complete",
+      "model_calls_attempted": 12,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 63.63999999999942,
+      "agent_phase_seconds": 58.34399999999732
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 12,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          614,
+          409
+        ]
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          876,
+          836
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          494,
+          385
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Type",
+        "text": "Maya"
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          494,
+          471
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Type",
+        "text": "Martin"
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Swipe",
+        "start": [
+          499,
+          548
+        ],
+        "end": [
+          499,
+          328
+        ]
+      },
+      {
+        "step": "step_008",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          494,
+          354
+        ]
+      },
+      {
+        "step": "step_009",
+        "command": "do",
+        "action": "Type",
+        "text": "+18126340319"
+      },
+      {
+        "step": "step_010",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          764,
+          87
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_011",
+        "command": "finish",
+        "message": "Contact for Maya Martin with phone number +18126340319 has been created successfully. The contact is now saved and displayed in the Contacts app."
+      }
+    ],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 541,
+        "fps": 8.976958586518965,
+        "duration_seconds": 60.2654
+      }
+    ],
+    "incomplete_steps": []
+  }
+]

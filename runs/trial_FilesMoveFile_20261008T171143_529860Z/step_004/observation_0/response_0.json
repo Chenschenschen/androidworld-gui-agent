@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I need to enter the source folder \"project_easy\" to locate the file cooking-recipe.md. The \"project_easy\" folder is visible at [509,592,939,645]; tapping it will open the folder contents.\n\n\ndo(action=\"Tap\", element=[725,618])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791479567,
+  "id": "2026100901124514323560207947b5",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100901124514323560207947b5",
+  "usage": {
+    "completion_tokens": 67,
+    "prompt_tokens": 4747,
+    "prompt_tokens_details": {
+      "cached_tokens": 2170
+    },
+    "total_tokens": 4814
+  },
+  "wall_seconds": 1.7190000000118744
+}

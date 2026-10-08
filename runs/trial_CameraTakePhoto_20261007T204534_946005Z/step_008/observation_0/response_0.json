@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants me to take one photo using the camera app. Looking at the screenshot, I can see we're already in the camera app. I can see:\n\n1. A camera viewfinder showing what appears to be a colorful structure\n2. At the bottom, there's a shutter button (the circular button with camera icon)\n3. There's also what appears to be a thumbnail/preview in the bottom right corner showing a small image\n\nThe task is to take one photo. I need to tap the shutter button to take the photo. The shutter button appears to be at the bottom of the screen, around coordinates (499, 904) based on the tree structure description.\n\nLet me tap the shutter button to take the photo.\ndo(action=\"Tap\", element=[499,904])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406008,
+  "id": "20261008044645802cc3a7ae1849ad",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008044645802cc3a7ae1849ad",
+  "usage": {
+    "completion_tokens": 169,
+    "prompt_tokens": 1842,
+    "prompt_tokens_details": {
+      "cached_tokens": 511
+    },
+    "total_tokens": 2011
+  },
+  "wall_seconds": 2.313000000001921
+}

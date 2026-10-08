@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "To send a message, I need to start a new conversation. The \"Start a conversation\" text is clickable and clearly visible in the center of the screen.\n\n\ndo(action=\"Tap\", element=[500,203])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791466170,
+  "id": "20261008212929a95ece8fedc64b9c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008212929a95ece8fedc64b9c",
+  "usage": {
+    "completion_tokens": 48,
+    "prompt_tokens": 2947,
+    "prompt_tokens_details": {
+      "cached_tokens": 1603
+    },
+    "total_tokens": 2995
+  },
+  "wall_seconds": 1.625
+}

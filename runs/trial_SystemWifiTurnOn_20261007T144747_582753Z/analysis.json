@@ -1,0 +1,12 @@
+{
+  "evaluation_valid": false,
+  "verified_agent_success": false,
+  "category": "initialization_error",
+  "failure_class": null,
+  "initial_verifier_score": 1.0,
+  "final_verifier_score": 1.0,
+  "agent_actions": 0,
+  "conclusion": "Verifier PASS was already satisfied; exclude from agent success counts.",
+  "diagnostic": ".review/wifi_start_diagnostic.json",
+  "correction": "Reset before official initialization, as in the official minimal runner; abort if initial score is not zero."
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261007T171029_450783Z",
+  "agent_done": true,
+  "verifier": "FAIL",
+  "steps": 8,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "learning_targeted_type_v3_gpu16",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_targeted_type_v3",
+  "observation": "tree_first",
+  "grounding": "indices_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 8,
+  "stop_reason": "complete",
+  "model_calls_attempted": 8,
+  "verifier_score": 0.0,
+  "failure_class": "false_done",
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 109.10900000000038
+}

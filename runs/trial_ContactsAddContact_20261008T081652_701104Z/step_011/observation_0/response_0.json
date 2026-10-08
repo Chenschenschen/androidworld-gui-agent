@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The contact details screen shows the saved contact with the correct name and phone number. Task completed.\n\nfinish(message=\"Contact for Camila da Silva with phone number +10433218196 has been created successfully.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447480,
+  "id": "2026100816175900dc5c03c59c4d76",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100816175900dc5c03c59c4d76",
+  "usage": {
+    "completion_tokens": 43,
+    "prompt_tokens": 3636,
+    "prompt_tokens_details": {
+      "cached_tokens": 2347
+    },
+    "total_tokens": 3679
+  },
+  "wall_seconds": 1.5469999999913853
+}

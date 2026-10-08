@@ -1,0 +1,25 @@
+{
+  "version": "learning_tree_first_json_v1",
+  "prompt_version": "gelab_json_v1",
+  "action_format": "json_schema",
+  "observation": "tree_first",
+  "prompt_examples": false,
+  "max_screenshot_fallbacks": 2,
+  "model": "gelab-zero-4b-preview:latest",
+  "options": {
+    "temperature": 1,
+    "top_k": 20,
+    "top_p": 0.95,
+    "num_ctx": 4096,
+    "num_gpu": 16,
+    "num_predict": 256,
+    "seed": 42
+  },
+  "max_steps": 12,
+  "max_seconds": 900,
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "note": "User-selected tree/index-first policy; two logged image fallbacks and one correction per step across modes. Native three-example prompt was worse. A schema-constrained JSON interface produced correct actions in 6/6 saved-screen probes; live task success still requires official verification.",
+  "task_seed": 42
+}

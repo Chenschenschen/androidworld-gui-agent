@@ -1,0 +1,58 @@
+D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Evidence: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_ContactsAddContact_20261008T081652_701104Z
+Readable trajectory: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_ContactsAddContact_20261008T081652_701104Z\trajectory.txt
+Step 1, screenshot, AutoGLM call 1
+Chosen: {'action_type': 'open_app', 'app_name': 'contacts'}
+Step 2, screenshot, AutoGLM call 2
+Chosen: {'action_type': 'click', 'x': 946, 'y': 2006}
+Step 3, screenshot, AutoGLM call 3
+Chosen: {'action_type': 'click', 'x': 533, 'y': 924}
+Step 4, screenshot, AutoGLM call 4
+Chosen: {'action_type': 'input_text', 'text': 'Camila', 'clear_text': True}
+Step 5, screenshot, AutoGLM call 5
+Chosen: {'action_type': 'click', 'x': 533, 'y': 1132}
+Step 6, screenshot, AutoGLM call 6
+Chosen: {'action_type': 'input_text', 'text': 'da Silva', 'clear_text': True}
+Step 7, screenshot, AutoGLM call 7
+Chosen: {'action_type': 'slide', 'start': (538, 1303), 'end': (538, 645)}
+Step 8, screenshot, AutoGLM call 8
+Chosen: {'action_type': 'click', 'x': 533, 'y': 1010}
+Step 9, screenshot, AutoGLM call 9
+Chosen: {'action_type': 'input_text', 'text': '+10433218196', 'clear_text': True}
+Step 10, screenshot, AutoGLM call 10
+Chosen: {'action_type': 'click', 'x': 825, 'y': 208}
+Step 11, screenshot, AutoGLM call 11
+Chosen: {'action_type': 'status', 'goal_status': 'complete', 'reason': 'Contact for Camila da Silva with phone number +10433218196 has been created successfully.'}
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261008T081652_701104Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 11,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v28_actual_control_feedback",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 16,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 11,
+  "stop_reason": "complete",
+  "model_calls_attempted": 11,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 71.43700000000536,
+  "agent_phase_seconds": 65.31200000000536
+}

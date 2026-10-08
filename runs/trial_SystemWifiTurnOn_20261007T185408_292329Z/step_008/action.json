@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Internet",
+    "verify": "The 'Internet' option should be selected from the 'Network & internet' menu.",
+    "target": "Settings",
+    "index": "26",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 943,
+    "y": 717
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Last name",
+    "verify": "The 'Last name' input field should remain focused.",
+    "target": "Last name",
+    "index": "8",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 535,
+    "y": 1135
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The phone field is focused and empty. Enter the phone number \"+12751797908\" as required by the task input.\n\n\ndo(action=\"Type\", text=\"+12751797908\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447787,
+  "id": "20261008162305821d945fb4a041ef",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008162305821d945fb4a041ef",
+  "usage": {
+    "completion_tokens": 46,
+    "prompt_tokens": 3268,
+    "prompt_tokens_details": {
+      "cached_tokens": 1985
+    },
+    "total_tokens": 3314
+  },
+  "wall_seconds": 1.4839999999967404
+}

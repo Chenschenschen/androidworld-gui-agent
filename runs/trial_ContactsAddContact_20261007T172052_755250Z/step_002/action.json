@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Phone contacts",
+    "verify": "The 'Phone contacts' screen should open, showing existing contacts or an option to add a new one.",
+    "target": "Phone contacts",
+    "index": "9",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 262,
+    "y": 371
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

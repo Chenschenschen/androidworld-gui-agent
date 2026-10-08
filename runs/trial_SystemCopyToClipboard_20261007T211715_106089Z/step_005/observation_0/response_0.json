@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I'm back at the Chrome home screen. I need to search for \"john.doe@example.com\" to copy it to the clipboard. Let me tap on the search bar again.\ndo(action=\"Tap\", element=[499,326])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407869,
+  "id": "20261008051748975431af54ec4cf2",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008051748975431af54ec4cf2",
+  "usage": {
+    "completion_tokens": 51,
+    "prompt_tokens": 2529,
+    "prompt_tokens_details": {
+      "cached_tokens": 1176
+    },
+    "total_tokens": 2580
+  },
+  "wall_seconds": 1.610000000000582
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "learning_trial",
+  "task": "SystemCopyToClipboard",
+  "run_id": "trial_SystemCopyToClipboard_20261008T100628_570867Z",
+  "agent_done": false,
+  "verifier": "NOT_RUN",
+  "steps": 2,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v31_native_read_only_assessment",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 2
+}

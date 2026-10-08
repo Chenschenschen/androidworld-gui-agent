@@ -1,0 +1,15 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Long Press"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.010583735447303922,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 4.812999999994645,
+  "selected_gui_control": {
+    "label": "sci_fi_book.mp3",
+    "resource_id": "com.google.android.documentsui:id/item_root"
+  }
+}

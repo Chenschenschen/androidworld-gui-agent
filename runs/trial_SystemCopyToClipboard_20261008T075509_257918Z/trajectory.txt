@@ -1,0 +1,108 @@
+
+--- 2026-10-08T07:55:09.291901+00:00 | RUN | RUN START ---
+{
+  "task": "SystemCopyToClipboard",
+  "config": {
+    "version": "autoglm_api_v23_upstream_contract",
+    "provider": "zai",
+    "prompt_version": "autoglm_native_en_v18_upstream_concise_goal",
+    "model": "autoglm-phone-multilingual",
+    "observation": "screenshot",
+    "tree_backend": "none",
+    "supplemental_tree_packages": [
+      "com.android.settings",
+      "com.google.android.deskclock",
+      "com.android.chrome"
+    ],
+    "action_format": "native_pseudocall",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 0.85,
+      "frequency_penalty": 0.2,
+      "max_tokens": 3000
+    },
+    "max_steps": 12,
+    "task_step_budgets": {
+      "ContactsAddContact": 16
+    },
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "max_reobservations": 1,
+    "freshness_global_difference": 0.08,
+    "freshness_target_difference": 0.08,
+    "no_effect_difference": 0.001,
+    "note": "v23 follows pinned Open-AutoGLM English prompt/3000-token cap and sourced Android World completion/recovery/text-selection guidance. Long task recipes and unsupported Clock Type exception withdrawn. Short visible completion goals, original task once, ordered native history, latest image and factual GUI status. Chrome paired field centers repair observed wrong suggestion grounding; Contacts16-step budget follows real Saveat12. Scheduler always stops first failed clean trial for logged diagnosis before another run. Sources and slide mapping: docs/COURSE_AND_UPSTREAM_REVIEW.md.",
+    "visual_stability_checks": 3,
+    "visual_stability_pause": 0.5,
+    "visual_stability_difference": 0.01,
+    "api_base_url": "https://api.z.ai/api/paas/v4",
+    "task_seed": 43,
+    "task_name": "SystemCopyToClipboard"
+  }
+}
+
+--- 2026-10-08T07:55:09.474039+00:00 | RUN | OBSERVATION INFRASTRUCTURE ---
+{
+  "backend": "none",
+  "accessibility_services_before": "null",
+  "accessibility_services_after": "null",
+  "tree_used_for_model": false,
+  "task_state_modified": false
+}
+
+--- 2026-10-08T07:55:10.086858+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Copy the following text to the clipboard: john.doe@example.com",
+  "parameters": {
+    "clipboard_content": "john.doe@example.com"
+  },
+  "task_seed": 43,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-08T07:55:18.885449+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-08T07:55:25.603552+00:00 | RUN | RUN ERROR ---
+{
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 309, in main\n    raise RuntimeError(\"Recording failed to start: \" + str(video_errors))\nRuntimeError: Recording failed to start: ['Traceback (most recent call last):\\n  File \"D:\\\\Personal\\\\TUM_MiM\\\\5th_Semester\\\\Agentic_AI_in_Modern_Business_MGTHN0211\\\\project\\\\run_task.py\", line 174, in record_video\\n    pid = subprocess.check_output(prefix + [\"shell\", \"pidof\", \"screenrecord\"]).decode().strip()\\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"D:\\\\Personal\\\\TUM_MiM\\\\5th_Semester\\\\Agentic_AI_in_Modern_Business_MGTHN0211\\\\project\\\\.tools\\\\python\\\\cpython-3.11.17-windows-x86_64-none\\\\Lib\\\\subprocess.py\", line 466, in check_output\\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"D:\\\\Personal\\\\TUM_MiM\\\\5th_Semester\\\\Agentic_AI_in_Modern_Business_MGTHN0211\\\\project\\\\.tools\\\\python\\\\cpython-3.11.17-windows-x86_64-none\\\\Lib\\\\subprocess.py\", line 571, in run\\n    raise CalledProcessError(retcode, process.args,\\nsubprocess.CalledProcessError: Command \\'[\\'C:\\\\\\\\Users\\\\\\\\koc\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Android\\\\\\\\Sdk\\\\\\\\platform-tools\\\\\\\\adb.exe\\', \\'-s\\', \\'emulator-5554\\', \\'shell\\', \\'pidof\\', \\'screenrecord\\']\\' returned non-zero exit status 1.\\n']\n",
+  "class": "environment_setup_error"
+}
+
+--- 2026-10-08T07:55:27.146780+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "SystemCopyToClipboard",
+  "run_id": "trial_SystemCopyToClipboard_20261008T075509_257918Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 0,
+  "manual_intervention": false,
+  "evaluation_valid": false,
+  "version": "autoglm_api_v23_upstream_contract",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v18_upstream_concise_goal",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 309, in main\n    raise RuntimeError(\"Recording failed to start: \" + str(video_errors))\nRuntimeError: Recording failed to start: ['Traceback (most recent call last):\\n  File \"D:\\\\Personal\\\\TUM_MiM\\\\5th_Semester\\\\Agentic_AI_in_Modern_Business_MGTHN0211\\\\project\\\\run_task.py\", line 174, in record_video\\n    pid = subprocess.check_output(prefix + [\"shell\", \"pidof\", \"screenrecord\"]).decode().strip()\\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"D:\\\\Personal\\\\TUM_MiM\\\\5th_Semester\\\\Agentic_AI_in_Modern_Business_MGTHN0211\\\\project\\\\.tools\\\\python\\\\cpython-3.11.17-windows-x86_64-none\\\\Lib\\\\subprocess.py\", line 466, in check_output\\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"D:\\\\Personal\\\\TUM_MiM\\\\5th_Semester\\\\Agentic_AI_in_Modern_Business_MGTHN0211\\\\project\\\\.tools\\\\python\\\\cpython-3.11.17-windows-x86_64-none\\\\Lib\\\\subprocess.py\", line 571, in run\\n    raise CalledProcessError(retcode, process.args,\\nsubprocess.CalledProcessError: Command \\'[\\'C:\\\\\\\\Users\\\\\\\\koc\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Android\\\\\\\\Sdk\\\\\\\\platform-tools\\\\\\\\adb.exe\\', \\'-s\\', \\'emulator-5554\\', \\'shell\\', \\'pidof\\', \\'screenrecord\\']\\' returned non-zero exit status 1.\\n']\n",
+  "error_class": "environment_setup_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "video_errors": [
+    "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 174, in record_video\n    pid = subprocess.check_output(prefix + [\"shell\", \"pidof\", \"screenrecord\"]).decode().strip()\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.tools\\python\\cpython-3.11.17-windows-x86_64-none\\Lib\\subprocess.py\", line 466, in check_output\n    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\.tools\\python\\cpython-3.11.17-windows-x86_64-none\\Lib\\subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['C:\\\\Users\\\\koc\\\\AppData\\\\Local\\\\Android\\\\Sdk\\\\platform-tools\\\\adb.exe', '-s', 'emulator-5554', 'shell', 'pidof', 'screenrecord']' returned non-zero exit status 1.\n"
+  ],
+  "recording_error": "Recording failed or did not finish within its join budget",
+  "verified_agent_success": false,
+  "clean_agent_success": false,
+  "videos": [],
+  "duration_seconds": 17.85899999999674,
+  "agent_phase_seconds": null
+}

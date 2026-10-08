@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The navigation drawer is open, displaying the available filesystem locations. To access the \"sdk_gphone64_x86_64\" storage area and locate the \"project_easy\" folder, I need to tap on \"sdk_gphone64_x86_64\" at [0, 509, 679, 570].\n\n\ndo(action=\"Tap\", element=[339,539])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791468374,
+  "id": "202610082206125f5179792ec14bb9",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082206125f5179792ec14bb9",
+  "usage": {
+    "completion_tokens": 85,
+    "prompt_tokens": 3639,
+    "prompt_tokens_details": {
+      "cached_tokens": 1713
+    },
+    "total_tokens": 3724
+  },
+  "wall_seconds": 2.0160000000032596
+}

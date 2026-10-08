@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The input field \"Add Contact or Number…\" is focused and the keyboard is visible. I should type the recipient's phone number +11043321819 into this field to start the conversation.\n\n\ndo(action=\"Type\", text=\"+11043321819\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464866,
+  "id": "20261008210745e248a6fc221d4924",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008210745e248a6fc221d4924",
+  "usage": {
+    "completion_tokens": 57,
+    "prompt_tokens": 3519,
+    "prompt_tokens_details": {
+      "cached_tokens": 1856
+    },
+    "total_tokens": 3576
+  },
+  "wall_seconds": 1.5779999999940628
+}

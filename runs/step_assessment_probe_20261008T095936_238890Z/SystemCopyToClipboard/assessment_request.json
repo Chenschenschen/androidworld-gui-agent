@@ -1,0 +1,43 @@
+{
+  "model": "autoglm-phone-multilingual",
+  "messages": [
+    {
+      "role": "system",
+      "content": "# Read-only step assessment\n\nCompare the BEFORE and AFTER screenshots, their observed GUI properties, and\nthe action that was actually dispatched. Give a short summary of the latest\nstep for use in the next action decision. Include the intended effect, whether\nit worked as expected, and any observed mismatch. Be critical: the previous\naction and its explanation may be wrong. If it failed, explain the evidence\nand what should or should not be done next. Preserve exact values that matter.\n\nUse one line, preferably fewer than 50 words. Return only the summary, with no\noperation code. This request assesses an already executed step; it does not\noperate the device. Distinguish visible evidence from uncertainty.\n\nAdapted from Android World's M3A SUMMARY_PROMPT_TEMPLATE, Apache License 2.0;\nsource attribution and changes are in instructions/AUTOGLM_SOURCE.md.\n"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Original goal: Copy the following text to the clipboard: john.doe@example.com\nCompletion condition: The exact requested text has been fully selected and copied through the visible Copy command; the selection menu has closed afterwards. Finish on that observed result. A transient clipboard chip or toast is optional. The task input is text to copy, not current clipboard state. Clipper is verifier infrastructure.\nDispatched action: {\"action_type\": \"click\", \"x\": 995, \"y\": 254}\nPrevious model reply: I can see that the text \"john.doe@example.com\" has been typed in the search bar. Now I need to copy this text to the clipboard. I can see there's a \"Copy text\" button in the toolbar at the top of the screen. I should tap on it to copy the text.\n\n\ndo(action=\"Tap\", element=[922,106])\n\nActual observed result: {\"action\": {\"command\": \"do\", \"action\": \"Tap\"}, \"no_visible_effect\": false, \"image_difference\": 0.005283490349264706, \"dispatch_returned\": true, \"visible_fields_after\": [{\"hint\": null, \"text\": \"Search or type web address\"}], \"execute_and_observe_seconds\": 3.6410000000032596, \"selected_gui_control\": {\"label\": \"Clear input\", \"resource_id\": \"com.android.chrome:id/delete_button\"}}\n"
+        },
+        {
+          "type": "text",
+          "text": "BEFORE screenshot (assessment_before.png) and GUI properties:\nNavigate: Facebook: m.facebook.com at observed tap center=[164, 203]\nFacebook\nNavigate: YouTube: m.youtube.com at observed tap center=[387, 203]\nYouTube\nNavigate: Amazon.com: www.amazon.com at observed tap center=[611, 203]\nAmazon.com\nNavigate: Wikipedia: en.m.wikipedia.org at observed tap center=[834, 203]\nWikipedia\nNavigate: ESPN.com: www.espn.com at observed tap center=[164, 297]\nESPN.com\nNavigate: Yahoo: www.yahoo.com at observed tap center=[387, 297]\nYahoo\nNavigate: eBay: m.ebay.com at observed tap center=[611, 297]\neBay\nNavigate: Instagram: www.instagram.com at observed tap center=[834, 297]\nInstagram\nDiscover\nOptions for Discover at observed tap center=[936, 613]\nClose at observed tap center=[892, 670]\nTo get personalized content suggested by Google, sign in and turn on sync\nTurn on sync at observed tap center=[500, 786]\nCan't refresh Discover\nCheck back later for new stories\njohn.doe@example.com\nexample.com\nexample.com\nRefine: example.com at observed tap center=[941, 232]\nNo internet connection\njohn.doe@example.com (editable, focused) at observed tap center=[485, 106]\nClear input at observed tap center=[922, 106]"
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "Saved screenshot (base64 encoded for API)"
+          }
+        },
+        {
+          "type": "text",
+          "text": "AFTER screenshot (assessment_after.png) and GUI properties:\nNavigate: Facebook: m.facebook.com at observed tap center=[164, 203]\nFacebook\nNavigate: YouTube: m.youtube.com at observed tap center=[387, 203]\nYouTube\nNavigate: Amazon.com: www.amazon.com at observed tap center=[611, 203]\nAmazon.com\nNavigate: Wikipedia: en.m.wikipedia.org at observed tap center=[834, 203]\nWikipedia\nNavigate: ESPN.com: www.espn.com at observed tap center=[164, 297]\nESPN.com\nNavigate: Yahoo: www.yahoo.com at observed tap center=[387, 297]\nYahoo\nNavigate: eBay: m.ebay.com at observed tap center=[611, 297]\neBay\nNavigate: Instagram: www.instagram.com at observed tap center=[834, 297]\nInstagram\nDiscover\nOptions for Discover at observed tap center=[936, 613]\nClose at observed tap center=[892, 670]\nTo get personalized content suggested by Google, sign in and turn on sync\nTurn on sync at observed tap center=[500, 786]\nCan't refresh Discover\nCheck back later for new stories\nText you copied\nShow clipboard contents at observed tap center=[941, 168]\nNo internet connection\nSearch or type web address (editable, focused) at observed tap center=[427, 106]\nStart voice search at observed tap center=[805, 106]\nSearch with your camera using Google Lens at observed tap center=[922, 106]"
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "Saved screenshot (base64 encoded for API)"
+          }
+        }
+      ]
+    }
+  ],
+  "stream": false,
+  "temperature": 0,
+  "top_p": 0.85,
+  "frequency_penalty": 0.2,
+  "max_tokens": 3000
+}

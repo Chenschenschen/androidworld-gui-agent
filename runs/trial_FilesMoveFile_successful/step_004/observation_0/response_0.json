@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"project_easy\" folder is visible in the sdk_gphone64_x86_64 storage area. To locate the file \"cooking-recipe.md\", we should enter the \"project_easy\" folder by tapping it.\n\n\ndo(action=\"Tap\", element=[725,619])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791480075,
+  "id": "202610090121135f7f29aabdcb48ad",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610090121135f7f29aabdcb48ad",
+  "usage": {
+    "completion_tokens": 63,
+    "prompt_tokens": 4926,
+    "prompt_tokens_details": {
+      "cached_tokens": 2190
+    },
+    "total_tokens": 4989
+  },
+  "wall_seconds": 1.735000000000582
+}

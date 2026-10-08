@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "30",
+    "verify": "The timer setting should be set to 20 hours, 00 minutes, and 30 seconds.",
+    "target": "30 minutes",
+    "index": "14",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 541,
+    "y": 1617
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

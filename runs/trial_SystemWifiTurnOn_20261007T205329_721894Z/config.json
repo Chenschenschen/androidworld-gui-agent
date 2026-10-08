@@ -1,0 +1,37 @@
+{
+  "version": "autoglm_api_v7_native_finish_text",
+  "provider": "zai",
+  "prompt_version": "autoglm_native_en_v5_history_completion",
+  "model": "autoglm-phone-multilingual",
+  "observation": "screenshot",
+  "tree_backend": "none",
+  "supplemental_tree_packages": [
+    "com.android.settings"
+  ],
+  "action_format": "native_pseudocall",
+  "sampling": {
+    "temperature": 0,
+    "top_p": 0.85,
+    "frequency_penalty": 0.2,
+    "max_tokens": 1024
+  },
+  "max_steps": 12,
+  "max_seconds": 900,
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "max_reobservations": 1,
+  "freshness_global_difference": 0.08,
+  "freshness_target_difference": 0.08,
+  "no_effect_difference": 0.001,
+  "note": "v5 achieved three clean Wi-Fi finishes. Native executed conversation retains last three decisions with old images removed. Camera finishes after one capture and its new thumbnail. v6's correct finish was blocked by unescaped quoted UI text; v7 reads that bounded native finish wrapper as inert text, rejecting action sequences/extra arguments. Executable GUI actions still use checked AST literals. No verifier feedback or forced completion; software-camera repair documented separately.",
+  "visual_stability_checks": 3,
+  "visual_stability_pause": 0.5,
+  "visual_stability_difference": 0.01,
+  "api_base_url": "https://api.z.ai/api/paas/v4",
+  "task_seed": 42,
+  "task_name": "SystemWifiTurnOn",
+  "allowed_apps": [
+    "settings"
+  ]
+}

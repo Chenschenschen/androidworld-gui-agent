@@ -12,6 +12,8 @@ official task verifier independently checks the result afterward.
 | `run_task.py` | Prepare/reset an official task, start video, run bounded steps, verify and save the summary. |
 | `autoglm_agent.py` | Observe, request one model decision, validate/ground it, execute once and record the next state. |
 | `instructions/autoglm.md` | Explain allowed operations and completion-first behavior to the model. |
+| `instructions/assessment.md` | Optional M3A-style before/after summary; disabled by default after unsuccessful trials. |
+| `assessment_config.json` | Preserved v33 experimental settings, not a successful baseline. |
 | `agent_config.json` | Freeze the model, prompt version, sampling, observation settings and budgets. |
 | `android_compat.py` | Keep Windows APK handling and unique, checked UIAutomator captures working. |
 | `trajectory.py` | Write readable and structured evidence immediately. |

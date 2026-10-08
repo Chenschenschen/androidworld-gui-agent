@@ -1,0 +1,24 @@
+{
+  "models": [
+    {
+      "name": "gelab-zero-4b-preview:latest",
+      "model": "gelab-zero-4b-preview:latest",
+      "size": 9925925271,
+      "digest": "6f883cb0e9da2e5847d6df476f2c02fd89a531f127ebef1d41e5ab6dfcd1febd",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3vl",
+        "families": [
+          "qwen3vl"
+        ],
+        "parameter_size": "4.0B",
+        "quantization_level": "BF16"
+      },
+      "expires_at": "2026-10-07T19:17:00.6446255+02:00",
+      "size_vram": 5499078573,
+      "context_length": 4096,
+      "runner": "llamacpp"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "error": "Coordinates must be two point integers or four box integers in normalized 0..1000 units, NOT screenshot pixels. Use the current observed tap centres: they are already normalized. Do not reuse pixel bounds as an action point.",
+  "executed": false
+}

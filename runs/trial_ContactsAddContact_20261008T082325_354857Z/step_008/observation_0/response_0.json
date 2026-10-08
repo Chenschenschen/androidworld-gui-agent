@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Phone\" field is now visible and empty. Tap it to focus so we can enter the phone number \"+18126340319\" next.\n\n\ndo(action=\"Tap\", element=[494,383])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447852,
+  "id": "202610081624113f1b9ca32fec4519",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081624113f1b9ca32fec4519",
+  "usage": {
+    "completion_tokens": 46,
+    "prompt_tokens": 3079,
+    "prompt_tokens_details": {
+      "cached_tokens": 1793
+    },
+    "total_tokens": 3125
+  },
+  "wall_seconds": 1.4539999999979045
+}

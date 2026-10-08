@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I need to access the Recordings folder to find sci_fi_book.mp3. The \"Recordings\" folder is visible at [509,641,939,693]. I will tap it to open and view its contents.\n\n\ndo(action=\"Tap\", element=[725,681])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791470184,
+  "id": "20261008223622040b0bd085384fcb",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008223622040b0bd085384fcb",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 4967,
+    "prompt_tokens_details": {
+      "cached_tokens": 2284
+    },
+    "total_tokens": 5035
+  },
+  "wall_seconds": 2.0460000000020955
+}

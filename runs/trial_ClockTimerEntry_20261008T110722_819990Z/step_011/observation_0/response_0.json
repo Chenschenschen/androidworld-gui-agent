@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows \"20h 00m 00s\". To set 20 hours and 7 minutes, I need to enter \"20\" then \"07\" (for 07 minutes). I'll tap \"0\" again to move toward entering the minutes.\n\n\ndo(action=\"Tap\", element=[499,685])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791457771,
+  "id": "20261008190930068570a7c5414f7e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008190930068570a7c5414f7e",
+  "usage": {
+    "completion_tokens": 73,
+    "prompt_tokens": 6814,
+    "prompt_tokens_details": {
+      "cached_tokens": 4880
+    },
+    "total_tokens": 6887
+  },
+  "wall_seconds": 1.8439999999973224
+}

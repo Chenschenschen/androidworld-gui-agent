@@ -1,0 +1,1428 @@
+--------- beginning of main
+10-15 15:34:13.492  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:13.960   529  2564 D ConnectivityService: requestNetwork for uid/pid:10125/25393 activeRequest: null callbackRequest: 1544 [NetworkRequest [ REQUEST id=1545, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-15 15:34:13.960   529   673 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 0]
+10-15 15:34:13.960   529   666 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=1545, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:13.960   529   666 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1545, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:13.960   529   666 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1545, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:13.960   529   666 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1545, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:13.961   529   673 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 0]
+10-15 15:34:13.965 25393 25393 E cr_BTSPrefs: No data found for task id: 53
+10-15 15:34:13.965 25393 25393 E cr_BkgrdTaskScheduler: Task cannot be canceled because no data was found instorage or data was invalid
+10-15 15:34:14.801   310 25628 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:34:14.801  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:14.977  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:15.778 25167 25467 D CompatibilityChangeReporter: Compat change id reported: 150939131; UID 10144; state: ENABLED
+10-15 15:34:15.784  1193  1193 W SystemServiceRegistry: No service published for: persistent_data_block
+--------- beginning of system
+10-15 15:34:16.267   529  2560 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.android.chrome/com.google.android.apps.chrome.Main} from uid 0
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 265464455; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 265452344; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 266124927; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 265451093; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 265456536; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 255940284; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 236283604; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 263959004; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 264304459; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 264301586; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 254631730; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 273509367; UID 10125; state: DISABLED
+10-15 15:34:16.269   529  2560 D CompatibilityChangeReporter: Compat change id reported: 263259275; UID 10125; state: DISABLED
+10-15 15:34:16.273   529  2560 D CompatibilityChangeReporter: Compat change id reported: 194480991; UID 10125; state: ENABLED
+10-15 15:34:16.273   529  2560 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10125; state: DISABLED
+10-15 15:34:16.279   529  2560 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10125; state: DISABLED
+10-15 15:34:16.279   529  2560 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10125; state: DISABLED
+10-15 15:34:16.279   529  2560 D CompatibilityChangeReporter: Compat change id reported: 181136395; UID 10125; state: DISABLED
+10-15 15:34:16.279   529  2560 D CompatibilityChangeReporter: Compat change id reported: 174042936; UID 10125; state: DISABLED
+10-15 15:34:16.279   529  2560 D CompatibilityChangeReporter: Compat change id reported: 197654537; UID 10125; state: ENABLED
+10-15 15:34:16.279   529  2560 V SplashScreenExceptionList: SplashScreen checking exception for package com.android.chrome (target sdk:33) -> false
+10-15 15:34:16.279   529  2560 D CompatibilityChangeReporter: Compat change id reported: 205907456; UID 10125; state: ENABLED
+10-15 15:34:16.297   529  2564 D CompatibilityChangeReporter: Compat change id reported: 168419799; UID 10125; state: DISABLED
+10-15 15:34:16.297   529  2564 D CompatibilityChangeReporter: Compat change id reported: 273564678; UID 10125; state: DISABLED
+10-15 15:34:16.306   734   963 W Parcel  : Expecting binder but got null!
+10-15 15:34:16.315  1067  1067 D MainContentCaptureSession: Flushing 1 event(s) for act:com.google.android.apps.nexuslauncher/.NexusLauncherActivity [state=2 (ACTIVE), disabled=false], reason=FULL
+10-15 15:34:16.350   734   927 D SplashScreenView: Build android.window.SplashScreenView{1f23407 V.E...... ......ID 0,0-0,0}
+10-15 15:34:16.350   734   927 D SplashScreenView: Icon: view: android.widget.ImageView{4647934 V.ED..... ......I. 0,0-0,0 #10204dd android:id/splashscreen_icon_view} drawable: com.android.wm.shell.startingsurface.SplashscreenIconDrawableFactory$ImmobileIconDrawable@deda35d size: 420
+10-15 15:34:16.350   734   927 D SplashScreenView: Branding: view: android.view.View{ce314d2 G.ED..... ......I. 0,0-0,0 #10204dc android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-15 15:34:16.385 25393 25393 I cr_SplitCompatClassLoader: Splits: null
+10-15 15:34:16.391   529   884 D CompatibilityChangeReporter: Compat change id reported: 161145287; UID 10125; state: DISABLED
+10-15 15:34:16.394   529   884 D ConnectivityService: requestNetwork for uid/pid:10125/25393 activeRequest: null callbackRequest: 1547 [NetworkRequest [ REQUEST id=1548, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-15 15:34:16.394   529   673 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 0]
+10-15 15:34:16.394   529   666 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=1548, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:16.394   529   666 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1548, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:16.394   529   666 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1548, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:16.394   529   666 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1548, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:16.395   529   673 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 0]
+10-15 15:34:16.434   455 25446 D BufferPoolAccessor2.0: bufferpool2 0x7e34394d9568 : 1(972000 size) total buffers - 1(972000 size) used buffers - 7/8 (recycle/alloc) - 1/7 (fetch/transfer)
+10-15 15:34:16.460   529   729 W ActivityTaskManager: takeTaskSnapshot: taskId=150 not found or not visible
+10-15 15:34:16.470 25393 25393 I cr_CompositorSurfaceMgr: Transitioning to surface with format: -1
+10-15 15:34:16.487 25393 25393 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+10-15 15:34:16.494   734   963 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-15 15:34:16.529 25393 25504 I cr_tabmodel: Starting to fetch tab list for tab_state0
+10-15 15:34:16.534 25393 25504 I cr_tabmodel: Finished fetching tab list.
+10-15 15:34:16.563 25393 25393 D CompatibilityChangeReporter: Compat change id reported: 193247900; UID 10125; state: ENABLED
+10-15 15:34:16.566  1067  1539 D EGL_emulation: app_time_stats: avg=689.91ms min=21.74ms max=6129.78ms count=10
+10-15 15:34:16.590 25393 25393 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10125; state: DISABLED
+10-15 15:34:16.675 25393 25646 W Parcel  : Expecting binder but got null!
+10-15 15:34:16.679   529   884 D CoreBackPreview: Window{4daf89a u0 com.android.chrome/com.google.android.apps.chrome.Main}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@acb1a8, mPriority=-1}
+10-15 15:34:16.684   529   884 D CoreBackPreview: Window{4daf89a u0 com.android.chrome/com.google.android.apps.chrome.Main}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@79904c1, mPriority=0}
+10-15 15:34:16.772   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:16.779 25233 25262 W GoogleApiManager: pno could not execute call because it requires feature (get_storage_info_api, 1).
+10-15 15:34:16.782 25393 25646 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+10-15 15:34:16.783 25393 25646 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+10-15 15:34:16.786 25393 25646 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+10-15 15:34:16.841   734   963 D EGL_emulation: app_time_stats: avg=1126.49ms min=26.08ms max=6527.59ms count=6
+10-15 15:34:16.846   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:16.847   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:16.852   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:16.855 25393 25646 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1 
+10-15 15:34:16.856 25393 25646 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+10-15 15:34:16.856 25393 25646 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-15 15:34:16.903 25393 25646 D EGL_emulation: eglCreateContext: 0x724ab9eddc50: maj 3 min 1 rcv 4
+10-15 15:34:16.930 25393 25517 W cr_PartnerCustomize: Partner homepage must be HTTP(S) or NewTabPage. Got invalid URL ""
+10-15 15:34:16.958   310 25655 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:34:16.958  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "f1f9ca0d-ceaa-41c6-a825-912b43e1162e"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "c3067dea-5ba7-4920-aaab-6c5829cd26b9"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "a000cbc2-cf8f-4fc9-bdd7-f158ee0eb91c"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "6c372424-e094-46af-bf4d-8e826299a810"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "92d154a7-fa71-437a-a985-409b6b3309c0"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "b98c0390-c6d0-4eb5-862b-f42fd244157a"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "90e7ee2f-1b0c-4ba9-8fed-3d98526490e3"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "4c9e0888-ef34-4992-9f0d-f6833a5c2110"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "3c026d4e-339e-4c40-bcea-c366d58a354b"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "4094607c-624e-4be8-a5c4-aaa1fac88abe"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "8ceefc60-dd87-4f18-85c5-6407e30264ae"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "7e867d7a-80fd-4e16-958e-c4f3b5b8ac11"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "ebe67ba0-f74a-4f01-b439-a68c15c12d08"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "03d1310a-c8b7-4b99-90df-db2f1a6e4646"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "09c20c95-faff-4f85-b755-b854226686f6"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "c11c0ed9-0211-4017-b77b-c6469fa0364c"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "e749653f-9e7e-4895-8410-d40d3de3bdb1"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "98c03cb8-6100-41e6-8d1a-74c2e67e2647"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "d0dc92bd-5394-4109-9e6b-587f93c4038d"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "c9f17c52-db7c-491c-80d8-cf0019a7d982"
+10-15 15:34:17.020 25233 25278 W SQLiteLog: (28) double-quoted string literal: "4e39752d-b61d-4a56-b0eb-054e146148b1"
+10-15 15:34:17.093 25393 25646 D EGL_emulation: eglMakeCurrent: 0x724ab9eddc50: ver 3 1 (tinfo 0x724ce3ba9080) (first time)
+10-15 15:34:17.108   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.108   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.108   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.109   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.109   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.109   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.109   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.110   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7d970
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79bf0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7d970
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ac10
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7d970
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f6b0
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:17.111   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:17.185   152   152 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-15 15:34:17.187 25393 25646 I Gralloc4: mapper 4.x is not supported
+10-15 15:34:17.189   152   152 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device VINTF manifest.
+10-15 15:34:17.189   150   150 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+10-15 15:34:17.190 25393 25646 W Gralloc4: allocator 4.x is not supported
+10-15 15:34:17.262 25393 25646 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1 
+10-15 15:34:17.293 25393 25646 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-15 15:34:17.294 25393 25393 I Choreographer: Skipped 36 frames!  The application may be doing too much work on its main thread.
+10-15 15:34:17.294 25393 25393 I cr_StartSurfaceConfig: Recorded Startup.Android.FirstDrawCompletedTime.NoInstant = 883 ms
+10-15 15:34:17.296 25393 25393 I cr_CompositorSurfaceMgr: Transitioning to surface with format: -3
+10-15 15:34:17.306 25393 25393 I cr_CompositorSurfaceMgr: surfaceCreated format: 0
+10-15 15:34:17.321 25393 25393 I cr_ChromeTabbedActivity: #initializeState
+10-15 15:34:17.322 25393 25393 I cr_CipherFactory: #restoreFromBundle, no savedInstanceState.
+10-15 15:34:17.322 25393 25393 I cr_tabmodel: #loadState, ignoreIncognitoFiles? true
+10-15 15:34:17.322 25393 25393 I cr_tabmodel: Tab metadata, skipIncognitoCount? false incognitoCount: 0 totalCount: 1
+10-15 15:34:17.322 25393 25393 I cr_tabmodel: #isIncognitoTabBeingRestored from tabDetails:  false
+10-15 15:34:17.323 25393 25393 W cr_tabmodel: Failed to restore TabState; creating Tab with last known URL.
+10-15 15:34:17.349  1611  1611 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.languageprofile.service.START pkg=com.google.android.gms }
+10-15 15:34:17.349  1611  1611 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.languageprofile.service.START pkg=com.google.android.gms }
+10-15 15:34:17.450   734   963 D EGL_emulation: app_time_stats: avg=1444.27ms min=1.19ms max=16915.56ms count=12
+10-15 15:34:17.536   529  2564 E AppOps  : Bad call made by uid 10125. Package "com.google.android.gms" does not belong to uid 10125.
+10-15 15:34:17.538   529  2564 E AppOps  : Bad call made by uid 10125. Package "com.google.android.gms" does not belong to uid 10125.
+10-15 15:34:17.538   529  2564 E AppOps  : Bad call made by uid 10125. Package "com.google.android.gms" does not belong to uid 10125.
+10-15 15:34:17.543 25393 25393 E cr_IntentUtils: getBooleanExtra failed on intent null
+10-15 15:34:17.544 25393 25393 E cr_IntentUtils: getBooleanExtra failed on intent null
+10-15 15:34:17.568   310 25678 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:17.597 25393 25393 I cr_tabmodel: Loaded tab lists; counts: 1,0
+10-15 15:34:17.639 25393 25393 I cr_TopSites: Start a new task.
+10-15 15:34:17.641 25393 25506 I cr_TopSites: Serializing top sites lists finished; count: 8
+10-15 15:34:17.653 25393 25506 I cr_TopSites: Finished saving top sites list to file:/data/user/0/com.android.chrome/app_top_sites/top_sites
+10-15 15:34:17.671   529   571 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10125; state: ENABLED
+10-15 15:34:17.676 25555 25555 D Zygote  : Forked child process 25684
+10-15 15:34:17.679   529   571 I ActivityManager: Start proc 25684:com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:1/u0ai1 for  {com.android.chrome/org.chromium.content.app.SandboxedProcessService0:1}
+10-15 15:34:17.681   310 25683 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:17.690 25684 25684 I ocessService0:1: Using CollectorTypeCC GC.
+10-15 15:34:17.690 25684 25684 W ocessService0:1: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:17.690 25684 25684 W ocessService0:1: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:17.698 25524 25545 D EGL_emulation: eglCreateContext: 0x724ab9ed6e10: maj 3 min 0 rcv 3
+10-15 15:34:17.706 25393 25393 D CompatibilityChangeReporter: Compat change id reported: 171228096; UID 10125; state: ENABLED
+10-15 15:34:17.708 25393 25393 I cr_OfflineIndicator: onConnectionTypeChanged 6
+10-15 15:34:17.708 25393 25393 I cr_OfflineIndicator: setConnectionState connectionState=1
+10-15 15:34:17.708 25393 25393 I cr_OfflineDetector: Running updateState mConnectivityDetectorInitialized: true, mTimeWhenLastForegrounded: 50469520, getElapsedTime: 50469520, mTimeWhenLastOfflineNotificationReceived: 50469520, mTimeWhenLastOnline: 0, mApplicationState: 1, mIsOfflineLastReportedByConnectivityDetector: true, mIsEffectivelyOffline: false
+10-15 15:34:17.708 25393 25393 I cr_OfflineDetector: updateState(): timeSinceLastForeground: 0, timeSinceOfflineNotificationReceived: 0, timeSinceLastOnline: 50469520, timeNeededForForeground: 2000, timeNeededForOffline: 2000
+10-15 15:34:17.728   310 25693 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:17.734   310 25694 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:17.750   310 25696 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:17.751   310 25699 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:17.752  1193 21896 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.languageprofile.GcmTaskService started execution. cause:7 exec_start_elapsed_seconds: 50469 [CONTEXT service_id=218 ]
+10-15 15:34:17.755   310 25695 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:17.761   310 25700 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:17.763   310 25698 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:17.774   310 25708 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:17.779  4290  4297 I adbd    : jdwp connection from 25684
+10-15 15:34:17.830 25393 25393 W chromium: [WARNING:most_visited_sites.cc(808)] Download of popular sites failed
+10-15 15:34:17.845 25684 25684 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 90001; state: ENABLED
+10-15 15:34:17.848 25393 25393 I cr_tabmodel: Appending tabs being restored to metadata lists, 0, startingNormalCount: 1, startingIncognitoCount: 0
+10-15 15:34:17.848 25393 25393 I cr_tabmodel: Serializing tab lists; counts: 1, 0
+10-15 15:34:17.856 25555 25555 D Zygote  : Forked child process 25713
+10-15 15:34:17.866   529   571 W ActivityManager: Slow operation: 126ms so far, now at startProcess: returned from zygote!
+10-15 15:34:17.866   529   571 W ActivityManager: Slow operation: 127ms so far, now at startProcess: done updating battery stats
+10-15 15:34:17.866   529   571 W ActivityManager: Slow operation: 127ms so far, now at startProcess: building log message
+10-15 15:34:17.866   529   571 I ActivityManager: Start proc 25713:com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:2/u0ai2 for  {com.android.chrome/org.chromium.content.app.SandboxedProcessService0:2}
+10-15 15:34:17.866   529   571 W ActivityManager: Slow operation: 127ms so far, now at startProcess: starting to update pids map
+10-15 15:34:17.866   529   571 W ActivityManager: Slow operation: 127ms so far, now at startProcess: done updating pids map
+10-15 15:34:17.867   529   571 W ActivityManager: Slow operation: 77ms so far, now at startProcess: asking zygote to start proc
+10-15 15:34:17.867   529   571 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10125; state: ENABLED
+10-15 15:34:17.867 25684 25684 I LoadedApk: No resource references to update in package com.google.android.trichromelibrary
+10-15 15:34:17.868 25684 25684 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:17.869 25684 25684 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:17.869 25684 25684 I cr_SplitCompatApp: Launched version=109.0.5414.123 minSdkVersion=29 isBundle=true processName=com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:1 isIsolated=true
+10-15 15:34:17.870 25393 25393 W ClankAppFlowLogger: Didn't expect to log DISCOVER_LOADING_INDICATOR_SHOWN after DISCOVER_UI_STARTING
+10-15 15:34:17.871 25684 25684 W SystemServiceRegistry: No service published for: uimode
+10-15 15:34:17.871 25684 25684 I cr_ChildProcessService: Creating new ChildProcessService pid=25684
+10-15 15:34:17.886 25713 25713 I ocessService0:2: Using CollectorTypeCC GC.
+10-15 15:34:17.893 25713 25713 W ocessService0:2: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:17.893 25713 25713 W ocessService0:2: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:17.901 25555 25555 D Zygote  : Forked child process 25726
+10-15 15:34:17.902   529   571 W ActivityManager: Slow operation: 112ms so far, now at startProcess: returned from zygote!
+10-15 15:34:17.902   529   571 W ActivityManager: Slow operation: 112ms so far, now at startProcess: done updating battery stats
+10-15 15:34:17.902   529   571 W ActivityManager: Slow operation: 113ms so far, now at startProcess: building log message
+10-15 15:34:17.902   529   571 I ActivityManager: Start proc 25726:com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:3/u0ai3 for  {com.android.chrome/org.chromium.content.app.SandboxedProcessService0:3}
+10-15 15:34:17.902   529   571 W ActivityManager: Slow operation: 113ms so far, now at startProcess: starting to update pids map
+10-15 15:34:17.902   529   571 W ActivityManager: Slow operation: 113ms so far, now at startProcess: done updating pids map
+10-15 15:34:17.903   529   571 W ActivityManager: Slow operation: 104ms so far, now at startProcess: asking zygote to start proc
+10-15 15:34:17.910 25555 25555 D Zygote  : Forked child process 25734
+10-15 15:34:17.912   529   571 W ActivityManager: Slow operation: 113ms so far, now at startProcess: returned from zygote!
+10-15 15:34:17.913   529   571 W ActivityManager: Slow operation: 114ms so far, now at startProcess: done updating battery stats
+10-15 15:34:17.915   529   571 W ActivityManager: Slow operation: 117ms so far, now at startProcess: building log message
+10-15 15:34:17.915   529   571 I ActivityManager: Start proc 25734:com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:4/u0ai4 for  {com.android.chrome/org.chromium.content.app.SandboxedProcessService0:4}
+10-15 15:34:17.915   529   571 W ActivityManager: Slow operation: 117ms so far, now at startProcess: starting to update pids map
+10-15 15:34:17.915   529   571 W ActivityManager: Slow operation: 117ms so far, now at startProcess: done updating pids map
+10-15 15:34:17.918 25734 25734 I ocessService0:4: Using CollectorTypeCC GC.
+10-15 15:34:17.919 25734 25734 W ocessService0:4: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:17.919 25734 25734 W ocessService0:4: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:17.937 25726 25726 I ocessService0:3: Using CollectorTypeCC GC.
+10-15 15:34:17.939 25726 25726 W ocessService0:3: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:17.939 25726 25726 W ocessService0:3: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:17.944  4290  4297 I adbd    : jdwp connection from 25713
+10-15 15:34:17.958 25393 25393 I cr_InactivityTracker: Last background time read from the SharedPreference is:-1.
+10-15 15:34:17.962   529   571 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10125; state: ENABLED
+10-15 15:34:17.970 25555 25555 D Zygote  : Forked child process 25745
+10-15 15:34:17.971   529   571 I ActivityManager: Start proc 25745:com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:5/u0ai5 for  {com.android.chrome/org.chromium.content.app.SandboxedProcessService0:5}
+10-15 15:34:17.978 25555 25555 D Zygote  : Forked child process 25746
+10-15 15:34:17.979 25745 25745 I ocessService0:5: Using CollectorTypeCC GC.
+10-15 15:34:17.979 25745 25745 W ocessService0:5: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:17.979 25745 25745 W ocessService0:5: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:17.982   529   571 I ActivityManager: Start proc 25746:com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:6/u0ai6 for  {com.android.chrome/org.chromium.content.app.SandboxedProcessService0:6}
+10-15 15:34:17.984 25746 25746 I ocessService0:6: Using CollectorTypeCC GC.
+10-15 15:34:17.987 25746 25746 W ocessService0:6: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:17.987 25746 25746 W ocessService0:6: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:17.992 25555 25555 D Zygote  : Forked child process 25771
+10-15 15:34:17.992   529   571 I ActivityManager: Start proc 25771:com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:7/u0ai7 for  {com.android.chrome/org.chromium.content.app.SandboxedProcessService0:7}
+10-15 15:34:17.998 25555 25555 D Zygote  : Forked child process 25782
+10-15 15:34:17.999   529   571 I ActivityManager: Start proc 25782:com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:8/u0ai8 for  {com.android.chrome/org.chromium.content.app.SandboxedProcessService0:8}
+10-15 15:34:17.999 25771 25771 I ocessService0:7: Using CollectorTypeCC GC.
+10-15 15:34:17.999 25771 25771 W ocessService0:7: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:17.999 25771 25771 W ocessService0:7: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:18.016 25713 25713 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 90002; state: ENABLED
+10-15 15:34:18.019  4290  4297 I adbd    : jdwp connection from 25746
+10-15 15:34:18.020   310 25812 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:18.030  4290  4297 I adbd    : jdwp connection from 25726
+10-15 15:34:18.034  4290  4297 I adbd    : jdwp connection from 25771
+10-15 15:34:18.034 25393 25393 I Choreographer: Skipped 43 frames!  The application may be doing too much work on its main thread.
+10-15 15:34:18.046 25684 25718 I cr_LibraryLoader: Successfully loaded native library
+10-15 15:34:18.052 25684 25718 I cr_CachingUmaRecorder: Flushed 11 samples from 11 histograms.
+10-15 15:34:18.061  4290  4297 I adbd    : jdwp connection from 25745
+10-15 15:34:18.063 25745 25745 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 90005; state: ENABLED
+10-15 15:34:18.075 25726 25726 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 90003; state: ENABLED
+10-15 15:34:18.076 25782 25782 I ocessService0:8: Using CollectorTypeCC GC.
+10-15 15:34:18.077 25746 25746 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 90006; state: ENABLED
+10-15 15:34:18.077 25782 25782 W ocessService0:8: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:18.077 25782 25782 W ocessService0:8: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:18.078  4290  4297 I adbd    : jdwp connection from 25734
+10-15 15:34:18.082   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:18.082   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:18.104 25734 25734 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 90004; state: ENABLED
+10-15 15:34:18.111 25393 25393 W View    : requestLayout() improperly called by org.chromium.chrome.browser.omnibox.LocationBarPhone{f098d74 V.E...... ......ID 21,0-1059,147 #7f010479 app:id/location_bar} during layout: running second layout pass
+10-15 15:34:18.111 25393 25393 W View    : requestLayout() improperly called by android.widget.Space{be2c29d I.ED..... ......I. 11,0-11,147 #7f010482 app:id/location_bar_status_view_right_space} during layout: running second layout pass
+10-15 15:34:18.112  4290  4297 I adbd    : jdwp connection from 25782
+10-15 15:34:18.118 25393 25393 I cr_CompositorSurfaceMgr: surfaceCreated format: 0
+10-15 15:34:18.122 25726 25726 I LoadedApk: No resource references to update in package com.google.android.trichromelibrary
+10-15 15:34:18.122 25726 25726 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.122 25726 25726 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.124 25726 25726 I cr_SplitCompatApp: Launched version=109.0.5414.123 minSdkVersion=29 isBundle=true processName=com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:3 isIsolated=true
+10-15 15:34:18.132 25782 25782 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 90008; state: ENABLED
+10-15 15:34:18.135 25713 25713 I LoadedApk: No resource references to update in package com.google.android.trichromelibrary
+10-15 15:34:18.136 25713 25713 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.136 25713 25713 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.136 25713 25713 I cr_SplitCompatApp: Launched version=109.0.5414.123 minSdkVersion=29 isBundle=true processName=com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:2 isIsolated=true
+10-15 15:34:18.141 25782 25782 I LoadedApk: No resource references to update in package com.google.android.trichromelibrary
+10-15 15:34:18.142 25746 25746 I LoadedApk: No resource references to update in package com.google.android.trichromelibrary
+10-15 15:34:18.144 25782 25782 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.144 25782 25782 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.145 25782 25782 I cr_SplitCompatApp: Launched version=109.0.5414.123 minSdkVersion=29 isBundle=true processName=com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:8 isIsolated=true
+10-15 15:34:18.146 25734 25734 I LoadedApk: No resource references to update in package com.google.android.trichromelibrary
+10-15 15:34:18.146 25734 25734 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.147 25734 25734 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.154 25746 25746 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.155 25713 25713 W SystemServiceRegistry: No service published for: uimode
+10-15 15:34:18.155 25782 25782 W SystemServiceRegistry: No service published for: uimode
+10-15 15:34:18.156 25745 25745 I LoadedApk: No resource references to update in package com.google.android.trichromelibrary
+10-15 15:34:18.158 25726 25726 W SystemServiceRegistry: No service published for: uimode
+10-15 15:34:18.174 25713 25713 I cr_ChildProcessService: Creating new ChildProcessService pid=25713
+10-15 15:34:18.181 25782 25782 I cr_ChildProcessService: Creating new ChildProcessService pid=25782
+10-15 15:34:18.202 25771 25771 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 90007; state: ENABLED
+10-15 15:34:18.207 25746 25746 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.207 25734 25734 I cr_SplitCompatApp: Launched version=109.0.5414.123 minSdkVersion=29 isBundle=true processName=com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:4 isIsolated=true
+10-15 15:34:18.209 25746 25746 I cr_SplitCompatApp: Launched version=109.0.5414.123 minSdkVersion=29 isBundle=true processName=com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:6 isIsolated=true
+10-15 15:34:18.216 25746 25746 W SystemServiceRegistry: No service published for: uimode
+10-15 15:34:18.217 25746 25746 I cr_ChildProcessService: Creating new ChildProcessService pid=25746
+10-15 15:34:18.223 25745 25745 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.237 25745 25745 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.238 25745 25745 I cr_SplitCompatApp: Launched version=109.0.5414.123 minSdkVersion=29 isBundle=true processName=com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:5 isIsolated=true
+10-15 15:34:18.252 25734 25734 W SystemServiceRegistry: No service published for: uimode
+10-15 15:34:18.254 25726 25726 I cr_ChildProcessService: Creating new ChildProcessService pid=25726
+10-15 15:34:18.255 25745 25745 W SystemServiceRegistry: No service published for: uimode
+10-15 15:34:18.256 25745 25745 I cr_ChildProcessService: Creating new ChildProcessService pid=25745
+10-15 15:34:18.260 25713 25838 I cr_LibraryLoader: Successfully loaded native library
+10-15 15:34:18.261 25713 25838 I cr_CachingUmaRecorder: Flushed 11 samples from 11 histograms.
+10-15 15:34:18.262 25734 25734 I cr_ChildProcessService: Creating new ChildProcessService pid=25734
+10-15 15:34:18.277 25771 25771 I LoadedApk: No resource references to update in package com.google.android.trichromelibrary
+10-15 15:34:18.277 25771 25771 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.278 25771 25771 D NetworkSecurityConfig: Using Network Security Config from resource 0_resource_name_obfuscated debugBuild: false
+10-15 15:34:18.278 25771 25771 I cr_SplitCompatApp: Launched version=109.0.5414.123 minSdkVersion=29 isBundle=true processName=com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:7 isIsolated=true
+10-15 15:34:18.287 25771 25771 W SystemServiceRegistry: No service published for: uimode
+10-15 15:34:18.289 25771 25771 I cr_ChildProcessService: Creating new ChildProcessService pid=25771
+10-15 15:34:18.292 25746 25848 I cr_LibraryLoader: Successfully loaded native library
+10-15 15:34:18.292 25746 25848 I cr_CachingUmaRecorder: Flushed 11 samples from 11 histograms.
+10-15 15:34:18.305 25782 25837 I cr_LibraryLoader: Successfully loaded native library
+10-15 15:34:18.306 25782 25837 I cr_CachingUmaRecorder: Flushed 11 samples from 11 histograms.
+10-15 15:34:18.334  1193 25537 I NetworkScheduler.Stats: Task com.google.android.gms/com.google.android.gms.languageprofile.GcmTaskService finished executing. cause:7 result: 1 elapsed_millis: 637 uptime_millis: 637 exec_start_elapsed_seconds: 50469 [CONTEXT service_id=218 ]
+10-15 15:34:18.347 25726 25849 I cr_LibraryLoader: Successfully loaded native library
+10-15 15:34:18.349 25726 25849 I cr_CachingUmaRecorder: Flushed 11 samples from 11 histograms.
+10-15 15:34:18.351 25745 25857 I cr_LibraryLoader: Successfully loaded native library
+10-15 15:34:18.351 25745 25857 I cr_CachingUmaRecorder: Flushed 11 samples from 11 histograms.
+10-15 15:34:18.354 25771 25858 I cr_LibraryLoader: Successfully loaded native library
+10-15 15:34:18.355 25771 25858 I cr_CachingUmaRecorder: Flushed 11 samples from 11 histograms.
+10-15 15:34:18.381 25734 25850 I cr_LibraryLoader: Successfully loaded native library
+10-15 15:34:18.382 25734 25850 I cr_CachingUmaRecorder: Flushed 11 samples from 11 histograms.
+10-15 15:34:18.517   734   963 D EGL_emulation: app_time_stats: avg=33.59ms min=3.74ms max=80.18ms count=15
+10-15 15:34:18.551  1415  1973 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdownVoiceInternal():95 shutdownVoiceInternal()
+10-15 15:34:18.798   310 25917 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:18.810 25734 25850 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+10-15 15:34:18.811 25771 25858 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+10-15 15:34:18.812 25393 25393 I cr_CompositorSurfaceMgr: SurfaceState : detach from parent : 0
+10-15 15:34:18.812 25393 25393 E cr_CompositorSurfaceMgr: surfaceDestroyed format : 0
+10-15 15:34:18.813 25726 25849 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+10-15 15:34:18.813 25782 25837 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+10-15 15:34:18.815   529  2673 I ActivityManager: Killing 25771:com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:7/u0a125i-8993 (adj 0): isolated not needed
+10-15 15:34:18.815   529   572 I libprocessgroup: Successfully killed process cgroup uid 90007 pid 25771 in 0ms
+10-15 15:34:18.816 25745 25857 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+10-15 15:34:18.863 25555 25555 I Zygote  : Process 25734 exited cleanly (0)
+10-15 15:34:18.880   529   884 I ActivityManager: Process com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:4 (pid 25734) has died: vis BTOP
+10-15 15:34:18.883   529   884 W ActivityManager: Scheduling restart of crashed service com.android.chrome/org.chromium.content.app.SandboxedProcessService0:4 in 1000ms for connection
+10-15 15:34:18.890 25746 25848 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+10-15 15:34:18.891 25713 25838 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+10-15 15:34:18.896 25684 25718 I chromium: [INFO:child_process_service.cc(69)] ChildProcessService: Exiting child process.
+10-15 15:34:18.900 25555 25555 I Zygote  : Process 25726 exited cleanly (0)
+10-15 15:34:18.901 25524 25545 D EGL_emulation: eglCreateContext: 0x724ab9ed7dd0: maj 3 min 0 rcv 3
+10-15 15:34:18.903 25555 25555 I Zygote  : Process 25745 exited cleanly (0)
+10-15 15:34:18.919 25393 25923 I OpenGLRenderer: Davey! duration=1497ms; Flags=1, FrameTimelineVsyncId=21751926, IntendedVsync=50469116033019, Vsync=50469832699657, InputEventId=0, HandleInputStart=50469847230536, AnimationStart=50469847231070, PerformTraversalsStart=50469847291255, DrawStart=50469931420461, FrameDeadline=50469132699685, FrameInterval=50469846723490, FrameStartTime=16666666, SyncQueued=50469939257751, SyncStart=50469955388883, IssueDrawCommandsStart=50470026815626, SwapBuffers=50470467496724, FrameCompleted=50470629398847, DequeueBufferDuration=121474212, QueueBufferDuration=5884161, GpuCompleted=50470629398847, SwapBuffersCompleted=50470603572954, DisplayPresentTime=0, CommandSubmissionCompleted=50470467496724, 
+10-15 15:34:18.941   529   577 E system_server: Cannot read thread CPU times for PID 529
+10-15 15:34:18.977 25555 25555 I Zygote  : Process 25684 exited cleanly (0)
+10-15 15:34:18.986  1473  1473 I AiAi    : onTrimMemory() with level 10
+10-15 15:34:19.008 25555 25555 I Zygote  : Process 25746 exited cleanly (0)
+10-15 15:34:19.010 25555 25555 I Zygote  : Process 25771 exited cleanly (0)
+10-15 15:34:19.017   529   572 I libprocessgroup: Successfully killed process cgroup uid 90004 pid 25734 in 0ms
+10-15 15:34:19.025 25555 25555 I Zygote  : Process 25782 exited cleanly (0)
+--------- beginning of kernel
+10-15 15:36:31.472     0     0 I binder_alloc: 25771: binder_alloc_buf, no vma
+10-15 15:34:19.025 25555 25555 I Zygote  : Process 25713 exited cleanly (0)
+10-15 15:36:31.493     0     0 I binder  : 529:884 transaction failed 29189/-3, size 84-0 line 3371
+10-15 15:36:31.540     0     0 I binder  : undelivered transaction 7071777, process died.
+10-15 15:36:31.565     0     0 I binder  : undelivered transaction 7071778, process died.
+10-15 15:36:31.585     0     0 I binder  : undelivered transaction 7071776, process died.
+10-15 15:34:19.111   529   884 D ActivityManager: sync unfroze 9946 com.android.camera2
+10-15 15:34:19.138   529   552 I ActivityManager: Process com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:5 (pid 25745) has died: vis BTOP
+10-15 15:34:19.139   529   552 W ActivityManager: Scheduling restart of crashed service com.android.chrome/org.chromium.content.app.SandboxedProcessService0:5 in 30742ms for connection
+10-15 15:34:19.139   529   572 I libprocessgroup: Successfully killed process cgroup uid 90005 pid 25745 in 0ms
+10-15 15:34:19.146   529   577 E system_server: Cannot read thread CPU times for PID 529
+10-15 15:34:19.238  1415  1415 I AppBase : AppBase.onTrimMemory():497 onTrimMemory(): 10
+10-15 15:34:19.243   529   569 W system_server: Long monitor contention with owner binder:529_7 (884) at void com.android.server.am.ActivityManagerService$AppDeathRecipient.binderDied()(ActivityManagerService.java:1479) waiters=3 in void com.android.server.am.AppProfiler$BgHandler.handleMessage(android.os.Message) for 247ms
+10-15 15:34:19.244  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.onTrimMemory():4406 onTrimMemory(): 10
+10-15 15:34:19.247   529   569 W ActivityManager: Rescheduling restart of crashed service com.android.chrome/org.chromium.content.app.SandboxedProcessService0:4 in 19634ms for mem-pressure-event
+10-15 15:34:19.247   529   569 W ActivityManager: Rescheduling restart of crashed service com.android.chrome/org.chromium.content.app.SandboxedProcessService0:5 in 49634ms for mem-pressure-event
+10-15 15:34:19.247   529  2673 W system_server: Long monitor contention with owner binder:529_7 (884) at void com.android.server.am.ActivityManagerService$AppDeathRecipient.binderDied()(ActivityManagerService.java:1479) waiters=4 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 338ms
+10-15 15:34:19.249 18833 18833 V AppLifecycleTracker: App foreground state unchanged: inForeground ? false
+10-15 15:34:19.254   529   996 I ActivityManager: Process com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:8 (pid 25782) has died: vis BTOP
+10-15 15:34:19.254   529   996 W ActivityManager: Scheduling restart of crashed service com.android.chrome/org.chromium.content.app.SandboxedProcessService0:8 in 1000ms for connection
+10-15 15:34:19.254   529   577 E system_server: Cannot read thread CPU times for PID 529
+10-15 15:34:19.255   529  1609 W system_server: Long monitor contention with owner binder:529_7 (884) at void com.android.server.am.ActivityManagerService$AppDeathRecipient.binderDied()(ActivityManagerService.java:1479) waiters=8 in void com.android.server.am.ActivityManagerService$AppDeathRecipient.binderDied() for 211ms
+10-15 15:34:19.255   529  1609 I ActivityManager: Process com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:2 (pid 25713) has died: vis BTOP
+10-15 15:34:19.255   529  1609 W ActivityManager: Scheduling restart of crashed service com.android.chrome/org.chromium.content.app.SandboxedProcessService0:2 in 79626ms for connection
+10-15 15:34:19.257   529   572 I libprocessgroup: Successfully killed process cgroup uid 90008 pid 25782 in 0ms
+10-15 15:34:19.257   529   572 I libprocessgroup: Successfully killed process cgroup uid 90002 pid 25713 in 0ms
+10-15 15:34:19.258   529  2032 I ActivityManager: Process com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:6 (pid 25746) has died: vis BTOP
+10-15 15:34:19.258   529  2032 W ActivityManager: Scheduling restart of crashed service com.android.chrome/org.chromium.content.app.SandboxedProcessService0:6 in 109622ms for connection
+10-15 15:34:19.260   529   572 I libprocessgroup: Successfully killed process cgroup uid 90006 pid 25746 in 0ms
+10-15 15:34:19.267   529   577 E system_server: Cannot read thread CPU times for PID 529
+10-15 15:34:19.268   529   577 E system_server: Cannot read thread CPU times for PID 529
+10-15 15:34:19.297   529   729 I ActivityManager: Process com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:3 (pid 25726) has died: vis BTOP
+10-15 15:34:19.297   529   572 I libprocessgroup: Successfully killed process cgroup uid 90003 pid 25726 in 0ms
+10-15 15:34:19.305 25393 25393 W chromium: [WARNING:compositor_view.cc(342)] Child process died (type=6) pid=25734)
+10-15 15:34:19.306 25393 25393 W chromium: [WARNING:compositor_view.cc(342)] Child process died (type=6) pid=25726)
+10-15 15:34:19.306 25393 25393 W chromium: [WARNING:compositor_view.cc(342)] Child process died (type=6) pid=25745)
+10-15 15:34:19.306 25393 25393 W chromium: [WARNING:compositor_view.cc(342)] Child process died (type=6) pid=25684)
+10-15 15:34:19.306 25393 25393 W chromium: [WARNING:compositor_view.cc(342)] Child process died (type=6) pid=25771)
+10-15 15:34:19.307 25393 25393 W chromium: [WARNING:compositor_view.cc(342)] Child process died (type=6) pid=25746)
+10-15 15:34:19.307 25393 25393 W chromium: [WARNING:compositor_view.cc(342)] Child process died (type=6) pid=25713)
+10-15 15:34:19.307 25393 25393 W chromium: [WARNING:compositor_view.cc(342)] Child process died (type=6) pid=25782)
+10-15 15:34:19.334   529   729 W ActivityManager: Scheduling restart of crashed service com.android.chrome/org.chromium.content.app.SandboxedProcessService0:3 in 139546ms for connection
+10-15 15:34:19.341 25393 25393 I Choreographer: Skipped 77 frames!  The application may be doing too much work on its main thread.
+10-15 15:34:19.348   529  2032 D CompatibilityChangeReporter: Compat change id reported: 197654537; UID 10125; state: ENABLED
+10-15 15:34:19.350   529   577 E system_server: Cannot read thread CPU times for PID 529
+10-15 15:34:19.487   529   577 E system_server: Cannot read thread CPU times for PID 529
+10-15 15:34:19.489   529   551 I ActivityManager: Process com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:1 (pid 25684) has died: vis BTOP
+10-15 15:34:19.489   529   572 I libprocessgroup: Successfully killed process cgroup uid 90001 pid 25684 in 0ms
+10-15 15:34:19.492   529   551 W ActivityManager: Scheduling restart of crashed service com.android.chrome/org.chromium.content.app.SandboxedProcessService0:1 in 169389ms for connection
+10-15 15:34:19.498   529   577 E system_server: Cannot read thread CPU times for PID 529
+10-15 15:34:19.503   529  2564 W system_server: Long monitor contention with owner binder:529_3 (729) at void com.android.server.am.ActivityManagerService$AppDeathRecipient.binderDied()(ActivityManagerService.java:1479) waiters=4 in void com.android.server.am.ContentProviderHelper.removeContentProvider(android.os.IBinder, boolean) for 173ms
+10-15 15:34:19.510   529  2673 W system_server: Long monitor contention with owner binder:529_F (2032) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.content.Intent, java.lang.String, android.app.IServiceConnection, int, java.lang.String, boolean, int, java.lang.String, java.lang.String, int)(ActivityManagerService.java:12764) waiters=5 in boolean com.android.server.am.ActivityManagerService.unbindService(android.app.IServiceConnection) for 243ms
+10-15 15:34:19.527  1611  1611 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.people.contactssync.service.START pkg=com.google.android.gms }
+10-15 15:34:19.599   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:19.599   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:19.599   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:19.680 25393 25418 I OpenGLRenderer: Davey! duration=1529ms; Flags=0, FrameTimelineVsyncId=21752027, IntendedVsync=50469866032989, Vsync=50471149366271, InputEventId=0, HandleInputStart=50471154083256, AnimationStart=50471154083822, PerformTraversalsStart=50471155498263, DrawStart=50471157460384, FrameDeadline=50470649366291, FrameInterval=50471153635864, FrameStartTime=16666666, SyncQueued=50471157833303, SyncStart=50471157961475, IssueDrawCommandsStart=50471158104401, SwapBuffers=50471171951150, FrameCompleted=50471396137921, DequeueBufferDuration=124815353, QueueBufferDuration=149419, GpuCompleted=50471396137921, SwapBuffersCompleted=50471317413995, DisplayPresentTime=0, CommandSubmissionCompleted=50471171951150, 
+10-15 15:34:19.701   529   729 D CompatibilityChangeReporter: Compat change id reported: 181136395; UID 10125; state: DISABLED
+10-15 15:34:19.701   529   729 D CompatibilityChangeReporter: Compat change id reported: 174042936; UID 10125; state: DISABLED
+10-15 15:34:19.709   529   729 D CompatibilityChangeReporter: Compat change id reported: 161145287; UID 10125; state: DISABLED
+10-15 15:34:19.713   310 25955 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:19.727  1067  1908 D OneSearchSuggestProvider: Shut down the binder channel
+10-15 15:34:19.754  1067  2778 I s.nexuslauncher: oneway function results for code 2 on binder at 0x724a49f49270 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-15 15:34:19.769   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f590
+10-15 15:34:19.770   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7b2d0
+10-15 15:34:19.793 25393 25393 I cr_StartSurface: Recorded Startup.Android.StartSurfaceShownAtStartup = false
+10-15 15:34:19.889   152   152 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+10-15 15:34:19.889 25524 25545 I Gralloc4: mapper 4.x is not supported
+10-15 15:34:19.932   152   152 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.allocator@4.0::IAllocator/default in either framework or device VINTF manifest.
+10-15 15:34:19.933   150   150 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+10-15 15:34:19.935 25524 25545 W Gralloc4: allocator 4.x is not supported
+10-15 15:34:20.108   310 25961 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:34:20.109  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:36:32.755     0     0 I init    : Untracked pid 25935 received signal 1
+10-15 15:36:32.765     0     0 I init    : Untracked pid 25935 did not have an associated service entry and will not be reaped
+10-15 15:34:20.236 25524 25545 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1 
+10-15 15:34:20.444  1611  1611 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.measurement.START pkg=com.google.android.gms }
+10-15 15:34:20.604  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:20.857  1611  1611 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.mobstore.service.START pkg=com.google.android.gms }
+10-15 15:34:20.882 25524 25545 D goldfish_vulkan: on_vkAllocateMemory: Import AHardwareBuffer
+10-15 15:34:20.929 25524 25545 D goldfish_vulkan: ensureSyncDeviceFd: created sync device for current Vulkan process: 128
+10-15 15:34:20.933 25393 25393 I Choreographer: Skipped 59 frames!  The application may be doing too much work on its main thread.
+10-15 15:34:20.988  1193  1193 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.clearcut.bootcount.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+10-15 15:34:21.031 25393 25646 D EGL_emulation: app_time_stats: avg=116.93ms min=27.50ms max=589.02ms count=8
+10-15 15:34:21.035 25393 25393 W View    : requestLayout() improperly called by org.chromium.chrome.browser.toolbar.top.ToolbarControlContainer{644e447 V.E...... ......I. 0,0-1080,150 #7f010203 app:id/control_container} during layout: running second layout pass
+10-15 15:34:21.060 25393 25418 I OpenGLRenderer: Davey! duration=1076ms; Flags=0, FrameTimelineVsyncId=21752402, IntendedVsync=50471649366251, Vsync=50471666032917, InputEventId=0, HandleInputStart=50471675361601, AnimationStart=50471675361906, PerformTraversalsStart=50471703474912, DrawStart=50471705291368, FrameDeadline=50471749366247, FrameInterval=50471675360132, FrameStartTime=16666666, SyncQueued=50471705325768, SyncStart=50471725432902, IssueDrawCommandsStart=50471725547354, SwapBuffers=50471726189483, FrameCompleted=50472745818304, DequeueBufferDuration=992915669, QueueBufferDuration=111597, GpuCompleted=50472745472104, SwapBuffersCompleted=50472745818304, DisplayPresentTime=0, CommandSubmissionCompleted=50471726189483, 
+10-15 15:34:21.109   529  2673 E AppOps  : Bad call made by uid 10120. Package "com.google.android.gms" does not belong to uid 10120.
+10-15 15:34:21.121   529   729 E AppOps  : Bad call made by uid 10120. Package "com.google.android.gms" does not belong to uid 10120.
+10-15 15:34:21.124   529  2673 E AppOps  : Bad call made by uid 10120. Package "com.google.android.gms" does not belong to uid 10120.
+10-15 15:34:21.183 25524 25586 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1 
+10-15 15:34:21.280 25524 25545 D goldfish_vulkan: on_vkAllocateMemory: Import AHardwareBuffer
+10-15 15:36:33.888     0     0 I binder  : release 25636:25636 transaction 7068890 out, still active
+10-15 15:36:33.895     0     0 I binder  : undelivered TRANSACTION_COMPLETE
+10-15 15:34:21.367  4290  4298 I adbd    : host-18: read failed: Success
+10-15 15:34:21.371  4290  4298 I adbd    : host-18: connection terminated: read failed
+10-15 15:34:21.371  4290  4290 I adbd    : host-18: offline
+10-15 15:34:21.373 25393 25418 I OpenGLRenderer: Davey! duration=1231ms; Flags=0, FrameTimelineVsyncId=21752446, IntendedVsync=50471749366247, Vsync=50472732699541, InputEventId=0, HandleInputStart=50472746289010, AnimationStart=50472746289364, PerformTraversalsStart=50472844754623, DrawStart=50472848882525, FrameDeadline=50472899366201, FrameInterval=50472746080529, FrameStartTime=16666666, SyncQueued=50472848981611, SyncStart=50472874503955, IssueDrawCommandsStart=50472874622404, SwapBuffers=50472988931248, FrameCompleted=50473006680349, DequeueBufferDuration=14306252, QueueBufferDuration=173479, GpuCompleted=50473006680349, SwapBuffersCompleted=50473005213947, DisplayPresentTime=0, CommandSubmissionCompleted=50472988931248, 
+10-15 15:34:21.393  4290  4290 I adbd    : destroying transport host-18
+10-15 15:34:21.393  4290  4290 I adbd    : BlockingConnectionAdapter(host-18): stopping
+10-15 15:34:21.393  4290  4290 I adbd    : BlockingConnectionAdapter(host-18): stopped
+10-15 15:34:21.395  4290  4290 I adbd    : BlockingConnectionAdapter(host-18): destructing
+10-15 15:34:21.395  4290  4290 I adbd    : BlockingConnectionAdapter(host-18): already stopped
+10-15 15:34:21.429 25371 25489 I MPEG4Writer: setStartTimestampUs: 50462818888
+10-15 15:34:21.431 25371 25490 I MPEG4Writer: setStartTimestampUs: 50462818888
+10-15 15:34:21.458 25524 25545 D goldfish_vulkan: on_vkAllocateMemory: Import AHardwareBuffer
+10-15 15:34:21.474   529   554 I ActivityTaskManager: Displayed com.android.chrome/com.google.android.apps.chrome.Main: +5s168ms
+10-15 15:36:33.991     0     0 I binder  : 529:2560 transaction failed 29189/-22, size 104-0 line 3191
+10-15 15:36:34.025     0     0 I binder  : 529:2560 transaction failed 29189/0, size 4-0 line 3122
+10-15 15:36:34.032     0     0 I binder  : send failed reply for transaction 7068890, target dead
+10-15 15:34:21.522  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: reset()
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Video track stopping. Stop source
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Video track source stopping
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Video track source stopped
+10-15 15:34:21.548 25371 25489 V MediaWriter: Track event err/info msg:101, trackId:2, type:1000,val:-1011
+10-15 15:34:21.548 25371 25489 W MPEG4Writer: 0-duration samples found: 1
+10-15 15:34:21.548 25371 25489 I MPEG4Writer: Received total/0-length (1/0) buffers and encoded 1 frames. - Metadata
+10-15 15:34:21.548 25371 25490 V MediaWriter: Track event err/info msg:101, trackId:3, type:1000,val:-1011
+10-15 15:34:21.548 25371 25490 W MPEG4Writer: 0-duration samples found: 1
+10-15 15:34:21.548 25371 25490 I MPEG4Writer: Received total/0-length (1/0) buffers and encoded 1 frames. - Metadata
+10-15 15:34:21.548 25371 25488 V MediaWriter: Track event err/info msg:101, trackId:1, type:1000,val:-1011
+10-15 15:34:21.548 25371 25488 I MPEG4Writer: Received total/0-length (48/0) buffers and encoded 48 frames. - Video
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Video track stopped. Status:0. Stop source
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Metadata track stopping. Stop source
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Metadata track source stopping
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Metadata track source stopped
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Metadata track stopped. Status:0. Stop source
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Metadata track stopping. Stop source
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Metadata track source stopping
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Metadata track source stopped
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Metadata track stopped. Status:0. Stop source
+10-15 15:34:21.548 25371 25371 D MPEG4Writer: Duration from tracks range is [0, 10178203] us
+10-15 15:34:21.556 25371 25486 D MPEG4Writer: 3 chunks are written in the last batch
+10-15 15:34:21.556 25371 25371 D MPEG4Writer: WriterThread stopped. Status:0
+10-15 15:34:21.556 25371 25371 I MPEG4Writer: Adjust the moov start time from 50462818888 us -> 50462818888 us
+10-15 15:34:21.556 25371 25371 I MPEG4Writer: MOOV atom was written to the file
+10-15 15:34:21.556 25371 25371 D MPEG4Writer: release()
+10-15 15:34:21.556 25371 25371 D MPEG4Writer: ftruncate mPreAllocateFileEndOffset:359435 mOffset:2295 mMdatEndOffset:355751 diff:3684
+10-15 15:34:21.561   529   614 D CompatibilityChangeReporter: Compat change id reported: 218533173; UID 10141; state: ENABLED
+10-15 15:34:21.578 25371 25371 D MPEG4Writer: final fsync() takes 17 ms, file size 355751
+10-15 15:34:21.581 25371 25371 D MPEG4Writer: MP4WtrCtrlHlpLooper stopped
+10-15 15:34:21.581 25371 25371 D MPEG4Writer: Top 5 write durations(microseconds): #1:170 #2:223 #3:227 #4:237 #5:137667
+10-15 15:34:21.583 25371 25986 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-15 15:34:21.584   455 25447 D BufferPoolAccessor2.0: bufferpool2 0x7e34394d9568 : 0(0 size) total buffers - 0(0 size) used buffers - 48/49 (recycle/alloc) - 1/49 (fetch/transfer)
+10-15 15:34:21.584   455 25447 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-15 15:34:21.584   455 25447 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+10-15 15:34:21.585   455 25447 V C2Store : in ~ComponentModule
+10-15 15:34:21.586   455 25447 V C2Store : unloading dll
+10-15 15:34:21.586 25371 25371 D MediaCodec: flushMediametrics
+10-15 15:34:21.598 25371 25416 E BufferQueueProducer: [GraphicBufferSource](id:631b00000000,api:1,p:389,c:25371) queueBuffer: BufferQueue has been abandoned
+10-15 15:34:21.598   389   389 E Surface : queueBuffer: error queuing buffer, -19
+10-15 15:34:21.598   389   389 E CompositionEngine: Error when queueing buffer for display [ScreenRecorder]: -19
+10-15 15:34:21.598 25371 25463 E BufferQueueProducer: [GraphicBufferSource](id:631b00000000,api:1,p:389,c:25371) cancelBuffer: BufferQueue has been abandoned
+10-15 15:34:21.599   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:21.599   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:21.650 25371 25416 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+10-15 15:34:21.664   529   729 D CompatibilityChangeReporter: Compat change id reported: 214016041; UID 10125; state: ENABLED
+10-15 15:34:21.670  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-15 15:34:21.676  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-15 15:34:21.679  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.chrome fieldId=2130772809 fieldName=null extras=null}, false)
+10-15 15:34:21.679  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-15 15:34:21.680  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-15 15:34:21.760   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7a250
+10-15 15:34:21.774 25371 25371 D ScreenRecord: success
+10-15 15:34:21.777 25371 25371 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+10-15 15:34:21.782 25371 25371 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+10-15 15:34:21.788   455 25447 D BufferPoolAccessor2.0: Destruction - bufferpool2 0x7e34394d9568 cached: 0/0M, 0/0% in use; allocs: 49, 98% recycled; transfers: 49, 98% unfetched
+10-15 15:34:21.790  1459  2501 I MediaProvider: Begin Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-15 15:34:21.919   529   529 W WindowManager: removeWindowToken: Attempted to remove non-existing token: android.os.Binder@cf9a6fc
+10-15 15:34:22.048 25393 25646 D EGL_emulation: app_time_stats: avg=71.02ms min=13.18ms max=169.31ms count=9
+10-15 15:34:22.057 25393 25523 I cr_BindingManager: Visible binding enabled: maxSize=-1
+10-15 15:34:22.064   310 25991 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:22.090   529  2032 W InputManager-JNI: Input channel object '8952551 Splash Screen com.android.chrome (client)' was disposed without first being removed with the input manager!
+10-15 15:34:22.099  1459  2501 W MediaProvider: isAppCloneUserPair for user 0: false
+10-15 15:34:22.136   529   570 D CompatibilityChangeReporter: Compat change id reported: 168419799; UID 10125; state: DISABLED
+10-15 15:34:22.137   529   570 D CompatibilityChangeReporter: Compat change id reported: 273564678; UID 10125; state: DISABLED
+10-15 15:34:22.180   529  2673 W PackageConfigPersister: App-specific configuration not found for packageName: com.android.chrome and userId: 0
+10-15 15:34:22.192 25393 25409 I .android.chrome: Background young concurrent copying GC freed 54601(2728KB) AllocSpace objects, 19(764KB) LOS objects, 35% free, 6281KB/9745KB, paused 46us,12us total 106.273ms
+10-15 15:34:22.229   180 25116 I keystore2: keystore2::watchdog: Watchdog thread idle -> terminating. Have a great day.
+10-15 15:34:22.250  1459  2501 I MediaProvider: End Intent { act=android.intent.action.MEDIA_SCANNER_SCAN_FILE dat=file:///... flg=0x1400010 cmp=com.google.android.providers.media.module/com.android.providers.media.MediaService }
+10-15 15:34:22.271 25393 25682 E cr_PackageMetrics: Could not parse UUID 0000-0000
+10-15 15:34:22.271 25393 25682 E cr_PackageMetrics: java.lang.IllegalArgumentException: Invalid UUID string: 0000-0000
+10-15 15:34:22.271 25393 25682 E cr_PackageMetrics: 	at java.util.UUID.fromString(UUID.java:194)
+10-15 15:34:22.271 25393 25682 E cr_PackageMetrics: 	at R22.a(chromium-TrichromeChromeGoogle6432.aab-stable-541412337:78)
+10-15 15:34:22.271 25393 25682 E cr_PackageMetrics: 	at Uk2.b(chromium-TrichromeChromeGoogle6432.aab-stable-541412337:83)
+10-15 15:34:22.271 25393 25682 E cr_PackageMetrics: 	at an.call(chromium-TrichromeChromeGoogle6432.aab-stable-541412337:10)
+10-15 15:34:22.271 25393 25682 E cr_PackageMetrics: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+10-15 15:34:22.271 25393 25682 E cr_PackageMetrics: 	at bn.run(chromium-TrichromeChromeGoogle6432.aab-stable-541412337:26)
+10-15 15:36:34.854     0     0 I init    : Untracked pid 25636 received signal 1
+10-15 15:36:34.865     0     0 I init    : Untracked pid 25636 did not have an associated service entry and will not be reaped
+10-15 15:34:22.330   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a76530
+10-15 15:34:22.330   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a786f0
+10-15 15:34:22.331   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a76530
+10-15 15:34:22.331   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a784b0
+10-15 15:34:22.331   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a784b0
+10-15 15:34:22.331   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a76530
+10-15 15:34:22.331   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a76530
+10-15 15:34:22.331   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a76530
+10-15 15:34:22.331   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a76530
+10-15 15:34:22.331   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a76530
+10-15 15:34:22.331   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:22.389  1611  1611 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.potokens.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-15 15:34:22.468   734   963 D EGL_emulation: app_time_stats: avg=1314.16ms min=13.29ms max=5143.08ms count=4
+10-15 15:34:22.886 25393 25393 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10125; state: ENABLED
+10-15 15:34:22.888   529  2673 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10125; state: ENABLED
+10-15 15:34:22.893 25393 25682 W cr_omaha: Delay to next request (18201967) is longer than expected.  Resetting to now.
+10-15 15:34:22.893 25393 25682 W cr_omaha: Delay to next post attempt (3801980) is greater than expected (3600000).  Resetting to now.
+10-15 15:34:22.909   529  2032 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10119; state: DISABLED
+10-15 15:34:22.909   529   571 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10119; state: ENABLED
+10-15 15:34:22.912   311   311 I Zygote  : Entering forkRepeatedly native zygote loop
+10-15 15:34:22.914   311   311 D Zygote  : Forked child process 25993
+10-15 15:34:22.915   529   571 I ActivityManager: Start proc 25993:com.google.process.gapps/u0a119 for content provider {com.google.android.gsf/com.google.android.gsf.settings.GoogleSettingsProvider}
+10-15 15:34:22.919 25993 25993 I e.process.gapps: Using CollectorTypeCC GC.
+10-15 15:34:22.919 25993 25993 W e.process.gapps: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:22.919 25993 25993 W e.process.gapps: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:22.923  4290  4297 I adbd    : jdwp connection from 25993
+10-15 15:34:22.970 25993 25993 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10119; state: ENABLED
+10-15 15:34:22.981 25993 25993 D nativeloader: Configuring classloader-namespace-shared for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=33, uses_libraries=ALL, library_path=/system_ext/priv-app/GoogleServicesFramework/lib/x86_64:/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk!/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gsf:/system_ext/priv-app/GoogleServicesFramework:/system/lib64:/system_ext/lib64
+10-15 15:34:22.991 25993 25993 D nativeloader: Configuring classloader-namespace-shared for other apk /system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk. target_sdk_version=33, uses_libraries=, library_path=/system_ext/priv-app/GoogleServicesFramework/lib/x86_64:/system_ext/priv-app/GoogleServicesFramework/GoogleServicesFramework.apk!/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gsf:/system_ext/priv-app/GoogleServicesFramework:/system/lib64:/system_ext/lib64
+10-15 15:34:23.022 25993 25993 V GraphicsEnvironment: ANGLE Developer option for 'com.google.android.gsf' set to: 'default'
+10-15 15:34:23.022 25993 25993 V GraphicsEnvironment: ANGLE GameManagerService for com.google.android.gsf: false
+10-15 15:34:23.022 25993 25993 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-15 15:34:23.026 25993 25993 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+10-15 15:34:23.026 25993 25993 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+10-15 15:34:23.072 25993 25993 I GoogleHttpClient: GMS http client unavailable, use old client
+10-15 15:34:23.081 25993 26011 I carui   : CarUi plugin is disabled
+10-15 15:34:23.094 25393 25682 I cr_omaha: OmahaBase::generateAndPostRequest(): Sending request to Omaha:
+10-15 15:34:23.094 25393 25682 I cr_omaha: <?xml version='1.0' encoding='UTF-8' standalone='yes' ?><request protocol="3.0" updater="Android" updaterversion="109.0.5414.123" updaterchannel="chrome" ismachine="1" requestid="{57331c8f-5fa6-4701-a345-454869d7a173}" sessionid="{eff1fd0b-b619-4657-b5a9-aea8d3d25a79}" installsource="system_image" dedup="cr"><os platform="android" version="13" arch="arm" /><app brand="" client="ms-unknown" appid="{387E11AD-7109-45F6-83CF-CAA241ADC9DF}" version="109.0.5414.123" nextversion="" lang="en-US" installage="-1" ap="chrome;google;sdk_gphone64_x86_64"><event eventtype="2" eventresult="1" /></app></request>
+10-15 15:34:23.111   310 26012 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:23.116 25393 25682 E cr_omaha: Failed to contact server: 
+10-15 15:34:23.143 25393 25682 I cr_omaha: Attempting to schedule next job for: Sun Oct 15 16:34:23 UTC 2023
+10-15 15:34:23.144 25393 25393 I cr_omaha: Scheduled using JobService
+10-15 15:34:23.144 25393 25393 E cr_BkgrdTaskJS: Tried finishing non-current BackgroundTask.
+10-15 15:34:23.789  4290 26013 I adbd    : host-21: read thread spawning
+10-15 15:34:23.790  4290 26014 I adbd    : host-21: write thread spawning
+10-15 15:34:23.859  4290  4290 I adbd    : host-21: already offline
+10-15 15:34:23.859  4290  4290 I adbd    : authentication not required
+10-15 15:34:24.035  4290 26013 I adbd    : host-21: read failed: Success
+10-15 15:34:24.035  4290 26013 I adbd    : host-21: connection terminated: read failed
+10-15 15:34:24.036  4290  4290 I adbd    : host-21: offline
+10-15 15:34:24.036  4290  4290 I adbd    : destroying transport host-21
+10-15 15:34:24.036  4290  4290 I adbd    : BlockingConnectionAdapter(host-21): stopping
+10-15 15:34:24.036  4290  4290 I adbd    : BlockingConnectionAdapter(host-21): stopped
+10-15 15:34:24.036  4290  4290 I adbd    : BlockingConnectionAdapter(host-21): destructing
+10-15 15:34:24.036  4290  4290 I adbd    : BlockingConnectionAdapter(host-21): already stopped
+10-15 15:34:25.802   529  2673 D CompatibilityChangeReporter: Compat change id reported: 168419799; UID 10119; state: DISABLED
+10-15 15:34:25.802   529  2673 D CompatibilityChangeReporter: Compat change id reported: 273564678; UID 10119; state: DISABLED
+10-15 15:34:26.289  4290 26015 I adbd    : host-24: read thread spawning
+10-15 15:34:26.290  4290 26016 I adbd    : host-24: write thread spawning
+10-15 15:34:26.291  4290  4290 I adbd    : host-24: already offline
+10-15 15:34:26.291  4290  4290 I adbd    : authentication not required
+10-15 15:34:26.679   529  2560 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.android.chrome/com.google.android.apps.chrome.Main} from uid 0
+10-15 15:34:26.679   529  2560 D CompatibilityChangeReporter: Compat change id reported: 265464455; UID 10125; state: DISABLED
+10-15 15:34:26.679   529  2560 D CompatibilityChangeReporter: Compat change id reported: 265452344; UID 10125; state: DISABLED
+10-15 15:34:26.679   529  2560 D CompatibilityChangeReporter: Compat change id reported: 266124927; UID 10125; state: DISABLED
+10-15 15:34:26.679   529  2560 D CompatibilityChangeReporter: Compat change id reported: 265451093; UID 10125; state: DISABLED
+10-15 15:34:26.679   529  2560 D CompatibilityChangeReporter: Compat change id reported: 265456536; UID 10125; state: DISABLED
+10-15 15:34:26.679   529  2560 D CompatibilityChangeReporter: Compat change id reported: 255940284; UID 10125; state: DISABLED
+10-15 15:34:26.679   529  2560 D CompatibilityChangeReporter: Compat change id reported: 236283604; UID 10125; state: DISABLED
+10-15 15:34:26.680   529  2560 D CompatibilityChangeReporter: Compat change id reported: 263959004; UID 10125; state: DISABLED
+10-15 15:34:26.680   529  2560 D CompatibilityChangeReporter: Compat change id reported: 264304459; UID 10125; state: DISABLED
+10-15 15:34:26.680   529  2560 D CompatibilityChangeReporter: Compat change id reported: 264301586; UID 10125; state: DISABLED
+10-15 15:34:26.680   529  2560 D CompatibilityChangeReporter: Compat change id reported: 254631730; UID 10125; state: DISABLED
+10-15 15:34:26.680   529  2560 D CompatibilityChangeReporter: Compat change id reported: 273509367; UID 10125; state: DISABLED
+10-15 15:34:26.680   529  2560 D CompatibilityChangeReporter: Compat change id reported: 263259275; UID 10125; state: DISABLED
+10-15 15:34:26.680   529  2560 D CompatibilityChangeReporter: Compat change id reported: 194480991; UID 10125; state: ENABLED
+10-15 15:34:26.680   529  2560 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10125; state: DISABLED
+10-15 15:34:26.775 25393 25393 I cr_OfflineDetector: Running updateState mConnectivityDetectorInitialized: true, mTimeWhenLastForegrounded: 50478587, getElapsedTime: 50478587, mTimeWhenLastOfflineNotificationReceived: 50469520, mTimeWhenLastOnline: 0, mApplicationState: 1, mIsOfflineLastReportedByConnectivityDetector: true, mIsEffectivelyOffline: true
+10-15 15:34:26.775 25393 25393 I cr_OfflineDetector: updateState(): timeSinceLastForeground: 0, timeSinceOfflineNotificationReceived: 9067, timeSinceLastOnline: 50478587, timeNeededForForeground: 2000, timeNeededForOffline: -7067
+10-15 15:34:26.779 25393 25393 I cr_InactivityTracker: Last background time read from the SharedPreference is:1697384066689.
+10-15 15:34:26.802   310 26046 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:26.832 25393 25646 D EGL_emulation: app_time_stats: avg=4689.87ms min=4689.87ms max=4689.87ms count=1
+10-15 15:34:27.033   529   666 E WifiScoringParams: Invalid frequency(-1), using 5G as default rssi array
+10-15 15:34:27.253  1459  1734 D PickerSyncController: syncAllMedia
+10-15 15:34:27.254  1459  1734 D PickerSyncController: syncAllMediaFromProvider() LOCAL, auth=com.android.providers.media.photopicker, retry=true
+10-15 15:34:27.254  1459  1734 D PickerSyncController: getSyncRequestParams() LOCAL, auth=com.android.providers.media.photopicker
+10-15 15:34:27.263  1459  1734 D PickerSyncController:    Latest ID/Gen=1405:077b53f9-67ca-4f48-8a63-71ff96233068:0000-0000:external_primary/1187
+10-15 15:34:27.263  1459  1734 D PickerSyncController:    Cached ID/Gen=1405:077b53f9-67ca-4f48-8a63-71ff96233068:0000-0000:external_primary/1183
+10-15 15:34:27.263  1459  1734 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_INCREMENTAL, gen=1183, latest=Bundle[{last_media_sync_generation=1187, media_collection_id=1405:077b53f9-67ca-4f48-8a63-71ff96233068:0000-0000:external_primary}]}
+10-15 15:34:27.263  1459  1734 I PickerSyncController: Executing SyncAdd. isLocal: true. authority: com.android.providers.media.photopicker
+10-15 15:34:27.281  1459  1734 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=1183}]. Result count: 1. Cursor count: 1
+10-15 15:34:27.306  1459  1734 I PickerSyncController: Executing SyncRemove. isLocal: true. authority: com.android.providers.media.photopicker
+10-15 15:34:27.312  1459  1734 I PickerSyncController: Paged sync successful. QueryArgs: Bundle[{android.provider.extra.SYNC_GENERATION=1183}]. Result count: 0. Cursor count: 0
+10-15 15:34:27.313  1459  1734 D PickerSyncController: syncAllMediaFromProvider() CLOUD, auth=null, retry=true
+10-15 15:34:27.313  1459  1734 D PickerSyncController: getSyncRequestParams() CLOUD, auth=null
+10-15 15:34:27.313  1459  1734 D PickerSyncController:    RESULT=SyncRequestParams{type=MEDIA_RESET, gen=0, latest=null}
+10-15 15:34:27.313  1459  1734 I PickerSyncController: Executing SyncReset. isLocal: false. authority: null
+10-15 15:34:27.313  1459  1734 I PickerSyncController: SyncReset. isLocal:false. authority: null. result count: 0
+10-15 15:34:27.313  1459  1734 D PickerSyncController: Ignoring cache media info for null authority with bundle: null
+10-15 15:34:27.313  1459  1734 I PickerSyncController: Executing SyncAlbumReset. isLocal: true. authority: com.android.providers.media.photopicker. albumId: null
+10-15 15:34:27.313  1459  1734 I PickerSyncController: Successfully executed SyncResetAlbum. authority: com.android.providers.media.photopicker. albumId: null. Result count: 0
+10-15 15:34:27.313  1459  1734 I PickerSyncController: Executing SyncAlbumReset. isLocal: false. authority: null. albumId: null
+10-15 15:34:27.314  1459  1734 I PickerSyncController: Successfully executed SyncResetAlbum. authority: null. albumId: null. Result count: 0
+10-15 15:36:39.966     0     0 I init    : Untracked pid 26038 exited with status 0
+10-15 15:36:39.967     0     0 I init    : Untracked pid 26038 did not have an associated service entry and will not be reaped
+10-15 15:34:27.581   455   775 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 0
+10-15 15:34:27.716 26054 26054 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-15 15:34:27.763 26054 26054 I AndroidRuntime: Using default boot image
+10-15 15:34:27.763 26054 26054 I AndroidRuntime: Leaving lock profiling enabled
+10-15 15:34:27.770 26054 26054 I app_process: Core platform API reporting enabled, enforcing=false
+10-15 15:34:27.770 26054 26054 I app_process: Using CollectorTypeCC GC.
+10-15 15:34:28.221 26054 26054 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+10-15 15:34:28.221 26054 26054 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt70l.dat
+10-15 15:34:28.275 26054 26054 W app_process: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:28.275 26054 26054 W app_process: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:28.294 26054 26054 W app_process: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2649186567])
+10-15 15:34:28.323 26054 26054 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-15 15:34:28.362  1473  2271 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:28.368  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:28.368  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:28.368  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:28.368  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:28.368  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:28.368  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:28.373  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:28.373  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:28.373  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:28.374  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:28.374 26054 26070 V UiAutomation: Init UiAutomation@472f7a3[id=599, flags=0]
+10-15 15:34:28.374  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:28.374  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:28.374  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:28.374  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:28.374  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:28.375   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:28.375   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:28.375   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:28.391   529   529 D BatterySaverPolicy: accessibility changed to true, updating policy.
+10-15 15:34:28.402  1473  1501 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:28.406  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:28.406  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:28.409  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:28.409  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:28.409  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:28.409  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:28.410  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:28.410  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:28.410  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:28.410  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:28.410  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:28.410  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:28.410  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:28.410  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:28.410  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:28.416   734   811 W Looper  : Slow dispatch took 40ms wmshell.main h=android.view.ViewRootImpl$ViewRootHandler c=android.view.accessibility.AccessibilityManager$$ExternalSyntheticLambda1@cd06c2a m=0
+10-15 15:34:28.427   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:28.427   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:28.427   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:28.448  1948  2122 I A       : NGA disabled due to not being eligible.
+10-15 15:34:28.484 15984 15984 V SafetyCenterAccessibilityListener: accessibility event occurred, safety center feature not enabled.
+10-15 15:34:28.540 25393 25393 E cr_BTSPrefs: No data found for task id: 56
+10-15 15:34:28.540 25393 25393 E cr_BkgrdTaskScheduler: Task cannot be canceled because no data was found instorage or data was invalid
+10-15 15:34:28.570   310 26071 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:34:28.571  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:29.505 26054 26054 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@10359; boundsInParent: Rect(0, 0 - 1038, 147); boundsInScreen: Rect(52, 710 - 1080, 330); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/location_bar; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:29.508 26054 26054 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@15d71; boundsInParent: Rect(0, 0 - 1080, 3); boundsInScreen: Rect(0, 330 - 1080, 333); packageName: com.android.chrome; className: android.widget.ImageView; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/toolbar_hairline; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:29.510 26054 26054 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@d28c; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/bottom_container; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:29.511 26054 26054 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@18a7d; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: null; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:29.511 26054 26054 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@186bc; boundsInParent: Rect(0, 0 - 0, 0); boundsInScreen: Rect(0, 2337 - 0, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/menu_anchor_stub; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:29.513 26054 26054 W AccessibilityNodeInfoDumper: Fetch time: 79ms
+10-15 15:34:29.516  1473  2271 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:29.520  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:29.522  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:29.523  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:29.523  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:29.523  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:29.523  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:29.527  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:29.527 26054 26054 D AndroidRuntime: Shutting down VM
+10-15 15:34:29.527  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:29.527  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:29.528  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:29.528  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:29.528  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:29.528  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:29.528  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:29.528  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:29.535   529   529 D BatterySaverPolicy: accessibility changed to false, updating policy.
+10-15 15:34:29.535  1948  2123 I A       : NGA disabled due to not being eligible.
+10-15 15:34:29.549   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a80fd0
+10-15 15:34:29.549   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:29.549   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:29.549   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:29.549   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:29.549   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:29.553   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:29.553   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:29.553   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:29.588  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:30.874   529   996 D WifiNl80211Manager: Scan result ready event
+10-15 15:34:30.877   529   996 D WifiNative: Scan result ready event
+10-15 15:34:30.970   310 26077 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:34:30.976  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:31.956 26085 26085 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-15 15:34:31.959 26085 26085 I AndroidRuntime: Using default boot image
+10-15 15:34:31.959 26085 26085 I AndroidRuntime: Leaving lock profiling enabled
+10-15 15:34:31.960 26085 26085 I app_process: Core platform API reporting enabled, enforcing=false
+10-15 15:34:31.961 26085 26085 I app_process: Using CollectorTypeCC GC.
+10-15 15:34:32.013 26085 26085 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+10-15 15:34:32.014 26085 26085 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt70l.dat
+10-15 15:34:32.017 26085 26085 W app_process: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:32.017 26085 26085 W app_process: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:32.018 26085 26085 W app_process: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2649186567])
+10-15 15:34:32.033 26085 26085 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-15 15:34:32.043  1473  1501 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:32.043 26085 26102 V UiAutomation: Init UiAutomation@7b6476[id=600, flags=0]
+10-15 15:34:32.044  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:32.044  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:32.044   529   529 D BatterySaverPolicy: accessibility changed to true, updating policy.
+10-15 15:34:32.044  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:32.044  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:32.044  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:32.044  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:32.044  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:32.044  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:32.044  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:32.044  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:32.044  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:32.044  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:32.044  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:32.044  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:32.045  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:32.050  1948  2102 I A       : NGA disabled due to not being eligible.
+10-15 15:34:32.055  1473  1501 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:32.061 15984 15984 V SafetyCenterAccessibilityListener: accessibility event occurred, safety center feature not enabled.
+10-15 15:34:32.071  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:32.071  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:32.071  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:32.071  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:32.071  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:32.071  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:32.071  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:32.072  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:32.072  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:32.072  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:32.072  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:32.072  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:32.072  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:32.072  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:32.073  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:32.077   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:32.077   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:32.077   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:32.078   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:32.078   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:32.078   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:33.097 26085 26085 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@1036e; boundsInParent: Rect(0, 0 - 1038, 147); boundsInScreen: Rect(52, 710 - 1080, 330); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/location_bar; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:33.097 26085 26085 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@15d86; boundsInParent: Rect(0, 0 - 1080, 3); boundsInScreen: Rect(0, 330 - 1080, 333); packageName: com.android.chrome; className: android.widget.ImageView; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/toolbar_hairline; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:33.098 26085 26085 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@d2a1; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/bottom_container; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:33.098 26085 26085 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@18a92; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: null; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:33.098 26085 26085 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@186d1; boundsInParent: Rect(0, 0 - 0, 0); boundsInScreen: Rect(0, 2337 - 0, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/menu_anchor_stub; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:33.099 26085 26085 W AccessibilityNodeInfoDumper: Fetch time: 34ms
+10-15 15:34:33.106  1473  2325 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:33.107  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:33.108  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:33.108  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:33.108  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:33.108  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:33.108 26085 26085 D AndroidRuntime: Shutting down VM
+10-15 15:34:33.109  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:33.109  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:33.109  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:33.113  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:33.114  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:33.114  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:33.114  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:33.115  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:33.115  1948  2123 I A       : NGA disabled due to not being eligible.
+10-15 15:34:33.116  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:33.116  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:33.116   529   529 D BatterySaverPolicy: accessibility changed to false, updating policy.
+10-15 15:34:33.118   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:33.118   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:33.118   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:33.121   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ddf0
+10-15 15:34:33.121   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:33.472   734   963 D EGL_emulation: app_time_stats: avg=5478.12ms min=43.25ms max=10912.99ms count=2
+10-15 15:34:36.430   529  2517 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.android.chrome/com.google.android.apps.chrome.Main} from uid 0
+10-15 15:34:36.458 25393 25393 I cr_OfflineDetector: Running updateState mConnectivityDetectorInitialized: true, mTimeWhenLastForegrounded: 50488271, getElapsedTime: 50488271, mTimeWhenLastOfflineNotificationReceived: 50469520, mTimeWhenLastOnline: 0, mApplicationState: 1, mIsOfflineLastReportedByConnectivityDetector: true, mIsEffectivelyOffline: true
+10-15 15:34:36.458 25393 25393 I cr_OfflineDetector: updateState(): timeSinceLastForeground: 0, timeSinceOfflineNotificationReceived: 18751, timeSinceLastOnline: 50488271, timeNeededForForeground: 2000, timeNeededForOffline: -16751
+10-15 15:34:36.461 25393 25393 I cr_InactivityTracker: Last background time read from the SharedPreference is:1697384076434.
+10-15 15:34:36.466   310 26118 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:37.282 26126 26126 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-15 15:34:37.285 26126 26126 I AndroidRuntime: Using default boot image
+10-15 15:34:37.287 26126 26126 I AndroidRuntime: Leaving lock profiling enabled
+10-15 15:34:37.289 26126 26126 I app_process: Core platform API reporting enabled, enforcing=false
+10-15 15:34:37.289 26126 26126 I app_process: Using CollectorTypeCC GC.
+10-15 15:34:37.343 26126 26126 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+10-15 15:34:37.343 26126 26126 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt70l.dat
+10-15 15:34:37.346 26126 26126 W app_process: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:37.346 26126 26126 W app_process: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:37.349 26126 26126 W app_process: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2649186567])
+10-15 15:34:37.359 26126 26126 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-15 15:34:37.367  1473  1501 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:37.367 26126 26143 V UiAutomation: Init UiAutomation@4b02ec[id=601, flags=0]
+10-15 15:34:37.367  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:37.367  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:37.367  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:37.367  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:37.367  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:37.367  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:37.367  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:37.369  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:37.370  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:37.370  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:37.370   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:37.370  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:37.370  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:37.370  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:37.370  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:37.371  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:37.375  1473  1501 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:37.378  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:37.379  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:37.379  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:37.379  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:37.379  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:37.379  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:37.379  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:37.379  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:37.380  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:37.380 15984 15984 V SafetyCenterAccessibilityListener: accessibility event occurred, safety center feature not enabled.
+10-15 15:34:37.381  1948  2102 I A       : NGA disabled due to not being eligible.
+10-15 15:34:37.381   529   529 D BatterySaverPolicy: accessibility changed to true, updating policy.
+10-15 15:34:37.382  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:37.382  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:37.382  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:37.382  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:37.382  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:37.382  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:37.383   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:37.383   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:37.384   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:37.384   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:37.384   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:38.421 26126 26126 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@10389; boundsInParent: Rect(0, 0 - 1038, 147); boundsInScreen: Rect(52, 710 - 1080, 330); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/location_bar; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:38.422 26126 26126 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@15da1; boundsInParent: Rect(0, 0 - 1080, 3); boundsInScreen: Rect(0, 330 - 1080, 333); packageName: com.android.chrome; className: android.widget.ImageView; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/toolbar_hairline; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:38.422 26126 26126 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@d2bc; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/bottom_container; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:38.422 26126 26126 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@18aad; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: null; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:38.422 26126 26126 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@186ec; boundsInParent: Rect(0, 0 - 0, 0); boundsInScreen: Rect(0, 2337 - 0, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/menu_anchor_stub; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:38.423 26126 26126 W AccessibilityNodeInfoDumper: Fetch time: 28ms
+10-15 15:34:38.426  1473  2325 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:38.427  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:38.427  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:38.427  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:38.427  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:38.427  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:38.427  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:38.428  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:38.428 26126 26126 D AndroidRuntime: Shutting down VM
+10-15 15:34:38.428  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:38.430  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:38.431  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:38.433  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:38.434  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:38.434  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:38.435  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:38.435  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:38.437   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:38.437   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:38.439  1948  2123 I A       : NGA disabled due to not being eligible.
+10-15 15:34:38.439   529   529 D BatterySaverPolicy: accessibility changed to false, updating policy.
+10-15 15:34:38.445   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:38.445   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:38.445   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:38.474   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7ee10
+10-15 15:34:40.568   310 26159 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:34:40.569  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:40.638 26160 26160 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-15 15:34:40.641 26160 26160 I AndroidRuntime: Using default boot image
+10-15 15:34:40.641 26160 26160 I AndroidRuntime: Leaving lock profiling enabled
+10-15 15:34:40.642 26160 26160 I app_process: Core platform API reporting enabled, enforcing=false
+10-15 15:34:40.642 26160 26160 I app_process: Using CollectorTypeCC GC.
+10-15 15:34:40.693 26160 26160 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+10-15 15:34:40.693 26160 26160 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt70l.dat
+10-15 15:34:40.698 26160 26160 W app_process: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:40.698 26160 26160 W app_process: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:40.699 26160 26160 W app_process: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2649186567])
+10-15 15:34:40.711 26160 26160 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-15 15:34:40.723  1473  1501 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:40.723 26160 26178 V UiAutomation: Init UiAutomation@832d227[id=602, flags=0]
+10-15 15:34:40.725  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:40.725  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:40.725  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:40.725  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:40.725  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:40.725  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:40.726  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:40.726  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:40.726  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:40.727  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:40.727  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:40.727  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:40.727  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:40.727  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:40.727  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:40.728   529   529 D BatterySaverPolicy: accessibility changed to true, updating policy.
+10-15 15:34:40.731  1473  2325 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:40.735  1948  2102 I A       : NGA disabled due to not being eligible.
+10-15 15:34:40.735 15984 15984 V SafetyCenterAccessibilityListener: accessibility event occurred, safety center feature not enabled.
+10-15 15:34:40.738  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:40.738  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:40.738   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:40.738   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:40.738   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:40.738  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:40.739  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:40.739  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:40.739  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:40.741  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:40.741  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:40.741  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:40.741  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:40.741  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:40.741   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:40.742  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:40.742  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:40.742   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:40.742  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:40.742  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:40.743   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:41.773 26160 26160 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@10396; boundsInParent: Rect(0, 0 - 1038, 147); boundsInScreen: Rect(52, 710 - 1080, 330); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/location_bar; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:41.773 26160 26160 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@15dae; boundsInParent: Rect(0, 0 - 1080, 3); boundsInScreen: Rect(0, 330 - 1080, 333); packageName: com.android.chrome; className: android.widget.ImageView; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/toolbar_hairline; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:41.773 26160 26160 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@d2c9; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/bottom_container; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:41.773 26160 26160 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@18aba; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: null; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:41.773 26160 26160 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@186f9; boundsInParent: Rect(0, 0 - 0, 0); boundsInScreen: Rect(0, 2337 - 0, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/menu_anchor_stub; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:41.774 26160 26160 W AccessibilityNodeInfoDumper: Fetch time: 32ms
+10-15 15:34:41.776  1473  1501 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:41.777  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:41.777  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:41.777  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:41.777  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:41.778  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:41.778  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:41.778  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:41.780  1948  2123 I A       : NGA disabled due to not being eligible.
+10-15 15:34:41.782  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:41.782   529   529 D BatterySaverPolicy: accessibility changed to false, updating policy.
+10-15 15:34:41.783  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:41.784 26160 26160 D AndroidRuntime: Shutting down VM
+10-15 15:34:41.785  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:41.786  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:41.786  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:41.786  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:41.786  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:41.786  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:41.789   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:41.789   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:41.789   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:44.940   310 26184 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:34:44.940  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:45.004   529  1609 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.android.chrome/com.google.android.apps.chrome.Main} from uid 0
+10-15 15:34:45.032 25393 25393 I cr_OfflineDetector: Running updateState mConnectivityDetectorInitialized: true, mTimeWhenLastForegrounded: 50496844, getElapsedTime: 50496844, mTimeWhenLastOfflineNotificationReceived: 50469520, mTimeWhenLastOnline: 0, mApplicationState: 1, mIsOfflineLastReportedByConnectivityDetector: true, mIsEffectivelyOffline: true
+10-15 15:34:45.032 25393 25393 I cr_OfflineDetector: updateState(): timeSinceLastForeground: 0, timeSinceOfflineNotificationReceived: 27324, timeSinceLastOnline: 50496844, timeNeededForForeground: 2000, timeNeededForOffline: -25324
+10-15 15:34:45.034 25393 25393 I cr_InactivityTracker: Last background time read from the SharedPreference is:1697384085007.
+10-15 15:34:45.042   310 26195 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:45.841 26203 26203 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-15 15:34:45.843 26203 26203 I AndroidRuntime: Using default boot image
+10-15 15:34:45.843 26203 26203 I AndroidRuntime: Leaving lock profiling enabled
+10-15 15:34:45.844 26203 26203 I app_process: Core platform API reporting enabled, enforcing=false
+10-15 15:34:45.845 26203 26203 I app_process: Using CollectorTypeCC GC.
+10-15 15:34:45.892 26203 26203 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+10-15 15:34:45.892 26203 26203 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt70l.dat
+10-15 15:34:45.895 26203 26203 W app_process: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:45.895 26203 26203 W app_process: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:45.896 26203 26203 W app_process: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2649186567])
+10-15 15:34:45.905 26203 26203 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-15 15:34:45.910  1473  2325 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:45.910 26203 26219 V UiAutomation: Init UiAutomation@55fd634[id=603, flags=0]
+10-15 15:34:45.911  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:45.911  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:45.911  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:45.911  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:45.911  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:45.911  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:45.912  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:45.912  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:45.912  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:45.912  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:45.912  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:45.912  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:45.912  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:45.912  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:45.912  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:45.913  1473  2271 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:45.915  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:45.915   529   529 D BatterySaverPolicy: accessibility changed to true, updating policy.
+10-15 15:34:45.915  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:45.915  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:45.915  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:45.915  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:45.915  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:45.916  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:45.916  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:45.916  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:45.916  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:45.916 15984 15984 V SafetyCenterAccessibilityListener: accessibility event occurred, safety center feature not enabled.
+10-15 15:34:45.916  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:45.916  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:45.916  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:45.916  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:45.916  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:45.920  1948  2102 I A       : NGA disabled due to not being eligible.
+10-15 15:34:45.929   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:45.929   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:45.929   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:45.931   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:45.931   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:45.931   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:46.951 26203 26203 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@103a3; boundsInParent: Rect(0, 0 - 1038, 147); boundsInScreen: Rect(52, 710 - 1080, 330); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/location_bar; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:46.951 26203 26203 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@15dbb; boundsInParent: Rect(0, 0 - 1080, 3); boundsInScreen: Rect(0, 330 - 1080, 333); packageName: com.android.chrome; className: android.widget.ImageView; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/toolbar_hairline; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:46.952 26203 26203 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@d2d6; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/bottom_container; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:46.952 26203 26203 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@18ac7; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: null; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:46.952 26203 26203 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@18706; boundsInParent: Rect(0, 0 - 0, 0); boundsInScreen: Rect(0, 2337 - 0, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/menu_anchor_stub; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:46.955 26203 26203 W AccessibilityNodeInfoDumper: Fetch time: 31ms
+10-15 15:34:46.959  1473  2271 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:46.960 26203 26203 D AndroidRuntime: Shutting down VM
+10-15 15:34:46.963  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:46.963  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:46.963  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:46.963  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:46.963  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:46.963  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:46.963  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:46.963  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:46.967   529   529 D BatterySaverPolicy: accessibility changed to false, updating policy.
+10-15 15:34:46.967  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:46.968  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:46.968  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:46.969  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:46.971  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:46.972  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:46.973  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:46.976  1948  2123 I A       : NGA disabled due to not being eligible.
+10-15 15:34:46.979   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:46.979   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:46.979   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:47.025   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a78090
+10-15 15:34:47.787   310 26221 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:34:47.787  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:48.593  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:49.117 26233 26233 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-15 15:34:49.119 26233 26233 I AndroidRuntime: Using default boot image
+10-15 15:34:49.119 26233 26233 I AndroidRuntime: Leaving lock profiling enabled
+10-15 15:34:49.121 26233 26233 I app_process: Core platform API reporting enabled, enforcing=false
+10-15 15:34:49.121 26233 26233 I app_process: Using CollectorTypeCC GC.
+10-15 15:34:49.173 26233 26233 D app_process: Time zone APEX ICU file found: /apex/com.android.tzdata/etc/icu/icu_tzdata.dat
+10-15 15:34:49.173 26233 26233 D app_process: I18n APEX ICU file found: /apex/com.android.i18n/etc/icu/icudt70l.dat
+10-15 15:34:49.175 26233 26233 W app_process: Unexpected CPU variant for x86: x86_64.
+10-15 15:34:49.175 26233 26233 W app_process: Known variants: atom, sandybridge, silvermont, kabylake, default
+10-15 15:34:49.177 26233 26233 W app_process: ClassLoaderContext classpath size mismatch. expected=0, found=1 (PCL[] | PCL[/system/framework/android.test.runner.jar*2649186567])
+10-15 15:34:49.190 26233 26233 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-15 15:34:49.196  1473  2271 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:49.197  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:49.197  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:49.198  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:49.198  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:49.198  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:49.198  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:49.201 26233 26249 V UiAutomation: Init UiAutomation@fea3fd8[id=604, flags=0]
+10-15 15:34:49.201   529   529 D BatterySaverPolicy: accessibility changed to true, updating policy.
+10-15 15:34:49.202  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:49.202  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:49.202  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:49.203  1473  1501 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:49.203  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:49.203  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:49.203  1948  2102 I A       : NGA disabled due to not being eligible.
+10-15 15:34:49.204  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:49.206  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:49.207  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:49.207   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:49.207   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:49.207  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:49.207   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:49.207  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:49.208  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:49.208  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:49.208  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:49.208  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:49.208  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:49.208  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:49.208  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:49.208  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:49.208   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:49.208  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:49.208  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:49.208  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:49.208   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:49.208  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:49.208  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:49.208  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:49.208   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:49.211 15984 15984 V SafetyCenterAccessibilityListener: accessibility event occurred, safety center feature not enabled.
+10-15 15:34:50.234 26233 26233 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@103b9; boundsInParent: Rect(0, 0 - 1038, 147); boundsInScreen: Rect(52, 710 - 1080, 330); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/location_bar; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: true; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:50.234 26233 26233 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@15dd1; boundsInParent: Rect(0, 0 - 1080, 3); boundsInScreen: Rect(0, 330 - 1080, 333); packageName: com.android.chrome; className: android.widget.ImageView; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/toolbar_hairline; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:50.234 26233 26233 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@d2ec; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.widget.FrameLayout; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/bottom_container; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:50.234 26233 26233 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@18add; boundsInParent: Rect(0, 0 - 1080, 0); boundsInScreen: Rect(0, 2337 - 1080, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: null; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:50.234 26233 26233 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@1871c; boundsInParent: Rect(0, 0 - 0, 0); boundsInScreen: Rect(0, 2337 - 0, 2337); packageName: com.android.chrome; className: android.view.View; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; viewIdResName: com.android.chrome:id/menu_anchor_stub; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+10-15 15:34:50.236 26233 26233 W AccessibilityNodeInfoDumper: Fetch time: 28ms
+10-15 15:34:50.238  1473  2271 I AiAiEcho: Settings cha with uri: content://settings/secure/accessibility_enabled
+10-15 15:34:50.240  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:50.240 26233 26233 D AndroidRuntime: Shutting down VM
+10-15 15:34:50.240  1948  2123 I A       : NGA disabled due to not being eligible.
+10-15 15:34:50.242   529   529 D BatterySaverPolicy: accessibility changed to false, updating policy.
+10-15 15:34:50.242  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:50.242  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:50.243  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:50.243  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:34:50.243  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:34:50.243  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:50.243  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:50.243  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:50.243  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:50.243  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:50.243  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:50.243  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:34:50.243  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:34:50.244  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:34:50.248   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:50.249   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:50.249   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:34:50.448  1948  1948 V ClearcutMetricXmitter: Transmission is done.
+10-15 15:34:50.448  1948  1948 V ClearcutMetricXmitter: Transmission is done.
+10-15 15:34:51.243   310 26257 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:34:51.244  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:53.196  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:34:53.239   529  2560 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=ca.zgrs.clipper/.Main} from uid 0
+10-15 15:34:53.512 25393 25646 D EGL_emulation: app_time_stats: avg=26680.38ms min=26680.38ms max=26680.38ms count=1
+10-15 15:34:53.870   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:53.870   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:53.870   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:53.870   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:53.870   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:53.870   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:53.870   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:53.870   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:53.919   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:53.981   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:53.981   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:54.017   734   963 D EGL_emulation: app_time_stats: avg=20544.34ms min=20544.34ms max=20544.34ms count=1
+10-15 15:34:54.019   529   554 W ziparchive: Unable to open '/data/app/~~Y8T2yH4sWVVrXnQtpHsUbQ==/ca.zgrs.clipper-POYn00RUNaK8R8JMQw6W6w==/base.dm': No such file or directory
+10-15 15:34:54.026   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7dfd0
+10-15 15:34:54.033   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7dfd0
+10-15 15:34:54.033   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7dfd0
+10-15 15:34:54.036  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-15 15:34:54.037  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-15 15:34:54.037  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=ca.zgrs.clipper fieldId=-1 fieldName=null extras=null}, false)
+10-15 15:34:54.037  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-15 15:34:54.038  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-15 15:34:54.055   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a798f0
+10-15 15:34:54.122   529  2032 W InputManager-JNI: Input channel object 'fd4771f SnapshotStartingWindow for taskId=101 (client)' was disposed without first being removed with the input manager!
+10-15 15:34:54.200 21645 21717 D BtGatt.ScanManager: uid 10119 isForeground true scanMode 1
+10-15 15:34:54.209 25393 25393 E cr_CompositorSurfaceMgr: surfaceDestroyed format : -3
+10-15 15:34:54.272   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7a0d0
+10-15 15:34:54.272   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7e330
+10-15 15:34:54.272   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7e330
+10-15 15:34:54.272   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7a0d0
+10-15 15:34:54.339   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7eab0
+10-15 15:34:54.339   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:54.407   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7f830
+10-15 15:34:54.501   734   963 D EGL_emulation: app_time_stats: avg=3543.00ms min=30.37ms max=35013.59ms count=10
+10-15 15:34:54.514   529  2032 D CoreBackPreview: Window{4daf89a u0 com.android.chrome/com.google.android.apps.chrome.Main}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@8c900f7, mPriority=-1}
+10-15 15:34:54.514 25393 25523 I cr_BindingManager: onTrimMemory: level=20, size=0
+10-15 15:34:54.607 25393 25393 I cr_tabmodel: Appending tabs being restored to metadata lists, 0, startingNormalCount: 1, startingIncognitoCount: 0
+10-15 15:34:54.607 25393 25393 I cr_tabmodel: Serializing tab lists; counts: 1, 0
+10-15 15:34:54.629 27020 27020 D ClipboardReceiver: Getting text from clipboard
+10-15 15:34:54.634 27020 27020 D ClipboardReceiver: Clipboard text: ~~~RESET~~~
+10-15 15:34:54.706   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7dd90
+10-15 15:34:54.736  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.onKeyDown():2444 Received KEYCODE_BACK. isAllViewsInvisible=false
+10-15 15:34:54.738   529  2032 I ActivityTaskManager: moveTaskToBack: Task{2e24b6e #101 type=standard A=10176:ca.zgrs.clipper}
+10-15 15:34:54.738   529   555 D AutofillManagerService: onBackKeyPressed()
+10-15 15:34:54.770 21645 21717 D BtGatt.ScanManager: uid 10119 isForeground true scanMode 1
+10-15 15:34:54.795   529   884 D ConnectivityService: requestNetwork for uid/pid:10125/25393 activeRequest: null callbackRequest: 1550 [NetworkRequest [ REQUEST id=1551, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-15 15:34:54.798   529   673 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 0]
+10-15 15:34:54.798   529   666 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=1551, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:54.798   529   666 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1551, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:54.798   529   666 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1551, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:54.798   529   666 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1551, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10125 RequestorUid: 10125 RequestorPkg: com.android.chrome UnderlyingNetworks: Null] ]
+10-15 15:34:54.805   529   673 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 0]
+10-15 15:34:54.813 25393 25393 I cr_OfflineDetector: Running updateState mConnectivityDetectorInitialized: true, mTimeWhenLastForegrounded: 50506625, getElapsedTime: 50506625, mTimeWhenLastOfflineNotificationReceived: 50469520, mTimeWhenLastOnline: 0, mApplicationState: 1, mIsOfflineLastReportedByConnectivityDetector: true, mIsEffectivelyOffline: true
+10-15 15:34:54.813 25393 25393 I cr_OfflineDetector: updateState(): timeSinceLastForeground: 0, timeSinceOfflineNotificationReceived: 37105, timeSinceLastOnline: 50506625, timeNeededForForeground: 2000, timeNeededForOffline: -35105
+10-15 15:34:54.823 25393 25393 W ClankAppFlowLogger: Didn't expect to log DISCOVER_LOADING_INDICATOR_SHOWN after DISCOVER_FEED_RELOADING
+10-15 15:34:54.859 25393 25504 W cr_PartnerCustomize: Partner homepage must be HTTP(S) or NewTabPage. Got invalid URL ""
+10-15 15:34:54.864   529   884 D CoreBackPreview: Window{4daf89a u0 com.android.chrome/com.google.android.apps.chrome.Main}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@6b24832, mPriority=0}
+10-15 15:34:54.945 25393 25393 I cr_InactivityTracker: Last background time read from the SharedPreference is:1697384093251.
+10-15 15:34:54.996   310 26277 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:34:55.018 25393 25393 I cr_CompositorSurfaceMgr: surfaceCreated format: 0
+10-15 15:34:55.265 25393 25646 E OpenGLRenderer: Unable to match the desired swap behavior.
+10-15 15:34:55.267   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a77a90
+10-15 15:34:55.267   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a79410
+10-15 15:34:55.410 25524 25545 D EGL_emulation: eglCreateContext: 0x724ab9ed8fd0: maj 3 min 0 rcv 3
+10-15 15:34:55.545   734   963 D EGL_emulation: app_time_stats: avg=58.59ms min=2.80ms max=236.51ms count=8
+10-15 15:34:55.692   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:55.692   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:55.692   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:55.692   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:55.692   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:55.692   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:55.692   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:55.692   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:55.700 25393 25393 I Choreographer: Skipped 40 frames!  The application may be doing too much work on its main thread.
+10-15 15:34:56.558 25524 25545 D goldfish_vulkan: on_vkAllocateMemory: Import AHardwareBuffer
+10-15 15:34:56.667 25393 25414 I OpenGLRenderer: Davey! duration=748ms; Flags=0, FrameTimelineVsyncId=21754444, IntendedVsync=50507566031481, Vsync=50507916031467, InputEventId=0, HandleInputStart=50507922230959, AnimationStart=50507922231611, PerformTraversalsStart=50507922862617, DrawStart=50507923020394, FrameDeadline=50508166031457, FrameInterval=50507922227600, FrameStartTime=16666666, SyncQueued=50507923104228, SyncStart=50508015121606, IssueDrawCommandsStart=50508015261675, SwapBuffers=50508016641802, FrameCompleted=50508406271609, DequeueBufferDuration=268979736, QueueBufferDuration=252752, GpuCompleted=50508251060088, SwapBuffersCompleted=50508406271609, DisplayPresentTime=0, CommandSubmissionCompleted=50508016641802, 
+10-15 15:34:56.671   389   404 W TransactionTracing: Could not find layer id -1
+10-15 15:34:56.747 25524 25545 D goldfish_vulkan: on_vkAllocateMemory: Import AHardwareBuffer
+10-15 15:34:56.925  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+10-15 15:34:56.925  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+10-15 15:34:56.925  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.android.chrome fieldId=2130772809 fieldName=null extras=null}, false)
+10-15 15:34:56.925  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+10-15 15:34:56.928  1415  1415 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+10-15 15:34:56.977   734   963 D EGL_emulation: app_time_stats: avg=328.50ms min=1.43ms max=2382.35ms count=8
+10-15 15:34:57.028 25393 25646 D EGL_emulation: app_time_stats: avg=123.46ms min=2.40ms max=598.02ms count=9
+10-15 15:34:57.292   529  2649 W BatteryExternalStatsWorker: error reading Bluetooth stats: 11
+10-15 15:34:57.295   529   577 D KernelCpuUidUserSysTimeReader: Removing uids 90009-90009
+10-15 15:34:57.296   529   577 D KernelCpuUidUserSysTimeReader: Removing uids 90000-90000
+10-15 15:34:57.338   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7a3d0
+10-15 15:34:57.338   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7a3d0
+10-15 15:34:57.339   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7abb0
+10-15 15:34:57.339   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7dfd0
+10-15 15:34:57.339   389   404 W TransactionTracing: Could not find layer handle 0x7cf583a7a3d0
+10-15 15:34:57.427   734   963 D EGL_emulation: app_time_stats: avg=307.15ms min=1.84ms max=1330.76ms count=5
+10-15 15:34:58.436   734   963 D EGL_emulation: app_time_stats: avg=3.01ms min=1.05ms max=11.23ms count=17
+10-15 15:35:00.014  1473  1733 I AiAiEcho: Predicting[0]: 
+10-15 15:35:00.014  1473  1733 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata: 
+10-15 15:35:00.014  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0
+10-15 15:35:00.014  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0
+10-15 15:35:00.015  1473  1733 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface media_data_manager with targets# 0
+10-15 15:35:00.039   734   963 D EGL_emulation: app_time_stats: avg=338.59ms min=1.56ms max=2654.93ms count=8
+10-15 15:35:00.039   734   734 D SsMediaDataProvider: Forwarding Smartspace updates []
+10-15 15:35:00.311   310 26279 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:35:00.312  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:35:00.496  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:35:00.541 21645 21717 D BtGatt.ScanManager: regularScanTimeout - client scan time was too long
+10-15 15:35:00.547 21645 21717 W BtGatt.ScanManager: Moving filtered scan client to downgraded scan (scannerId 1)
+10-15 15:35:00.552 21645 21717 D BtGatt.ScanManager: configureRegularScanParams() - queue=1
+10-15 15:35:00.586 21645 21717 I bt_stack: [INFO:le_scanning_manager.cc(154)] Scan in shim layer stopped
+10-15 15:35:00.610 21645 21738 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:190 unregister_client: Client unregistered
+10-15 15:35:00.610 21645 21738 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:194 unregister_client: Cancelled address rotation alarm
+10-15 15:35:00.621 21645 21717 D BtGatt.ScanManager: Start gattClientScanNative with old scanMode 1 new scanMode 0 ( in MS: 1400 / 140, in scan unit: 2240 / 224 ) [ScanClient scanModeApp 1 scanModeUsed 0 [appScanStats com.google.uid.shared:10119]]
+10-15 15:35:00.622 21645 21717 I bt_stack: [INFO:le_scanning_manager.cc(250)] SetScanParameters in shim layer
+10-15 15:35:00.622 21645 21717 I bt_stack: [INFO:le_scanning_manager.cc(154)] Scan in shim layer started
+10-15 15:35:00.662 21645 21738 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_scanning_manager.cc:659 stop_scan: Scanning already stopped, return!
+10-15 15:35:00.667 21645 21697 D BtGatt.GattService: onScanParamSetupCompleted : 0
+10-15 15:35:00.685 21645 21738 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:172 register_client: Scheduled address rotation for first client registered
+10-15 15:35:00.685 21645 21738 I bluetooth: packages/modules/Bluetooth/system/gd/hci/le_address_manager.cc:175 register_client: Client registered
+10-15 15:35:00.788  1193  1193 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.cast.service.BIND_CAST_DEVICE_CONTROLLER_SERVICE pkg=com.google.android.gms }
+10-15 15:35:02.249 27020 27031 W ca.zgrs.clipper: Reducing the number of considered missed Gc histogram windows from 401 to 100
+10-15 15:35:03.493   734   963 D EGL_emulation: app_time_stats: avg=3454.77ms min=3454.77ms max=3454.77ms count=1
+10-15 15:35:06.359   529  2649 D ConnectivityService: requestNetwork for uid/pid:10140/25233 activeRequest: null callbackRequest: 1553 [NetworkRequest [ REQUEST id=1554, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10140 RequestorUid: 10140 RequestorPkg: com.google.android.youtube UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+10-15 15:35:06.360   529   666 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=1554, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10140 RequestorUid: 10140 RequestorPkg: com.google.android.youtube UnderlyingNetworks: Null] ]
+10-15 15:35:06.361   529   666 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1554, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10140 RequestorUid: 10140 RequestorPkg: com.google.android.youtube UnderlyingNetworks: Null] ]
+10-15 15:35:06.361   529   673 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 1]
+10-15 15:35:06.361   529   666 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1554, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10140 RequestorUid: 10140 RequestorPkg: com.google.android.youtube UnderlyingNetworks: Null] ]
+10-15 15:35:06.361   529   666 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=1554, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10140 RequestorUid: 10140 RequestorPkg: com.google.android.youtube UnderlyingNetworks: Null] ]
+10-15 15:35:10.261   310 26281 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:35:10.261  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:35:10.627  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:35:11.719 25393 25541 I cr_media: Create MediaDrmBridge with level L3 and origin 05345B05056286437426FB00BAED5B7D
+10-15 15:35:11.740 25393 25541 I DrmHalHidl: found instance=clearkey version=android.hardware.drm@1.4::IDrmFactory
+10-15 15:35:11.740 25393 25541 I DrmHalHidl: found instance=default version=android.hardware.drm@1.0::IDrmFactory
+10-15 15:35:11.744 25393 25541 I DrmUtils: found IDrmFactory. Instance name:[android.hardware.drm.IDrmFactory/clearkey]
+10-15 15:35:11.745 25393 25541 I DrmUtils: found IDrmFactory. Instance name:[android.hardware.drm.IDrmFactory/widevine]
+10-15 15:35:11.757   328   328 I WVCdm   : [cdm_engine.cpp(993):IsSecurityLevelSupported] level = L1
+10-15 15:35:11.767   328   328 I WVCdm   : [oemcrypto_adapter_dynamic.cpp(900):Initialize] Level 3 Build Info (v17): OEMCrypto Level3 Code Feb  2 2023 05:37:47 28926 X86 64bit APIv17.1
+10-15 15:35:11.769   328 26282 I WVCdm   : [(0):] Level3 Library 28926 Feb  2 2023 05:37:47
+10-15 15:35:11.787   328   328 I WVCdm   : [oemcrypto_adapter_dynamic.cpp(914):Initialize] L3 Initialized. Trying L1.
+10-15 15:35:11.789   328   328 W WVCdm   : [oemcrypto_adapter_dynamic.cpp(926):Initialize] Could not load liboemcrypto.so. Falling back to L3.  dlopen failed: library "liboemcrypto.so" not found
+10-15 15:35:11.789   328   328 W WVCdm   : [oemcrypto_adapter_dynamic.cpp(1589):OEMCrypto_InitializeAndCheckKeybox] Keybox error: 25. Falling back to L3.
+10-15 15:35:11.789   328   328 E WVCdm   : [oemcrypto_adapter_dynamic.cpp(958):Level1Terminate] L1 Terminate not needed
+10-15 15:35:11.793   328   328 D WVCdm   : [crypto_session.cpp(405):CacheVersion] OEMCrypto version (default security level): 17.1
+10-15 15:35:11.793   328   328 D WVCdm   : [crypto_session.cpp(414):CacheVersion] OEMCrypto version (L3 security level): 17.1
+10-15 15:35:11.798 25393 25541 I DrmUtils: found IDrmFactory. Instance name:[android.hardware.drm.IDrmFactory/clearkey]
+10-15 15:35:11.798 25393 25541 I DrmUtils: found IDrmFactory. Instance name:[android.hardware.drm.IDrmFactory/widevine]
+10-15 15:35:11.798   328   328 I WVCdm-DrmFactory: [nullptr][com.android.chrome] calling virtual ::ndk::ScopedAStatus wvdrm::hardware::drm::widevine::WVDrmFactory::createDrmPlugin(const aidl::android::hardware::drm::Uuid &, const std::string &, std::shared_ptr< ::aidl::android::hardware::drm::IDrmPlugin> *)
+10-15 15:35:11.798   328   328 D WVCdm   : Instantiating CDM.
+10-15 15:35:11.800   328   328 D WVCdm   : [cdm_engine.cpp(551):QueryStatus] security_level = Default, query_token = SecurityLevel
+10-15 15:35:11.800   328   328 D WVCdm   : [cdm_engine.cpp(551):QueryStatus] security_level = Default, query_token = DeviceID
+10-15 15:35:11.800   328   328 D WVCdm   : [crypto_session.cpp(860):Open] Opening crypto session: requested_security_level = Default
+10-15 15:35:11.802   328   328 D WVCdm   : [usage_table_header.cpp(162):Init] security_level = L3
+10-15 15:35:11.802   328   328 D WVCdm   : [usage_table_header.cpp(504):DetermineTableCapacity] capacity = unlimited, security_level = L3
+10-15 15:35:11.814   328   328 I WVCdm   : [usage_table_header.cpp(203):RestoreTable] Found usage table to restore: entry_count = 0
+10-15 15:35:11.816   328   328 D WVCdm   : [crypto_session.cpp(860):Open] Opening crypto session: requested_security_level = Default
+10-15 15:35:11.817 25393 25541 D DrmHalAidl: framework logs size 2; plugin logs size 100
+10-15 15:35:11.821   328   328 I WVCdm   : [cdm_engine.cpp(1019):GetProvisioningRequest] cert_type = Widevine
+10-15 15:35:11.821 25393 25393 I MediaDrm: Drm event (1,0)
+10-15 15:35:11.821 25393 25393 E cr_media: EventListener: No session for event 1.
+10-15 15:35:11.829   328   328 D WVCdm   : [crypto_session.cpp(860):Open] Opening crypto session: requested_security_level = Default
+10-15 15:35:11.847   310 26284 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:35:11.848 25393 25541 I cr_media: Provisioning origin ID 05345B05056286437426FB00BAED5B7D
+10-15 15:35:11.850   310 26285 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:35:11.851   310 26286 I resolv  : GetAddrInfoHandler::run: {0 0 0 983040 10125 0}
+10-15 15:35:11.852 25393 25541 E DrmHalHidl: Failed to get vendor from drm plugin: -19
+10-15 15:35:11.852 25393 25541 E DrmHalHidl: Failed to get description from drm plugin: -19
+10-15 15:35:11.852 25393 25541 I cr_media: Create MediaDrmBridge with level L1 and origin 05345B05056286437426FB00BAED5B7D
+10-15 15:35:11.855 25393 25541 I DrmUtils: found IDrmFactory. Instance name:[android.hardware.drm.IDrmFactory/clearkey]
+10-15 15:35:11.862   328   328 I WVCdm   : [(0):] L3 Terminate.
+10-15 15:35:11.862 25393 25541 I DrmUtils: found IDrmFactory. Instance name:[android.hardware.drm.IDrmFactory/widevine]
+10-15 15:35:11.862   328   328 I WVCdm   : [cdm_engine.cpp(993):IsSecurityLevelSupported] level = L1
+10-15 15:35:11.862   328   328 I WVCdm   : [oemcrypto_adapter_dynamic.cpp(900):Initialize] Level 3 Build Info (v17): OEMCrypto Level3 Code Feb  2 2023 05:37:47 28926 X86 64bit APIv17.1
+10-15 15:35:11.862   328 26287 I WVCdm   : [(0):] Level3 Library 28926 Feb  2 2023 05:37:47
+10-15 15:35:11.865   328   328 I WVCdm   : [oemcrypto_adapter_dynamic.cpp(914):Initialize] L3 Initialized. Trying L1.
+10-15 15:35:11.865   328   328 W WVCdm   : [oemcrypto_adapter_dynamic.cpp(926):Initialize] Could not load liboemcrypto.so. Falling back to L3.  dlopen failed: library "liboemcrypto.so" not found
+10-15 15:35:11.865   328   328 W WVCdm   : [oemcrypto_adapter_dynamic.cpp(1589):OEMCrypto_InitializeAndCheckKeybox] Keybox error: 25. Falling back to L3.
+10-15 15:35:11.865   328   328 E WVCdm   : [oemcrypto_adapter_dynamic.cpp(958):Level1Terminate] L1 Terminate not needed
+10-15 15:35:11.865   328   328 D WVCdm   : [crypto_session.cpp(405):CacheVersion] OEMCrypto version (default security level): 17.1
+10-15 15:35:11.865   328   328 D WVCdm   : [crypto_session.cpp(414):CacheVersion] OEMCrypto version (L3 security level): 17.1
+10-15 15:35:11.866 25393 25541 I DrmUtils: found IDrmFactory. Instance name:[android.hardware.drm.IDrmFactory/clearkey]
+10-15 15:35:11.866 25393 25541 I DrmUtils: found IDrmFactory. Instance name:[android.hardware.drm.IDrmFactory/widevine]
+10-15 15:35:11.866   328   328 I WVCdm-DrmFactory: [nullptr][com.android.chrome] calling virtual ::ndk::ScopedAStatus wvdrm::hardware::drm::widevine::WVDrmFactory::createDrmPlugin(const aidl::android::hardware::drm::Uuid &, const std::string &, std::shared_ptr< ::aidl::android::hardware::drm::IDrmPlugin> *)
+10-15 15:35:11.867   328   328 D WVCdm   : Instantiating CDM.
+10-15 15:35:11.867   328   328 D WVCdm   : [cdm_engine.cpp(551):QueryStatus] security_level = Default, query_token = SecurityLevel
+10-15 15:35:11.867   328   328 D WVCdm   : [cdm_engine.cpp(551):QueryStatus] security_level = Default, query_token = SecurityLevel
+10-15 15:35:11.867   328   328 E WVCdm   : App requested L1 security on a non-L1 device.
+10-15 15:35:11.867 25393 25541 D DrmHalAidl: framework logs size 2; plugin logs size 100
+10-15 15:35:11.868 25393 25541 E cr_media: Security level L1 not supported!
+10-15 15:35:11.868 25393 25541 E DrmHalHidl: Failed to get vendor from drm plugin: -19
+10-15 15:35:11.868   436   701 D statsd_drm: statsd_mediadrm skipping empty entry
+10-15 15:35:11.868 25393 25541 E DrmHalHidl: Failed to get description from drm plugin: -19
+10-15 15:35:11.868 25393 25541 W chromium: [WARNING:media_drm_origin_id_manager.cc(250)] Failed to provision origin ID
+10-15 15:35:11.874   328   328 I WVCdm   : [(0):] L3 Terminate.
+10-15 15:35:15.795   310 26289 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:35:15.796  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:35:21.139   310 26290 I resolv  : GetAddrInfoHandler::run: {0 786432 0 983040 10119 0}
+10-15 15:35:21.142  1193 20898 W enyb    : [{0}] Failed to resolve name. status={1}
+10-15 15:35:26.596   344   344 E android.hardware.power.stats@1.0-service-mock: Failed to getEnergyData
+10-15 15:35:29.080   529  2649 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10125; state: DISABLED
+10-15 15:35:29.080   529  2649 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10125; state: DISABLED
+10-15 15:35:29.085   529  2649 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 1000; state: DISABLED
+10-15 15:35:29.085   529  2649 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 1000; state: DISABLED
+10-15 15:35:29.086   529  2649 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10135; state: DISABLED
+10-15 15:35:29.086   529  2649 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10135; state: DISABLED
+10-15 15:35:29.087   529  2649 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10135; state: DISABLED
+10-15 15:35:29.089   529  2649 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10123; state: DISABLED
+10-15 15:35:29.089   529  2649 D CompatibilityChangeReporter: Compat change id reported: 181136395; UID 10123; state: DISABLED
+10-15 15:35:29.089   529  2649 D CompatibilityChangeReporter: Compat change id reported: 174042936; UID 10123; state: DISABLED
+10-15 15:35:29.089   529  2649 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10123; state: DISABLED
+10-15 15:35:29.089   529  2649 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10123; state: DISABLED
+10-15 15:35:29.091   529  2649 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10142; state: DISABLED
+10-15 15:35:29.091   529  2649 D CompatibilityChangeReporter: Compat change id reported: 181136395; UID 10142; state: DISABLED
+10-15 15:35:29.091   529  2649 D CompatibilityChangeReporter: Compat change id reported: 174042936; UID 10142; state: DISABLED
+10-15 15:35:29.092   529  2649 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10142; state: DISABLED
+10-15 15:35:29.092   529  2649 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10142; state: DISABLED
+10-15 15:35:29.093   529  2649 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10176; state: DISABLED
+10-15 15:35:29.094   529  2649 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10176; state: DISABLED

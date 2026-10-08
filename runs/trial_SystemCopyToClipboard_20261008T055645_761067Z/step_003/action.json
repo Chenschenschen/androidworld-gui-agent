@@ -1,0 +1,13 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Type",
+    "text": "Discount code: SAVE20"
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "Discount code: SAVE20",
+    "clear_text": true
+  },
+  "observation_id": "observation_0"
+}

@@ -1,0 +1,16 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Tap",
+    "element": [
+      340,
+      543
+    ]
+  },
+  "android": {
+    "action_type": "click",
+    "x": 367,
+    "y": 1303
+  },
+  "observation_id": "observation_0"
+}

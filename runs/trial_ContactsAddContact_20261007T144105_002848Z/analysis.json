@@ -1,0 +1,15 @@
+{
+  "evaluation_valid": true,
+  "verified_agent_success": false,
+  "category": "validation_error",
+  "failure_class": null,
+  "evidence": [
+    "step_001: native annotation accepted, Contacts opened",
+    "step_003: tap opened Create contact form",
+    "step_004: first-name field focused",
+    "step_005: type:Camila returned twice without action:TYPE/value fields"
+  ],
+  "official_verifier_score": 0.0,
+  "conclusion": "Parser correction enabled four GUI actions; no task success improvement in the one matched pair.",
+  "candidate_change": "Native action examples in the prompt; user choice pending"
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see the timer now shows \"00h 00m 11s\". I need to continue entering the digits to reach the target of 01h 18m 44s. I need to enter: 1, 1, 8, 4, 4. I've entered 1, 1 so far, so I need to enter 8 next.\ndo(action=\"Tap\", element=[499,569])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407520,
+  "id": "20261008051158790c4c8f9fbe40cd",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008051158790c4c8f9fbe40cd",
+  "usage": {
+    "completion_tokens": 93,
+    "prompt_tokens": 4009,
+    "prompt_tokens_details": {
+      "cached_tokens": 2106
+    },
+    "total_tokens": 4102
+  },
+  "wall_seconds": 1.8130000000019209
+}

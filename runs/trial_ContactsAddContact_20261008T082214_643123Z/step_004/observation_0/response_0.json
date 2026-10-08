@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"First name\" field is focused and empty. Type \"Hugo\" into it as the first name.\n\n\ndo(action=\"Type\", text=\"Hugo\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447761,
+  "id": "20261008162240d5c4891d03e044e2",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008162240d5c4891d03e044e2",
+  "usage": {
+    "completion_tokens": 38,
+    "prompt_tokens": 2364,
+    "prompt_tokens_details": {
+      "cached_tokens": 1097
+    },
+    "total_tokens": 2402
+  },
+  "wall_seconds": 1.360000000000582
+}

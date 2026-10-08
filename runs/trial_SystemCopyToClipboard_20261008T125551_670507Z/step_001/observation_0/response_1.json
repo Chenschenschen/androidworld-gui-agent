@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\ndo(action=\"Launch\", app=\"markor\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464170,
+  "id": "2026100820561037cde7ebce154d51",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100820561037cde7ebce154d51",
+  "usage": {
+    "completion_tokens": 13,
+    "prompt_tokens": 2883,
+    "prompt_tokens_details": {
+      "cached_tokens": 2760
+    },
+    "total_tokens": 2896
+  },
+  "wall_seconds": 1.014999999999418
+}

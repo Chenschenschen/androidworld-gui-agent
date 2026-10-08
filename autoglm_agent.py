@@ -9,8 +9,10 @@ import ast
 import base64
 from dataclasses import asdict, replace
 import json
+import os
 from pathlib import Path
 import re
+import subprocess
 import time
 import urllib.error
 import urllib.request
@@ -25,6 +27,29 @@ from trajectory import log_event
 
 PROJECT = Path(__file__).resolve().parent
 
+# Exact observed multilingual names, plus the pinned upstream SMS app identifier.
+# Values still pass the task's allowed-app check; unknown names are never guessed.
+APP_NAME_ALIASES = {
+    "简单短信消息发送器": "simple sms messenger",
+    "简单短信消息": "simple sms messenger",
+    "simplesmsmessenger": "simple sms messenger",
+}
+
+
+def launch_chrome_once(timeout):
+    """Launch the model-selected Chrome activity once, with a bounded cold-start wait.
+
+    Use Android World's component mapping and its am-start command. Its generic
+    helper retries and restarts ADB after5 seconds, terminating video sessions.
+    This isolated transport repair permits no uncertain launch replay.
+    """
+    activity = adb_utils.get_adb_activity("chrome")
+    if not activity:
+        raise RuntimeError("Official Chrome activity mapping unavailable")
+    adb = Path(os.environ["LOCALAPPDATA"]) / "Android/Sdk/platform-tools/adb.exe"
+    return subprocess.run([str(adb), "-s", "emulator-5554", "shell", "am", "start",
+        "-W", "-n", activity], check=True, capture_output=True, timeout=timeout)
+
 # Visible completion criteria, not fixed coordinates, action replays or verifier
 # results. The model decides from the latest screenshot and supplied GUI state.
 COMPLETION_RULES = {
@@ -32,6 +57,8 @@ COMPLETION_RULES = {
     "CameraTakePhoto": "Exactly one new photo has been captured: one shutter action in the executed history and a new captured-photo thumbnail or preview in the GUI. Finish when both hold; launching Camera alone is insufficient.",
     "ClockTimerEntry": "Timer displays the exact requested hours, minutes and seconds, with Start available and the timer not running. Finish when that visible state holds; do not start it.",
     "ContactsAddContact": "The saved contact view shows the exact requested full name and phone number after Save. A filled unsaved form is insufficient. Finish on the saved result.",
+    "SimpleSmsSend": "Simple SMS Messenger shows the exact requested message as an outgoing sent message in the conversation with the requested phone number, after the Send action. A filled message draft is insufficient; a pending or failed message is not sent. Finish when the visible sent result holds; do not send it again.",
+    "FilesMoveFile": "The exact requested file is present in the destination folder and absent from the source folder after a GUI move. A copy or an open destination-selection dialog is insufficient. Check the current folder and exact filename, then finish when the move result is supported by the GUI and executed history. Do not move it again after completion.",
     "SystemCopyToClipboard": "The exact requested text has been fully selected and copied through the visible Copy command; the selection menu has closed afterwards. Finish on that observed result. A transient clipboard chip or toast is optional. The task input is text to copy, not current clipboard state. Clipper is verifier infrastructure.",
 }
 
@@ -64,6 +91,31 @@ def completion_condition(task_name, inputs):
         digits = f"{hours:02d}{minutes:02d}{seconds:02d}".lstrip("0") or "0"
         condition += f" Target display: {hours:02d}h {minutes:02d}m {seconds:02d}s. Equivalent literal HHMMSS input value: {digits!r}."
     return condition
+
+
+def native_prompt(apps):
+    """Render the existing Launch example with a real allowed argument, not a placeholder."""
+    prompt = (PROJECT / "instructions/autoglm.md").read_text(encoding="utf-8")
+    if not apps:
+        raise ValueError("Native action context needs an available GUI app")
+    # This changes an example argument only; the model still selects every action.
+    return prompt.replace('do(action="Launch", app="app_name")',
+        'do(action="Launch", app=' + json.dumps(apps[0]) + ')')
+
+
+def task_guide(task_name, inputs):
+    """Load one procedure; format task values without choosing its next action."""
+    source = (PROJECT / "instructions/task_guides.md").read_text(encoding="utf-8")
+    heading = f"## {task_name}\n"
+    if source.count(heading) != 1:
+        raise ValueError("Expected exactly one guide for the selected task")
+    common = source.split("\n## ", 1)[0].split("\n", 1)[1].strip()
+    selected = source.split(heading, 1)[1].split("\n## ", 1)[0].strip()
+    if task_name == "ClockTimerEntry":
+        display = f"{inputs['hours']:02d}h {inputs['minutes']:02d}m {inputs['seconds']:02d}s"
+        digits = f"{inputs['hours']:02d}{inputs['minutes']:02d}{inputs['seconds']:02d}".lstrip("0") or "0"
+        selected = selected.format(timer_display=display, timer_input=digits, timer_sequence=", ".join(digits))
+    return common + "\n\n" + selected
 
 
 def parse_action(raw):
@@ -104,7 +156,7 @@ def parse_action(raw):
 def pixel_point(point, state):
     """Convert a checked normalized point or model-chosen box center to pixels."""
     if not isinstance(point, list) or len(point) not in {2, 4} or any(type(v) is not int or not 0 <= v <= 1000 for v in point):
-        raise ValueError("Coordinates must be two point integers or four box integers in 0..1000")
+        raise ValueError("Coordinates must be two point integers or four box integers in normalized 0..1000 units, NOT screenshot pixels. Use the current observed tap centres: they are already normalized. Do not reuse pixel bounds as an action point.")
     if len(point) == 4:
         if point[0] >= point[2] or point[1] >= point[3]:
             raise ValueError("Bounding box must have ordered, nonzero width and height")
@@ -139,9 +191,12 @@ def convert_action(fields, state, allowed_apps):
         return {"action_type": "input_text", "text": text, "clear_text": True}
     if name == "Launch":
         app = fields["app"]
-        if not isinstance(app, str) or app.lower() not in allowed_apps:
-            raise ValueError(f"Launch app {app!r} is unavailable; allowed app values: {json.dumps(allowed_apps)}")
-        return {"action_type": "open_app", "app_name": app.lower()}
+        canonical = APP_NAME_ALIASES.get(app.lower(), app.lower()) if isinstance(app, str) else None
+        if canonical not in allowed_apps:
+            examples = [f'do(action="Launch", app={json.dumps(value)})' for value in allowed_apps]
+            raise ValueError(f"Launch app {app!r} is unavailable; allowed app values: {json.dumps(allowed_apps)}. "
+                f"Copy a literal app value without translation. Valid Launch syntax: {' OR '.join(examples)}")
+        return {"action_type": "open_app", "app_name": canonical}
     if name == "Wait":
         duration = fields["duration"]
         if isinstance(duration, str) and re.fullmatch(r"\d+(?:\.\d+)? seconds?", duration):
@@ -188,6 +243,49 @@ def type_without_submit(text, controller):
     adb_utils.type_text(text, controller, timeout_sec=10)
 
 
+def type_with_adb_keyboard(text, timeout, folder):
+    """Adapt native AutoGLM focused-input Type with UTF-8, bounded calls and no replay."""
+    adb = Path(os.environ["LOCALAPPDATA"]) / "Android/Sdk/platform-tools/adb.exe"
+    prefix = [str(adb), "-s", "emulator-5554", "shell"]
+    deadline = time.monotonic() + timeout
+    record = {"backend": "native_adb_keyboard", "attempts": 1, "text_length": len(text), "enter_added": False}
+
+    def call(arguments):
+        """Run each native input command once within the shared action deadline."""
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            raise TimeoutError("Native typing deadline reached; no replay")
+        return subprocess.run(prefix + arguments, check=True, capture_output=True, text=True, timeout=remaining)
+
+    original = call(["settings", "get", "secure", "default_input_method"]).stdout.strip()
+    if not re.fullmatch(r"[\w.]+/[\w.]+", original):
+        raise RuntimeError("Original IME unavailable; native typing not attempted")
+    record["original_ime"] = original
+    try:
+        record["phase"] = "switch"
+        save_json(folder / "type_transport.json", record)
+        call(["ime", "set", "com.android.adbkeyboard/.AdbIME"])
+        time.sleep(1)  # Native AutoGLM's keyboard-switch/clear/input delays are one second.
+        record["phase"] = "clear"
+        save_json(folder / "type_transport.json", record)
+        call(["am", "broadcast", "-a", "ADB_CLEAR_TEXT"])
+        time.sleep(1)
+        record["phase"] = "input"
+        save_json(folder / "type_transport.json", record)
+        payload = base64.b64encode(text.encode("utf-8")).decode("ascii")
+        call(["am", "broadcast", "-a", "ADB_INPUT_B64", "--es", "msg", payload])
+        record["input_call_returned"] = True
+        time.sleep(1)
+    finally:
+        # Restoring the keyboard is cleanup, never a retry of uncertain text input.
+        subprocess.run(prefix + ["ime", "set", original], check=True, capture_output=True, timeout=5)
+        time.sleep(1)
+        record["restored_original_ime"] = True
+        save_json(folder / "type_transport.json", record)
+    record["phase"] = "complete"
+    save_json(folder / "type_transport.json", record)
+
+
 def target_at(state, action):
     """Identify the selected control, excluding unrelated keyboard/time widgets."""
     candidates = []
@@ -211,8 +309,9 @@ def screen_controls(state):
     # Keep informative app nodes; status-bar clocks and empty containers add noise.
     for element in state.ui_elements:
         if element.is_visible and element.package_name != "com.android.systemui" and (
-                element.text or element.content_description or element.is_checkable or element.is_selected):
-            control = {"label": (element.metadata or {}).get("observed_label") or element.text or element.content_description or element.class_name,
+                element.text or element.content_description or element.is_checkable or element.is_selected or element.is_editable or
+                (element.metadata or {}).get("observed_label")):
+            control = {"label": (element.metadata or {}).get("observed_label") or element.text or element.content_description or element.hint_text or element.class_name,
                 "checked": element.is_checked if element.is_checkable else None,
                 "selected": element.is_selected}
             if (element.is_clickable or element.is_editable) and element.bbox_pixels:
@@ -221,6 +320,7 @@ def screen_controls(state):
                 control["tap_center"] = [int((box.x_min + box.x_max) * 500 / width), int((box.y_min + box.y_max) * 500 / height)]
                 control["editable"] = element.is_editable
                 control["focused"] = element.is_focused
+                control["clickable"] = element.is_clickable
             controls.append(control)
     return controls[:60]
 
@@ -232,6 +332,22 @@ def xml_controls(xml):
     parents = {child: parent for parent in root.iter() for child in parent}
     # A switch often has no text; its containing GUI row supplies the visible label.
     for node, element in zip(root.iter("node"), elements):
+        # Files uses a clickable card containing a non-clickable title. Associate
+        # that actual descendant text with its card, without treating headings as buttons.
+        if element.is_clickable and not (element.text or element.content_description):
+            children = [child for child in node.iter("node") if child.get("text")]
+            for child in children:
+                coordinates = [int(value) for value in re.findall(r"-?\d+", child.get("bounds", ""))]
+                box = element.bbox_pixels
+                # Recycled Files cards can expose another row's old title. Never
+                # label a card from text that is geometrically outside that card.
+                if box and len(coordinates) == 4:
+                    x0, y0, x1, y1 = coordinates
+                    if not (box.x_min <= x0 <= x1 <= box.x_max and box.y_min <= y0 <= y1 <= box.y_max):
+                        raise ValueError("Inconsistent XML: clickable container's text is outside its bounds")
+            labels = [child.get("text") for child in children]
+            if labels:
+                element.metadata = {**(element.metadata or {}), "observed_label": labels[0]}
         # UIAutomator omits editable; its actual standard EditText class is
         # positive evidence, unlike treating every unknown flag as false.
         if element.is_editable is None and element.class_name == "android.widget.EditText":
@@ -261,6 +377,8 @@ def control_notes(state):
             note += " (selected)"
         if control.get("editable"):
             note += " (editable, " + ("focused" if control.get("focused") else "not focused") + ")"
+        elif control.get("clickable"):
+            note += " (clickable)"
         if "tap_center" in control:
             note += " at observed tap center=" + json.dumps(control["tap_center"])
         notes.append(note)
@@ -282,18 +400,41 @@ def repeated_without_progress(action, actions, results):
     return same or cycle
 
 
+def assessment_text(raw):
+    """Retain visible prose, discarding native operation lines without executing them."""
+    answers = re.findall(r"<answer>(.*?)</answer>", raw, flags=re.DOTALL)
+    visible = re.sub(r"<think>.*?</think>", "", raw, flags=re.DOTALL)
+    if len(answers) == 1 and not re.search(r"\b(?:do|finish)\s*\(", answers[0]):
+        text = answers[0]
+    else:
+        text = re.sub(r"<answer>.*?</answer>", "", visible, flags=re.DOTALL)
+        # AutoGLM can retain its action-trained output even in a summary request.
+        # Only independent code lines are dropped; no code is parsed or dispatched.
+        text = "\n".join(line for line in text.splitlines() if not re.match(r"\s*(?:do|finish)\s*\(", line))
+    text = " ".join(text.split())
+    if not text or len(text) > 1600 or re.search(r"\b(?:do|finish)\s*\(", text):
+        raise ValueError("Expected a short read-only assessment, not an operation call")
+    return text
+
+
 def freshness(before, fresh, action, config):
     """Check screen/modal change and the chosen target without whole-tree equality."""
     height, width = before.pixels.shape[:2]
     global_change = image_difference(before, fresh, (0, int(height * .06), width, int(height * .94)))
     original, current = target_at(before, action), target_at(fresh, action)
     identity_keys = ("package_name", "resource_name", "resource_id", "text", "content_description", "hint_text",
-                     "bbox_pixels", "is_enabled", "is_editable", "is_focused", "is_checked", "is_selected")
-    target_same = original is None or (current is not None and all(original.get(k) == current.get(k) for k in identity_keys))
+                     "bbox_pixels", "is_enabled", "is_editable", "is_focused", "is_checked", "is_selected", "metadata")
+    target_same = current is None if original is None else (
+        current is not None and all(original.get(k) == current.get(k) for k in identity_keys))
     target_change = 0.0
     if "x" in action:
         x, y = action["x"], action["y"]
         target_change = image_difference(before, fresh, (max(0, x - 60), max(0, y - 60), min(width, x + 60), min(height, y + 60)))
+    # XML can disappear while the actual screenshot remains identical. Preserve
+    # screenshot fallback only for virtually unchanged scene AND target pixels.
+    if (original is None) != (current is None):
+        tolerance = config.get("no_effect_difference", 0.001)
+        target_same = global_change <= tolerance and target_change <= tolerance
     return {"safe": target_same and global_change <= config["freshness_global_difference"] and target_change <= config["freshness_target_difference"],
             "target_identity_same": target_same, "global_image_difference": global_change,
             "target_image_difference": target_change, "selected_target_before": original, "selected_target_fresh": current}
@@ -318,6 +459,84 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         self.recording_ready, self.recording_errors = None, []
         self.corrections_this_step = 0
         self.observations = 0
+        self.assessment_calls = 0
+        self.assessment_errors = []
+
+    def request_model(self, messages, folder, name, step):
+        """Call the same bounded API and save redacted requests/replies for either role."""
+        payload = {"model": self.config["model"], "messages": messages, "stream": False, **self.config["sampling"]}
+        logged = json.loads(json.dumps(payload))
+        # Both action and assessment images stay on disk, not in readable API logs.
+        for message in logged["messages"]:
+            if isinstance(message["content"], list):
+                for part in message["content"]:
+                    if part.get("type") == "image_url":
+                        part["image_url"]["url"] = "Saved screenshot (base64 encoded for API)"
+        suffix = name.removeprefix("action_")
+        request_path = folder / (f"request_{suffix}.json" if name.startswith("action_") else f"{name}_request.json")
+        response_path = folder / (f"response_{suffix}.json" if name.startswith("action_") else f"{name}_response.json")
+        save_json(request_path, logged)
+        remaining = self.deadline - time.monotonic()
+        if remaining <= 0:
+            raise RuntimeError("Model time budget exhausted")
+        self.calls += 1
+        log_event(self.output, "MODEL REQUEST", {"call": self.calls, "role": name, "endpoint": self.endpoint,
+            "request": str(request_path.relative_to(self.output))}, step)
+        request = urllib.request.Request(self.endpoint + "/chat/completions", data=json.dumps(payload).encode(),
+            headers={"Content-Type": "application/json", "Authorization": "Bearer " + self.key})
+        started = time.monotonic()
+        print(f"Step {step}, {name}, AutoGLM call {self.calls}", flush=True)
+        try:
+            with urllib.request.urlopen(request, timeout=min(remaining, self.config["request_timeout"])) as response:
+                data = json.load(response)
+        except urllib.error.HTTPError as error:
+            details = {"http_status": error.code,
+                "body": error.read().decode(errors="replace").replace(self.key, "[REDACTED]")}
+            save_json(folder / f"{name}_api_error.json", details)
+            log_event(self.output, "API ERROR", details, step)
+            print(f"Z.ai rejected {name} (HTTP {error.code}): {details['body']}", flush=True)
+            raise
+        data["wall_seconds"] = time.monotonic() - started
+        data = json.loads(json.dumps(data).replace(self.key, "[REDACTED]"))
+        save_json(response_path, data)
+        raw = data["choices"][0]["message"]["content"]
+        log_event(self.output, "MODEL REPLY", raw if name.startswith("action_") else {"role": name, "reply": raw}, step)
+        log_event(self.output, "MODEL TIMING", {"role": name, "wall_seconds": data["wall_seconds"], "usage": data.get("usage")}, step)
+        if data.get("model") != self.config["model"]:
+            raise RuntimeError("Provider returned a different model")
+        if data["choices"][0]["finish_reason"] == "length":
+            raise ValueError("Truncated model reply")
+        return raw
+
+    def assess_step(self, before, after, folder, goal, action, result, step):
+        """Summarize observed before/after evidence without executing or forcing completion."""
+        # M3A's summary template retains its agent/action prefix. The assessment
+        # must know the same capabilities, while its output is still read-only.
+        prompt = native_prompt(self.config["allowed_apps"])
+        prompt += "\nAvailable apps: " + json.dumps(self.config["allowed_apps"]) + "\n"
+        prompt += (PROJECT / "instructions/assessment.md").read_text(encoding="utf-8")
+        text = f"Original goal: {goal}\nCompletion condition: {completion_condition(self.config['task_name'], self.scratch)}\n"
+        inputs = {"text_to_copy":self.scratch["clipboard_content"]} if self.config['task_name'] == 'SystemCopyToClipboard' else self.scratch
+        text += "Exact task inputs: " + json.dumps(inputs) + "\n"
+        text += f"Dispatched action: {json.dumps(action)}\nPrevious model reply: {self.pending_reply}\n"
+        text += f"Actual observed result: {json.dumps(result)}\n"
+        content = [{"type": "text", "text": text}]
+        # Label the two inputs in message order; save the exact resized images.
+        for label, state in (("BEFORE", before), ("AFTER", after)):
+            image = Image.fromarray(state.pixels)
+            image.thumbnail((1280, 1280))
+            path = folder / f"assessment_{label.lower()}.png"
+            image.save(path)
+            content += [{"type": "text", "text": f"{label} screenshot ({path.name}) and GUI properties:\n{control_notes(state)}"},
+                {"type": "image_url", "image_url": {"url": "data:image/png;base64," + base64.b64encode(path.read_bytes()).decode("ascii")}}]
+        self.assessment_calls += 1
+        raw = self.request_model([{"role": "system", "content": prompt}, {"role": "user", "content": content}], folder, "assessment", step)
+        summary = assessment_text(raw)
+        discarded = re.findall(r"^\s*(?:do|finish)\([^\n]*", raw, flags=re.MULTILINE)
+        save_json(folder / "assessment.json", {"summary": summary, "kind": "model_assessment", "verifier_feedback": False,
+            "discarded_operation_lines": discarded, "operations_executed": 0})
+        log_event(self.output, "STEP ASSESSMENT", {"summary": summary, "verifier_feedback": False}, step)
+        return summary
 
     def observe(self):
         """Check successive screenshots visually; empty trees never imply a stable screen."""
@@ -341,32 +560,35 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
 
     def supplement_controls(self, state):
         """Pair a checked, unique XML dump with a visually unchanged fresh screenshot."""
-        self.observations += 1
-        record = {"capture": self.observations, "used": False}
-        try:
-            activity, response = adb_utils.get_current_activity(self.env.controller)
-            adb_utils.check_ok(response, "Current activity unavailable")
-            record["activity"] = activity
-            if not activity or activity.split("/")[0] not in self.config["supplemental_tree_packages"]:
-                return state
-            xml = adb_utils.uiautomator_dump(self.env.controller, timeout_sec=8)
-            path = self.output / f"ui_capture_{self.observations:03d}.xml"
-            path.write_text(xml, encoding="utf-8")
-            elements = xml_controls(xml)
-            fresh = self.env.get_state(wait_to_stabilize=False)
-            height, width = state.pixels.shape[:2]
-            change = image_difference(state, fresh, (0, int(height * .06), width, int(height * .94)))
-            record.update(xml=path.name, image_difference=change)
-            # Reject a changing scene instead of pairing an old tree with a new image.
-            if change <= self.config["visual_stability_difference"]:
-                record["used"] = True
-                return replace(fresh, ui_elements=elements)
-            return fresh
-        except Exception as error:
-            record["error"] = str(error)
-            return self.env.get_state(wait_to_stabilize=False)
-        finally:
-            log_event(self.output, "SUPPLEMENTAL GUI STATE", record, len(self.history) + 1)
+        # Retrying observation is read-only; it never repeats a GUI dispatch.
+        for attempt in range(1 + min(1, self.config.get("supplemental_read_retries", 0))):
+            self.observations += 1
+            record = {"capture": self.observations, "read_attempt": attempt, "used": False}
+            try:
+                activity, response = adb_utils.get_current_activity(self.env.controller)
+                adb_utils.check_ok(response, "Current activity unavailable")
+                record["activity"] = activity
+                if not activity or activity.split("/")[0] not in self.config["supplemental_tree_packages"]:
+                    return state
+                xml = adb_utils.uiautomator_dump(self.env.controller, timeout_sec=8)
+                path = self.output / f"ui_capture_{self.observations:03d}.xml"
+                path.write_text(xml, encoding="utf-8")
+                elements = xml_controls(xml)
+                fresh = self.env.get_state(wait_to_stabilize=False)
+                height, width = state.pixels.shape[:2]
+                change = image_difference(state, fresh, (0, int(height * .06), width, int(height * .94)))
+                record.update(xml=path.name, image_difference=change)
+                # Reject a changing scene instead of pairing an old tree with a new image.
+                if change <= self.config["visual_stability_difference"]:
+                    record["used"] = True
+                    return replace(fresh, ui_elements=elements)
+                state = fresh
+            except Exception as error:
+                record["error"] = str(error)
+                state = self.env.get_state(wait_to_stabilize=False)
+            finally:
+                log_event(self.output, "SUPPLEMENTAL GUI STATE", record, len(self.history) + 1)
+        return state
 
     def capture(self, state, folder, step):
         """Save full observation and resized model input under a unique observation ID."""
@@ -381,61 +603,42 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
 
     def ask_action(self, state, folder, goal, step):
         """Send a screenshot and exact inputs; allow one invalid-reply correction per step."""
-        prompt = (PROJECT / "instructions/autoglm.md").read_text(encoding="utf-8")
+        prompt = native_prompt(self.config["allowed_apps"])
         task_name = self.config["task_name"]
         # A benchmark parameter name can resemble current state; label the goal.
         model_inputs = {"text_to_copy": self.scratch["clipboard_content"]} if task_name == "SystemCopyToClipboard" else self.scratch
         prompt += "\nCOMPLETION CONDITION for " + task_name + ":\n" + completion_condition(task_name, self.scratch)
         prompt += f"\nAvailable apps: {json.dumps(self.config['allowed_apps'])}\n"
+        if self.config.get("interaction_guidance"):
+            prompt += "\n" + (PROJECT / "instructions/android_interactions.md").read_text(encoding="utf-8")
+            capabilities = {name: description for name, description in self.config.get("app_capabilities", {}).items()
+                            if name in self.config["allowed_apps"]}
+            prompt += "\nAvailable app capabilities (environment facts): " + json.dumps(capabilities) + "\n"
+        if self.config.get("task_guidance"):
+            prompt += "\nTASK PROCEDURE (choose the next action from the current GUI):\n" + task_guide(task_name, self.scratch) + "\n"
         # Upstream gives the goal once; later user turns are observations of that
         # same task, not new requests to perform it again (especially one photo).
         text = f"Task: {goal}\nExact task inputs: {json.dumps(model_inputs)}\n" if not self.conversation else "Latest observation of the original task after the preceding executed action.\n"
+        if self.config.get("recent_effect_context"):
+            text = f"Original ongoing goal (same task; do not restart completed operations): {goal}\nExact task inputs: {json.dumps(model_inputs)}\n"
         text += f"** Screen Info ** Step {step}/{self.config['max_steps']}.\n"
         text += "Fresh observed GUI labels and state:\n" + control_notes(state) + "\n"
         if task_name == "ClockTimerEntry":
             text += timer_buffer_note(state) + "\n"
         if self.history:
-            text += "Actual observed result of last action: " + json.dumps(self.history[-1]) + "\n"
+            if self.config.get("recent_effect_context"):
+                text += "Recent dispatched actions and actual observed results (oldest first, not proof of task success): " + json.dumps(self.history[-self.config["recent_actions"]:]) + "\n"
+            else:
+                text += "Actual observed result of last action: " + json.dumps(self.history[-1]) + "\n"
         text += "Check the original completion condition before acting; finish when it is satisfied."
         image = base64.b64encode((folder / "model_input.png").read_bytes()).decode("ascii")
         messages = [{"role": "system", "content": prompt}, *self.conversation, {"role": "user", "content": [
             {"type": "image_url", "image_url": {"url": "data:image/png;base64," + image}}, {"type": "text", "text": text}]}]
-        image_message = len(messages) - 1
         # A correction only repairs unexecuted data; HTTP/execution errors never replay.
         for attempt in range(2 - self.corrections_this_step):
-            payload = {"model": self.config["model"], "messages": messages, "stream": False, **self.config["sampling"]}
-            logged = json.loads(json.dumps(payload))
-            logged["messages"][image_message]["content"][0]["image_url"]["url"] = "model_input.png (base64 encoded for API)"
-            save_json(folder / f"request_{attempt}.json", logged)
-            self.calls += 1
-            log_event(self.output, "MODEL REQUEST", {"call": self.calls, "endpoint": self.endpoint,
-                "request": str((folder / f"request_{attempt}.json").relative_to(self.output))}, step)
-            remaining = self.deadline - time.monotonic()
-            if remaining <= 0:
-                raise RuntimeError("Model time budget exhausted")
-            request = urllib.request.Request(self.endpoint + "/chat/completions", data=json.dumps(payload).encode(),
-                headers={"Content-Type": "application/json", "Authorization": "Bearer " + self.key})
-            start = time.monotonic()
-            print(f"Step {step}, screenshot, AutoGLM call {self.calls}", flush=True)
+            raw = ""  # A truncated transport reply can fail before returning text.
             try:
-                with urllib.request.urlopen(request, timeout=min(remaining, self.config["request_timeout"])) as response:
-                    data = json.load(response)
-            except urllib.error.HTTPError as error:
-                save_json(folder / f"api_error_{attempt}.json", {"http_status": error.code,
-                    "body": error.read().decode(errors="replace").replace(self.key, "[REDACTED]")})
-                raise
-            data["wall_seconds"] = time.monotonic() - start
-            # Keep provider-visible replies and usage, never the Authorization header.
-            data = json.loads(json.dumps(data).replace(self.key, "[REDACTED]"))
-            save_json(folder / f"response_{attempt}.json", data)
-            raw = data["choices"][0]["message"]["content"]
-            log_event(self.output, "MODEL REPLY", raw, step)
-            log_event(self.output, "MODEL TIMING", {"wall_seconds": data["wall_seconds"], "usage": data.get("usage")}, step)
-            try:
-                if data.get("model") != self.config["model"]:
-                    raise RuntimeError("Provider returned a different model")
-                if data["choices"][0]["finish_reason"] == "length":
-                    raise ValueError("Truncated model reply")
+                raw = self.request_model(messages, folder, f"action_{attempt}", step)
                 fields = parse_action(raw)
                 action = convert_action(fields, state, self.config["allowed_apps"])
                 calls = [line.strip() for line in raw.splitlines() if re.match(r"\s*(do|finish)\(", line)]
@@ -449,7 +652,9 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                 if self.corrections_this_step:
                     raise
                 self.corrections_this_step += 1
-                messages += [{"role": "assistant", "content": raw}, {"role": "user", "content": f"Invalid action: {error}. Return one corrected action. No action executed."}]
+                messages += [{"role": "assistant", "content": raw}, {"role": "user", "content":
+                    f'Invalid action: {error}. Return one corrected action. No action executed. '
+                    'If you intend to finish, the syntax is finish(message="Task completed.") as a standalone call, outside do.'}]
 
     def step(self, goal):
         """Make one decision/action; recapture once if an unexecuted target became stale."""
@@ -489,12 +694,21 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         print("Chosen:", action, flush=True)
         started = time.monotonic()
         selected = target_at(state, action)
-        if action["action_type"] == "slide":
+        if action["action_type"] == "open_app" and action["app_name"] == "chrome" and self.config.get("chrome_launch_timeout"):
+            timeout = min(self.config["chrome_launch_timeout"], self.deadline - time.monotonic())
+            launched = launch_chrome_once(timeout)
+            save_json(folder / "chrome_launch.json", {"attempts": 1, "timeout": timeout,
+                "returncode": launched.returncode, "output": launched.stdout.decode(errors="replace"),
+                "automatic_retry": False})
+        elif action["action_type"] == "slide":
             adb_utils.check_ok(adb_utils.issue_generic_request(adb_utils.generate_swipe_command(*action["start"], *action["end"]), self.env.controller), "Swipe failed")
         elif action["action_type"] == "wait":
             time.sleep(action["seconds"])
         elif action["action_type"] == "input_text":
-            type_without_submit(action["text"], self.env.controller)
+            if self.config.get("text_input_backend") == "adb_keyboard":
+                type_with_adb_keyboard(action["text"], min(30, self.deadline - time.monotonic()), folder)
+            else:
+                type_without_submit(action["text"], self.env.controller)
         elif action["action_type"] != "status":
             self.env.execute_action(json_action.JSONAction(**action))
         after = self.observe()
@@ -520,4 +734,17 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                               {"role": "assistant", "content": self.pending_reply}]
         save_json(folder / "result.json", result)
         log_event(self.output, "OBSERVED RESULT", result, step)
+        # Preserve dispatch evidence before any extra API call can fail. A finish
+        # still belongs to the action model; this experiment adds no finish gate.
+        if self.config.get("step_assessment") and action["action_type"] != "status":
+            try:
+                result["model_assessment"] = self.assess_step(state, after, folder, goal, action, result, step)
+            except Exception as error:
+                failure = {"step":step, "error":str(error).replace(self.key, "[REDACTED]"),
+                    "phase":"assessment", "action_already_dispatched":True, "automatic_replay":False}
+                self.assessment_errors.append(failure)
+                save_json(folder / "assessment_error.json", failure)
+                log_event(self.output, "ASSESSMENT ERROR", failure, step)
+                raise
+            save_json(folder / "result.json", result)
         return base_agent.AgentInteractionResult(done=action["action_type"] == "status", data={"action": action})

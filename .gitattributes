@@ -8,3 +8,7 @@
 # Original evidence bytes must match their SHA256 export manifest on every OS.
 docs/evidence/** -text
 docs/sources/*.json -text
+# Preserve original trial bytes, including JSONL logs and captured source versions.
+runs/** -text
+course_content/** -text
+.review/materials/** -text

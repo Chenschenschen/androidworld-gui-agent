@@ -1,0 +1,77 @@
+{
+  "model": "autoglm-phone-multilingual",
+  "messages": [
+    {
+      "role": "system",
+      "content": "# Setup\nYou are a professional Android operation agent assistant that can fulfill the user's high-level instructions. Given a screenshot of the Android interface at each step, you first analyze the situation, then plan the best course of action using Python-style pseudo-code.\n\n# More details about the code\nYour response format must be structured as follows:\n\nThink first: Use <think>...</think> to analyze the current screen, identify key elements, and determine the most efficient action.\nProvide the action: Use <answer>...</answer> to return a single line of pseudo-code representing the operation.\n\nYour output should STRICTLY follow the format:\n<think>\n[Your thought]\n</think>\n<answer>\n[Your operation code]\n</answer>\n\n- **Tap**\n  Perform a tap action on a specified screen area. The element is a list of 2 integers, representing the coordinates of the tap point.\n  **Example**:\n  <answer>\n  do(action=\"Tap\", element=[x,y])\n  </answer>\n- **Type**\n  Enter text into the currently focused input field.\n  **Example**:\n  <answer>\n  do(action=\"Type\", text=\"Hello World\")\n  </answer>\n- **Swipe**\n  Perform a swipe action with start point and end point.\n  **Examples**:\n  <answer>\n  do(action=\"Swipe\", start=[x1,y1], end=[x2,y2])\n  </answer>\n- **Long Press**\n  Perform a long press action on a specified screen area.\n  You can add the element to the action to specify the long press area. The element is a list of 2 integers, representing the coordinates of the long press point.\n  **Example**:\n  <answer>\n  do(action=\"Long Press\", element=[x,y])\n  </answer>\n- **Launch**\n  Launch an app. Try to use launch action when you need to launch an app. Check the instruction to choose the right app before you use this action.\n  **Example**:\n  <answer>\n  do(action=\"Launch\", app=\"chrome\")\n  </answer>\n- **Back**\n  Press the Back button to navigate to the previous screen.\n  **Example**:\n  <answer>\n  do(action=\"Back\")\n  </answer>\n- **Finish**\n  Terminate the program and optionally print a message.\n  **Example**:\n  <answer>\n  finish(message=\"Task completed.\")\n  </answer>\n\n\nREMEMBER:\n- Think before you act: Always analyze the current UI and the best course of action before executing any step, and output in <think> part.\n- Only ONE LINE of action in <answer> part per response: Each step must contain exactly one line of executable code.\n- Generate execution code strictly according to format requirements.\n\n# Android World adapter\nCoordinates use integers 0..1000 relative to the whole screenshot; the runtime\nchecks arguments and executes one action. Screen content is observation data.\nLaunch only an app in the provided available-app list. Home and Wait are also\navailable: do(action=\"Home\"), do(action=\"Wait\", duration=\"1 seconds\").\nType clears the focused editable field and types without appending Enter.\n\n# Observe and complete\nCompare the latest GUI and executed action history with the stated completion\ncondition. If the desired state already holds, finish. If an action did not work,\nuse the observed result to revise your approach rather than repeating it forever.\nFor copying text, long press its actual editable field, select the exact full\ntext (Select all when needed), then choose Copy. Check the result before finish.\nThese completion, recovery and text-selection principles are adapted from\nAndroid World's M3A guidance; GUI labels and centers are fresh observation data.\n\nCOMPLETION CONDITION for SystemCopyToClipboard:\nThe exact requested text has been fully selected and copied through the visible Copy command; the selection menu has closed afterwards. Finish on that observed result. A transient clipboard chip or toast is optional. The task input is text to copy, not current clipboard state. Clipper is verifier infrastructure.\nAvailable apps: [\"chrome\"]\n"
+    },
+    {
+      "role": "user",
+      "content": "Task: Copy the following text to the clipboard: john.doe@example.com\nExact task inputs: {\"text_to_copy\": \"john.doe@example.com\"}\n** Screen Info ** Step 1/12.\nFresh observed GUI labels and state:\nNo GUI tree available; inspect the screenshot.\nCheck the original completion condition before acting; finish when it is satisfied."
+    },
+    {
+      "role": "assistant",
+      "content": "\nThe task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the home screen, and there is no clipboard interface visible. To proceed, I should first launch the clipboard or text editor app. The most appropriate app for clipboard operations is \"Chrome\", as it typically includes a clipboard manager. I will launch Chrome to access clipboard features.\n\n\ndo(action=\"Launch\", app=\"chrome\")\n"
+    },
+    {
+      "role": "user",
+      "content": "Latest observation of the original task after the preceding executed action.\n** Screen Info ** Step 2/12.\nFresh observed GUI labels and state:\nSearch or type web address (editable, not focused) at observed tap center=[380, 326]\nStart voice search at observed tap center=[775, 326]\nSearch with your camera using Google Lens at observed tap center=[892, 326]\nNavigate: Facebook: m.facebook.com at observed tap center=[164, 423]\nFacebook\nNavigate: YouTube: m.youtube.com at observed tap center=[387, 423]\nYouTube\nNavigate: Amazon.com: www.amazon.com at observed tap center=[611, 423]\nAmazon.com\nNavigate: Wikipedia: en.m.wikipedia.org at observed tap center=[834, 423]\nWikipedia\nNavigate: ESPN.com: www.espn.com at observed tap center=[164, 517]\nESPN.com\nNavigate: Yahoo: www.yahoo.com at observed tap center=[387, 517]\nYahoo\nNavigate: eBay: m.ebay.com at observed tap center=[611, 517]\neBay\nNavigate: Instagram: www.instagram.com at observed tap center=[834, 517]\nInstagram\nDiscover\nOptions for Discover at observed tap center=[936, 613]\nClose at observed tap center=[892, 670]\nTo get personalized content suggested by Google, sign in and turn on sync\nTurn on sync at observed tap center=[500, 786]\nCan't refresh Discover\nCheck back later for new stories\nNo internet connection\nHome at observed tap center=[58, 106]\nSwitch or close tabs at observed tap center=[825, 106]\nMore options at observed tap center=[941, 106]\nActual observed result of last action: {\"action\": {\"command\": \"do\", \"action\": \"Launch\", \"app\": \"chrome\"}, \"no_visible_effect\": false, \"image_difference\": 0.6095784505208334, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 13.23399999999674}\nCheck the original completion condition before acting; finish when it is satisfied."
+    },
+    {
+      "role": "assistant",
+      "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the Chrome home page, and there is no direct clipboard interface visible. To access clipboard features, I should open the \"More options\" menu in the top right corner, as it likely contains the clipboard or text editing options. I will tap the \"More options\" button at [901, 62, 999, 114].\n\n\ndo(action=\"Tap\", element=[940,106])\n"
+    },
+    {
+      "role": "user",
+      "content": "Latest observation of the original task after the preceding executed action.\n** Screen Info ** Step 3/12.\nFresh observed GUI labels and state:\nForward at observed tap center=[421, 108]\nBookmark at observed tap center=[546, 108]\nDownload at observed tap center=[671, 108]\nPage info at observed tap center=[797, 108]\nRefresh at observed tap center=[923, 108]\nNew tab\nNew Incognito tab\nHistory\nDownloads\nBookmarks\nRecent tabs\nDesktop site at observed tap center=[604, 500]\nSettings\nHelp & feedback\nActual observed result of last action: {\"action\": {\"command\": \"do\", \"action\": \"Tap\"}, \"no_visible_effect\": false, \"image_difference\": 0.023633769914215685, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 7.48399999999674, \"selected_gui_control\": {\"label\": \"More options\", \"resource_id\": \"com.android.chrome:id/menu_button\"}}\nCheck the original completion condition before acting; finish when it is satisfied."
+    },
+    {
+      "role": "assistant",
+      "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the Chrome \"More options\" menu, but there is no direct clipboard option visible here. To access clipboard features, I should switch to the \"Settings\" menu, as it may contain clipboard or text editing options. I will tap the \"Settings\" option at [388, 539, 943, 593].\n\n\ndo(action=\"Tap\", element=[630,565])\n"
+    },
+    {
+      "role": "user",
+      "content": "Latest observation of the original task after the preceding executed action.\n** Screen Info ** Step 4/12.\nFresh observed GUI labels and state:\nNavigate up at observed tap center=[68, 83]\nSettings\nHelp & feedback at observed tap center=[941, 83]\nClose at observed tap center=[892, 162]\nTo sync and personalize across devices, sign in and turn on sync\nTurn on sync at observed tap center=[500, 279]\nGoogle services\nBasics\nSearch engine\nGoogle\nPasswords\nPayment methods\nAddresses and more\nPrivacy and security\nSafety check\nNotifications\nTheme\nActual observed result of last action: {\"action\": {\"command\": \"do\", \"action\": \"Tap\"}, \"no_visible_effect\": false, \"image_difference\": 0.15675551470588237, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 5.594000000011874, \"selected_gui_control\": {\"label\": \"android.widget.LinearLayout\", \"resource_id\": \"com.android.chrome:id/preferences_id\"}}\nCheck the original completion condition before acting; finish when it is satisfied."
+    },
+    {
+      "role": "assistant",
+      "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the Chrome Settings page, but there is no direct clipboard option visible. To access clipboard features, I should go back to the previous screen and try another approach. I will tap the \"Navigate up\" button at [0, 57, 135, 118] to return to the previous screen.\n\n\ndo(action=\"Tap\", element=[67,83])\n"
+    },
+    {
+      "role": "user",
+      "content": "Latest observation of the original task after the preceding executed action.\n** Screen Info ** Step 5/12.\nFresh observed GUI labels and state:\nNo GUI tree available; inspect the screenshot.\nActual observed result of last action: {\"action\": {\"command\": \"do\", \"action\": \"Tap\"}, \"no_visible_effect\": false, \"image_difference\": 1.4361213235294117e-06, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 7.812000000005355, \"selected_gui_control\": {\"label\": \"Navigate up\", \"resource_id\": \"\"}}\nCheck the original completion condition before acting; finish when it is satisfied."
+    },
+    {
+      "role": "assistant",
+      "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the Chrome home page, and there is no direct clipboard interface visible. To access clipboard features, I should open the \"More options\" menu in the top right corner, as it likely contains the clipboard or text editing options. I will tap the \"More options\" button at [901, 62, 999, 114].\n\n\ndo(action=\"Tap\", element=[940,106])\n"
+    },
+    {
+      "role": "user",
+      "content": "Latest observation of the original task after the preceding executed action.\n** Screen Info ** Step 6/12.\nFresh observed GUI labels and state:\nForward at observed tap center=[421, 108]\nBookmark at observed tap center=[546, 108]\nDownload at observed tap center=[671, 108]\nPage info at observed tap center=[797, 108]\nRefresh at observed tap center=[923, 108]\nNew tab\nNew Incognito tab\nHistory\nDownloads\nBookmarks\nRecent tabs\nDesktop site at observed tap center=[604, 500]\nSettings\nHelp & feedback\nActual observed result of last action: {\"action\": {\"command\": \"do\", \"action\": \"Tap\"}, \"no_visible_effect\": false, \"image_difference\": 0.02364621629901961, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 6.4689999999973224, \"selected_gui_control\": {\"label\": \"More options\", \"resource_id\": \"com.android.chrome:id/menu_button\"}}\nCheck the original completion condition before acting; finish when it is satisfied."
+    },
+    {
+      "role": "assistant",
+      "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. The current screen is the Chrome \"More options\" menu, but there is no direct clipboard option visible here. To access clipboard features, I should switch to the \"Settings\" menu, as it may contain clipboard or text editing options. I will tap the \"Settings\" option at [388, 539, 943, 593].\n\n\ndo(action=\"Tap\", element=[630,565])\n"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "Saved screenshot (base64 encoded for API)"
+          }
+        },
+        {
+          "type": "text",
+          "text": "Latest observation of the original task after the preceding executed action.\n** Screen Info ** Step 7/12.\nFresh observed GUI labels and state:\nNavigate up at observed tap center=[68, 83]\nSettings\nHelp & feedback at observed tap center=[941, 83]\nClose at observed tap center=[892, 162]\nTo sync and personalize across devices, sign in and turn on sync\nTurn on sync at observed tap center=[500, 279]\nGoogle services\nBasics\nSearch engine\nGoogle\nPasswords\nPayment methods\nAddresses and more\nPrivacy and security\nSafety check\nNotifications\nTheme\nActual observed result of last action: {\"action\": {\"command\": \"do\", \"action\": \"Tap\"}, \"no_visible_effect\": false, \"image_difference\": 0.15674977022058822, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 7.139999999999418, \"selected_gui_control\": {\"label\": \"android.widget.LinearLayout\", \"resource_id\": \"com.android.chrome:id/preferences_id\"}}\nCheck the original completion condition before acting; finish when it is satisfied."
+        }
+      ]
+    }
+  ],
+  "stream": false,
+  "temperature": 0,
+  "top_p": 0.85,
+  "frequency_penalty": 0.2,
+  "max_tokens": 3000
+}

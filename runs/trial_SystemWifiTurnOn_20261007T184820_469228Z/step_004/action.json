@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Cast",
+    "verify": "Cast button should navigate to the cast settings.",
+    "target": "Cast",
+    "index": "24",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 250,
+    "y": 956
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

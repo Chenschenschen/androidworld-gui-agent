@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe task is to copy the text \"alex.jordan@example.net\" to the clipboard. The current screen is the home screen of the device. To copy text to the clipboard, I need to first open an app that can handle text input, such as a browser or a text editor. The available apps include Chrome and Settings. Chrome is likely to have a text input field where I can select the text and copy it. I should start by launching the Chrome app.\ndo(action=\"Launch\", app=\"Chrome\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407923,
+  "id": "20261008051841f0159a7efe074c9a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008051841f0159a7efe074c9a",
+  "usage": {
+    "completion_tokens": 109,
+    "prompt_tokens": 1608,
+    "prompt_tokens_details": {
+      "cached_tokens": 535
+    },
+    "total_tokens": 1717
+  },
+  "wall_seconds": 1.9680000000007567
+}

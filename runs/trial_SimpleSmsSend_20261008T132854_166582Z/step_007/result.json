@@ -1,0 +1,16 @@
+{
+  "action": {
+    "command": "finish",
+    "message": "Text message sent successfully."
+  },
+  "no_visible_effect": true,
+  "image_difference": 7.228477328431373e-05,
+  "dispatch_returned": false,
+  "visible_fields_after": [
+    {
+      "hint": null,
+      "text": "Type a message…"
+    }
+  ],
+  "execute_and_observe_seconds": 3.547000000005937
+}

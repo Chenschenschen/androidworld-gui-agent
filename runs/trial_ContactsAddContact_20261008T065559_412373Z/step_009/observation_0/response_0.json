@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The name fields are filled. Next, I need to enter the phone number \"+10433218196\". I should scroll down to find the phone number field, which is likely below the current visible area.\ndo(action=\"Swipe\", start=[499,570], end=[499,350])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442610,
+  "id": "2026100814564918abd59216084dc1",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814564918abd59216084dc1",
+  "usage": {
+    "completion_tokens": 63,
+    "prompt_tokens": 3223,
+    "prompt_tokens_details": {
+      "cached_tokens": 1940
+    },
+    "total_tokens": 3286
+  },
+  "wall_seconds": 1.5310000000026776
+}

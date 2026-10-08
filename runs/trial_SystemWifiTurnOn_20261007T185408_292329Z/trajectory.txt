@@ -1,0 +1,1659 @@
+
+--- 2026-10-07T18:54:08.293351+00:00 | RUN | RUN START ---
+{
+  "task": "SystemWifiTurnOn",
+  "config": {
+    "version": "five_easy_tasks_v9_wifi_xml",
+    "prompt_version": "gelab_json_five_tasks_v8",
+    "wifi_tree_backend": "uiautomator",
+    "action_format": "json_schema",
+    "observation": "tree_first",
+    "prompt_examples": false,
+    "max_screenshot_fallbacks": 2,
+    "model": "gelab-zero-4b-preview:latest",
+    "options": {
+      "temperature": 1,
+      "top_k": 20,
+      "top_p": 0.95,
+      "num_ctx": 4096,
+      "num_gpu": 22,
+      "num_predict": 256,
+      "seed": 42
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "note": "After captured stale launcher trees with Wi-Fi off, use Android World's official UIAutomator tree backend for Wi-Fi only. It has no forwarder recovery that can enable Wi-Fi. Labels inside clickable rows are groundable. Other tasks retain gRPC capture. Same model/GPU/sampling/budgets; three distinct task seeds 42/43/44. Failures retained.",
+    "contact_guidance": true,
+    "targeted_type": true,
+    "direct_type_only": true,
+    "label_grounding": true,
+    "task_seed": 44
+  }
+}
+
+--- 2026-10-07T18:54:12.941193+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Turn wifi on.",
+  "parameters": {
+    "on_or_off": "on"
+  },
+  "task_seed": 44,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-07T18:54:37.057849+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-07T18:55:02.360888+00:00 | STEP 001 | OBSERVATION ---
+{
+  "screenshot": "step_001/before.png",
+  "tree": "step_001/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3}
+{"index":4}
+{"index":5}
+{"index":6}
+{"index":7}
+{"index":8,"text":"Data usage"}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14,"is_clickable":true,"is_checked":false}
+{"index":15,"is_clickable":true,"is_checked":false}
+{"index":16}
+{"index":17,"text":"Data"}
+{"index":18,"text":"Data may be used for small files \n(charges may apply)"}
+{"index":19,"is_clickable":true,"is_checked":true}
+{"index":20,"is_clickable":true,"is_checked":true}
+{"index":21}
+{"index":22,"text":"Wi-Fi only"}
+{"index":23,"text":"Never use data to share"}
+{"index":24,"is_clickable":true,"is_checked":false}
+{"index":25,"is_clickable":true,"is_checked":false}
+{"index":26}
+{"index":27,"text":"Without internet"}
+{"index":28,"text":"Files will always be shared offline"}
+{"index":29}
+{"index":30}
+{"index":31,"text":"CANCEL","is_clickable":true}
+{"index":32,"text":"UPDATE","is_clickable":true}
+
+--- 2026-10-07T18:55:02.363392+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_001/tree/request_0.json",
+  "call": 1
+}
+
+--- 2026-10-07T18:55:07.721386+00:00 | STEP 001 | MODEL REPLY ---
+{"action": "AWAKE", "value": "settings", "verify": "The Settings app should be opened and visible on the screen.","target":""}
+
+--- 2026-10-07T18:55:07.721386+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.360000000000582,
+  "load_seconds": 0.0188614,
+  "prompt_seconds": 0.576724,
+  "generation_seconds": 2.561103,
+  "output_tokens": 34
+}
+
+--- 2026-10-07T18:55:07.721957+00:00 | STEP 001 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "AWAKE",
+    "value": "settings",
+    "verify": "The Settings app should be opened and visible on the screen."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:55:07.728703+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  }
+}
+
+--- 2026-10-07T18:55:38.715361+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "AWAKE",
+    "value": "settings",
+    "verify": "The Settings app should be opened and visible on the screen."
+  },
+  "target": null,
+  "android": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_001/after.png",
+  "execute_and_observe_seconds": 30.98399999999674
+}
+
+--- 2026-10-07T18:55:42.932937+00:00 | STEP 002 | OBSERVATION ---
+{
+  "screenshot": "step_002/before.png",
+  "tree": "step_002/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5}
+{"index":6}
+{"index":7,"content_description":"Profile picture, double tap to open Google Account","is_clickable":true}
+{"index":8,"text":"Settings"}
+{"index":9}
+{"index":10}
+{"index":11,"is_clickable":true}
+{"index":12}
+{"index":13,"text":"Search settings"}
+{"index":14,"is_scrollable":true}
+{"index":15}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19}
+{"index":20,"is_clickable":true}
+{"index":21}
+{"index":22}
+{"index":23}
+{"index":24,"text":"Network & internet"}
+{"index":25,"text":"Mobile, Wi‑Fi, hotspot"}
+{"index":26,"is_clickable":true}
+{"index":27}
+{"index":28}
+{"index":29}
+{"index":30,"text":"Connected devices"}
+{"index":31,"text":"Bluetooth, pairing"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34}
+{"index":35}
+{"index":36,"text":"Apps"}
+{"index":37,"text":"Assistant, recent apps, default apps"}
+{"index":38,"is_clickable":true}
+{"index":39}
+{"index":40}
+{"index":41}
+{"index":42,"text":"Notifications"}
+{"index":43,"text":"Notification history, conversations"}
+{"index":44,"is_clickable":true}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48,"text":"Battery"}
+{"index":49,"text":"100%"}
+{"index":50,"is_clickable":true}
+{"index":51}
+{"index":52}
+{"index":53}
+{"index":54,"text":"Storage"}
+{"index":55,"text":"42% used - 9.36 GB free"}
+{"index":56,"is_clickable":true}
+{"index":57}
+{"index":58}
+
+--- 2026-10-07T18:55:42.937454+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_002/tree/request_0.json",
+  "call": 2
+}
+
+--- 2026-10-07T18:55:49.450092+00:00 | STEP 002 | MODEL REPLY ---
+{"action": "CLICK", "value": "Battery", "verify": "The screen should show the Battery settings page, which might contain a toggle switch for Wi-Fi.","target": "Battery"}
+
+--- 2026-10-07T18:55:49.450699+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.5,
+  "load_seconds": 0.0205279,
+  "prompt_seconds": 0.992422,
+  "generation_seconds": 3.321601,
+  "output_tokens": 42
+}
+
+--- 2026-10-07T18:55:49.451757+00:00 | STEP 002 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Battery",
+    "verify": "The screen should show the Battery settings page, which might contain a toggle switch for Wi-Fi.",
+    "target": "Battery",
+    "index": "48",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 284,
+    "y": 1938
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:55:49.452312+00:00 | STEP 002 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 284,
+    "y": 1938
+  }
+}
+
+--- 2026-10-07T18:56:02.447822+00:00 | STEP 002 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Battery",
+    "verify": "The screen should show the Battery settings page, which might contain a toggle switch for Wi-Fi.",
+    "target": "Battery",
+    "index": "48",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Battery",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 284,
+    "y": 1938
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_002/after.png",
+  "execute_and_observe_seconds": 13.0
+}
+
+--- 2026-10-07T18:56:06.597277+00:00 | STEP 003 | OBSERVATION ---
+{
+  "screenshot": "step_003/before.png",
+  "tree": "step_003/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Battery"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15}
+{"index":16}
+{"index":17,"text":"100 %"}
+{"index":18}
+{"index":19}
+{"index":20,"text":"Charged"}
+{"index":21,"is_clickable":true}
+{"index":22}
+{"index":23,"text":"Battery usage"}
+{"index":24,"text":"View usage since last full charge"}
+{"index":25,"is_clickable":true}
+{"index":26}
+{"index":27,"text":"Battery Saver"}
+{"index":28,"text":"Off"}
+{"index":29,"is_clickable":true}
+{"index":30}
+{"index":31,"text":"Adaptive preferences"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34,"text":"Battery percentage"}
+{"index":35,"text":"Show battery percentage in status bar"}
+{"index":36}
+{"index":37,"is_checked":false}
+{"index":38}
+{"index":39}
+{"index":40}
+{"index":41}
+{"index":42,"text":"Battery usage data is approximate and can change based on usage."}
+
+--- 2026-10-07T18:56:06.602573+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_003/tree/request_0.json",
+  "call": 3
+}
+
+--- 2026-10-07T18:56:12.380164+00:00 | STEP 003 | MODEL REPLY ---
+{"action": "CLICK", "value": "7", "verify": "Battery settings page closed, returning to main Settings screen.","target":"Navigate up"}
+
+--- 2026-10-07T18:56:12.380703+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.7810000000026776,
+  "load_seconds": 0.0180206,
+  "prompt_seconds": 0.812114,
+  "generation_seconds": 2.624937,
+  "output_tokens": 34
+}
+
+--- 2026-10-07T18:56:12.381221+00:00 | STEP 003 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "7",
+    "verify": "Battery settings page closed, returning to main Settings screen.",
+    "target": "Navigate up",
+    "index": "7",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 73,
+    "y": 201
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:56:12.381732+00:00 | STEP 003 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 73,
+    "y": 201
+  }
+}
+
+--- 2026-10-07T18:56:25.181301+00:00 | STEP 003 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "7",
+    "verify": "Battery settings page closed, returning to main Settings screen.",
+    "target": "Navigate up",
+    "index": "7",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "",
+    "hint_text": null,
+    "content_description": "Navigate up"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 73,
+    "y": 201
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_003/after.png",
+  "execute_and_observe_seconds": 12.796999999998661
+}
+
+--- 2026-10-07T18:56:29.341097+00:00 | STEP 004 | OBSERVATION ---
+{
+  "screenshot": "step_004/before.png",
+  "tree": "step_004/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5}
+{"index":6}
+{"index":7,"content_description":"Profile picture, double tap to open Google Account","is_clickable":true}
+{"index":8,"text":"Settings"}
+{"index":9}
+{"index":10}
+{"index":11,"is_clickable":true}
+{"index":12}
+{"index":13,"text":"Search settings"}
+{"index":14,"is_scrollable":true}
+{"index":15}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19}
+{"index":20,"is_clickable":true}
+{"index":21}
+{"index":22}
+{"index":23}
+{"index":24,"text":"Network & internet"}
+{"index":25,"text":"Mobile, Wi‑Fi, hotspot"}
+{"index":26,"is_clickable":true}
+{"index":27}
+{"index":28}
+{"index":29}
+{"index":30,"text":"Connected devices"}
+{"index":31,"text":"Bluetooth, pairing"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34}
+{"index":35}
+{"index":36,"text":"Apps"}
+{"index":37,"text":"Assistant, recent apps, default apps"}
+{"index":38,"is_clickable":true}
+{"index":39}
+{"index":40}
+{"index":41}
+{"index":42,"text":"Notifications"}
+{"index":43,"text":"Notification history, conversations"}
+{"index":44,"is_clickable":true}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48,"text":"Battery"}
+{"index":49,"text":"100%"}
+{"index":50,"is_clickable":true}
+{"index":51}
+{"index":52}
+{"index":53}
+{"index":54,"text":"Storage"}
+{"index":55,"text":"42% used - 9.36 GB free"}
+{"index":56,"is_clickable":true}
+{"index":57}
+{"index":58}
+
+--- 2026-10-07T18:56:29.345601+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_004/tree/request_0.json",
+  "call": 4
+}
+
+--- 2026-10-07T18:56:36.593256+00:00 | STEP 004 | MODEL REPLY ---
+{"action": "CLICK", "value": "Wi-Fi and network settings", "verify": "The Wi-Fi toggle is now set to 'on', and the Wi-Fi icon in the status bar is illuminated.","target": "Network & internet"}
+
+--- 2026-10-07T18:56:36.593811+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.23399999999674,
+  "load_seconds": 0.0178491,
+  "prompt_seconds": 0.84859,
+  "generation_seconds": 4.115792,
+  "output_tokens": 52
+}
+
+--- 2026-10-07T18:56:36.603543+00:00 | STEP 004 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Wi-Fi and network settings",
+    "verify": "The Wi-Fi toggle is now set to 'on', and the Wi-Fi icon in the status bar is illuminated.",
+    "target": "Network & internet",
+    "index": "24",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 437,
+    "y": 874
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:56:36.605048+00:00 | STEP 004 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 437,
+    "y": 874
+  }
+}
+
+--- 2026-10-07T18:56:49.646028+00:00 | STEP 004 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Wi-Fi and network settings",
+    "verify": "The Wi-Fi toggle is now set to 'on', and the Wi-Fi icon in the status bar is illuminated.",
+    "target": "Network & internet",
+    "index": "24",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Network & internet",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 437,
+    "y": 874
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_004/after.png",
+  "execute_and_observe_seconds": 13.046000000002095
+}
+
+--- 2026-10-07T18:56:53.787771+00:00 | STEP 005 | OBSERVATION ---
+{
+  "screenshot": "step_005/before.png",
+  "tree": "step_005/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Network & internet"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14,"is_scrollable":true}
+{"index":15,"is_clickable":true}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19,"text":"Internet"}
+{"index":20,"text":"Networks available"}
+{"index":21,"is_clickable":true}
+{"index":22}
+{"index":23}
+{"index":24}
+{"index":25,"text":"Calls & SMS"}
+{"index":26,"text":"T-Mobile"}
+{"index":27,"is_clickable":true}
+{"index":28}
+{"index":29}
+{"index":30}
+{"index":31,"text":"SIMs"}
+{"index":32,"text":"T-Mobile"}
+{"index":33,"is_clickable":true}
+{"index":34}
+{"index":35}
+{"index":36}
+{"index":37,"text":"Airplane mode"}
+{"index":38}
+{"index":39,"is_checked":false}
+{"index":40,"is_clickable":true}
+{"index":41}
+{"index":42}
+{"index":43}
+{"index":44,"text":"Hotspot & tethering"}
+{"index":45,"text":"Off"}
+{"index":46,"is_clickable":true}
+{"index":47}
+{"index":48}
+{"index":49}
+{"index":50,"text":"Data Saver"}
+{"index":51,"text":"Off"}
+{"index":52,"is_clickable":true}
+{"index":53}
+{"index":54}
+{"index":55}
+{"index":56,"text":"VPN"}
+{"index":57,"text":" "}
+{"index":58}
+{"index":59,"is_clickable":true}
+{"index":60}
+{"index":61,"text":"Mobile plan"}
+{"index":62,"is_clickable":true}
+{"index":63}
+{"index":64,"text":"Private DNS"}
+{"index":65,"text":"Automatic"}
+
+--- 2026-10-07T18:56:53.791770+00:00 | STEP 005 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_005/tree/request_0.json",
+  "call": 5
+}
+
+--- 2026-10-07T18:57:00.912517+00:00 | STEP 005 | MODEL REPLY ---
+{"action": "CLICK", "value": "Wi-Fi toggle switch", "verify": "Toggle switch for Wi-Fi turns on, changing from 'OFF' to 'ON'.","target": "Off"}
+
+--- 2026-10-07T18:57:00.913022+00:00 | STEP 005 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.125,
+  "load_seconds": 0.018183,
+  "prompt_seconds": 1.336089,
+  "generation_seconds": 3.513747,
+  "output_tokens": 44
+}
+
+--- 2026-10-07T18:57:00.913543+00:00 | STEP 005 | VALIDATION ERROR ---
+{
+  "error": "Target label 'Off' matches 2 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T18:57:00.914577+00:00 | STEP 005 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_005/tree/request_1.json",
+  "call": 6
+}
+
+--- 2026-10-07T18:57:06.944758+00:00 | STEP 005 | MODEL REPLY ---
+{"action": "CLICK", "value": "Internet", "verify": "The Wi-Fi toggle switch within the 'Internet' menu changes from 'OFF' to 'ON'.","target": "Internet"}
+
+--- 2026-10-07T18:57:06.944758+00:00 | STEP 005 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.0310000000026776,
+  "load_seconds": 0.0176204,
+  "prompt_seconds": 0.503923,
+  "generation_seconds": 3.440391,
+  "output_tokens": 44
+}
+
+--- 2026-10-07T18:57:06.945777+00:00 | STEP 005 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Internet",
+    "verify": "The Wi-Fi toggle switch within the 'Internet' menu changes from 'OFF' to 'ON'.",
+    "target": "Internet",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 292,
+    "y": 680
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:57:06.946284+00:00 | STEP 005 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 292,
+    "y": 680
+  }
+}
+
+--- 2026-10-07T18:57:20.924498+00:00 | STEP 005 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Internet",
+    "verify": "The Wi-Fi toggle switch within the 'Internet' menu changes from 'OFF' to 'ON'.",
+    "target": "Internet",
+    "index": "19",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Internet",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 292,
+    "y": 680
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_005/after.png",
+  "execute_and_observe_seconds": 13.985000000000582
+}
+
+--- 2026-10-07T18:57:25.064765+00:00 | STEP 006 | OBSERVATION ---
+{
+  "screenshot": "step_006/before.png",
+  "tree": "step_006/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Internet"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10,"content_description":"Fix connectivity","is_clickable":true}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15}
+{"index":16,"is_scrollable":true}
+{"index":17,"is_clickable":true}
+{"index":18}
+{"index":19}
+{"index":20}
+{"index":21,"text":"T-Mobile"}
+{"index":22,"text":"Mobile data won't auto‑connect"}
+{"index":23}
+{"index":24}
+{"index":25}
+{"index":26,"content_description":"Settings","is_clickable":true}
+{"index":27,"is_clickable":true}
+{"index":28}
+{"index":29,"text":"Wi-Fi"}
+{"index":30}
+{"index":31,"is_checked":false}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34,"text":"Network preferences"}
+{"index":35,"text":"Wi‑Fi turns back on automatically"}
+{"index":36,"is_clickable":true}
+{"index":37}
+{"index":38,"text":"Saved networks"}
+{"index":39,"text":"1 network"}
+{"index":40,"is_clickable":true}
+{"index":41}
+{"index":42,"text":"Non-carrier data usage"}
+{"index":43,"text":"0 B used Sep 17 – Oct 15"}
+{"index":44}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48,"text":"To improve device experience, apps and services can still scan for Wi‑Fi networks at any time, even when Wi‑Fi is off. This can be used, for example, to improve location-based features and services. You can change this in Wi‑Fi scanning settings."}
+{"index":49,"text":"Change"}
+
+--- 2026-10-07T18:57:25.068274+00:00 | STEP 006 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_006/tree/request_0.json",
+  "call": 7
+}
+
+--- 2026-10-07T18:57:31.808078+00:00 | STEP 006 | MODEL REPLY ---
+{"action": "CLICK", "value": "T-Mobile", "verify": "The Wi‑Fi toggle should be visible and should now be in the 'on' state.", "target": "T-Mobile"}
+
+--- 2026-10-07T18:57:31.808617+00:00 | STEP 006 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.735000000000582,
+  "load_seconds": 0.0184508,
+  "prompt_seconds": 0.891841,
+  "generation_seconds": 3.466086,
+  "output_tokens": 44
+}
+
+--- 2026-10-07T18:57:31.809185+00:00 | STEP 006 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "T-Mobile",
+    "verify": "The Wi‑Fi toggle should be visible and should now be in the 'on' state.",
+    "target": "T-Mobile",
+    "index": "21",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 303,
+    "y": 688
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:57:31.809703+00:00 | STEP 006 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 303,
+    "y": 688
+  }
+}
+
+--- 2026-10-07T18:57:43.035076+00:00 | STEP 006 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "T-Mobile",
+    "verify": "The Wi‑Fi toggle should be visible and should now be in the 'on' state.",
+    "target": "T-Mobile",
+    "index": "21",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "T-Mobile",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 303,
+    "y": 688
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_006/after.png",
+  "execute_and_observe_seconds": 11.23399999999674
+}
+
+--- 2026-10-07T18:57:47.161507+00:00 | STEP 007 | OBSERVATION ---
+{
+  "screenshot": "step_007/before.png",
+  "tree": "step_007/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Internet"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10,"content_description":"Fix connectivity","is_clickable":true}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15}
+{"index":16,"is_scrollable":true}
+{"index":17,"is_clickable":true}
+{"index":18}
+{"index":19}
+{"index":20}
+{"index":21,"text":"T-Mobile"}
+{"index":22,"text":"Mobile data won't auto‑connect"}
+{"index":23}
+{"index":24}
+{"index":25}
+{"index":26,"content_description":"Settings","is_clickable":true}
+{"index":27,"is_clickable":true}
+{"index":28}
+{"index":29,"text":"Wi-Fi"}
+{"index":30}
+{"index":31,"is_checked":false}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34,"text":"Network preferences"}
+{"index":35,"text":"Wi‑Fi turns back on automatically"}
+{"index":36,"is_clickable":true}
+{"index":37}
+{"index":38,"text":"Saved networks"}
+{"index":39,"text":"1 network"}
+{"index":40,"is_clickable":true}
+{"index":41}
+{"index":42,"text":"Non-carrier data usage"}
+{"index":43,"text":"0 B used Sep 17 – Oct 15"}
+{"index":44}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48,"text":"To improve device experience, apps and services can still scan for Wi‑Fi networks at any time, even when Wi‑Fi is off. This can be used, for example, to improve location-based features and services. You can change this in Wi‑Fi scanning settings."}
+{"index":49,"text":"Change"}
+
+--- 2026-10-07T18:57:47.172977+00:00 | STEP 007 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_007/tree/request_0.json",
+  "call": 8
+}
+
+--- 2026-10-07T18:57:54.300113+00:00 | STEP 007 | MODEL REPLY ---
+{"action": "CLICK", "value": "T-Mobile", "verify": "The Wi‑Fi toggle should be visible and likely already in the ON position, as the task is to confirm it is on.","target": "T-Mobile"}
+
+--- 2026-10-07T18:57:54.300632+00:00 | STEP 007 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.125,
+  "load_seconds": 0.0187139,
+  "prompt_seconds": 0.870065,
+  "generation_seconds": 4.031446,
+  "output_tokens": 51
+}
+
+--- 2026-10-07T18:57:54.302754+00:00 | STEP 007 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "T-Mobile",
+    "verify": "The Wi‑Fi toggle should be visible and likely already in the ON position, as the task is to confirm it is on.",
+    "target": "T-Mobile",
+    "index": "21",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 303,
+    "y": 688
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:57:54.303276+00:00 | STEP 007 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 303,
+    "y": 688
+  }
+}
+
+--- 2026-10-07T18:58:05.068302+00:00 | STEP 007 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "T-Mobile",
+    "verify": "The Wi‑Fi toggle should be visible and likely already in the ON position, as the task is to confirm it is on.",
+    "target": "T-Mobile",
+    "index": "21",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "T-Mobile",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 303,
+    "y": 688
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_007/after.png",
+  "execute_and_observe_seconds": 10.764999999999418
+}
+
+--- 2026-10-07T18:58:09.201243+00:00 | STEP 008 | OBSERVATION ---
+{
+  "screenshot": "step_008/before.png",
+  "tree": "step_008/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"Internet"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10,"content_description":"Fix connectivity","is_clickable":true}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15}
+{"index":16,"is_scrollable":true}
+{"index":17,"is_clickable":true}
+{"index":18}
+{"index":19}
+{"index":20}
+{"index":21,"text":"T-Mobile"}
+{"index":22,"text":"Mobile data won't auto‑connect"}
+{"index":23}
+{"index":24}
+{"index":25}
+{"index":26,"content_description":"Settings","is_clickable":true}
+{"index":27,"is_clickable":true}
+{"index":28}
+{"index":29,"text":"Wi-Fi"}
+{"index":30}
+{"index":31,"is_checked":false}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34,"text":"Network preferences"}
+{"index":35,"text":"Wi‑Fi turns back on automatically"}
+{"index":36,"is_clickable":true}
+{"index":37}
+{"index":38,"text":"Saved networks"}
+{"index":39,"text":"1 network"}
+{"index":40,"is_clickable":true}
+{"index":41}
+{"index":42,"text":"Non-carrier data usage"}
+{"index":43,"text":"0 B used Sep 17 – Oct 15"}
+{"index":44}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48,"text":"To improve device experience, apps and services can still scan for Wi‑Fi networks at any time, even when Wi‑Fi is off. This can be used, for example, to improve location-based features and services. You can change this in Wi‑Fi scanning settings."}
+{"index":49,"text":"Change"}
+
+--- 2026-10-07T18:58:09.204242+00:00 | STEP 008 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_008/tree/request_0.json",
+  "call": 9
+}
+
+--- 2026-10-07T18:58:15.630839+00:00 | STEP 008 | MODEL REPLY ---
+{"action": "CLICK", "value": "Internet", "verify": "The 'Internet' option should be selected from the 'Network & internet' menu.", "target": "Settings"}
+
+--- 2026-10-07T18:58:15.631526+00:00 | STEP 008 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.422000000005937,
+  "load_seconds": 0.0164835,
+  "prompt_seconds": 1.017293,
+  "generation_seconds": 3.163403,
+  "output_tokens": 40
+}
+
+--- 2026-10-07T18:58:15.632590+00:00 | STEP 008 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Internet",
+    "verify": "The 'Internet' option should be selected from the 'Network & internet' menu.",
+    "target": "Settings",
+    "index": "26",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 943,
+    "y": 717
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:58:15.634095+00:00 | STEP 008 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 943,
+    "y": 717
+  }
+}
+
+--- 2026-10-07T18:58:28.205566+00:00 | STEP 008 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Internet",
+    "verify": "The 'Internet' option should be selected from the 'Network & internet' menu.",
+    "target": "Settings",
+    "index": "26",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "",
+    "hint_text": null,
+    "content_description": "Settings"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 943,
+    "y": 717
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_008/after.png",
+  "execute_and_observe_seconds": 12.577999999994063
+}
+
+--- 2026-10-07T18:58:32.359440+00:00 | STEP 009 | OBSERVATION ---
+{
+  "screenshot": "step_009/before.png",
+  "tree": "step_009/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5,"content_description":"T-Mobile"}
+{"index":6}
+{"index":7,"content_description":"Navigate up","is_clickable":true}
+{"index":8}
+{"index":9}
+{"index":10,"content_description":"SIM name & color","is_clickable":true}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14}
+{"index":15}
+{"index":16,"is_scrollable":true}
+{"index":17,"is_clickable":true}
+{"index":18,"is_clickable":true}
+{"index":19}
+{"index":20}
+{"index":21,"text":"Use SIM"}
+{"index":22,"is_checked":true}
+{"index":23}
+{"index":24}
+{"index":25,"text":"0 B used"}
+{"index":26}
+{"index":27}
+{"index":28,"text":"0 B"}
+{"index":29,"text":"2.00 GB"}
+{"index":30}
+{"index":31,"text":"2.00 GB data warning"}
+{"index":32,"text":"No time remaining"}
+{"index":33,"is_clickable":true}
+{"index":34}
+{"index":35,"text":"Calls preference"}
+{"index":36,"text":"T-Mobile"}
+{"index":37,"is_clickable":true}
+{"index":38}
+{"index":39,"text":"SMS preference"}
+{"index":40,"text":"T-Mobile"}
+{"index":41,"is_clickable":true}
+{"index":42}
+{"index":43,"text":"Mobile data"}
+{"index":44,"text":"Access data using mobile network"}
+{"index":45}
+{"index":46,"is_checked":false}
+{"index":47,"is_clickable":true}
+{"index":48}
+{"index":49,"text":"Roaming"}
+{"index":50,"text":"Connect to data services when roaming"}
+{"index":51}
+{"index":52,"is_checked":true}
+{"index":53,"is_clickable":true}
+{"index":54}
+{"index":55,"text":"App data usage"}
+
+--- 2026-10-07T18:58:32.362443+00:00 | STEP 009 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_009/tree/request_0.json",
+  "call": 10
+}
+
+--- 2026-10-07T18:58:38.412345+00:00 | STEP 009 | MODEL REPLY ---
+{"action": "CLICK", "value": "Settings", "verify": "Settings should be visible on the screen.", "target": "SIM name & color"}
+
+--- 2026-10-07T18:58:38.412878+00:00 | STEP 009 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.046999999998661,
+  "load_seconds": 0.0174712,
+  "prompt_seconds": 1.098829,
+  "generation_seconds": 2.704638,
+  "output_tokens": 34
+}
+
+--- 2026-10-07T18:58:38.413397+00:00 | STEP 009 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "Settings should be visible on the screen.",
+    "target": "SIM name & color",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 1017,
+    "y": 201
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:58:38.413914+00:00 | STEP 009 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 1017,
+    "y": 201
+  }
+}
+
+--- 2026-10-07T18:58:50.985886+00:00 | STEP 009 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "Settings should be visible on the screen.",
+    "target": "SIM name & color",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "",
+    "hint_text": null,
+    "content_description": "SIM name & color"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 1017,
+    "y": 201
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_009/after.png",
+  "execute_and_observe_seconds": 12.578000000001339
+}
+
+--- 2026-10-07T18:58:55.131426+00:00 | STEP 010 | OBSERVATION ---
+{
+  "screenshot": "step_010/before.png",
+  "tree": "step_010/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3}
+{"index":4}
+{"index":5}
+{"index":6}
+{"index":7}
+{"index":8,"text":"SIM name & color"}
+{"index":9}
+{"index":10}
+{"index":11}
+{"index":12}
+{"index":13}
+{"index":14,"text":"Name"}
+{"index":15,"text":"T-Mobile","is_clickable":true}
+{"index":16,"text":"Color (used by compatible apps)"}
+{"index":17,"is_clickable":true,"is_scrollable":true}
+{"index":18}
+{"index":19}
+{"index":20,"text":"Cyan"}
+{"index":21}
+{"index":22,"text":"Network"}
+{"index":23,"text":"T-Mobile"}
+{"index":24,"text":"Phone number on SIM"}
+{"index":25,"text":"+1-555-123-4567"}
+{"index":26}
+{"index":27}
+{"index":28,"text":"Cancel","is_clickable":true}
+{"index":29,"text":"Save","is_clickable":true}
+
+--- 2026-10-07T18:58:55.132646+00:00 | STEP 010 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_010/tree/request_0.json",
+  "call": 11
+}
+
+--- 2026-10-07T18:59:01.512107+00:00 | STEP 010 | MODEL REPLY ---
+{"action": "CLICK", "value": "Cyan", "verify": "The 'Network' section should be open, revealing network-related settings like Wi-Fi.","target": "Cyan"}
+
+--- 2026-10-07T18:59:01.512685+00:00 | STEP 010 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.375,
+  "load_seconds": 0.0202748,
+  "prompt_seconds": 0.885666,
+  "generation_seconds": 3.258009,
+  "output_tokens": 42
+}
+
+--- 2026-10-07T18:59:01.513235+00:00 | STEP 010 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Cyan",
+    "verify": "The 'Network' section should be open, revealing network-related settings like Wi-Fi.",
+    "target": "Cyan",
+    "index": "20",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1229
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:59:01.513771+00:00 | STEP 010 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1229
+  }
+}
+
+--- 2026-10-07T18:59:14.098701+00:00 | STEP 010 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Cyan",
+    "verify": "The 'Network' section should be open, revealing network-related settings like Wi-Fi.",
+    "target": "Cyan",
+    "index": "20",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Cyan",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1229
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_010/after.png",
+  "execute_and_observe_seconds": 12.593999999997322
+}
+
+--- 2026-10-07T18:59:18.257839+00:00 | STEP 011 | OBSERVATION ---
+{
+  "screenshot": "step_011/before.png",
+  "tree": "step_011/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2,"is_focused":true}
+{"index":3}
+{"index":4}
+{"index":5,"text":"Cyan"}
+{"index":6}
+{"index":7}
+{"index":8,"text":"Blue"}
+{"index":9}
+{"index":10}
+{"index":11,"text":"Green"}
+{"index":12}
+{"index":13}
+{"index":14,"text":"Purple"}
+{"index":15}
+{"index":16}
+{"index":17,"text":"Pink"}
+{"index":18}
+{"index":19}
+{"index":20,"text":"Orange"}
+
+--- 2026-10-07T18:59:18.259932+00:00 | STEP 011 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_011/tree/request_0.json",
+  "call": 12
+}
+
+--- 2026-10-07T18:59:23.443369+00:00 | STEP 011 | MODEL REPLY ---
+{"action": "CLICK", "value": "settings", "verify": "Settings app should be opened.","target": ""}
+
+--- 2026-10-07T18:59:23.443892+00:00 | STEP 011 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.186999999998079,
+  "load_seconds": 0.0203298,
+  "prompt_seconds": 0.695632,
+  "generation_seconds": 2.152833,
+  "output_tokens": 28
+}
+
+--- 2026-10-07T18:59:23.444417+00:00 | STEP 011 | VALIDATION ERROR ---
+{
+  "error": "Target label '' matches 0 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T18:59:23.445452+00:00 | STEP 011 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_011/tree/request_1.json",
+  "call": 13
+}
+
+--- 2026-10-07T18:59:28.241863+00:00 | STEP 011 | MODEL REPLY ---
+{"action": "AWAKE", "value": "settings", "verify": "Settings app should be opened.","target": ""}
+
+--- 2026-10-07T18:59:28.242368+00:00 | STEP 011 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 4.796999999998661,
+  "load_seconds": 0.0181939,
+  "prompt_seconds": 0.507191,
+  "generation_seconds": 2.19373,
+  "output_tokens": 29
+}
+
+--- 2026-10-07T18:59:28.243394+00:00 | STEP 011 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "AWAKE",
+    "value": "settings",
+    "verify": "Settings app should be opened."
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:59:28.253186+00:00 | STEP 011 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  }
+}
+
+--- 2026-10-07T18:59:41.079998+00:00 | STEP 011 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "AWAKE",
+    "value": "settings",
+    "verify": "Settings app should be opened."
+  },
+  "target": null,
+  "android": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_011/after.png",
+  "execute_and_observe_seconds": 12.827999999994063
+}
+
+--- 2026-10-07T18:59:45.273381+00:00 | STEP 012 | OBSERVATION ---
+{
+  "screenshot": "step_012/before.png",
+  "tree": "step_012/tree.json"
+}
+{"index":0}
+{"index":1}
+{"index":2}
+{"index":3,"is_scrollable":true}
+{"index":4}
+{"index":5}
+{"index":6}
+{"index":7,"content_description":"Profile picture, double tap to open Google Account","is_clickable":true}
+{"index":8,"text":"Settings"}
+{"index":9}
+{"index":10}
+{"index":11,"is_clickable":true}
+{"index":12}
+{"index":13,"text":"Search settings"}
+{"index":14,"is_scrollable":true}
+{"index":15}
+{"index":16}
+{"index":17}
+{"index":18}
+{"index":19}
+{"index":20,"is_clickable":true}
+{"index":21}
+{"index":22}
+{"index":23}
+{"index":24,"text":"Network & internet"}
+{"index":25,"text":"Mobile, Wi‑Fi, hotspot"}
+{"index":26,"is_clickable":true}
+{"index":27}
+{"index":28}
+{"index":29}
+{"index":30,"text":"Connected devices"}
+{"index":31,"text":"Bluetooth, pairing"}
+{"index":32,"is_clickable":true}
+{"index":33}
+{"index":34}
+{"index":35}
+{"index":36,"text":"Apps"}
+{"index":37,"text":"Assistant, recent apps, default apps"}
+{"index":38,"is_clickable":true}
+{"index":39}
+{"index":40}
+{"index":41}
+{"index":42,"text":"Notifications"}
+{"index":43,"text":"Notification history, conversations"}
+{"index":44,"is_clickable":true}
+{"index":45}
+{"index":46}
+{"index":47}
+{"index":48,"text":"Battery"}
+{"index":49,"text":"100%"}
+{"index":50,"is_clickable":true}
+{"index":51}
+{"index":52}
+{"index":53}
+{"index":54,"text":"Storage"}
+{"index":55,"text":"41% used - 9.36 GB free"}
+{"index":56,"is_clickable":true}
+{"index":57}
+{"index":58}
+
+--- 2026-10-07T18:59:45.287590+00:00 | STEP 012 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_012/tree/request_0.json",
+  "call": 14
+}
+
+--- 2026-10-07T18:59:50.836975+00:00 | STEP 012 | MODEL REPLY ---
+{"action": "CLICK", "value": "Settings", "verify": "Settings screen should appear.", "target": "Network & internet"}
+
+--- 2026-10-07T18:59:50.837502+00:00 | STEP 012 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.546999999998661,
+  "load_seconds": 0.0161788,
+  "prompt_seconds": 0.824221,
+  "generation_seconds": 2.39771,
+  "output_tokens": 30
+}
+
+--- 2026-10-07T18:59:50.839059+00:00 | STEP 012 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "Settings screen should appear.",
+    "target": "Network & internet",
+    "index": "24",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 437,
+    "y": 874
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T18:59:50.840092+00:00 | STEP 012 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 437,
+    "y": 874
+  }
+}
+
+--- 2026-10-07T19:00:03.923483+00:00 | STEP 012 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Settings",
+    "verify": "Settings screen should appear.",
+    "target": "Network & internet",
+    "index": "24",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Network & internet",
+    "hint_text": null,
+    "content_description": ""
+  },
+  "android": {
+    "action_type": "click",
+    "x": 437,
+    "y": 874
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_012/after.png",
+  "execute_and_observe_seconds": 13.094000000004598
+}
+
+--- 2026-10-07T19:00:04.215880+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "SystemWifiTurnOn",
+  "run_id": "trial_SystemWifiTurnOn_20261007T185408_292329Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "five_easy_tasks_v9_wifi_xml",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_five_tasks_v8",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "step_budget",
+  "model_calls_attempted": 14,
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4",
+    "video_002.mp4"
+  ],
+  "duration_seconds": 326.04699999999866
+}

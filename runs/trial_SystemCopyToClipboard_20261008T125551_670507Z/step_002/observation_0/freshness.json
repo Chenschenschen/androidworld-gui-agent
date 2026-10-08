@@ -1,0 +1,74 @@
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": {
+    "text": "",
+    "content_description": "QuickNote",
+    "class_name": "android.widget.FrameLayout",
+    "bbox": {
+      "x_min": 540,
+      "x_max": 810,
+      "y_min": 2190,
+      "y_max": 2337
+    },
+    "bbox_pixels": {
+      "x_min": 540,
+      "x_max": 810,
+      "y_min": 2190,
+      "y_max": 2337
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "net.gsantner.markor",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "net.gsantner.markor:id/nav_quicknote",
+    "metadata": null
+  },
+  "selected_target_fresh": {
+    "text": "",
+    "content_description": "QuickNote",
+    "class_name": "android.widget.FrameLayout",
+    "bbox": {
+      "x_min": 540,
+      "x_max": 810,
+      "y_min": 2190,
+      "y_max": 2337
+    },
+    "bbox_pixels": {
+      "x_min": 540,
+      "x_max": 810,
+      "y_min": 2190,
+      "y_max": 2337
+    },
+    "hint_text": null,
+    "is_checked": false,
+    "is_checkable": false,
+    "is_clickable": true,
+    "is_editable": null,
+    "is_enabled": true,
+    "is_focused": false,
+    "is_focusable": true,
+    "is_long_clickable": false,
+    "is_scrollable": false,
+    "is_selected": false,
+    "is_visible": true,
+    "package_name": "net.gsantner.markor",
+    "resource_name": null,
+    "tooltip": null,
+    "resource_id": "net.gsantner.markor:id/nav_quicknote",
+    "metadata": null
+  }
+}

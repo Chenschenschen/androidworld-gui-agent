@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Launch",
+    "app": "clipper"
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "clipper"
+  },
+  "observation_id": "observation_0"
+}

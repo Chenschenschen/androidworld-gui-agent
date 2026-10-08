@@ -1,0 +1,19 @@
+{
+  "native": {
+    "action": "TYPE",
+    "value": "+10433218196",
+    "verify": "The Phone field should contain the text '+10433218196'.",
+    "target": "Phone",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "+10433218196",
+    "x": 535,
+    "y": 1503,
+    "clear_text": true
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

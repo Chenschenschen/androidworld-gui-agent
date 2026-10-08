@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"john.doe@example.com\" to the clipboard. I have typed the text into the search bar, and now I need to long press on the text to bring up the context menu with copy options. The text \"john.doe@example.com\" is in the search bar at [135,197,749,221]. I should long press on this text to select it and reveal the copy options.\ndo(action=\"Long Press\", element=[499,168])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442988,
+  "id": "20261008150306481b8ee0407941ee",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008150306481b8ee0407941ee",
+  "usage": {
+    "completion_tokens": 105,
+    "prompt_tokens": 3405,
+    "prompt_tokens_details": {
+      "cached_tokens": 1632
+    },
+    "total_tokens": 3510
+  },
+  "wall_seconds": 2.0160000000032596
+}

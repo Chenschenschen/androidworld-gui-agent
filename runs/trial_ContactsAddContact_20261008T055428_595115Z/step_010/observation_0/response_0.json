@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The contact form now shows First name \"Maya\", Last name \"Martin\", and Phone \"+1 812-634-0319\". All required information is entered. I should tap the Save button at the top-right to save the contact.\ndo(action=\"Tap\", element=[764,87])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438921,
+  "id": "20261008135519d0f5ac2cbe894639",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135519d0f5ac2cbe894639",
+  "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 3363,
+    "prompt_tokens_details": {
+      "cached_tokens": 2083
+    },
+    "total_tokens": 3428
+  },
+  "wall_seconds": 1.5939999999973224
+}

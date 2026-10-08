@@ -1,0 +1,29 @@
+{
+  "version": "learning_single_name_v7_gpu22",
+  "prompt_version": "gelab_json_single_name_v7",
+  "action_format": "json_schema",
+  "observation": "tree_first",
+  "prompt_examples": false,
+  "max_screenshot_fallbacks": 2,
+  "model": "gelab-zero-4b-preview:latest",
+  "options": {
+    "temperature": 1,
+    "top_k": 20,
+    "top_p": 0.95,
+    "num_ctx": 4096,
+    "num_gpu": 22,
+    "num_predict": 256,
+    "seed": 42
+  },
+  "max_steps": 12,
+  "max_seconds": 900,
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "note": "Compared with v6, change only the conditional contact guide: full exact name once in First name, Last name blank, avoiding the observed duplicated surname. Same task seed, model sampling, GPU22, action contract and budgets. One comparison is small-sample evidence, not general reliability.",
+  "contact_guidance": true,
+  "targeted_type": true,
+  "direct_type_only": true,
+  "label_grounding": true,
+  "task_seed": 42
+}

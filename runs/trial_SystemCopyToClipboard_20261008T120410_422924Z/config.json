@@ -1,0 +1,57 @@
+{
+  "version": "autoglm_api_v38_general_app_preflight",
+  "step_assessment": false,
+  "assessment_prompt_version": "m3a_summary_adaptation_v2_shared_prefix",
+  "provider": "zai",
+  "prompt_version": "autoglm_native_en_v22_general_interactions",
+  "model": "autoglm-phone-multilingual",
+  "observation": "screenshot",
+  "tree_backend": "none",
+  "supplemental_tree_packages": [
+    "com.android.settings",
+    "com.google.android.deskclock",
+    "com.android.chrome",
+    "net.gsantner.markor"
+  ],
+  "action_format": "native_pseudocall",
+  "sampling": {
+    "temperature": 0,
+    "top_p": 0.85,
+    "frequency_penalty": 0.2,
+    "max_tokens": 3000
+  },
+  "max_steps": 12,
+  "task_step_budgets": {
+    "ContactsAddContact": 16
+  },
+  "max_seconds": 900,
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "max_reobservations": 1,
+  "freshness_global_difference": 0.08,
+  "freshness_target_difference": 0.08,
+  "no_effect_difference": 0.001,
+  "note": "Reusable Android interaction guidance and factual app capabilities; task recipes and separate reflection calls disabled. Markor editor prepared officially for Clipboard. Native model action choices and official final verification.",
+  "visual_stability_checks": 3,
+  "visual_stability_pause": 0.5,
+  "visual_stability_difference": 0.01,
+  "chrome_launch_timeout": 30,
+  "task_guidance": false,
+  "clipboard_input_app": "markor",
+  "interaction_guidance": true,
+  "interaction_guidance_version": "android_interactions_v1",
+  "app_capabilities": {
+    "settings": "Android system settings",
+    "camera": "Camera with photo capture",
+    "clock": "Clock with timer and alarms",
+    "contacts": "Contact records and editable contact forms",
+    "markor": "Plain-text editor with editable notes and standard text selection"
+  },
+  "api_base_url": "https://api.z.ai/api/paas/v4",
+  "task_seed": 43,
+  "task_name": "SystemCopyToClipboard",
+  "allowed_apps": [
+    "markor"
+  ]
+}

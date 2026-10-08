@@ -1,0 +1,1317 @@
+
+--- 2026-10-08T08:16:52.715813+00:00 | RUN | RUN START ---
+{
+  "task": "ContactsAddContact",
+  "config": {
+    "version": "autoglm_api_v28_actual_control_feedback",
+    "provider": "zai",
+    "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+    "model": "autoglm-phone-multilingual",
+    "observation": "screenshot",
+    "tree_backend": "none",
+    "supplemental_tree_packages": [
+      "com.android.settings",
+      "com.google.android.deskclock",
+      "com.android.chrome"
+    ],
+    "action_format": "native_pseudocall",
+    "sampling": {
+      "temperature": 0,
+      "top_p": 0.85,
+      "frequency_penalty": 0.2,
+      "max_tokens": 3000
+    },
+    "max_steps": 16,
+    "task_step_budgets": {
+      "ContactsAddContact": 16
+    },
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "max_reobservations": 1,
+    "freshness_global_difference": 0.08,
+    "freshness_target_difference": 0.08,
+    "no_effect_difference": 0.001,
+    "note": "v23 follows pinned Open-AutoGLM English prompt/3000-token cap and sourced Android World completion/recovery/text-selection guidance. Long task recipes and unsupported Clock Type exception withdrawn. Short visible completion goals, original task once, ordered native history, latest image and factual GUI status. Chrome paired field centers repair observed wrong suggestion grounding; Contacts16-step budget follows real Saveat12. Scheduler always stops first failed clean trial for logged diagnosis before another run. Sources and slide mapping: docs/COURSE_AND_UPSTREAM_REVIEW.md.",
+    "visual_stability_checks": 3,
+    "visual_stability_pause": 0.5,
+    "visual_stability_difference": 0.01,
+    "api_base_url": "https://api.z.ai/api/paas/v4",
+    "task_seed": 42,
+    "task_name": "ContactsAddContact"
+  }
+}
+
+--- 2026-10-08T08:16:52.827144+00:00 | RUN | OBSERVATION INFRASTRUCTURE ---
+{
+  "backend": "none",
+  "accessibility_services_before": "null",
+  "accessibility_services_after": "null",
+  "tree_used_for_model": false,
+  "task_state_modified": false
+}
+
+--- 2026-10-08T08:16:53.394566+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Create a new contact for Camila da Silva. Their number is +10433218196.",
+  "parameters": {
+    "name": "Camila da Silva",
+    "number": "+10433218196"
+  },
+  "task_seed": 42,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-08T08:16:58.600309+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-08T08:16:59.583002+00:00 | STEP 001 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:16:59.672787+00:00 | STEP 001 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 1,
+  "used": false,
+  "activity": "com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity"
+}
+
+--- 2026-10-08T08:17:00.085913+00:00 | STEP 001 | OBSERVATION ---
+{
+  "observation_id": "step_001\\observation_0",
+  "screenshot": "step_001\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:00.102290+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "call": 1,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_001\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:17:03.102550+00:00 | STEP 001 | MODEL REPLY ---
+
+The home screen is visible with the Contacts app icon. To create a new contact, first launch the Contacts app.
+
+
+do(action="Launch", app="Contacts")
+
+
+--- 2026-10-08T08:17:03.102550+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "wall_seconds": 3.0,
+  "usage": {
+    "completion_tokens": 39,
+    "prompt_tokens": 1843,
+    "prompt_tokens_details": {
+      "cached_tokens": 746
+    },
+    "total_tokens": 1882
+  }
+}
+
+--- 2026-10-08T08:17:03.103554+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action_type": "open_app",
+  "app_name": "contacts"
+}
+
+--- 2026-10-08T08:17:05.703059+00:00 | STEP 001 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:05.794259+00:00 | STEP 001 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 2,
+  "used": false,
+  "activity": "com.google.android.contacts/com.android.contacts.activities.PeopleActivity"
+}
+
+--- 2026-10-08T08:17:06.103771+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Launch",
+    "app": "Contacts"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.6214838962928921,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 3.0
+}
+
+--- 2026-10-08T08:17:08.358636+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.0005174823835784314,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:08.494755+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 3,
+  "used": false,
+  "activity": "com.google.android.contacts/com.android.contacts.activities.PeopleActivity"
+}
+
+--- 2026-10-08T08:17:08.635824+00:00 | STEP 002 | OBSERVATION ---
+{
+  "observation_id": "step_002\\observation_0",
+  "screenshot": "step_002\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:08.648817+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "call": 2,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_002\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:17:10.154699+00:00 | STEP 002 | MODEL REPLY ---
+The Contacts app is open and empty. To create a new contact, tap the floating action button (plus icon) at the bottom-right to open the new contact form.
+
+
+do(action="Tap", element=[876,836])
+
+
+--- 2026-10-08T08:17:10.156205+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "wall_seconds": 1.5,
+  "usage": {
+    "completion_tokens": 52,
+    "prompt_tokens": 2010,
+    "prompt_tokens_details": {
+      "cached_tokens": 788
+    },
+    "total_tokens": 2062
+  }
+}
+
+--- 2026-10-08T08:17:10.953559+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:11.073031+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 4,
+  "used": false,
+  "activity": "com.google.android.contacts/com.android.contacts.activities.PeopleActivity"
+}
+
+--- 2026-10-08T08:17:11.197871+00:00 | STEP 002 | OBSERVATION ---
+{
+  "observation_id": "step_002\\freshness_0",
+  "screenshot": "step_002\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:11.342339+00:00 | STEP 002 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.002132161458333333,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T08:17:11.343341+00:00 | STEP 002 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 946,
+  "y": 2006
+}
+
+--- 2026-10-08T08:17:12.980025+00:00 | STEP 002 | VISUAL SETTLING ---
+{
+  "difference": 0.0003394033394607843,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:13.087312+00:00 | STEP 002 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 5,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:13.406457+00:00 | STEP 002 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.02974685968137255,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 2.0460000000020955
+}
+
+--- 2026-10-08T08:17:15.565913+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 8.61672794117647e-06,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:15.617526+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 6,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:15.709656+00:00 | STEP 003 | OBSERVATION ---
+{
+  "observation_id": "step_003\\observation_0",
+  "screenshot": "step_003\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:15.719258+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "call": 3,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_003\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:17:17.115098+00:00 | STEP 003 | MODEL REPLY ---
+The "First name" field is visible and empty. Tap it to focus so we can type "Camila" next.
+
+do(action="Tap", element=[494,385])
+
+
+--- 2026-10-08T08:17:17.116106+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "wall_seconds": 1.389999999999418,
+  "usage": {
+    "completion_tokens": 41,
+    "prompt_tokens": 2193,
+    "prompt_tokens_details": {
+      "cached_tokens": 909
+    },
+    "total_tokens": 2234
+  }
+}
+
+--- 2026-10-08T08:17:17.807962+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:17.853672+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 7,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:17.947779+00:00 | STEP 003 | OBSERVATION ---
+{
+  "observation_id": "step_003\\freshness_0",
+  "screenshot": "step_003\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:18.100185+00:00 | STEP 003 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T08:17:18.101203+00:00 | STEP 003 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 533,
+  "y": 924
+}
+
+--- 2026-10-08T08:17:19.148715+00:00 | STEP 003 | VISUAL SETTLING ---
+{
+  "difference": 0.0025539024203431373,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:19.234173+00:00 | STEP 003 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 8,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:19.495550+00:00 | STEP 003 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.0023633769914215685,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 1.389999999999418
+}
+
+--- 2026-10-08T08:17:20.192722+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.00011393229166666667,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:20.237842+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 9,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:20.333264+00:00 | STEP 004 | OBSERVATION ---
+{
+  "observation_id": "step_004\\observation_0",
+  "screenshot": "step_004\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:20.346866+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "call": 4,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_004\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:17:21.828432+00:00 | STEP 004 | MODEL REPLY ---
+The "First name" field is focused and the keyboard is visible. Type "Camila" into this field.
+
+
+do(action="Type", text="Camila")
+
+
+--- 2026-10-08T08:17:21.828432+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "wall_seconds": 1.4839999999967404,
+  "usage": {
+    "completion_tokens": 38,
+    "prompt_tokens": 2367,
+    "prompt_tokens_details": {
+      "cached_tokens": 1091
+    },
+    "total_tokens": 2405
+  }
+}
+
+--- 2026-10-08T08:17:22.578158+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:22.626446+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 10,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:22.718143+00:00 | STEP 004 | OBSERVATION ---
+{
+  "observation_id": "step_004\\freshness_0",
+  "screenshot": "step_004\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:22.795506+00:00 | STEP 004 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.00011393229166666667,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T08:17:22.796507+00:00 | STEP 004 | EXECUTION START ---
+{
+  "action_type": "input_text",
+  "text": "Camila",
+  "clear_text": true
+}
+
+--- 2026-10-08T08:17:24.258066+00:00 | STEP 004 | VISUAL SETTLING ---
+{
+  "difference": 0.0035907820159313724,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:24.302644+00:00 | STEP 004 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 11,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:24.549696+00:00 | STEP 004 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Type",
+    "text": "Camila"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.007327090992647059,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 1.75
+}
+
+--- 2026-10-08T08:17:25.255193+00:00 | STEP 005 | VISUAL SETTLING ---
+{
+  "difference": 0.00010244332107843137,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:25.302223+00:00 | STEP 005 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 12,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:25.416319+00:00 | STEP 005 | OBSERVATION ---
+{
+  "observation_id": "step_005\\observation_0",
+  "screenshot": "step_005\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:25.428992+00:00 | STEP 005 | MODEL REQUEST ---
+{
+  "call": 5,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_005\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:17:26.827098+00:00 | STEP 005 | MODEL REPLY ---
+The "First name" field is filled with "Camila". Next, tap the "Last name" field to enter "da Silva".
+
+do(action="Tap", element=[494,472])
+
+
+--- 2026-10-08T08:17:26.827098+00:00 | STEP 005 | MODEL TIMING ---
+{
+  "wall_seconds": 1.4060000000026776,
+  "usage": {
+    "completion_tokens": 42,
+    "prompt_tokens": 2536,
+    "prompt_tokens_details": {
+      "cached_tokens": 1265
+    },
+    "total_tokens": 2578
+  }
+}
+
+--- 2026-10-08T08:17:27.541441+00:00 | STEP 005 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:27.592275+00:00 | STEP 005 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 13,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:27.693345+00:00 | STEP 005 | OBSERVATION ---
+{
+  "observation_id": "step_005\\freshness_0",
+  "screenshot": "step_005\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:27.875616+00:00 | STEP 005 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.00010244332107843137,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T08:17:27.877106+00:00 | STEP 005 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 533,
+  "y": 1132
+}
+
+--- 2026-10-08T08:17:29.577255+00:00 | STEP 005 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:29.626419+00:00 | STEP 005 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 14,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:29.884101+00:00 | STEP 005 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.010301776960784314,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 2.0
+}
+
+--- 2026-10-08T08:17:30.602551+00:00 | STEP 006 | VISUAL SETTLING ---
+{
+  "difference": 0.00011393229166666667,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:30.655472+00:00 | STEP 006 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 15,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:30.771109+00:00 | STEP 006 | OBSERVATION ---
+{
+  "observation_id": "step_006\\observation_0",
+  "screenshot": "step_006\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:30.779471+00:00 | STEP 006 | MODEL REQUEST ---
+{
+  "call": 6,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_006\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:17:32.378339+00:00 | STEP 006 | MODEL REPLY ---
+The "Last name" field is focused and empty. Type "da Silva" into this field.
+
+do(action="Type", text="da Silva")
+
+
+do(action="Type", text="da Silva")
+
+
+--- 2026-10-08T08:17:32.379348+00:00 | STEP 006 | MODEL TIMING ---
+{
+  "wall_seconds": 1.5779999999940628,
+  "usage": {
+    "completion_tokens": 45,
+    "prompt_tokens": 2705,
+    "prompt_tokens_details": {
+      "cached_tokens": 1434
+    },
+    "total_tokens": 2750
+  }
+}
+
+--- 2026-10-08T08:17:32.379348+00:00 | STEP 006 | IDENTICAL CALLS COLLAPSED ---
+{
+  "copies": 2,
+  "decisions": 1,
+  "executions_at_most": 1
+}
+
+--- 2026-10-08T08:17:33.116379+00:00 | STEP 006 | VISUAL SETTLING ---
+{
+  "difference": 0.00011393229166666667,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:33.179916+00:00 | STEP 006 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 16,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:33.293455+00:00 | STEP 006 | OBSERVATION ---
+{
+  "observation_id": "step_006\\freshness_0",
+  "screenshot": "step_006\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:33.377539+00:00 | STEP 006 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.00011393229166666667,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T08:17:33.379043+00:00 | STEP 006 | EXECUTION START ---
+{
+  "action_type": "input_text",
+  "text": "da Silva",
+  "clear_text": true
+}
+
+--- 2026-10-08T08:17:35.039768+00:00 | STEP 006 | VISUAL SETTLING ---
+{
+  "difference": 0.0012365004595588235,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:35.106544+00:00 | STEP 006 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 17,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:35.340967+00:00 | STEP 006 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Type",
+    "text": "da Silva"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.007264380361519608,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 1.9529999999940628
+}
+
+--- 2026-10-08T08:17:36.064581+00:00 | STEP 007 | VISUAL SETTLING ---
+{
+  "difference": 0.0001182406556372549,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:36.120196+00:00 | STEP 007 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 18,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:36.219130+00:00 | STEP 007 | OBSERVATION ---
+{
+  "observation_id": "step_007\\observation_0",
+  "screenshot": "step_007\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:36.232604+00:00 | STEP 007 | MODEL REQUEST ---
+{
+  "call": 7,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_007\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:17:37.983776+00:00 | STEP 007 | MODEL REPLY ---
+The full name is entered. Now we need to add the phone number. Scroll down to reveal the "Phone" field.
+
+do(action="Swipe", start=[499,543], end=[499,269])
+
+
+do(action="Swipe", start=[499,543], end=[499,269])
+
+
+--- 2026-10-08T08:17:37.983776+00:00 | STEP 007 | MODEL TIMING ---
+{
+  "wall_seconds": 1.75,
+  "usage": {
+    "completion_tokens": 72,
+    "prompt_tokens": 2887,
+    "prompt_tokens_details": {
+      "cached_tokens": 1611
+    },
+    "total_tokens": 2959
+  }
+}
+
+--- 2026-10-08T08:17:37.984781+00:00 | STEP 007 | IDENTICAL CALLS COLLAPSED ---
+{
+  "copies": 2,
+  "decisions": 1,
+  "executions_at_most": 1
+}
+
+--- 2026-10-08T08:17:38.721366+00:00 | STEP 007 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:38.772751+00:00 | STEP 007 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 19,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:38.873523+00:00 | STEP 007 | OBSERVATION ---
+{
+  "observation_id": "step_007\\freshness_0",
+  "screenshot": "step_007\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:38.951532+00:00 | STEP 007 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T08:17:38.954101+00:00 | STEP 007 | EXECUTION START ---
+{
+  "action_type": "slide",
+  "start": [
+    538,
+    1303
+  ],
+  "end": [
+    538,
+    645
+  ]
+}
+
+--- 2026-10-08T08:17:40.246200+00:00 | STEP 007 | VISUAL SETTLING ---
+{
+  "difference": 0.0022724226409313727,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:40.296449+00:00 | STEP 007 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 20,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:40.542048+00:00 | STEP 007 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Swipe"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.029955575980392158,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 1.5780000000086147
+}
+
+--- 2026-10-08T08:17:41.291464+00:00 | STEP 008 | VISUAL SETTLING ---
+{
+  "difference": 0.00011871936274509804,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:41.345722+00:00 | STEP 008 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 21,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:41.442240+00:00 | STEP 008 | OBSERVATION ---
+{
+  "observation_id": "step_008\\observation_0",
+  "screenshot": "step_008\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:41.454300+00:00 | STEP 008 | MODEL REQUEST ---
+{
+  "call": 8,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_008\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:17:42.860992+00:00 | STEP 008 | MODEL REPLY ---
+The "Phone" field is now visible and empty. Tap it to focus so we can enter the phone number.
+
+do(action="Tap", element=[494,421])
+
+
+
+--- 2026-10-08T08:17:42.861495+00:00 | STEP 008 | MODEL TIMING ---
+{
+  "wall_seconds": 1.4060000000026776,
+  "usage": {
+    "completion_tokens": 39,
+    "prompt_tokens": 3091,
+    "prompt_tokens_details": {
+      "cached_tokens": 1779
+    },
+    "total_tokens": 3130
+  }
+}
+
+--- 2026-10-08T08:17:43.590988+00:00 | STEP 008 | VISUAL SETTLING ---
+{
+  "difference": 0.00011871936274509804,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:43.637837+00:00 | STEP 008 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 22,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:43.736870+00:00 | STEP 008 | OBSERVATION ---
+{
+  "observation_id": "step_008\\freshness_0",
+  "screenshot": "step_008\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:43.890956+00:00 | STEP 008 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.0,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T08:17:43.892485+00:00 | STEP 008 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 533,
+  "y": 1010
+}
+
+--- 2026-10-08T08:17:45.572343+00:00 | STEP 008 | VISUAL SETTLING ---
+{
+  "difference": 0.0008257697610294118,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:45.622613+00:00 | STEP 008 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 23,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:45.856085+00:00 | STEP 008 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.0320733762254902,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 1.9539999999979045
+}
+
+--- 2026-10-08T08:17:46.562135+00:00 | STEP 009 | VISUAL SETTLING ---
+{
+  "difference": 0.00011393229166666667,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:46.611984+00:00 | STEP 009 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 24,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:46.717503+00:00 | STEP 009 | OBSERVATION ---
+{
+  "observation_id": "step_009\\observation_0",
+  "screenshot": "step_009\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:46.730159+00:00 | STEP 009 | MODEL REQUEST ---
+{
+  "call": 9,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_009\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:17:48.281406+00:00 | STEP 009 | MODEL REPLY ---
+The "Phone" field is focused and the keyboard is visible. Enter the phone number "+10433218196".
+
+do(action="Type", text="+10433218196")
+
+
+do(action="Type", text="+10433218196")
+
+
+--- 2026-10-08T08:17:48.281406+00:00 | STEP 009 | MODEL TIMING ---
+{
+  "wall_seconds": 1.562000000005355,
+  "usage": {
+    "completion_tokens": 55,
+    "prompt_tokens": 3263,
+    "prompt_tokens_details": {
+      "cached_tokens": 1988
+    },
+    "total_tokens": 3318
+  }
+}
+
+--- 2026-10-08T08:17:48.282436+00:00 | STEP 009 | IDENTICAL CALLS COLLAPSED ---
+{
+  "copies": 2,
+  "decisions": 1,
+  "executions_at_most": 1
+}
+
+--- 2026-10-08T08:17:48.998638+00:00 | STEP 009 | VISUAL SETTLING ---
+{
+  "difference": 0.00011393229166666667,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:49.048299+00:00 | STEP 009 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 25,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:49.164161+00:00 | STEP 009 | OBSERVATION ---
+{
+  "observation_id": "step_009\\freshness_0",
+  "screenshot": "step_009\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:49.270723+00:00 | STEP 009 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.00011393229166666667,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T08:17:49.272339+00:00 | STEP 009 | EXECUTION START ---
+{
+  "action_type": "input_text",
+  "text": "+10433218196",
+  "clear_text": true
+}
+
+--- 2026-10-08T08:17:51.374257+00:00 | STEP 009 | VISUAL SETTLING ---
+{
+  "difference": 0.00015893075980392157,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:51.427547+00:00 | STEP 009 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 26,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:51.720021+00:00 | STEP 009 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Type",
+    "text": "+10433218196"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.0019540824142156863,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 2.437999999994645
+}
+
+--- 2026-10-08T08:17:52.432251+00:00 | STEP 010 | VISUAL SETTLING ---
+{
+  "difference": 0.00011776194852941177,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:52.476673+00:00 | STEP 010 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 27,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:52.579505+00:00 | STEP 010 | OBSERVATION ---
+{
+  "observation_id": "step_010\\observation_0",
+  "screenshot": "step_010\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:52.589936+00:00 | STEP 010 | MODEL REQUEST ---
+{
+  "call": 10,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_010\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:17:54.029474+00:00 | STEP 010 | MODEL REPLY ---
+All required fields (First name, Last name, Phone) are filled. Tap the "Save" button at the top-right to save the contact.
+
+do(action="Tap", element=[764,87])
+
+
+--- 2026-10-08T08:17:54.029474+00:00 | STEP 010 | MODEL TIMING ---
+{
+  "wall_seconds": 1.437000000005355,
+  "usage": {
+    "completion_tokens": 43,
+    "prompt_tokens": 3459,
+    "prompt_tokens_details": {
+      "cached_tokens": 2161
+    },
+    "total_tokens": 3502
+  }
+}
+
+--- 2026-10-08T08:17:54.737970+00:00 | STEP 010 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:54.782952+00:00 | STEP 010 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 28,
+  "used": false,
+  "activity": "com.google.android.contacts/com.google.android.apps.contacts.editor.ContactEditorActivity"
+}
+
+--- 2026-10-08T08:17:54.878576+00:00 | STEP 010 | OBSERVATION ---
+{
+  "observation_id": "step_010\\freshness_0",
+  "screenshot": "step_010\\freshness_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:55.033849+00:00 | STEP 010 | TARGET FRESHNESS ---
+{
+  "safe": true,
+  "target_identity_same": true,
+  "global_image_difference": 0.00011776194852941177,
+  "target_image_difference": 0.0,
+  "selected_target_before": null,
+  "selected_target_fresh": null
+}
+
+--- 2026-10-08T08:17:55.035398+00:00 | STEP 010 | EXECUTION START ---
+{
+  "action_type": "click",
+  "x": 825,
+  "y": 208
+}
+
+--- 2026-10-08T08:17:56.832357+00:00 | STEP 010 | VISUAL SETTLING ---
+{
+  "difference": 0.002039292279411765,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:56.953024+00:00 | STEP 010 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 29,
+  "used": false,
+  "activity": "com.google.android.contacts/com.android.contacts.activities.PeopleActivity"
+}
+
+--- 2026-10-08T08:17:57.248014+00:00 | STEP 010 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.02549594056372549,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 2.202999999994063
+}
+
+--- 2026-10-08T08:17:59.491821+00:00 | STEP 011 | VISUAL SETTLING ---
+{
+  "difference": 0.015535481770833333,
+  "within_threshold": false,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:17:59.635625+00:00 | STEP 011 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 30,
+  "used": false,
+  "activity": "com.google.android.contacts/com.android.contacts.activities.PeopleActivity"
+}
+
+--- 2026-10-08T08:17:59.757463+00:00 | STEP 011 | OBSERVATION ---
+{
+  "observation_id": "step_011\\observation_0",
+  "screenshot": "step_011\\observation_0\\screen.png",
+  "tree_used_for_model": false
+}
+
+--- 2026-10-08T08:17:59.768063+00:00 | STEP 011 | MODEL REQUEST ---
+{
+  "call": 11,
+  "endpoint": "https://api.z.ai/api/paas/v4",
+  "request": "step_011\\observation_0\\request_0.json"
+}
+
+--- 2026-10-08T08:18:01.312846+00:00 | STEP 011 | MODEL REPLY ---
+The contact details screen shows the saved contact with the correct name and phone number. Task completed.
+
+finish(message="Contact for Camila da Silva with phone number +10433218196 has been created successfully.")
+
+
+--- 2026-10-08T08:18:01.312846+00:00 | STEP 011 | MODEL TIMING ---
+{
+  "wall_seconds": 1.5469999999913853,
+  "usage": {
+    "completion_tokens": 43,
+    "prompt_tokens": 3636,
+    "prompt_tokens_details": {
+      "cached_tokens": 2347
+    },
+    "total_tokens": 3679
+  }
+}
+
+--- 2026-10-08T08:18:01.313851+00:00 | STEP 011 | EXECUTION START ---
+{
+  "action_type": "status",
+  "goal_status": "complete",
+  "reason": "Contact for Camila da Silva with phone number +10433218196 has been created successfully."
+}
+
+--- 2026-10-08T08:18:02.013581+00:00 | STEP 011 | VISUAL SETTLING ---
+{
+  "difference": 0.0,
+  "within_threshold": true,
+  "tree_backend": "none"
+}
+
+--- 2026-10-08T08:18:02.058350+00:00 | STEP 011 | SUPPLEMENTAL GUI STATE ---
+{
+  "capture": 31,
+  "used": false,
+  "activity": "com.google.android.contacts/com.android.contacts.activities.PeopleActivity"
+}
+
+--- 2026-10-08T08:18:02.275820+00:00 | STEP 011 | OBSERVED RESULT ---
+{
+  "action": {
+    "command": "finish",
+    "message": "Contact for Camila da Silva with phone number +10433218196 has been created successfully."
+  },
+  "no_visible_effect": true,
+  "image_difference": 6.223192401960784e-06,
+  "dispatch_returned": false,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 0.9530000000086147
+}
+
+--- 2026-10-08T08:18:04.152547+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261008T081652_701104Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 11,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v28_actual_control_feedback",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 16,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 11,
+  "stop_reason": "complete",
+  "model_calls_attempted": 11,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 71.43700000000536,
+  "agent_phase_seconds": 65.31200000000536
+}

@@ -1,0 +1,15 @@
+{
+  "action": {
+    "command": "do",
+    "action": "Tap"
+  },
+  "no_visible_effect": false,
+  "image_difference": 0.04510474111519608,
+  "dispatch_returned": true,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 4.0789999999979045,
+  "selected_gui_control": {
+    "label": "Timer",
+    "resource_id": "com.google.android.deskclock:id/tab_menu_timer"
+  }
+}

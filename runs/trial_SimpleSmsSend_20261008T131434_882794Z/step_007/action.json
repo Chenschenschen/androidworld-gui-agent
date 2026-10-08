@@ -1,0 +1,13 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Type",
+    "text": "Your dentist appointment is scheduled for 2 PM on Thursday."
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "Your dentist appointment is scheduled for 2 PM on Thursday.",
+    "clear_text": true
+  },
+  "observation_id": "observation_0"
+}

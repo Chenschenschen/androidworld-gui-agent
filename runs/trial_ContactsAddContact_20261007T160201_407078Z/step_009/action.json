@@ -1,0 +1,13 @@
+{
+  "native": {
+    "action": "TYPE",
+    "value": "+10433218196",
+    "verify": "The phone number field should now display '+10433218196'."
+  },
+  "android": {
+    "action_type": "input_text",
+    "text": "+10433218196"
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

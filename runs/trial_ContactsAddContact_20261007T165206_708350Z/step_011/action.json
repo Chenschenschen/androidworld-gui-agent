@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "2",
+    "verify": "The 'Phone' input field should become focused for typing the contact's phone number.",
+    "index": "19"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 941,
+    "y": 1731
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

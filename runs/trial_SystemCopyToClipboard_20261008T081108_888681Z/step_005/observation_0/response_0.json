@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see that the screen now shows \"Text you copied\" which indicates that the text has been copied to the clipboard. The task was to copy \"john.doe@example.com\" to the clipboard, and it appears this has been successfully completed. The screen now shows \"Text you copied\" which confirms the copy action was successful.\n\nI should finish the task now since the text has been copied to the clipboard as requested.\n\n\nfinish(message=\"Successfully copied john.doe@example.com to the clipboard.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447144,
+  "id": "20261008161222001324337e0b478b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008161222001324337e0b478b",
+  "usage": {
+    "completion_tokens": 104,
+    "prompt_tokens": 4044,
+    "prompt_tokens_details": {
+      "cached_tokens": 2084
+    },
+    "total_tokens": 4148
+  },
+  "wall_seconds": 2.1710000000020955
+}

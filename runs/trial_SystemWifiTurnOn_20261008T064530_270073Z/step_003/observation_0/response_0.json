@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Network & internet\" screen is open. To turn Wi-Fi on, I need to access the \"Internet\" section, which is the first clickable item labeled \"Internet | Networks available\" with bounds [0,248,999,334]. This is where Wi-Fi settings are typically found.\ndo(action=\"Tap\", element=[499,296])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441959,
+  "id": "2026100814455854893c2dd1134b83",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814455854893c2dd1134b83",
+  "usage": {
+    "completion_tokens": 76,
+    "prompt_tokens": 2180,
+    "prompt_tokens_details": {
+      "cached_tokens": 762
+    },
+    "total_tokens": 2256
+  },
+  "wall_seconds": 1.5780000000086147
+}

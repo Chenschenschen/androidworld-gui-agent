@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Phone",
+    "verify": "The cursor should move to the 'Phone' field, making it editable.",
+    "index": "10"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 535,
+    "y": 1503
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

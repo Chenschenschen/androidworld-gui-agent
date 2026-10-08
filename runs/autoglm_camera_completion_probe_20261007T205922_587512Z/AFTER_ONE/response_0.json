@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see that a photo has been taken successfully. There's a small thumbnail image visible in the bottom right corner of the screen, which indicates that a photo was captured. The task was to \"Take one photo\" and this has been completed successfully. I should finish the task now.\nfinish(message=\"Photo taken successfully! I can see a thumbnail image in the bottom right corner of the screen, which indicates that a photo has been captured. The task to take one photo has been completed.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406765,
+  "id": "202610080459243b84e890e95b43a9",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080459243b84e890e95b43a9",
+  "usage": {
+    "completion_tokens": 100,
+    "prompt_tokens": 1991,
+    "prompt_tokens_details": {
+      "cached_tokens": 790
+    },
+    "total_tokens": 2091
+  },
+  "wall_seconds": 1.6880000000019209
+}

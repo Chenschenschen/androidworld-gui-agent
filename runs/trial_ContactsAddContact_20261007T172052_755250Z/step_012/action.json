@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Battery 100 percent.",
+    "verify": "The 'Battery 100 percent.' screen should open.",
+    "target": "Battery 100 percent.",
+    "index": "15",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 996,
+    "y": 64
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

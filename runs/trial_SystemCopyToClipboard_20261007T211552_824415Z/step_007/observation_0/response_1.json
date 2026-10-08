@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants me to copy the text \"Discount code: SAVE20\" to the clipboard. The exact task input confirms this text is available in the clipboard. The current screen is the home screen, and the \"Settings\" app is not currently open. To copy the clipboard content to the app, I need to first launch the \"Settings\" app, which is listed as an available app. I will launch the \"Settings\" app first to access the clipboard content and copy it.\ndo(action=\"Launch\", app=\"Settings\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407832,
+  "id": "20261008051711841920cb0aab4d41",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008051711841920cb0aab4d41",
+  "usage": {
+    "completion_tokens": 107,
+    "prompt_tokens": 3124,
+    "prompt_tokens_details": {
+      "cached_tokens": 3098
+    },
+    "total_tokens": 3231
+  },
+  "wall_seconds": 1.6719999999986612
+}

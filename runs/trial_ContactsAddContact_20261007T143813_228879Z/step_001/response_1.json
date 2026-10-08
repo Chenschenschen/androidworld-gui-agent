@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T14:39:25.6893095Z",
+  "message": {
+    "role": "assistant",
+    "content": "action:CLICK\tpoint:616,405\tContacts\t0.001"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3575438800,
+  "load_duration": 47111300,
+  "prompt_eval_count": 1473,
+  "prompt_eval_cached_count": 1443,
+  "prompt_eval_duration": 719092000,
+  "eval_count": 22,
+  "eval_duration": 2753007000,
+  "wall_seconds": 5.65599999999904
+}

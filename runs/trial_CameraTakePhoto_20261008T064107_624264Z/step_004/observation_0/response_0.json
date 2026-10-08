@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The screenshot shows a new thumbnail icon in the bottom-right corner, which indicates a photo has been taken. The task is to take one photo, and this is the first shutter action. The completion condition is met: exactly one new photo has been taken.\nfinish(message=\"Photo taken successfully. A new thumbnail icon is visible in the bottom-right corner, confirming the photo was captured. Task completed.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441694,
+  "id": "2026100814413232c96a9ca0bc4cd4",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814413232c96a9ca0bc4cd4",
+  "usage": {
+    "completion_tokens": 80,
+    "prompt_tokens": 2256,
+    "prompt_tokens_details": {
+      "cached_tokens": 958
+    },
+    "total_tokens": 2336
+  },
+  "wall_seconds": 1.639999999999418
+}

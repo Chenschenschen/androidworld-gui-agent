@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The phone number field is not visible yet. We need to scroll down to reveal the \"Phone\" field before entering the number +12751797908. Perform an upward swipe within the form area to scroll down and bring the phone field into view.\n\n\ndo(action=\"Swipe\", start=[499,521], end=[499,21])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447776,
+  "id": "20261008162255ad2185cc596e4821",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008162255ad2185cc596e4821",
+  "usage": {
+    "completion_tokens": 77,
+    "prompt_tokens": 2879,
+    "prompt_tokens_details": {
+      "cached_tokens": 1605
+    },
+    "total_tokens": 2956
+  },
+  "wall_seconds": 1.6719999999913853
+}

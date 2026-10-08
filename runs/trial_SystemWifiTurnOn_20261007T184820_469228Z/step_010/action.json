@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Data may be used for small files \n(charges may apply)",
+    "verify": "Data may be used for small files \n(charges may apply) was clicked.",
+    "target": "Data may be used for small files \n(charges may apply)",
+    "index": "38",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 366,
+    "y": 1578
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

@@ -1,0 +1,238 @@
+[
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T191041_360830Z",
+    "task": "SystemWifiTurnOn",
+    "seed": 42,
+    "official_outcome": "PASS",
+    "evidenced_primary_problem": "official_gui_success",
+    "additional_problems": [],
+    "evidence_steps": [
+      4,
+      5
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T191444_496364Z",
+    "task": "SystemWifiTurnOn",
+    "seed": 43,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "inconsistent_tree_and_image",
+    "additional_problems": [
+      "model_grounding_error_in_fresh_home"
+    ],
+    "evidence_steps": [
+      1
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_SystemWifiTurnOn_20261007T191610_718892Z",
+    "task": "SystemWifiTurnOn",
+    "seed": 44,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "whole_scene_false_stop",
+    "additional_problems": [
+      "model_grounding_error"
+    ],
+    "evidence_steps": [
+      1
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T191735_810079Z",
+    "task": "CameraTakePhoto",
+    "seed": 42,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "camera_readiness_mismatch",
+    "additional_problems": [
+      "false_done",
+      "no_effect_not_escalated"
+    ],
+    "evidence_steps": [
+      2,
+      3
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T191849_841156Z",
+    "task": "CameraTakePhoto",
+    "seed": 43,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "camera_readiness_mismatch",
+    "additional_problems": [
+      "false_done",
+      "no_effect_not_escalated"
+    ],
+    "evidence_steps": [
+      2,
+      3
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_CameraTakePhoto_20261007T191958_127385Z",
+    "task": "CameraTakePhoto",
+    "seed": 44,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "camera_readiness_mismatch",
+    "additional_problems": [
+      "false_done",
+      "no_effect_not_escalated"
+    ],
+    "evidence_steps": [
+      2,
+      3
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T192111_512833Z",
+    "task": "ClockTimerEntry",
+    "seed": 42,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "model_wrong_screen",
+    "additional_problems": [
+      "false_done",
+      "active_tab_omitted"
+    ],
+    "evidence_steps": [
+      2,
+      3,
+      4,
+      12
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T192358_651360Z",
+    "task": "ClockTimerEntry",
+    "seed": 43,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "model_wrong_values",
+    "additional_problems": [
+      "wrong_screen",
+      "invalid_coordinate_argument"
+    ],
+    "evidence_steps": [
+      5,
+      7,
+      8,
+      10
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_ClockTimerEntry_20261007T192636_081966Z",
+    "task": "ClockTimerEntry",
+    "seed": 44,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "model_wrong_screen",
+    "additional_problems": [
+      "invalid_coordinate_argument"
+    ],
+    "evidence_steps": [
+      3,
+      4
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T192819_171100Z",
+    "task": "ContactsAddContact",
+    "seed": 42,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "model_lost_value",
+    "additional_problems": [
+      "focus_click_ban",
+      "whole_scene_false_stop"
+    ],
+    "evidence_steps": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T193045_459484Z",
+    "task": "ContactsAddContact",
+    "seed": 43,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "no_app_controls_supplied",
+    "additional_problems": [
+      "status_bar_accepted",
+      "fresh_fallback_aborted"
+    ],
+    "evidence_steps": [
+      2
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_ContactsAddContact_20261007T193201_502151Z",
+    "task": "ContactsAddContact",
+    "seed": 44,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "no_app_controls_supplied",
+    "additional_problems": [
+      "status_bar_accepted",
+      "fresh_fallback_aborted"
+    ],
+    "evidence_steps": [
+      2
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T193303_671369Z",
+    "task": "SystemCopyToClipboard",
+    "seed": 42,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "model_invented_clipper_controls",
+    "additional_problems": [
+      "app_roles_unspecified",
+      "invalid_coordinate_argument"
+    ],
+    "evidence_steps": [
+      1,
+      2
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T193427_865452Z",
+    "task": "SystemCopyToClipboard",
+    "seed": 43,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "no_app_controls_supplied",
+    "additional_problems": [
+      "status_bar_accepted",
+      "fresh_fallback_aborted"
+    ],
+    "evidence_steps": [
+      2
+    ],
+    "review_only_original_summary_unchanged": true
+  },
+  {
+    "run_id": "trial_SystemCopyToClipboard_20261007T193537_200307Z",
+    "task": "SystemCopyToClipboard",
+    "seed": 44,
+    "official_outcome": "FAIL",
+    "evidenced_primary_problem": "model_invented_clipper_controls",
+    "additional_problems": [
+      "app_roles_unspecified",
+      "noneditable_type_correctly_blocked"
+    ],
+    "evidence_steps": [
+      1,
+      2,
+      3
+    ],
+    "review_only_original_summary_unchanged": true
+  }
+]

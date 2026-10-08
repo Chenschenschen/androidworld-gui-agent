@@ -1,0 +1,25 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Great! Now I have \"20\" entered and the timer shows \"00h 00m 20s\". I need to continue entering the digits to get \"20h 07m 01s\". \n\nThe target is 20h 07m 01s, which would be entered as \"200701\" in the format that the timer uses.\n\nI've entered \"20\" so far, and I need to enter \"7\" next to start building the minutes section.\ndo(action=\"Tap\", element=[245,570])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442657,
+  "id": "2026100814573558980387b980451d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814573558980387b980451d",
+  "usage": {
+    "completion_tokens": 112,
+    "prompt_tokens": 5635,
+    "prompt_tokens_details": {
+      "cached_tokens": 821
+    },
+    "total_tokens": 5747
+  }
+}

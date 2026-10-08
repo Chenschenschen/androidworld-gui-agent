@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The \"Last name\" field is focused and the keyboard is visible. I should type \"da Silva\" into this field.\ndo(action=\"Type\", text=\"da Silva\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442605,
+  "id": "20261008145644c20351b7d3c54f49",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008145644c20351b7d3c54f49",
+  "usage": {
+    "completion_tokens": 36,
+    "prompt_tokens": 3043,
+    "prompt_tokens_details": {
+      "cached_tokens": 1739
+    },
+    "total_tokens": 3079
+  },
+  "wall_seconds": 1.437999999994645
+}

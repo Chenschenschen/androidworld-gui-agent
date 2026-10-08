@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Recordings folder is now empty, which means sci_fi_book.mp3 has been successfully moved to Audiobooks. The task is complete. I will finish with a confirmation message.\n\n\ndo(action=\"Tap\", element=[68,79])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791470299,
+  "id": "2026100822381885fa5d4e8e9f4e6d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100822381885fa5d4e8e9f4e6d",
+  "usage": {
+    "completion_tokens": 50,
+    "prompt_tokens": 10365,
+    "prompt_tokens_details": {
+      "cached_tokens": 8073
+    },
+    "total_tokens": 10415
+  },
+  "wall_seconds": 1.875
+}

@@ -1,0 +1,10 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Back"
+  },
+  "android": {
+    "action_type": "navigate_back"
+  },
+  "observation_id": "observation_0"
+}

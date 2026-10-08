@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows \"00h 00m 02s\" and I have entered \"2\". To set 20 hours, I need to continue entering \"0\" next to build \"20\". I will tap the \"0\" button to input the next digit.\ndo(action=\"Tap\", element=[500,685])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791443416,
+  "id": "2026100815101476420e50e72d486a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100815101476420e50e72d486a",
+  "usage": {
+    "completion_tokens": 68,
+    "prompt_tokens": 4606,
+    "prompt_tokens_details": {
+      "cached_tokens": 2013
+    },
+    "total_tokens": 4674
+  },
+  "wall_seconds": 1.6720000000059372
+}

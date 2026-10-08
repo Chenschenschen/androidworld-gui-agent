@@ -1,0 +1,781 @@
+=== PAGE 1 ===
+Day 3
+Tools, Function Calling
+& the Action Space
+Lecturer: Haoyuan Jiang, Xuerui Zhang, Zhenyu Wang
+1
+
+=== PAGE 2 ===
+Learning objectives
+- Explain the ReAct feedback loop.
+- Distinguish context, trace, observation space, and action space.
+- Select tools based on task needs and capabilities.
+- Apply basic tool-design and discovery principles.
+- Explain how Skills, events, user communication, and plugins extend agents.
+2
+
+=== PAGE 3 ===
+Content
+01 ReAct architecture
+02 Context, observation and action space
+03 Tools capabilities and selection
+04 Tools design and discovery
+05 Skills, events and Plugins
+3
+
+=== PAGE 4 ===
+0 Model, harness and environment
+- Harness determines how the Agent thinks and acts (software layer).
+- Harness (origin): a set of straps and fittings by which a horse is controlled by its driver.
+- Runtime determines where it runs and under what constraints (infrastructure layer).
+- The runtime connects model decisions to the outside world.
+Model
+Language model:
+chooses a tool call
+or reply
+Harness
+Runtime that builds
+context, checks calls
+and runs tools
+Environment
+External systems
+and state that tools
+read or change
+Tool
+request
+Execute
+action
+Updated
+context
+Result
+(observation)
+4
+
+=== PAGE 5 ===
+1 ReAct Example: a weather-based packing note
+User request: check Beijing weather in 2026-09-18 and save a packing note.
+5
+Reason Act Observe
+1  Need the 
+forecast
+get_weather(
+"Beijing",
+"2026-09-18"
+)
+Light rain
+22 °C
+ok: true
+2  Save an
+umbrella note
+save_note(
+"packing.txt",
+"Pack an umbrella."
+)
+packing.txt
+saved: true
+Weather informs the next decision
+3  Final reply
+The save receipt supports the reply
+“Light rain, 22 °C. The packing note is saved.”
+
+=== PAGE 6 ===
+1 The ReAct Feedback Loop
+- REasoning and ACTing form a loop, the new observations guide the next decision.
+- ReAct framework was proposed by Shunyu Yao in “ReAct: Synergizing Reasoning and 
+Acting in Language Models”, 2022.
+6
+Reason
+Choose a tool
+or finish
+Act
+Runtime executes
+the requested tool
+Observe
+Read the result
+or error
+tool call action
+Final answer
+Enough evidence
+Add the observation to the trace
+Repeat with updated contextUser request
+
+=== PAGE 7 ===
+Context for the next decision
+Prefix
+Instructions + tool definitions
+Guides decision-making and tool use
+Trace Ordered (growing) interaction history
+User: Beijing weather?
+Assistant: get_weather("Beijing", 09-18)
+Tool: light rain, 22 °C
+Model
+Requests a tool
+Runtime + tool
+(Harness)
+New observation
+Light rain, 22 °C
+Input
+Record request
+Append
+7
+2 Context: prefix + trace
+- Context: the model’s input for the current decision.
+- Trace: The (historical) ordered record of user messages, assistant messages and tool results.
+- Action space: The set of operations the agent can perform, constrained by available tools, valid arguments.
+- Observation space: The set of possible observations the agent can receive through available interfaces.
+Execute action: get_weather("Beijing", 09-18)
+Key distinction: Calling a tool is an action. Its returned result is an observation, which can be appended to the next context.
+
+=== PAGE 8 ===
+3 Tools
+What operation does the tool enable?
+8
+Perception
+Read information from the environment.
+get_weather → retrieve a forecast
+Execution
+Change files, records or external state.
+save_note → write travel advice
+Collaboration
+Delegate work to another agent.
+delegate_task → given docs, write 
+summary, make slide, edit video
+Event triggering
+Register a future condition or schedule.
+register_timer → "notify me at 07:00 tomorrow"
+(A timer registration happens now; the event arrives later)
+User communication
+Ask for input or deliver a notification.
+notify_user → send a rain alert
+
+=== PAGE 9 ===
+3 Tool definitions – Schema example
+Schema constrains arguments; the runtime checks access and executes the function.
+9
+Perception: get_weather Execution: save_note
+{
+"type": "function",
+"function": {
+"name": "get_weather",
+"description":
+"Forecast for a city/date.",
+"strict": true,
+"parameters": {
+"type": "object",
+"properties": {
+"city": {"type": "string"},
+"date": {
+"type": "string",
+"description": "YYYY-MM-DD"
+}
+},
+"required": ["city", "date"],
+"additionalProperties": false
+}
+}
+}
+{
+"type": "function",
+"function": {
+"name": "save_note",
+"description":
+"Write a note to a local file.",
+"strict": true,
+"parameters": {
+"type": "object",
+"properties": {
+"path": {"type": "string"},
+"text": {"type": "string"}
+},
+"required": ["path", "text"],
+"additionalProperties": false
+}
+}
+}
+
+=== PAGE 10 ===
+3 Tool selection
+Choosing an available tool for the current information gap or required operation.
+10
+• Task fit: weather data.
+• Inputs: city + date.
+• Cost: proportionate.
+• Key point: Use the narrowest 
+sufficient capability, then 
+reassess after the result.
+What is needed next?
+Missing forecast Advice must be saved Enough information
+No pending operation
+get_weather save_note Answer directly
+After execution: result or error
+Selection checks
+Available tools:
+get_weather, save_note
+Example: Beijing forecast is missing (model response message)
+User request: check Beijing weather in 09-18 and save a packing note.
+{
+"role": "assistant", "content": null,
+"tool_calls": [{
+"id": "call_weather_1", "type": "function",
+"function": { "name": "get_weather",
+"arguments":
+"{\"city\":\"Beijing\",\"date\":\"2026-09-18\"}"
+}
+}]
+}
+
+=== PAGE 11 ===
+3 Example: ReAct tool-calling loop
+User request: retrieve Beijing’s forecast in 2026 -09-18, then save practical advice.
+11
+MODEL: DECIDE RUNTIME: ACT OBSERVATION
+1  Need a forecast
+assistant request
+call_weather_1
+get_weather
+Beijing
+2026-09-18
+Weather result
+Light rain, 22 °C
+role: tool
+2  Save the advice
+assistant request
+call_save_1
+save_note
+trip.txt
+Bring an umbrella.
+Save confirmation
+ok: true
+role: tool
+Append call + result to trace → next context
+3  Final answer Next context = prefix + updated trace
+Prefix: instructions + tool definitions
+
+=== PAGE 12 ===
+3 Message format
+12
+• role: Identifies the message source.
+• system: Application instructions for the 
+model.
+• user: The task and information 
+supplied by the user.
+• assistant: A model-generated reply or 
+tool-call request.
+• tool: A result supplied by the runtime 
+for a tool call.
+• content: Carries the message body.
+• messages: An ordered array of messages.
+• tools: All available tool definitions. A 
+request-level array alongside messages. 
+• It is not a message role.
+Initial messages (Demo example)
+[
+{
+"role": "system",
+"content":
+"Use tools; 
+report success only after           
+confirmation."
+},
+{
+"role": "user",
+"content":
+"Beijing weather on 2026-09-18? 
+Save advice to trip.txt."
+}
+]
+User request: retrieve Beijing’s forecast, then save 
+practical advice.
+
+=== PAGE 13 ===
+3 Example: ReAct tool-calling loop
+13
+MODEL: DECIDE RUNTIME: ACT OBSERVATION
+1  Need a forecast
+assistant request
+call_weather_1
+get_weather
+Beijing
+2026-09-18
+Weather result
+Light rain, 22 °C
+role: tool
+2  Save the advice
+assistant request
+call_save_1
+save_note
+trip.txt
+Bring an umbrella.
+Save confirmation
+ok: true
+role: tool
+Append call + result to trace → next context
+3  Final answer Next context = prefix + updated trace
+Prefix: instructions + tool definitions
+User request: retrieve Beijing’s forecast in 2026 -09-18, then save practical advice.
+
+=== PAGE 14 ===
+3 ReAct round 1: retrieve weather
+Decision: the forecast is missing. Request : get_weather.
+14
+arguments is a JSON string; tool_call_id links each result to its call.
+[
+{
+"role": "assistant", "content": null,
+"tool_calls": [{
+"id": "call_weather_1",
+"type": "function",
+"function": {
+"name": "get_weather",
+"arguments":
+"{\"city\":\"Beijing\",\"date\":\"2026-09-18\"}"
+}
+}]
+},
+{
+"role": "tool",
+"tool_call_id": "call_weather_1",
+"content": "{\"condition\":\"Light rain\",\"temperature_c\":22}"
+}
+]
+• Runtime: Executes the call; appends the returned observation.
+• Next request: Keep all 4 messages and both tool definitions.
+
+=== PAGE 15 ===
+3 Example: ReAct tool-calling loop
+15
+MODEL: DECIDE RUNTIME: ACT OBSERVATION
+1  Need a forecast
+assistant request
+call_weather_1
+get_weather
+Beijing
+2026-09-18
+Weather result
+Light rain, 22 °C
+role: tool
+2  Save the advice
+assistant request
+call_save_1
+save_note
+trip.txt
+Bring an umbrella.
+Save confirmation
+ok: true
+role: tool
+Append call + result to trace → next context
+3  Final answer Next context = prefix + updated trace
+Prefix: instructions + tool definitions
+User request: retrieve Beijing’s forecast in 2026 -09-18, then save practical advice.
+
+=== PAGE 16 ===
+3 ReAct round 2: save advice
+Decision: the forecast is known; saving the advice is still pending.
+16
+[
+{
+"role": "assistant", "content": null,
+"tool_calls": [{
+"id": "call_save_1",
+"type": "function",
+"function": {
+"name": "save_note",
+"arguments":
+"{\"path\":\"trip.txt\",\"text\":\"Light rain, 22 C. Bring an umbrella.\"}"
+}
+}]
+},
+{
+"role": "tool",
+"tool_call_id": "call_save_1",
+"content": "{\"ok\":true,\"path\":\"trip.txt\"}"
+}
+]
+• Runtime: Writes trip.txt; returns a save confirmation.
+• Next request: Keep all 6 messages and both tool definitions.
+
+=== PAGE 17 ===
+3 Example: ReAct tool-calling loop
+17
+MODEL: DECIDE RUNTIME: ACT OBSERVATION
+1  Need a forecast
+assistant request
+call_weather_1
+get_weather
+Beijing
+2026-09-18
+Weather result
+Light rain, 22 °C
+role: tool
+2  Save the advice
+assistant request
+call_save_1
+save_note
+trip.txt
+Bring an umbrella.
+Save confirmation
+ok: true
+role: tool
+Append call + result to trace → next context
+3  Final answer Next context = prefix + updated trace
+Prefix: instructions + tool definitions
+User request: retrieve Beijing’s forecast in 2026 -09-18, then save practical advice.
+
+=== PAGE 18 ===
+3 Final reply and accumulated history
+Model call 3 uses both observations to finish the task.
+18
+{
+"role": "assistant",
+"content":
+"Beijing: light rain, 22 C. Bring an umbrella. Advice saved to trip.txt."
+}
+History sent to the model
+Call 1: 2 messages
+System + user
+Call 2: 4 messages
++ weather call
++ weather result
+Call 3: 6 messages
++ save call
++ save result
+The final assistant reply becomes message 7. No tool call is needed.
+
+=== PAGE 19 ===
+4 Tool design – ACI: Agent–Computer Interface
+ACI covers both the action interface and the feedback the model receives.
+19
+•Motivation: About when to use the tool and its limits, makes the agent’s next decision and tool 
+selection easier.
+•Action interface: Clear operations (functions) definition and valid inputs (arguments/parameters).
+•Observation interface: Useful and clear results, status and errors.
+Model
+Chooses an action
+get_weather
+Parameters: city + date
+Implementation
+City lookup: city -> city_code
+Weather API
+Returned observation: forecast + units, or a useful error
+
+=== PAGE 20 ===
+4 Tool granularity
+How much work a single tool call covers? Does the tool have enough reusability?
+20
+Fine-grained Focused operation Broad workflow
+lookup_city()
+find_station()
+fetch_forecast()
+get_weather(
+city, date
+)
+plan_entire_trip()
+Weather, booking, payment?
+• More calls and latency.
+• More intermediate 
+arguments.
+• More coordination errors.
+• Hides routine lookup.
+• Keeps saving separate.
+• Retains a clear effect.
+• Mixed goals and effects.
+• Harder to inspect failure.
+• Retries may repeat writes.
+Combine routine steps. Preserve decisions that change scope or effects.
+
+=== PAGE 21 ===
+4 MCP: purpose and architecture
+21
+• Motivation: Reuse integrations across compatible applications.
+• Model Context Protocol: an open protocol connecting AI applications to external tools and context.
+HOST APPLICATION
+Model + MCP client
+MCP MESSAGES MCP SERVER
+Tool implementations
+1  Discover server
+(optional for clients)
+Request: server/discover
+Response: server information
+Supported versions
+and capabilities
+2  List tools
+Request: tools/list
+Response: tool definitions
+Names, descriptions
+and input schemas
+3  Choose + check
+Model proposes a call.
+Host checks inputs + access.
+4  Call the tool
+Request: tools/call
+Response: result or error
+Validate inputs + access
+Execute selected tool
+
+=== PAGE 22 ===
+4 Example: Discovery request and candidate result
+Illustrative application catalog JSON, with summaries before full definitions.
+These are customized catalog fields. Standard MCP tools/list enumerates tool definitions.
+22
+Request Candidate result
+{
+"request_id": "discover_1",
+"query": "Forecast for Beijing",
+"capability": "perception",
+"limit": 2
+}
+{
+"request_id": "discover_1",
+"candidates": [
+{
+"name": "get_weather",
+"summary": "City and date forecast",
+"definition_ref":
+"weather/get_weather"
+},
+{
+"name": "get_weather_history",
+"summary":
+"Past weather observations",
+"definition_ref": "weather/history"
+}
+]
+}
+Next: inspect the forecast tool’s
+full definition and supported dates.
+
+=== PAGE 23 ===
+4 Example: MCP tool definition and call
+Definitions describe the input contract. A call supplies concrete arguments.
+23
+Tool object returned by tools/list
+{
+"name": "get_weather",
+"description":
+"Forecast for a city and date.",
+"inputSchema": {
+"type": "object",
+"properties": {
+"city": {"type": "string"},
+"date": {
+"type": "string",
+"description": "YYYY-MM-DD"
+}
+},
+"required": ["city", "date"],
+"additionalProperties": false
+}
+}
+tools/call parameters
+{
+"name": "get_weather",
+"arguments": {
+"city": "Beijing",
+"date": "2026-09-18"
+}
+}
+Method-specific fields shown here.
+A full request also needs JSON-RPC
+and the standard_meta fields.
+MCP arguments is an object. Keep it distinct from a model API’s tool-call format.
+
+=== PAGE 24 ===
+4 Tool design, discovery and selection
+24
+•Design: How should a tool work and describe itself?
+•Discovery: What relevant tools can I find?
+•Selection: Which tool should I use next?
+Before use During the task
+Design
+Interface +
+implementation
+Discover
+Find and inspect
+when needed
+Select
+Choose tool +
+arguments
+Execute
+Runtime calls
+the tool
+get_weather
+definition
+Forecast tool
+found
+Beijing + date
+chosen
+Forecast
+returned
+Discovering a tool does not execute it. The runtime executes the call.
+
+=== PAGE 25 ===
+5 Skills
+Reusable task instructions and resources that guide an agent’s workflow.
+25
+•Motivation: Reuse domain procedures and completion checks.
+•Tool package: SKILL.md plus optional scripts, references and assets.
+•Activation: Load relevant instructions into the model’s context.
+Find
+Match the task
+Load
+Read SKILL.md
+Act
+Use available 
+tools
+Verify
+Check the result
+(SKILL) Travel Briefing: check weather, prepare advice, save when requested.
+The Skill guides the procedure. Tools perform the operations.
+
+=== PAGE 26 ===
+5 Example: SKILL.md
+travel-briefing/SKILL.md
+26
+---
+name: travel-briefing
+description: >
+Prepare weather-based travel advice.
+Use for a city-and-date travel briefing.
+---
+# Travel Briefing
+1. Confirm the city, date and requested output.
+2. Call get_weather with valid arguments.
+3. Ground advice in the returned forecast.
+4. If saving is requested, call save_note.
+5. Check the result before reporting completion.
+# Exception
+If a tool fails, explain what remains incomplete.
+For extra advice guidance, read references/advice.md.
+- Frontmatter: when to use it. 
+- Markdown body: steps and completion checks.
+
+=== PAGE 27 ===
+5 Skill progressive disclosure
+Load more detailed instructions only when the current task needs them.
+27
+• Metadata: Name + description help choose a Skill.
+• Instructions: The selected SKILL.md provides the workflow.
+• Resources: Read references or use supporting files as needed.
+1  Metadata
+travel-briefing
+Matches the task
+2  SKILL.md
+Workflow + checks Need more detail?
+3  Relevant resource
+references/advice.md
+Yes
+Use tools + verify
+No
+Less irrelevant context upfront. Loaded content still occupies context.
+
+=== PAGE 28 ===
+5 Skill Hub and MCP
+- Skill Hub: A catalog concept for reusable workflows (Skills).
+- MCP: A protocol for capability access  (tools).
+- Skill: Guide the use of MCP tools. 
+28
+Skill Hub MCP
+•Role: Find and distribute Skill packages.
+•Unit: Instructions with supporting files.
+•Example: Locate travel-briefing.
+•Role: Standardize client–server 
+communication.
+•Unit: Tool, resource and prompt interfaces.
+•Example: Discover and call get_weather.
+Skill from a Hub
+Workflow guidance
+Agent application
+Model + MCP client
+MCP server
+Capabilities
+
+=== PAGE 29 ===
+5 Event-triggering
+Signals that alert something has happened, used by the runtime to start or resume processing.
+29
+•A scheduled time arrives.
+•A background task finishes.
+•A new message or service callback arrives.
+Example: 07:00 weather briefing
+Now Later
+Register
+Save trigger
+for 07:00
+07:00 event
+Runtime starts
+workflow
+Get forecast
+get_weather
+Send advice
+Notify the user
+Registration sets the trigger. The later event starts processing.
+Further actions complete the task.
+
+=== PAGE 30 ===
+5 Plugins – Example: “Computer Use”
+Installable extension packages that add capabilities to an agent application.
+30
+Observation space Action space
+• Screenshots of visible interface states.
+• Cursor position or status, if exposed.
+• screenshot()
+• click(x, y), double_click(x,y)
+• type_text(text), key(key_name)
+• scroll(direction)
+Observe
+Current screenshot
+Where is the Name field?
+Decide
+Model chooses the next
+valid action or finishes
+Act
+Runtime executes
+click or type_text
+Capture a fresh screenshot after the interface responds
+Example: Fill the Name field with “Ada”.
+Check: “Ada” must appear in Name, not in another field.
+
+=== PAGE 31 ===
+5 Example: “Computer Use” fill the Name field
+User request: set Name to "Ada" in a practice form, without submitting it.
+31
+Illustrative JSON trace Observe, act and verify
+[
+{"action": "screenshot",
+"observation": {"image_ref": "s0"}},
+{"action": "click",
+"args": {"x": 420, "y": 180},
+"observation": {"status": "executed"}},
+{"action": "screenshot",
+"observation": {"image_ref": "s1"}},
+{"action": "type_text",
+"args": {"text": "Ada"},
+"observation": {"status": "executed"}},
+{"action": "screenshot",
+"observation": {"image_ref": "s2"}}
+]
+Observe s0
+Name is empty
+Act: click(420, 180)
+Runtime focuses the field
+Observe s1
+Name has keyboard focus
+Act: type_text("Ada")
+Runtime enters the text
+Observe s2
+Name contains "Ada"
+Verify, then report completion
+
+=== PAGE 32 ===
+5 Skills, events, plugins and tools
+32
+•Skill: How should the task be performed?  (Task execution procedure)
+•Event: What happened that triggers processing?
+•Plugin: How are capabilities packaged and delivered?  (Observation and action space 
+extension)
+•Tool: Which operation can the runtime execute?
+Plugin package
+Travel Briefing Skill Tool integrations
+07:00 event Agent decides Runtime executes
+guides provides tools
+starts processing tool call

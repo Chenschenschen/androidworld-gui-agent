@@ -1,0 +1,48 @@
+D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Evidence: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_SystemCopyToClipboard_20261008T062056_139594Z
+Readable trajectory: D:\Personal\TUM_MiM\5th_Semester\Agentic_AI_in_Modern_Business_MGTHN0211\project\runs\trial_SystemCopyToClipboard_20261008T062056_139594Z\trajectory.txt
+Step 1, screenshot, AutoGLM call 1
+Chosen: {'action_type': 'open_app', 'app_name': 'chrome'}
+Step 2, screenshot, AutoGLM call 2
+Chosen: {'action_type': 'click', 'x': 407, 'y': 782}
+Step 3, screenshot, AutoGLM call 3
+Chosen: {'action_type': 'input_text', 'text': 'alex.jordan@example.net', 'clear_text': True}
+Step 4, screenshot, AutoGLM call 4
+Chosen: {'action_type': 'long_press', 'x': 532, 'y': 254}
+Step 5, screenshot, AutoGLM call 5
+Chosen: {'action_type': 'click', 'x': 217, 'y': 396}
+Step 6, screenshot, AutoGLM call 6
+Chosen: {'action_type': 'status', 'goal_status': 'complete', 'reason': "The text 'alex.jordan@example.net' has been successfully copied to the clipboard as requested. Task completed."}
+{
+  "kind": "learning_trial",
+  "task": "SystemCopyToClipboard",
+  "run_id": "trial_SystemCopyToClipboard_20261008T062056_139594Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 6,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v18_observed_digits_optional_copy_chip",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v14_observed_progress",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 6,
+  "stop_reason": "complete",
+  "model_calls_attempted": 6,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 46.36000000000058,
+  "agent_phase_seconds": 39.42200000000594
+}

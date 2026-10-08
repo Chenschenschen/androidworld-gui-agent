@@ -1,0 +1,41 @@
+{
+  "kind": "learning_trial",
+  "task": "CameraTakePhoto",
+  "run_id": "trial_CameraTakePhoto_20261008T192530_107701Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 6,
+  "manual_intervention": false,
+  "evaluation_valid": false,
+  "version": "autoglm_api_v57_camera_gui_labels",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v27_literal_app_finish",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 7,
+  "error": "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 467, in main\n    result = agent.step(task.goal)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\autoglm_agent.py\", line 683, in step\n    raise RuntimeError(\"Target changed twice; no action executed\")\nRuntimeError: Target changed twice; no action executed\n",
+  "error_class": "environment_or_execution_error",
+  "stop_reason": "error",
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "model_calls_attempted": 8,
+  "assessment_calls_attempted": 0,
+  "assessment_errors": [],
+  "gui_actions_dispatched": 6,
+  "screenshot_fallbacks": [],
+  "video_errors": [
+    "Traceback (most recent call last):\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 257, in record_video\n    finish_recording(prefix, process, pid, remote, output / f\"video_{number:03d}.mp4\")\n  File \"D:\\Personal\\TUM_MiM\\5th_Semester\\Agentic_AI_in_Modern_Business_MGTHN0211\\project\\run_task.py\", line 208, in finish_recording\n    raise RuntimeError(\"Recording file missing or empty\")\nRuntimeError: Recording file missing or empty\n"
+  ],
+  "recording_error": "Recording failed or did not finish within its join budget",
+  "verified_agent_success": false,
+  "clean_agent_success": false,
+  "videos": [
+    "video_001.mp4",
+    "video_002.mp4"
+  ],
+  "duration_seconds": 180.42199999999139,
+  "agent_phase_seconds": 177.07799999999406
+}

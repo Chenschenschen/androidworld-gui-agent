@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Camera app is now on the main interface with the shutter button visible at the bottom. To take a photo, I need to tap the shutter button in the center bottom area ([0,841,999,972]) to trigger the photo capture. This action will move the shutter button to the \" capture\" state and may show a new thumbnail,满足任务要求。\n\n\ndo(action=\"Tap\", element=[499,908])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791487863,
+  "id": "20261009033101305e6572553a41c4",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261009033101305e6572553a41c4",
+  "usage": {
+    "completion_tokens": 94,
+    "prompt_tokens": 3105,
+    "prompt_tokens_details": {
+      "cached_tokens": 1865
+    },
+    "total_tokens": 3199
+  },
+  "wall_seconds": 1.6720000000059372
+}

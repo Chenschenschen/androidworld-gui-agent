@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "2",
+    "verify": "The contact creation screen should close, and the saved contact details should be displayed in the main contacts list.",
+    "index": "1"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 379,
+    "y": 211
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

@@ -1,0 +1,11 @@
+{
+  "action": {
+    "command": "finish",
+    "message": "The target file 'my_note.md' was not found in the 'snippets' folder or its parent directories. The task to copy 'john.doe@example.com' to the clipboard could not be completed due to the file not being located."
+  },
+  "no_visible_effect": true,
+  "image_difference": 0.0,
+  "dispatch_returned": false,
+  "visible_fields_after": [],
+  "execute_and_observe_seconds": 3.202999999994063
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see the Internet settings page with a Wi-Fi toggle that is currently OFF (the switch appears to be in the off position). I need to tap on the Wi-Fi toggle to turn it on. The Wi-Fi section is located at coordinates [0,337,999,402].\ndo(action=\"Tap\", element=[499,381])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791441912,
+  "id": "20261008144511333c1024e82b40b4",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008144511333c1024e82b40b4",
+  "usage": {
+    "completion_tokens": 74,
+    "prompt_tokens": 2516,
+    "prompt_tokens_details": {
+      "cached_tokens": 1041
+    },
+    "total_tokens": 2590
+  },
+  "wall_seconds": 1.562999999994645
+}

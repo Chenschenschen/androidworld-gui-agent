@@ -1,0 +1,14 @@
+{
+  "native": {
+    "action": "COMPLETE",
+    "value": "Verified that the contact 'Camila da Silva' with phone number +10433218196 has been created and saved successfully.",
+    "verify": "The contact 'Camila da Silva' is now saved in the Contacts app, and the task is complete."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "Verified that the contact 'Camila da Silva' with phone number +10433218196 has been created and saved successfully."
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

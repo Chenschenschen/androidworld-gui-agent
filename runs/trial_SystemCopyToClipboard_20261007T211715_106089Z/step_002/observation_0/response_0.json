@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "I can see that Chrome has opened and there's a search bar with placeholder text \"Search or type web address\". I need to tap on this search bar to enter text. The search bar is located at coordinates [38,300,960,353] according to the tree structure.\n\nLet me tap on the search bar first.\ndo(action=\"Tap\", element=[38,300,960,353])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407851,
+  "id": "202610080517290f4aa18cdf0246a3",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080517290f4aa18cdf0246a3",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 1856,
+    "prompt_tokens_details": {
+      "cached_tokens": 567
+    },
+    "total_tokens": 1942
+  },
+  "wall_seconds": 1.6559999999954016
+}

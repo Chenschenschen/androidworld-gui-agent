@@ -1,0 +1,14 @@
+{
+  "native": {
+    "action": "COMPLETE",
+    "value": "",
+    "verify": "The task is finished. The contact 'Camila da Silva' with the number '+10433218196' has been successfully saved."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": ""
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

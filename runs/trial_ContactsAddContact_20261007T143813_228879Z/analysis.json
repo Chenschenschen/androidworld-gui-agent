@@ -1,0 +1,8 @@
+{
+  "error_class": "validation_error",
+  "gui_actions_executed": 0,
+  "model_calls_attempted": 2,
+  "root_cause": "Our parser rejected harmless native target-label/confidence annotations.",
+  "change": "Accept short unkeyed labels/numeric annotations as metadata; retain action and argument validation.",
+  "next_trial": "Same task seed and model settings; parser change only."
+}

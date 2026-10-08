@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Phone field is focused and the keyboard is visible. I should type the phone number \"+18126340319\" into this field.\ndo(action=\"Type\", text=\"+18126340319\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438915,
+  "id": "202610081355141d27321147094fc9",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081355141d27321147094fc9",
+  "usage": {
+    "completion_tokens": 44,
+    "prompt_tokens": 3178,
+    "prompt_tokens_details": {
+      "cached_tokens": 1903
+    },
+    "total_tokens": 3222
+  },
+  "wall_seconds": 1.4219999999913853
+}

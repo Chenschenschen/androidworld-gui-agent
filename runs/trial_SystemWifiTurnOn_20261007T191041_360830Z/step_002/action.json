@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "114",
+    "verify": "The 'Network & internet' section should be expanded to show Wi-Fi options.",
+    "point": "500,381"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 914
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

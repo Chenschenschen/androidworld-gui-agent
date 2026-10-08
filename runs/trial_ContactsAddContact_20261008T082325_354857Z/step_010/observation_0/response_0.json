@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "All required fields (First name, Last name, Phone) are filled. Tap the \"Save\" button at the top-right to create the contact.\n\n\ndo(action=\"Tap\", element=[763,87])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447863,
+  "id": "202610081624228f5576114063464b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081624228f5576114063464b",
+  "usage": {
+    "completion_tokens": 43,
+    "prompt_tokens": 3447,
+    "prompt_tokens_details": {
+      "cached_tokens": 2158
+    },
+    "total_tokens": 3490
+  },
+  "wall_seconds": 1.4530000000086147
+}

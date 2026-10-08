@@ -1,0 +1,130 @@
+[
+  {
+    "run_id": "trial_ClockTimerEntry_20261008T060217_720405Z",
+    "summary": {
+      "kind": "learning_trial",
+      "task": "ClockTimerEntry",
+      "run_id": "trial_ClockTimerEntry_20261008T060217_720405Z",
+      "agent_done": true,
+      "verifier": "PASS",
+      "steps": 9,
+      "manual_intervention": false,
+      "evaluation_valid": true,
+      "version": "autoglm_api_v16_native_key_centers_copy_stop",
+      "model": "autoglm-phone-multilingual",
+      "prompt_version": "autoglm_native_en_v12_visible_completion",
+      "observation": "screenshot",
+      "grounding": "coordinates",
+      "step_budget": 12,
+      "time_budget_seconds": 900,
+      "initial_verifier_score": 0.0,
+      "steps_attempted": 9,
+      "stop_reason": "complete",
+      "model_calls_attempted": 9,
+      "verifier_score": 1.0,
+      "failure_class": null,
+      "screenshot_fallbacks": [],
+      "video_errors": [],
+      "verified_agent_success": true,
+      "clean_agent_success": true,
+      "videos": [
+        "video_001.mp4"
+      ],
+      "duration_seconds": 104.70299999999406,
+      "agent_phase_seconds": 101.76599999998871
+    },
+    "missing": [],
+    "json_errors": [],
+    "credential_present": false,
+    "source_matches_batch": true,
+    "calls": 9,
+    "gui_actions": [
+      {
+        "step": "step_001",
+        "command": "do",
+        "action": "Launch",
+        "app": "Clock"
+      },
+      {
+        "step": "step_002",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          928
+        ]
+      },
+      {
+        "step": "step_003",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          499,
+          340
+        ]
+      },
+      {
+        "step": "step_004",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          500,
+          685
+        ]
+      },
+      {
+        "step": "step_005",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          500,
+          685
+        ]
+      },
+      {
+        "step": "step_006",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          570
+        ]
+      },
+      {
+        "step": "step_007",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          500,
+          685
+        ]
+      },
+      {
+        "step": "step_008",
+        "command": "do",
+        "action": "Tap",
+        "element": [
+          245,
+          340
+        ]
+      }
+    ],
+    "model_finish": [
+      {
+        "step": "step_009",
+        "command": "finish",
+        "message": "Timer set to 20:07:01 successfully. Timer is not started, as requested. Task complete."
+      }
+    ],
+    "switch_transitions": [],
+    "videos": [
+      {
+        "file": "video_001.mp4",
+        "frames_decoded": 332,
+        "fps": 3.240929600132414,
+        "duration_seconds": 102.43974444444444
+      }
+    ],
+    "incomplete_steps": []
+  }
+]

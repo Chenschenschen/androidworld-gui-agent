@@ -1,0 +1,33 @@
+{
+  "model": {
+    "name": "gelab-zero-4b-preview:latest",
+    "model": "gelab-zero-4b-preview:latest",
+    "modified_at": "2026-10-05T13:05:05.2918606+02:00",
+    "size": 8890613443,
+    "digest": "6f883cb0e9da2e5847d6df476f2c02fd89a531f127ebef1d41e5ab6dfcd1febd",
+    "details": {
+      "parent_model": "stepfun-ai_GELab-Zero-4B-preview-bf16.gguf",
+      "format": "gguf",
+      "family": "qwen3vl",
+      "families": [
+        "qwen3vl"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "BF16",
+      "context_length": 262144,
+      "embedding_length": 2560,
+      "runner": "ggml"
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "tools"
+    ]
+  },
+  "ollama": {
+    "version": "0.40.0"
+  },
+  "python": "3.11.17 (main, Oct  3 2026, 01:03:09) [MSC v.1944 64 bit (AMD64)]",
+  "android_world": "0.1.0",
+  "android_env": "1.2.3"
+}

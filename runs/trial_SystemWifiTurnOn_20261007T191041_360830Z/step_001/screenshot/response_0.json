@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T19:11:53.8329898Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"154\", \"verify\": \"The screen should display the main page of the Settings application.\",\"point\": \"834,666\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 15870896300,
+  "load_duration": 38522500,
+  "prompt_eval_count": 1620,
+  "prompt_eval_cached_count": 269,
+  "prompt_eval_duration": 12112188000,
+  "eval_count": 43,
+  "eval_duration": 3505077000,
+  "wall_seconds": 17.937999999994645
+}

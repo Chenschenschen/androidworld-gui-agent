@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to copy the text \"alex.jordan@example.net\" to the clipboard. I'm in the Chrome search interface and the page is loading. There's a \"No internet\" message and a \"LOAD PAGE LATER\" button. This is irrelevant to the task of copying text to the clipboard. I should go back to the home screen and try a different approach. I'll tap the back button to exit Chrome.\ndo(action=\"Back\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407971,
+  "id": "202610080519305833e364e5c043de",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080519305833e364e5c043de",
+  "usage": {
+    "completion_tokens": 92,
+    "prompt_tokens": 3385,
+    "prompt_tokens_details": {
+      "cached_tokens": 2050
+    },
+    "total_tokens": 3477
+  },
+  "wall_seconds": 1.7339999999967404
+}

@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:51:58.3680239Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Settings\", \"verify\": \"Settings screen should appear with various options like Network & Internet, etc.\", \"target\": \"sdk_gphone64_x86_64\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7958569100,
+  "load_duration": 17658400,
+  "prompt_eval_count": 1413,
+  "prompt_eval_cached_count": 374,
+  "prompt_eval_duration": 3218231000,
+  "eval_count": 47,
+  "eval_duration": 4559155000,
+  "wall_seconds": 10.031000000002678
+}

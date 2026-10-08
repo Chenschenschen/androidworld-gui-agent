@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The timer currently shows 20h 71m 02s. To set 20 hours, 7 minutes, and 1 second, I need to continue entering digits. The next digit should be \"0\" to move toward the desired value. I'll tap \"0\" on the keypad.\n\n\ndo(action=\"Tap\", element=[499,685])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447600,
+  "id": "2026100816195966b2f1d344ff4436",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100816195966b2f1d344ff4436",
+  "usage": {
+    "completion_tokens": 79,
+    "prompt_tokens": 6352,
+    "prompt_tokens_details": {
+      "cached_tokens": 4405
+    },
+    "total_tokens": 6431
+  },
+  "wall_seconds": 2.1089999999967404
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "case": "on",
+    "image_size": [
+      1080,
+      2400
+    ],
+    "native": {
+      "command": "do",
+      "action": "Tap",
+      "element": [
+        499,
+        379
+      ]
+    },
+    "android": {
+      "action_type": "click",
+      "x": 538,
+      "y": 909
+    },
+    "gui_actions": 0
+  },
+  {
+    "case": "off",
+    "image_size": [
+      1080,
+      2400
+    ],
+    "native": {
+      "command": "do",
+      "action": "Tap",
+      "element": [
+        630,
+        383
+      ]
+    },
+    "android": {
+      "action_type": "click",
+      "x": 680,
+      "y": 919
+    },
+    "gui_actions": 0
+  }
+]

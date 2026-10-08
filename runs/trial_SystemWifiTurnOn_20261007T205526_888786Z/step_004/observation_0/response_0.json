@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Perfect! I can see the Wi-Fi settings page. There's a Wi-Fi toggle switch that is currently OFF (the toggle appears to be in the off position based on the description). I need to tap on this Wi-Fi toggle to turn it on. The Wi-Fi option is located at coordinates [0,337,999,402] based on the tree structure.\ndo(action=\"Tap\", element=[499,379])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791406568,
+  "id": "2026100804560771beb546fd7340fc",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100804560771beb546fd7340fc",
+  "usage": {
+    "completion_tokens": 90,
+    "prompt_tokens": 3064,
+    "prompt_tokens_details": {
+      "cached_tokens": 1172
+    },
+    "total_tokens": 3154
+  },
+  "wall_seconds": 1.7660000000032596
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants to copy the text \"alex.jordan@example.net\" to the clipboard. I'm back at the Chrome home screen. To copy text to the clipboard, I need to type the text into an input field and then copy it. I should tap on the search bar to focus it and then type the text.\ndo(action=\"Tap\", element=[499,326])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407948,
+  "id": "2026100805190608b043f2b99a4087",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100805190608b043f2b99a4087",
+  "usage": {
+    "completion_tokens": 79,
+    "prompt_tokens": 2517,
+    "prompt_tokens_details": {
+      "cached_tokens": 1190
+    },
+    "total_tokens": 2596
+  },
+  "wall_seconds": 1.7030000000013388
+}

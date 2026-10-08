@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"Discount code: SAVE20\" to the clipboard. The current screen shows the Google Chrome app with the text \"Discount code: SAVE20\" entered in the search bar. The next step, according to the clipboard input contract, is to long-press the entered text to select it, which will allow me to copy it. The text is located in the EditText field at [136,62,999,114]. I need to perform a long press on this field to select the text.\ndo(action=\"Long Press\", element=[499,106])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440190,
+  "id": "20261008141628bfb95530c0da466b",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008141628bfb95530c0da466b",
+  "usage": {
+    "completion_tokens": 120,
+    "prompt_tokens": 3283,
+    "prompt_tokens_details": {
+      "cached_tokens": 1533
+    },
+    "total_tokens": 3403
+  },
+  "wall_seconds": 2.014999999999418
+}

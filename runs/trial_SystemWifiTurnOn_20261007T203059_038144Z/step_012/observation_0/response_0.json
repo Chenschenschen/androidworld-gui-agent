@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe Wi-Fi switch is currently OFF (gray track and left thumbs). To turn Wi-Fi on, I need to tap the Wi-Fi switch area. The switch is located in the \"Wi-Fi\" row, which is at coordinates approximately [0,337,999,402]. I will tap this area to enable Wi-Fi.\ndo(action=\"Tap\", element=[499,379])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791405213,
+  "id": "20261008043332b22f220a3d72442d",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008043332b22f220a3d72442d",
+  "usage": {
+    "completion_tokens": 87,
+    "prompt_tokens": 2779,
+    "prompt_tokens_details": {
+      "cached_tokens": 554
+    },
+    "total_tokens": 2866
+  },
+  "wall_seconds": 1.8430000000007567
+}

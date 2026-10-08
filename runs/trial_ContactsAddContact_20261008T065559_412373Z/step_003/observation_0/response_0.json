@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The screen shows a search interface with a keyboard open. To create a new contact, I should go back to the main Contacts screen and look for the \"Create contact\" button. I'll tap the back arrow in the top-left to return to the main contacts list.\ndo(action=\"Tap\", element=[68,87])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791442580,
+  "id": "202610081456185204c780ddd24e79",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081456185204c780ddd24e79",
+  "usage": {
+    "completion_tokens": 66,
+    "prompt_tokens": 2090,
+    "prompt_tokens_details": {
+      "cached_tokens": 784
+    },
+    "total_tokens": 2156
+  },
+  "wall_seconds": 1.6089999999967404
+}

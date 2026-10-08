@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The contact details screen shows \"Hugo Ali\" with the phone number \"+1 275-179-7908\" and \"Added Oct 15, 2023\". The system also displayed \"Hugo Ali saved\" at the bottom. The contact has been successfully created and saved. I will finish the task.\nfinish(message=\"Contact for Hugo Ali with phone number +12751797908 has been successfully created and saved in the Contacts app.\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438865,
+  "id": "2026100813542437773f6450884f8a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100813542437773f6450884f8a",
+  "usage": {
+    "completion_tokens": 95,
+    "prompt_tokens": 3527,
+    "prompt_tokens_details": {
+      "cached_tokens": 2219
+    },
+    "total_tokens": 3622
+  },
+  "wall_seconds": 1.7660000000032596
+}

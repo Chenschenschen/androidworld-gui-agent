@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Timer",
+    "verify": "Timer section should become active.",
+    "target": "1",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 265,
+    "y": 817
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

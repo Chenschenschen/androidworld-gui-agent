@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe task is to copy the text \"Discount code: SAVE20\" to the clipboard. The exact task input confirms this text is available in the clipboard. The current screen is the home screen, and the \"Clipper\" app is not currently open. To copy the clipboard content to the app, I need to first launch the \"Clipper\" app, which is listed as an available app. I will launch the \"Clipper\" app first to access the clipboard content and copy it.\ndo(action=\"Launch\", app=\"Clipper\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791407799,
+  "id": "202610080516378754aa50383847ea",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610080516378754aa50383847ea",
+  "usage": {
+    "completion_tokens": 115,
+    "prompt_tokens": 1608,
+    "prompt_tokens_details": {
+      "cached_tokens": 449
+    },
+    "total_tokens": 1723
+  },
+  "wall_seconds": 2.0310000000026776
+}

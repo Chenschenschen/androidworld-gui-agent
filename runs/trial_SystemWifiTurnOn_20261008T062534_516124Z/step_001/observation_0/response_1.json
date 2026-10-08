@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The user wants me to turn Wi-Fi on. I can see the Settings app icon on the home screen. I need to tap on it to open the Settings app. Looking at the coordinates, the Settings app appears to be at [846,666,946,715] based on the tree structure.\n\nLet me tap on the Settings app to open it.\ndo(action=\"Tap\", element=[846,666,946,715])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440742,
+  "id": "20261008142541c851971f8c33476c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008142541c851971f8c33476c",
+  "usage": {
+    "completion_tokens": 99,
+    "prompt_tokens": 1801,
+    "prompt_tokens_details": {
+      "cached_tokens": 1646
+    },
+    "total_tokens": 1900
+  },
+  "wall_seconds": 1.8909999999887077
+}

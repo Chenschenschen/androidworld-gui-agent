@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Clock app is open and shows the main clock screen. To create a timer, I should switch to the Timer tab by tapping the \"Timer\" button in the bottom navigation bar.\n\n\ndo(action=\"Tap\", element=[499,930])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791447504,
+  "id": "2026100816182391541b2feea64a9e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100816182391541b2feea64a9e",
+  "usage": {
+    "completion_tokens": 55,
+    "prompt_tokens": 2183,
+    "prompt_tokens_details": {
+      "cached_tokens": 816
+    },
+    "total_tokens": 2238
+  },
+  "wall_seconds": 1.687999999994645
+}

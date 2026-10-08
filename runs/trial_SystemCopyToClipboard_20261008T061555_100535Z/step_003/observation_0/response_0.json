@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The task is to copy the text \"Discount code: SAVE20\" to the clipboard. The current screen shows the Google Chrome app with the search bar focused and the keyboard visible. The \"Search or type web address\" EditText field is active, and the keyboard is displayed. According to the clipboard input contract, I need to type the exact text \"Discount code: SAVE20\" into the focused input field without pressing Enter. This will allow me to then long-press the text to select it and copy it. I should type the text now.\ndo(action=\"Type\", text=\"Discount code: SAVE20\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791440181,
+  "id": "2026100814162050407225c1ef4632",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100814162050407225c1ef4632",
+  "usage": {
+    "completion_tokens": 124,
+    "prompt_tokens": 2824,
+    "prompt_tokens_details": {
+      "cached_tokens": 1102
+    },
+    "total_tokens": 2948
+  },
+  "wall_seconds": 2.125
+}

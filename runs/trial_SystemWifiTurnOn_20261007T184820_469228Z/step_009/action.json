@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "When devices are sharing nearby",
+    "verify": "The 'When devices are sharing nearby' toggle should become visible or change state.",
+    "target": "When devices are sharing nearby",
+    "index": "42",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 368,
+    "y": 1819
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

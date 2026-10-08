@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "do",
+    "action": "Launch",
+    "app": "Settings"
+  },
+  "android": {
+    "action_type": "open_app",
+    "app_name": "settings"
+  },
+  "observation_id": "observation_0"
+}

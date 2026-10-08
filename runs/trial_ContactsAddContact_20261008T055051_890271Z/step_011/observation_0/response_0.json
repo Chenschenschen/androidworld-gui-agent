@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The phone number is entered. The contact form now has the required name and number. I should save the contact by tapping the \"Save\" button at the top-right.\ndo(action=\"Tap\", element=[758,87])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438739,
+  "id": "20261008135217614049fe2f20426e",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "20261008135217614049fe2f20426e",
+  "usage": {
+    "completion_tokens": 47,
+    "prompt_tokens": 3518,
+    "prompt_tokens_details": {
+      "cached_tokens": 2225
+    },
+    "total_tokens": 3565
+  },
+  "wall_seconds": 1.4689999999973224
+}

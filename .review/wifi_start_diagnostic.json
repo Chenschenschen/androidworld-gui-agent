@@ -1,0 +1,24 @@
+[
+  {
+    "stage": "after_initialize",
+    "delay_seconds": 0,
+    "score": 0.0
+  },
+  {
+    "stage": "after_initialize",
+    "delay_seconds": 1,
+    "score": 0.0
+  },
+  {
+    "stage": "after_initialize",
+    "delay_seconds": 2,
+    "score": 0.0
+  },
+  {
+    "stage": "after_reset",
+    "score": 1.0
+  },
+  {
+    "wifi_on": "1"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The Simple SMS Messenger app is open and shows \"No stored conversations have been found.\" There is a \"Start a conversation\" link and a floating action button (plus). To begin composing a new message, I should tap the \"Start a conversation\" option.\n\n\ndo(action=\"Tap\", element=[498,203])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791464851,
+  "id": "202610082107298c8010a65c9743c6",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082107298c8010a65c9743c6",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 2758,
+    "prompt_tokens_details": {
+      "cached_tokens": 1421
+    },
+    "total_tokens": 2827
+  },
+  "wall_seconds": 1.6720000000059372
+}

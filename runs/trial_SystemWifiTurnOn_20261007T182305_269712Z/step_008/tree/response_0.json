@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T18:25:19.6508308Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"Settings\", \"verify\": \"The Settings app opens, displaying the main configuration menu with various options like 'Network & internet', 'Connected devices', etc.\",\"target\": \"Settings\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5635041400,
+  "load_duration": 16559900,
+  "prompt_eval_count": 1385,
+  "prompt_eval_cached_count": 753,
+  "prompt_eval_duration": 919945000,
+  "eval_count": 48,
+  "eval_duration": 4547644000,
+  "wall_seconds": 7.6709999999984575
+}

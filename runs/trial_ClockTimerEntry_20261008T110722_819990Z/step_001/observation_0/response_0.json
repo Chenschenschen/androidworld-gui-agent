@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "\nThe Clock app icon is visible on the home screen at coordinates [561,514,705,615]. To create a timer, I should first open the Clock app.\n\n\ndo(action=\"Tap\", element=[616,540])\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791457649,
+  "id": "202610081907286c06ae4a9ff94353",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081907286c06ae4a9ff94353",
+  "usage": {
+    "completion_tokens": 58,
+    "prompt_tokens": 1872,
+    "prompt_tokens_details": {
+      "cached_tokens": 408
+    },
+    "total_tokens": 1930
+  },
+  "wall_seconds": 2.110000000000582
+}

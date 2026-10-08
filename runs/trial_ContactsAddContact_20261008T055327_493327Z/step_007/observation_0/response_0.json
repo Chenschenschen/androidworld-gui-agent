@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The name fields are filled. Next I need to enter the phone number. I'll scroll down to reveal the Phone field, then tap it to focus.\ndo(action=\"Swipe\", start=[499,570], end=[499,350])",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791438845,
+  "id": "202610081354031cdc67f58ad744d3",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081354031cdc67f58ad744d3",
+  "usage": {
+    "completion_tokens": 52,
+    "prompt_tokens": 2778,
+    "prompt_tokens_details": {
+      "cached_tokens": 1502
+    },
+    "total_tokens": 2830
+  },
+  "wall_seconds": 1.5
+}

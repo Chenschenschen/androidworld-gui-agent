@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T14:28:22.7348695Z",
+  "message": {
+    "role": "assistant",
+    "content": "verify:Android System notification: Serial console enabled\tnote:Select the settings app icon on the home screen. The Settings app icon is the last visible item on the list, located at the bottom of the screen.\taction:CLICK\tpoint:813,1515\n\nexplain:The Settings app icon is at the bottom of the screen, and clicking it will open the Settings application.\taction:CLICK\tpoint:813,1515"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 64294800600,
+  "load_duration": 28528500,
+  "prompt_eval_count": 2042,
+  "prompt_eval_cached_count": 3,
+  "prompt_eval_duration": 47525163000,
+  "eval_count": 93,
+  "eval_duration": 16671051000,
+  "wall_seconds": 66.375
+}

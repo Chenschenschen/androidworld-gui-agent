@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": " \nI'll type the required email address into the focused search bar to proceed with the task.\n\n\ndo(action=\"Type\", text=\"john.doe@example.com\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791446936,
+  "id": "202610081608557b8f230a0cc94f57",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610081608557b8f230a0cc94f57",
+  "usage": {
+    "completion_tokens": 37,
+    "prompt_tokens": 3244,
+    "prompt_tokens_details": {
+      "cached_tokens": 1386
+    },
+    "total_tokens": 3281
+  },
+  "wall_seconds": 1.5
+}

@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The Contacts app should open, showing a list of contacts.",
+    "index": "10"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 666,
+    "y": 987
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The screen now shows a small thumbnail preview in the bottom-right corner, indicating a photo has been captured. This满足s the task's completion condition of taking one photo. I should finish the task now.\n\n\nfinish(message=\"Photo taken successfully.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791487253,
+  "id": "2026100903205244ff4792cc794bce",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100903205244ff4792cc794bce",
+  "usage": {
+    "completion_tokens": 53,
+    "prompt_tokens": 3553,
+    "prompt_tokens_details": {
+      "cached_tokens": 1867
+    },
+    "total_tokens": 3606
+  },
+  "wall_seconds": 1.610000000000582
+}

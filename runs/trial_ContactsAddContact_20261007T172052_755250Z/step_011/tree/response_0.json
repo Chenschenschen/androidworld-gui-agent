@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:23:37.498338Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"CLICK\", \"value\": \"No results\", \"verify\": \"The 'No results' screen should open.\",\"target\": \"No results\"}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 3755244400,
+  "load_duration": 17951900,
+  "prompt_eval_count": 1387,
+  "prompt_eval_cached_count": 441,
+  "prompt_eval_duration": 966993000,
+  "eval_count": 34,
+  "eval_duration": 2687093000,
+  "wall_seconds": 5.78099999999904
+}

@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "08:30",
+    "verify": "The alarm at 8:30 AM should open for editing.",
+    "target": "08:30",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 294,
+    "y": 450
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

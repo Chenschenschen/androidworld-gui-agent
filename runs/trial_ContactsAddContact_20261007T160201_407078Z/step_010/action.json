@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "Save",
+    "verify": "The contact creation screen should close, and the app should navigate to the contact's details page or the main contacts list, confirming the contact has been saved.",
+    "index": "2"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 838,
+    "y": 211
+  },
+  "observation": "tree",
+  "grounding": "indices"
+}

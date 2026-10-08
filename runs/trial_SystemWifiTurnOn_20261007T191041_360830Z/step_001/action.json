@@ -1,0 +1,15 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "154",
+    "verify": "The screen should display the main page of the Settings application.",
+    "point": "834,666"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 901,
+    "y": 1598
+  },
+  "observation": "screenshot",
+  "grounding": "coordinates"
+}

@@ -21,7 +21,7 @@ PROJECT = Path(__file__).resolve().parent
 
 def source_hashes():
     """Fingerprint the agent contract so a batch cannot silently mix versions."""
-    names = ("run_task.py", "autoglm_agent.py", "instructions/autoglm.md", "trajectory.py", "android_compat.py")
+    names = ("run_task.py", "autoglm_agent.py", "instructions/autoglm.md", "instructions/assessment.md", "trajectory.py", "android_compat.py")
     return {name: hashlib.sha256((PROJECT / name).read_bytes()).hexdigest() for name in names}
 
 

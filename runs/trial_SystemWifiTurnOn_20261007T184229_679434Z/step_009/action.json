@@ -1,0 +1,17 @@
+{
+  "native": {
+    "action": "CLICK",
+    "value": "About 0 notifications per week",
+    "verify": "The screen should switch to the Notifications settings menu.",
+    "target": "About 0 notifications per week",
+    "index": "27",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 345,
+    "y": 1432
+  },
+  "observation": "tree",
+  "grounding": "unique_visible_labels"
+}

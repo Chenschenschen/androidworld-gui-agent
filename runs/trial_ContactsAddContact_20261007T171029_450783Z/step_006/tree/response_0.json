@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:12:13.7087824Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"TYPE\", \"value\": \"+10433218196\", \"verify\": \"The phone number '+10433218196' should appear in the 'Phone' field.\", \"index\": 10}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8257943900,
+  "load_duration": 16157000,
+  "prompt_eval_count": 1779,
+  "prompt_eval_cached_count": 374,
+  "prompt_eval_duration": 1689571000,
+  "eval_count": 59,
+  "eval_duration": 6342312000,
+  "wall_seconds": 10.328000000001339
+}

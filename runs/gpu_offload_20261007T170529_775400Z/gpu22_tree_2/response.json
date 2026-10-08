@@ -1,0 +1,18 @@
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "created_at": "2026-10-07T17:07:00.6446255Z",
+  "message": {
+    "role": "assistant",
+    "content": "{\"action\": \"TYPE\", \"value\": \"Camila da Silva\", \"verify\": \"The name 'Camila da Silva' should be visible in the name fields.\",\"index\": 7}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 4580932300,
+  "load_duration": 18660400,
+  "prompt_eval_count": 2025,
+  "prompt_eval_cached_count": 2024,
+  "prompt_eval_duration": 123403000,
+  "eval_count": 42,
+  "eval_duration": 4425265000,
+  "wall_seconds": 6.625
+}

@@ -1,0 +1,1324 @@
+
+--- 2026-10-07T17:20:52.756251+00:00 | RUN | RUN START ---
+{
+  "task": "ContactsAddContact",
+  "config": {
+    "version": "learning_label_grounding_v4_gpu22",
+    "prompt_version": "gelab_json_labels_v4",
+    "action_format": "json_schema",
+    "observation": "tree_first",
+    "prompt_examples": false,
+    "max_screenshot_fallbacks": 2,
+    "model": "gelab-zero-4b-preview:latest",
+    "options": {
+      "temperature": 1,
+      "top_k": 20,
+      "top_p": 0.95,
+      "num_ctx": 4096,
+      "num_gpu": 22,
+      "num_predict": 256,
+      "seed": 42
+    },
+    "max_steps": 12,
+    "max_seconds": 900,
+    "request_timeout": 120,
+    "recent_actions": 3,
+    "invalid_reply_corrections": 1,
+    "note": "Retained label grounding + field-targeted TYPE after an official Contacts PASS. GPU22 reached about 78% dedicated memory and modestly improved latency in a separate fixed-request benchmark. Incremental readable/JSONL trajectory; 12 steps and 900s remain bounded.",
+    "contact_guidance": true,
+    "targeted_type": true,
+    "label_grounding": true,
+    "task_seed": 42
+  }
+}
+
+--- 2026-10-07T17:21:13.756759+00:00 | RUN | OFFICIAL TASK INPUT ---
+{
+  "goal": "Create a new contact for Camila da Silva. Their number is +10433218196.",
+  "parameters": {
+    "name": "Camila da Silva",
+    "number": "+10433218196"
+  },
+  "task_seed": 42,
+  "model_metadata": "versions.json"
+}
+
+--- 2026-10-07T17:21:17.432752+00:00 | RUN | INITIAL VERIFIER ---
+{
+  "score": 0.0
+}
+
+--- 2026-10-07T17:21:19.492869+00:00 | STEP 001 | OBSERVATION ---
+{
+  "screenshot": "step_001/before.png",
+  "tree": "step_001/tree.json"
+}
+{"index":0,"is_scrollable":true}
+{"index":1,"content_description":"Home"}
+{"index":2,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":3,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":4,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":5,"text":"Gmail","content_description":"Predicted app: Gmail","is_clickable":true}
+{"index":6,"content_description":"Search","is_clickable":true}
+{"index":7,"text":"Sun, Oct 15","content_description":"Sun, Oct 15","is_clickable":true}
+{"index":8,"text":"Camera","content_description":"Camera","is_clickable":true}
+{"index":9,"text":"Files","content_description":"Files","is_clickable":true}
+{"index":10,"text":"Contacts","content_description":"Contacts","is_clickable":true}
+{"index":11,"text":"Calendar","content_description":"Calendar","is_clickable":true}
+{"index":12,"text":"Phone","content_description":"Phone","is_clickable":true}
+{"index":13,"text":"Maps","content_description":"Maps","is_clickable":true}
+{"index":14,"text":"Clock","content_description":"Clock","is_clickable":true}
+{"index":15,"text":"Chrome","content_description":"Chrome","is_clickable":true}
+{"index":16,"text":"Messages","content_description":"Messages","is_clickable":true}
+{"index":17,"text":"Gmail","content_description":"Gmail","is_clickable":true}
+{"index":18,"text":"Photos","content_description":"Photos","is_clickable":true}
+{"index":19,"text":"Settings","content_description":"Settings","is_clickable":true}
+{"index":20,"content_description":"Google app","is_clickable":true}
+{"index":21,"content_description":"Voice search","is_clickable":true}
+{"index":22,"content_description":"Google Lens","is_clickable":true}
+{"index":23,"text":"15:34","content_description":"17:34"}
+{"index":24,"content_description":"Android System notification: Serial console enabled"}
+{"index":25,"content_description":"Wifi signal full.,No internet"}
+{"index":26,"content_description":"Phone three bars."}
+{"index":27,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:21:19.494871+00:00 | STEP 001 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_001/tree/request_0.json",
+  "call": 1
+}
+
+--- 2026-10-07T17:21:33.691215+00:00 | STEP 001 | MODEL REPLY ---
+{"action": "CLICK", "value": "Contacts", "verify": "The Contacts app interface should be displayed, typically showing a list of existing contacts.","target": "Contacts"}
+
+--- 2026-10-07T17:21:33.693347+00:00 | STEP 001 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 14.203000000001339,
+  "load_seconds": 7.7043606,
+  "prompt_seconds": 1.257934,
+  "generation_seconds": 3.163639,
+  "output_tokens": 39
+}
+
+--- 2026-10-07T17:21:33.694403+00:00 | STEP 001 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The Contacts app interface should be displayed, typically showing a list of existing contacts.",
+    "target": "Contacts",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 666,
+    "y": 987
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:21:33.694926+00:00 | STEP 001 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 666,
+    "y": 987
+  }
+}
+
+--- 2026-10-07T17:21:37.086200+00:00 | STEP 001 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The Contacts app interface should be displayed, typically showing a list of existing contacts.",
+    "target": "Contacts",
+    "index": "10",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Contacts",
+    "hint_text": null,
+    "content_description": "Contacts"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 666,
+    "y": 987
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_001/after.png",
+  "execute_and_observe_seconds": 3.3909999999996217
+}
+
+--- 2026-10-07T17:21:37.760238+00:00 | STEP 002 | OBSERVATION ---
+{
+  "screenshot": "step_002/before.png",
+  "tree": "step_002/tree.json"
+}
+{"index":0,"is_clickable":true}
+{"index":1,"content_description":"Create contact","is_clickable":true}
+{"index":2,"content_description":"Contacts"}
+{"index":3,"content_description":"Highlights","is_clickable":true}
+{"index":4,"content_description":"Fix & manage","is_clickable":true}
+{"index":5,"is_scrollable":true}
+{"index":6,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":7,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":8,"text":"No contacts yet"}
+{"index":9,"text":"Phone contacts","is_clickable":true,"is_checked":false}
+{"index":10,"text":"Email contacts","is_clickable":true,"is_checked":false}
+{"index":11,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":12,"content_description":"Now you can find Settings and Help & feedback here\nOpen account and settings.","is_clickable":true}
+{"index":13,"text":"Now you can find Settings and Help & feedback here"}
+{"index":14,"text":"15:34","content_description":"17:34"}
+{"index":15,"content_description":"Android System notification: Serial console enabled"}
+{"index":16,"content_description":"Wifi signal full.,No internet"}
+{"index":17,"content_description":"Phone three bars."}
+{"index":18,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:21:37.762746+00:00 | STEP 002 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_002/tree/request_0.json",
+  "call": 2
+}
+
+--- 2026-10-07T17:21:44.638798+00:00 | STEP 002 | MODEL REPLY ---
+{"action": "CLICK", "value": "Phone contacts", "verify": "The 'Phone contacts' screen should open, showing existing contacts or an option to add a new one.", "target": "Phone contacts"}
+
+--- 2026-10-07T17:21:44.638798+00:00 | STEP 002 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.875,
+  "load_seconds": 0.016839,
+  "prompt_seconds": 0.964422,
+  "generation_seconds": 3.743082,
+  "output_tokens": 46
+}
+
+--- 2026-10-07T17:21:44.639879+00:00 | STEP 002 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Phone contacts",
+    "verify": "The 'Phone contacts' screen should open, showing existing contacts or an option to add a new one.",
+    "target": "Phone contacts",
+    "index": "9",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 262,
+    "y": 371
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:21:44.640945+00:00 | STEP 002 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 262,
+    "y": 371
+  }
+}
+
+--- 2026-10-07T17:21:46.008618+00:00 | STEP 002 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Phone contacts",
+    "verify": "The 'Phone contacts' screen should open, showing existing contacts or an option to add a new one.",
+    "target": "Phone contacts",
+    "index": "9",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Phone contacts",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 262,
+    "y": 371
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_002/after.png",
+  "execute_and_observe_seconds": 1.360000000000582
+}
+
+--- 2026-10-07T17:21:46.671987+00:00 | STEP 003 | OBSERVATION ---
+{
+  "screenshot": "step_003/before.png",
+  "tree": "step_003/tree.json"
+}
+{"index":0,"is_clickable":true}
+{"index":1,"content_description":"Create contact","is_clickable":true}
+{"index":2,"content_description":"Contacts"}
+{"index":3,"content_description":"Highlights","is_clickable":true}
+{"index":4,"content_description":"Fix & manage","is_clickable":true}
+{"index":5,"is_scrollable":true}
+{"index":6,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":7,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":8,"text":"No contacts yet"}
+{"index":9,"text":"Phone contacts","is_clickable":true,"is_checked":false}
+{"index":10,"text":"Email contacts","is_clickable":true,"is_checked":false}
+{"index":11,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":12,"content_description":"Now you can find Settings and Help & feedback here\nOpen account and settings.","is_clickable":true}
+{"index":13,"text":"Now you can find Settings and Help & feedback here"}
+{"index":14,"text":"15:34","content_description":"17:34"}
+{"index":15,"content_description":"Android System notification: Serial console enabled"}
+{"index":16,"content_description":"Wifi signal full.,No internet"}
+{"index":17,"content_description":"Phone three bars."}
+{"index":18,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:21:46.673992+00:00 | STEP 003 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_003/tree/request_0.json",
+  "call": 3
+}
+
+--- 2026-10-07T17:21:53.133645+00:00 | STEP 003 | MODEL REPLY ---
+{"action": "CLICK", "value": "No contacts yet", "verify": "The 'New contact' screen should appear, showing input fields for contact details.", "target": "No contacts yet"}
+
+--- 2026-10-07T17:21:53.133645+00:00 | STEP 003 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.452999999997701,
+  "load_seconds": 0.0166027,
+  "prompt_seconds": 0.881107,
+  "generation_seconds": 3.515597,
+  "output_tokens": 43
+}
+
+--- 2026-10-07T17:21:53.134691+00:00 | STEP 003 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "No contacts yet",
+    "verify": "The 'New contact' screen should appear, showing input fields for contact details.",
+    "target": "No contacts yet",
+    "index": "8",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1526
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:21:53.134691+00:00 | STEP 003 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1526
+  }
+}
+
+--- 2026-10-07T17:21:56.522250+00:00 | STEP 003 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "No contacts yet",
+    "verify": "The 'New contact' screen should appear, showing input fields for contact details.",
+    "target": "No contacts yet",
+    "index": "8",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "No contacts yet",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1526
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_003/after.png",
+  "execute_and_observe_seconds": 3.389999999999418
+}
+
+--- 2026-10-07T17:21:57.194214+00:00 | STEP 004 | OBSERVATION ---
+{
+  "screenshot": "step_004/before.png",
+  "tree": "step_004/tree.json"
+}
+{"index":0,"content_description":"Create contact","is_clickable":true}
+{"index":1,"content_description":"Contacts"}
+{"index":2,"content_description":"Highlights","is_clickable":true}
+{"index":3,"content_description":"Fix & manage","is_clickable":true}
+{"index":4,"is_scrollable":true}
+{"index":5,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":6,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":7,"text":"No contacts yet"}
+{"index":8,"text":"Phone contacts","is_clickable":true,"is_checked":false}
+{"index":9,"text":"Email contacts","is_clickable":true,"is_checked":false}
+{"index":10,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":11,"text":"15:34","content_description":"17:34"}
+{"index":12,"content_description":"Android System notification: Serial console enabled"}
+{"index":13,"content_description":"Wifi signal full.,No internet"}
+{"index":14,"content_description":"Phone signal full."}
+{"index":15,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:21:57.195219+00:00 | STEP 004 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_004/tree/request_0.json",
+  "call": 4
+}
+
+--- 2026-10-07T17:22:04.508640+00:00 | STEP 004 | MODEL REPLY ---
+{"action": "CLICK", "value": "Phone contacts", "verify": "The 'Phone contacts' screen should open, showing existing contacts or an option to add a new one.", "target": "Phone contacts"}
+
+--- 2026-10-07T17:22:04.508640+00:00 | STEP 004 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.312999999998283,
+  "load_seconds": 0.0161155,
+  "prompt_seconds": 1.087349,
+  "generation_seconds": 4.028531,
+  "output_tokens": 46
+}
+
+--- 2026-10-07T17:22:04.509164+00:00 | STEP 004 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Phone contacts",
+    "verify": "The 'Phone contacts' screen should open, showing existing contacts or an option to add a new one.",
+    "target": "Phone contacts",
+    "index": "8",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 262,
+    "y": 371
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:22:04.510206+00:00 | STEP 004 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 262,
+    "y": 371
+  }
+}
+
+--- 2026-10-07T17:22:06.896096+00:00 | STEP 004 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Phone contacts",
+    "verify": "The 'Phone contacts' screen should open, showing existing contacts or an option to add a new one.",
+    "target": "Phone contacts",
+    "index": "8",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Phone contacts",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 262,
+    "y": 371
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_004/after.png",
+  "execute_and_observe_seconds": 2.389999999999418
+}
+
+--- 2026-10-07T17:22:07.588691+00:00 | STEP 005 | OBSERVATION ---
+{
+  "screenshot": "step_005/before.png",
+  "tree": "step_005/tree.json"
+}
+{"index":0,"content_description":"Create contact","is_clickable":true}
+{"index":1,"content_description":"Contacts"}
+{"index":2,"content_description":"Highlights","is_clickable":true}
+{"index":3,"content_description":"Fix & manage","is_clickable":true}
+{"index":4,"is_scrollable":true}
+{"index":5,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":6,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":7,"text":"No results"}
+{"index":8,"text":"Phone contacts","is_clickable":true,"is_checked":true}
+{"index":9,"text":"Email contacts","is_clickable":true,"is_checked":false}
+{"index":10,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":11,"text":"15:34","content_description":"17:34"}
+{"index":12,"content_description":"Android System notification: Serial console enabled"}
+{"index":13,"content_description":"Wifi signal full.,No internet"}
+{"index":14,"content_description":"Phone signal full."}
+{"index":15,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:22:07.590688+00:00 | STEP 005 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_005/tree/request_0.json",
+  "call": 5
+}
+
+--- 2026-10-07T17:22:13.894850+00:00 | STEP 005 | MODEL REPLY ---
+{"action": "CLICK", "value": "Email contacts", "verify": "The 'Email contacts' screen should open.", "target": "Email contacts"}
+
+--- 2026-10-07T17:22:13.894850+00:00 | STEP 005 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.311999999998079,
+  "load_seconds": 0.0153571,
+  "prompt_seconds": 1.059394,
+  "generation_seconds": 3.100404,
+  "output_tokens": 34
+}
+
+--- 2026-10-07T17:22:13.896113+00:00 | STEP 005 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Email contacts",
+    "verify": "The 'Email contacts' screen should open.",
+    "target": "Email contacts",
+    "index": "9",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 762,
+    "y": 371
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:22:13.896651+00:00 | STEP 005 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 762,
+    "y": 371
+  }
+}
+
+--- 2026-10-07T17:22:16.836213+00:00 | STEP 005 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Email contacts",
+    "verify": "The 'Email contacts' screen should open.",
+    "target": "Email contacts",
+    "index": "9",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "Email contacts",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 762,
+    "y": 371
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_005/after.png",
+  "execute_and_observe_seconds": 2.938000000001921
+}
+
+--- 2026-10-07T17:22:17.523054+00:00 | STEP 006 | OBSERVATION ---
+{
+  "screenshot": "step_006/before.png",
+  "tree": "step_006/tree.json"
+}
+{"index":0,"content_description":"Create contact","is_clickable":true}
+{"index":1,"content_description":"Contacts"}
+{"index":2,"content_description":"Highlights","is_clickable":true}
+{"index":3,"content_description":"Fix & manage","is_clickable":true}
+{"index":4,"is_scrollable":true}
+{"index":5,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":6,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":7,"text":"No results"}
+{"index":8,"text":"Phone contacts","is_clickable":true,"is_checked":true}
+{"index":9,"text":"Email contacts","is_clickable":true,"is_checked":true}
+{"index":10,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":11,"text":"15:35","content_description":"17:35"}
+{"index":12,"content_description":"Android System notification: Serial console enabled"}
+{"index":13,"content_description":"Wifi signal full.,No internet"}
+{"index":14,"content_description":"Phone signal full."}
+{"index":15,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:22:17.524562+00:00 | STEP 006 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_006/tree/request_0.json",
+  "call": 6
+}
+
+--- 2026-10-07T17:22:24.864545+00:00 | STEP 006 | MODEL REPLY ---
+{"action": "CLICK", "value": "Fix & manage", "verify": "The 'Fix & manage' screen should open, providing options to edit or manage contacts.", "target": "Fix & manage"}
+
+--- 2026-10-07T17:22:24.865071+00:00 | STEP 006 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 7.34400000000096,
+  "load_seconds": 0.015789,
+  "prompt_seconds": 1.366614,
+  "generation_seconds": 3.78544,
+  "output_tokens": 45
+}
+
+--- 2026-10-07T17:22:24.865594+00:00 | STEP 006 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Fix & manage",
+    "verify": "The 'Fix & manage' screen should open, providing options to edit or manage contacts.",
+    "target": "Fix & manage",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 900,
+    "y": 2232
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:22:24.866115+00:00 | STEP 006 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 900,
+    "y": 2232
+  }
+}
+
+--- 2026-10-07T17:22:27.216965+00:00 | STEP 006 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Fix & manage",
+    "verify": "The 'Fix & manage' screen should open, providing options to edit or manage contacts.",
+    "target": "Fix & manage",
+    "index": "3",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": null,
+    "hint_text": null,
+    "content_description": "Fix & manage"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 900,
+    "y": 2232
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_006/after.png",
+  "execute_and_observe_seconds": 2.3440000000009604
+}
+
+--- 2026-10-07T17:22:27.868215+00:00 | STEP 007 | OBSERVATION ---
+{
+  "screenshot": "step_007/before.png",
+  "tree": "step_007/tree.json"
+}
+{"index":0,"is_scrollable":true}
+{"index":1,"content_description":"Contacts","is_clickable":true}
+{"index":2,"content_description":"Highlights","is_clickable":true}
+{"index":3,"content_description":"Fix & manage"}
+{"index":4,"content_description":"Fix & manage"}
+{"index":5,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":6,"text":"Other tools"}
+{"index":7,"text":"Import from SIM"}
+{"index":8,"text":"Import from file"}
+{"index":9,"text":"Settings"}
+{"index":10,"text":"Blocked numbers"}
+{"index":11,"text":"15:35","content_description":"17:35"}
+{"index":12,"content_description":"Android System notification: Serial console enabled"}
+{"index":13,"content_description":"Wifi signal full.,No internet"}
+{"index":14,"content_description":"Phone signal full."}
+{"index":15,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:22:27.870215+00:00 | STEP 007 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_007/tree/request_0.json",
+  "call": 7
+}
+
+--- 2026-10-07T17:22:34.636309+00:00 | STEP 007 | MODEL REPLY ---
+{"action": "CLICK", "value": "Fix & manage", "verify": "The 'Fix & manage' screen should open, providing options to edit or manage contacts.", "target": "Fix & manage"}
+
+--- 2026-10-07T17:22:34.636831+00:00 | STEP 007 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.765999999999622,
+  "load_seconds": 0.0168587,
+  "prompt_seconds": 1.030304,
+  "generation_seconds": 3.555168,
+  "output_tokens": 45
+}
+
+--- 2026-10-07T17:22:34.637350+00:00 | STEP 007 | VALIDATION ERROR ---
+{
+  "error": "Target label 'Fix & manage' matches 2 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T17:22:34.638394+00:00 | STEP 007 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_007/tree/request_1.json",
+  "call": 8
+}
+
+--- 2026-10-07T17:22:40.726535+00:00 | STEP 007 | MODEL REPLY ---
+{"action": "CLICK", "value": "Fix & manage\n", "verify": "The 'Fix & manage' screen should open, providing options to edit or manage contacts.", "target": "Fix & manage"}
+
+--- 2026-10-07T17:22:40.726535+00:00 | STEP 007 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.09400000000096,
+  "load_seconds": 0.0155463,
+  "prompt_seconds": 0.417055,
+  "generation_seconds": 3.61162,
+  "output_tokens": 46
+}
+
+--- 2026-10-07T17:22:40.733354+00:00 | STEP 007 | VALIDATION ERROR ---
+{
+  "error": "Target label 'Fix & manage' matches 2 controls; use an unambiguous visible label",
+  "executed": false
+}
+
+--- 2026-10-07T17:22:40.734377+00:00 | STEP 007 | SCREENSHOT FALLBACK ---
+{
+  "step": 7,
+  "reason": "Tree/interface validation failed: Target label 'Fix & manage' matches 2 controls; use an unambiguous visible label",
+  "from": "tree",
+  "to": "screenshot"
+}
+
+--- 2026-10-07T17:22:41.327516+00:00 | STEP 007 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "screenshot",
+  "context_and_settings": "step_007/screenshot/request_0.json",
+  "call": 9
+}
+
+--- 2026-10-07T17:23:01.537380+00:00 | STEP 007 | MODEL REPLY ---
+{"action": "CLICK", "value": "Contacts", "verify": "The 'Contacts' screen should open, allowing for managing existing contacts or creating a new one.","point": "171,922"}
+
+--- 2026-10-07T17:23:01.537380+00:00 | STEP 007 | MODEL TIMING ---
+{
+  "mode": "screenshot",
+  "wall_seconds": 20.20300000000134,
+  "load_seconds": 0.034485,
+  "prompt_seconds": 13.808744,
+  "generation_seconds": 4.176243,
+  "output_tokens": 48
+}
+
+--- 2026-10-07T17:23:01.544703+00:00 | STEP 007 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The 'Contacts' screen should open, allowing for managing existing contacts or creating a new one.",
+    "point": "171,922"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 185,
+    "y": 2213
+  },
+  "observation": "screenshot",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:23:01.546280+00:00 | STEP 007 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 185,
+    "y": 2213
+  }
+}
+
+--- 2026-10-07T17:23:04.409717+00:00 | STEP 007 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The 'Contacts' screen should open, allowing for managing existing contacts or creating a new one.",
+    "point": "171,922"
+  },
+  "target": null,
+  "android": {
+    "action_type": "click",
+    "x": 185,
+    "y": 2213
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_007/after.png",
+  "execute_and_observe_seconds": 2.875
+}
+
+--- 2026-10-07T17:23:05.073512+00:00 | STEP 008 | OBSERVATION ---
+{
+  "screenshot": "step_008/before.png",
+  "tree": "step_008/tree.json"
+}
+{"index":0,"content_description":"Create contact","is_clickable":true}
+{"index":1,"content_description":"Contacts"}
+{"index":2,"content_description":"Highlights","is_clickable":true}
+{"index":3,"content_description":"Fix & manage","is_clickable":true}
+{"index":4,"is_scrollable":true}
+{"index":5,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":6,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":7,"text":"No results"}
+{"index":8,"text":"Phone contacts","is_clickable":true,"is_checked":true}
+{"index":9,"text":"Email contacts","is_clickable":true,"is_checked":true}
+{"index":10,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":11,"text":"15:35","content_description":"17:35"}
+{"index":12,"content_description":"Android System notification: Serial console enabled"}
+{"index":13,"content_description":"Wifi signal full.,No internet"}
+{"index":14,"content_description":"Phone signal full."}
+{"index":15,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:23:05.074516+00:00 | STEP 008 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_008/tree/request_0.json",
+  "call": 10
+}
+
+--- 2026-10-07T17:23:11.987469+00:00 | STEP 008 | MODEL REPLY ---
+{"action": "CLICK", "value": "Battery 100 percent.", "verify": "The 'Battery 100 percent.' screen should open.", "target": "Battery 100 percent."}
+
+--- 2026-10-07T17:23:11.987469+00:00 | STEP 008 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.921999999998661,
+  "load_seconds": 0.0155022,
+  "prompt_seconds": 0.846365,
+  "generation_seconds": 3.772128,
+  "output_tokens": 47
+}
+
+--- 2026-10-07T17:23:11.988499+00:00 | STEP 008 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Battery 100 percent.",
+    "verify": "The 'Battery 100 percent.' screen should open.",
+    "target": "Battery 100 percent.",
+    "index": "15",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 996,
+    "y": 64
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:23:11.989021+00:00 | STEP 008 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 996,
+    "y": 64
+  }
+}
+
+--- 2026-10-07T17:23:13.336647+00:00 | STEP 008 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Battery 100 percent.",
+    "verify": "The 'Battery 100 percent.' screen should open.",
+    "target": "Battery 100 percent.",
+    "index": "15",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": null,
+    "hint_text": null,
+    "content_description": "Battery 100 percent."
+  },
+  "android": {
+    "action_type": "click",
+    "x": 996,
+    "y": 64
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_008/after.png",
+  "execute_and_observe_seconds": 1.3440000000009604
+}
+
+--- 2026-10-07T17:23:13.991210+00:00 | STEP 009 | OBSERVATION ---
+{
+  "screenshot": "step_009/before.png",
+  "tree": "step_009/tree.json"
+}
+{"index":0,"content_description":"Create contact","is_clickable":true}
+{"index":1,"content_description":"Contacts"}
+{"index":2,"content_description":"Highlights","is_clickable":true}
+{"index":3,"content_description":"Fix & manage","is_clickable":true}
+{"index":4,"is_scrollable":true}
+{"index":5,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":6,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":7,"text":"No results"}
+{"index":8,"text":"Phone contacts","is_clickable":true,"is_checked":true}
+{"index":9,"text":"Email contacts","is_clickable":true,"is_checked":true}
+{"index":10,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":11,"text":"15:35","content_description":"17:35"}
+{"index":12,"content_description":"Android System notification: Serial console enabled"}
+{"index":13,"content_description":"Wifi signal full.,No internet"}
+{"index":14,"content_description":"Phone signal full."}
+{"index":15,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:23:13.992210+00:00 | STEP 009 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_009/tree/request_0.json",
+  "call": 11
+}
+
+--- 2026-10-07T17:23:20.553482+00:00 | STEP 009 | MODEL REPLY ---
+{"action": "CLICK", "value": "Contacts", "verify": "The 'Contacts' application should open, displaying existing contacts and providing an option to create a new one.", "target": "Contacts"}
+
+--- 2026-10-07T17:23:20.553993+00:00 | STEP 009 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.563000000001921,
+  "load_seconds": 0.0181486,
+  "prompt_seconds": 0.983902,
+  "generation_seconds": 3.452429,
+  "output_tokens": 44
+}
+
+--- 2026-10-07T17:23:20.554504+00:00 | STEP 009 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The 'Contacts' application should open, displaying existing contacts and providing an option to create a new one.",
+    "target": "Contacts",
+    "index": "1",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 180,
+    "y": 2232
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:23:20.555028+00:00 | STEP 009 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 180,
+    "y": 2232
+  }
+}
+
+--- 2026-10-07T17:23:22.423786+00:00 | STEP 009 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The 'Contacts' application should open, displaying existing contacts and providing an option to create a new one.",
+    "target": "Contacts",
+    "index": "1",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": null,
+    "hint_text": null,
+    "content_description": "Contacts"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 180,
+    "y": 2232
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_009/after.png",
+  "execute_and_observe_seconds": 1.875
+}
+
+--- 2026-10-07T17:23:23.069105+00:00 | STEP 010 | OBSERVATION ---
+{
+  "screenshot": "step_010/before.png",
+  "tree": "step_010/tree.json"
+}
+{"index":0,"content_description":"Create contact","is_clickable":true}
+{"index":1,"content_description":"Contacts"}
+{"index":2,"content_description":"Highlights","is_clickable":true}
+{"index":3,"content_description":"Fix & manage","is_clickable":true}
+{"index":4,"is_scrollable":true}
+{"index":5,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":6,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":7,"text":"No results"}
+{"index":8,"text":"Phone contacts","is_clickable":true,"is_checked":true}
+{"index":9,"text":"Email contacts","is_clickable":true,"is_checked":true}
+{"index":10,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":11,"text":"15:36","content_description":"17:36"}
+{"index":12,"content_description":"Android System notification: Serial console enabled"}
+{"index":13,"content_description":"Wifi signal full.,No internet"}
+{"index":14,"content_description":"Phone signal full."}
+{"index":15,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:23:23.070950+00:00 | STEP 010 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_010/tree/request_0.json",
+  "call": 12
+}
+
+--- 2026-10-07T17:23:29.178521+00:00 | STEP 010 | MODEL REPLY ---
+{"action": "CLICK", "value": "Contacts", "verify": "The 'Contacts' app should open, displaying an interface to manage contacts.", "target": "Contacts"}
+
+--- 2026-10-07T17:23:29.179040+00:00 | STEP 010 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.110000000000582,
+  "load_seconds": 0.0156661,
+  "prompt_seconds": 0.976923,
+  "generation_seconds": 2.976173,
+  "output_tokens": 38
+}
+
+--- 2026-10-07T17:23:29.179561+00:00 | STEP 010 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The 'Contacts' app should open, displaying an interface to manage contacts.",
+    "target": "Contacts",
+    "index": "1",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 180,
+    "y": 2232
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:23:29.180099+00:00 | STEP 010 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 180,
+    "y": 2232
+  }
+}
+
+--- 2026-10-07T17:23:31.043037+00:00 | STEP 010 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Contacts",
+    "verify": "The 'Contacts' app should open, displaying an interface to manage contacts.",
+    "target": "Contacts",
+    "index": "1",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": null,
+    "hint_text": null,
+    "content_description": "Contacts"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 180,
+    "y": 2232
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_010/after.png",
+  "execute_and_observe_seconds": 1.8590000000003783
+}
+
+--- 2026-10-07T17:23:31.712740+00:00 | STEP 011 | OBSERVATION ---
+{
+  "screenshot": "step_011/before.png",
+  "tree": "step_011/tree.json"
+}
+{"index":0,"content_description":"Create contact","is_clickable":true}
+{"index":1,"content_description":"Contacts"}
+{"index":2,"content_description":"Highlights","is_clickable":true}
+{"index":3,"content_description":"Fix & manage","is_clickable":true}
+{"index":4,"is_scrollable":true}
+{"index":5,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":6,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":7,"text":"No results"}
+{"index":8,"text":"Phone contacts","is_clickable":true,"is_checked":true}
+{"index":9,"text":"Email contacts","is_clickable":true,"is_checked":true}
+{"index":10,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":11,"text":"15:36","content_description":"17:36"}
+{"index":12,"content_description":"Android System notification: Serial console enabled"}
+{"index":13,"content_description":"Wifi signal full.,No internet"}
+{"index":14,"content_description":"Phone three bars."}
+{"index":15,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:23:31.714249+00:00 | STEP 011 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_011/tree/request_0.json",
+  "call": 13
+}
+
+--- 2026-10-07T17:23:37.499386+00:00 | STEP 011 | MODEL REPLY ---
+{"action": "CLICK", "value": "No results", "verify": "The 'No results' screen should open.","target": "No results"}
+
+--- 2026-10-07T17:23:37.499386+00:00 | STEP 011 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 5.78099999999904,
+  "load_seconds": 0.0179519,
+  "prompt_seconds": 0.966993,
+  "generation_seconds": 2.687093,
+  "output_tokens": 34
+}
+
+--- 2026-10-07T17:23:37.500391+00:00 | STEP 011 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "No results",
+    "verify": "The 'No results' screen should open.",
+    "target": "No results",
+    "index": "7",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1526
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:23:37.500391+00:00 | STEP 011 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1526
+  }
+}
+
+--- 2026-10-07T17:23:38.853768+00:00 | STEP 011 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "No results",
+    "verify": "The 'No results' screen should open.",
+    "target": "No results",
+    "index": "7",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": "No results",
+    "hint_text": null,
+    "content_description": null
+  },
+  "android": {
+    "action_type": "click",
+    "x": 540,
+    "y": 1526
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_011/after.png",
+  "execute_and_observe_seconds": 1.3440000000009604
+}
+
+--- 2026-10-07T17:23:39.510356+00:00 | STEP 012 | OBSERVATION ---
+{
+  "screenshot": "step_012/before.png",
+  "tree": "step_012/tree.json"
+}
+{"index":0,"content_description":"Create contact","is_clickable":true}
+{"index":1,"content_description":"Contacts"}
+{"index":2,"content_description":"Highlights","is_clickable":true}
+{"index":3,"content_description":"Fix & manage","is_clickable":true}
+{"index":4,"is_scrollable":true}
+{"index":5,"content_description":"Open navigation drawer","is_clickable":true}
+{"index":6,"content_description":"Signed in as Device\nAccount and settings.","is_clickable":true}
+{"index":7,"text":"No results"}
+{"index":8,"text":"Phone contacts","is_clickable":true,"is_checked":true}
+{"index":9,"text":"Email contacts","is_clickable":true,"is_checked":true}
+{"index":10,"text":"Company","is_clickable":true,"is_checked":false}
+{"index":11,"text":"15:36","content_description":"17:36"}
+{"index":12,"content_description":"Android System notification: Serial console enabled"}
+{"index":13,"content_description":"Wifi signal full.,No internet"}
+{"index":14,"content_description":"Phone three bars."}
+{"index":15,"content_description":"Battery 100 percent."}
+
+--- 2026-10-07T17:23:39.512356+00:00 | STEP 012 | MODEL REQUEST ---
+{
+  "model": "gelab-zero-4b-preview:latest",
+  "mode": "tree",
+  "context_and_settings": "step_012/tree/request_0.json",
+  "call": 14
+}
+
+--- 2026-10-07T17:23:46.320705+00:00 | STEP 012 | MODEL REPLY ---
+{"action": "CLICK", "value": "Battery 100 percent.", "verify": "The 'Battery 100 percent.' screen should open.", "target": "Battery 100 percent."}
+
+--- 2026-10-07T17:23:46.321239+00:00 | STEP 012 | MODEL TIMING ---
+{
+  "mode": "tree",
+  "wall_seconds": 6.812000000001717,
+  "load_seconds": 0.0240631,
+  "prompt_seconds": 0.870336,
+  "generation_seconds": 3.755578,
+  "output_tokens": 47
+}
+
+--- 2026-10-07T17:23:46.322280+00:00 | STEP 012 | ACTION SELECTED ---
+{
+  "model": {
+    "action": "CLICK",
+    "value": "Battery 100 percent.",
+    "verify": "The 'Battery 100 percent.' screen should open.",
+    "target": "Battery 100 percent.",
+    "index": "15",
+    "grounded_by": "unique_visible_label"
+  },
+  "android": {
+    "action_type": "click",
+    "x": 996,
+    "y": 64
+  },
+  "observation": "tree",
+  "executed_yet": false
+}
+
+--- 2026-10-07T17:23:46.322807+00:00 | STEP 012 | EXECUTION START ---
+{
+  "action": {
+    "action_type": "click",
+    "x": 996,
+    "y": 64
+  }
+}
+
+--- 2026-10-07T17:23:47.705853+00:00 | STEP 012 | OBSERVED RESULT ---
+{
+  "action": {
+    "action": "CLICK",
+    "value": "Battery 100 percent.",
+    "verify": "The 'Battery 100 percent.' screen should open.",
+    "target": "Battery 100 percent.",
+    "index": "15",
+    "grounded_by": "unique_visible_label"
+  },
+  "target": {
+    "text": null,
+    "hint_text": null,
+    "content_description": "Battery 100 percent."
+  },
+  "android": {
+    "action_type": "click",
+    "x": 996,
+    "y": 64
+  },
+  "result": "dispatch returned",
+  "visible_fields_after": [],
+  "screenshot": "step_012/after.png",
+  "execute_and_observe_seconds": 1.3909999999996217
+}
+
+--- 2026-10-07T17:23:48.997189+00:00 | RUN | STOP AND OFFICIAL VERIFICATION ---
+{
+  "kind": "learning_trial",
+  "task": "ContactsAddContact",
+  "run_id": "trial_ContactsAddContact_20261007T172052_755250Z",
+  "agent_done": false,
+  "verifier": "FAIL",
+  "steps": 12,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "learning_label_grounding_v4_gpu22",
+  "model": "gelab-zero-4b-preview:latest",
+  "prompt_version": "gelab_json_labels_v4",
+  "observation": "tree_first",
+  "grounding": "unique_visible_labels_with_conditional_coordinates",
+  "step_budget": 12,
+  "time_budget_seconds": 900,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 12,
+  "stop_reason": "step_budget",
+  "model_calls_attempted": 14,
+  "verifier_score": 0.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [
+    {
+      "step": 7,
+      "reason": "Tree/interface validation failed: Target label 'Fix & manage' matches 2 controls; use an unambiguous visible label",
+      "from": "tree",
+      "to": "screenshot"
+    }
+  ],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 150.43699999999808
+}

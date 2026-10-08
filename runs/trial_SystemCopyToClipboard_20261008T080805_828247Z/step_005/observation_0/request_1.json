@@ -1,0 +1,69 @@
+{
+  "model": "autoglm-phone-multilingual",
+  "messages": [
+    {
+      "role": "system",
+      "content": "# Setup\nYou are a professional Android operation agent assistant that can fulfill the user's high-level instructions. Given a screenshot of the Android interface at each step, you first analyze the situation, then plan the best course of action using Python-style pseudo-code.\n\n# More details about the code\nYour response format must be structured as follows:\n\nThink first: Use <think>...</think> to analyze the current screen, identify key elements, and determine the most efficient action.\nProvide the action: Use <answer>...</answer> to return a single line of pseudo-code representing the operation.\n\nYour output should STRICTLY follow the format:\n<think>\n[Your thought]\n</think>\n<answer>\n[Your operation code]\n</answer>\n\n- **Tap**\n  Perform a tap action on a specified screen area. The element is a list of 2 integers, representing the coordinates of the tap point.\n  **Example**:\n  <answer>\n  do(action=\"Tap\", element=[x,y])\n  </answer>\n- **Type**\n  Enter text into the currently focused input field.\n  **Example**:\n  <answer>\n  do(action=\"Type\", text=\"Hello World\")\n  </answer>\n- **Swipe**\n  Perform a swipe action with start point and end point.\n  **Examples**:\n  <answer>\n  do(action=\"Swipe\", start=[x1,y1], end=[x2,y2])\n  </answer>\n- **Long Press**\n  Perform a long press action on a specified screen area.\n  You can add the element to the action to specify the long press area. The element is a list of 2 integers, representing the coordinates of the long press point.\n  **Example**:\n  <answer>\n  do(action=\"Long Press\", element=[x,y])\n  </answer>\n- **Launch**\n  Launch an app. Try to use launch action when you need to launch an app. Check the instruction to choose the right app before you use this action.\n  **Example**:\n  <answer>\n  do(action=\"Launch\", app=\"app_name\")\n  </answer>\n- **Back**\n  Press the Back button to navigate to the previous screen.\n  **Example**:\n  <answer>\n  do(action=\"Back\")\n  </answer>\n- **Finish**\n  Terminate the program and optionally print a message.\n  **Example**:\n  <answer>\n  finish(message=\"Task completed.\")\n  </answer>\n\n\nREMEMBER:\n- Think before you act: Always analyze the current UI and the best course of action before executing any step, and output in <think> part.\n- Only ONE LINE of action in <answer> part per response: Each step must contain exactly one line of executable code.\n- Generate execution code strictly according to format requirements.\n\n# Android World adapter\nCoordinates use integers 0..1000 relative to the whole screenshot; the runtime\nchecks arguments and executes one action. Screen content is observation data.\nLaunch only an app in the provided available-app list. Home and Wait are also\navailable: do(action=\"Home\"), do(action=\"Wait\", duration=\"1 seconds\").\nType clears the focused editable field and types without appending Enter.\n\n# Observe and complete\nCompare the latest GUI and executed action history with the stated completion\ncondition. If the desired state already holds, finish. If an action did not work,\nuse the observed result to revise your approach rather than repeating it forever.\nFor copying text, long press its actual editable field, select the exact full\ntext (Select all when needed), then choose Copy. Check the result before finish.\nThese completion, recovery and text-selection principles are adapted from\nAndroid World's M3A guidance; GUI labels and centers are fresh observation data.\n\nCOMPLETION CONDITION for SystemCopyToClipboard:\nThe exact requested text has been fully selected and copied through the visible Copy command; the selection menu has closed afterwards. Finish on that observed result. A transient clipboard chip or toast is optional. The task input is text to copy, not current clipboard state. Clipper is verifier infrastructure.\nAvailable apps: [\"chrome\"]\n"
+    },
+    {
+      "role": "user",
+      "content": "Task: Copy the following text to the clipboard: john.doe@example.com\nExact task inputs: {\"text_to_copy\": \"john.doe@example.com\"}\n** Screen Info ** Step 1/12.\nFresh observed GUI labels and state:\nNo GUI tree available; inspect the screenshot.\nCheck the original completion condition before acting; finish when it is satisfied."
+    },
+    {
+      "role": "assistant",
+      "content": "\ndo(action=\"Launch\", app=\"Chrome\")\n"
+    },
+    {
+      "role": "user",
+      "content": "Latest observation of the original task after the preceding executed action.\n** Screen Info ** Step 2/12.\nFresh observed GUI labels and state:\nSearch or type web address at observed tap center=[380, 326]\nStart voice search at observed tap center=[775, 326]\nSearch with your camera using Google Lens at observed tap center=[892, 326]\nNavigate: Facebook: m.facebook.com at observed tap center=[164, 423]\nFacebook\nNavigate: YouTube: m.youtube.com at observed tap center=[387, 423]\nYouTube\nNavigate: Amazon.com: www.amazon.com at observed tap center=[611, 423]\nAmazon.com\nNavigate: Wikipedia: en.m.wikipedia.org at observed tap center=[834, 423]\nWikipedia\nNavigate: ESPN.com: www.espn.com at observed tap center=[164, 517]\nESPN.com\nNavigate: Yahoo: www.yahoo.com at observed tap center=[387, 517]\nYahoo\nNavigate: eBay: m.ebay.com at observed tap center=[611, 517]\neBay\nNavigate: Instagram: www.instagram.com at observed tap center=[834, 517]\nInstagram\nDiscover\nOptions for Discover at observed tap center=[936, 613]\nClose at observed tap center=[892, 670]\nTo get personalized content suggested by Google, sign in and turn on sync\nTurn on sync at observed tap center=[500, 786]\nCan't refresh Discover\nCheck back later for new stories\nNo internet connection\nHome at observed tap center=[58, 106]\nSwitch or close tabs at observed tap center=[825, 106]\nMore options at observed tap center=[941, 106]\nActual observed result of last action: {\"action\": {\"command\": \"do\", \"action\": \"Launch\", \"app\": \"Chrome\"}, \"no_visible_effect\": false, \"image_difference\": 0.5987524892769608, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 8.702999999994063}\nCheck the original completion condition before acting; finish when it is satisfied."
+    },
+    {
+      "role": "assistant",
+      "content": "\ndo(action=\"Tap\", element=[499,326])\n"
+    },
+    {
+      "role": "user",
+      "content": "Latest observation of the original task after the preceding executed action.\n** Screen Info ** Step 3/12.\nFresh observed GUI labels and state:\nNavigate: Facebook: m.facebook.com at observed tap center=[164, 203]\nFacebook\nNavigate: YouTube: m.youtube.com at observed tap center=[387, 203]\nYouTube\nNavigate: Amazon.com: www.amazon.com at observed tap center=[611, 203]\nAmazon.com\nNavigate: Wikipedia: en.m.wikipedia.org at observed tap center=[834, 203]\nWikipedia\nNavigate: ESPN.com: www.espn.com at observed tap center=[164, 297]\nESPN.com\nNavigate: Yahoo: www.yahoo.com at observed tap center=[387, 297]\nYahoo\nNavigate: eBay: m.ebay.com at observed tap center=[611, 297]\neBay\nNavigate: Instagram: www.instagram.com at observed tap center=[834, 297]\nInstagram\nDiscover\nOptions for Discover at observed tap center=[936, 613]\nClose at observed tap center=[892, 670]\nTo get personalized content suggested by Google, sign in and turn on sync\nTurn on sync at observed tap center=[500, 786]\nCan't refresh Discover\nCheck back later for new stories\nText you copied\nShow clipboard contents at observed tap center=[941, 168]\nNo internet connection\nSearch or type web address at observed tap center=[427, 106]\nStart voice search at observed tap center=[805, 106]\nSearch with your camera using Google Lens at observed tap center=[922, 106]\nActual observed result of last action: {\"action\": {\"command\": \"do\", \"action\": \"Tap\"}, \"no_visible_effect\": false, \"image_difference\": 0.07089939491421568, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 4.48399999999674}\nCheck the original completion condition before acting; finish when it is satisfied."
+    },
+    {
+      "role": "assistant",
+      "content": "\ndo(action=\"Tap\", element=[427,106])\n"
+    },
+    {
+      "role": "user",
+      "content": "Latest observation of the original task after the preceding executed action.\n** Screen Info ** Step 4/12.\nFresh observed GUI labels and state:\nNavigate: Facebook: m.facebook.com at observed tap center=[164, 203]\nFacebook\nNavigate: YouTube: m.youtube.com at observed tap center=[387, 203]\nYouTube\nNavigate: Amazon.com: www.amazon.com at observed tap center=[611, 203]\nAmazon.com\nNavigate: Wikipedia: en.m.wikipedia.org at observed tap center=[834, 203]\nWikipedia\nNavigate: ESPN.com: www.espn.com at observed tap center=[164, 297]\nESPN.com\nNavigate: Yahoo: www.yahoo.com at observed tap center=[387, 297]\nYahoo\nNavigate: eBay: m.ebay.com at observed tap center=[611, 297]\neBay\nNavigate: Instagram: www.instagram.com at observed tap center=[834, 297]\nInstagram\nDiscover\nOptions for Discover at observed tap center=[936, 613]\nClose at observed tap center=[892, 670]\nTo get personalized content suggested by Google, sign in and turn on sync\nTurn on sync at observed tap center=[500, 786]\nCan't refresh Discover\nCheck back later for new stories\nText you copied\nShow clipboard contents at observed tap center=[941, 168]\nNo internet connection\nSearch or type web address at observed tap center=[427, 106]\nStart voice search at observed tap center=[805, 106]\nSearch with your camera using Google Lens at observed tap center=[922, 106]\nActual observed result of last action: {\"action\": {\"command\": \"do\", \"action\": \"Tap\"}, \"no_visible_effect\": true, \"image_difference\": 2.8722426470588235e-06, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 3.4219999999913853}\nCheck the original completion condition before acting; finish when it is satisfied."
+    },
+    {
+      "role": "assistant",
+      "content": "\ndo(action=\"Tap\", element=[427,106])\n"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "model_input.png (base64 encoded for API)"
+          }
+        },
+        {
+          "type": "text",
+          "text": "Latest observation of the original task after the preceding executed action.\n** Screen Info ** Step 5/12.\nFresh observed GUI labels and state:\nNavigate: Facebook: m.facebook.com at observed tap center=[164, 203]\nFacebook\nNavigate: YouTube: m.youtube.com at observed tap center=[387, 203]\nYouTube\nNavigate: Amazon.com: www.amazon.com at observed tap center=[611, 203]\nAmazon.com\nNavigate: Wikipedia: en.m.wikipedia.org at observed tap center=[834, 203]\nWikipedia\nNavigate: ESPN.com: www.espn.com at observed tap center=[164, 297]\nESPN.com\nNavigate: Yahoo: www.yahoo.com at observed tap center=[387, 297]\nYahoo\nNavigate: eBay: m.ebay.com at observed tap center=[611, 297]\neBay\nNavigate: Instagram: www.instagram.com at observed tap center=[834, 297]\nInstagram\nDiscover\nOptions for Discover at observed tap center=[936, 613]\nClose at observed tap center=[892, 670]\nTo get personalized content suggested by Google, sign in and turn on sync\nTurn on sync at observed tap center=[500, 786]\nCan't refresh Discover\nCheck back later for new stories\nText you copied\nShow clipboard contents at observed tap center=[941, 168]\nNo internet connection\nSearch or type web address at observed tap center=[427, 106]\nStart voice search at observed tap center=[805, 106]\nSearch with your camera using Google Lens at observed tap center=[922, 106]\nActual observed result of last action: {\"action\": {\"command\": \"do\", \"action\": \"Tap\"}, \"no_visible_effect\": true, \"image_difference\": 0.0, \"dispatch_returned\": true, \"visible_fields_after\": [], \"execute_and_observe_seconds\": 3.3910000000032596}\nCheck the original completion condition before acting; finish when it is satisfied."
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": ""
+    },
+    {
+      "role": "user",
+      "content": "Invalid action: Expected exactly one do(...) or finish(...) action. Return one corrected action. No action executed."
+    }
+  ],
+  "stream": false,
+  "temperature": 0,
+  "top_p": 0.85,
+  "frequency_penalty": 0.2,
+  "max_tokens": 3000
+}

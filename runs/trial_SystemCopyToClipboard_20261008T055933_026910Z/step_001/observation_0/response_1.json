@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Looking at the available apps, I can see that \"Messages\" is listed as one of the allowed apps. I need to launch the Messages app to paste the clipboard content. Let me correct my previous action and launch the Messages app.\ndo(action=\"Launch\", app=\"Messages\")",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791439184,
+  "id": "2026100813594262a00942a8f5486a",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "2026100813594262a00942a8f5486a",
+  "usage": {
+    "completion_tokens": 59,
+    "prompt_tokens": 2105,
+    "prompt_tokens_details": {
+      "cached_tokens": 1977
+    },
+    "total_tokens": 2164
+  },
+  "wall_seconds": 1.4220000000059372
+}

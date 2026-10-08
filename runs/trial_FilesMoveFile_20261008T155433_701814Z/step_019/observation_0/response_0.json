@@ -1,0 +1,26 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "The file cooking-recipe.md is now present in the destination folder \"project_medium\" and is no longer in the source folder \"project_easy\". The move operation is complete. I should finish the task and confirm completion.\n\nfinish(message=\"The file cooking-recipe.md has been successfully moved from project_easy to project_medium within the sdk_gphone_x86_64 storage area.\")\n",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791475174,
+  "id": "202610082359335e0dc80f1dcc423c",
+  "model": "autoglm-phone-multilingual",
+  "object": "chat.completion",
+  "request_id": "202610082359335e0dc80f1dcc423c",
+  "usage": {
+    "completion_tokens": 76,
+    "prompt_tokens": 14964,
+    "prompt_tokens_details": {
+      "cached_tokens": 12286
+    },
+    "total_tokens": 15040
+  },
+  "wall_seconds": 2.187999999994645
+}

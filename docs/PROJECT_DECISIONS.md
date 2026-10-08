@@ -1,5 +1,10 @@
 # Project decisions
 
+Evidence publication, 8 October: the user explicitly approved the previously
+blocked emulator screenshots and diagnostic artifacts. Publish the selected
+original export and its hash manifest; keep credentials and unrelated local
+archives excluded. No runtime change or new task success claim.
+
 Repository preparation, 8 October: the user requested publication to
 Chenschenschen/androidworld-gui-agent. Added current installation/contribution
 guides, a credential template, pinned-dependency instructions and aggregate

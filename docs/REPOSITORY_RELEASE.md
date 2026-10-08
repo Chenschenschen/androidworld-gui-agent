@@ -21,6 +21,14 @@ screenshots and diagnostic artifacts could contain non-public data. Those files
 were removed from the unpublished root commit before retrying with the reduced
 publication scope. The original local evidence was preserved.
 
+Subsequent user authorization, 8 October: the user explicitly approved uploading
+the previously blocked files. Restore the original 156-file evidence subset and
+its SHA256 export manifest in a new commit, including selected test-emulator
+screenshots, task metadata and diagnostic trajectories. Credentials and the
+remaining excluded archives stay local. Check every exported file against the
+original and scan the exact tracked payload for the project API key before push.
+No runtime behavior, model call or task trial changes in this publication step.
+
 Validation before publication:
 
 - All 16 offline adapter checks passed.

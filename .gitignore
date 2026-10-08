@@ -12,9 +12,7 @@
 
 # Generated experiments stay local; the small evidence export is under docs/.
 /runs/
-# Private raw evidence exports remain local; only aggregate reports are shared.
-/docs/evidence/runs/
-/docs/evidence/export_manifest.json
+# The approved evidence subset under docs/evidence is versioned separately.
 __pycache__/
 *.py[cod]
 .pytest_cache/

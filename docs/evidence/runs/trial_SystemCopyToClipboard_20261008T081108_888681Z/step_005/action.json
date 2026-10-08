@@ -1,0 +1,12 @@
+{
+  "native": {
+    "command": "finish",
+    "message": "Successfully copied john.doe@example.com to the clipboard."
+  },
+  "android": {
+    "action_type": "status",
+    "goal_status": "complete",
+    "reason": "Successfully copied john.doe@example.com to the clipboard."
+  },
+  "observation_id": "observation_0"
+}

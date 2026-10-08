@@ -9,7 +9,7 @@ Start here rather than reading the design history from beginning to end.
 | [AGENT_WALKTHROUGH.md](AGENT_WALKTHROUGH.md) | Explain the current program's flow. |
 | [AUTOGLM_API.md](AUTOGLM_API.md) | Z.ai endpoint, model selection and native protocol. |
 | [WARMUP_RESULTS.md](WARMUP_RESULTS.md) | Recorded task gates and unresolved errors. |
-| [evidence/README.md](evidence/README.md) | Aggregate reports; screenshots, inputs and full traces/videos stay local. |
+| [evidence/README.md](evidence/README.md) | Aggregate reports and the approved metadata/trajectory/screenshot subset. |
 | [COURSE_AND_UPSTREAM_REVIEW.md](COURSE_AND_UPSTREAM_REVIEW.md) | D1–D4 principles, pinned official sources and repair ledger. |
 | [../CONTRIBUTING.md](../CONTRIBUTING.md) | Rules for a justified change and bounded regression. |
 
@@ -27,6 +27,6 @@ and their actual outcomes.
 
 References to `runs/`, `.review/` and `course_content/` in historical documents
 point to the original local archive, which is not shipped in Git. The public
-aggregate reports and source manifest provide a portable summary without pretending
+approved evidence subset, aggregate reports and source manifest provide portable evidence without pretending
 to contain every screenshot or recording. Course materials themselves are not
 redistributed.

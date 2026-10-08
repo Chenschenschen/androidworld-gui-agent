@@ -135,6 +135,8 @@ Project code is available under [Apache License 2.0](LICENSE).
 The agreed future Markor, Calendar and harder-task stages remain unfinished;
 these warm-ups do not satisfy the complete easy/medium/hard course evaluation.
 
-Full recordings, screenshots, task inputs, API trajectories, course PDFs/ZIPs,
-dependency checkouts and environments remain local. The published reports contain
-only selected outcome fields, including failures; they are not the raw evidence.
+The [approved evidence subset](docs/evidence/README.md) includes original trial
+metadata and selected Timer/Clipboard trajectories and screenshots alongside
+aggregate reports. Full recordings, the remaining archive, course PDFs/ZIPs,
+credentials, dependency checkouts and environments remain local. The export
+manifest identifies exactly which original files are published.

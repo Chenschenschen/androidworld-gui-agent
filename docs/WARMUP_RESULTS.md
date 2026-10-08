@@ -57,7 +57,8 @@ neither has three clean current repeats. No forced completion, next-digit
 controller, direct clipboard write or per-step verifier feedback was added.
 
 The original logs and videos remain in the local run archive. The public
-[aggregate export](evidence/README.md) describes exactly what is shipped. Completed
+[approved evidence export](evidence/README.md) describes exactly what is shipped,
+including the selected original screenshots and diagnostic trajectories. Completed
 artifact audits found matching frozen sources, valid JSON, no logged credential,
 no missing completed-step evidence and decodable recordings. Recording-invalid
 attempts are labeled separately; recovering their clip does not make them valid.

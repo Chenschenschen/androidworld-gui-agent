@@ -219,7 +219,7 @@ def osmand_next_step(elements, terms, route_points, centred_on, shape):
         if n >= total:
             done = find("Done")
             return (tap(done) + f" All {total} waypoints are in the route; Done saves the track." if done else None), None
-        if centred_on == terms[n]:
+        if centred_on == terms[n] and not find(r"0 (ft|m) •.*"):
             add = find("Add")
             return (tap(add) + f' The map is centred on "{terms[n]}"; Add makes it point {n + 1}.' if add else None), None
         search = find("Search")
@@ -234,12 +234,12 @@ def osmand_next_step(elements, terms, route_points, centred_on, shape):
         return f'Press Back until the route panel ("points: {route_points}", Add, Done) is shown; the map stays centred on "{name}".', name
     field = by_id("searchEditText")
     if field is not None:
-        if route_points and centred_on == term:
-            return f'Press Back until the route panel is shown; the map is centred on "{term}".', None
-        typed = "" if field.text in (None, "", field.hint_text) else field.text.strip()
         show = find(f"SHOW {re.escape(term.upper())} ON THE MAP")
         if show:
             return tap(show) + f' This selects "{term}" itself.', None
+        if route_points and centred_on == term:
+            return f'Press Back until the route panel is shown; the map is centred on "{term}".', None
+        typed = "" if field.text in (None, "", field.hint_text) else field.text.strip()
         if typed != term:
             clear = find("Clear")
             if typed and clear:
@@ -786,8 +786,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         self.next_hint = None
         if self.config.get("task_skills", {}).get(task_name) and state.ui_elements:
             terms = [waypoint.split(",")[0].strip() for waypoint in self.scratch["waypoints"]]
-            centred = self.centred_on or (terms[min(self.route_points, len(terms) - 1)] if self.searched_next else None)
-            self.next_hint, card = osmand_next_step(state.ui_elements, terms, self.route_points, centred, state.pixels.shape[:2])
+            self.next_hint, card = osmand_next_step(state.ui_elements, terms, self.route_points, self.centred_on, state.pixels.shape[:2])
             self.centred_on = card or self.centred_on
         if self.next_hint:
             names = "; ".join(f'{i}. "{t}"' for i, t in enumerate(terms, 1))
@@ -848,7 +847,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                     view = osmand_view(state.ui_elements)
                     points_now = self.route_points if view["points"] is None else view["points"]
                     terms = [waypoint.split(",")[0].strip() for waypoint in self.scratch["waypoints"]]
-                    searched = points_now == self.route_points and (self.searched_next or self.centred_on == terms[min(points_now, len(terms) - 1)])
+                    searched = points_now == self.route_points and self.centred_on == terms[min(points_now, len(terms) - 1)]
                     correction = osmand_tree_check(view, action, state.pixels.shape[:2], points_now, searched)
                     if correction is None and action["action_type"] == "input_text" and "," in action["text"]:
                         correction = osmand_rule_break(raw, action)

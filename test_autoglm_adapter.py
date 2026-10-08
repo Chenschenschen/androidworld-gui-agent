@@ -488,6 +488,10 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(step(card("Rotenboden", "Hamlet"), 1)[1], "Rotenboden")
         self.assertIn("Press Back", step([field("Rotenboden")], 1, "Rotenboden")[0])
         self.assertIn('Tap "Add"', step(panel(1), 1, "Rotenboden")[0])
+        # v55 seed 8: a street list inside the place, and a panel whose centre is still the last point.
+        streets = [field("Rotenboden "), el("SHOW ROTENBODEN ON THE MAP", (142, 1080, 278, 404), "buttonToolbarTitle")]
+        self.assertIn('Tap "SHOW ROTENBODEN ON THE MAP"', step(streets, 1, "Rotenboden")[0])
+        self.assertIn('Tap "Search"', step(panel(1) + [el("0 ft • 0°", (189, 309, 1990, 2041))], 1, "Rotenboden")[0])
         self.assertIn('Tap "Done"', step(panel(2), 2)[0])
         self.assertIn("Tap \"Cancel\"", step([el("Exit without saving?", (0, 1080, 800, 900), "title"), el("Cancel", (0, 500, 1500, 1600))], 1)[0])
 

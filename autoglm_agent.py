@@ -263,13 +263,14 @@ def osmand_next_step(elements, terms, route_points, centred_on, shape):
         if row:
             return (f'Tap the {row["type"].split(" •")[0]} row "{term}" at tap center '
                     f'[{row["center"][0] * 1000 // width}, {row["center"][1] * 1000 // height}].'), None
+        # At the end of the list INCREASE SEARCH RADIUS restarts the search from the top (v61 seed 31 kept swiping there).
+        radius = find("INCREASE SEARCH RADIUS")
+        if radius:
+            return tap(radius) + " Repeat until the place row appears; do not retype the text (that resets the radius).", None
         if view["rows"]:
             # A manual search for "Malbun" listed nine same-name rows (streets, ski lifts, hotels) before its Village row.
             return ('The place row is further down. Scroll the results: do(action="Swipe", start=[500, 560], end=[500, 260]). '
                     "Do not retype the text."), None
-        radius = find("INCREASE SEARCH RADIUS")
-        if radius:
-            return tap(radius) + " Repeat until the place row appears; do not retype the text (that resets the radius).", None
         return "Wait for the results.", None
     search = find("Search")
     if search and route_points == 0:
@@ -727,8 +728,15 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         if self.config["tree_backend"] == "a11y_forwarder":
             # The same screen read by UIAutomator lists the route panel (points, Add, Done) in about 3 s.
             # Checked first: v51-v53 took the package-list branch below, so the fallback never ran.
-            if thin_tree(state.ui_elements):
+            # v61 seed 31: right after the forwarder crashed its tree was empty and the UIAutomator dump was
+            # rejected (screen still changing), so the model decided without labels; read once more.
+            for attempt in range(2):
+                if not thin_tree(state.ui_elements):
+                    break
                 state = self.supplement_controls(state, any_app=True)
+                if attempt == 0 and thin_tree(state.ui_elements):
+                    time.sleep(2)
+                    state = self.env.get_state(wait_to_stabilize=False)
         elif self.config.get("supplemental_tree_packages"):
             state = self.supplement_controls(state)
         return state

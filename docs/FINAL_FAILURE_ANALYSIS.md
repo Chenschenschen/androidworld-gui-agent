@@ -88,3 +88,41 @@ which is `too_early`). The common cause is observation: OsmAnd gave no usable
 GUI tree to our UIAutomator path, so the program could not check the screen
 itself. Android World's accessibility forwarder does provide it in 0.2 s; see
 [MEDIUM_HARD_TRIALS.md](MEDIUM_HARD_TRIALS.md), rows 22-28.
+
+## Additional experiment: the one failure of v61 on the slide task
+
+v49-v61 then gave the program that GUI tree (forwarder, with UIAutomator as a
+fallback) and moved the Skill's procedure into code. The frozen v61 passed 2 of
+3 runs of the task exactly as the course slide states it ("Ruggell,
+Liechtenstein and Bendern, Liechtenstein"; seeds 31, 314, 366, which Android
+World turns into that waypoint list). The failed run is analysed here; results
+are in [IMPROVEMENT_OSMAND.md](IMPROVEMENT_OSMAND.md#additional-experiment-v61-on-the-slide-instance).
+
+Run `trial_OsmAndTrack_20261008T191028_258914Z` (seed 31). Official verifier:
+FAIL. Stop: no-progress rule after 11 executed steps (budget 90).
+
+| Steps | What the model saw and did | Assessment |
+| --- | --- | --- |
+| 1-4 | Launched OsmAnd, opened Search, typed "Ruggell", tapped INCREASE SEARCH RADIUS as the coded step said | Correct |
+| 5 | Tried SHOW ON MAP ("the search is not working"); the tree check refused it and the correction tapped INCREASE SEARCH RADIUS | Check worked |
+| 6-7 | Third radius increase; the list showed stops and streets named Ruggell; the coded step said scroll, the model swiped once | Correct |
+| 8 | The accessibility forwarder's own app crashed ("keeps stopping"). The model closed the dialog. The next observation had **no GUI tree at all** (forwarder restarting), and the UIAutomator fallback was rejected because the screen was still changing, so the model received no labels and no coded step. The screenshot shows "Ruggell / Village" in the middle of the list; the model replied "none are the place itself" and swiped past it | Model misread the screenshot (other: perception), exposed by an infrastructure fault |
+| 9-11 | Swiped on to the end of the list, where INCREASE SEARCH RADIUS appears. The coded step still said "scroll" because result rows were on screen without the village row; swipes at the end changed nothing and the cycle stop ended the run | Program-layer ordering bug introduced in v60 |
+
+Classification and layers (D4 p.27, D5 pp.41-42):
+
+- **Infrastructure:** the forwarder's "keeps stopping" dialog appeared in 5
+  of the 17 forwarder runs (14 practice runs of v49-v61 and the 3 evaluation
+  runs); each time the model closed it and went on. Only here did the empty
+  tree that follows it coincide with a decision that needed the tree. An empty
+  tree should be re-read rather than passed on.
+- **Model/perception:** with the village row visible, the model said it was
+  not there. With a tree, the code names the row and its tap centre; without
+  one, nothing else catches this.
+- **Program layer:** v60's scroll rule was added for "Malbun" (Village row one
+  scroll down). It did not consider the end of the list, where widening the
+  radius restarts the search from the top.
+
+Both program-side fixes (re-read an empty tree once; prefer INCREASE SEARCH
+RADIUS when it is on screen) were made only after the evaluation, so they do
+not change the v61 results above.

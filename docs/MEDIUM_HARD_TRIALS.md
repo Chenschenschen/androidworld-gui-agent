@@ -141,3 +141,58 @@ What v43-v48 established:
   snapshot and re-running the official OsmAnd setup without the model
   (map file and snapshot verified). All practice runs listed here ran after
   the restore except row 22.
+
+## OsmAnd-only extra experiment: v49-v61 (practice runs)
+
+After v43-v48 we resumed with the step recommended in row 28: read OsmAnd's
+GUI through the accessibility forwarder and base every check on the real
+screen. This is an **additional experiment on the hard task only**; the
+official three-task evaluation stays v42 (tag `final-eval-v42`). All runs
+below are practice runs on seeds outside the evaluation set (8: Planken,
+Rotenboden; 7: Malbun, Rotenboden, Balzers). Each run has its recording,
+trajectory and summary under `runs/`. Each change was made after one run,
+with an offline test that fails on the previous code.
+
+**Result: the first verifier PASS on OsmAndTrack (row 39, v59, seed 8) and a
+three-waypoint PASS (row 42, v61, seed 7).** v61 was then frozen (tag
+`osmand-extra-v61`) for the evaluation in
+[IMPROVEMENT_OSMAND.md](IMPROVEMENT_OSMAND.md#additional-experiment-v61-on-the-slide-instance).
+
+| # | Run ID | Version | Seed | Outcome | Cause | Change made |
+| --- | --- | --- | --- | --- | --- | --- |
+| 29 | `trial_OsmAndTrack_20261008T172506_608538Z` | v49 | 8 | FAIL, `validation_error` after 4 steps | The step-5 observation was taken while OsmAnd's search spinner (`searchProgressBar`) still turned, so the list looked empty (`too_early`). The model's reply then repeated itself until the 3000-token limit (`Truncated model reply`), and its correction tapped SHOW ON MAP, which the tree check refused; two invalid replies in one step end the run | v50: an observation waits (up to 30 s) while the search spinner is on screen; keyboard keys are left out of the GUI labels |
+| 30 | `trial_OsmAndTrack_20261008T173128_218463Z` | v50 | 8 | FAIL, `control_no_progress` after 24 steps; **first waypoint in the route** (`points: 1`, step 14) | On the Plan a route screen the forwarder tree contained only "Map" (four reads of the same screen; a UIAutomator dump read the route panel, Search and Done in 3 s). Without labels the model tapped the globe (Configure map) left of Search five times | v51: when the forwarder tree names at most one app control, the observation falls back to a checked UIAutomator dump; hints name Search as the second round button |
+| 31 | `trial_OsmAndTrack_20261008T174254_588486Z` | v51 | 8 | FAIL, `control_no_progress` after 26 steps | The forwarder marks only the unlabeled container of a row, of INCREASE SEARCH RADIUS and of Actions clickable, so these labels had no tap centre and the model guessed coordinates for 15 steps. The row check also refused the "Liechtenstein (Country)" row that the Skill's region step asked for | v52: every labelled element gets an observed tap centre; the row check accepts the Country row |
+| 32 | `trial_OsmAndTrack_20261008T175142_038025Z` | v52 | 8 | FAIL, `control_no_progress` after 20 steps | Widened the radius once, then searched "Liechtenstein". The fixed text of the SHOW ON MAP refusal ("tap INCREASE SEARCH RADIUS") sent it away from the Country row; it then retyped "Planken" six times, and each retype resets the radius. Fifth fix in a row that exposed a new failure elsewhere | v53 (design change): the Skill procedure runs as code. Each step, `osmand_next_step` recognises the screen from the GUI tree and states the next action with its tap centre; refusals append that step. The region-first step is dropped (never completed in v44-v52); the radius is widened instead |
+| 33 | `trial_OsmAndTrack_20261008T180047_905645Z` | v53 | 8 | FAIL, `control_no_progress` after 13 steps; `points: 1` at step 11 (fastest so far) | The route panel stayed unread: v51's fallback never ran, because the non-empty supplemental package list (Settings, Clock, Chrome) took the first branch. With no count the code gave no next step and the Add check could not fire; the model tapped the panel's Add three times. Our offline test had used an empty list | v54: the forwarder branch is checked first; the test uses the real configuration |
+| 34 | `trial_OsmAndTrack_20261008T180506_211752Z` | v54 | 8 | FAIL, `control_no_progress` after 9 steps | The fallback now ran (24 UIAutomator reads), but UIAutomator elements carry `resource_id`, not `resource_name`. The coded procedure did not recognise the search field, the old reminder (region first) returned, and the model cleared and retyped "Planken" (radius reset) | v55: screens are recognised from either id field; the reminder drops the region step |
+| 35 | `trial_OsmAndTrack_20261008T181122_526667Z` | v55 | 8 | FAIL, `control_no_progress` after 19 steps; `points: 1`, "Rotenboden" found | The code treated the typed name as proof that the map was centred on Rotenboden and said "press Back" on its street list. Back led to the panel, whose distance line read "0 ft" (centre still on Planken); the model tapped Add three times | v56: only a seen place card of the next waypoint proves the centre; no Add while the distance line reads 0 ft; a street list suggests SHOW <PLACE> ON THE MAP |
+| 36 | `trial_OsmAndTrack_20261008T181934_796393Z` | v56 | 8 | FAIL, model finished at `points: 1` of 2 (`false_done`) | Rotenboden's card lay over the route panel; the code read the panel first and said "search again", and the model declared the track saved. The forwarder's own app crashed once ("keeps stopping" dialog, step 6); the model closed it | v57: the place card is recognised before the panel; `finish` is refused while the tree shows fewer route points than waypoints or the route panel is still open |
+| 37 | `trial_OsmAndTrack_20261008T182624_604241Z` | v57 | 8 | FAIL, `validation_error` after 19 steps; **`points: 2` of 2** (step 19) | The model tapped Done (step 20), but the row check refused it twice: on the route panel the date "Sun 15 Oct 2023" above the title "Plan a route" formed a false result row whose span covered Done | v58: result rows are read only on the search screen |
+| 38 | `trial_OsmAndTrack_20261008T183303_700087Z` | v58 | 8 | FAIL, `control_no_progress` after 19 steps | After Rotenboden's card, Back led through its street list, where the v56 order suggested SHOW <PLACE> ON THE MAP again; card and list alternated three times | v59: once the next waypoint's card was seen, the street list suggests Back |
+| 39 | `trial_OsmAndTrack_20261008T184005_761386Z` | v59 | 8 | **PASS** (official verifier), 21 steps, 404 s | Search, three radius increases, Village row, Actions > Plan a route (`points: 1`); Search, Clear, "Rotenboden", Village row, SHOW ROTENBODEN ON THE MAP, Back x3, Add (`points: 2`), Done, finish. One Favorite Add and one unfocused Type were refused on the way | First pass on the hard task |
+| 40 | `trial_OsmAndTrack_20261008T184737_498743Z` | v59 | 7 | FAIL, `validation_error` after 10 steps | Despite the hint "Tap Search", the model tapped the map's Route button (navigation) and searched from "Set starting point". "Malbun" lists nine same-name rows (street, stream, ski lift, hotels) before its Village row; the code only said "Wait". A manual search confirmed the Village row after one scroll | v60: rows without the waypoint's settlement row suggest one Swipe; the Route button is refused; the row refusal mentions scrolling |
+| 41 | `trial_OsmAndTrack_20261008T185418_998730Z` | v60 | 7 | FAIL, `validation_error` after 19 steps; `points: 1` (Malbun) | The Route refusal and the scroll worked. On Rotenboden's card the model chose Actions > Plan a route, which starts a new route | v61: once the route has a point, Actions on a card and Plan a route in the menu are refused |
+| 42 | `trial_OsmAndTrack_20261008T190133_618757Z` | v61 | 7 | **PASS**, 31 steps, 501 s, three waypoints | Same procedure with one scroll for Malbun and two later waypoints; the forwarder crash dialog appeared once (step 20) and was closed | Frozen as v61 |
+
+Probes without the model (scripts in the session notes, outputs summarised here):
+
+- **Plan a route screen:** the forwarder returned only "Map" in four reads,
+  while `uiautomator dump` listed "points: 1", Add, Done, Search and Configure
+  map in 3 s. This is why v51 keeps UIAutomator as a fallback.
+- **"Malbun" search:** after three radius increases the first screen showed
+  "Im Malbun" (street), a stream, a ski resort, an aerialway station and
+  hotels; the Village row appeared after one scroll.
+
+What v49-v61 established:
+
+- **Observation was the first bottleneck.** With labels, tap centres and the
+  route count read from the screen, checks no longer depend on the model's
+  description; v43-v48 could only check the model's words.
+- **Moving the procedure into code (v53) made progress steady.** The model
+  still chooses and performs every action from the screenshot and labels, and
+  it ignored the stated next step several times (Route button, a second Plan a
+  route, finishing early). Code refused those specific actions.
+- **Most of v54-v59 fixed our own code**, not the model: a branch order bug, an
+  id field mismatch, a false result row and two ordering mistakes. Each was
+  found from one recorded run and is covered by an offline test.

@@ -484,6 +484,10 @@ class AdapterTests(unittest.TestCase):
         self.assertIn('Tap "INCREASE SEARCH RADIUS"', step([xml_field, el("INCREASE SEARCH RADIUS", (189, 900, 770, 840))])[0])
         empty = [field("Planken"), el("Clear", (900, 1050, 128, 275), desc=True), el("INCREASE SEARCH RADIUS", (189, 900, 770, 840))]
         self.assertIn('Tap "INCREASE SEARCH RADIUS"', step(empty)[0])
+        # v61 seed 31: at the end of a result list without the village, widen the radius instead of swiping on.
+        end = [field("Planken"), el("Ruggeller Riet", (189, 900, 1400, 1460), "title"), el("Parking", (189, 600, 1460, 1500), "subtitle"),
+               el("INCREASE SEARCH RADIUS", (189, 900, 2200, 2260))]
+        self.assertIn('Tap "INCREASE SEARCH RADIUS"', step(end)[0])
         self.assertIn('Tap "Clear"', step([field("Liechtenstein"), el("Clear", (900, 1050, 128, 275), desc=True)])[0])
         rows = [field("Planken"), el("Planken", (189, 900, 1400, 1460), "title"), el("Guidepost", (189, 600, 1460, 1500), "subtitle"),
                 el("Planken", (189, 900, 1500, 1560), "title"), el("Village", (189, 600, 1560, 1600), "subtitle")]
@@ -533,10 +537,17 @@ class AdapterTests(unittest.TestCase):
             agent.config = {"visual_stability_checks": 1, "visual_stability_pause": 0, "visual_stability_difference": 1,
                             "tree_backend": "a11y_forwarder", "supplemental_tree_packages": ["com.android.settings"]}
             agent.env = SimpleNamespace(get_state=lambda wait_to_stabilize: State(pixels, None, plan_route))
-            with patch.object(AutoGLMAgent, "supplement_controls", return_value="uiautomator state") as supplement:
-                self.assertEqual(agent.observe(), "uiautomator state")
+            labelled = State(pixels, None, plan_route + [el("Search")])
+            with patch.object(AutoGLMAgent, "supplement_controls", return_value=labelled) as supplement:
+                self.assertIs(agent.observe(), labelled)
             supplement.assert_called_once()
             self.assertTrue(supplement.call_args.kwargs["any_app"])
+            # v61 seed 31: an empty tree after a forwarder crash, the dump rejected; the screen is read once more.
+            empty = State(pixels, None, [])
+            with patch.object(AutoGLMAgent, "supplement_controls", side_effect=[empty, labelled]) as supplement, \
+                    patch("autoglm_agent.time.sleep"):
+                self.assertIs(agent.observe(), labelled)
+            self.assertEqual(supplement.call_count, 2)
 
     def test_xml_image_pairing(self):
         """Keep genuine XML on an unchanged scene, discard it after a visual transition."""

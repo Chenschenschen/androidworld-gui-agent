@@ -76,16 +76,43 @@ def skill_text(config, task_name, inputs):
     return text
 
 
-def skill_reminder(config, task_name, inputs):
+def reported_route_points(reply):
+    """Return the last "points: N" the model read from the route panel, or None."""
+    counts = re.findall(r"points:\s*(\d+)", reply)
+    return int(counts[-1]) if counts else None
+
+
+def favorite_save(reply, action):
+    """True when the model is about to save OsmAnd's Favorite dialog (not a route point).
+
+    The model saved Favorites repeatedly although the reminder forbids it
+    (final seed 43, trial _154334). It names the dialog in its own reply.
+    """
+    return (action["action_type"] == "click" and re.search(r"\b(Add|Edit) Favorite\b", reply, re.IGNORECASE) is not None
+            and re.search(r"\bSave\b", reply) is not None)
+
+
+def skill_reminder(config, task_name, inputs, route_points=0):
     """One status line per step that restates the Skill's search terms (D2 status bar).
 
     The Skill in the system prompt alone was not followed: trial
     OsmAndTrack_20261008T131512 still typed "Planken, Liechtenstein", and
     _131754 tapped SHOW ON MAP on an empty result instead of widening it.
+    `route_points` is the last route-panel count the model reported; code keeps
+    it so the line can say which waypoint comes next (trial _154334 searched
+    the second waypoint before the first was in a route).
     """
     if not config.get("task_skills", {}).get(task_name) or not inputs.get("waypoints"):
         return ""
-    terms = " ".join(f'{number}. "{waypoint.split(",")[0].strip()}"' for number, waypoint in enumerate(inputs["waypoints"], 1))
+    names = [waypoint.split(",")[0].strip() for waypoint in inputs["waypoints"]]
+    if route_points <= 0:
+        progress = (f'Route progress (from the last "points: N" you reported): 0 of {len(names)}. The first waypoint is not in a '
+                    f'route yet: open "{names[0]}"\'s place card and choose Actions > Plan a route. ')
+    elif route_points < len(names):
+        progress = f'Route progress: {route_points} of {len(names)}. Next waypoint: {route_points + 1}. "{names[route_points]}". '
+    else:
+        progress = f"Route progress: {route_points} of {len(names)}: all waypoints are in the route, tap Done to save the track. "
+    terms = " ".join(f'{number}. "{name}"' for number, name in enumerate(names, 1))
     # The map opens far away, and widening the search radius was abandoned too
     # early (trial OsmAndTrack_20261008T153131). Opening the region named in the
     # task first moves the map there; a manual check then found "Planken" at once.
@@ -94,7 +121,7 @@ def skill_reminder(config, task_name, inputs):
              "then press Back. ") if len(regions) == 1 else ""
     # The last three rules answer the v42 final-evaluation failures: a same-name
     # guidepost chosen, a Favorite saved three times, searches switched too early.
-    return (f"Skill reminder: {start}Type only the search term, never the full waypoint text. Search terms in order: {terms}. "
+    return (f"Skill reminder: {progress}{start}Type only the search term, never the full waypoint text. Search terms in order: {terms}. "
             "If the search shows 'Could not find anything', tap INCREASE SEARCH RADIUS (not SHOW ON MAP) until the place row appears, then tap that row. "
             "Choose only a row whose type is Village, Hamlet or Town, never a guidepost, station, stop or street. "
             "Never tap the star 'Add' on a place card: it saves a Favorite. First waypoint: Actions > Plan a route. "
@@ -456,6 +483,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         self.recording_ready, self.recording_errors = None, []
         self.corrections_this_step = 0
         self.observations = 0
+        self.route_points = 0  # last route-panel count the model reported (OsmAnd Skill)
 
     def observe(self):
         """Check successive screenshots visually; empty trees never imply a stable screen."""
@@ -538,7 +566,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         text += "Fresh observed GUI labels and state:\n" + control_notes(state) + "\n"
         if task_name == "ClockTimerEntry":
             text += timer_buffer_note(state) + "\n"
-        text += skill_reminder(self.config, task_name, self.scratch)
+        text += skill_reminder(self.config, task_name, self.scratch, self.route_points)
         if self.history:
             text += "Actual observed result of last action: " + json.dumps(self.history[-1]) + "\n"
         text += "Check the original completion condition before acting; finish when it is satisfied."
@@ -586,6 +614,9 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                 # convert_action checks focus only when a GUI tree exists; otherwise ask Android.
                 if action["action_type"] == "input_text" and not state.ui_elements and not text_field_focused(self.env.controller):
                     raise ValueError("No text field is focused, so nothing would be typed. Tap the text field first, then Type.")
+                if self.config.get("task_skills", {}).get(task_name) and favorite_save(raw, action):
+                    raise ValueError("That is OsmAnd's Favorite dialog: a Favorite is not a route point and creates no track. Do not save it. "
+                                     "Press Back to leave it, then use Actions > Plan a route (first waypoint) or Back to the route panel and its Add.")
                 calls = [line.strip() for line in raw.splitlines() if re.match(r"\s*(do|finish)\(", line)]
                 if len(calls) > 1 and len(set(calls)) == 1:
                     log_event(self.output, "IDENTICAL CALLS COLLAPSED", {"copies": len(calls), "decisions": 1, "executions_at_most": 1}, step)
@@ -661,6 +692,10 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
             result["selected_gui_control"] = {"label": (selected.get("metadata") or {}).get("observed_label")
                 or selected.get("text") or selected.get("content_description") or selected.get("class_name"),
                 "resource_id": selected.get("resource_id")}
+        # Keep the route-panel count the model just reported for the next status line.
+        points = reported_route_points(self.pending_reply)
+        if points is not None:
+            self.route_points = points
         self.history.append(result)
         self.executed_actions.append(action)
         # Keep native executed decisions, removing old images as upstream does.

@@ -116,6 +116,22 @@ class AdapterTests(unittest.TestCase):
         self.assertTrue(no_observed_effect(before, SimpleNamespace(pixels=noise, ui_elements=[]), 0.001))
         self.assertTrue(no_observed_effect(before, before, 0.001))
 
+    def test_route_progress_and_favorite_guard(self):
+        """Code keeps the reported route progress; saving a Favorite is refused for the route task."""
+        from autoglm_agent import favorite_save, reported_route_points, skill_reminder
+        config = {"task_skills": {"OsmAndTrack": "instructions/skills/osmand_track.md"}}
+        inputs = {"waypoints": ["Planken, Liechtenstein", "Rotenboden, Liechtenstein"]}
+        self.assertIn("not in a route yet", skill_reminder(config, "OsmAndTrack", inputs, 0))
+        self.assertIn('Next waypoint: 2. "Rotenboden"', skill_reminder(config, "OsmAndTrack", inputs, 1))
+        self.assertIn("tap Done", skill_reminder(config, "OsmAndTrack", inputs, 2))
+        # Recorded replies (trials _153947 and _154334).
+        self.assertEqual(reported_route_points('The route panel is open with "0 ft, points: 1" displayed.'), 1)
+        self.assertIsNone(reported_route_points("The map is centered on Planken."))
+        save = 'The "Add Favorite" dialog is open for Rotenboden. To add it to the route, I should tap the "Save" button.'
+        self.assertTrue(favorite_save(save, {"action_type": "click", "x": 1, "y": 1}))
+        self.assertFalse(favorite_save("Never tap the star Add: it saves a Favorite. I tap Actions.", {"action_type": "click", "x": 1, "y": 1}))
+        self.assertFalse(favorite_save(save, {"action_type": "navigate_back"}))
+
     def test_text_field_focus_without_gui_tree(self):
         """Android's input-method dump tells whether a text field holds focus."""
         from autoglm_agent import text_field_focused

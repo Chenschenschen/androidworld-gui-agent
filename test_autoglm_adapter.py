@@ -431,8 +431,9 @@ class AdapterTests(unittest.TestCase):
         key = UIElement(content_description="q", is_visible=True, is_clickable=True, bbox_pixels=BoundingBox(5, 112, 1654, 1808),
                         package_name="com.google.android.inputmethod.latin")
         row = UIElement(text="Planken", is_visible=True, is_clickable=True, bbox_pixels=BoundingBox(0, 1080, 404, 530), package_name="net.osmand")
+        up = UIElement(content_description="Navigate up", is_visible=True, is_clickable=True, bbox_pixels=BoundingBox(0, 147, 128, 275), package_name="net.osmand")
         pixels = np.full((500, 400, 3), 9, dtype=np.uint8)
-        screens = iter([[spinner, key], [spinner, key], [spinner, key], [row, key]])
+        screens = iter([[spinner, key], [spinner, key], [spinner, key], [up, row, key]])
         with tempfile.TemporaryDirectory(dir=temp_root) as folder, patch("autoglm_agent.time.sleep"):
             agent = object.__new__(AutoGLMAgent)
             agent.output, agent.history, agent.deadline = Path(folder), [], float("inf")
@@ -440,8 +441,30 @@ class AdapterTests(unittest.TestCase):
                             "visual_stability_difference": 1, "tree_backend": "a11y_forwarder"}
             agent.env = SimpleNamespace(get_state=lambda wait_to_stabilize: State(pixels, None, next(screens)))
             state = agent.observe()
-        self.assertEqual(state.ui_elements, [row, key])
-        self.assertEqual([c["label"] for c in screen_controls(state)], ["Planken"])
+        self.assertEqual(state.ui_elements, [up, row, key])
+        self.assertEqual([c["label"] for c in screen_controls(state)], ["Navigate up", "Planken"])
+
+    def test_near_empty_forwarder_tree_falls_back_to_uiautomator(self):
+        """The forwarder shows OsmAnd's Plan a route screen as only "Map"; UIAutomator then reads it."""
+        from autoglm_agent import thin_tree
+        el = lambda label, package="net.osmand": UIElement(content_description=label, is_visible=True, package_name=package,
+                                                           bbox_pixels=BoundingBox(0, 10, 0, 10))
+        plan_route = [el("Map"), el("15:42", "com.android.systemui")]
+        self.assertTrue(thin_tree(plan_route))
+        self.assertFalse(thin_tree(plan_route + [el("Search")]))
+        temp_root = Path(__file__).parent / ".tools/tmp"
+        temp_root.mkdir(parents=True, exist_ok=True)
+        pixels = np.full((500, 400, 3), 9, dtype=np.uint8)
+        with tempfile.TemporaryDirectory(dir=temp_root) as folder:
+            agent = object.__new__(AutoGLMAgent)
+            agent.output, agent.history, agent.deadline = Path(folder), [], float("inf")
+            agent.config = {"visual_stability_checks": 1, "visual_stability_pause": 0, "visual_stability_difference": 1,
+                            "tree_backend": "a11y_forwarder", "supplemental_tree_packages": []}
+            agent.env = SimpleNamespace(get_state=lambda wait_to_stabilize: State(pixels, None, plan_route))
+            with patch.object(AutoGLMAgent, "supplement_controls", return_value="uiautomator state") as supplement:
+                self.assertEqual(agent.observe(), "uiautomator state")
+            supplement.assert_called_once()
+            self.assertTrue(supplement.call_args.kwargs["any_app"])
 
     def test_xml_image_pairing(self):
         """Keep genuine XML on an unchanged scene, discard it after a visual transition."""

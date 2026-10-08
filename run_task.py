@@ -308,6 +308,8 @@ def main():
             "android_env": importlib.metadata.version("android-env")})
         if config.get("tree_backend") in {"uiautomator", "none"}:
             prepare_observations(adb, output, config)
+        else:
+            enable_fresh_xml()  # a near-empty forwarder tree falls back to a checked UIAutomator dump
         env = load_task_env(adb, args.task, config)
         save_json(output / "config.json", config)
         # Install only infrastructure and the app needed by this learning task.

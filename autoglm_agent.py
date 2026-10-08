@@ -100,6 +100,13 @@ def search_busy(elements):
     return any(e.is_visible and (e.resource_name or "").endswith(":id/searchProgressBar") for e in elements or [])
 
 
+def thin_tree(elements):
+    """True when the tree names at most one app control: the forwarder shows OsmAnd's Plan a route screen as just "Map"."""
+    named = [e for e in elements or [] if e.is_visible and (e.text or e.content_description)
+             and e.package_name != "com.android.systemui" and "inputmethod" not in (e.package_name or "")]
+    return len(named) <= 1
+
+
 def osmand_view(elements):
     """Read OsmAnd's screen from the GUI tree: route count, dialogs and search rows with their types.
 
@@ -158,7 +165,7 @@ def osmand_tree_check(view, action, shape, route_points, searched_next):
             return "This row is not the place itself (a Village, Hamlet or Town row). If none is listed, tap INCREASE SEARCH RADIUS."
     if route_points >= 1 and not searched_next and view["points"] is not None and inside(boxes.get("Add"), 60, 90, 10):
         return ("Add only adds the point under the map centre, which still shows the previous waypoint. First tap the Search "
-                "(magnifier) button at the top left of this screen, search the next waypoint, open its row, press Back here, then tap Add.")
+                "(magnifier) button, the second round button at the top left (the first, a globe, is Configure map), search the next waypoint, open its row, press Back here, then tap Add.")
     return None
 
 
@@ -224,7 +231,7 @@ def skill_reminder(config, task_name, inputs, route_points=0):
             "Never tap the star 'Add' on a place card: it saves a Favorite. First waypoint: Actions > Plan a route. "
             # Trial _153947 reached points: 1, then tapped the panel's Add expecting a search.
             "Add never searches: it only adds the point under the map centre. For each later waypoint, in this order: "
-            "tap the Search (magnifier) button at the top left, clear the old text, type the term, tap the place's row, "
+            "tap the Search (magnifier) button, the second round button at the top left (the first, a globe, is Configure map), clear the old text, type the term, tap the place's row, "
             "press Back until the route panel shows 'points: N', and only then tap that panel's Add once. "
             "Finish the current waypoint before searching the next.\n")
 
@@ -623,9 +630,12 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
             raise RuntimeError("Screenshot is entirely black: emulator rendering failure (try -gpu swiftshader_indirect)")
         if self.config.get("supplemental_tree_packages"):
             state = self.supplement_controls(state)
+        elif self.config["tree_backend"] == "a11y_forwarder" and thin_tree(state.ui_elements):
+            # The same screen read by UIAutomator lists the route panel (points, Add, Done) in about 3 s.
+            state = self.supplement_controls(state, any_app=True)
         return state
 
-    def supplement_controls(self, state):
+    def supplement_controls(self, state, any_app=False):
         """Pair a checked, unique XML dump with a visually unchanged fresh screenshot."""
         self.observations += 1
         record = {"capture": self.observations, "used": False}
@@ -633,7 +643,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
             activity, response = adb_utils.get_current_activity(self.env.controller)
             adb_utils.check_ok(response, "Current activity unavailable")
             record["activity"] = activity
-            if not activity or activity.split("/")[0] not in self.config["supplemental_tree_packages"]:
+            if not activity or not any_app and activity.split("/")[0] not in self.config["supplemental_tree_packages"]:
                 return state
             xml = adb_utils.uiautomator_dump(self.env.controller, timeout_sec=8)
             path = self.output / f"ui_capture_{self.observations:03d}.xml"
@@ -763,7 +773,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                     if route_add_too_early(raw, action, points_now, searched):
                         waypoint = self.scratch["waypoints"][min(points_now, len(self.scratch["waypoints"]) - 1)].split(",")[0].strip()
                         raise ValueError(f"Add only adds the point under the map centre, which still shows the previous waypoint. First tap the Search "
-                                         f'(magnifier) button at the top left of this screen, type "{waypoint}", open its row, press Back to this panel, then tap Add.')
+                                         f'(magnifier) button, the second round button at the top left (the first, a globe, is Configure map), type "{waypoint}", open its row, press Back to this panel, then tap Add.')
                     if favorite_save(raw, action):
                         raise ValueError("That is OsmAnd's Favorite dialog: a Favorite is not a route point and creates no track. Do not save it. "
                                          "Press Back to leave it, then use Actions > Plan a route (first waypoint) or Back to the route panel and its Add.")

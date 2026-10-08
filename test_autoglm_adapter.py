@@ -159,7 +159,8 @@ class AdapterTests(unittest.TestCase):
         from autoglm_agent import osmand_view, osmand_tree_check
         def el(text, box):
             return UIElement(text=text, is_visible=True, bbox_pixels=BoundingBox(*box), package_name="net.osmand")
-        results = [el("SHOW ON MAP", (142, 1080, 278, 404)),
+        field = UIElement(text="Planken", is_visible=True, bbox_pixels=BoundingBox(189, 975, 128, 275), resource_name="net.osmand:id/searchEditText")
+        results = [field, el("SHOW ON MAP", (142, 1080, 278, 404)),
                    el("Planken", (147, 847, 475, 532)), el("Village • 2.12 mi from Schaan", (147, 630, 532, 583)),
                    el("Planken", (147, 847, 635, 692)), el("Guidepost", (147, 315, 692, 743))]
         view = osmand_view(results)
@@ -178,6 +179,10 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(panel["points"], 1)
         self.assertIn("Search", osmand_tree_check(panel, click(932, 2268), (2400, 1080), 1, False))
         self.assertIsNone(osmand_tree_check(panel, click(932, 2268), (2400, 1080), 1, True))
+        # v57 seed 8: the panel's date above its title looked like a result row covering Done.
+        full = osmand_view([el("Sun 15 Oct 2023", (147, 782, 149, 200)), el("Plan a route", (147, 782, 200, 255)),
+                            el("Done", (835, 1027, 154, 249)), el("points: 2", (271, 1038, 1933, 1990))])
+        self.assertIsNone(osmand_tree_check(full, click(931, 199), (2400, 1080), 2, False))
 
     def test_osmand_rule_breaks_are_refused(self):
         """Rules the model broke repeatedly become checks: SHOW ON MAP and full-text queries."""

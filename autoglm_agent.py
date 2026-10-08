@@ -127,7 +127,10 @@ def osmand_view(elements):
         if match:
             view["points"] = int(match[1])
         view["boxes"].setdefault(e.text, e.bbox_pixels)
-    for name in visible:
+    # Result rows exist only on the search screen; on the route panel the date and title formed a false row
+    # whose span covered Done, and the row check refused Done at points: 2 of 2 (v57 seed 8).
+    searching = any(element_id(e).endswith("searchEditText") for e in elements if e.is_visible)
+    for name in visible if searching else []:
         for kind in visible:
             if (kind is not name and kind.bbox_pixels.x_min == name.bbox_pixels.x_min
                     and abs(kind.bbox_pixels.y_min - name.bbox_pixels.y_max) <= 4 and not re.search(r"\d+(\.\d+)? (mi|km)$", kind.text)):

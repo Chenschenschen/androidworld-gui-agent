@@ -155,7 +155,8 @@ def osmand_tree_check(view, action, shape, route_points, searched_next):
                 "for a later waypoint press Back until the route panel shows 'points: N' and tap that panel's Add.")
     height, width = shape
     for row in view["rows"]:
-        if row["top"] <= y <= row["bottom"] and not row["settlement"]:
+        # The country row is the Skill's region step (v51 seed 8 had it refused).
+        if row["top"] <= y <= row["bottom"] and not row["settlement"] and not row["type"].startswith("Country"):
             good = [r for r in view["rows"] if r["settlement"]]
             if good:
                 cx, cy = good[0]["center"]
@@ -463,10 +464,13 @@ def screen_controls(state):
             control = {"label": (element.metadata or {}).get("observed_label") or element.text or element.content_description or element.class_name,
                 "checked": element.is_checked if element.is_checkable else None,
                 "selected": element.is_selected}
-            if (element.is_clickable or element.is_editable) and element.bbox_pixels:
+            # Often only a label's unlabeled container is clickable (OsmAnd's rows, Actions, INCREASE SEARCH
+            # RADIUS in the forwarder tree); a tap on the label reaches that container, so labels get a centre too.
+            if element.bbox_pixels:
                 height, width = state.pixels.shape[:2]
                 box = element.bbox_pixels
                 control["tap_center"] = [int((box.x_min + box.x_max) * 500 / width), int((box.y_min + box.y_max) * 500 / height)]
+            if element.is_clickable or element.is_editable:
                 control["editable"] = element.is_editable
                 control["focused"] = element.is_focused
             controls.append(control)

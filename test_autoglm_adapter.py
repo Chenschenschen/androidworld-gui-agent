@@ -444,6 +444,16 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(state.ui_elements, [up, row, key])
         self.assertEqual([c["label"] for c in screen_controls(state)], ["Navigate up", "Planken"])
 
+    def test_region_row_and_label_tap_centres(self):
+        """v51 seed 8: the country row (Skill's region step) was refused, and unclickable labels had no centre."""
+        from autoglm_agent import osmand_view, osmand_tree_check
+        el = lambda text, box: UIElement(text=text, is_visible=True, bbox_pixels=BoundingBox(*box), package_name="net.osmand")
+        country = osmand_view([el("Liechtenstein", (189, 600, 404, 466)), el("Country", (189, 400, 466, 512))])
+        self.assertIsNone(osmand_tree_check(country, {"action_type": "click", "x": 400, "y": 440}, (2400, 1080), 0, False))
+        radius = el("INCREASE SEARCH RADIUS", (189, 900, 700, 760))
+        state = SimpleNamespace(pixels=np.zeros((2400, 1080, 3), dtype=np.uint8), ui_elements=[radius])
+        self.assertEqual(screen_controls(state)[0]["tap_center"], [504, 304])
+
     def test_near_empty_forwarder_tree_falls_back_to_uiautomator(self):
         """The forwarder shows OsmAnd's Plan a route screen as only "Map"; UIAutomator then reads it."""
         from autoglm_agent import thin_tree

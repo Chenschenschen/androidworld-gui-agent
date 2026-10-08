@@ -151,7 +151,7 @@ def setup_required_app(app, env, output):
 def record_video(adb, output, stop, ready, errors):
     """Record consecutive emulator clips, because Android screenrecord has a limit."""
     prefix = [str(adb), "-s", "emulator-5554"]
-    number = 0
+    number, startup_failures = 0, 0
     try:
         if subprocess.check_output(prefix + ["shell", "pidof", "screenrecord"]).strip():
             raise RuntimeError("Another screen recording is already running")
@@ -187,6 +187,22 @@ def record_video(adb, output, stop, ready, errors):
                     process.terminate()
                     process.wait(timeout=5)
                     raise RuntimeError("Our screen recorder did not become ready within its bounded wait")
+                # A visible PID is not yet a working recorder: the encoder can
+                # still fail to configure ("unable to configure video/avc codec
+                # ... err=-38", trial OsmAndTrack_20261008T121915) and leave an
+                # empty clip. Confirm it survives start-up before releasing GUI
+                # actions; start a new clip a bounded number of times.
+                time.sleep(1.5)
+                if process.poll() is not None:
+                    startup_failures += 1
+                    log_event(output, "RECORDING NOTE", {"clip": number, "event": "recorder failed during start-up",
+                        "stderr": (output / f"video_{number:03d}.stderr.txt").read_text(errors="replace").strip(),
+                        "action": "discard this clip and start a new one"})
+                    if startup_failures >= 3:
+                        raise RuntimeError("Screen recorder failed during start-up three times in a row")
+                    subprocess.run(prefix + ["shell", "rm", "-f", remote], capture_output=True)
+                    continue
+                startup_failures = 0
                 ready.set()
                 # Poll each second so a recorder that ends early is replaced by
                 # a new clip at once (observed in trial OsmAndTrack_20261008T111626,
@@ -349,7 +365,7 @@ def main():
         summary["evaluation_valid"] = True
         recorder = threading.Thread(target=record_video, args=(adb, output, stop, ready, video_errors))
         recorder.start()
-        if not ready.wait(timeout=15) or video_errors:
+        if not ready.wait(timeout=45) or video_errors:
             raise RuntimeError("Recording failed to start: " + str(video_errors))
         agent = AutoGLMAgent(env, output, config, inputs)
         agent.recording_ready = ready

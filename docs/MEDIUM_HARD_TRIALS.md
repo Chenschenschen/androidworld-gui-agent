@@ -26,6 +26,8 @@ temperature 0. Task seeds generate the task instance; see each `task.json`.
 | 7 | `trial_OsmAndTrack_20261008T111626_419084Z` | v31 | OsmAnd, 43 (2 waypoints) | FAIL, `control_no_progress` after 6 steps; recording invalid | Opened Menu > Plan a route > Create new route, then tapped **Add** expecting a search dialog. In OsmAnd, Add places a point at the centre crosshair, which was in the Gulf of Guinea (default world view). The first Add worked (`points: 1`, verified afterwards), but the counter and dot appeared after the observation; repeated Adds at the same spot add nothing, so the cycle stop ended the run. Separately the device recorder ended before the run did (`kill -2` found no process) | v32 recorder polling (below); OsmAnd knowledge investigated manually (next section) |
 | 8 | `eval_batch_20261008T113903_850432Z` (3 runs) | v32 | OsmAnd, 42/43/44 | 0/3; seed 43 recording-invalid | Same strategy in every run: Menu > Plan a route > Create new route, then repeated **Add** on the default world view until the cycle stop (6 steps). In all three runs the recorder ended right after the Launch action; v32 replaced the clip for seeds 42 and 44, but for seed 43 no clip had been written | Kept as a learning record only; superseded as baseline because recording was affected |
 | 9 | `trial_OsmAndTrack_20261008T114612_032845Z` | v32 | OsmAnd, 44 | FAIL, same Add cycle | Diagnostic run with the device log cleared first. adbd logged `host-34: connection terminated` at the moment the recorder ended; the console logged `Failed to execute ADB command (try 1 of 3): ... am start -W -n net.osmand/...` | **Root cause:** Android World launches with a 5 s timeout; the cold OsmAnd start was slower, and android_env's retry runs `adb kill-server`, dropping the recorder's ADB connection. v33 launches with a 30 s timeout |
+| 10 | `eval_batch_20261008T115318_201667Z` (3 runs) | v33 | OsmAnd, 42/43/44, no Skill | 0/3; seed 42 recording-invalid | Launch fix confirmed (no launch timeout). Seed 42 searched by name but saved a Favorite, then looped for 66 steps (search "Balzers" > raise radius > clear > retype) until the 75th step; a slow `input text` then timed out and android_env's `adb kill-server` ended the recorder. Seeds 43/44: the Add cycle | v34 keeps the ADB server on retries (`keep_adb_server`) |
+| 11 | `eval_batch_20261008T121911_015516Z` (stopped) | v34 | OsmAnd, 42, no Skill | Recording-invalid after 1 step; batch stopped by us during seed 43 | The recorder's stderr: `unable to configure video/avc codec at 540x1200 (err=-38)`. The PID existed briefly, so the old readiness check released GUI actions before the encoder had failed | v35 confirms each clip survives start-up for 1.5 s, else starts a new one (up to three times). Verified by forcing an impossible size on the first clip: a logged note, then a valid second clip |
 ## Changes and why they sit in that layer
 
 - **Fresh XML retry (program layer).** The failure was a transient device
@@ -57,6 +59,11 @@ temperature 0. Task seeds generate the task instance; see each `task.json`.
   restart the ADB server. Launching with a 30-second timeout removes the
   trigger; the v32 polling stays as a safety net. Offline check:
   `test_launch_waits_for_slow_cold_start`.
+- **Keep the ADB server (program layer, v34).** Trial 10 showed that any slow
+  command can trigger android_env's `adb kill-server` retry, not only launches.
+  `android_compat.keep_adb_server()` keeps the retry but replaces the server
+  restart with a 2-second pause. Offline check: `test_adb_retry_keeps_server`.
+- **Recorder start-up check (program layer, v35).** See trial 11.
 
 ## How OsmAndTrack can actually be completed (manual exploration)
 

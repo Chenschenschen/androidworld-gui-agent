@@ -86,9 +86,15 @@ def skill_reminder(config, task_name, inputs):
     if not config.get("task_skills", {}).get(task_name) or not inputs.get("waypoints"):
         return ""
     terms = " ".join(f'{number}. "{waypoint.split(",")[0].strip()}"' for number, waypoint in enumerate(inputs["waypoints"], 1))
+    # The map opens far away, and widening the search radius was abandoned too
+    # early (trial OsmAndTrack_20261008T153131). Opening the region named in the
+    # task first moves the map there; a manual check then found "Planken" at once.
+    regions = list(dict.fromkeys(w.split(",", 1)[1].strip() for w in inputs["waypoints"] if "," in w))
+    start = (f'Before the first waypoint, search "{regions[0]}" (the region in the task), tap its result row so the map moves there, '
+             "then press Back. ") if len(regions) == 1 else ""
     # The last three rules answer the v42 final-evaluation failures: a same-name
     # guidepost chosen, a Favorite saved three times, searches switched too early.
-    return (f"Skill reminder: type only the search term, never the full waypoint text. Search terms in order: {terms}. "
+    return (f"Skill reminder: {start}Type only the search term, never the full waypoint text. Search terms in order: {terms}. "
             "If the search shows 'Could not find anything', tap INCREASE SEARCH RADIUS (not SHOW ON MAP) until the place row appears, then tap that row. "
             "Choose only a row whose type is Village, Hamlet or Town, never a guidepost, station, stop or street. "
             "Never tap the star 'Add' on a place card: it saves a Favorite. First waypoint: Actions > Plan a route. "

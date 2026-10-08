@@ -20,6 +20,9 @@ not mixed in.
 | Environment | Android World at `2dfc5ca`, Python 3.11, Pixel 6 API 33 Google APIs image, headless emulator `-no-snapshot -grpc 8554 -camera-back emulated -camera-front emulated -gpu host -no-window` (why: [SETUP.md](SETUP.md) troubleshooting), Windows kept awake during the batch |
 | Task seeds | 42, 43, 44 (seed fixes each task instance; see `task.json` in each run) |
 
+The evaluated code is tagged `final-eval-v42` (`git checkout final-eval-v42`); the branch head
+contains later, unevaluated exploration (v43-v48, [MEDIUM_HARD_TRIALS.md](MEDIUM_HARD_TRIALS.md)).
+
 Command (one batch, all nine runs, no stop after a failure):
 
 ```powershell

@@ -112,3 +112,16 @@ Favorite trap; instruction layer, or a program rule that blocks the Favorite
 dialog for this task), and the model describing results that were not on screen
 (model/perception; not fixable by instructions alone). See
 [FINAL_FAILURE_ANALYSIS.md](FINAL_FAILURE_ANALYSIS.md).
+
+## Follow-up after the evaluation (v43-v48, not evaluated)
+
+We then implemented the program-layer fixes named above and more: a focus
+check for Type that needs no GUI tree, refusing Favorite saves, comma queries,
+SHOW ON MAP taps and a route Add before the next search, a code-kept route
+progress line and a region-first step. On ten practice runs (seeds outside the
+evaluation set) none passed; two added the first waypoint correctly and none a
+second. The checks worked when they fired, but without a GUI tree they relied
+on the model's own description of the screen. A probe then showed that Android
+World's accessibility forwarder returns OsmAnd's GUI tree in 0.2 s, which would
+let the checks use the real screen; this is the recommended next step. Details:
+[MEDIUM_HARD_TRIALS.md](MEDIUM_HARD_TRIALS.md), rows 22-28.

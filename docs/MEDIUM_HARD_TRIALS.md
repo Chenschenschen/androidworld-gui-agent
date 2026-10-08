@@ -102,3 +102,42 @@ emulator, to learn what the model was missing. The resulting track passed the
 This is application knowledge (D5 pp.41-42: "a missing fact -> knowledge"),
 not a model capability gap. It motivates the measured improvement in
 [IMPROVEMENT_OSMAND.md](IMPROVEMENT_OSMAND.md).
+
+
+## After the final evaluation: v43-v48 (exploration, not evaluated)
+
+The final evaluation stays on v42. Afterwards we tried to make the hard task
+pass at least once, following the failure analysis, with program-layer checks
+and a stronger per-step reminder. Every version was tested only on practice
+seeds outside the evaluation set (two-waypoint instances 1, 2, 3, 8, 14).
+**Result: 0/10 practice runs passed**; two runs added the first waypoint
+correctly (the village, `points: 1`), a third added a same-name residential
+area, and none added a second point. We stopped here by
+decision; the code on the branch head is this unevaluated v48, and the
+evaluated code is tagged `final-eval-v42`.
+
+| # | Run ID | Version | Task, seed | Outcome | Cause | Change made |
+| --- | --- | --- | --- | --- | --- | --- |
+| 22 | `trial_OsmAndTrack_20261008T153131_718229Z` | v43 | OsmAnd, practice seed 8 (Planken, Rotenboden), Skill | FAIL, `control_no_progress` after 11 steps | Test of v43 (focus check for Type without a GUI tree; reminder rules). No Type was refused. Typed "Planken" (step 4) and tapped INCREASE SEARCH RADIUS twice from the default world view (steps 5-6; the first step-6 reply repeated "Wait, the instruction says ..." until it was cut off, `Truncated model reply`). Then alternated Type "Planken, Liechtenstein" (steps 7, 9, 11; "returned only 'Liechtenstein'") and "Planken" (steps 8, 10) until the cycle stop at step 12 | v44: the Skill and reminder start with the task's region: search "Liechtenstein" (text after the comma in the task input), open its row, press Back. Manual check: "Planken" is then the first result (village) without widening the radius |
+| 23 | `trial_OsmAndTrack_20261008T153947_450189Z` | v44 | OsmAnd, practice seed 8, Skill | FAIL, `control_no_progress` after 15 steps; **first waypoint added to the route** | Skipped the region step: typed "Planken" (step 5) and tapped SHOW ON MAP while the search was still loading (step 6); the map stayed on West Africa, but the model said "The map has moved to the location of Planken". After Back it widened the radius three times (steps 8-10), chose the "Village" row (step 11) and Actions > Plan a route (`points: 1`, step 14). It then tapped the route panel's Add "to search for and add the next waypoint" (steps 14-15) until the cycle stop at the third Add (step 16) | v45: the reminder states that Add never searches (it only adds the map centre) and lists the order for each later waypoint |
+| 24 | `trial_OsmAndTrack_20261008T154334_136129Z` | v45 | OsmAnd, practice seed 8, Skill | FAIL, `control_no_progress` after 19 steps | Skipped the region step; tapped SHOW ON MAP on the loading "Planken" search (step 5). With the map on West Africa it said "The map is centered on Planken" and searched the second waypoint before the first was in a route (step 6). The focus check refused one Type (step 7); the model tapped the field, typed "Rotenboden", widened the radius three times and chose the "Rotenboden" (Village) row (step 12). It then alternated the place card's star Add and Save in the Add/Edit Favorite dialog (steps 13-19; Save executed three times, the fourth Save at step 20 was stopped by the cycle stop) | v46: the status line carries route progress from the last "points: N" the model reported (kept by code) and names the next step; a click is refused while the reply describes the Add/Edit Favorite dialog and Save |
+| 25 | `trial_OsmAndTrack_20261008T154913_986857Z` | v46 | OsmAnd, practice seed 8, Skill | FAIL, `control_no_progress` after 14 steps; **first waypoint added to the route** | Skipped the region step; tapped SHOW ON MAP on the loading "Planken" search (step 5), then widened the radius three times (steps 7-9), chose the "Village" row (step 10) and Actions > Plan a route (`points: 1`, step 13). From step 14 the status line read "Route progress: 1 of 2. Next waypoint: 2. "Rotenboden"", but the model tapped the route panel's Add "to open the search panel and add "Rotenboden"" (steps 13-14) until the cycle stop at the third Add (step 15). No Favorite dialog appeared, so the v46 guard did not fire | v47: the route panel's Add is refused until the next waypoint's term has been typed since the route count last changed |
+| 26 | `trial_OsmAndTrack_20261008T155302_951757Z` | v47 | OsmAnd, practice seed 8, Skill | FAIL, `control_no_progress` after 18 steps | Skipped the region step; tapped the SHOW ON MAP row on the loading "Planken" search twice (steps 5-6), then "The map is centered on Burkina Faso, not Planken" (step 7). After Back and one radius increase (step 8) it typed the full "Planken, Liechtenstein" (steps 10 and 13), got only the country row, and tapped the INCREASE SEARCH RADIUS position at steps 11 and 14-18, each reply saying the place was "still not found". Once the list grew, these taps opened the "Liechtensteiner Straße" street row (step 17) and address 137a (step 18); at step 19 it still described the radius button and the cycle stop ended the run. No route was started, so the v47 Add guard was never reached | v48: taps on the plain SHOW ON MAP row and queries containing a comma are refused with a correction; the "SHOW <PLACE> ON THE MAP" row of a street list is unaffected |
+| 27 | `eval_batch_20261008T155849_720693Z` (5 runs) | v48 | OsmAnd, practice seeds 8, 14, 1, 2, 3, Skill | 0/5; seed 14 reached `points: 1` with a same-name residential area | Each run failed differently: seed 8 alternated the refused comma query and "Planken" without widening the radius; seed 14 chose "Schaanwald (Residential area)" rather than the village and reached `points: 1`, the Add check redirected it to search, then it confused the adjacent Configure-map and Search buttons; seed 1 made the **country** "Liechtenstein" route point 1 and then cycled through the Favorite dialog without saving; seed 2 lost field focus after Clear and looped on refused Types; seed 3 kept tapping SHOW ON MAP, because a correction reply contains only the action and the text-based SHOW ON MAP check could not see it | Stopped. Each text-based rule exposed the next failure |
+| 28 | probe, no model | v48 | Android World accessibility forwarder on OsmAnd | **0.2 s per GUI tree, no crash dialog** | UIAutomator dumps on OsmAnd took 17-58 s and often failed ("null root node"), so v43-v48 had to infer state from the model's words. The official forwarder (disabled since the teammates' v10 because it crashed then) returned full trees with result types ("Public transport stop", "Building") in 0.2 s | Recommended next step, not implemented: switch the observation backend to the forwarder and base the checks on the tapped element and the screen's labels |
+
+What v43-v48 established:
+
+- **Checks that held:** the focus check (Type refused when Android reports no
+  focused text field), the comma-query check and the route-Add precondition
+  each fired and redirected the model as intended.
+- **Why it did not converge:** without a GUI tree the checks relied on the
+  model's own description of the screen. The model rarely followed the
+  region-first step, tapped SHOW ON MAP while results were still loading
+  (`too_early`), and a correction reply with no text bypassed a text-based check.
+- **Incident:** during a manual test we ran `pm clear net.osmand`, which also
+  deleted the Liechtenstein map from OsmAnd's external storage (the app
+  snapshot covers only `/data/data`). It was restored by removing the OsmAnd
+  snapshot and re-running the official OsmAnd setup without the model
+  (map file and snapshot verified). All practice runs listed here ran after
+  the restore except row 22.

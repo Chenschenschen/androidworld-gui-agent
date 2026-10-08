@@ -10,6 +10,9 @@ experimental implementation with recorded successes and preserved failures.
 
 ## Final evaluation (v42, one frozen version, 8 October 2026)
 
+The evaluated code is tagged **`final-eval-v42`**. The branch head adds v43-v48, an
+unevaluated follow-up on the hard task (0/10 practice runs; see the trial log).
+
 | Task (course difficulty) | Official PASS | Notes |
 | --- | --- | --- |
 | ContactsAddContact (easy) | **3/3** | 11-13 steps, model finished every run |

@@ -77,3 +77,14 @@ result if left in place. Full evidence: [MEDIUM_HARD_TRIALS.md](MEDIUM_HARD_TRIA
 | HTTP 400 "Prompt exceeds max length" | Full history after 88 steps (22k tokens) | Goal turn plus latest 19 turns |
 | Legitimate repeated taps stopped | "5 mi" -> "10 mi" invisible at 64x128 | Count clear full-resolution pixel changes |
 | Launch name rejected | Model translated the app name into Chinese | Resolve non-Latin names when one app is allowed |
+
+## After the evaluation
+
+Six follow-up versions (v43-v48) turned the fix layers above into checks and
+were tested on ten practice runs: 0/10 passed, and new failure modes appeared
+each time (for example making the country itself route point 1, confusing two
+adjacent buttons, or tapping SHOW ON MAP while results were still loading,
+which is `too_early`). The common cause is observation: OsmAnd gave no usable
+GUI tree to our UIAutomator path, so the program could not check the screen
+itself. Android World's accessibility forwarder does provide it in 0.2 s; see
+[MEDIUM_HARD_TRIALS.md](MEDIUM_HARD_TRIALS.md), rows 22-28.

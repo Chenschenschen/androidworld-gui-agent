@@ -1,5 +1,9 @@
 # Project working rules
 
+Update, 8 October 2026: branch head is v48, an UNEVALUATED follow-up (OsmAnd checks; 0/10 practice runs,
+see docs/MEDIUM_HARD_TRIALS.md rows 22-28). The evaluated code is tag final-eval-v42. Recommended next
+step if work resumes: Android World's accessibility forwarder gives OsmAnd's GUI tree in 0.2 s.
+
 Current state, 8 October 2026 (v42, branch Jia): the course evaluation is complete. Final batch
 eval_batch_20261008T133403: Contacts 3/3, Calendar 3/3, OsmAndTrack 0/3, one frozen version, all runs
 valid and recorded. Documented improvement: OsmAnd Skill (instructions/skills/osmand_track.md) versus

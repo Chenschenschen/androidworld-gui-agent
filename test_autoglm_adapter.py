@@ -488,6 +488,9 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(step(card("Rotenboden", "Hamlet"), 1)[1], "Rotenboden")
         self.assertIn("Press Back", step([field("Rotenboden")], 1, "Rotenboden")[0])
         self.assertIn('Tap "Add"', step(panel(1), 1, "Rotenboden")[0])
+        # v56 seed 8: the place card lies over the route panel after SHOW ... ON THE MAP.
+        self.assertEqual(step(card("Rotenboden", "Village • 1.10 mi from Vaduz") + panel(1), 1), (
+            'Press Back until the route panel ("points: 1", Add, Done) is shown; the map stays centred on "Rotenboden".', "Rotenboden"))
         # v55 seed 8: a street list inside the place, and a panel whose centre is still the last point.
         streets = [field("Rotenboden "), el("SHOW ROTENBODEN ON THE MAP", (142, 1080, 278, 404), "buttonToolbarTitle")]
         self.assertIn('Tap "SHOW ROTENBODEN ON THE MAP"', step(streets, 1, "Rotenboden")[0])

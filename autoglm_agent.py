@@ -214,6 +214,14 @@ def osmand_next_step(elements, terms, route_points, centred_on, shape):
         return (tap(cancel) + " This dialog is not part of the route." if cancel else "Press Back."), None
     if find("Directions from") and find("Plan a route"):
         return tap(find("Plan a route")) + f' This starts the route at "{terms[0]}" (points: 1).', None
+    if view["place_card"]:  # checked before the route panel it can cover (v56 seed 8)
+        name, kind = by_id("context_menu_line1"), by_id("context_menu_line2")
+        name, kind = (name.text or "").strip() if name else "", (kind.text or "") if kind else ""
+        if name != term or not SETTLEMENT.match(kind):
+            return f'This card is not the place "{term}" (a Village, Hamlet or Town). Press Back and choose the place row.', None
+        if route_points == 0:
+            return tap(find("Actions")) + ' Then choose "Plan a route".', None
+        return f'Press Back until the route panel ("points: {route_points}", Add, Done) is shown; the map stays centred on "{name}".', name
     if view["points"] is not None:
         n = view["points"]
         if n >= total:
@@ -224,14 +232,6 @@ def osmand_next_step(elements, terms, route_points, centred_on, shape):
             return (tap(add) + f' The map is centred on "{terms[n]}"; Add makes it point {n + 1}.' if add else None), None
         search = find("Search")
         return (tap(search) + f' (the magnifier) to look up the next waypoint "{terms[n]}".' if search else None), None
-    if view["place_card"]:
-        name, kind = by_id("context_menu_line1"), by_id("context_menu_line2")
-        name, kind = (name.text or "").strip() if name else "", (kind.text or "") if kind else ""
-        if name != term or not SETTLEMENT.match(kind):
-            return f'This card is not the place "{term}" (a Village, Hamlet or Town). Press Back and choose the place row.', None
-        if route_points == 0:
-            return tap(find("Actions")) + ' Then choose "Plan a route".', None
-        return f'Press Back until the route panel ("points: {route_points}", Add, Done) is shown; the map stays centred on "{name}".', name
     field = by_id("searchEditText")
     if field is not None:
         show = find(f"SHOW {re.escape(term.upper())} ON THE MAP")
@@ -849,6 +849,10 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                     terms = [waypoint.split(",")[0].strip() for waypoint in self.scratch["waypoints"]]
                     searched = points_now == self.route_points and self.centred_on == terms[min(points_now, len(terms) - 1)]
                     correction = osmand_tree_check(view, action, state.pixels.shape[:2], points_now, searched)
+                    # false_done (D1 p.50): v56 seed 8 finished at points: 1 of 2. The panel stays until Done saves the track.
+                    if action["action_type"] == "status" and self.tree_route and (points_now < len(terms) or view["points"] is not None):
+                        correction = (f"The route has {points_now} of {len(terms)} points and is not saved yet (the route panel closes when Done "
+                                      "saves the track), so the task is not complete.")
                     if correction is None and action["action_type"] == "input_text" and "," in action["text"]:
                         correction = osmand_rule_break(raw, action)
                     if correction:

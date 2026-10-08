@@ -60,6 +60,17 @@ class AdapterTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             convert_action({"command": "do", "action": "Launch", "app": "Chrome"}, self.state, ["osmand"])
 
+    def test_launch_waits_for_slow_cold_start(self):
+        """Mapped apps get a long `am start -W` timeout; URI-launched apps keep the upstream path."""
+        from autoglm_agent import launch_app
+        with patch("autoglm_agent.adb_utils.start_activity") as start, patch("autoglm_agent.adb_utils.check_ok"), \
+                patch("autoglm_agent.adb_utils.launch_app") as upstream:
+            launch_app("osmand", None)
+            self.assertIn("net.osmand", start.call_args.args[0])
+            self.assertGreaterEqual(start.call_args.kwargs["timeout_sec"], 30)
+            launch_app("contacts", None)
+            upstream.assert_called_once_with("contacts", None)
+
     def test_fresh_xml_retries_transient_null_root(self):
         """A launching app's transient null root is retried; stale XML is never returned."""
         from android_world.env import adb_utils

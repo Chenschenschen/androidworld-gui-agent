@@ -56,6 +56,20 @@ def launch_name(app, allowed_apps):
     return None
 
 
+def launch_app(app_name, controller, timeout_sec=30):
+    """Launch like Android World's launch_app, but give `am start -W` time to finish.
+
+    Android World waits only 5 seconds. A cold OsmAnd start on the software-
+    rendered emulator took longer; android_env then restarted the ADB server,
+    which also ended the screen recorder (batch eval_batch_20261008T113903).
+    URI-launched apps (for example Contacts) keep the upstream path.
+    """
+    activity = None if app_name in adb_utils._DEFAULT_URIS else adb_utils.get_adb_activity(app_name)
+    if activity is None:
+        return adb_utils.launch_app(app_name, controller)
+    adb_utils.check_ok(adb_utils.start_activity(activity, [], controller, timeout_sec=timeout_sec), f"Launch {app_name} failed")
+
+
 def api_settings():
     """Read simple .env values as data; return endpoint/model/key without logging it."""
     values = {}
@@ -521,6 +535,8 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
             time.sleep(action["seconds"])
         elif action["action_type"] == "input_text":
             type_without_submit(action["text"], self.env.controller)
+        elif action["action_type"] == "open_app":
+            launch_app(action["app_name"], self.env.controller)
         elif action["action_type"] != "status":
             self.env.execute_action(json_action.JSONAction(**action))
         after = self.observe()

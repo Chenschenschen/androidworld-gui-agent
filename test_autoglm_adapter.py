@@ -167,6 +167,10 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual([(r["name"], r["settlement"]) for r in view["rows"]], [("Planken", True), ("Planken", False)])
         click = lambda x, y: {"action_type": "click", "x": x, "y": y}
         self.assertIn("SHOW ON MAP", osmand_tree_check(view, click(600, 340), (2400, 1080), 0, False))
+        # v59 seed 7 tapped the map's Route button (navigation) instead of Search.
+        route = UIElement(content_description="Route", is_visible=True, bbox_pixels=BoundingBox(210, 347, 2182, 2319),
+                          resource_name="net.osmand:id/map_route_info_button")
+        self.assertIn("navigation", osmand_tree_check(osmand_view([route]), click(277, 2251), (2400, 1080), 0, False))
         self.assertIn("Guidepost", osmand_tree_check(view, click(500, 700), (2400, 1080), 0, False))
         self.assertIsNone(osmand_tree_check(view, click(500, 510), (2400, 1080), 0, False))
         card = osmand_view([el("Planken", (42, 221, 1809, 1876)), el("Add", (106, 172, 2141, 2192)), el("Marker", (348, 465, 2141, 2192)),
@@ -480,6 +484,9 @@ class AdapterTests(unittest.TestCase):
         rows = [field("Planken"), el("Planken", (189, 900, 1400, 1460), "title"), el("Guidepost", (189, 600, 1460, 1500), "subtitle"),
                 el("Planken", (189, 900, 1500, 1560), "title"), el("Village", (189, 600, 1560, 1600), "subtitle")]
         self.assertIn('Village row "Planken" at tap center [503, 637]', step(rows)[0])
+        # Manual search for "Malbun": same-name rows first, the Village row only after one scroll.
+        self.assertIn('do(action="Swipe"', step([field("Planken"), el("Planken", (189, 900, 1400, 1460), "title"),
+                                                 el("Aerialway station", (189, 600, 1460, 1500), "subtitle")])[0])
         card = lambda name, kind: [el(name, (42, 900, 1809, 1876), "context_menu_line1"), el(kind, (42, 600, 1876, 1920), "context_menu_line2"),
                                    el("Add", (106, 172, 2141, 2192)), el("Marker", (348, 465, 2141, 2192)), el("Share", (500, 600, 2141, 2192)),
                                    el("Actions", (800, 1000, 2141, 2192))]

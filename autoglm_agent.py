@@ -120,7 +120,8 @@ def osmand_view(elements):
     """
     visible = [e for e in elements if e.is_visible and e.bbox_pixels and e.text]
     texts = {e.text for e in visible}
-    view = {"points": None, "favorite_dialog": bool(texts & {"Add Favorite", "Edit Favorite"}),
+    route = next((e.bbox_pixels for e in elements if e.is_visible and element_id(e).endswith("map_route_info_button")), None)
+    view = {"points": None, "route_button": route, "favorite_dialog": bool(texts & {"Add Favorite", "Edit Favorite"}),
             "place_card": {"Actions", "Marker", "Share"} <= texts, "rows": [], "boxes": {}}
     for e in visible:
         match = re.search(r"points:\s*(\d+)", e.text)
@@ -153,6 +154,9 @@ def osmand_tree_check(view, action, shape, route_points, searched_next):
     inside = lambda box, pad_x=0, pad_up=0, pad_down=0: (box is not None and box.x_min - pad_x <= x <= box.x_max + pad_x
                                                         and box.y_min - pad_up <= y <= box.y_max + pad_down)
     boxes = view["boxes"]
+    if inside(view.get("route_button")):
+        return ("Route opens navigation directions, which save no track. Tap Search (the magnifier), find the first waypoint, "
+                "then use its place card's Actions > Plan a route.")
     if inside(boxes.get("SHOW ON MAP")):
         return ("SHOW ON MAP only moves the map; it never opens a place. If the search shows 'Could not find anything', "
                 "tap INCREASE SEARCH RADIUS; when the place row appears, tap that row.")
@@ -171,7 +175,8 @@ def osmand_tree_check(view, action, shape, route_points, searched_next):
                 kind = lambda r: r["type"].split(" •")[0]
                 return (f"This row is a {kind(row)}, not the place itself. Tap the {kind(good[0])} row "
                         f"\"{good[0]['name']}\" at tap center [{cx * 1000 // width}, {cy * 1000 // height}].")
-            return "This row is not the place itself (a Village, Hamlet or Town row). If none is listed, tap INCREASE SEARCH RADIUS."
+            return ("This row is not the place itself (a Village, Hamlet or Town row). If that row is not listed, scroll the results down, "
+                    "or tap INCREASE SEARCH RADIUS when the search found nothing.")
     if route_points >= 1 and not searched_next and view["points"] is not None and inside(boxes.get("Add"), 60, 90, 10):
         return ("Add only adds the point under the map centre, which still shows the previous waypoint. First tap the Search "
                 "(magnifier) button, the second round button at the top left (the first, a globe, is Configure map), search the next waypoint, open its row, press Back here, then tap Add.")
@@ -253,6 +258,10 @@ def osmand_next_step(elements, terms, route_points, centred_on, shape):
         if row:
             return (f'Tap the {row["type"].split(" •")[0]} row "{term}" at tap center '
                     f'[{row["center"][0] * 1000 // width}, {row["center"][1] * 1000 // height}].'), None
+        if view["rows"]:
+            # A manual search for "Malbun" listed nine same-name rows (streets, ski lifts, hotels) before its Village row.
+            return ('The place row is further down. Scroll the results: do(action="Swipe", start=[500, 560], end=[500, 260]). '
+                    "Do not retype the text."), None
         radius = find("INCREASE SEARCH RADIUS")
         if radius:
             return tap(radius) + " Repeat until the place row appears; do not retype the text (that resets the radius).", None

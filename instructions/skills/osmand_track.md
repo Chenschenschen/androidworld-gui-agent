@@ -12,7 +12,7 @@ Facts about this OsmAnd version (4.6):
 
 Procedure:
 1. Launch OsmAnd. Tap the Search (magnifier) button. Type only the first waypoint's place name, for example "Vaduz".
-2. Choose the result that is the place itself (Village, Hamlet or Town), not a street, station or shop. If a list of streets inside that place opens, tap the row "SHOW ... ON THE MAP" at the top.
+2. While the search shows "Could not find anything", do not tap SHOW ON MAP and do not zoom: tap INCREASE SEARCH RADIUS until a row with the place name appears. Choose the result that is the place itself (Village, Hamlet or Town), not a street, station or shop. If a list of streets inside that place opens, tap the row "SHOW ... ON THE MAP" at the top.
 3. On the place card tap Actions, then "Plan a route". The route now shows points: 1.
 4. For each next waypoint, in the listed order: in Plan a route tap the Search (magnifier) button, clear the old text, type the place name and choose the place as in step 2. When its place card is shown, press Back until the Plan a route panel with Add and Done is visible again; the map stays centred on the place. Tap Add and check that "points" increased by one.
 5. When "points" equals the number of waypoints, tap Done. The message "GPX file saved to ..." confirms the saved track. Then finish.

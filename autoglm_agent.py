@@ -79,12 +79,14 @@ def skill_reminder(config, task_name, inputs):
     """One status line per step that restates the Skill's search terms (D2 status bar).
 
     The Skill in the system prompt alone was not followed: trial
-    OsmAndTrack_20261008T131512 still typed "Planken, Liechtenstein".
+    OsmAndTrack_20261008T131512 still typed "Planken, Liechtenstein", and
+    _131754 tapped SHOW ON MAP on an empty result instead of widening it.
     """
     if not config.get("task_skills", {}).get(task_name) or not inputs.get("waypoints"):
         return ""
     terms = " ".join(f'{number}. "{waypoint.split(",")[0].strip()}"' for number, waypoint in enumerate(inputs["waypoints"], 1))
-    return f"Skill reminder: type only the search term, never the full waypoint text. Search terms in order: {terms}\n"
+    return (f"Skill reminder: type only the search term, never the full waypoint text. Search terms in order: {terms}. "
+            "If the search shows 'Could not find anything', tap INCREASE SEARCH RADIUS (not SHOW ON MAP) until the place row appears, then tap that row.\n")
 
 
 def history_window(conversation, turns):

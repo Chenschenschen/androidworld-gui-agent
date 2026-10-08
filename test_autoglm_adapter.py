@@ -93,6 +93,7 @@ class AdapterTests(unittest.TestCase):
         reminder = skill_reminder(config, "OsmAndTrack", inputs)
         self.assertIn('1. "Planken"', reminder)
         self.assertIn("never the full", reminder)
+        self.assertIn("INCREASE SEARCH RADIUS", reminder)
         self.assertEqual(skill_reminder({"task_skills": {}}, "OsmAndTrack", inputs), "")
         self.assertEqual(skill_reminder(config, "ContactsAddContact", {"name": "A"}), "")
 

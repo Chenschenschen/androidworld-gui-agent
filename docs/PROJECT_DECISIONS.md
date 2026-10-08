@@ -1,5 +1,10 @@
 # Project decisions
 
+8 October publication update: the user requested removal of course content
+from the repository. Untrack `course_content/`, `.review/materials/` and
+`.review/rendered/`, keeping their local files. Ignore these directories in
+future commits. Project source, our review notes and trial evidence remain.
+
 8 October publication: the user requested the complete project on branch
 `hayati`, excluding videos. Preserve non-video run archives, course originals,
 material extracts and project utilities. Keep credentials, installed environments,

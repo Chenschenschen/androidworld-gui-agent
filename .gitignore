@@ -16,9 +16,13 @@
 /.review/venv/
 /.review/gelab_reference/
 /.review/upstream_*/
+# Course originals and extracted/rendered copies remain local.
+/course_content/
+/.review/materials/
+/.review/rendered/
 node_modules/
 
-# The hayati branch preserves course materials, utilities and non-video runs.
+# The hayati branch preserves project utilities and non-video runs.
 __pycache__/
 *.py[cod]
 .pytest_cache/

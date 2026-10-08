@@ -8,10 +8,11 @@ finish. Android World's official verifier evaluates the result independently.
 This is a course project for **Agentic AI in Modern Business**. It is an
 experimental implementation with recorded successes and preserved failures.
 
-The `hayati` branch preserves the project source, course materials, review
+The `hayati` branch preserves the project source, review
 utilities and complete non-video trial evidence under `runs/`. Video files
 remain local, so recording links in the archived reports require the original
-local recordings. Credentials, installed environments, caches and separate
+local recordings. Course originals and extracted/rendered copies, credentials,
+installed environments, caches and separate
 dependency checkouts are excluded; use the installation steps below to rebuild
 the environment.
 

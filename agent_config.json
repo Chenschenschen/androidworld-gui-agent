@@ -1,5 +1,5 @@
 {
-  "version": "autoglm_api_v29_bounded_no_progress_cycles",
+  "version": "autoglm_api_v34_osmand_skill",
   "provider": "zai",
   "prompt_version": "autoglm_native_en_v19_generic_launch_example",
   "model": "autoglm-phone-multilingual",
@@ -18,8 +18,19 @@
     "max_tokens": 3000
   },
   "max_steps": 12,
-  "task_step_budgets": {"ContactsAddContact": 16},
+  "task_step_budgets": {
+    "ContactsAddContact": 16,
+    "SimpleCalendarAddOneEvent": 35,
+    "OsmAndTrack": 90
+  },
   "max_seconds": 900,
+  "task_time_budgets": {
+    "SimpleCalendarAddOneEvent": 1200,
+    "OsmAndTrack": 2700
+  },
+  "task_skills": {
+    "OsmAndTrack": "instructions/skills/osmand_track.md"
+  },
   "request_timeout": 120,
   "recent_actions": 3,
   "invalid_reply_corrections": 1,
@@ -27,7 +38,7 @@
   "freshness_global_difference": 0.08,
   "freshness_target_difference": 0.08,
   "no_effect_difference": 0.001,
-  "note": "v29 follows pinned Open-AutoGLM English contract and sourced Android World guidance. Long task recipes and Clock keypad Type exception withdrawn. Short visible goals, ordered native history, latest screenshot, checked GUI state and actual selected-control feedback. Bounded recorder readiness and observed EditText recognition repair recorded adapter faults. Scheduler stops at the first failed clean trial; repeated unchanged action cycles stop without forcing completion. Sixteen offline checks; live task-specific v20/v28 gates and unresolved Timer/Clipboard errors are in docs/WARMUP_RESULTS.md. Sources/slide mapping: docs/COURSE_AND_UPSTREAM_REVIEW.md.",
+  "note": "v34 keeps the shared ADB server when android_env retries a timed-out command (its kill-server also ended the screen recorder) and adds an optional per-task Skill: instructions/skills/osmand_track.md for OsmAndTrack, written from a manual exploration that passed the official track matcher. evaluate_tasks.py --disable-skills runs the same code without it. v33 launches apps with a 30-second `am start -W` timeout: Android World's 5 seconds expired on a cold OsmAnd start, android_env then restarted the ADB server and that also ended the screen recorder. v32 replaces a recorder clip that ends early (polled each second, logged as RECORDING NOTE) and closes a host adb shell that does not return after SIGINT; agent behaviour unchanged from v31. v31 resolves Launch names like upstream Open-AutoGLM (case/spacing-insensitive; a translated non-Latin name resolves only when exactly one app is allowed) and stops on all-black screenshots as a rendering infrastructure error. v30 adds SimpleCalendarAddOneEvent (medium) and OsmAndTrack (hard) with visible completion rules and initial step/time budgets of about 2x and 1.5x their 17/60 reference steps, to be revised from learning trials; Calendar verifier rows are withheld from model inputs. v29 follows pinned Open-AutoGLM English contract and sourced Android World guidance. Long task recipes and Clock keypad Type exception withdrawn. Short visible goals, ordered native history, latest screenshot, checked GUI state and actual selected-control feedback. Bounded recorder readiness and observed EditText recognition repair recorded adapter faults. Scheduler stops at the first failed clean trial; repeated unchanged action cycles stop without forcing completion. Sixteen offline checks; live task-specific v20/v28 gates and unresolved Timer/Clipboard errors are in docs/WARMUP_RESULTS.md. Sources/slide mapping: docs/COURSE_AND_UPSTREAM_REVIEW.md.",
   "visual_stability_checks": 3,
   "visual_stability_pause": 0.5,
   "visual_stability_difference": 0.01

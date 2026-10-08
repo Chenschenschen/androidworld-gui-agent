@@ -34,6 +34,87 @@ class AdapterTests(unittest.TestCase):
             with self.subTest(point=point), self.assertRaises(ValueError):
                 convert_action({"command": "do", "action": "Tap", "element": point}, self.state, [])
 
+    def test_runner_tasks_have_rules_and_launch_names(self):
+        """Every runner task has a completion rule; multiword official app names launch."""
+        from autoglm_agent import COMPLETION_RULES
+        from run_task import TASKS
+        self.assertLessEqual(set(TASKS), set(COMPLETION_RULES))
+        allowed = ["simple calendar pro", "osmand"]
+        for app, expected in (("Simple Calendar Pro", "simple calendar pro"), ("SimpleCalendarPro", "simple calendar pro"),
+                              ("OsmAnd", "osmand"), ("OsmAnd~", "osmand")):
+            with self.subTest(app=app):
+                action = convert_action({"command": "do", "action": "Launch", "app": app}, self.state, allowed)
+                self.assertEqual(action, {"action_type": "open_app", "app_name": expected})
+        # Recorded Chinese translations of "Simple Calendar Pro" (trials
+        # SimpleCalendarAddOneEvent_20261008T110618 and _20261008T111150), built
+        # from code points so this source file stays ASCII.
+        simple_calendar = "".join(map(chr, (0x7B80, 0x5355, 0x65E5, 0x5386)))
+        for app in (simple_calendar + " Pro", simple_calendar + "".join(map(chr, (0x4E13, 0x4E1A, 0x7248)))):
+            with self.subTest(translated=app):
+                action = convert_action({"command": "do", "action": "Launch", "app": app}, self.state, ["simple calendar pro"])
+                self.assertEqual(action, {"action_type": "open_app", "app_name": "simple calendar pro"})
+                # Ambiguous with two allowed apps: never guess.
+                with self.assertRaises(ValueError):
+                    convert_action({"command": "do", "action": "Launch", "app": app}, self.state, allowed)
+        # An unlisted Latin-script app name is a real choice, not a translation.
+        with self.assertRaises(ValueError):
+            convert_action({"command": "do", "action": "Launch", "app": "Chrome"}, self.state, ["osmand"])
+
+    def test_launch_waits_for_slow_cold_start(self):
+        """Mapped apps get a long `am start -W` timeout; URI-launched apps keep the upstream path."""
+        from autoglm_agent import launch_app
+        with patch("autoglm_agent.adb_utils.start_activity") as start, patch("autoglm_agent.adb_utils.check_ok"), \
+                patch("autoglm_agent.adb_utils.launch_app") as upstream:
+            launch_app("osmand", None)
+            self.assertIn("net.osmand", start.call_args.args[0])
+            self.assertGreaterEqual(start.call_args.kwargs["timeout_sec"], 30)
+            launch_app("contacts", None)
+            upstream.assert_called_once_with("contacts", None)
+
+    def test_skill_loads_only_for_its_task(self):
+        """A configured Skill joins the prompt for its own task only; none when disabled."""
+        from autoglm_agent import skill_text
+        config = {"task_skills": {"OsmAndTrack": "instructions/skills/osmand_track.md"}}
+        self.assertIn("Plan a route", skill_text(config, "OsmAndTrack"))
+        self.assertEqual(skill_text(config, "SimpleCalendarAddOneEvent"), "")
+        self.assertEqual(skill_text({"task_skills": {}}, "OsmAndTrack"), "")
+
+    def test_adb_retry_keeps_server(self):
+        """A timed-out ADB command is retried without killing the shared ADB server."""
+        from android_env.components import adb_controller
+        from android_compat import keep_adb_server
+        self.addCleanup(setattr, adb_controller.AdbController, "_restart_server", adb_controller.AdbController._restart_server)
+        keep_adb_server()
+        controller = object.__new__(adb_controller.AdbController)
+        with patch.object(adb_controller.AdbController, "execute_command") as execute, patch("android_compat.time.sleep"):
+            controller._restart_server(timeout=5)
+            execute.assert_not_called()
+
+    def test_fresh_xml_retries_transient_null_root(self):
+        """A launching app's transient null root is retried; stale XML is never returned."""
+        from android_world.env import adb_utils
+        from android_compat import enable_fresh_xml
+        self.addCleanup(setattr, adb_utils, "uiautomator_dump", adb_utils.uiautomator_dump)
+        enable_fresh_xml()
+
+        def device(dump_replies):
+            """Fake ADB: scripted dump outputs, a valid hierarchy on read, silent cleanup."""
+            def reply(command, env, timeout_sec=None):
+                text = ""
+                if " dump " in command:
+                    text = dump_replies.pop(0).replace("{path}", command.split()[-1])
+                elif " cat " in command:
+                    text = "<hierarchy/>"
+                return SimpleNamespace(generic=SimpleNamespace(output=text.encode()))
+            return reply
+
+        null_root = "ERROR: null root node returned by UiTestAutomationBridge."
+        with patch("android_world.env.adb_utils.check_ok"), patch("android_compat.time.sleep"):
+            with patch("android_world.env.adb_utils.issue_generic_request", device([null_root, "UI hierchary dumped to: {path}"])):
+                self.assertEqual(adb_utils.uiautomator_dump(None), "<hierarchy/>")
+            with patch("android_world.env.adb_utils.issue_generic_request", device([null_root] * 3)), self.assertRaises(RuntimeError):
+                adb_utils.uiautomator_dump(None)
+
     def test_reject_executable_text(self):
         """Expressions, command overrides and multiple actions never dispatch."""
         for raw in ('do(action="Type", text=__import__("os").getcwd())',
@@ -169,6 +250,23 @@ class AdapterTests(unittest.TestCase):
         notes = control_notes(self.state)
         self.assertIn("Wi-Fi: switch ON (checked=true)", notes)
         self.assertIn("Mobile data: switch OFF (checked=false)", notes)
+
+    def test_black_frame_is_infrastructure_error(self):
+        """An all-black screenshot (failed emulator rendering) never reaches the model."""
+        temp_root = Path(__file__).parent / ".tools/tmp"
+        temp_root.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=temp_root) as folder:
+            agent = object.__new__(AutoGLMAgent)
+            agent.output, agent.history, agent.deadline = Path(folder), [], float("inf")
+            agent.config = {"visual_stability_checks": 1, "visual_stability_pause": 0,
+                            "visual_stability_difference": .01, "tree_backend": "none"}
+            for pixels in (np.zeros((500, 400, 3), dtype=np.uint8), np.full((500, 400, 3), 9, dtype=np.uint8)):
+                agent.env = SimpleNamespace(get_state=lambda wait_to_stabilize, pixels=pixels: State(pixels, None, []))
+                if pixels.any():
+                    self.assertIs(agent.observe().pixels, pixels)
+                else:
+                    with self.assertRaisesRegex(RuntimeError, "black"):
+                        agent.observe()
 
     def test_xml_image_pairing(self):
         """Keep genuine XML on an unchanged scene, discard it after a visual transition."""

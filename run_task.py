@@ -24,13 +24,14 @@ import urllib.error
 import urllib.request
 from PIL import Image
 
-from android_compat import enable_windows_compat, enable_fresh_xml
+from android_compat import enable_windows_compat, enable_fresh_xml, keep_adb_server
 from probe_connection import save_json
 from trajectory import log_event
 
 PROJECT = Path(__file__).resolve().parent
 TASKS = ["SystemWifiTurnOn", "CameraTakePhoto", "ClockTimerEntry",
-         "ContactsAddContact", "SystemCopyToClipboard"]
+         "ContactsAddContact", "SystemCopyToClipboard",
+         "SimpleCalendarAddOneEvent", "OsmAndTrack"]
 # Keep external/manual emulator interaction visible in evaluation review notes.
 
 
@@ -187,10 +188,27 @@ def record_video(adb, output, stop, ready, errors):
                     process.wait(timeout=5)
                     raise RuntimeError("Our screen recorder did not become ready within its bounded wait")
                 ready.set()
-                stop.wait(174)
+                # Poll each second so a recorder that ends early is replaced by
+                # a new clip at once (observed in trial OsmAndTrack_20261008T111626,
+                # not reproducible in a 90-second probe). GUI actions wait for
+                # `ready`, so the gap is at most about one second, and it is logged.
+                rollover = time.monotonic() + 174
+                while process.poll() is None and time.monotonic() < rollover and not stop.wait(1):
+                    pass
                 ready.clear()  # Pause GUI execution during rollover/pulling.
-                subprocess.run(prefix + ["shell", "kill", "-2", pid], check=True, capture_output=True)
-                process.wait(timeout=15)
+                if process.poll() is not None:
+                    log_event(output, "RECORDING NOTE", {"clip": number, "event": "recorder ended before stop/rollover",
+                        "exit_code": process.returncode, "action": "pull this clip and start the next one"})
+                else:
+                    subprocess.run(prefix + ["shell", "kill", "-2", pid], check=True, capture_output=True)
+                    try:
+                        process.wait(timeout=15)
+                    except subprocess.TimeoutExpired:
+                        # Observed once (Calendar_20261008T110618): the device clip
+                        # was complete but the host adb shell did not return.
+                        process.kill()
+                        log_event(output, "RECORDING NOTE", {"clip": number, "event": "host adb shell did not return after SIGINT",
+                            "action": "closed host process; pulling the device clip"})
             local = output / f"video_{number:03d}.mp4"
             subprocess.run(prefix + ["pull", remote, str(local)], check=True, capture_output=True)
             if not local.is_file() or local.stat().st_size < 1000:
@@ -217,6 +235,7 @@ def main():
     temp_root.mkdir(parents=True, exist_ok=True)
     tempfile.tempdir = str(temp_root)
     enable_windows_compat()
+    keep_adb_server()
     from android_world import registry
     from android_world.env import env_launcher
     from android_world.env.setup_device import apps, setup
@@ -229,6 +248,7 @@ def main():
     config = json.loads(args.config.read_text(encoding="utf-8"))
     # Contacts' observed Save at step 12 needs a subsequent model inspection.
     config["max_steps"] = config.get("task_step_budgets", {}).get(args.task, config["max_steps"])
+    config["max_seconds"] = config.get("task_time_budgets", {}).get(args.task, config["max_seconds"])
     if config.get("provider") != "zai" or config["observation"] != "screenshot" or args.observation not in {None, "screenshot"}:
         raise ValueError("AutoGLM migration uses Z.ai and screenshot observations")
     endpoint, model, _ = api_settings()
@@ -247,7 +267,8 @@ def main():
                    else "unique_visible_labels" if config.get("label_grounding") and config["observation"] == "tree"
                    else "indices_with_conditional_coordinates" if config["observation"] == "tree_first"
                    else "coordinates" if config["observation"] == "screenshot" else "indices",
-               "step_budget": config["max_steps"], "time_budget_seconds": config["max_seconds"]}
+               "step_budget": config["max_steps"], "time_budget_seconds": config["max_seconds"],
+               "skill": config.get("task_skills", {}).get(args.task)}
     env, task, recorder, agent = None, None, None, None
     stop, ready = threading.Event(), threading.Event()
     video_errors = []
@@ -261,6 +282,7 @@ def main():
             shutil.copyfile(PROJECT / filename, source / filename)
         (source / "instructions").mkdir()
         shutil.copyfile(PROJECT / "instructions/autoglm.md", source / "instructions/autoglm.md")
+        shutil.copytree(PROJECT / "instructions/skills", source / "instructions/skills")
         save_json(output / "versions.json", {"model": model, "provider": "zai", "endpoint": endpoint,
             "provider_revision": "not exposed by API; response model/request IDs saved per call",
             "python": sys.version, "android_world": importlib.metadata.version("android-world"),
@@ -278,6 +300,9 @@ def main():
             # Clipper supports the official verifier; Chrome provides a GUI text
             # field for selecting/copying. No direct clipboard write is an action.
             "SystemCopyToClipboard": (apps.ClipperApp, apps.ChromeApp),
+            "SimpleCalendarAddOneEvent": (apps.SimpleCalendarProApp,),
+            # Official OsmAnd setup also installs the preloaded Liechtenstein map.
+            "OsmAndTrack": (apps.OsmAndApp,),
         }
         required = (apps.AndroidWorldApp,) + task_apps[args.task]
         from android_world.utils import app_snapshot, file_utils
@@ -293,12 +318,18 @@ def main():
         task_class = registry.TaskRegistry().get_registry("android_world")[args.task]
         params = task_class.generate_random_params()
         task = task_class(params)
+        # Calendar parameters also carry database row objects for its verifier
+        # (target and noise events). The model and logs receive only the plain
+        # values the goal states; the rows are kept as text evidence.
+        inputs = {key: value for key, value in params.items() if key not in {"row_objects", "noise_row_objects"}}
+        verifier_rows = json.loads(json.dumps({key: params[key] for key in params.keys() - inputs.keys()}, default=str))
         # Clipper is official verifier infrastructure, not an interactive GUI app.
         config["allowed_apps"] = [app.app_name for app in task_apps[args.task] if app.app_name != "clipper"]
         save_json(output / "config.json", config)
-        save_json(output / "task.json", {"name": args.task, "goal": task.goal, "parameters": params,
-                  "seed": args.seed, "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"})
-        log_event(output, "OFFICIAL TASK INPUT", {"goal": task.goal, "parameters": params,
+        save_json(output / "task.json", {"name": args.task, "goal": task.goal, "parameters": inputs,
+                  "verifier_rows": verifier_rows, "seed": args.seed,
+                  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"})
+        log_event(output, "OFFICIAL TASK INPUT", {"goal": task.goal, "parameters": inputs,
                   "task_seed": args.seed, "model_metadata": "versions.json"})
         # Match the official runner: reset BEFORE task-specific initialization.
         # A reset after initialization was measured to turn Wi-Fi back on.
@@ -320,7 +351,7 @@ def main():
         recorder.start()
         if not ready.wait(timeout=15) or video_errors:
             raise RuntimeError("Recording failed to start: " + str(video_errors))
-        agent = AutoGLMAgent(env, output, config, params)
+        agent = AutoGLMAgent(env, output, config, inputs)
         agent.recording_ready = ready
         agent.recording_errors = video_errors
         start = time.monotonic()
@@ -346,7 +377,7 @@ def main():
         log_event(output, "USER INTERRUPTED", {"note": "No automatic action replay; official verification follows."}, summary.get("steps_attempted"))
     except Exception as error:
         summary["error"] = traceback.format_exc()
-        summary["error_class"] = "environment_setup_error" if agent is None else "validation_error" if isinstance(error, ValueError) else "api_error" if isinstance(error, urllib.error.URLError) else "control_no_progress" if str(error) == "Repeated action without visible effect; stopping" else "environment_or_execution_error"
+        summary["error_class"] = "environment_setup_error" if agent is None else "validation_error" if isinstance(error, ValueError) else "api_error" if isinstance(error, urllib.error.URLError) else "control_no_progress" if str(error) == "Repeated action without visible effect; stopping" else "rendering_infrastructure_error" if str(error).startswith("Screenshot is entirely black") else "environment_or_execution_error"
         summary["stop_reason"] = "error"
         log_event(output, "RUN ERROR", {"error": summary["error"], "class": summary["error_class"]}, summary.get("steps_attempted"))
         print(summary["error"], flush=True)

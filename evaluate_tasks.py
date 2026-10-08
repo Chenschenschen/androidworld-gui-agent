@@ -1,4 +1,4 @@
-"""Run the five agreed easy tasks sequentially, with three recorded trials each.
+"""Run the selected tasks sequentially, with three recorded trials each.
 
 Use project Python: .venv\Scripts\python.exe -X utf8 evaluate_tasks.py
 Every trial uses official initialization/verifiers through run_task.py. This
@@ -21,18 +21,19 @@ PROJECT = Path(__file__).resolve().parent
 
 def source_hashes():
     """Fingerprint the agent contract so a batch cannot silently mix versions."""
-    names = ("run_task.py", "autoglm_agent.py", "instructions/autoglm.md", "trajectory.py", "android_compat.py")
+    names = ["run_task.py", "autoglm_agent.py", "instructions/autoglm.md", "trajectory.py", "android_compat.py"]
+    names += sorted(path.relative_to(PROJECT).as_posix() for path in (PROJECT / "instructions/skills").glob("*.md"))
     return {name: hashlib.sha256((PROJECT / name).read_bytes()).hexdigest() for name in names}
 
 
 def write_results(output, records):
     """Update the readable table after every trial, preserving partial batches."""
-    lines = ["# Five easy tasks: recorded results", "", "Success requires valid initialization, video and official verifier PASS.",
+    lines = ["# Recorded task results", "", "Success requires valid initialization, video and official verifier PASS.",
         "One frozen version; task seeds 42/43/44 by default. Three cases are a small sample.", "",
         "Clean finish also requires the model's finish reply, with no runtime error.", "",
         "| Task | Valid PASS / attempts | Clean finishes | Invalid evaluations |", "| --- | --- | --- | --- |"]
     # Group evidence by task; keep invalid trials visible rather than counting PASS.
-    for task in TASKS:
+    for task in dict.fromkeys(record["task"] for record in records):
         selected = [record for record in records if record["task"] == task]
         passed = sum(bool(record.get("verified_agent_success")) for record in selected)
         invalid = sum(not record.get("evaluation_valid", False) for record in selected)
@@ -57,20 +58,29 @@ def main():
     parser.add_argument("--seeds", nargs="+", type=int, default=[42, 43, 44])
     parser.add_argument("--observation", choices=["tree_first", "tree", "screenshot"])
     parser.add_argument("--require-model-finish", action="store_true", help="Compatibility flag: all batches now stop at the first failed clean-completion gate")
+    parser.add_argument("--disable-skills", action="store_true",
+        help="Baseline: run the same frozen code without any task Skill (single-variable comparison)")
+    parser.add_argument("--run-all-seeds", action="store_true",
+        help="Final evaluation: record every task/seed even after a failed trial (course requires three runs per task)")
     args = parser.parse_args()
     if Path(sys.prefix).resolve() != (PROJECT / ".venv").resolve():
         raise RuntimeError("Use project .venv Python")
-    output = PROJECT / "runs" / datetime.now(timezone.utc).strftime("easy_batch_%Y%m%dT%H%M%S_%fZ")
+    output = PROJECT / "runs" / datetime.now(timezone.utc).strftime("eval_batch_%Y%m%dT%H%M%S_%fZ")
     output.mkdir(parents=True)
     config = json.loads((PROJECT / "agent_config.json").read_text(encoding="utf-8"))
     if args.observation:
         config["observation"] = args.observation
         # An explicit batch-wide choice must override per-task defaults too.
         config["task_observations"] = {}
+    if args.disable_skills:
+        # Baseline for the Skill comparison: same frozen code, no Skill in the prompt.
+        config["task_skills"] = {}
     save_json(output / "config.json", config)
     fingerprints = source_hashes()
     save_json(output / "batch.json", {"tasks": args.tasks, "task_seeds": args.seeds,
-        "source_hashes": fingerprints, "purpose": "Three-case learning evaluation; failures are not discarded."})
+        "source_hashes": fingerprints, "run_all_seeds": args.run_all_seeds, "skills_disabled": args.disable_skills,
+        "purpose": "Final evaluation: every task/seed recorded." if args.run_all_seeds
+            else "Three-case learning evaluation; failures are not discarded."})
     print(f"Batch evidence: {output}", flush=True)
     records = []
     write_results(output, records)
@@ -96,7 +106,8 @@ def main():
             records.append(record)
             write_results(output, records)
             print(f"Finished {task}, seed {seed}: {record['verifier']}; valid={record['evaluation_valid']}; steps={record.get('steps', 0)}", flush=True)
-            if not record.get("clean_agent_success"):
+            # Learning batches stop to diagnose; a final evaluation keeps every outcome.
+            if not record.get("clean_agent_success") and not args.run_all_seeds:
                 print("Completion gate failed; preserve this attempt and repair before more trials.", flush=True)
                 raise SystemExit(1)
     print(f"Completed {len(records)} trials. Read {output / 'RESULTS.md'}", flush=True)

@@ -33,7 +33,53 @@ COMPLETION_RULES = {
     "ClockTimerEntry": "Timer displays the exact requested hours, minutes and seconds, with Start available and the timer not running. Finish when that visible state holds; do not start it.",
     "ContactsAddContact": "The saved contact view shows the exact requested full name and phone number after Save. A filled unsaved form is insufficient. Finish on the saved result.",
     "SystemCopyToClipboard": "The exact requested text has been fully selected and copied through the visible Copy command; the selection menu has closed afterwards. Finish on that observed result. A transient clipboard chip or toast is optional. The task input is text to copy, not current clipboard state. Clipper is verifier infrastructure.",
+    "SimpleCalendarAddOneEvent": "Simple Calendar Pro shows a saved event with the exact requested title and description, on the requested date, starting at the requested hour and lasting the requested minutes. A filled unsaved event editor is insufficient. Finish on the saved result.",
+    "OsmAndTrack": "OsmAnd has saved a track whose route passes through every requested waypoint, in the listed order, each at the exact named place. An unsaved route, or one that misses or reorders a waypoint, is insufficient. Finish on the saved-track result.",
 }
+
+
+def launch_name(app, allowed_apps):
+    """Resolve a model Launch name to one allowed app.
+
+    Matching ignores case, spaces, '-', '_' and '~', like the alias table in
+    upstream Open-AutoGLM (phone_agent/config/apps.py). The multilingual model
+    sometimes translates an app name into Chinese (two different translations of
+    "Simple Calendar Pro" were recorded), so a non-Latin name resolves only when
+    exactly one app is allowed. An unlisted Latin-script name is never guessed.
+    """
+    key = re.sub(r"[\s\-_~]", "", app.lower())
+    for allowed in allowed_apps:
+        if key == re.sub(r"[\s\-_~]", "", allowed):
+            return allowed
+    if not app.isascii() and len(allowed_apps) == 1:
+        return allowed_apps[0]
+    return None
+
+
+def skill_text(config, task_name):
+    """Return the task's optional Skill (procedural app knowledge) for the prompt, or "".
+
+    Course D2 pattern: a Skill file is loaded only when its trigger matches,
+    here the task name in config["task_skills"]. Disabled when the map is empty.
+    """
+    path = config.get("task_skills", {}).get(task_name)
+    if not path:
+        return ""
+    return f"\nSKILL for {task_name} (app procedure):\n" + (PROJECT / path).read_text(encoding="utf-8")
+
+
+def launch_app(app_name, controller, timeout_sec=30):
+    """Launch like Android World's launch_app, but give `am start -W` time to finish.
+
+    Android World waits only 5 seconds. A cold OsmAnd start on the software-
+    rendered emulator took longer; android_env then restarted the ADB server,
+    which also ended the screen recorder (batch eval_batch_20261008T113903).
+    URI-launched apps (for example Contacts) keep the upstream path.
+    """
+    activity = None if app_name in adb_utils._DEFAULT_URIS else adb_utils.get_adb_activity(app_name)
+    if activity is None:
+        return adb_utils.launch_app(app_name, controller)
+    adb_utils.check_ok(adb_utils.start_activity(activity, [], controller, timeout_sec=timeout_sec), f"Launch {app_name} failed")
 
 
 def api_settings():
@@ -139,9 +185,10 @@ def convert_action(fields, state, allowed_apps):
         return {"action_type": "input_text", "text": text, "clear_text": True}
     if name == "Launch":
         app = fields["app"]
-        if not isinstance(app, str) or app.lower() not in allowed_apps:
+        resolved = launch_name(app, allowed_apps) if isinstance(app, str) else None
+        if resolved is None:
             raise ValueError(f"Launch app {app!r} is unavailable; allowed app values: {json.dumps(allowed_apps)}")
-        return {"action_type": "open_app", "app_name": app.lower()}
+        return {"action_type": "open_app", "app_name": resolved}
     if name == "Wait":
         duration = fields["duration"]
         if isinstance(duration, str) and re.fullmatch(r"\d+(?:\.\d+)? seconds?", duration):
@@ -335,6 +382,11 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                 break
         log_event(self.output, "VISUAL SETTLING", {"difference": change,
             "within_threshold": change <= self.config["visual_stability_difference"], "tree_backend": self.config["tree_backend"]}, len(self.history) + 1)
+        # A working display always renders something (at least the status bar).
+        # An all-zero frame is an emulator rendering failure (observed with the
+        # host-GPU backend: glReadPixels error 0x506), not a screen to reason about.
+        if not state.pixels.any():
+            raise RuntimeError("Screenshot is entirely black: emulator rendering failure (try -gpu swiftshader_indirect)")
         if self.config.get("supplemental_tree_packages"):
             state = self.supplement_controls(state)
         return state
@@ -386,6 +438,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         # A benchmark parameter name can resemble current state; label the goal.
         model_inputs = {"text_to_copy": self.scratch["clipboard_content"]} if task_name == "SystemCopyToClipboard" else self.scratch
         prompt += "\nCOMPLETION CONDITION for " + task_name + ":\n" + completion_condition(task_name, self.scratch)
+        prompt += skill_text(self.config, task_name)
         prompt += f"\nAvailable apps: {json.dumps(self.config['allowed_apps'])}\n"
         # Upstream gives the goal once; later user turns are observations of that
         # same task, not new requests to perform it again (especially one photo).
@@ -495,6 +548,8 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
             time.sleep(action["seconds"])
         elif action["action_type"] == "input_text":
             type_without_submit(action["text"], self.env.controller)
+        elif action["action_type"] == "open_app":
+            launch_app(action["app_name"], self.env.controller)
         elif action["action_type"] != "status":
             self.env.execute_action(json_action.JSONAction(**action))
         after = self.observe()

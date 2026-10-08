@@ -10,8 +10,8 @@ experimental implementation with recorded successes and preserved failures.
 
 ## Final evaluation (v42, one frozen version, 8 October 2026)
 
-The evaluated code is tagged **`final-eval-v42`**. The branch head adds v43-v48, an
-unevaluated follow-up on the hard task (0/10 practice runs; see the trial log).
+The evaluated code is tagged **`final-eval-v42`**. Later work on the hard task
+alone is reported separately below and does not change this table.
 
 | Task (course difficulty) | Official PASS | Notes |
 | --- | --- | --- |
@@ -30,6 +30,31 @@ same frozen code with only `task_skills` changed. Verifier 0/3 before and after;
 with the Skill all three runs searched by place name (1/3 before) and one
 started a route (0/3 before). All learning trials, infrastructure faults and
 fixes from v30 to v42: [MEDIUM_HARD_TRIALS.md](docs/MEDIUM_HARD_TRIALS.md).
+
+## Additional experiment: OsmAndTrack on the course slide's instance (v61)
+
+After the evaluation we continued on the hard task only. v49-v61 read OsmAnd's
+GUI tree (Android World's accessibility forwarder, UIAutomator as a fallback)
+and run the Skill's procedure as code: each step the program recognises the
+OsmAnd screen and states the next action with its tap centre, and refuses
+actions the screen shows to be wrong. The model still performs every action.
+
+Frozen v61 (tag **`osmand-extra-v61`**), the exact task on the course slide
+("Save a track with waypoints Ruggell, Liechtenstein and Bendern,
+Liechtenstein"; Android World seeds 31, 314 and 366 all produce it), same code
+with and without the Skill:
+
+| OsmAndTrack, slide instance | Official PASS | Notes |
+| --- | --- | --- |
+| Without the Skill (`--disable-skills`) | 0/3 | Searched "Ruggell, Liechtenstein" (finds only the country); two runs used navigation, which saves no track |
+| With the Skill | **2/3** | 22 and 23 steps, model finished both; the failure followed a crash of the forwarder app |
+
+The first passes on this task came in practice runs (seeds 8 and 7, 2 and 3
+waypoints) before the freeze. Every run is recorded. Details:
+[IMPROVEMENT_OSMAND.md](docs/IMPROVEMENT_OSMAND.md#additional-experiment-v61-on-the-slide-instance),
+the failed run in [FINAL_FAILURE_ANALYSIS.md](docs/FINAL_FAILURE_ANALYSIS.md#additional-experiment-the-one-failure-of-v61-on-the-slide-task),
+all 14 practice runs in [MEDIUM_HARD_TRIALS.md](docs/MEDIUM_HARD_TRIALS.md#osmand-only-extra-experiment-v49-v61-practice-runs).
+The branch head is v62, two fixes for that failure made after the evaluation.
 
 Earlier warm-up results (Wi-Fi and Camera 3/3 on v20, Contacts 3/3 on v28,
 Timer and Clipboard unresolved) remain in [WARMUP_RESULTS.md](docs/WARMUP_RESULTS.md);
@@ -82,6 +107,9 @@ during long batches. To reproduce the final evaluation and the improvement:
 ```powershell
 .\.venv\Scripts\python.exe -X utf8 evaluate_tasks.py --tasks OsmAndTrack --seeds 42 43 44 --run-all-seeds --disable-skills
 .\.venv\Scripts\python.exe -X utf8 evaluate_tasks.py --tasks ContactsAddContact SimpleCalendarAddOneEvent OsmAndTrack --seeds 42 43 44 --run-all-seeds
+# Additional OsmAnd experiment (after: git checkout osmand-extra-v61)
+.\.venv\Scripts\python.exe -X utf8 evaluate_tasks.py --tasks OsmAndTrack --seeds 31 314 366 --run-all-seeds --disable-skills
+.\.venv\Scripts\python.exe -X utf8 evaluate_tasks.py --tasks OsmAndTrack --seeds 31 314 366 --run-all-seeds
 ```
 
 In another PowerShell terminal, from the project directory:

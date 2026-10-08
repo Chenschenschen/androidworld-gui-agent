@@ -1,0 +1,818 @@
+[
+  {
+    "original": "runs/eval_batch_20261008T191026_753929Z/RESULTS.md",
+    "exported": "eval_batch_20261008T191026_753929Z/RESULTS.md",
+    "bytes": 884,
+    "sha256": "a1990932be2c81bf7de5dccc73040d06c9eba435ea2bcd7bb36fed84fb9a3d3c"
+  },
+  {
+    "original": "runs/eval_batch_20261008T191026_753929Z/results.json",
+    "exported": "eval_batch_20261008T191026_753929Z/results.json",
+    "bytes": 4039,
+    "sha256": "1ade756050250da36b0640b9c8cbdf240b6b5087308c5e9f41ac3d1f415e7073"
+  },
+  {
+    "original": "runs/eval_batch_20261008T191026_753929Z/batch.json",
+    "exported": "eval_batch_20261008T191026_753929Z/batch.json",
+    "bytes": 815,
+    "sha256": "95203ae565ddf253627e1986bf09b67e2c69ba11264415d5e645bdae2a7dbac1"
+  },
+  {
+    "original": "runs/eval_batch_20261008T191026_753929Z/config.json",
+    "exported": "eval_batch_20261008T191026_753929Z/config.json",
+    "bytes": 9802,
+    "sha256": "b96c1a9f31f488ee9a9d909d52adbd3d349e3f83a402596aa55fe995bad5d9e0"
+  },
+  {
+    "original": "runs/eval_batch_20261008T192739_139270Z/RESULTS.md",
+    "exported": "eval_batch_20261008T192739_139270Z/RESULTS.md",
+    "bytes": 886,
+    "sha256": "f09558fc4d7041928d745bf2afe16e163b9b5e79bdfc8600979657d717618680"
+  },
+  {
+    "original": "runs/eval_batch_20261008T192739_139270Z/results.json",
+    "exported": "eval_batch_20261008T192739_139270Z/results.json",
+    "bytes": 5105,
+    "sha256": "3a2036396463998f85ebabb11bc79ae3130cfb0d6a9ca9ad9f23b5a94165ed91"
+  },
+  {
+    "original": "runs/eval_batch_20261008T192739_139270Z/batch.json",
+    "exported": "eval_batch_20261008T192739_139270Z/batch.json",
+    "bytes": 814,
+    "sha256": "9c6d2b514bb3f93e8f727ec0c33af1d859666f62bce83e9acc2cbffb8619220b"
+  },
+  {
+    "original": "runs/eval_batch_20261008T192739_139270Z/config.json",
+    "exported": "eval_batch_20261008T192739_139270Z/config.json",
+    "bytes": 9740,
+    "sha256": "1c139470d787095366476de2dcf22130277c620103c77d8f0f26c29c2c84f752"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T172506_608538Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T172506_608538Z/summary.json",
+    "bytes": 1939,
+    "sha256": "7fbfe84b3d45692e24b1bfac79859a9f41356bd08f06cd88efeaabab20e779ae"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T172506_608538Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T172506_608538Z/task.json",
+    "bytes": 469,
+    "sha256": "3facb462e85e890ee13c31282fe272bf28dd3b85d041db473369c74195aea448"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T172506_608538Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T172506_608538Z/config.json",
+    "bytes": 6282,
+    "sha256": "6943d98651f906e80f896b3d9a39e048c5fae33b91b6ae4cf399f3c387387414"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T172506_608538Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T172506_608538Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T172506_608538Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T172506_608538Z/trajectory.txt",
+    "bytes": 39923,
+    "sha256": "0a9d87c7a15708d1772ff98b3f7d0f8f713e5f03f4517ee15a97287278a327ac"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T172506_608538Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T172506_608538Z/trajectory.jsonl",
+    "bytes": 40208,
+    "sha256": "8d4d84a545d2f2f0c077ef9546406968f9d09d1e872bf829fab5c12d140b9373"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T173128_218463Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T173128_218463Z/summary.json",
+    "bytes": 1626,
+    "sha256": "41ac31e0bc82ac4a949ee62cc1904380e425a446cffdb1ca3e1e9c1a07048419"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T173128_218463Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T173128_218463Z/task.json",
+    "bytes": 469,
+    "sha256": "3facb462e85e890ee13c31282fe272bf28dd3b85d041db473369c74195aea448"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T173128_218463Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T173128_218463Z/config.json",
+    "bytes": 6511,
+    "sha256": "f700fd02d9e0a712f0e2ee740f652c18fb852a7a1cc56667e4093b3ae2989758"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T173128_218463Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T173128_218463Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T173128_218463Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T173128_218463Z/trajectory.txt",
+    "bytes": 142913,
+    "sha256": "44e7d5613c75b004c8ebfcbc4a2e1cdfe78970b1f25ab2e75224d00be32f5f39"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T173128_218463Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T173128_218463Z/trajectory.jsonl",
+    "bytes": 144687,
+    "sha256": "ccfd16d8faccc549282fad02b4ca72f118971748f2a0a220f8249f0b3ad42b00"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T174254_588486Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T174254_588486Z/summary.json",
+    "bytes": 1629,
+    "sha256": "289d30f20e86d4da9a77d59715d05ea5016f6c7e67f7f50db21e5c994b90dfeb"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T174254_588486Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T174254_588486Z/task.json",
+    "bytes": 469,
+    "sha256": "3facb462e85e890ee13c31282fe272bf28dd3b85d041db473369c74195aea448"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T174254_588486Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T174254_588486Z/config.json",
+    "bytes": 6917,
+    "sha256": "078be1ee036864e98bfd660e603455bf0d4f3eed7eb9f7343cc30063d700ee64"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T174254_588486Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T174254_588486Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T174254_588486Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T174254_588486Z/trajectory.txt",
+    "bytes": 130204,
+    "sha256": "a0c934b2d3c401b3346fa49526e0571ac27462426b759948bc9b2de1ee316063"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T174254_588486Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T174254_588486Z/trajectory.jsonl",
+    "bytes": 134617,
+    "sha256": "5c93cdc8292a5326c9bdadb591ddb921200ad4801e260055523801c91860e3d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T175142_038025Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T175142_038025Z/summary.json",
+    "bytes": 1599,
+    "sha256": "94d1bc52fab90ed43d6c97128f61dd85b44c2ca2e4440e3437cea2e9544cbcb7"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T175142_038025Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T175142_038025Z/task.json",
+    "bytes": 469,
+    "sha256": "3facb462e85e890ee13c31282fe272bf28dd3b85d041db473369c74195aea448"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T175142_038025Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T175142_038025Z/config.json",
+    "bytes": 7235,
+    "sha256": "07be841fd8949891581e2a7b746808770bf0c3b04c9d320ab5fbff7c940b8fa2"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T175142_038025Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T175142_038025Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T175142_038025Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T175142_038025Z/trajectory.txt",
+    "bytes": 100152,
+    "sha256": "6e8c30f5aedd0ced473cc45c7babe85438e968168ae81492e79e9e916c74bf2f"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T175142_038025Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T175142_038025Z/trajectory.jsonl",
+    "bytes": 103671,
+    "sha256": "d40528075e0ebd29cb9894d3180f538f5cd20736eabf762f174fb48d1a604d60"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180047_905645Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T180047_905645Z/summary.json",
+    "bytes": 1587,
+    "sha256": "0de54cb319ee9a5a34d8a25dce4034df27714137e7b42cf1a4bfd4dc734aed2e"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180047_905645Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T180047_905645Z/task.json",
+    "bytes": 469,
+    "sha256": "3facb462e85e890ee13c31282fe272bf28dd3b85d041db473369c74195aea448"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180047_905645Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T180047_905645Z/config.json",
+    "bytes": 7752,
+    "sha256": "2183391dfc8863fb41758748379fd0466dcb17bdad5ac3254bfbb5761edd7d05"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180047_905645Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T180047_905645Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180047_905645Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T180047_905645Z/trajectory.txt",
+    "bytes": 63633,
+    "sha256": "25bdd62008d95ff1ceda23869c98ac751a849201dd2f02571d54cd790210700c"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180047_905645Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T180047_905645Z/trajectory.jsonl",
+    "bytes": 64415,
+    "sha256": "b1c047ebe7b2d5dc1749cd04471f97969bf3ca7fc1963647872ff263884b52b7"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180506_211752Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T180506_211752Z/summary.json",
+    "bytes": 1599,
+    "sha256": "85d79d287719e1624426554489848f189394d9ba86842802d88591f7aaed5896"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180506_211752Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T180506_211752Z/task.json",
+    "bytes": 469,
+    "sha256": "3facb462e85e890ee13c31282fe272bf28dd3b85d041db473369c74195aea448"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180506_211752Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T180506_211752Z/config.json",
+    "bytes": 8038,
+    "sha256": "2d6a38f18d82c2bfa6c7c19f4cceca39771ad3008ae734e66717aecc8adf07d3"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180506_211752Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T180506_211752Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180506_211752Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T180506_211752Z/trajectory.txt",
+    "bytes": 59769,
+    "sha256": "e79c4d9c50012d573ca31ea4fdd7e0b7037a308f1d3b5ef4328cc7cc31c1cb41"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T180506_211752Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T180506_211752Z/trajectory.jsonl",
+    "bytes": 57882,
+    "sha256": "9a3095534212e34edf81ebb3548e9775c979e434ba5cd972027be5da6a56517e"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181122_526667Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T181122_526667Z/summary.json",
+    "bytes": 1615,
+    "sha256": "17f550c6ae1195a8ca4beda3fead2fc624ce42c2e462dedc63d67807d5b97711"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181122_526667Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T181122_526667Z/task.json",
+    "bytes": 469,
+    "sha256": "3facb462e85e890ee13c31282fe272bf28dd3b85d041db473369c74195aea448"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181122_526667Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T181122_526667Z/config.json",
+    "bytes": 8319,
+    "sha256": "17b6bfcbb524f443e0a4b13112076cb1f4634f779fb95ac8b2ce83f88ae9a21a"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181122_526667Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T181122_526667Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181122_526667Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T181122_526667Z/trajectory.txt",
+    "bytes": 95891,
+    "sha256": "6650e85ba02562f089c6db2cd1d6d019902cad1c5829060a152b28988c769cb3"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181122_526667Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T181122_526667Z/trajectory.jsonl",
+    "bytes": 94483,
+    "sha256": "85930d3eeed2a8f66830eb319cf22dc3b0fc1ba9c0effd24f8d05349d0fb236e"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181934_796393Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T181934_796393Z/summary.json",
+    "bytes": 1022,
+    "sha256": "022e81cea85eff396bcc22db6105e3be26b89bb32115ff8dc8341f1169eaaf69"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181934_796393Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T181934_796393Z/task.json",
+    "bytes": 469,
+    "sha256": "3facb462e85e890ee13c31282fe272bf28dd3b85d041db473369c74195aea448"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181934_796393Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T181934_796393Z/config.json",
+    "bytes": 8690,
+    "sha256": "86d1e3b84588fcb68dcf2fe0c5088669bd0a076ff5abb6f41d5b72a986d29bd5"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181934_796393Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T181934_796393Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181934_796393Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T181934_796393Z/trajectory.txt",
+    "bytes": 91052,
+    "sha256": "89d4ce415e409949add1b94530a4dc93cdcbf7c6ad46a0759b8cc6aa9a96571e"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T181934_796393Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T181934_796393Z/trajectory.jsonl",
+    "bytes": 89170,
+    "sha256": "ceb82327dd0f1685c6aa6be4133efdb688b1d6d936fc7e5eb1b4db67057c0b46"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T182624_604241Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T182624_604241Z/summary.json",
+    "bytes": 2110,
+    "sha256": "5c077bbbf1091c8c128f17c406f93998662d3df837659f2d60fc050f66e55361"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T182624_604241Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T182624_604241Z/task.json",
+    "bytes": 469,
+    "sha256": "3facb462e85e890ee13c31282fe272bf28dd3b85d041db473369c74195aea448"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T182624_604241Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T182624_604241Z/config.json",
+    "bytes": 9037,
+    "sha256": "b354183d4a566b9567dd3ded7531df7f7024f0201bd6ebd1758201777fe879cc"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T182624_604241Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T182624_604241Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T182624_604241Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T182624_604241Z/trajectory.txt",
+    "bytes": 102961,
+    "sha256": "59f53fa409e3b675d65d6fc34941cf74a381cc25655dec3c864b739410061486"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T182624_604241Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T182624_604241Z/trajectory.jsonl",
+    "bytes": 101440,
+    "sha256": "68f4de2ddbf3c4e01d82ad4e821d4f39d2ed2bdd1e4cf360197a47b2223f15b6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T183303_700087Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T183303_700087Z/summary.json",
+    "bytes": 1605,
+    "sha256": "5aab01f78e180c805b130708eb126273364aa0469087e55078b7e189223a64e6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T183303_700087Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T183303_700087Z/task.json",
+    "bytes": 469,
+    "sha256": "3facb462e85e890ee13c31282fe272bf28dd3b85d041db473369c74195aea448"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T183303_700087Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T183303_700087Z/config.json",
+    "bytes": 9244,
+    "sha256": "367805d55df5cee2ff391357bea1d7a58ea33e2347d59a2fec43aa7f5644842f"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T183303_700087Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T183303_700087Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T183303_700087Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T183303_700087Z/trajectory.txt",
+    "bytes": 98954,
+    "sha256": "18b5dc87f72e758c2f7ddf889a0df0968d2a89e8ef601a8add33803b6c346b13"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T183303_700087Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T183303_700087Z/trajectory.jsonl",
+    "bytes": 97159,
+    "sha256": "647f1bcb93d9437421b65f5bf3bf3ac1f30a0f2e70d3e832ade735f8f7bb6f63"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184005_761386Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T184005_761386Z/summary.json",
+    "bytes": 1038,
+    "sha256": "7f1c1fec70b58e3843387c31e480ee8f2ca7434016de5067e94e5873d9cdd94a"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184005_761386Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T184005_761386Z/task.json",
+    "bytes": 469,
+    "sha256": "3facb462e85e890ee13c31282fe272bf28dd3b85d041db473369c74195aea448"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184005_761386Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T184005_761386Z/config.json",
+    "bytes": 9419,
+    "sha256": "357d4cb29597cff1bb328f1c8a35f0e7d16f1a39162e622df8187c03692a9b0a"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184005_761386Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T184005_761386Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184005_761386Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T184005_761386Z/trajectory.txt",
+    "bytes": 99390,
+    "sha256": "38bdf35017569e6bec230f9dc05f3667bc3ea1618baacd5d79ae45c780faae77"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184005_761386Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T184005_761386Z/trajectory.jsonl",
+    "bytes": 98149,
+    "sha256": "924f6537e60567a3ab219734054af26d9b55b02d572b7d09559bb616f3dd2150"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184737_498743Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T184737_498743Z/summary.json",
+    "bytes": 2030,
+    "sha256": "87c4b2ed83947c622090362ea7a5bc643cb110eda53f5a2a37471c5c50812fbb"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184737_498743Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T184737_498743Z/task.json",
+    "bytes": 520,
+    "sha256": "50a0a8a2fa799a732bc7beb2581b880ccad4c3e776ff5f10a0d4677a91ed63fd"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184737_498743Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T184737_498743Z/config.json",
+    "bytes": 9419,
+    "sha256": "398f6679b75899bca9e14ec79005b476c671a426152f219724c758e8aaa0c42f"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184737_498743Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T184737_498743Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184737_498743Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T184737_498743Z/trajectory.txt",
+    "bytes": 65335,
+    "sha256": "7078fa2ac105ac596c1956bcaac0b8f1d0bdce5d694b2ef324d689734d5d1b6f"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184737_498743Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T184737_498743Z/trajectory.jsonl",
+    "bytes": 63728,
+    "sha256": "e54d41fef1872dffc38f46e70692165991db43825366319388c441ff966b777f"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T185418_998730Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T185418_998730Z/summary.json",
+    "bytes": 1844,
+    "sha256": "9b8bdd81b7dee239dfaf5fc7d2f4a902baad954d5d851be8ebb35bc489f1aafd"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T185418_998730Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T185418_998730Z/task.json",
+    "bytes": 520,
+    "sha256": "50a0a8a2fa799a732bc7beb2581b880ccad4c3e776ff5f10a0d4677a91ed63fd"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T185418_998730Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T185418_998730Z/config.json",
+    "bytes": 9777,
+    "sha256": "3bb65ebf83f64f21553f89a06f5521d89797dee24b48ac26d5395e0f694b41ca"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T185418_998730Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T185418_998730Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T185418_998730Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T185418_998730Z/trajectory.txt",
+    "bytes": 116265,
+    "sha256": "2314ae4866e581801beb4c2ecde45458ef4a7fe6a36f49591dc2ab363d58145c"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T185418_998730Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T185418_998730Z/trajectory.jsonl",
+    "bytes": 114255,
+    "sha256": "5f22c8ae9408df637a09b27cdbfb678e4e97dc5c38829d2c6b87ec80be89da2f"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T190133_618757Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T190133_618757Z/summary.json",
+    "bytes": 1021,
+    "sha256": "5af9a76cc12f1eede66ea2b6b2bace7a37e638cfd9cf04b7657ec52ba8a46091"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T190133_618757Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T190133_618757Z/task.json",
+    "bytes": 520,
+    "sha256": "50a0a8a2fa799a732bc7beb2581b880ccad4c3e776ff5f10a0d4677a91ed63fd"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T190133_618757Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T190133_618757Z/config.json",
+    "bytes": 9955,
+    "sha256": "a2cf7034d884300bb933669b2ac222a94238ce1999bbc985839aa30e7342f05b"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T190133_618757Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T190133_618757Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T190133_618757Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T190133_618757Z/trajectory.txt",
+    "bytes": 144822,
+    "sha256": "b71576967b9553eec42e17d84f5340acea2d311f548b6874dcd162ccb54a69e8"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T190133_618757Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T190133_618757Z/trajectory.jsonl",
+    "bytes": 142921,
+    "sha256": "d5347b7675a5f59cd97ec77c31a522fc205ad0fa3f4740e0111dd6a335a8cbe5"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191028_258914Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T191028_258914Z/summary.json",
+    "bytes": 1596,
+    "sha256": "928c75adabe1c6d7fef47b25d2c80c93b19691baabeb3f501cc222ec69852228"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191028_258914Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T191028_258914Z/task.json",
+    "bytes": 461,
+    "sha256": "a8bb7840ced0e5be061523fa287ea11105fb695d233a1ff983c222f417dd73a7"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191028_258914Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T191028_258914Z/config.json",
+    "bytes": 9956,
+    "sha256": "ec85f1dd6af6d9544f0039d5b9ead0bc67e2ee8b62521aae9d4c6c58f00eb350"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191028_258914Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T191028_258914Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191028_258914Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T191028_258914Z/trajectory.txt",
+    "bytes": 62513,
+    "sha256": "5410e17fd2e61a324d5069817ef4d2c5b98e523bbaabad373ef98771932e55dc"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191028_258914Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T191028_258914Z/trajectory.jsonl",
+    "bytes": 62483,
+    "sha256": "132d62722e0d1665a8aad05b498e45a3f0b9e1e3696c5b7694137335a894f7b4"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191416_346389Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T191416_346389Z/summary.json",
+    "bytes": 1032,
+    "sha256": "f51a10d2f40125453ad8f0df8584c971d459a696998a5c8beb1c1ee7c21e8df4"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191416_346389Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T191416_346389Z/task.json",
+    "bytes": 462,
+    "sha256": "0086b8e669d690090395a0eb786c5b2b5cbb574186b805896e1e6e0a40654647"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191416_346389Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T191416_346389Z/config.json",
+    "bytes": 9957,
+    "sha256": "6f0cede03e93bd6c7e9fd0d381930aeebf6e60b6cf11466de904171d16700bc7"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191416_346389Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T191416_346389Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191416_346389Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T191416_346389Z/trajectory.txt",
+    "bytes": 106400,
+    "sha256": "383fd4249d2126f301ac5e2cf212134a341ca38709d4954c2d145ac847e87807"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191416_346389Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T191416_346389Z/trajectory.jsonl",
+    "bytes": 104752,
+    "sha256": "a2171917f1abc5d8fb6805af84d9836bb73619b11a53f8853df6733e6ed88078"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192047_603317Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T192047_603317Z/summary.json",
+    "bytes": 1032,
+    "sha256": "5f19bdedd6f90f07394a5ebb85575ff9a75746c079ea335d8382ca9bba1b21f7"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192047_603317Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T192047_603317Z/task.json",
+    "bytes": 462,
+    "sha256": "4faf873ea4233a4c525d6241f18d674dbf5c666d9de8d234f1a76c01a0405ffe"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192047_603317Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T192047_603317Z/config.json",
+    "bytes": 9957,
+    "sha256": "d401c7b8f8a05a63b4cc247c48290125cc3e062c8d0273f81888acc4b392cd2b"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192047_603317Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T192047_603317Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192047_603317Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T192047_603317Z/trajectory.txt",
+    "bytes": 112064,
+    "sha256": "bd15fc5066dac8af57c161643175abb10896698934cc9d4288ccf2797dc54274"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192047_603317Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T192047_603317Z/trajectory.jsonl",
+    "bytes": 110391,
+    "sha256": "ff283341018330b8342c00d98f789589b84822277605e0978aa683fdf15114be"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192740_100250Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T192740_100250Z/summary.json",
+    "bytes": 1562,
+    "sha256": "86482fd0e720bd9719b20861385746012d00210cd647536ee916f155127066ff"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192740_100250Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T192740_100250Z/task.json",
+    "bytes": 461,
+    "sha256": "a8bb7840ced0e5be061523fa287ea11105fb695d233a1ff983c222f417dd73a7"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192740_100250Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T192740_100250Z/config.json",
+    "bytes": 9894,
+    "sha256": "cbddc8a48266d58f14fd7f0afbcda0d870542dab5ea96793b4f919c6d0813b6b"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192740_100250Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T192740_100250Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192740_100250Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T192740_100250Z/trajectory.txt",
+    "bytes": 112173,
+    "sha256": "a3ba4e77632e40d7050e45ab66b61e178ef3d6c69731b7da8e5bdc50e3078042"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T192740_100250Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T192740_100250Z/trajectory.jsonl",
+    "bytes": 109372,
+    "sha256": "7d24770c959e2c0f60b393435053df33116ca9a730baeab94c2695f98e92286e"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T193351_329177Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T193351_329177Z/summary.json",
+    "bytes": 1605,
+    "sha256": "d6b998b497512740a899fb8ef10d701cd9d842e1fd05fa8a12fc9d3323c525af"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T193351_329177Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T193351_329177Z/task.json",
+    "bytes": 462,
+    "sha256": "0086b8e669d690090395a0eb786c5b2b5cbb574186b805896e1e6e0a40654647"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T193351_329177Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T193351_329177Z/config.json",
+    "bytes": 9895,
+    "sha256": "5a8666f68a690d37a388acfef3716c4261ed73b7e6accd79e400f2c191477cff"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T193351_329177Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T193351_329177Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T193351_329177Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T193351_329177Z/trajectory.txt",
+    "bytes": 185810,
+    "sha256": "7c75746b6dfa7c85e865bfd63afc947a46c235a33e2b955dbfa9a736032f3d0a"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T193351_329177Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T193351_329177Z/trajectory.jsonl",
+    "bytes": 181449,
+    "sha256": "05094f8299418a7d354b4d096d38531b6ac1e01d7e0a68585bdeb0bacae7a9d1"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T194426_412041Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T194426_412041Z/summary.json",
+    "bytes": 1551,
+    "sha256": "63f28b870500d763e0a5564f6798d145d64a6c347924676503fd6d1576049b46"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T194426_412041Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T194426_412041Z/task.json",
+    "bytes": 462,
+    "sha256": "4faf873ea4233a4c525d6241f18d674dbf5c666d9de8d234f1a76c01a0405ffe"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T194426_412041Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T194426_412041Z/config.json",
+    "bytes": 9895,
+    "sha256": "40df4dfab77dc96aa588206c8440a43a3fa4636421d9425cef22fe7dc11ddfd6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T194426_412041Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T194426_412041Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T194426_412041Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T194426_412041Z/trajectory.txt",
+    "bytes": 90657,
+    "sha256": "ac07ec6043a6d4bcba3aa0960568524f55732d3f0a466105af8579d2508ab741"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T194426_412041Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T194426_412041Z/trajectory.jsonl",
+    "bytes": 87986,
+    "sha256": "ca134ed175129629d4129fd89b799dd362aa57f026a2db09ddccf7c603047f78"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T195225_073828Z/summary.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T195225_073828Z/summary.json",
+    "bytes": 1030,
+    "sha256": "a7429348d0ace175e37bbd763350bfa8040be1373eb2199c5a66bba21e4b11c7"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T195225_073828Z/task.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T195225_073828Z/task.json",
+    "bytes": 461,
+    "sha256": "a8bb7840ced0e5be061523fa287ea11105fb695d233a1ff983c222f417dd73a7"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T195225_073828Z/config.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T195225_073828Z/config.json",
+    "bytes": 10394,
+    "sha256": "218d5c96ec0289daa1309a044c4acc5de96a41f5fb28c68c62ee692224849b2a"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T195225_073828Z/versions.json",
+    "exported": "runs/trial_OsmAndTrack_20261008T195225_073828Z/versions.json",
+    "bytes": 356,
+    "sha256": "6f4e1dde1954aac51f99d18ec0774f176f9e7e99467079d7da16bb872f31d0d6"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T195225_073828Z/trajectory.txt",
+    "exported": "runs/trial_OsmAndTrack_20261008T195225_073828Z/trajectory.txt",
+    "bytes": 113082,
+    "sha256": "02766159a59f6af009b5f023f954909a1f1b248619693291c3472649c5dea7c2"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T195225_073828Z/trajectory.jsonl",
+    "exported": "runs/trial_OsmAndTrack_20261008T195225_073828Z/trajectory.jsonl",
+    "bytes": 111132,
+    "sha256": "c7dd7307e75dee03bdf8efac116bb586ceb4cec2b947a2ab4ea8017e273a024c"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T191028_258914Z/step_008/observation_1/screen.png",
+    "exported": "runs/trial_OsmAndTrack_20261008T191028_258914Z/step_008/observation_1/screen.png",
+    "bytes": 179450,
+    "sha256": "6591791ba3d4d2b23a881361367d4f2fd8db08ab682b3050bf46b312bbb2c07c"
+  },
+  {
+    "original": "runs/trial_OsmAndTrack_20261008T184005_761386Z/step_020/observation_0/screen.png",
+    "exported": "runs/trial_OsmAndTrack_20261008T184005_761386Z/step_020/observation_0/screen.png",
+    "bytes": 1429183,
+    "sha256": "67df84b0daf71f589bb7715eacd4a03f17ca00ef196dcb8b7e75b8c60e258666"
+  }
+]

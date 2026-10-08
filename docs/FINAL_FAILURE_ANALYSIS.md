@@ -100,6 +100,9 @@ are in [IMPROVEMENT_OSMAND.md](IMPROVEMENT_OSMAND.md#additional-experiment-v61-o
 
 Run `trial_OsmAndTrack_20261008T191028_258914Z` (seed 31). Official verifier:
 FAIL. Stop: no-progress rule after 11 executed steps (budget 90).
+Trajectory: [evidence/extra/runs/trial_OsmAndTrack_20261008T191028_258914Z](evidence/extra/runs/trial_OsmAndTrack_20261008T191028_258914Z/trajectory.txt);
+the step-8 screenshot with the village row:
+[screen.png](evidence/extra/runs/trial_OsmAndTrack_20261008T191028_258914Z/step_008/observation_1/screen.png).
 
 | Steps | What the model saw and did | Assessment |
 | --- | --- | --- |

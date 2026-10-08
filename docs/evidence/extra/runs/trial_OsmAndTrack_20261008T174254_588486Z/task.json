@@ -1,0 +1,14 @@
+{
+  "name": "OsmAndTrack",
+  "goal": "Save a track with waypoints Planken, Liechtenstein, Rotenboden, Liechtenstein in the OsmAnd maps app in the same order as listed.",
+  "parameters": {
+    "track_name": "Planken, Liechtenstein to Rotenboden, Liechtenstein",
+    "waypoints": [
+      "Planken, Liechtenstein",
+      "Rotenboden, Liechtenstein"
+    ]
+  },
+  "verifier_rows": {},
+  "seed": 8,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

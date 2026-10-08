@@ -48,6 +48,21 @@ and every run's summary, task, configuration, versions and readable/JSONL
 trajectory. [followup/export_manifest.json](followup/export_manifest.json)
 lists 64 files with SHA256 hashes. Recordings stay local and outside Git.
 
+## Additional OsmAnd experiment export (v49-v62)
+
+[extra/](extra/) holds the frozen v61 evaluation on the course slide's task
+(with the Skill [RESULTS](extra/eval_batch_20261008T191026_753929Z/RESULTS.md),
+without it [RESULTS](extra/eval_batch_20261008T192739_139270Z/RESULTS.md)), the
+14 practice runs of v49-v61 (rows 29-42 of [MEDIUM_HARD_TRIALS.md](../MEDIUM_HARD_TRIALS.md))
+and the v62 post-evaluation check (row 43): every run's summary, task,
+configuration, versions and readable/JSONL trajectory, plus two screenshots
+(the seed-31 list with the village row the model passed over, and the first
+PASS just before Done). [extra/export_manifest.json](extra/export_manifest.json)
+lists 136 files with original paths, sizes and SHA256 hashes; the export
+checks that no file contains the API key. Links inside the exported
+RESULTS.md files follow the local `runs/` layout; the exported runs are under
+`extra/runs/`. Recordings stay local and outside Git.
+
 ## Aggregate reports
 
 | Selected batch | Included outcome |

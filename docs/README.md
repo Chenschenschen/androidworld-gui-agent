@@ -5,9 +5,9 @@ Start here rather than reading the design history from beginning to end.
 | Current document | Purpose |
 | --- | --- |
 | [FINAL_EVALUATION.md](FINAL_EVALUATION.md) | **Course evaluation**: easy/medium/hard, three runs each, one frozen version (v42). |
-| [IMPROVEMENT_OSMAND.md](IMPROVEMENT_OSMAND.md) | Documented improvement with before/after results (OsmAnd Skill). |
+| [IMPROVEMENT_OSMAND.md](IMPROVEMENT_OSMAND.md) | Documented improvement with before/after results (OsmAnd Skill), plus the additional v61 experiment on the slide's task (2/3 vs 0/3). |
 | [FINAL_FAILURE_ANALYSIS.md](FINAL_FAILURE_ANALYSIS.md) | Step-by-step failure analysis and failure classes. |
-| [MEDIUM_HARD_TRIALS.md](MEDIUM_HARD_TRIALS.md) | Every learning trial from v30 to v42 with cause and fix. |
+| [MEDIUM_HARD_TRIALS.md](MEDIUM_HARD_TRIALS.md) | Every learning trial from v30 to v61 with cause and fix. |
 | [SETUP.md](SETUP.md) | Fresh Windows/Python/Android installation. |
 | [RUNNING_TASKS.md](RUNNING_TASKS.md) | Independent execution and evidence fields. |
 | [AGENT_WALKTHROUGH.md](AGENT_WALKTHROUGH.md) | Explain the current program's flow. |

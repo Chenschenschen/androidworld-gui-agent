@@ -1,8 +1,10 @@
 # Project working rules
 
-Update, 8 October 2026: branch head is v48, an UNEVALUATED follow-up (OsmAnd checks; 0/10 practice runs,
-see docs/MEDIUM_HARD_TRIALS.md rows 22-28). The evaluated code is tag final-eval-v42. Recommended next
-step if work resumes: Android World's accessibility forwarder gives OsmAnd's GUI tree in 0.2 s.
+Update, 8 October 2026 (evening): additional OsmAnd-only experiment. v49-v61 use the accessibility
+forwarder (UIAutomator fallback) and run the OsmAnd Skill procedure as code (osmand_next_step). Frozen
+v61 (tag osmand-extra-v61) on the course slide's instance (Ruggell -> Bendern, seeds 31/314/366): 2/3
+with the Skill, 0/3 without (docs/IMPROVEMENT_OSMAND.md). Branch head v62 = two post-evaluation fixes,
+not evaluated. The three-task course evaluation stays tag final-eval-v42.
 
 Current state, 8 October 2026 (v42, branch Jia): the course evaluation is complete. Final batch
 eval_batch_20261008T133403: Contacts 3/3, Calendar 3/3, OsmAndTrack 0/3, one frozen version, all runs

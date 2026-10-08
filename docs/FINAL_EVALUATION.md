@@ -20,8 +20,11 @@ not mixed in.
 | Environment | Android World at `2dfc5ca`, Python 3.11, Pixel 6 API 33 Google APIs image, headless emulator `-no-snapshot -grpc 8554 -camera-back emulated -camera-front emulated -gpu host -no-window` (why: [SETUP.md](SETUP.md) troubleshooting), Windows kept awake during the batch |
 | Task seeds | 42, 43, 44 (seed fixes each task instance; see `task.json` in each run) |
 
-The evaluated code is tagged `final-eval-v42` (`git checkout final-eval-v42`); the branch head
-contains later, unevaluated exploration (v43-v48, [MEDIUM_HARD_TRIALS.md](MEDIUM_HARD_TRIALS.md)).
+The evaluated code is tagged `final-eval-v42` (`git checkout final-eval-v42`). Later work on
+OsmAndTrack only (v43-v62) is reported separately: practice runs in
+[MEDIUM_HARD_TRIALS.md](MEDIUM_HARD_TRIALS.md) and an additional frozen evaluation of v61 on the
+course slide's instance (2/3 with the Skill, 0/3 without) in
+[IMPROVEMENT_OSMAND.md](IMPROVEMENT_OSMAND.md#additional-experiment-v61-on-the-slide-instance).
 
 Command (one batch, all nine runs, no stop after a failure):
 

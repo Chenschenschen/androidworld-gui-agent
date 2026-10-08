@@ -705,11 +705,13 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         # host-GPU backend: glReadPixels error 0x506), not a screen to reason about.
         if not state.pixels.any():
             raise RuntimeError("Screenshot is entirely black: emulator rendering failure (try -gpu swiftshader_indirect)")
-        if self.config.get("supplemental_tree_packages"):
-            state = self.supplement_controls(state)
-        elif self.config["tree_backend"] == "a11y_forwarder" and thin_tree(state.ui_elements):
+        if self.config["tree_backend"] == "a11y_forwarder":
             # The same screen read by UIAutomator lists the route panel (points, Add, Done) in about 3 s.
-            state = self.supplement_controls(state, any_app=True)
+            # Checked first: v51-v53 took the package-list branch below, so the fallback never ran.
+            if thin_tree(state.ui_elements):
+                state = self.supplement_controls(state, any_app=True)
+        elif self.config.get("supplemental_tree_packages"):
+            state = self.supplement_controls(state)
         return state
 
     def supplement_controls(self, state, any_app=False):

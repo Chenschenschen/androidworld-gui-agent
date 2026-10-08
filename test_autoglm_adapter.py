@@ -503,7 +503,7 @@ class AdapterTests(unittest.TestCase):
             agent = object.__new__(AutoGLMAgent)
             agent.output, agent.history, agent.deadline = Path(folder), [], float("inf")
             agent.config = {"visual_stability_checks": 1, "visual_stability_pause": 0, "visual_stability_difference": 1,
-                            "tree_backend": "a11y_forwarder", "supplemental_tree_packages": []}
+                            "tree_backend": "a11y_forwarder", "supplemental_tree_packages": ["com.android.settings"]}
             agent.env = SimpleNamespace(get_state=lambda wait_to_stabilize: State(pixels, None, plan_route))
             with patch.object(AutoGLMAgent, "supplement_controls", return_value="uiautomator state") as supplement:
                 self.assertEqual(agent.observe(), "uiautomator state")

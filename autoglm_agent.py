@@ -18,6 +18,7 @@ import xml.etree.ElementTree as ET
 
 from android_world.agents import base_agent
 from android_world.env import adb_utils, json_action, representation_utils
+import numpy as np
 from PIL import Image, ImageChops, ImageStat
 
 from probe_connection import save_json
@@ -350,10 +351,24 @@ def control_notes(state):
     return "\n".join(notes) or "No GUI tree available; inspect the screenshot."
 
 
+def changed_pixels(before, after):
+    """Count full-resolution pixels that clearly changed, excluding status and navigation bars."""
+    if before.pixels.shape != after.pixels.shape:
+        return before.pixels.size
+    height = before.pixels.shape[0]
+    band = slice(int(height * .06), int(height * .94))
+    first, second = (np.asarray(Image.fromarray(state.pixels[band]).convert("L"), dtype=np.int16) for state in (before, after))
+    return int((np.abs(first - second) > 24).sum())
+
+
 def no_observed_effect(before, after, threshold):
     """Require unchanged GUI labels/state as well as little pixel change."""
     # Small timer digits can change while affecting very few full-screen pixels.
-    return image_difference(before, after) < threshold and screen_controls(before) == screen_controls(after)
+    # Without a GUI tree (OsmAnd), a label such as "5 mi" -> "10 mi" vanishes at
+    # 64x128; recorded ineffective taps changed 0-8 full-resolution pixels and
+    # such label changes 296-1373, so more than 50 counts as an effect.
+    return (image_difference(before, after) < threshold and changed_pixels(before, after) <= 50
+            and screen_controls(before) == screen_controls(after))
 
 
 def repeated_without_progress(action, actions, results):

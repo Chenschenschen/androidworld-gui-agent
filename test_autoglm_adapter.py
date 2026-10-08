@@ -97,6 +97,17 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(skill_reminder({"task_skills": {}}, "OsmAndTrack", inputs), "")
         self.assertEqual(skill_reminder(config, "ContactsAddContact", {"name": "A"}), "")
 
+    def test_small_text_change_is_an_effect(self):
+        """A label change too small for the 64x128 comparison still counts as an effect."""
+        before = SimpleNamespace(pixels=np.full((2400, 1080, 3), 200, dtype=np.uint8), ui_elements=[])
+        label = before.pixels.copy()
+        label[400:420, 300:330] = 0  # 600 pixels, like "5 mi" -> "10 mi" (296-1373 recorded)
+        noise = before.pixels.copy()
+        noise[1000, 500:505] = 0  # 5 pixels; truly ineffective taps changed 0-8
+        self.assertFalse(no_observed_effect(before, SimpleNamespace(pixels=label, ui_elements=[]), 0.001))
+        self.assertTrue(no_observed_effect(before, SimpleNamespace(pixels=noise, ui_elements=[]), 0.001))
+        self.assertTrue(no_observed_effect(before, before, 0.001))
+
     def test_history_window_keeps_goal_and_recent_turns(self):
         """Long runs keep the first (goal) turn and the latest turns within the prompt limit."""
         from autoglm_agent import history_window

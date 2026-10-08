@@ -94,6 +94,9 @@ class AdapterTests(unittest.TestCase):
         self.assertIn('1. "Planken"', reminder)
         self.assertIn("never the full", reminder)
         self.assertIn("INCREASE SEARCH RADIUS", reminder)
+        # Final-evaluation failures: a same-name guidepost and a Favorite saved three times.
+        self.assertIn("Village, Hamlet or Town", reminder)
+        self.assertIn("Favorite", reminder)
         self.assertEqual(skill_reminder({"task_skills": {}}, "OsmAndTrack", inputs), "")
         self.assertEqual(skill_reminder(config, "ContactsAddContact", {"name": "A"}), "")
 
@@ -107,6 +110,18 @@ class AdapterTests(unittest.TestCase):
         self.assertFalse(no_observed_effect(before, SimpleNamespace(pixels=label, ui_elements=[]), 0.001))
         self.assertTrue(no_observed_effect(before, SimpleNamespace(pixels=noise, ui_elements=[]), 0.001))
         self.assertTrue(no_observed_effect(before, before, 0.001))
+
+    def test_text_field_focus_without_gui_tree(self):
+        """Android's input-method dump tells whether a text field holds focus."""
+        from autoglm_agent import text_field_focused
+        def dump(served):
+            return SimpleNamespace(generic=SimpleNamespace(output=f"  mServedView={served}\n  mServedView=null\n".encode()))
+        # Recorded on the emulator: OsmAnd search field focused versus the map / an unfocused page.
+        for served, expected in (("androidx.appcompat.widget.AppCompatEditText{158e104", True),
+                                 ("com.google.android.apps.nexuslauncher.search.SearchEditText{eff4ff0", True),
+                                 ("DecorView@60e968a[MapActivity]", False)):
+            with self.subTest(served=served), patch("autoglm_agent.adb_utils.issue_generic_request", return_value=dump(served)):
+                self.assertIs(text_field_focused(None), expected)
 
     def test_history_window_keeps_goal_and_recent_turns(self):
         """Long runs keep the first (goal) turn and the latest turns within the prompt limit."""

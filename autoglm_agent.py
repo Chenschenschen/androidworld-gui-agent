@@ -86,8 +86,26 @@ def skill_reminder(config, task_name, inputs):
     if not config.get("task_skills", {}).get(task_name) or not inputs.get("waypoints"):
         return ""
     terms = " ".join(f'{number}. "{waypoint.split(",")[0].strip()}"' for number, waypoint in enumerate(inputs["waypoints"], 1))
+    # The last three rules answer the v42 final-evaluation failures: a same-name
+    # guidepost chosen, a Favorite saved three times, searches switched too early.
     return (f"Skill reminder: type only the search term, never the full waypoint text. Search terms in order: {terms}. "
-            "If the search shows 'Could not find anything', tap INCREASE SEARCH RADIUS (not SHOW ON MAP) until the place row appears, then tap that row.\n")
+            "If the search shows 'Could not find anything', tap INCREASE SEARCH RADIUS (not SHOW ON MAP) until the place row appears, then tap that row. "
+            "Choose only a row whose type is Village, Hamlet or Town, never a guidepost, station, stop or street. "
+            "Never tap the star 'Add' on a place card: it saves a Favorite. First waypoint: Actions > Plan a route. "
+            "Later waypoints: press Back until the route panel shows 'points: N', then tap that panel's Add. "
+            "Finish the current waypoint before searching the next.\n")
+
+
+def text_field_focused(controller):
+    """Ask Android whether a text field holds the input connection (needs no GUI tree).
+
+    Without a GUI tree the adapter's focus check cannot run: trial
+    OsmAndTrack_20261008T134852 typed "Balzers" into an unfocused page and the
+    text vanished. The input-method dump names the focused view's class.
+    """
+    response = adb_utils.issue_generic_request(["shell", "dumpsys", "input_method"], controller)
+    served = re.findall(r"mServedView=([^\s}]+)", response.generic.output.decode("utf-8", errors="replace"))
+    return any(re.search(r"EditText|AutoComplete|TextInput", view) for view in served)
 
 
 def history_window(conversation, turns):
@@ -556,6 +574,9 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                     raise ValueError("Truncated model reply")
                 fields = parse_action(raw)
                 action = convert_action(fields, state, self.config["allowed_apps"])
+                # convert_action checks focus only when a GUI tree exists; otherwise ask Android.
+                if action["action_type"] == "input_text" and not state.ui_elements and not text_field_focused(self.env.controller):
+                    raise ValueError("No text field is focused, so nothing would be typed. Tap the text field first, then Type.")
                 calls = [line.strip() for line in raw.splitlines() if re.match(r"\s*(do|finish)\(", line)]
                 if len(calls) > 1 and len(set(calls)) == 1:
                     log_event(self.output, "IDENTICAL CALLS COLLAPSED", {"copies": len(calls), "decisions": 1, "executions_at_most": 1}, step)

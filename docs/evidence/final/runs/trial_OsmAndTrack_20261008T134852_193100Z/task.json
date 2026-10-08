@@ -1,0 +1,16 @@
+{
+  "name": "OsmAndTrack",
+  "goal": "Save a track with waypoints Bendern, Liechtenstein, Balzers, Liechtenstein, Oberplanken, Liechtenstein, Nendeln, Liechtenstein in the OsmAnd maps app in the same order as listed.",
+  "parameters": {
+    "track_name": "Bendern, Liechtenstein to Nendeln, Liechtenstein",
+    "waypoints": [
+      "Bendern, Liechtenstein",
+      "Balzers, Liechtenstein",
+      "Oberplanken, Liechtenstein",
+      "Nendeln, Liechtenstein"
+    ]
+  },
+  "verifier_rows": {},
+  "seed": 42,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

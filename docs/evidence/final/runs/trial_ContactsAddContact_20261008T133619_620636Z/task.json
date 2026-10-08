@@ -1,0 +1,11 @@
+{
+  "name": "ContactsAddContact",
+  "goal": "Create a new contact for Hugo Ali. Their number is +12751797908.",
+  "parameters": {
+    "name": "Hugo Ali",
+    "number": "+12751797908"
+  },
+  "verifier_rows": {},
+  "seed": 43,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

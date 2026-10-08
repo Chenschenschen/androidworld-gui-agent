@@ -1,0 +1,21 @@
+{
+  "name": "SimpleCalendarAddOneEvent",
+  "goal": "In Simple Calendar Pro, create a calendar event on 2023-10-16 at 9h with the title 'Appointment for Budget Planning' and the description 'We will finalize software updates. Snacks will be provided.'. The event should last for 30 mins.",
+  "parameters": {
+    "year": 2023,
+    "month": 10,
+    "day": 16,
+    "hour": 9,
+    "duration_mins": 30,
+    "event_title": "Appointment for Budget Planning",
+    "event_description": "We will finalize software updates. Snacks will be provided."
+  },
+  "verifier_rows": {
+    "noise_row_objects": [],
+    "row_objects": [
+      "CalendarEvent(start_ts=1697446800, end_ts=1697448600, title='Appointment for Budget Planning', location='', description='We will finalize software updates. Snacks will be provided.', repeat_interval=0, repeat_rule=0, reminder_1_minutes=-1, reminder_2_minutes=-1, reminder_3_minutes=-1, reminder_1_type=0, reminder_2_type=0, reminder_3_type=0, repeat_limit=0, repetition_exceptions='[]', attendees='', import_id='', time_zone='UTC', flags=0, event_type=1, parent_id=0, last_updated=0, source='imported-ics', availability=0, color=0, type=0, id=-1)"
+    ]
+  },
+  "seed": 43,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

@@ -27,6 +27,18 @@ source snapshots are not included. Some original paths in traces refer to the
 larger local archive. Those paths are historical, not installation settings.
 Credentials, environments, dependency checkouts and course originals are excluded.
 
+## Final evaluation export (v42)
+
+[final/](final/) holds the two final batches, the baseline without the Skill
+([RESULTS](final/eval_batch_20261008T132945_347728Z/RESULTS.md)) and the
+nine-run evaluation ([RESULTS](final/eval_batch_20261008T133403_527980Z/RESULTS.md)),
+with every run's summary, task, configuration, versions and readable/JSONL
+trajectory, plus the screenshots cited in the failure analysis.
+[final/export_manifest.json](final/export_manifest.json) lists 86 files with
+original paths, sizes and SHA256 hashes. Recordings (`video_*.mp4`) and full
+request/response files stay in the local `runs/` archive; recordings are
+excluded from Git by `.gitignore`.
+
 ## Aggregate reports
 
 | Selected batch | Included outcome |

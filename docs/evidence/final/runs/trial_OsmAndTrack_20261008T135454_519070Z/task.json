@@ -1,0 +1,15 @@
+{
+  "name": "OsmAndTrack",
+  "goal": "Save a track with waypoints Schaan, Liechtenstein, Triesen, Liechtenstein, Bendern, Liechtenstein in the OsmAnd maps app in the same order as listed.",
+  "parameters": {
+    "track_name": "Schaan, Liechtenstein to Bendern, Liechtenstein",
+    "waypoints": [
+      "Schaan, Liechtenstein",
+      "Triesen, Liechtenstein",
+      "Bendern, Liechtenstein"
+    ]
+  },
+  "verifier_rows": {},
+  "seed": 44,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

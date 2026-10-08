@@ -1,0 +1,33 @@
+{
+  "kind": "learning_trial",
+  "task": "SimpleCalendarAddOneEvent",
+  "run_id": "trial_SimpleCalendarAddOneEvent_20261008T134543_875203Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 17,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v42_full_resolution_effect",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 35,
+  "time_budget_seconds": 1200,
+  "skill": null,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 17,
+  "stop_reason": "complete",
+  "model_calls_attempted": 17,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 186.125,
+  "agent_phase_seconds": 170.15600000001723
+}

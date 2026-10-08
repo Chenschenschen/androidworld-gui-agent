@@ -1,5 +1,13 @@
 # Project working rules
 
+Current state, 8 October 2026 (v42, branch Jia): the course evaluation is complete. Final batch
+eval_batch_20261008T133403: Contacts 3/3, Calendar 3/3, OsmAndTrack 0/3, one frozen version, all runs
+valid and recorded. Documented improvement: OsmAnd Skill (instructions/skills/osmand_track.md) versus
+the same code with --disable-skills. Read docs/FINAL_EVALUATION.md, docs/IMPROVEMENT_OSMAND.md,
+docs/FINAL_FAILURE_ANALYSIS.md and docs/MEDIUM_HARD_TRIALS.md (every v30-v42 trial, cause and fix)
+before changing anything. The evaluation emulator runs headless on the host GPU (-gpu host -no-window).
+Paragraphs below describe earlier stages.
+
 Current continuation, 8 October 2026: the user requires source-backed guidance
 from official GitHub and the first four days' slides. On a failed trial, STOP,
 inspect its trajectory, record the cause, correct it, then run a bounded

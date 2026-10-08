@@ -8,22 +8,29 @@ finish. Android World's official verifier evaluates the result independently.
 This is a course project for **Agentic AI in Modern Business**. It is an
 experimental implementation with recorded successes and preserved failures.
 
-## Current results
+## Final evaluation (v42, one frozen version, 8 October 2026)
 
-| Warm-up | Recorded clean results | Version |
+| Task (course difficulty) | Official PASS | Notes |
 | --- | --- | --- |
-| Turn Wi-Fi on | 3/3 | v20 |
-| Take one photo | 3/3 | v20 |
-| Add a contact | 3/3 | v28 |
-| Enter an unstarted timer | Latest bounded trial failed | v28 |
-| Copy exact text | Latest bounded trial falsely finished | v27 |
+| ContactsAddContact (easy) | **3/3** | 11-13 steps, model finished every run |
+| SimpleCalendarAddOneEvent (medium) | **3/3** | 17-21 steps, model finished every run |
+| OsmAndTrack (hard, 60 reference steps) | **0/3** | Stopped by the no-progress rule after 14-22 steps; no false completion |
 
-Clean means valid initialization and recording, model finish, official PASS and
-no runtime error. These are task-specific results on different versions, not a
-single successful 15-trial batch. The current v29 adds a bounded no-progress
-cycle stop and passes 16 offline adapter checks; it has no live success claim.
-See [results and limitations](docs/WARMUP_RESULTS.md) and the
-[aggregate results](docs/evidence/README.md).
+Nine runs, task seeds 42/43/44, every run screen-recorded and checked by the
+official Android World verifier. Details and run log:
+[FINAL_EVALUATION.md](docs/FINAL_EVALUATION.md). Failure analysis:
+[FINAL_FAILURE_ANALYSIS.md](docs/FINAL_FAILURE_ANALYSIS.md).
+
+**Documented improvement** ([IMPROVEMENT_OSMAND.md](docs/IMPROVEMENT_OSMAND.md)):
+an OsmAnd Skill (app knowledge plus per-step search terms), compared on the
+same frozen code with only `task_skills` changed. Verifier 0/3 before and after;
+with the Skill all three runs searched by place name (1/3 before) and one
+started a route (0/3 before). All learning trials, infrastructure faults and
+fixes from v30 to v42: [MEDIUM_HARD_TRIALS.md](docs/MEDIUM_HARD_TRIALS.md).
+
+Earlier warm-up results (Wi-Fi and Camera 3/3 on v20, Contacts 3/3 on v28,
+Timer and Clipboard unresolved) remain in [WARMUP_RESULTS.md](docs/WARMUP_RESULTS.md);
+they are task-specific results on different versions.
 
 ## Requirements
 
@@ -62,7 +69,16 @@ installation, first-run app setup and troubleshooting.
 Start the emulator from a terminal, using the flags required by this project:
 
 ```powershell
-& "$env:LOCALAPPDATA\Android\Sdk\emulator\emulator.exe" -avd AndroidWorldAvd -no-snapshot -grpc 8554 -camera-back emulated -camera-front emulated
+& "$env:LOCALAPPDATA\Android\Sdk\emulator\emulator.exe" -avd AndroidWorldAvd -no-snapshot -grpc 8554 -camera-back emulated -camera-front emulated -gpu host -no-window
+```
+
+The final evaluation used the headless host-GPU emulator (`-gpu host -no-window`);
+see [SETUP.md](docs/SETUP.md) troubleshooting for why. Keep Windows from sleeping
+during long batches. To reproduce the final evaluation and the improvement:
+
+```powershell
+.\.venv\Scripts\python.exe -X utf8 evaluate_tasks.py --tasks OsmAndTrack --seeds 42 43 44 --run-all-seeds --disable-skills
+.\.venv\Scripts\python.exe -X utf8 evaluate_tasks.py --tasks ContactsAddContact SimpleCalendarAddOneEvent OsmAndTrack --seeds 42 43 44 --run-all-seeds
 ```
 
 In another PowerShell terminal, from the project directory:
@@ -72,9 +88,9 @@ In another PowerShell terminal, from the project directory:
 .\.venv\Scripts\python.exe -X utf8 run_task.py --task ContactsAddContact --seed 42
 ```
 
-The direct Python command is the agent entry point. Its five task choices are
-`SystemWifiTurnOn`, `CameraTakePhoto`, `ContactsAddContact`, `ClockTimerEntry`
-and `SystemCopyToClipboard`. Leave the emulator untouched during a recorded run.
+The direct Python command is the agent entry point. Its seven task choices are
+`SystemWifiTurnOn`, `CameraTakePhoto`, `ContactsAddContact`, `ClockTimerEntry`,
+`SystemCopyToClipboard`, `SimpleCalendarAddOneEvent` and `OsmAndTrack`. Leave the emulator untouched during a recorded run.
 The runner initializes the official task and prepares required app snapshots.
 
 Every run prints its unique `runs/` folder. Inspect `summary.json`,
@@ -92,13 +108,14 @@ autoglm_agent.py step(): observe → API decision → validate → freshness →
 
 | File | What to change |
 | --- | --- |
-| `agent_config.json` | Step/time bounds, sampling and observation settings. |
+| `agent_config.json` | Step/time bounds per task, sampling, history window and the per-task Skill map. |
 | `instructions/autoglm.md` | Attributed native action contract; record prompt changes. |
+| `instructions/skills/` | Optional per-task Skills (OsmAnd), loaded only for their task. |
 | `autoglm_agent.py` | Observation, checked action adapter and visible completion criteria. |
 | `run_task.py` | Official task initialization, app setup, video and verification. |
-| `android_compat.py` | Narrow Windows temporary-APK and fresh XML compatibility adapters. |
+| `android_compat.py` | Narrow adapters: Windows temporary APK, fresh XML (with a bounded retry), keep the ADB server on retries. |
 | `trajectory.py` | Immediately flushed readable and structured logs. |
-| `evaluate_tasks.py` | Sequential evaluations with frozen sources; stops at first failed clean trial. |
+| `evaluate_tasks.py` | Sequential evaluations with frozen sources; stops at the first failed clean trial unless `--run-all-seeds` (final evaluation); `--disable-skills` for the baseline. |
 | `test_autoglm_adapter.py` | Offline parser, grounding, text-input and progress-bound checks. |
 
 `probe_connection.py` supplies the shared JSON writer; its executable probe,
@@ -132,11 +149,12 @@ Built on [Android World](https://github.com/google-research/android_world) and
 the [Open-AutoGLM native contract](https://github.com/zai-org/Open-AutoGLM).
 See [NOTICE](NOTICE) for attribution and [source/slide mapping](docs/COURSE_AND_UPSTREAM_REVIEW.md).
 Project code is available under [Apache License 2.0](LICENSE).
-The agreed future Markor, Calendar and harder-task stages remain unfinished;
-these warm-ups do not satisfy the complete easy/medium/hard course evaluation.
+The course evaluation (easy/medium/hard, three runs each) is complete on v42;
+see [FINAL_EVALUATION.md](docs/FINAL_EVALUATION.md).
 
 The [approved evidence subset](docs/evidence/README.md) includes original trial
 metadata and selected Timer/Clipboard trajectories and screenshots alongside
-aggregate reports. Full recordings, the remaining archive, course PDFs/ZIPs,
+aggregate reports, and the final evaluation's batch tables, run summaries,
+trajectories and key screenshots under `docs/evidence/final/`. Full recordings, the remaining archive, course PDFs/ZIPs,
 credentials, dependency checkouts and environments remain local. The export
 manifest identifies exactly which original files are published.

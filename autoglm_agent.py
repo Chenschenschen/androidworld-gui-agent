@@ -95,9 +95,14 @@ def favorite_save(reply, action):
 SETTLEMENT = re.compile(r"^(Village|Hamlet|Town|City)\b")
 
 
+def element_id(element):
+    """Forwarder trees fill resource_name; UIAutomator XML fills resource_id (v54 seed 8 missed the search field)."""
+    return element.resource_name or element.resource_id or ""
+
+
 def search_busy(elements):
     """True while OsmAnd's search progress spinner is on screen (only visible in a GUI tree)."""
-    return any(e.is_visible and (e.resource_name or "").endswith(":id/searchProgressBar") for e in elements or [])
+    return any(e.is_visible and element_id(e).endswith(":id/searchProgressBar") for e in elements or [])
 
 
 def thin_tree(elements):
@@ -197,7 +202,7 @@ def osmand_next_step(elements, terms, route_points, centred_on, shape):
     height, width = shape
     seen = [e for e in elements if e.is_visible and e.bbox_pixels and (e.text or e.content_description)]
     find = lambda pattern: next((e for e in seen if any(v and re.fullmatch(pattern, v.strip()) for v in (e.text, e.content_description))), None)
-    by_id = lambda suffix: next((e for e in elements if e.is_visible and (e.resource_name or "").endswith(suffix)), None)
+    by_id = lambda suffix: next((e for e in elements if e.is_visible and element_id(e).endswith(suffix)), None)
     def tap(e, label=None):
         b = e.bbox_pixels
         return f'Tap "{label or e.text or e.content_description}" at tap center [{(b.x_min + b.x_max) * 500 // width}, {(b.y_min + b.y_max) * 500 // height}].'
@@ -289,12 +294,8 @@ def skill_reminder(config, task_name, inputs, route_points=0):
     else:
         progress = f"Route progress: {route_points} of {len(names)}: all waypoints are in the route, tap Done to save the track. "
     terms = " ".join(f'{number}. "{name}"' for number, name in enumerate(names, 1))
-    # The map opens far away, and widening the search radius was abandoned too
-    # early (trial OsmAndTrack_20261008T153131). Opening the region named in the
-    # task first moves the map there; a manual check then found "Planken" at once.
-    regions = list(dict.fromkeys(w.split(",", 1)[1].strip() for w in inputs["waypoints"] if "," in w))
-    start = (f'Before the first waypoint, search "{regions[0]}" (the region in the task), tap its result row so the map moves there, '
-             "then press Back. ") if len(regions) == 1 else ""
+    # v44-v52 asked to open the region first; the model never completed that step, so v55 drops it (as the Skill file did in v53).
+    start = ""
     # The last three rules answer the v42 final-evaluation failures: a same-name
     # guidepost chosen, a Favorite saved three times, searches switched too early.
     return (f"Skill reminder: {progress}{start}Type only the search term, never the full waypoint text. Search terms in order: {terms}. "

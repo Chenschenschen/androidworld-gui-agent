@@ -99,8 +99,8 @@ class AdapterTests(unittest.TestCase):
         self.assertIn("Favorite", reminder)
         # Trial OsmAndTrack_20261008T153947 tapped the route panel's Add expecting a search.
         self.assertIn("Add never searches", reminder)
-        # The region comes from the task input (after the comma), not from the code.
-        self.assertIn('search "Liechtenstein"', reminder)
+        # v55 dropped the region-first step (never completed by the model in v44-v52).
+        self.assertNotIn('search "Liechtenstein"', reminder)
         self.assertNotIn("search \"", skill_reminder(config, "OsmAndTrack", {"waypoints": ["Planken", "Rotenboden"]}).split("Search terms")[0])
         self.assertEqual(skill_reminder({"task_skills": {}}, "OsmAndTrack", inputs), "")
         self.assertEqual(skill_reminder(config, "ContactsAddContact", {"name": "A"}), "")
@@ -466,6 +466,9 @@ class AdapterTests(unittest.TestCase):
         self.assertIn('Tap "Search" at tap center [187, 83]', step([el("Map", (0, 1080, 0, 2337), desc=True),
             el("Configure map", (16, 132, 128, 236), desc=True), el("Search", (145, 261, 128, 275), desc=True)])[0])
         self.assertEqual(step([field("Type to search all")])[0], 'Type "Planken" (only the place name).')
+        # UIAutomator XML (the fallback) carries the id in resource_id, not resource_name.
+        xml_field = UIElement(text="Planken", is_visible=True, bbox_pixels=BoundingBox(189, 975, 128, 275), resource_id="net.osmand:id/searchEditText")
+        self.assertIn('Tap "INCREASE SEARCH RADIUS"', step([xml_field, el("INCREASE SEARCH RADIUS", (189, 900, 770, 840))])[0])
         empty = [field("Planken"), el("Clear", (900, 1050, 128, 275), desc=True), el("INCREASE SEARCH RADIUS", (189, 900, 770, 840))]
         self.assertIn('Tap "INCREASE SEARCH RADIUS"', step(empty)[0])
         self.assertIn('Tap "Clear"', step([field("Liechtenstein"), el("Clear", (900, 1050, 128, 275), desc=True)])[0])

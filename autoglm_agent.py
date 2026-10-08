@@ -35,6 +35,9 @@ COMPLETION_RULES = {
     "ContactsAddContact": "The saved contact view shows the exact requested full name and phone number after Save. A filled unsaved form is insufficient. Finish on the saved result.",
     "SystemCopyToClipboard": "The exact requested text has been fully selected and copied through the visible Copy command; the selection menu has closed afterwards. Finish on that observed result. A transient clipboard chip or toast is optional. The task input is text to copy, not current clipboard state. Clipper is verifier infrastructure.",
     "SimpleCalendarAddOneEvent": "Simple Calendar Pro shows a saved event with the exact requested title and description, on the requested date, starting at the requested hour and lasting the requested minutes. A filled unsaved event editor is insufficient. Finish on the saved result.",
+    "SimpleSmsSend": "Simple SMS Messenger shows the exact requested message as sent in the conversation with the exact requested number. A typed but unsent message, a draft or a message marked as not sent is insufficient. Finish on the sent result.",
+    "FilesMoveFile": "The Files app shows the requested file inside the destination folder, and it is no longer in the source folder. A copy left in the source folder, or the file still selected in a move dialog, is insufficient. Finish on that observed result.",
+    "MarkorCreateNoteAndSms": "Markor has a saved note with the exact requested file name and text, and Simple SMS Messenger shows that exact text sent as a plain text message to the requested number. A note that is not saved, or text sent as an attachment or MMS, is insufficient. Finish when both hold.",
     "OsmAndTrack": "OsmAnd has saved a track whose route passes through every requested waypoint, in the listed order, each at the exact named place. An unsaved route, or one that misses or reorders a waypoint, is insufficient. Finish on the saved-track result.",
 }
 

@@ -31,7 +31,8 @@ from trajectory import log_event
 PROJECT = Path(__file__).resolve().parent
 TASKS = ["SystemWifiTurnOn", "CameraTakePhoto", "ClockTimerEntry",
          "ContactsAddContact", "SystemCopyToClipboard",
-         "SimpleCalendarAddOneEvent", "OsmAndTrack"]
+         "SimpleCalendarAddOneEvent", "OsmAndTrack",
+         "SimpleSmsSend", "FilesMoveFile", "MarkorCreateNoteAndSms"]
 # Keep external/manual emulator interaction visible in evaluation review notes.
 
 
@@ -324,6 +325,9 @@ def main():
             "SimpleCalendarAddOneEvent": (apps.SimpleCalendarProApp,),
             # Official OsmAnd setup also installs the preloaded Liechtenstein map.
             "OsmAndTrack": (apps.OsmAndApp,),
+            "SimpleSmsSend": (apps.SimpleSMSMessengerApp,),
+            "FilesMoveFile": (apps.FilesApp,),
+            "MarkorCreateNoteAndSms": (apps.MarkorApp, apps.SimpleSMSMessengerApp),
         }
         required = (apps.AndroidWorldApp,) + task_apps[args.task]
         from android_world.utils import app_snapshot, file_utils
@@ -342,7 +346,7 @@ def main():
         # Calendar parameters also carry database row objects for its verifier
         # (target and noise events). The model and logs receive only the plain
         # values the goal states; the rows are kept as text evidence.
-        inputs = {key: value for key, value in params.items() if key not in {"row_objects", "noise_row_objects"}}
+        inputs = {key: value for key, value in params.items() if key not in {"row_objects", "noise_row_objects", "noise_candidates"}}
         verifier_rows = json.loads(json.dumps({key: params[key] for key in params.keys() - inputs.keys()}, default=str))
         # Clipper is official verifier infrastructure, not an interactive GUI app.
         config["allowed_apps"] = [app.app_name for app in task_apps[args.task] if app.app_name != "clipper"]

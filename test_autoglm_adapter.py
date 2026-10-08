@@ -190,14 +190,15 @@ class AdapterTests(unittest.TestCase):
         self.assertFalse(repeated_without_progress(actions[0], actions, [{"no_visible_effect":False},*effects[1:]]))
 
     def test_waiting_on_loading_screen_is_bounded_separately(self):
-        """Unchanged waits are normal on a slow splash screen; stop only after five in a row."""
+        """Unchanged waits are normal on a slow splash screen; stop only after ten in a row."""
         wait, launch = {"action_type": "wait", "seconds": 1.0}, {"action_type": "open_app", "app_name": "osmand"}
         unchanged = {"no_visible_effect": True}
-        # Recorded case (trial OsmAndTrack_20261008T122441): launch, wait, wait -> stopped at step 3.
+        # Recorded cases: trial OsmAndTrack_20261008T122441 stopped after launch, wait,
+        # wait; trial _20261008T123559 needed more than six unchanged waits (over 40 s).
         self.assertFalse(repeated_without_progress(wait, [launch, wait, wait], [unchanged] * 3))
-        self.assertFalse(repeated_without_progress(wait, [launch] + [wait] * 3, [unchanged] * 4))
-        self.assertTrue(repeated_without_progress(wait, [wait] * 5, [unchanged] * 5))
-        self.assertFalse(repeated_without_progress(wait, [wait] * 5, [unchanged] * 4 + [{"no_visible_effect": False}]))
+        self.assertFalse(repeated_without_progress(wait, [launch] + [wait] * 6, [unchanged] * 7))
+        self.assertTrue(repeated_without_progress(wait, [wait] * 10, [unchanged] * 10))
+        self.assertFalse(repeated_without_progress(wait, [wait] * 10, [unchanged] * 9 + [{"no_visible_effect": False}]))
 
     def test_xml_edittext_without_editable_attribute(self):
         """Real XML EditText supports native Type; unrelated focused nodes do not."""

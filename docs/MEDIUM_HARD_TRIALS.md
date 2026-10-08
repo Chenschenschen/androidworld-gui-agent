@@ -10,7 +10,8 @@ the next run, following [AGENTS.md](../AGENTS.md).
 
 Machine: Windows 10, Intel Core i5-1135G7 (Iris Xe, no discrete GPU), 16 GB RAM.
 Emulator: `AndroidWorldAvd`, Pixel 6, API 33 Google APIs x86_64 image,
-WHPX acceleration. Model: hosted `autoglm-phone-multilingual` (Z.ai),
+WHPX acceleration. Rendering: windowed host GPU (trials 1-3), software
+`swiftshader_indirect` (trials 4-16), headless host GPU (`-gpu host -no-window`, from trial 17 and the final evaluation). Model: hosted `autoglm-phone-multilingual` (Z.ai),
 temperature 0. Task seeds generate the task instance; see each `task.json`.
 
 ## Trial log
@@ -31,6 +32,8 @@ temperature 0. Task seeds generate the task instance; see each `task.json`.
 | 12 | `trial_OsmAndTrack_20261008T122441_689821Z` (batch stopped) | v35 | OsmAnd, 42, no Skill | FAIL after 3 steps, valid recording | Recorder fix confirmed. The cold OsmAnd start showed its logo for several seconds; the model correctly chose Wait twice, and the v29 cycle stop treated two unchanged Waits as no progress | v36: unchanged Waits stop only after five in a row; other actions keep the v29 rule. Offline check: `test_waiting_on_loading_screen_is_bounded_separately` |
 | 13 | `eval_batch_20261008T122658_094153Z` (3 runs) | v36 | OsmAnd, 42/43/44, no Skill | 0/3, all recordings valid | Seeds 42 (8 steps) and 43 (10 steps) ended in no-progress cycles. Seed 44 searched "Schaan, Liechtenstein" and `input text Liechtenstein` timed out twice at 10 s: OsmAnd searches on every typed character | v37: 60 s per typed word. The batch is superseded as baseline because one run ended on infrastructure |
 | 14 | `eval_batch_20261008T123320_399123Z` (stopped) | v36 | Final batch, Contacts 42 | Runner error | Stopped by us to apply v37 before any OsmAnd run, so that all final runs share one version | None |
+| 15 | `trial_OsmAndTrack_20261008T123559_848568Z` | v37 | OsmAnd, held-out seed 8 (Planken, Rotenboden), Skill | FAIL after 6 Waits | The cold OsmAnd start under software rendering showed its logo for over 40 s | v38: up to ten unchanged Waits |
+| 16 | `trial_OsmAndTrack_20261008T123847_459399Z` | v38 | OsmAnd, held-out seed 8, Skill | Execution error at step 13 | Passed the splash after ten Waits and opened search, but `input text Planken,` timed out twice at 60 s: software rendering made OsmAnd too slow | Environment: headless host-GPU emulator (`-gpu host -no-window`). Typing "Planken" then took 2 s; a 3-minute probe produced 302 screenshots with none black |
 ## Changes and why they sit in that layer
 
 - **Fresh XML retry (program layer).** The failure was a transient device

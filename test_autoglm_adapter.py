@@ -75,9 +75,37 @@ class AdapterTests(unittest.TestCase):
         """A configured Skill joins the prompt for its own task only; none when disabled."""
         from autoglm_agent import skill_text
         config = {"task_skills": {"OsmAndTrack": "instructions/skills/osmand_track.md"}}
-        self.assertIn("Plan a route", skill_text(config, "OsmAndTrack"))
-        self.assertEqual(skill_text(config, "SimpleCalendarAddOneEvent"), "")
-        self.assertEqual(skill_text({"task_skills": {}}, "OsmAndTrack"), "")
+        inputs = {"waypoints": ["Planken, Liechtenstein", "Rotenboden, Liechtenstein"]}
+        text = skill_text(config, "OsmAndTrack", inputs)
+        self.assertIn("Plan a route", text)
+        # Recorded case (trial OsmAndTrack_20261008T125841): the model typed the full
+        # "Planken, Liechtenstein" and only found the country. The Skill derives the terms.
+        self.assertIn('1. "Planken"', text)
+        self.assertIn('2. "Rotenboden"', text)
+        self.assertEqual(skill_text(config, "SimpleCalendarAddOneEvent", inputs), "")
+        self.assertEqual(skill_text({"task_skills": {}}, "OsmAndTrack", inputs), "")
+
+    def test_history_window_keeps_goal_and_recent_turns(self):
+        """Long runs keep the first (goal) turn and the latest turns within the prompt limit."""
+        from autoglm_agent import history_window
+        conversation = [{"role": "user" if i % 2 == 0 else "assistant", "content": str(i)} for i in range(176)]
+        window = history_window(conversation, 20)
+        self.assertEqual(len(window), 40)
+        self.assertEqual(window[:2], conversation[:2])
+        self.assertEqual(window[2:], conversation[-38:])
+        self.assertEqual(history_window(conversation[:10], 20), conversation[:10])
+
+    def test_long_action_cycle_stops(self):
+        """A block of two to six actions repeated three times is no progress, even with screen changes."""
+        cycle = [{"action_type": "click", "x": 187, "y": 83}, {"action_type": "input_text", "text": "Planken, Liechtenstein", "clear_text": True},
+                 {"action_type": "click", "x": 499, "y": 141}, {"action_type": "click", "x": 922, "y": 83}]
+        changed = {"no_visible_effect": False}
+        history = cycle * 3 + cycle[:3]
+        self.assertTrue(repeated_without_progress(cycle[3], history, [changed] * len(history)))
+        # The candidate completes only the second repetition: keep going.
+        self.assertFalse(repeated_without_progress(cycle[3], cycle + cycle[:3], [changed] * 7))
+        typed = [dict(cycle[1], text=name) for name in ("Planken", "Rotenboden", "Malbun")]
+        self.assertFalse(repeated_without_progress(cycle[0], [cycle[0], typed[0], cycle[0], typed[1], cycle[0], typed[2]], [changed] * 6))
 
     def test_adb_retry_keeps_server(self):
         """A timed-out ADB command is retried without killing the shared ADB server."""

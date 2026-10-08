@@ -56,16 +56,36 @@ def launch_name(app, allowed_apps):
     return None
 
 
-def skill_text(config, task_name):
+def skill_text(config, task_name, inputs):
     """Return the task's optional Skill (procedural app knowledge) for the prompt, or "".
 
     Course D2 pattern: a Skill file is loaded only when its trigger matches,
     here the task name in config["task_skills"]. Disabled when the map is empty.
+    For waypoint tasks it also lists each given waypoint's search term (the
+    name before the comma): the model typed "Planken, Liechtenstein"
+    literally and found only the country (trial OsmAndTrack_20261008T125841).
     """
     path = config.get("task_skills", {}).get(task_name)
     if not path:
         return ""
-    return f"\nSKILL for {task_name} (app procedure):\n" + (PROJECT / path).read_text(encoding="utf-8")
+    text = f"\nSKILL for {task_name} (app procedure):\n" + (PROJECT / path).read_text(encoding="utf-8")
+    if inputs.get("waypoints"):
+        terms = "\n".join(f'{number}. "{waypoint.split(",")[0].strip()}"' for number, waypoint in enumerate(inputs["waypoints"], 1))
+        text += "\nSearch terms for this task's waypoints, in the required order (type exactly these):\n" + terms + "\n"
+    return text
+
+
+def history_window(conversation, turns):
+    """Keep the first executed turn (it carries the task goal) and the latest turns.
+
+    Course D1 p.40: keep the latest observation, drop what no longer matters.
+    An 88-step OsmAnd run exceeded the provider's prompt limit (HTTP 400
+    "Prompt exceeds max length", trial OsmAndTrack_20261008T125841). The full
+    history stays on disk in every step's request file.
+    """
+    if len(conversation) <= 2 * turns:
+        return conversation
+    return conversation[:2] + conversation[-2 * (turns - 1):]
 
 
 def launch_app(app_name, controller, timeout_sec=30):
@@ -332,7 +352,14 @@ def repeated_without_progress(action, actions, results):
         # Bound waiting separately: stop only after ten unchanged waits in a row.
         recent = list(zip(actions, results))[-10:]
         return len(recent) == 10 and all(a["action_type"] == "wait" and r["no_visible_effect"] for a, r in recent)
-    same =len(actions) >= 2 and all(previous == action for previous in actions[-2:]) and all(r["no_visible_effect"] for r in results[-2:])
+    # D4 p.26: identical actions that return to the same state are no progress,
+    # even when each step changes the screen. Two OsmAnd runs repeated a 4- and
+    # a 6-action block for over 60 steps (trials _125841, _115319).
+    sequence = actions + [action]
+    for size in range(2, 7):
+        if len(sequence) >= 3 * size and sequence[-size:] == sequence[-2 * size:-size] == sequence[-3 * size:-2 * size]:
+            return True
+    same = len(actions) >= 2 and all(previous == action for previous in actions[-2:]) and all(r["no_visible_effect"] for r in results[-2:])
     cycle = len(actions) >= 3 and action in actions[-3:] and all(r["no_visible_effect"] for r in results[-3:])
     return same or cycle
 
@@ -446,7 +473,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         # A benchmark parameter name can resemble current state; label the goal.
         model_inputs = {"text_to_copy": self.scratch["clipboard_content"]} if task_name == "SystemCopyToClipboard" else self.scratch
         prompt += "\nCOMPLETION CONDITION for " + task_name + ":\n" + completion_condition(task_name, self.scratch)
-        prompt += skill_text(self.config, task_name)
+        prompt += skill_text(self.config, task_name, self.scratch)
         prompt += f"\nAvailable apps: {json.dumps(self.config['allowed_apps'])}\n"
         # Upstream gives the goal once; later user turns are observations of that
         # same task, not new requests to perform it again (especially one photo).
@@ -459,7 +486,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
             text += "Actual observed result of last action: " + json.dumps(self.history[-1]) + "\n"
         text += "Check the original completion condition before acting; finish when it is satisfied."
         image = base64.b64encode((folder / "model_input.png").read_bytes()).decode("ascii")
-        messages = [{"role": "system", "content": prompt}, *self.conversation, {"role": "user", "content": [
+        messages = [{"role": "system", "content": prompt}, *history_window(self.conversation, self.config["history_turns"]), {"role": "user", "content": [
             {"type": "image_url", "image_url": {"url": "data:image/png;base64," + image}}, {"type": "text", "text": text}]}]
         image_message = len(messages) - 1
         # A correction only repairs unexecuted data; HTTP/execution errors never replay.

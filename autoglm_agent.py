@@ -162,6 +162,11 @@ def osmand_tree_check(view, action, shape, route_points, searched_next):
                 "tap INCREASE SEARCH RADIUS; when the place row appears, tap that row.")
     if view["favorite_dialog"] and inside(boxes.get("Save")):
         return "This dialog saves a Favorite, which is not a route point. Tap Cancel (or press Back), then use Actions > Plan a route."
+    # v60 seed 7: on the second waypoint's card the model chose Actions > Plan a route, which starts a new route.
+    if route_points >= 1 and ((view["place_card"] and inside(boxes.get("Actions")))
+                              or ("Directions from" in boxes and inside(boxes.get("Plan a route")))):
+        return (f"The route already has {route_points} point(s); Plan a route here would start a new route. Press Back until the route "
+                "panel shows, then tap its Add (the map stays centred on this place).")
     if view["place_card"] and inside(boxes.get("Add"), 60, 90, 10):
         return ("The place card's Add saves a Favorite, not a route point. For the first waypoint tap Actions, then Plan a route; "
                 "for a later waypoint press Back until the route panel shows 'points: N' and tap that panel's Add.")

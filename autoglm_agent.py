@@ -42,6 +42,13 @@ COMPLETION_RULES = {
 }
 
 
+# Recorded Chinese translations of "Simple SMS Messenger" (branch hayati v46/v47, team-agent v64 practice).
+# With two allowed apps (MarkorCreateNoteAndSms) a translated name cannot be resolved by elimination.
+APP_NAME_ALIASES = {"\u7b80\u5355\u77ed\u4fe1\u6d88\u606f\u53d1\u9001\u5668": "simple sms messenger",
+                    "\u7b80\u5355\u77ed\u4fe1\u6d88\u606f": "simple sms messenger",
+                    "\u7b80\u5355\u77ed\u4fe1": "simple sms messenger"}
+
+
 def launch_name(app, allowed_apps):
     """Resolve a model Launch name to one allowed app.
 
@@ -55,6 +62,8 @@ def launch_name(app, allowed_apps):
     for allowed in allowed_apps:
         if key == re.sub(r"[\s\-_~]", "", allowed):
             return allowed
+    if APP_NAME_ALIASES.get(app.strip()) in allowed_apps:
+        return APP_NAME_ALIASES[app.strip()]
     if not app.isascii() and len(allowed_apps) == 1:
         return allowed_apps[0]
     return None

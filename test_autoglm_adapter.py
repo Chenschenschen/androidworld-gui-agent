@@ -56,6 +56,12 @@ class AdapterTests(unittest.TestCase):
                 # Ambiguous with two allowed apps: never guess.
                 with self.assertRaises(ValueError):
                     convert_action({"command": "do", "action": "Launch", "app": app}, self.state, allowed)
+        # v64 practice (Markor + SMS, two apps allowed): the recorded translation resolves through the alias table.
+        sms = "".join(map(chr, (0x7B80, 0x5355, 0x77ED, 0x4FE1, 0x6D88, 0x606F, 0x53D1, 0x9001, 0x5668)))
+        action = convert_action({"command": "do", "action": "Launch", "app": sms}, self.state, ["markor", "simple sms messenger"])
+        self.assertEqual(action, {"action_type": "open_app", "app_name": "simple sms messenger"})
+        with self.assertRaises(ValueError):
+            convert_action({"command": "do", "action": "Launch", "app": sms}, self.state, ["markor", "files"])
         # An unlisted Latin-script app name is a real choice, not a translation.
         with self.assertRaises(ValueError):
             convert_action({"command": "do", "action": "Launch", "app": "Chrome"}, self.state, ["osmand"])

@@ -38,6 +38,24 @@ COMPLETION_RULES = {
 }
 
 
+def launch_name(app, allowed_apps):
+    """Resolve a model Launch name to one allowed app.
+
+    Matching ignores case, spaces, '-', '_' and '~', like the alias table in
+    upstream Open-AutoGLM (phone_agent/config/apps.py). The multilingual model
+    sometimes translates an app name into Chinese (two different translations of
+    "Simple Calendar Pro" were recorded), so a non-Latin name resolves only when
+    exactly one app is allowed. An unlisted Latin-script name is never guessed.
+    """
+    key = re.sub(r"[\s\-_~]", "", app.lower())
+    for allowed in allowed_apps:
+        if key == re.sub(r"[\s\-_~]", "", allowed):
+            return allowed
+    if not app.isascii() and len(allowed_apps) == 1:
+        return allowed_apps[0]
+    return None
+
+
 def api_settings():
     """Read simple .env values as data; return endpoint/model/key without logging it."""
     values = {}
@@ -141,9 +159,10 @@ def convert_action(fields, state, allowed_apps):
         return {"action_type": "input_text", "text": text, "clear_text": True}
     if name == "Launch":
         app = fields["app"]
-        if not isinstance(app, str) or app.lower() not in allowed_apps:
+        resolved = launch_name(app, allowed_apps) if isinstance(app, str) else None
+        if resolved is None:
             raise ValueError(f"Launch app {app!r} is unavailable; allowed app values: {json.dumps(allowed_apps)}")
-        return {"action_type": "open_app", "app_name": app.lower()}
+        return {"action_type": "open_app", "app_name": resolved}
     if name == "Wait":
         duration = fields["duration"]
         if isinstance(duration, str) and re.fullmatch(r"\d+(?:\.\d+)? seconds?", duration):
@@ -337,6 +356,11 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                 break
         log_event(self.output, "VISUAL SETTLING", {"difference": change,
             "within_threshold": change <= self.config["visual_stability_difference"], "tree_backend": self.config["tree_backend"]}, len(self.history) + 1)
+        # A working display always renders something (at least the status bar).
+        # An all-zero frame is an emulator rendering failure (observed with the
+        # host-GPU backend: glReadPixels error 0x506), not a screen to reason about.
+        if not state.pixels.any():
+            raise RuntimeError("Screenshot is entirely black: emulator rendering failure (try -gpu swiftshader_indirect)")
         if self.config.get("supplemental_tree_packages"):
             state = self.supplement_controls(state)
         return state

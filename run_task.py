@@ -357,7 +357,7 @@ def main():
         log_event(output, "USER INTERRUPTED", {"note": "No automatic action replay; official verification follows."}, summary.get("steps_attempted"))
     except Exception as error:
         summary["error"] = traceback.format_exc()
-        summary["error_class"] = "environment_setup_error" if agent is None else "validation_error" if isinstance(error, ValueError) else "api_error" if isinstance(error, urllib.error.URLError) else "control_no_progress" if str(error) == "Repeated action without visible effect; stopping" else "environment_or_execution_error"
+        summary["error_class"] = "environment_setup_error" if agent is None else "validation_error" if isinstance(error, ValueError) else "api_error" if isinstance(error, urllib.error.URLError) else "control_no_progress" if str(error) == "Repeated action without visible effect; stopping" else "rendering_infrastructure_error" if str(error).startswith("Screenshot is entirely black") else "environment_or_execution_error"
         summary["stop_reason"] = "error"
         log_event(output, "RUN ERROR", {"error": summary["error"], "class": summary["error_class"]}, summary.get("steps_attempted"))
         print(summary["error"], flush=True)

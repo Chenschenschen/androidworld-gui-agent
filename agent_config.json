@@ -1,5 +1,5 @@
 {
-  "version": "autoglm_api_v30_calendar_osmand_tasks",
+  "version": "autoglm_api_v31_launch_aliases_black_frame_guard",
   "provider": "zai",
   "prompt_version": "autoglm_native_en_v19_generic_launch_example",
   "model": "autoglm-phone-multilingual",
@@ -18,9 +18,16 @@
     "max_tokens": 3000
   },
   "max_steps": 12,
-  "task_step_budgets": {"ContactsAddContact": 16, "SimpleCalendarAddOneEvent": 35, "OsmAndTrack": 90},
+  "task_step_budgets": {
+    "ContactsAddContact": 16,
+    "SimpleCalendarAddOneEvent": 35,
+    "OsmAndTrack": 90
+  },
   "max_seconds": 900,
-  "task_time_budgets": {"SimpleCalendarAddOneEvent": 1200, "OsmAndTrack": 2700},
+  "task_time_budgets": {
+    "SimpleCalendarAddOneEvent": 1200,
+    "OsmAndTrack": 2700
+  },
   "request_timeout": 120,
   "recent_actions": 3,
   "invalid_reply_corrections": 1,
@@ -28,7 +35,7 @@
   "freshness_global_difference": 0.08,
   "freshness_target_difference": 0.08,
   "no_effect_difference": 0.001,
-  "note": "v30 adds SimpleCalendarAddOneEvent (medium) and OsmAndTrack (hard) with visible completion rules and initial step/time budgets of about 2x and 1.5x their 17/60 reference steps, to be revised from learning trials; Calendar verifier rows are withheld from model inputs. v29 follows pinned Open-AutoGLM English contract and sourced Android World guidance. Long task recipes and Clock keypad Type exception withdrawn. Short visible goals, ordered native history, latest screenshot, checked GUI state and actual selected-control feedback. Bounded recorder readiness and observed EditText recognition repair recorded adapter faults. Scheduler stops at the first failed clean trial; repeated unchanged action cycles stop without forcing completion. Sixteen offline checks; live task-specific v20/v28 gates and unresolved Timer/Clipboard errors are in docs/WARMUP_RESULTS.md. Sources/slide mapping: docs/COURSE_AND_UPSTREAM_REVIEW.md.",
+  "note": "v31 resolves Launch names like upstream Open-AutoGLM (case/spacing-insensitive; a translated non-Latin name resolves only when exactly one app is allowed) and stops on all-black screenshots as a rendering infrastructure error. v30 adds SimpleCalendarAddOneEvent (medium) and OsmAndTrack (hard) with visible completion rules and initial step/time budgets of about 2x and 1.5x their 17/60 reference steps, to be revised from learning trials; Calendar verifier rows are withheld from model inputs. v29 follows pinned Open-AutoGLM English contract and sourced Android World guidance. Long task recipes and Clock keypad Type exception withdrawn. Short visible goals, ordered native history, latest screenshot, checked GUI state and actual selected-control feedback. Bounded recorder readiness and observed EditText recognition repair recorded adapter faults. Scheduler stops at the first failed clean trial; repeated unchanged action cycles stop without forcing completion. Sixteen offline checks; live task-specific v20/v28 gates and unresolved Timer/Clipboard errors are in docs/WARMUP_RESULTS.md. Sources/slide mapping: docs/COURSE_AND_UPSTREAM_REVIEW.md.",
   "visual_stability_checks": 3,
   "visual_stability_pause": 0.5,
   "visual_stability_difference": 0.01

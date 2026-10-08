@@ -15,6 +15,25 @@ The official Android World README specifies **Pixel 6**, **Tiramisu / API 33**
 and the name **AndroidWorldAvd**. Create that AVD in Device Manager. This project
 uses one device on console port 5554 (`emulator-5554`) and gRPC port 8554.
 Close other emulators before starting it so the default device port is available.
+Use the **Google APIs** x86_64 image, not a Google Play image: verifiers such as
+Calendar read app databases, which needs `adb root`.
+
+Command-line alternative without the Android Studio GUI (verified 8 October 2026
+on Windows 10, no administrator rights; WHPX was already usable). Use
+command-line tools **19.0** (`commandlinetools-win-13114758_latest.zip`): newer
+builds replace `sdkmanager` with a different CLI. Unzip it to
+`%LOCALAPPDATA%\Android\Sdk\cmdline-tools\latest`, set `JAVA_HOME` to a JDK 17,
+list `platform-tools`, `emulator`, `platforms;android-33` and
+`system-images;android-33;google_apis;x86_64` one per line in a text file, then:
+
+```powershell
+sdkmanager.bat --sdk_root="$env:LOCALAPPDATA\Android\Sdk" --licenses
+sdkmanager.bat --sdk_root="$env:LOCALAPPDATA\Android\Sdk" --package_file=packages.txt
+avdmanager.bat create avd -n AndroidWorldAvd -k "system-images;android-33;google_apis;x86_64" -d pixel_6
+emulator.exe -accel-check
+```
+
+The package file avoids `cmd` splitting package names at `;`.
 
 The source/pin is
 [Android World at 2dfc5ca](https://github.com/google-research/android_world/tree/2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7).
@@ -89,7 +108,7 @@ Wait for the home screen. In a second terminal, from the project directory:
 
 ADB must show `emulator-5554` as `device`. CheckOnly validates imports, API
 configuration, emulator boot and the gRPC port. It makes no API request or task
-initialization. The 16 unit checks also make no API or device calls.
+initialization. The 18 unit checks also make no API or device calls.
 
 The software camera flags repair this project's measured virtual-scene loading
 problem. They do not modify the AVD configuration permanently.
@@ -121,6 +140,7 @@ establish success.
 | Device or gRPC unavailable | Use the command above; verify device 5554, boot completion and port 8554. |
 | Wrong model/key or HTTP error | Inspect `.env` and account access; never paste the key into logs/issues. |
 | Recorder failure | Inspect `video_*.stderr.txt` and `summary.json`; it is an infrastructure error. |
+| First app setup fails with `UIAutomator did not confirm writing this observation` | A cold-starting app briefly returns `ERROR: null root node`. Since v30, `android_compat.py` retries that dump up to three times (never reading an unconfirmed file). Rerun the task; no snapshot was saved by the failed setup. |
 | Model repeats or falsely finishes | Read the saved trajectory and official outcome before changing or rerunning it. |
 
 `android_compat.py` retains a narrow Windows/Python 3.11 temporary-APK handoff

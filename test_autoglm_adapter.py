@@ -34,6 +34,41 @@ class AdapterTests(unittest.TestCase):
             with self.subTest(point=point), self.assertRaises(ValueError):
                 convert_action({"command": "do", "action": "Tap", "element": point}, self.state, [])
 
+    def test_runner_tasks_have_rules_and_launch_names(self):
+        """Every runner task has a completion rule; multiword official app names launch."""
+        from autoglm_agent import COMPLETION_RULES
+        from run_task import TASKS
+        self.assertLessEqual(set(TASKS), set(COMPLETION_RULES))
+        for app in ("Simple Calendar Pro", "OsmAnd"):
+            with self.subTest(app=app):
+                action = convert_action({"command": "do", "action": "Launch", "app": app}, self.state, ["simple calendar pro", "osmand"])
+                self.assertEqual(action, {"action_type": "open_app", "app_name": app.lower()})
+
+    def test_fresh_xml_retries_transient_null_root(self):
+        """A launching app's transient null root is retried; stale XML is never returned."""
+        from android_world.env import adb_utils
+        from android_compat import enable_fresh_xml
+        self.addCleanup(setattr, adb_utils, "uiautomator_dump", adb_utils.uiautomator_dump)
+        enable_fresh_xml()
+
+        def device(dump_replies):
+            """Fake ADB: scripted dump outputs, a valid hierarchy on read, silent cleanup."""
+            def reply(command, env, timeout_sec=None):
+                text = ""
+                if " dump " in command:
+                    text = dump_replies.pop(0).replace("{path}", command.split()[-1])
+                elif " cat " in command:
+                    text = "<hierarchy/>"
+                return SimpleNamespace(generic=SimpleNamespace(output=text.encode()))
+            return reply
+
+        null_root = "ERROR: null root node returned by UiTestAutomationBridge."
+        with patch("android_world.env.adb_utils.check_ok"), patch("android_compat.time.sleep"):
+            with patch("android_world.env.adb_utils.issue_generic_request", device([null_root, "UI hierchary dumped to: {path}"])):
+                self.assertEqual(adb_utils.uiautomator_dump(None), "<hierarchy/>")
+            with patch("android_world.env.adb_utils.issue_generic_request", device([null_root] * 3)), self.assertRaises(RuntimeError):
+                adb_utils.uiautomator_dump(None)
+
     def test_reject_executable_text(self):
         """Expressions, command overrides and multiple actions never dispatch."""
         for raw in ('do(action="Type", text=__import__("os").getcwd())',

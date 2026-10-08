@@ -30,7 +30,8 @@ from trajectory import log_event
 
 PROJECT = Path(__file__).resolve().parent
 TASKS = ["SystemWifiTurnOn", "CameraTakePhoto", "ClockTimerEntry",
-         "ContactsAddContact", "SystemCopyToClipboard"]
+         "ContactsAddContact", "SystemCopyToClipboard",
+         "SimpleCalendarAddOneEvent", "OsmAndTrack"]
 # Keep external/manual emulator interaction visible in evaluation review notes.
 
 
@@ -229,6 +230,7 @@ def main():
     config = json.loads(args.config.read_text(encoding="utf-8"))
     # Contacts' observed Save at step 12 needs a subsequent model inspection.
     config["max_steps"] = config.get("task_step_budgets", {}).get(args.task, config["max_steps"])
+    config["max_seconds"] = config.get("task_time_budgets", {}).get(args.task, config["max_seconds"])
     if config.get("provider") != "zai" or config["observation"] != "screenshot" or args.observation not in {None, "screenshot"}:
         raise ValueError("AutoGLM migration uses Z.ai and screenshot observations")
     endpoint, model, _ = api_settings()
@@ -278,6 +280,9 @@ def main():
             # Clipper supports the official verifier; Chrome provides a GUI text
             # field for selecting/copying. No direct clipboard write is an action.
             "SystemCopyToClipboard": (apps.ClipperApp, apps.ChromeApp),
+            "SimpleCalendarAddOneEvent": (apps.SimpleCalendarProApp,),
+            # Official OsmAnd setup also installs the preloaded Liechtenstein map.
+            "OsmAndTrack": (apps.OsmAndApp,),
         }
         required = (apps.AndroidWorldApp,) + task_apps[args.task]
         from android_world.utils import app_snapshot, file_utils
@@ -293,12 +298,18 @@ def main():
         task_class = registry.TaskRegistry().get_registry("android_world")[args.task]
         params = task_class.generate_random_params()
         task = task_class(params)
+        # Calendar parameters also carry database row objects for its verifier
+        # (target and noise events). The model and logs receive only the plain
+        # values the goal states; the rows are kept as text evidence.
+        inputs = {key: value for key, value in params.items() if key not in {"row_objects", "noise_row_objects"}}
+        verifier_rows = json.loads(json.dumps({key: params[key] for key in params.keys() - inputs.keys()}, default=str))
         # Clipper is official verifier infrastructure, not an interactive GUI app.
         config["allowed_apps"] = [app.app_name for app in task_apps[args.task] if app.app_name != "clipper"]
         save_json(output / "config.json", config)
-        save_json(output / "task.json", {"name": args.task, "goal": task.goal, "parameters": params,
-                  "seed": args.seed, "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"})
-        log_event(output, "OFFICIAL TASK INPUT", {"goal": task.goal, "parameters": params,
+        save_json(output / "task.json", {"name": args.task, "goal": task.goal, "parameters": inputs,
+                  "verifier_rows": verifier_rows, "seed": args.seed,
+                  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"})
+        log_event(output, "OFFICIAL TASK INPUT", {"goal": task.goal, "parameters": inputs,
                   "task_seed": args.seed, "model_metadata": "versions.json"})
         # Match the official runner: reset BEFORE task-specific initialization.
         # A reset after initialization was measured to turn Wi-Fi back on.
@@ -320,7 +331,7 @@ def main():
         recorder.start()
         if not ready.wait(timeout=15) or video_errors:
             raise RuntimeError("Recording failed to start: " + str(video_errors))
-        agent = AutoGLMAgent(env, output, config, params)
+        agent = AutoGLMAgent(env, output, config, inputs)
         agent.recording_ready = ready
         agent.recording_errors = video_errors
         start = time.monotonic()

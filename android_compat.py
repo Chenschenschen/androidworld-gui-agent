@@ -3,6 +3,7 @@
 from pathlib import Path
 import sys
 import tempfile
+import time
 import uuid
 import xml.etree.ElementTree as ET
 
@@ -51,9 +52,17 @@ def enable_fresh_xml():
         """Check dump/read responses and parse a unique generated XML before returning."""
         remote = f"/sdcard/autoglm_ui_{uuid.uuid4().hex}.xml"
         try:
-            dumped = adb_utils.issue_generic_request(f"shell uiautomator dump {remote}", env, timeout_sec=timeout_sec)
-            adb_utils.check_ok(dumped, "UIAutomator dump failed")
-            if remote not in dumped.generic.output.decode("utf-8", errors="replace"):
+            # A cold-starting app can briefly report "null root node" and write
+            # nothing (observed on a fresh emulator's first Contacts setup). Retry
+            # that transient state a bounded number of times; still never read
+            # an unconfirmed (possibly stale) file.
+            for attempt in range(3):
+                dumped = adb_utils.issue_generic_request(f"shell uiautomator dump {remote}", env, timeout_sec=timeout_sec)
+                adb_utils.check_ok(dumped, "UIAutomator dump failed")
+                if remote in dumped.generic.output.decode("utf-8", errors="replace"):
+                    break
+                time.sleep(1)
+            else:
                 raise RuntimeError("UIAutomator did not confirm writing this observation")
             read = adb_utils.issue_generic_request(f"shell cat {remote}", env, timeout_sec=timeout_sec)
             adb_utils.check_ok(read, "UIAutomator XML read failed")

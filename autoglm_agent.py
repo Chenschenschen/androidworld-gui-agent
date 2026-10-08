@@ -33,6 +33,8 @@ COMPLETION_RULES = {
     "ClockTimerEntry": "Timer displays the exact requested hours, minutes and seconds, with Start available and the timer not running. Finish when that visible state holds; do not start it.",
     "ContactsAddContact": "The saved contact view shows the exact requested full name and phone number after Save. A filled unsaved form is insufficient. Finish on the saved result.",
     "SystemCopyToClipboard": "The exact requested text has been fully selected and copied through the visible Copy command; the selection menu has closed afterwards. Finish on that observed result. A transient clipboard chip or toast is optional. The task input is text to copy, not current clipboard state. Clipper is verifier infrastructure.",
+    "SimpleCalendarAddOneEvent": "Simple Calendar Pro shows a saved event with the exact requested title and description, on the requested date, starting at the requested hour and lasting the requested minutes. A filled unsaved event editor is insufficient. Finish on the saved result.",
+    "OsmAndTrack": "OsmAnd has saved a track whose route passes through every requested waypoint, in the listed order, each at the exact named place. An unsaved route, or one that misses or reorders a waypoint, is insufficient. Finish on the saved-track result.",
 }
 
 

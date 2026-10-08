@@ -188,10 +188,27 @@ def record_video(adb, output, stop, ready, errors):
                     process.wait(timeout=5)
                     raise RuntimeError("Our screen recorder did not become ready within its bounded wait")
                 ready.set()
-                stop.wait(174)
+                # Poll each second so a recorder that ends early is replaced by
+                # a new clip at once (observed in trial OsmAndTrack_20261008T111626,
+                # not reproducible in a 90-second probe). GUI actions wait for
+                # `ready`, so the gap is at most about one second, and it is logged.
+                rollover = time.monotonic() + 174
+                while process.poll() is None and time.monotonic() < rollover and not stop.wait(1):
+                    pass
                 ready.clear()  # Pause GUI execution during rollover/pulling.
-                subprocess.run(prefix + ["shell", "kill", "-2", pid], check=True, capture_output=True)
-                process.wait(timeout=15)
+                if process.poll() is not None:
+                    log_event(output, "RECORDING NOTE", {"clip": number, "event": "recorder ended before stop/rollover",
+                        "exit_code": process.returncode, "action": "pull this clip and start the next one"})
+                else:
+                    subprocess.run(prefix + ["shell", "kill", "-2", pid], check=True, capture_output=True)
+                    try:
+                        process.wait(timeout=15)
+                    except subprocess.TimeoutExpired:
+                        # Observed once (Calendar_20261008T110618): the device clip
+                        # was complete but the host adb shell did not return.
+                        process.kill()
+                        log_event(output, "RECORDING NOTE", {"clip": number, "event": "host adb shell did not return after SIGINT",
+                            "action": "closed host process; pulling the device clip"})
             local = output / f"video_{number:03d}.mp4"
             subprocess.run(prefix + ["pull", remote, str(local)], check=True, capture_output=True)
             if not local.is_file() or local.stat().st_size < 1000:

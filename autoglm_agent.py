@@ -98,7 +98,10 @@ def skill_reminder(config, task_name, inputs):
             "If the search shows 'Could not find anything', tap INCREASE SEARCH RADIUS (not SHOW ON MAP) until the place row appears, then tap that row. "
             "Choose only a row whose type is Village, Hamlet or Town, never a guidepost, station, stop or street. "
             "Never tap the star 'Add' on a place card: it saves a Favorite. First waypoint: Actions > Plan a route. "
-            "Later waypoints: press Back until the route panel shows 'points: N', then tap that panel's Add. "
+            # Trial _153947 reached points: 1, then tapped the panel's Add expecting a search.
+            "Add never searches: it only adds the point under the map centre. For each later waypoint, in this order: "
+            "tap the Search (magnifier) button at the top left, clear the old text, type the term, tap the place's row, "
+            "press Back until the route panel shows 'points: N', and only then tap that panel's Add once. "
             "Finish the current waypoint before searching the next.\n")
 
 

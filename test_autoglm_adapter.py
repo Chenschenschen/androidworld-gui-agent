@@ -97,6 +97,8 @@ class AdapterTests(unittest.TestCase):
         # Final-evaluation failures: a same-name guidepost and a Favorite saved three times.
         self.assertIn("Village, Hamlet or Town", reminder)
         self.assertIn("Favorite", reminder)
+        # Trial OsmAndTrack_20261008T153947 tapped the route panel's Add expecting a search.
+        self.assertIn("Add never searches", reminder)
         # The region comes from the task input (after the comma), not from the code.
         self.assertIn('search "Liechtenstein"', reminder)
         self.assertNotIn("search \"", skill_reminder(config, "OsmAndTrack", {"waypoints": ["Planken", "Rotenboden"]}).split("Search terms")[0])

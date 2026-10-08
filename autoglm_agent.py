@@ -232,7 +232,9 @@ def type_without_submit(text, controller):
     response = adb_utils.issue_generic_request(["shell", "input", "keycombination", "113", "29"], controller)
     adb_utils.check_ok(response, "Select existing text failed")
     adb_utils.check_ok(adb_utils.press_keyboard_generic("67", controller), "Delete selected text failed")
-    adb_utils.type_text(text, controller, timeout_sec=10)
+    # Per word. OsmAnd searches on every typed character; on the software-
+    # rendered emulator one word took over 10 s (trial OsmAndTrack_20261008T123135).
+    adb_utils.type_text(text, controller, timeout_sec=60)
 
 
 def target_at(state, action):

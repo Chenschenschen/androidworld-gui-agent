@@ -159,7 +159,7 @@ class AdapterTests(unittest.TestCase):
             type_without_submit("alex.jordan@example.net", None)
             clear.assert_called_once_with(["shell", "input", "keycombination", "113", "29"], None)
             key.assert_called_once_with("67", None)
-            typing.assert_called_once_with("alex.jordan@example.net", None, timeout_sec=10)
+            typing.assert_called_once_with("alex.jordan@example.net", None, timeout_sec=60)
             enter.assert_not_called()
 
     def test_model_box_grounding(self):

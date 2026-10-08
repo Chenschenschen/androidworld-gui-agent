@@ -305,8 +305,12 @@ def skill_reminder(config, task_name, inputs, route_points=0):
     it so the line can say which waypoint comes next (trial _154334 searched
     the second waypoint before the first was in a route).
     """
-    if not config.get("task_skills", {}).get(task_name) or not inputs.get("waypoints"):
+    if not config.get("task_skills", {}).get(task_name):
         return ""
+    if not inputs.get("waypoints"):
+        # A Skill only in the system prompt was not followed (OsmAnd, v40); repeat its procedure each step.
+        text = (PROJECT / config["task_skills"][task_name]).read_text(encoding="utf-8")
+        return "Skill reminder: " + " ".join(line.strip() for line in text.split("Procedure:", 1)[-1].splitlines() if line.strip()) + "\n"
     names = [waypoint.split(",")[0].strip() for waypoint in inputs["waypoints"]]
     if route_points <= 0:
         progress = (f'Route progress (from the last "points: N" you reported): 0 of {len(names)}. The first waypoint is not in a '
@@ -340,7 +344,7 @@ def text_field_focused(controller):
     """
     response = adb_utils.issue_generic_request(["shell", "dumpsys", "input_method"], controller)
     served = re.findall(r"mServedView=([^\s}]+)", response.generic.output.decode("utf-8", errors="replace"))
-    return any(re.search(r"EditText|AutoComplete|TextInput", view) for view in served)
+    return any(re.search(r"Edit|AutoComplete|TextInput", view) for view in served)
 
 
 def history_window(conversation, turns):
@@ -800,7 +804,8 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
         text += "Fresh observed GUI labels and state:\n" + control_notes(state) + "\n"
         if task_name == "ClockTimerEntry":
             text += timer_buffer_note(state) + "\n"
-        if self.config.get("task_skills", {}).get(task_name) and state.ui_elements:
+        osmand = task_name == "OsmAndTrack" and bool(self.config.get("task_skills", {}).get(task_name))
+        if osmand and state.ui_elements:
             view = osmand_view(state.ui_elements)
             if view["points"] is not None:
                 self.tree_route = True  # the tree, not the model's words, now keeps the count
@@ -813,7 +818,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                         f'[{r["center"][0] * 1000 // width}, {r["center"][1] * 1000 // height}]' for r in places]
                 text += "Place rows on this screen (choose one of these, never another row): " + "; ".join(rows) + "\n"
         self.next_hint = None
-        if self.config.get("task_skills", {}).get(task_name) and state.ui_elements:
+        if osmand and state.ui_elements:
             terms = [waypoint.split(",")[0].strip() for waypoint in self.scratch["waypoints"]]
             self.next_hint, card = osmand_next_step(state.ui_elements, terms, self.route_points, self.centred_on, state.pixels.shape[:2])
             self.centred_on = card or self.centred_on
@@ -870,7 +875,7 @@ class AutoGLMAgent(base_agent.EnvironmentInteractingAgent):
                 # convert_action checks focus only when a GUI tree exists; otherwise ask Android.
                 if action["action_type"] == "input_text" and not state.ui_elements and not text_field_focused(self.env.controller):
                     raise ValueError("No text field is focused, so nothing would be typed. Tap the text field first, then Type.")
-                skill_on = bool(self.config.get("task_skills", {}).get(task_name))
+                skill_on = task_name == "OsmAndTrack" and bool(self.config.get("task_skills", {}).get(task_name))
                 if skill_on and state.ui_elements:
                     # GUI tree available (accessibility forwarder, v49): check the real screen, not the reply's words.
                     view = osmand_view(state.ui_elements)

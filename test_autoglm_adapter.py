@@ -210,9 +210,19 @@ class AdapterTests(unittest.TestCase):
         # Recorded on the emulator: OsmAnd search field focused versus the map / an unfocused page.
         for served, expected in (("androidx.appcompat.widget.AppCompatEditText{158e104", True),
                                  ("com.google.android.apps.nexuslauncher.search.SearchEditText{eff4ff0", True),
+                                 ("net.gsantner.markor.frontend.textview.HighlightingEditor{976695d", True),
                                  ("DecorView@60e968a[MapActivity]", False)):
             with self.subTest(served=served), patch("autoglm_agent.adb_utils.issue_generic_request", return_value=dump(served)):
                 self.assertIs(text_field_focused(None), expected)
+
+    def test_markor_skill_reminder_repeats_procedure(self):
+        """A Skill without waypoints repeats its procedure each step (Markor), never the OsmAnd rules."""
+        from autoglm_agent import skill_reminder
+        config = {"task_skills": {"MarkorCreateNoteAndSms": "instructions/skills/markor_sms.md"}}
+        reminder = skill_reminder(config, "MarkorCreateNoteAndSms", {"file_name": "a.txt", "text": "x", "number": "+1"})
+        self.assertIn("Launch Markor", reminder)
+        self.assertIn("labelled SMS", reminder)
+        self.assertNotIn("waypoint", reminder)
 
     def test_history_window_keeps_goal_and_recent_turns(self):
         """Long runs keep the first (goal) turn and the latest turns within the prompt limit."""

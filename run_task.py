@@ -336,7 +336,13 @@ def main():
             marker = PROJECT / ".tools" / f"setup_app_{app.app_name}.json"
             snapshot_exists = file_utils.check_directory_exists(
                 app_snapshot._snapshot_path(app.app_name), env.controller)
-            if not snapshot_exists:
+            # FilesMoveFile's official initialization deletes every file in shared storage, including
+            # OsmAnd's map (the app snapshot covers only /data/data); the official setup copies it back.
+            map_missing = app is apps.OsmAndApp and not file_utils.check_file_exists(
+                "/data/media/0/Android/data/net.osmand/files/" + apps.OsmAndApp.MAP_NAMES[0], env.controller)
+            if map_missing:
+                log_event(output, "OSMAND MAP MISSING", {"action": "rerun official OsmAnd setup"})
+            if not snapshot_exists or map_missing:
                 setup_required_app(app, env, output)
             save_json(marker, {"app": app.app_name, "snapshot_exists_or_setup_attempted": True})
         random.seed(args.seed)

@@ -132,6 +132,16 @@ class AdapterTests(unittest.TestCase):
         self.assertFalse(favorite_save("Never tap the star Add: it saves a Favorite. I tap Actions.", {"action_type": "click", "x": 1, "y": 1}))
         self.assertFalse(favorite_save(save, {"action_type": "navigate_back"}))
 
+    def test_route_add_requires_search_first(self):
+        """The route panel's Add is refused until the next waypoint was searched (trials _153947, _154913)."""
+        from autoglm_agent import route_add_too_early
+        reply = 'The route panel shows "0 ft, points: 1" and an "Add" button. To add the next waypoint, I should tap the "Add" button.'
+        click = {"action_type": "click", "x": 1, "y": 1}
+        self.assertTrue(route_add_too_early(reply, click, route_points=1, searched_next=False))
+        self.assertFalse(route_add_too_early(reply, click, route_points=1, searched_next=True))
+        self.assertFalse(route_add_too_early(reply, click, route_points=0, searched_next=False))
+        self.assertFalse(route_add_too_early("I tap the Search button at the top left.", click, route_points=1, searched_next=False))
+
     def test_text_field_focus_without_gui_tree(self):
         """Android's input-method dump tells whether a text field holds focus."""
         from autoglm_agent import text_field_focused

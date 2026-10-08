@@ -1,0 +1,11 @@
+{
+  "name": "SimpleSmsSend",
+  "goal": "Send a text message using Simple SMS Messenger to +10427517979 with message: Your dentist appointment is scheduled for 2 PM on Thursday.",
+  "parameters": {
+    "number": "+10427517979",
+    "message": "Your dentist appointment is scheduled for 2 PM on Thursday."
+  },
+  "verifier_rows": {},
+  "seed": 43,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

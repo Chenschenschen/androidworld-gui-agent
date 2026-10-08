@@ -1,0 +1,11 @@
+{
+  "name": "SimpleSmsSend",
+  "goal": "Send a text message using Simple SMS Messenger to +16881263403 with message: Gym membership renewal due on the 20th.",
+  "parameters": {
+    "number": "+16881263403",
+    "message": "Gym membership renewal due on the 20th."
+  },
+  "verifier_rows": {},
+  "seed": 44,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

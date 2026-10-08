@@ -1,0 +1,24 @@
+{
+  "name": "FilesMoveFile",
+  "goal": "Move the file lecture_capture.mp3 from DCIM within the sdk_gphone_x86_64 storage area to the Recordings within the same sdk_gphone_x86_64 storage area in the Android filesystem.",
+  "parameters": {
+    "file_name": "lecture_capture.mp3",
+    "source_folder": "DCIM",
+    "destination_folder": "Recordings"
+  },
+  "verifier_rows": {
+    "noise_candidates": [
+      "holiday_photos.jpg",
+      "birthday_party.jpg",
+      "wedding_event.jpg",
+      "nature_pics.jpg",
+      "road_trip.jpg",
+      "graduation_ceremony.jpg",
+      "first_day_school.jpg",
+      "mountain_hike.jpg",
+      "winter_holiday.jpg"
+    ]
+  },
+  "seed": 1,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

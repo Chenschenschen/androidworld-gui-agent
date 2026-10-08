@@ -1,0 +1,24 @@
+{
+  "name": "FilesMoveFile",
+  "goal": "Move the file documentary.mp4 from Alarms within the sdk_gphone_x86_64 storage area to the Movies within the same sdk_gphone_x86_64 storage area in the Android filesystem.",
+  "parameters": {
+    "file_name": "documentary.mp4",
+    "source_folder": "Alarms",
+    "destination_folder": "Movies"
+  },
+  "verifier_rows": {
+    "noise_candidates": [
+      "morning_alarm.mp3",
+      "wake_up.mp3",
+      "early_alarm.mp3",
+      "daily_reminder.mp3",
+      "weekend_alarm.mp3",
+      "night_alarm.mp3",
+      "early_bird.mp3",
+      "fitness_reminder.mp3",
+      "meditation_time.mp3"
+    ]
+  },
+  "seed": 43,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

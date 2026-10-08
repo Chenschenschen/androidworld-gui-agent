@@ -1,0 +1,23 @@
+{
+  "name": "FilesMoveFile",
+  "goal": "Move the file tech_talk.mp3 from Music within the sdk_gphone_x86_64 storage area to the Podcasts within the same sdk_gphone_x86_64 storage area in the Android filesystem.",
+  "parameters": {
+    "file_name": "tech_talk.mp3",
+    "source_folder": "Music",
+    "destination_folder": "Podcasts"
+  },
+  "verifier_rows": {
+    "noise_candidates": [
+      "rock_album.mp3",
+      "jazz_song.mp3",
+      "classical_music.mp3",
+      "pop_hit.mp3",
+      "electronic_dance.mp3",
+      "folk_tunes.mp3",
+      "hip_hop_beats.mp3",
+      "opera_recordings.mp3"
+    ]
+  },
+  "seed": 44,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

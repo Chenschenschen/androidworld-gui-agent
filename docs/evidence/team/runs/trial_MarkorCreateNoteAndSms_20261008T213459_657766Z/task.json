@@ -1,0 +1,12 @@
+{
+  "name": "MarkorCreateNoteAndSms",
+  "goal": "Create a new note in Markor named friendly_koala_2023_03_02.txt with the following text: The early bird catches the worm.. Share the entire content of the note with the phone number +17631706690 via SMS using Simple SMS Messenger",
+  "parameters": {
+    "file_name": "friendly_koala_2023_03_02.txt",
+    "text": "The early bird catches the worm.",
+    "number": "+17631706690"
+  },
+  "verifier_rows": {},
+  "seed": 1,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

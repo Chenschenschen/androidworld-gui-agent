@@ -8,7 +8,31 @@ finish. Android World's official verifier evaluates the result independently.
 This is a course project for **Agentic AI in Modern Business**. It is an
 experimental implementation with recorded successes and preserved failures.
 
-## Final evaluation (v42, one frozen version, 8 October 2026)
+## Team final evaluation (v65): one agent, seven tasks
+
+Branch `team-agent` combines the group's work into one agent (the
+`AutoGLMAgent` class and its `step()` method) for all seven chosen tasks; the
+original branches `Jia` and `hayati` and the integration package stay
+unchanged. Frozen as tag **`team-agent-final-v65`**, three runs per task, every
+run screen-recorded and judged by the official Android World verifier:
+
+| Course row | Task | Official PASS |
+| --- | --- | --- |
+| Warm-up (easy) | SystemWifiTurnOn | **3/3** |
+| Warm-up (easy) | ContactsAddContact | **2/3** |
+| Real work (medium) | SimpleSmsSend | **3/3** |
+| Real work (medium) | FilesMoveFile | **2/3** (one false completion) |
+| Real work (medium) | SimpleCalendarAddOneEvent | **3/3** |
+| Multi-app (hard) | MarkorCreateNoteAndSms | **3/3** |
+| Multi-app (hard) | OsmAndTrack (the slide's Ruggell, Bendern instance) | **2/3** |
+
+**18/21.** Run log (D1 p.49 fields, observation per task), the three failures
+and how to reproduce: [TEAM_FINAL_EVALUATION.md](docs/TEAM_FINAL_EVALUATION.md).
+How the agent was assembled and what came from each contribution:
+[TEAM_AGENT.md](docs/TEAM_AGENT.md). The sections below are the earlier
+history of Jia's branch.
+
+## Earlier evaluation (v42, one frozen version, 8 October 2026)
 
 The evaluated code is tagged **`final-eval-v42`**. Later work on the hard task
 alone is reported separately below and does not change this table.

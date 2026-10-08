@@ -1,5 +1,9 @@
 # Project working rules
 
+Update, 9 October 2026: branch team-agent is the group's final agent. Frozen v65 (tag team-agent-final-v65):
+seven tasks x three runs, 18/21 official PASS (docs/TEAM_FINAL_EVALUATION.md, docs/TEAM_AGENT.md). Branches Jia and
+hayati and the amber_agent_integration package are left unchanged.
+
 Update, 8 October 2026 (evening): additional OsmAnd-only experiment. v49-v61 use the accessibility
 forwarder (UIAutomator fallback) and run the OsmAnd Skill procedure as code (osmand_next_step). Frozen
 v61 (tag osmand-extra-v61) on the course slide's instance (Ruggell -> Bendern, seeds 31/314/366): 2/3

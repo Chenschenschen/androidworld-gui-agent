@@ -1,0 +1,23 @@
+{
+  "name": "FilesMoveFile",
+  "goal": "Move the file sci_fi_book.mp3 from Recordings within the sdk_gphone_x86_64 storage area to the Audiobooks within the same sdk_gphone_x86_64 storage area in the Android filesystem.",
+  "parameters": {
+    "file_name": "sci_fi_book.mp3",
+    "source_folder": "Recordings",
+    "destination_folder": "Audiobooks"
+  },
+  "verifier_rows": {
+    "noise_candidates": [
+      "interview_recording.mp3",
+      "lecture_capture.mp3",
+      "memoir_audio.mp3",
+      "meeting_audio.mp3",
+      "brainstorm_session.mp3",
+      "book_reading.mp3",
+      "therapy_session.mp3",
+      "personal_notes.mp3"
+    ]
+  },
+  "seed": 42,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

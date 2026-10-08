@@ -1,0 +1,10 @@
+{
+  "name": "SystemWifiTurnOn",
+  "goal": "Turn wifi on.",
+  "parameters": {
+    "on_or_off": "on"
+  },
+  "verifier_rows": {},
+  "seed": 43,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

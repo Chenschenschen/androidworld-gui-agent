@@ -1,0 +1,27 @@
+{
+  "tasks": [
+    "SystemWifiTurnOn",
+    "ContactsAddContact",
+    "SimpleSmsSend",
+    "FilesMoveFile",
+    "SimpleCalendarAddOneEvent",
+    "MarkorCreateNoteAndSms"
+  ],
+  "task_seeds": [
+    42,
+    43,
+    44
+  ],
+  "source_hashes": {
+    "run_task.py": "c2acabb036e55bcd0f9043c7a6cbbb83da4983c4979ea15856608cf6a5ed0e1a",
+    "autoglm_agent.py": "4928c0bfbb7d94dc725460b2e57c687445388a4b2a482f072f97124488bfd53f",
+    "instructions/autoglm.md": "fc87621f43ad5b479306b64ddeee4520984b95d547a55e7b9d197de827f60fa1",
+    "trajectory.py": "1467f3ecff46911ed6baf9c4c55ca3359547e0a1759ee116dcc592d853325a59",
+    "android_compat.py": "121bfad445002ec9db94df49f7a3d9cd2de427a840353da5037517477eafd143",
+    "instructions/skills/markor_sms.md": "08e1800fb3d2b5cbf29d530e479bb9fe40ef629256a6335f38b0d5262770652b",
+    "instructions/skills/osmand_track.md": "7404a98c4d6fc52ce49f19659e82da24bd1cef7fdefd438b8d454796a8b41273"
+  },
+  "run_all_seeds": true,
+  "skills_disabled": false,
+  "purpose": "Final evaluation: every task/seed recorded."
+}

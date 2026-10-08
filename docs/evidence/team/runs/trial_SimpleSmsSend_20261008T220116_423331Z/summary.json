@@ -1,0 +1,33 @@
+{
+  "kind": "learning_trial",
+  "task": "SimpleSmsSend",
+  "run_id": "trial_SimpleSmsSend_20261008T220116_423331Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 7,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v65_team_agent",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 20,
+  "time_budget_seconds": 900,
+  "skill": null,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 7,
+  "stop_reason": "complete",
+  "model_calls_attempted": 7,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 66.51600000000326,
+  "agent_phase_seconds": 49.35899999999674
+}

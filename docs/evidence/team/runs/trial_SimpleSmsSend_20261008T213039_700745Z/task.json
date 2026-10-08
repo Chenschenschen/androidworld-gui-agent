@@ -1,0 +1,11 @@
+{
+  "name": "SimpleSmsSend",
+  "goal": "Send a text message using Simple SMS Messenger to +12914177763 with message: Pick up groceries: Milk and Bread and Apples.",
+  "parameters": {
+    "number": "+12914177763",
+    "message": "Pick up groceries: Milk and Bread and Apples."
+  },
+  "verifier_rows": {},
+  "seed": 1,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

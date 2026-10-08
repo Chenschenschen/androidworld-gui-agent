@@ -48,6 +48,17 @@ and every run's summary, task, configuration, versions and readable/JSONL
 trajectory. [followup/export_manifest.json](followup/export_manifest.json)
 lists 64 files with SHA256 hashes. Recordings stay local and outside Git.
 
+## Team final evaluation export (v65)
+
+[team/](team/) holds the two batches of the team agent's final evaluation
+([six tasks](team/eval_batch_20261008T215129_132839Z/RESULTS.md),
+[OsmAnd](team/eval_batch_20261008T223002_941777Z/RESULTS.md)), the 21 runs and the
+7 practice runs of [TEAM_AGENT.md](../TEAM_AGENT.md) (summary, task,
+configuration, versions, readable/JSONL trajectory), and the three screenshots
+cited in the failure analysis. [team/export_manifest.json](team/export_manifest.json)
+lists 179 files with SHA256 hashes; no file contains the API key. Recordings:
+`team_agent_final_recordings_v65.zip` (38 clips, 151 MB), outside Git.
+
 ## Additional OsmAnd experiment export (v49-v62)
 
 [extra/](extra/) holds the frozen v61 evaluation on the course slide's task

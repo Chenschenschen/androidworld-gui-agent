@@ -1,0 +1,33 @@
+{
+  "kind": "learning_trial",
+  "task": "FilesMoveFile",
+  "run_id": "trial_FilesMoveFile_20261008T220533_834164Z",
+  "agent_done": true,
+  "verifier": "FAIL",
+  "steps": 13,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v65_team_agent",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 25,
+  "time_budget_seconds": 900,
+  "skill": null,
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 13,
+  "stop_reason": "complete",
+  "model_calls_attempted": 13,
+  "verifier_score": 0.0,
+  "failure_class": "false_done",
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": false,
+  "clean_agent_success": false,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 98.90700000000652,
+  "agent_phase_seconds": 87.5
+}

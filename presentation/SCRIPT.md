@@ -1,6 +1,6 @@
 # Presentation script
 
-About 3028 words, roughly 22 minutes at 135 words per minute, plus about 2 minutes of video.
+About 3060 words, roughly 23 minutes at 135 words per minute, plus about 2 minutes of video.
 
 ## Slide 1: Title
 
@@ -75,13 +75,14 @@ Our runner, run_task.py, prepares the task, starts the screen recorder, calls th
 The agent, the AutoGLMAgent class in autoglm_agent.py, builds each request and checks each answer. The model itself runs behind the Z.ai API.
 Around this, evaluate_tasks.py runs whole batches and stops if the code changes during a batch, and 38 offline tests protect every fix. One command reproduces the whole evaluation.
 
-## Slide 10: One run, step by step: a Markor note sent as an SMS
+## Slide 10: One run, step by step: the OsmAnd track Ruggell to Bendern
 
-Here is one full run from the final evaluation, Markor with seed 44. It passed in 15 steps.
-The model opened Markor and tapped plus. In the new file dialog it typed the name and set the extension.
-It typed the note text and saved it. Then it launched Simple SMS Messenger, started a new conversation, entered the number, typed the same text and pressed the SMS button.
-At the end it saw the sent message and called finish. The checker then confirmed both parts: the note exists with the right text, and the SMS was sent to the right number.
-Under each picture you see a sentence from the model's own reasoning, taken from the log.
+Here is one full run from the final evaluation: the hardest task, OsmAnd, with seed 314. It passed in 23 steps.
+The model searched for Ruggell. The first search found nothing nearby, so it increased the search radius three times, scrolled the results, and picked the row labelled Village.
+From the place menu it chose Plan a route, so Ruggell became the first point of the route.
+Then it searched for Bendern, picked the village, went back to the route panel and tapped Add. The panel showed two points. It tapped Done, which saves the track, and called finish.
+On the way it closed a crash dialog, and our check refused one Type because no text field was focused.
+The official checker then read the saved track and confirmed both points in the right order. Under each picture is a sentence from the model's own reasoning, taken from the log.
 
 ## Slide 11: How we tested: one frozen version, three runs per task
 
@@ -111,7 +112,7 @@ The notes show small things the checks handled, for example the SMS runs where t
 ## Slide 14: Run log (2/2): the two multi-app tasks
 
 The second part shows the two hard tasks, with longer notes.
-All three Markor runs followed the Skill: save the note, then send the same text as a plain SMS. One run needed the alias table, because the model named the SMS app in Chinese.
+All three Markor runs followed the Skill: save the note, then send its text as a plain SMS. One run needed the alias table, because the model named the SMS app in Chinese.
 The first OsmAnd run had to restore the map first, because the Files task had cleared the phone's storage. The only failure here, OsmAnd run 3, reached the first route point and then missed the Clear button. We come back to it in the failure analysis.
 
 ## Slide 15: All 21 evaluation runs at once (sped up)

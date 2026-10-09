@@ -321,7 +321,7 @@ slide_section(2, "At a glance", "The whole result on one slide: one agent, seven
               ask="Is 18/21 the success rate of the agent? It is the result of 21 runs; with three runs per task it is a small sample.")
 
 slide_section(3, "Use case", "Who would use such an agent and why: it works with normal apps and needs only the screen, like a person.",
-              data=["The three phones show one real run (Markor note, then the same text as an SMS)."],
+              data=["The three phones show one real run (a Markor note, then an SMS with its text)."],
               terms=[("No special app interface: ", "the agent does not need an API from the app maker; it taps the normal screen.")])
 
 slide_section(4, "The seven tasks", "Our seven tasks grouped by the course's difficulty rows, with what the agent is told and the "
@@ -374,8 +374,14 @@ slide_section(9, "Implementation", "The four parts of the system and how they ta
                      ("Source fingerprint: ", "hashes of the agent's files; equal fingerprints prove two runs used the same code.")],
               ask="Where is the loop? The runner calls step() again and again; each call does observe, decide, check, act, record (slide 6).")
 
-slide_section(10, "One run step by step", "Markor with seed 44 (15 steps, PASS): six screenshots and, under each, a sentence from the model's own reasoning in the log.",
-              data=["Steps 2, 4, 8, 10, 14 and 15 of run trial_MarkorCreateNoteAndSms_20261008T222633_440045Z."],
+slide_section(10, "One run step by step", "OsmAnd with seed 314 (23 steps, PASS), the hardest task: six screenshots and, under each, a sentence from the model's own reasoning in the log.",
+              data=["Steps 5, 9, 11, 16, 22 and 23 of run trial_OsmAndTrack_20261008T224202_113624Z: no result within 5 mi, so increase the search radius; "
+                    "pick the Ruggell row labelled Village; Plan a route; pick the Bendern village; route panel with 2 points, Done; the saved route and finish.",
+                    "Not shown but in the script: step 2 closed the accessibility service's crash dialog, and in step 14 our check refused a Type because "
+                    "no text field was focused (the model then tapped the field).",
+                    "The quotes were checked word for word against the model replies in the log (they are listed in presentation/data/facts.json)."],
+              terms=[("Plan a route: ", "OsmAnd's route planner; tapping Done there saves the route as a track, which the verifier reads."),
+                     ("Search radius: ", "OsmAnd first searches near the map position; increasing the radius widens the search.")],
               ask="Did the model really write these sentences? Yes, they are verbatim from its replies in the trajectory log.")
 
 slide_section(11, "How we tested", "One frozen version, three runs per task, the official verifier, and one log row per run in the course's format.",
@@ -401,7 +407,7 @@ slide_section(13, "Run log (1/2): one row per run", "The course's run log (D1 p.
               ask="Where are the videos? Not in git because of their size. Every clip is in team_agent_final_recordings_v65.zip, in a folder named after the run ID. docs/RUN_LOG.md lists each run with its clips and log link.")
 
 slide_section(14, "Run log (2/2): the two multi-app tasks", "The same table for Markor + SMS and OsmAnd, with longer notes because these runs have more going on.",
-              data=["Markor: all three runs followed the Skill (save the note, then send the same text as a plain SMS); run 1 needed the alias table for a Chinese app name; run 2 had one truncated reply that was retried.",
+              data=["Markor: all three runs followed the Skill (save the note, then send its text as a plain SMS); run 1 needed the alias table for a Chinese app name; run 2 had one truncated reply that was retried.",
                     "OsmAnd run 1: the runner first restored the map, because the Files runs had cleared shared storage. Runs 1 and 2 passed in 22 and 23 steps of 90.",
                     "OsmAnd run 3 (FAIL, grounding): Ruggell became route point 1, then the model tapped Clear at [941, 57] instead of [941, 83] three times. Analysed on slide 19."],
               terms=[("Alias table: ", "a small list in our code that maps other names of an app (for example Chinese ones) to the real app.")])

@@ -43,34 +43,34 @@
  ],
  "traj": [
   {
-   "file": "traj_1.png",
-   "step": 2,
-   "model_quote": "To create a new note, I should tap the red \"+\" button at the bottom-right corner to open the new file dialog."
+   "file": "osm_traj_1.png",
+   "step": 5,
+   "model_quote": "I need to tap \"INCREASE SEARCH RADIUS\" to expand the search area and find the place."
   },
   {
-   "file": "traj_2.png",
-   "step": 4,
-   "model_quote": "The new file dialog shows the name \"copy_shy_horse\" and the extension is \".md\". I need to change the extension to \".txt\" as requested."
+   "file": "osm_traj_2.png",
+   "step": 9,
+   "model_quote": "The \"Ruggell\" row labeled \"Village\" is visible and is the correct location."
   },
   {
-   "file": "traj_3.png",
-   "step": 8,
-   "model_quote": "This will ensure the file is saved before I proceed to SMS."
+   "file": "osm_traj_3.png",
+   "step": 11,
+   "model_quote": "I should tap it to start creating the route, which will allow me to add the next waypoint \"Bendern\" in the correct order."
   },
   {
-   "file": "traj_4.png",
-   "step": 10,
-   "model_quote": "To send a new message, I should tap the \"Start a conversation\" button in the center of the screen"
+   "file": "osm_traj_4.png",
+   "step": 16,
+   "model_quote": "I should tap this row to select it as the second waypoint for the track."
   },
   {
-   "file": "traj_5.png",
-   "step": 14,
-   "model_quote": "To send the SMS, I need to tap the \"SMS OK\" send button on the right side of the input field."
+   "file": "osm_traj_5.png",
+   "step": 22,
+   "model_quote": "To save the track with both waypoints in the correct order, I should tap \"Done\" to complete the route creation and save the track."
   },
   {
-   "file": "traj_6.png",
-   "step": 15,
-   "model_quote": "The task requires both creating the note in Markor and sending the SMS with the exact text. Both are now complete."
+   "file": "osm_traj_6.png",
+   "step": 23,
+   "model_quote": "The track has been created with both waypoints \"Ruggell\" and \"Bendern\" in the correct order and is now saved."
   }
  ],
  "files_quote": "I see the \"documentary_2023_03_14.mp4\" file in the Alarms folder, which matches the required file \"documentary.mp4\" (assuming it is named differently here).",
@@ -349,5 +349,6 @@
     }
    ]
   }
- ]
+ ],
+ "traj_run": "trial_OsmAndTrack_20261008T224202_113624Z"
 }

@@ -103,7 +103,7 @@ card(s, 0.7, 5.15, 3.9, 1.55, "What it is told", "One sentence in plain English,
 if (IMG / "traj_1.png").exists():
     for i, name in enumerate(["traj_1.png", "traj_3.png", "traj_6.png"]):
         picture(s, IMG / name, 5.0 + i * 2.65, 1.65, h=5.05, phone=True)
-    text(s, 5.0, 6.72, 7.6, 0.3, "One of our runs: a note in Markor, then the same text sent as an SMS", size=11, color=GREY)
+    text(s, 5.0, 6.72, 7.6, 0.3, "One of our runs: a note created in Markor, then sent as an SMS", size=11, color=GREY)
 
 # 4 ─ Tasks ───────────────────────────────────────────────────────────────────────────────────────
 s = slide("Tasks", "Seven tasks from all three difficulty rows of the course list", """
@@ -236,12 +236,13 @@ card(s, 8.8, 4.4, 3.85, 2.3, "Reproduce", ["git checkout team-agent-final-v65", 
 
 # 10 ─ Trajectory ─────────────────────────────────────────────────────────────────────────────────
 traj = [m for m in F.get("traj", [])]
-s = slide("Trajectory", "One run, step by step: a Markor note sent as an SMS", """
-Here is one full run from the final evaluation, Markor with seed 44. It passed in 15 steps.
-The model opened Markor and tapped plus. In the new file dialog it typed the name and set the extension.
-It typed the note text and saved it. Then it launched Simple SMS Messenger, started a new conversation, entered the number, typed the same text and pressed the SMS button.
-At the end it saw the sent message and called finish. The checker then confirmed both parts: the note exists with the right text, and the SMS was sent to the right number.
-Under each picture you see a sentence from the model's own reasoning, taken from the log.
+s = slide("Trajectory", "One run, step by step: the OsmAnd track Ruggell to Bendern", """
+Here is one full run from the final evaluation: the hardest task, OsmAnd, with seed 314. It passed in 23 steps.
+The model searched for Ruggell. The first search found nothing nearby, so it increased the search radius three times, scrolled the results, and picked the row labelled Village.
+From the place menu it chose Plan a route, so Ruggell became the first point of the route.
+Then it searched for Bendern, picked the village, went back to the route panel and tapped Add. The panel showed two points. It tapped Done, which saves the track, and called finish.
+On the way it closed a crash dialog, and our check refused one Type because no text field was focused.
+The official checker then read the saved track and confirmed both points in the right order. Under each picture is a sentence from the model's own reasoning, taken from the log.
 """)
 for i, m in enumerate(traj[:6]):
     x = 0.55 + i * 2.08
@@ -325,7 +326,7 @@ The notes show small things the checks handled, for example the SMS runs where t
 
 run_log_slide("Run log (2/2): the two multi-app tasks", """
 The second part shows the two hard tasks, with longer notes.
-All three Markor runs followed the Skill: save the note, then send the same text as a plain SMS. One run needed the alias table, because the model named the SMS app in Chinese.
+All three Markor runs followed the Skill: save the note, then send its text as a plain SMS. One run needed the alias table, because the model named the SMS app in Chinese.
 The first OsmAnd run had to restore the map first, because the Files task had cleared the phone's storage. The only failure here, OsmAnd run 3, reached the first route point and then missed the Clear button. We come back to it in the failure analysis.
 """, ORDER[5:], 9, 10.5, [2.15, 0.65, 0.5, 1.5, 0.9, 0.75, 1.05, 0.55, 4.05])
 

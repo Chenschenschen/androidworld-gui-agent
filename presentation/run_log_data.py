@@ -76,8 +76,8 @@ RUNS = [
   "Typed the name, replaced the extension with .txt, typed and saved the text, then sent it as a plain SMS. One truncated "
   "model reply was retried."),
  ("MarkorCreateNoteAndSms", 3, 44, "trial_MarkorCreateNoteAndSms_20261008T222633_440045Z", 15, "PASS", "", 2,
-  "The 15-step run shown on the trajectory slide",
-  "The run shown step by step on the trajectory slide: new file, name and extension, text, Save, SMS app, number, same text, SMS button."),
+  "New file, .txt, text, Save, SMS; 15 steps",
+  "New file, name and extension, text, Save; then Simple SMS Messenger, number, the text, SMS button. 15 steps."),
  ("OsmAndTrack", 1, 31, "trial_OsmAndTrack_20261008T223004_312422Z", 22, "PASS", "", 4,
   "Map restored first; Ruggell, Bendern, Done",
   "Before the run the runner restored OsmAnd's map (the Files runs had cleared storage). Three radius increases and one scroll "
@@ -86,7 +86,7 @@ RUNS = [
  ("OsmAndTrack", 2, 314, "trial_OsmAndTrack_20261008T224202_113624Z", 23, "PASS", "", 3,
   "Same route; crash dialog closed; 1 refusal",
   "Same procedure as run 1; the accessibility service's “keeps stopping” dialog appeared and the model closed it; one "
-  "unfocused Type was refused."),
+  "unfocused Type was refused. Shown on slide 10."),
  ("OsmAndTrack", 3, 366, "trial_OsmAndTrack_20261008T225108_345362Z", 16, "FAIL", "grounding", 2,
   "Point 1 done; Clear missed 3x; stopped",
   "Ruggell became route point 1 and the crash dialog was closed; in the second search the code stated “Tap Clear at "

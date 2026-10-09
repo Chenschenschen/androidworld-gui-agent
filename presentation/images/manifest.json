@@ -111,5 +111,47 @@
     "caption": "Ruggell Village row visible, yet agent swipes past it",
     "model_quote": "The search results show multiple entries but none are the place itself (they are stops, streets, etc.).",
     "observation": 1
+  },
+  {
+    "file": "osm_traj_1.png",
+    "run_id": "trial_OsmAndTrack_20261008T224202_113624Z",
+    "step": 5,
+    "caption": "Search for Ruggell finds nothing within 5 mi",
+    "model_quote": "I need to tap \"INCREASE SEARCH RADIUS\" to expand the search area and find the place."
+  },
+  {
+    "file": "osm_traj_2.png",
+    "run_id": "trial_OsmAndTrack_20261008T224202_113624Z",
+    "step": 9,
+    "caption": "Results list: the Ruggell village row",
+    "model_quote": "The \"Ruggell\" row labeled \"Village\" is visible and is the correct location."
+  },
+  {
+    "file": "osm_traj_3.png",
+    "run_id": "trial_OsmAndTrack_20261008T224202_113624Z",
+    "step": 11,
+    "caption": "Place menu with Plan a route",
+    "model_quote": "I should tap it to start creating the route, which will allow me to add the next waypoint \"Bendern\" in the correct order."
+  },
+  {
+    "file": "osm_traj_4.png",
+    "run_id": "trial_OsmAndTrack_20261008T224202_113624Z",
+    "step": 16,
+    "caption": "Search for Bendern: the village row",
+    "model_quote": "I should tap this row to select it as the second waypoint for the track."
+  },
+  {
+    "file": "osm_traj_5.png",
+    "run_id": "trial_OsmAndTrack_20261008T224202_113624Z",
+    "step": 22,
+    "caption": "Route panel with 2 points and Done",
+    "model_quote": "To save the track with both waypoints in the correct order, I should tap \"Done\" to complete the route creation and save the track."
+  },
+  {
+    "file": "osm_traj_6.png",
+    "run_id": "trial_OsmAndTrack_20261008T224202_113624Z",
+    "step": 23,
+    "caption": "Saved route Ruggell to Bendern; finish",
+    "model_quote": "The track has been created with both waypoints \"Ruggell\" and \"Bendern\" in the correct order and is now saved."
   }
 ]

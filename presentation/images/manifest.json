@@ -1,0 +1,115 @@
+[
+  {
+    "file": "traj_1.png",
+    "run_id": "trial_MarkorCreateNoteAndSms_20261008T222633_440045Z",
+    "step": 2,
+    "caption": "Markor file list: agent taps the + button to create a note",
+    "model_quote": "To create a new note, I should tap the red \"+\" button at the bottom-right corner to open the new file dialog."
+  },
+  {
+    "file": "traj_2.png",
+    "run_id": "trial_MarkorCreateNoteAndSms_20261008T222633_440045Z",
+    "step": 4,
+    "caption": "New-file dialog: name typed, agent notices wrong .md extension",
+    "model_quote": "The new file dialog shows the name \"copy_shy_horse\" and the extension is \".md\". I need to change the extension to \".txt\" as requested."
+  },
+  {
+    "file": "traj_3.png",
+    "run_id": "trial_MarkorCreateNoteAndSms_20261008T222633_440045Z",
+    "step": 8,
+    "caption": "Editor: note text typed, agent saves before switching apps",
+    "model_quote": "This will ensure the file is saved before I proceed to SMS."
+  },
+  {
+    "file": "traj_4.png",
+    "run_id": "trial_MarkorCreateNoteAndSms_20261008T222633_440045Z",
+    "step": 10,
+    "caption": "Switched to Simple SMS Messenger: empty start screen",
+    "model_quote": "To send a new message, I should tap the \"Start a conversation\" button in the center of the screen"
+  },
+  {
+    "file": "traj_5.png",
+    "run_id": "trial_MarkorCreateNoteAndSms_20261008T222633_440045Z",
+    "step": 14,
+    "caption": "Recipient number set, note text typed into message field",
+    "model_quote": "To send the SMS, I need to tap the \"SMS OK\" send button on the right side of the input field."
+  },
+  {
+    "file": "traj_6.png",
+    "run_id": "trial_MarkorCreateNoteAndSms_20261008T222633_440045Z",
+    "step": 15,
+    "caption": "SMS bubble confirms sending; agent checks both subgoals, then finishes",
+    "model_quote": "The task requires both creating the note in Markor and sending the SMS with the exact text. Both are now complete."
+  },
+  {
+    "file": "files43_step5.png",
+    "run_id": "trial_FilesMoveFile_20261008T220533_834164Z",
+    "step": 5,
+    "caption": "Truncated grid names: agent picks the wrong documentary file",
+    "model_quote": "I see the \"documentary_2023_03_14.mp4\" file in the Alarms folder, which matches the required file \"documentary.mp4\" (assuming it is named differently here)."
+  },
+  {
+    "file": "files43_final.png",
+    "run_id": "trial_FilesMoveFile_20261008T220533_834164Z",
+    "step": 13,
+    "caption": "Final screen: wrong file moved, agent declares success anyway",
+    "model_quote": "The original \"documentary.mp4\" file is no longer present in the Alarms folder, indicating the move operation was successful."
+  },
+  {
+    "file": "contacts43_step9.png",
+    "run_id": "trial_ContactsAddContact_20261008T215709_244163Z",
+    "step": 9,
+    "caption": "Phone field already scrolled past; agent keeps swiping down",
+    "model_quote": "The phone number field is still not visible. I should continue scrolling down to reveal the phone number input field"
+  },
+  {
+    "file": "osmand366_step15.png",
+    "run_id": "trial_OsmAndTrack_20261008T225108_345362Z",
+    "step": 15,
+    "caption": "Repeated Clear taps do nothing; 'Ruggell' stays in search field",
+    "model_quote": "I should clear the current text by tapping the \"Clear\" button at [863, 57, 999, 109] and then type the new term."
+  },
+  {
+    "file": "osmand_pass_1.png",
+    "run_id": "trial_OsmAndTrack_20261008T224202_113624Z",
+    "step": 9,
+    "caption": "Search results: agent picks the Ruggell 'Village' row, not stops",
+    "model_quote": "The \"Ruggell\" row labeled \"Village\" is visible and is the correct location."
+  },
+  {
+    "file": "osmand_pass_2.png",
+    "run_id": "trial_OsmAndTrack_20261008T224202_113624Z",
+    "step": 21,
+    "caption": "Plan a route panel shows points: 1, map centred on Bendern",
+    "model_quote": "I should tap \"Add\" to include the current location ( centred on Bendern) as the next point in the route."
+  },
+  {
+    "file": "osmand_pass_3.png",
+    "run_id": "trial_OsmAndTrack_20261008T224202_113624Z",
+    "step": 22,
+    "caption": "After Add, panel shows points: 2; agent taps Done",
+    "model_quote": "To save the track with both waypoints in the correct order, I should tap \"Done\" to complete the route creation and save the track."
+  },
+  {
+    "file": "osmand_pass_4.png",
+    "run_id": "trial_OsmAndTrack_20261008T224202_113624Z",
+    "step": 23,
+    "caption": "Final map: Ruggell to Bendern track saved, verifier PASS",
+    "model_quote": "The track has been created with both waypoints \"Ruggell\" and \"Bendern\" in the correct order and is now saved."
+  },
+  {
+    "file": "forwarder_crash.png",
+    "run_id": "trial_OsmAndTrack_20261008T192740_100250Z",
+    "step": 12,
+    "caption": "Accessibility forwarder 'keeps stopping' dialog interrupts an OsmAnd run",
+    "model_quote": "A system dialog about \"com.google.androidenv.accessibilityforwarder\" is blocking the screen. To proceed with creating the track, I need to close this dialog."
+  },
+  {
+    "file": "osmand31_v61_missed_village.png",
+    "run_id": "trial_OsmAndTrack_20261008T191028_258914Z",
+    "step": 8,
+    "caption": "Ruggell Village row visible, yet agent swipes past it",
+    "model_quote": "The search results show multiple entries but none are the place itself (they are stops, streets, etc.).",
+    "observation": 1
+  }
+]

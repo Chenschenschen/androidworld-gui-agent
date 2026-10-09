@@ -1,0 +1,353 @@
+{
+ "project_runs": 300,
+ "versions": 65,
+ "final_cost_eur": "0.065",
+ "median_call_s": "1.77",
+ "calls_final": 296,
+ "final_tokens_m": "1.45",
+ "project_cost_eur": "0.48",
+ "local_runs": 275,
+ "false_done": 19,
+ "refusals_total": 8,
+ "tests": 38,
+ "local_steps": 1453,
+ "local_calls": 1642,
+ "crash_runs": 11,
+ "crash_total": 25,
+ "refusal_rows": [
+  [
+   "Type with no focused text field",
+   "Text would go nowhere",
+   3
+  ],
+  [
+   "Malformed reply",
+   "Not exactly one action",
+   2
+  ],
+  [
+   "Unsupported action",
+   "Not in the action list",
+   1
+  ],
+  [
+   "Truncated reply",
+   "Answer cut off",
+   1
+  ],
+  [
+   "OsmAnd Favorite button",
+   "Saves a favourite, not a route point",
+   1
+  ]
+ ],
+ "traj": [
+  {
+   "file": "traj_1.png",
+   "step": 2,
+   "model_quote": "To create a new note, I should tap the red \"+\" button at the bottom-right corner to open the new file dialog."
+  },
+  {
+   "file": "traj_2.png",
+   "step": 4,
+   "model_quote": "The new file dialog shows the name \"copy_shy_horse\" and the extension is \".md\". I need to change the extension to \".txt\" as requested."
+  },
+  {
+   "file": "traj_3.png",
+   "step": 8,
+   "model_quote": "This will ensure the file is saved before I proceed to SMS."
+  },
+  {
+   "file": "traj_4.png",
+   "step": 10,
+   "model_quote": "To send a new message, I should tap the \"Start a conversation\" button in the center of the screen"
+  },
+  {
+   "file": "traj_5.png",
+   "step": 14,
+   "model_quote": "To send the SMS, I need to tap the \"SMS OK\" send button on the right side of the input field."
+  },
+  {
+   "file": "traj_6.png",
+   "step": 15,
+   "model_quote": "The task requires both creating the note in Markor and sending the SMS with the exact text. Both are now complete."
+  }
+ ],
+ "files_quote": "I see the \"documentary_2023_03_14.mp4\" file in the Alarms folder, which matches the required file \"documentary.mp4\" (assuming it is named differently here).",
+ "outcome_rows": [
+  [
+   "Setup or other error",
+   60
+  ],
+  [
+   "Step budget used up",
+   21
+  ],
+  [
+   "Invalid replies",
+   32
+  ],
+  [
+   "Said done, verifier FAIL",
+   19
+  ],
+  [
+   "No-progress stop",
+   47
+  ],
+  [
+   "PASS",
+   96
+  ]
+ ],
+ "osmand_phases": [
+  {
+   "phase": "v30–v42\nText Skill",
+   "runs": 26,
+   "passed": 0
+  },
+  {
+   "phase": "v43–v48\nRules on words",
+   "runs": 10,
+   "passed": 0
+  },
+  {
+   "phase": "v49–v58\nReads the screen",
+   "runs": 10,
+   "passed": 0
+  },
+  {
+   "phase": "v59–v62\nSkill as code",
+   "runs": 11,
+   "passed": 5
+  },
+  {
+   "phase": "v63–v65\nFinal agent",
+   "runs": 4,
+   "passed": 3
+  }
+ ],
+ "steps_rows": [
+  {
+   "short": "Wi-Fi",
+   "ours": 5,
+   "ref": 3,
+   "budget": 12
+  },
+  {
+   "short": "Contacts",
+   "ours": 11.5,
+   "ref": 5,
+   "budget": 16
+  },
+  {
+   "short": "SMS",
+   "ours": 7.7,
+   "ref": 6,
+   "budget": 20
+  },
+  {
+   "short": "Files",
+   "ours": 15,
+   "ref": 10,
+   "budget": 25
+  },
+  {
+   "short": "Calendar",
+   "ours": 19,
+   "ref": 17,
+   "budget": 35
+  },
+  {
+   "short": "Markor+SMS",
+   "ours": 17,
+   "ref": 9,
+   "budget": 40
+  },
+  {
+   "short": "OsmAnd",
+   "ours": 22.5,
+   "ref": 60,
+   "budget": 90
+  }
+ ],
+ "cost_rows": [
+  {
+   "short": "Wi-Fi",
+   "seconds": 71
+  },
+  {
+   "short": "Contacts",
+   "seconds": 95
+  },
+  {
+   "short": "SMS",
+   "seconds": 71
+  },
+  {
+   "short": "Files",
+   "seconds": 109
+  },
+  {
+   "short": "Calendar",
+   "seconds": 153
+  },
+  {
+   "short": "Markor+SMS",
+   "seconds": 261
+  },
+  {
+   "short": "OsmAnd",
+   "seconds": 537
+  }
+ ],
+ "result_rows": [
+  {
+   "row": "Warm-up",
+   "task": "SystemWifiTurnOn",
+   "runs": [
+    {
+     "seed": 42,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 43,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 44,
+     "pass": true,
+     "class": null
+    }
+   ]
+  },
+  {
+   "row": "Warm-up",
+   "task": "ContactsAddContact",
+   "runs": [
+    {
+     "seed": 42,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 43,
+     "pass": false,
+     "class": "other: navigation"
+    },
+    {
+     "seed": 44,
+     "pass": true,
+     "class": null
+    }
+   ]
+  },
+  {
+   "row": "Real work",
+   "task": "SimpleSmsSend",
+   "runs": [
+    {
+     "seed": 42,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 43,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 44,
+     "pass": true,
+     "class": null
+    }
+   ]
+  },
+  {
+   "row": "Real work",
+   "task": "FilesMoveFile",
+   "runs": [
+    {
+     "seed": 42,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 43,
+     "pass": false,
+     "class": "false_done"
+    },
+    {
+     "seed": 44,
+     "pass": true,
+     "class": null
+    }
+   ]
+  },
+  {
+   "row": "Real work",
+   "task": "SimpleCalendarAddOneEvent",
+   "runs": [
+    {
+     "seed": 42,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 43,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 44,
+     "pass": true,
+     "class": null
+    }
+   ]
+  },
+  {
+   "row": "Multi-app",
+   "task": "MarkorCreateNoteAndSms",
+   "runs": [
+    {
+     "seed": 42,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 43,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 44,
+     "pass": true,
+     "class": null
+    }
+   ]
+  },
+  {
+   "row": "Multi-app",
+   "task": "OsmAndTrack",
+   "runs": [
+    {
+     "seed": 31,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 314,
+     "pass": true,
+     "class": null
+    },
+    {
+     "seed": 366,
+     "pass": false,
+     "class": "grounding"
+    }
+   ]
+  }
+ ]
+}

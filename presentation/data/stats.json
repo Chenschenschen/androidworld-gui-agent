@@ -1,0 +1,1219 @@
+{
+  "generated_from": {
+    "local": "C:\\Users\\Admin\\Desktop\\Agentic AI in Modern Business (MGTHN0211)\\androidworld-gui-agent\\runs\\trial_*/summary.json (+ step response/validation files)",
+    "hayati": "git show origin/hayati:runs/<dir>/summary.json",
+    "ledger": "C:\\Users\\Admin\\Desktop\\Agentic AI in Modern Business (MGTHN0211)\\amber_agent_integration_20261008\\evidence\\RUN_LEDGER_20261008.md"
+  },
+  "dedup_notes": {
+    "local_folders": 100,
+    "local_with_summary": 97,
+    "local_without_summary": [
+      {
+        "run": "trial_ContactsAddContact_20261008T123322_740182Z",
+        "task": "ContactsAddContact",
+        "version": "autoglm_api_v36_bounded_splash_waits"
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T122018_195195Z",
+        "task": "OsmAndTrack",
+        "version": "autoglm_api_v34_osmand_skill"
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T122530_891899Z",
+        "task": "OsmAndTrack",
+        "version": "autoglm_api_v35_recorder_startup_check"
+      }
+    ],
+    "hayati_top_level_dirs": 256,
+    "hayati_dirs_without_summary": 75,
+    "hayati_non_trial_summaries_excluded": [
+      "runs/gpu_offload_20261007T170529_775400Z",
+      "runs/json_tree_20261007T153232_202294Z",
+      "runs/prompt_tree_20261007T152216_674313Z"
+    ],
+    "hayati_presentation_duplicates_excluded": [
+      {
+        "presentation_dir": "runs/presentation/FILES_01_easy_to_medium_PASS_v52",
+        "run_id": "trial_FilesMoveFile_20261008T141450_696380Z",
+        "duplicate_of": "runs/trial_FilesMoveFile_20261008T141450_696380Z",
+        "identical_content": true
+      },
+      {
+        "presentation_dir": "runs/presentation/FILES_V53_01_easy_to_medium_PASS",
+        "run_id": "trial_FilesMoveFile_20261008T153825_684536Z",
+        "duplicate_of": "runs/trial_FilesMoveFile_20261008T153825_684536Z",
+        "identical_content": true
+      },
+      {
+        "presentation_dir": "runs/presentation/FILES_V53_02_medium_to_easy_PASS",
+        "run_id": "trial_FilesMoveFile_20261008T154346_710337Z",
+        "duplicate_of": "runs/trial_FilesMoveFile_20261008T154346_710337Z",
+        "identical_content": true
+      },
+      {
+        "presentation_dir": "runs/presentation/FILES_V54_03_easy_to_medium_PASS",
+        "run_id": "trial_FilesMoveFile_20261008T155433_701814Z",
+        "duplicate_of": "runs/trial_FilesMoveFile_20261008T155433_701814Z",
+        "identical_content": true
+      },
+      {
+        "presentation_dir": "runs/presentation/SMS_01_seed42_PASS_v45",
+        "run_id": "trial_SimpleSmsSend_20261008T130636_231233Z",
+        "duplicate_of": "runs/trial_SimpleSmsSend_20261008T130636_231233Z",
+        "identical_content": true
+      },
+      {
+        "presentation_dir": "runs/presentation/SMS_02_seed43_PASS_v49",
+        "run_id": "trial_SimpleSmsSend_20261008T132854_166582Z",
+        "duplicate_of": "runs/trial_SimpleSmsSend_20261008T132854_166582Z",
+        "identical_content": true
+      },
+      {
+        "presentation_dir": "runs/presentation/SMS_03_seed44_PASS_v49",
+        "run_id": "trial_SimpleSmsSend_20261008T133321_726192Z",
+        "duplicate_of": "runs/trial_SimpleSmsSend_20261008T133321_726192Z",
+        "identical_content": true
+      }
+    ],
+    "hayati_learning_trials_counted": 178,
+    "hayati_renamed_trial_folders_kept": [
+      "trial_CameraTakePhoto_fail",
+      "trial_CameraTakePhoto_success",
+      "trial_FilesMoveFile_fail",
+      "trial_FilesMoveFile_successful",
+      "trial_FilesMoveFile_successful_2",
+      "trial_FilesMoveFile_successful_3"
+    ],
+    "hayati_local_run_id_overlap": [],
+    "ledger_rows": 26,
+    "ledger_timestamp_overlap_with_local_or_hayati": []
+  },
+  "A_recorded_runs": {
+    "combined": {
+      "total": 301,
+      "PASS": 113,
+      "FAIL": 173,
+      "other": 15,
+      "per_task": {
+        "CameraTakePhoto": {
+          "total": 25,
+          "PASS": 9,
+          "FAIL": 16,
+          "other": 0
+        },
+        "ClockTimerEntry": {
+          "total": 24,
+          "PASS": 4,
+          "FAIL": 20,
+          "other": 0
+        },
+        "ContactsAddContact": {
+          "total": 42,
+          "PASS": 18,
+          "FAIL": 19,
+          "other": 5
+        },
+        "FilesMoveFile": {
+          "total": 23,
+          "PASS": 12,
+          "FAIL": 7,
+          "other": 4
+        },
+        "MarkorCreateNoteAndSms": {
+          "total": 17,
+          "PASS": 10,
+          "FAIL": 7,
+          "other": 0
+        },
+        "OsmAndTrack": {
+          "total": 61,
+          "PASS": 8,
+          "FAIL": 53,
+          "other": 0
+        },
+        "SimpleCalendarAddOneEvent": {
+          "total": 10,
+          "PASS": 7,
+          "FAIL": 3,
+          "other": 0
+        },
+        "SimpleSmsSend": {
+          "total": 21,
+          "PASS": 13,
+          "FAIL": 4,
+          "other": 4
+        },
+        "SystemCopyToClipboard": {
+          "total": 37,
+          "PASS": 4,
+          "FAIL": 31,
+          "other": 2
+        },
+        "SystemWifiTurnOn": {
+          "total": 41,
+          "PASS": 28,
+          "FAIL": 13,
+          "other": 0
+        }
+      }
+    },
+    "local": {
+      "total": 97,
+      "PASS": 36,
+      "FAIL": 60,
+      "other": 1,
+      "per_task": {
+        "ContactsAddContact": {
+          "total": 8,
+          "PASS": 6,
+          "FAIL": 1,
+          "other": 1
+        },
+        "FilesMoveFile": {
+          "total": 4,
+          "PASS": 3,
+          "FAIL": 1,
+          "other": 0
+        },
+        "MarkorCreateNoteAndSms": {
+          "total": 6,
+          "PASS": 4,
+          "FAIL": 2,
+          "other": 0
+        },
+        "OsmAndTrack": {
+          "total": 61,
+          "PASS": 8,
+          "FAIL": 53,
+          "other": 0
+        },
+        "SimpleCalendarAddOneEvent": {
+          "total": 10,
+          "PASS": 7,
+          "FAIL": 3,
+          "other": 0
+        },
+        "SimpleSmsSend": {
+          "total": 4,
+          "PASS": 4,
+          "FAIL": 0,
+          "other": 0
+        },
+        "SystemWifiTurnOn": {
+          "total": 4,
+          "PASS": 4,
+          "FAIL": 0,
+          "other": 0
+        }
+      }
+    },
+    "hayati": {
+      "total": 178,
+      "PASS": 60,
+      "FAIL": 107,
+      "other": 11,
+      "per_task": {
+        "CameraTakePhoto": {
+          "total": 25,
+          "PASS": 9,
+          "FAIL": 16,
+          "other": 0
+        },
+        "ClockTimerEntry": {
+          "total": 24,
+          "PASS": 4,
+          "FAIL": 20,
+          "other": 0
+        },
+        "ContactsAddContact": {
+          "total": 30,
+          "PASS": 9,
+          "FAIL": 17,
+          "other": 4
+        },
+        "FilesMoveFile": {
+          "total": 19,
+          "PASS": 9,
+          "FAIL": 6,
+          "other": 4
+        },
+        "SimpleSmsSend": {
+          "total": 9,
+          "PASS": 4,
+          "FAIL": 4,
+          "other": 1
+        },
+        "SystemCopyToClipboard": {
+          "total": 37,
+          "PASS": 4,
+          "FAIL": 31,
+          "other": 2
+        },
+        "SystemWifiTurnOn": {
+          "total": 34,
+          "PASS": 21,
+          "FAIL": 13,
+          "other": 0
+        }
+      }
+    },
+    "ledger": {
+      "total": 26,
+      "PASS": 17,
+      "FAIL": 6,
+      "other": 3,
+      "per_task": {
+        "ContactsAddContact": {
+          "total": 4,
+          "PASS": 3,
+          "FAIL": 1,
+          "other": 0
+        },
+        "MarkorCreateNoteAndSms": {
+          "total": 11,
+          "PASS": 6,
+          "FAIL": 5,
+          "other": 0
+        },
+        "SimpleSmsSend": {
+          "total": 8,
+          "PASS": 5,
+          "FAIL": 0,
+          "other": 3
+        },
+        "SystemWifiTurnOn": {
+          "total": 3,
+          "PASS": 3,
+          "FAIL": 0,
+          "other": 0
+        }
+      }
+    },
+    "other_breakdown": {
+      "local": {
+        "NOT_RUN": 1
+      },
+      "hayati": {
+        "NOT_RUN": 10,
+        "ERROR": 1
+      },
+      "ledger": {
+        "ERROR": 3
+      }
+    },
+    "versions": {
+      "local": {
+        "distinct_version_strings": 36,
+        "runs_without_version": 0,
+        "families": {
+          "autoglm_api": {
+            "distinct_strings": 36,
+            "range": "v30..v65"
+          }
+        }
+      },
+      "hayati": {
+        "distinct_version_strings": 69,
+        "runs_without_version": 3,
+        "families": {
+          "autoglm_api": {
+            "distinct_strings": 52,
+            "range": "v1..v57"
+          },
+          "five_easy_tasks": {
+            "distinct_strings": 3,
+            "range": "v8..v10"
+          },
+          "learning_contact_process": {
+            "distinct_strings": 1,
+            "range": "v5..v5"
+          },
+          "learning_context_feedback": {
+            "distinct_strings": 2,
+            "range": "v2..v2"
+          },
+          "learning_direct_type": {
+            "distinct_strings": 1,
+            "range": "v6..v6"
+          },
+          "learning_gpu16": {
+            "distinct_strings": 1,
+            "range": "v3..v3"
+          },
+          "learning_label_grounding": {
+            "distinct_strings": 2,
+            "range": "v4..v4"
+          },
+          "learning_single_name": {
+            "distinct_strings": 1,
+            "range": "v7..v7"
+          },
+          "learning_targeted_type": {
+            "distinct_strings": 1,
+            "range": "v3..v3"
+          },
+          "learning_tree_first": {
+            "distinct_strings": 1,
+            "range": "v1..v1"
+          },
+          "learning_tree_first_json": {
+            "distinct_strings": 1,
+            "range": "v1..v1"
+          },
+          "upstream_reference": {
+            "distinct_strings": 3,
+            "range": "v1..v3"
+          }
+        }
+      },
+      "ledger": "no version field in ledger",
+      "combined_distinct_version_strings": 105,
+      "strings_shared_local_hayati": []
+    }
+  },
+  "B_final_evaluation": {
+    "batches": [
+      "eval_batch_20261008T215129_132839Z",
+      "eval_batch_20261008T223002_941777Z"
+    ],
+    "per_task": {
+      "SystemWifiTurnOn": {
+        "runs": 3,
+        "PASS": 3,
+        "steps_mean": 5,
+        "steps_min": 5,
+        "steps_max": 5,
+        "duration_mean_s": 71.3,
+        "prompt_tokens": 41650,
+        "completion_tokens": 1010,
+        "model_calls": 15,
+        "validation_errors": 0
+      },
+      "ContactsAddContact": {
+        "runs": 3,
+        "PASS": 2,
+        "steps_mean": 11.33,
+        "steps_min": 11,
+        "steps_max": 12,
+        "duration_mean_s": 95.2,
+        "prompt_tokens": 100282,
+        "completion_tokens": 2111,
+        "model_calls": 35,
+        "validation_errors": 0
+      },
+      "SimpleSmsSend": {
+        "runs": 3,
+        "PASS": 3,
+        "steps_mean": 7.67,
+        "steps_min": 7,
+        "steps_max": 9,
+        "duration_mean_s": 71.2,
+        "prompt_tokens": 59462,
+        "completion_tokens": 1649,
+        "model_calls": 23,
+        "validation_errors": 0
+      },
+      "FilesMoveFile": {
+        "runs": 3,
+        "PASS": 2,
+        "steps_mean": 14.33,
+        "steps_min": 13,
+        "steps_max": 17,
+        "duration_mean_s": 109.0,
+        "prompt_tokens": 147518,
+        "completion_tokens": 3665,
+        "model_calls": 44,
+        "validation_errors": 1
+      },
+      "SimpleCalendarAddOneEvent": {
+        "runs": 3,
+        "PASS": 3,
+        "steps_mean": 19,
+        "steps_min": 16,
+        "steps_max": 21,
+        "duration_mean_s": 152.9,
+        "prompt_tokens": 229894,
+        "completion_tokens": 4347,
+        "model_calls": 59,
+        "validation_errors": 2
+      },
+      "MarkorCreateNoteAndSms": {
+        "runs": 3,
+        "PASS": 3,
+        "steps_mean": 17,
+        "steps_min": 15,
+        "steps_max": 18,
+        "duration_mean_s": 260.6,
+        "prompt_tokens": 295270,
+        "completion_tokens": 6825,
+        "model_calls": 54,
+        "validation_errors": 1
+      },
+      "OsmAndTrack": {
+        "runs": 3,
+        "PASS": 2,
+        "steps_mean": 20.33,
+        "steps_min": 16,
+        "steps_max": 23,
+        "duration_mean_s": 537.0,
+        "prompt_tokens": 549665,
+        "completion_tokens": 4130,
+        "model_calls": 66,
+        "validation_errors": 4
+      }
+    },
+    "totals": {
+      "runs": 21,
+      "PASS": 18,
+      "steps_total": 284,
+      "steps_mean": 13.52,
+      "duration_total_s": 3891.7,
+      "duration_mean_s": 185.3,
+      "prompt_tokens": 1423741,
+      "completion_tokens": 23737,
+      "total_tokens": 1447478,
+      "model_calls": 296,
+      "response_files": 296,
+      "cost_eur": 0.0651,
+      "model_call_wall_s_median": 1.774,
+      "model_call_wall_s_mean": 2.129,
+      "validation_error_files": 8
+    },
+    "refusal_categories": {
+      "unfocused Type": 3,
+      "malformed reply (not exactly one do/finish)": 2,
+      "unsupported action": 1,
+      "truncated model reply": 1,
+      "OsmAnd: Add would save a Favorite": 1
+    },
+    "refusals_per_run": [
+      {
+        "run_id": "trial_SystemWifiTurnOn_20261008T215130_600754Z",
+        "task": "SystemWifiTurnOn",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_SystemWifiTurnOn_20261008T215246_616671Z",
+        "task": "SystemWifiTurnOn",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_SystemWifiTurnOn_20261008T215358_472883Z",
+        "task": "SystemWifiTurnOn",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_ContactsAddContact_20261008T215508_628423Z",
+        "task": "ContactsAddContact",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_ContactsAddContact_20261008T215709_244163Z",
+        "task": "ContactsAddContact",
+        "verifier": "FAIL",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_ContactsAddContact_20261008T215831_022667Z",
+        "task": "ContactsAddContact",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_SimpleSmsSend_20261008T215957_234873Z",
+        "task": "SimpleSmsSend",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_SimpleSmsSend_20261008T220116_423331Z",
+        "task": "SimpleSmsSend",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_SimpleSmsSend_20261008T220223_867500Z",
+        "task": "SimpleSmsSend",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_FilesMoveFile_20261008T220333_997891Z",
+        "task": "FilesMoveFile",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_FilesMoveFile_20261008T220533_834164Z",
+        "task": "FilesMoveFile",
+        "verifier": "FAIL",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_FilesMoveFile_20261008T220713_812951Z",
+        "task": "FilesMoveFile",
+        "verifier": "PASS",
+        "validation_errors": 1
+      },
+      {
+        "run_id": "trial_SimpleCalendarAddOneEvent_20261008T220904_772591Z",
+        "task": "SimpleCalendarAddOneEvent",
+        "verifier": "PASS",
+        "validation_errors": 1
+      },
+      {
+        "run_id": "trial_SimpleCalendarAddOneEvent_20261008T221147_529159Z",
+        "task": "SimpleCalendarAddOneEvent",
+        "verifier": "PASS",
+        "validation_errors": 1
+      },
+      {
+        "run_id": "trial_SimpleCalendarAddOneEvent_20261008T221423_161758Z",
+        "task": "SimpleCalendarAddOneEvent",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_MarkorCreateNoteAndSms_20261008T221647_424207Z",
+        "task": "MarkorCreateNoteAndSms",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_MarkorCreateNoteAndSms_20261008T222123_918435Z",
+        "task": "MarkorCreateNoteAndSms",
+        "verifier": "PASS",
+        "validation_errors": 1
+      },
+      {
+        "run_id": "trial_MarkorCreateNoteAndSms_20261008T222633_440045Z",
+        "task": "MarkorCreateNoteAndSms",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_OsmAndTrack_20261008T223004_312422Z",
+        "task": "OsmAndTrack",
+        "verifier": "PASS",
+        "validation_errors": 2
+      },
+      {
+        "run_id": "trial_OsmAndTrack_20261008T224202_113624Z",
+        "task": "OsmAndTrack",
+        "verifier": "PASS",
+        "validation_errors": 1
+      },
+      {
+        "run_id": "trial_OsmAndTrack_20261008T225108_345362Z",
+        "task": "OsmAndTrack",
+        "verifier": "FAIL",
+        "validation_errors": 1
+      }
+    ],
+    "non_pass_runs": [
+      {
+        "run_id": "trial_ContactsAddContact_20261008T215709_244163Z",
+        "task": "ContactsAddContact",
+        "seed": 43,
+        "verifier": "FAIL",
+        "agent_done": false,
+        "steps": 11,
+        "stop_reason": "error",
+        "error_class": "control_no_progress",
+        "failure_class": null
+      },
+      {
+        "run_id": "trial_FilesMoveFile_20261008T220533_834164Z",
+        "task": "FilesMoveFile",
+        "seed": 43,
+        "verifier": "FAIL",
+        "agent_done": true,
+        "steps": 13,
+        "stop_reason": "complete",
+        "error_class": null,
+        "failure_class": "false_done"
+      },
+      {
+        "run_id": "trial_OsmAndTrack_20261008T225108_345362Z",
+        "task": "OsmAndTrack",
+        "seed": 366,
+        "verifier": "FAIL",
+        "agent_done": false,
+        "steps": 16,
+        "stop_reason": "error",
+        "error_class": "control_no_progress",
+        "failure_class": null
+      }
+    ],
+    "versions": [
+      "autoglm_api_v65_team_agent"
+    ]
+  },
+  "C_local_project": {
+    "run_folders": 100,
+    "runs_with_summary": 97,
+    "prompt_tokens": 10608093,
+    "completion_tokens": 159338,
+    "total_tokens": 10767431,
+    "cost_eur": 0.4845,
+    "model_response_files": 1642,
+    "model_calls_attempted_sum_from_summaries": 1637,
+    "steps_total_from_summaries": 1453,
+    "run_time_hours_from_summaries": 5.75,
+    "model_wall_hours": 0.98,
+    "validation_error_files": 101
+  },
+  "D_outcome_categories": {
+    "local": {
+      "total": 97,
+      "categories": {
+        "infrastructure/other": 8,
+        "PASS": 36,
+        "stopped by no-progress guard": 43,
+        "false completion (model finished, verifier FAIL)": 2,
+        "validation_error stop": 8
+      },
+      "infrastructure_other_by_error_class": {
+        "environment_setup_error": 1,
+        "no error_class, stop_reason=time_budget_or_recording_error": 3,
+        "environment_or_execution_error": 3,
+        "api_error": 1
+      },
+      "infrastructure_other_by_message": {
+        "no error_class, stop_reason=time_budget_or_recording_error | Recording failed or did not finish within its join budget": 3,
+        "environment_or_execution_error | adb stderr: [None]": 3,
+        "environment_setup_error | RuntimeError: UIAutomator did not confirm writing this observation": 1,
+        "api_error | urllib.error.HTTPError: HTTP Error 400: Bad Request": 1
+      },
+      "PASS_by_stop": {
+        "stop_reason=complete, agent_done=True": 36
+      },
+      "stop_reason_values": {
+        "error": 56,
+        "complete": 38,
+        "time_budget_or_recording_error": 3
+      },
+      "error_class_values": {
+        "environment_setup_error": 1,
+        "None": 41,
+        "control_no_progress": 43,
+        "validation_error": 8,
+        "environment_or_execution_error": 3,
+        "api_error": 1
+      }
+    },
+    "hayati": {
+      "total": 178,
+      "categories": {
+        "infrastructure/other": 52,
+        "false completion (model finished, verifier FAIL)": 17,
+        "step budget exhausted": 21,
+        "PASS": 60,
+        "validation_error stop": 24,
+        "stopped by no-progress guard": 4
+      },
+      "infrastructure_other_by_error_class": {
+        "environment_or_execution_error": 38,
+        "environment_setup_error": 10,
+        "no error_class, stop_reason=error": 1,
+        "api_error": 2,
+        "no error_class, stop_reason=time_budget_or_recording_error": 1
+      },
+      "infrastructure_other_by_message": {
+        "environment_or_execution_error | RuntimeError: UI changed during inference; action not executed": 18,
+        "environment_or_execution_error | RuntimeError: Repeated action without visible effect; stopping": 9,
+        "environment_or_execution_error | RuntimeError: Target changed twice; no action executed": 6,
+        "environment_or_execution_error | RuntimeError: UI changed before screenshot fallback; stopping": 3,
+        "environment_setup_error | RuntimeError: Linked move destination already contains the file": 3,
+        "api_error | urllib.error.HTTPError: HTTP Error 400: Bad Request": 2,
+        "environment_setup_error | UnicodeEncodeError: 'locale' codec can't encode character '\\u5e74' in position 2: encoding": 1,
+        "no error_class, stop_reason=error | ValueError: Expected unique tab-separated key:value fields": 1,
+        "environment_setup_error | RuntimeError: Contacts main screen unavailable after optional dialog": 1,
+        "environment_setup_error | RuntimeError: Source already exists; use --continue-state to preserve it": 1,
+        "environment_setup_error | android_env.components.errors.AdbControllerError: Single-attempt ADB command failed; no re": 1,
+        "environment_setup_error | RuntimeError: Recording failed to start: ['Traceback (most recent call last):\\n  File \"D:\\": 1,
+        "environment_setup_error | RuntimeError: Clipper app must be in the foreground to access clipboard. Additionally, app": 1,
+        "environment_or_execution_error | adb stderr: [None]": 1,
+        "no error_class, stop_reason=time_budget_or_recording_error | Recording failed or did not finish within its join budget": 1,
+        "environment_setup_error | RuntimeError: UIAutomator did not confirm writing this observation": 1,
+        "environment_or_execution_error | RuntimeError: UIAutomator did not confirm writing this observation": 1
+      },
+      "PASS_by_stop": {
+        "stop_reason=complete, agent_done=True": 52,
+        "stop_reason=step_budget, agent_done=False": 4,
+        "stop_reason=error, agent_done=False": 4
+      },
+      "stop_reason_values": {
+        "error": 83,
+        "complete": 69,
+        "step_budget": 25,
+        "time_budget_or_recording_error": 1
+      },
+      "error_class_values": {
+        "environment_or_execution_error": 39,
+        "None": 96,
+        "validation_error": 27,
+        "environment_setup_error": 10,
+        "control_no_progress": 4,
+        "api_error": 2
+      }
+    },
+    "hayati_FAIL_with_repeated_action_message_under_env_error": 9
+  },
+  "E_osmand_history": {
+    "local_osmand_summaries": 61,
+    "by_version_range": [
+      {
+        "range": "v30-v42",
+        "runs": 26,
+        "PASS": 0,
+        "versions": [
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42
+        ]
+      },
+      {
+        "range": "v43-v48",
+        "runs": 10,
+        "PASS": 0,
+        "versions": [
+          43,
+          44,
+          45,
+          46,
+          47,
+          48
+        ]
+      },
+      {
+        "range": "v49-v58",
+        "runs": 10,
+        "PASS": 0,
+        "versions": [
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ]
+      },
+      {
+        "range": "v59-v62",
+        "runs": 11,
+        "PASS": 5,
+        "versions": [
+          59,
+          60,
+          61,
+          62
+        ]
+      },
+      {
+        "range": "v63-v65",
+        "runs": 4,
+        "PASS": 3,
+        "versions": [
+          65
+        ]
+      }
+    ],
+    "unranged": [],
+    "eval_batches": [
+      {
+        "batch": "eval_batch_20261008T113903_850432Z",
+        "osmand_runs": 3,
+        "PASS": 0,
+        "FAIL": 3,
+        "ERROR_or_other": 0,
+        "versions": [
+          "autoglm_api_v32_recorder_early_exit"
+        ]
+      },
+      {
+        "batch": "eval_batch_20261008T115318_201667Z",
+        "osmand_runs": 3,
+        "PASS": 0,
+        "FAIL": 3,
+        "ERROR_or_other": 0,
+        "versions": [
+          "autoglm_api_v33_launch_timeout"
+        ]
+      },
+      {
+        "batch": "eval_batch_20261008T121911_015516Z",
+        "osmand_runs": 2,
+        "PASS": 0,
+        "FAIL": 1,
+        "ERROR_or_other": 1,
+        "versions": [
+          "autoglm_api_v34_osmand_skill"
+        ]
+      },
+      {
+        "batch": "eval_batch_20261008T122440_001770Z",
+        "osmand_runs": 1,
+        "PASS": 0,
+        "FAIL": 1,
+        "ERROR_or_other": 0,
+        "versions": [
+          "autoglm_api_v35_recorder_startup_check"
+        ]
+      },
+      {
+        "batch": "eval_batch_20261008T122658_094153Z",
+        "osmand_runs": 3,
+        "PASS": 0,
+        "FAIL": 3,
+        "ERROR_or_other": 0,
+        "versions": [
+          "autoglm_api_v36_bounded_splash_waits"
+        ]
+      },
+      {
+        "batch": "eval_batch_20261008T132945_347728Z",
+        "osmand_runs": 3,
+        "PASS": 0,
+        "FAIL": 3,
+        "ERROR_or_other": 0,
+        "versions": [
+          "autoglm_api_v42_full_resolution_effect"
+        ]
+      },
+      {
+        "batch": "eval_batch_20261008T133403_527980Z",
+        "osmand_runs": 3,
+        "PASS": 0,
+        "FAIL": 3,
+        "ERROR_or_other": 0,
+        "versions": [
+          "autoglm_api_v42_full_resolution_effect"
+        ]
+      },
+      {
+        "batch": "eval_batch_20261008T155849_720693Z",
+        "osmand_runs": 5,
+        "PASS": 0,
+        "FAIL": 5,
+        "ERROR_or_other": 0,
+        "versions": [
+          "autoglm_api_v48_osmand_rule_checks"
+        ]
+      },
+      {
+        "batch": "eval_batch_20261008T191026_753929Z",
+        "osmand_runs": 3,
+        "PASS": 2,
+        "FAIL": 1,
+        "ERROR_or_other": 0,
+        "versions": [
+          "autoglm_api_v61_one_route"
+        ]
+      },
+      {
+        "batch": "eval_batch_20261008T192739_139270Z",
+        "osmand_runs": 3,
+        "PASS": 0,
+        "FAIL": 3,
+        "ERROR_or_other": 0,
+        "versions": [
+          "autoglm_api_v61_one_route"
+        ]
+      },
+      {
+        "batch": "eval_batch_20261008T223002_941777Z",
+        "osmand_runs": 3,
+        "PASS": 2,
+        "FAIL": 1,
+        "ERROR_or_other": 0,
+        "versions": [
+          "autoglm_api_v65_team_agent"
+        ]
+      }
+    ]
+  },
+  "F_forwarder_crash_dialog": {
+    "summary": {
+      "osmand_runs_v49_plus": 25,
+      "runs_with_dialog": 11,
+      "share": 0.44,
+      "runs_with_keeps_stopping_text": 10,
+      "runs_with_close_app_reply": 11,
+      "dialog_runs_PASS": 4,
+      "no_dialog_runs_PASS": 4,
+      "no_dialog_runs": 14,
+      "final_eval_osmand_runs_with_dialog": 2
+    },
+    "runs": [
+      {
+        "run": "trial_OsmAndTrack_20261008T172506_608538Z",
+        "version": 49,
+        "verifier": "FAIL",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T173128_218463Z",
+        "version": 50,
+        "verifier": "FAIL",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T174254_588486Z",
+        "version": 51,
+        "verifier": "FAIL",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T175142_038025Z",
+        "version": 52,
+        "verifier": "FAIL",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T180047_905645Z",
+        "version": 53,
+        "verifier": "FAIL",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T180506_211752Z",
+        "version": 54,
+        "verifier": "FAIL",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T181122_526667Z",
+        "version": 55,
+        "verifier": "FAIL",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T181934_796393Z",
+        "version": 56,
+        "verifier": "FAIL",
+        "keeps_stopping": true,
+        "close_app_reply": true,
+        "steps_with_dialog": 1
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T182624_604241Z",
+        "version": 57,
+        "verifier": "FAIL",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T183303_700087Z",
+        "version": 58,
+        "verifier": "FAIL",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T184005_761386Z",
+        "version": 59,
+        "verifier": "PASS",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T184737_498743Z",
+        "version": 59,
+        "verifier": "FAIL",
+        "keeps_stopping": true,
+        "close_app_reply": true,
+        "steps_with_dialog": 1
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T185418_998730Z",
+        "version": 60,
+        "verifier": "FAIL",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T190133_618757Z",
+        "version": 61,
+        "verifier": "PASS",
+        "keeps_stopping": true,
+        "close_app_reply": true,
+        "steps_with_dialog": 1
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T191028_258914Z",
+        "version": 61,
+        "verifier": "FAIL",
+        "keeps_stopping": false,
+        "close_app_reply": true,
+        "steps_with_dialog": 1
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T191416_346389Z",
+        "version": 61,
+        "verifier": "PASS",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T192047_603317Z",
+        "version": 61,
+        "verifier": "PASS",
+        "keeps_stopping": true,
+        "close_app_reply": true,
+        "steps_with_dialog": 1
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T192740_100250Z",
+        "version": 61,
+        "verifier": "FAIL",
+        "keeps_stopping": true,
+        "close_app_reply": true,
+        "steps_with_dialog": 1
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T193351_329177Z",
+        "version": 61,
+        "verifier": "FAIL",
+        "keeps_stopping": true,
+        "close_app_reply": true,
+        "steps_with_dialog": 1
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T194426_412041Z",
+        "version": 61,
+        "verifier": "FAIL",
+        "keeps_stopping": true,
+        "close_app_reply": true,
+        "steps_with_dialog": 1
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T195225_073828Z",
+        "version": 62,
+        "verifier": "PASS",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T214359_935135Z",
+        "version": 65,
+        "verifier": "PASS",
+        "keeps_stopping": true,
+        "close_app_reply": true,
+        "steps_with_dialog": 1
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T223004_312422Z",
+        "version": 65,
+        "verifier": "PASS",
+        "keeps_stopping": false,
+        "close_app_reply": false,
+        "steps_with_dialog": 0
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T224202_113624Z",
+        "version": 65,
+        "verifier": "PASS",
+        "keeps_stopping": true,
+        "close_app_reply": true,
+        "steps_with_dialog": 1
+      },
+      {
+        "run": "trial_OsmAndTrack_20261008T225108_345362Z",
+        "version": 65,
+        "verifier": "FAIL",
+        "keeps_stopping": true,
+        "close_app_reply": true,
+        "steps_with_dialog": 1
+      }
+    ]
+  },
+  "G_steps_vs_reference": [
+    {
+      "task": "SystemWifiTurnOn",
+      "reference_steps": 3,
+      "pass_runs": 3,
+      "mean_pass_steps": 5,
+      "ratio": 1.67
+    },
+    {
+      "task": "ContactsAddContact",
+      "reference_steps": 5,
+      "pass_runs": 2,
+      "mean_pass_steps": 11.5,
+      "ratio": 2.3
+    },
+    {
+      "task": "SimpleSmsSend",
+      "reference_steps": 6,
+      "pass_runs": 3,
+      "mean_pass_steps": 7.67,
+      "ratio": 1.28
+    },
+    {
+      "task": "FilesMoveFile",
+      "reference_steps": 10,
+      "pass_runs": 2,
+      "mean_pass_steps": 15,
+      "ratio": 1.5
+    },
+    {
+      "task": "SimpleCalendarAddOneEvent",
+      "reference_steps": 17,
+      "pass_runs": 3,
+      "mean_pass_steps": 19,
+      "ratio": 1.12
+    },
+    {
+      "task": "MarkorCreateNoteAndSms",
+      "reference_steps": 9,
+      "pass_runs": 3,
+      "mean_pass_steps": 17,
+      "ratio": 1.89
+    },
+    {
+      "task": "OsmAndTrack",
+      "reference_steps": 60,
+      "pass_runs": 2,
+      "mean_pass_steps": 22.5,
+      "ratio": 0.38
+    }
+  ]
+}

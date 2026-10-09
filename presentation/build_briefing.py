@@ -411,8 +411,12 @@ slide_section(15, "Demo: all 21 runs", "One video with all 21 final runs at once
                     "Each clip stops on its final screen. Orange labels mark the three failures."],
               terms=[("Embedded video: ", "the video is inside the PowerPoint file; click it to play.")])
 
-slide_section(16, "Demo: one success, one failure", "Markor seed 44 at 4x speed (PASS) and Files seed 43 at 3x speed (FAIL).",
-              data=["Watch the file names in the Files grid: they are cut off, and the agent picks a look-alike file."])
+slide_section(16, "Demo: same task, one success, one failure", "Two runs of FilesMoveFile, both at 3x speed: seed 42 (PASS, 17 steps) and seed 43 (FAIL, 13 steps).",
+              data=["Both folders contain look-alike files whose names are cut off in the grid (for example “IZM1_sci_fi_boo…” next to sci_fi_book.mp3).",
+                    "Seed 42: the agent scrolled until the full name sci_fi_book.mp3 was visible, moved exactly that file, then opened Audiobooks to check before "
+                    "finishing (the log shows this check; the video ends while it is on the way there).",
+                    "Seed 43: the agent picked “documentary_20…”, a look-alike, moved it and said done. Slide 18 analyses this run."],
+              ask="Why not show Markor here? We kept the demo on one task so the success and the failure can be compared directly. Markor is still in the results and the run log; how it sends the SMS (it types the text again) and why is answered in QA.md, Q9.")
 
 slide_section(17, "How 275 project runs ended", "End reasons of all runs with a machine-readable summary, from the first tests to the final.",
               data=["PASS 96; setup or other errors 60; no-progress stops 47; invalid replies 32; step budget used up 21; said done but verifier FAIL 19.",

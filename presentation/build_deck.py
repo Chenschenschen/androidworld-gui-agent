@@ -344,15 +344,15 @@ card(s, 6.85, 1.5, 5.8, 5.45, "How to read it", [
     "Each clip stops on its final screen"], body_size=17, title_size=20)
 
 # 16 ─ Featured demos ─────────────────────────────────────────────────────────────────────────────
-s = slide("Demo", "One success and one failure, step by step", """
-Here are two runs at a speed you can follow.
-On the left, Markor with seed 44, four times faster. Watch how it creates the note, saves it, switches to the SMS app, and sends a plain SMS.
-On the right, Files with seed 43, three times faster. Everything looks right: it opens the folder, selects a file, and moves it to Movies. But watch the file name in the grid. The name is cut off, and the agent picks a file that only looks like the right one. Then it says it is done. The checker says fail.
-This brings us to the failure analysis.
+s = slide("Demo", "Same task, two seeds: one success, one failure", """
+Here are two runs of the same task, Files, at a speed you can follow. Both are three times faster.
+On the left, seed 42. The folder holds look-alike files whose names are cut off. The agent scrolls until it sees the full name, sci_fi_book.mp3, selects exactly that file and moves it to Audiobooks. The file disappears from Recordings, and the agent goes to Audiobooks to check before it says done. The checker says pass.
+On the right, seed 43. Everything looks right: it opens the folder, selects a file, and moves it to Movies. But watch the file name in the grid. The name is cut off, and the agent picks a file that only looks like the right one. Then it says it is done. The checker says fail.
+Same app, same kind of screen, one different choice. This brings us to the failure analysis.
 """)
-movie(s, VID / "featured_markor_pass.mp4", VID / "featured_markor_pass_poster.png", 1.3, 1.55, 2.45, 5.45)
+movie(s, VID / "featured_files_pass.mp4", VID / "featured_files_pass_poster.png", 1.3, 1.55, 2.45, 5.45)
 movie(s, VID / "featured_files_fail.mp4", VID / "featured_files_fail_poster.png", 6.95, 1.55, 2.45, 5.45)
-card(s, 3.95, 1.55, 2.75, 3.6, "Success", ["Markor + SMS, seed 44", "15 steps, PASS", "Note saved, then a plain SMS with the same text", "x4 speed"], accent=BLUE, title_size=20, body_size=15)
+card(s, 3.95, 1.55, 2.75, 3.6, "Success", ["Files, seed 42", "17 steps, PASS", "Chose the file whose full name was visible", "x3 speed"], accent=BLUE, title_size=20, body_size=15)
 card(s, 9.6, 1.55, 3.05, 3.6, "Failure", ["Files, seed 43", "13 steps, FAIL", "Moved a look-alike file, then said done", "x3 speed"], accent=ORANGE, title_size=20, body_size=15)
 
 # 17 ─ Where failures come from ───────────────────────────────────────────────────────────────────

@@ -1,6 +1,6 @@
 # Presentation script
 
-About 2987 words, roughly 22 minutes at 135 words per minute, plus about 2 minutes of video.
+About 3028 words, roughly 22 minutes at 135 words per minute, plus about 2 minutes of video.
 
 ## Slide 1: Title
 
@@ -121,12 +121,12 @@ Each column is one task, each row is one run. The label says the task, the seed,
 You can see the difference in length: Wi-Fi is sped up only two times, OsmAnd about ten times or more.
 Look at the orange labels: Contacts seed 43, Files seed 43 and OsmAnd seed 366. These are the three failures we explain next.
 
-## Slide 16: One success and one failure, step by step
+## Slide 16: Same task, two seeds: one success, one failure
 
-Here are two runs at a speed you can follow.
-On the left, Markor with seed 44, four times faster. Watch how it creates the note, saves it, switches to the SMS app, and sends a plain SMS.
-On the right, Files with seed 43, three times faster. Everything looks right: it opens the folder, selects a file, and moves it to Movies. But watch the file name in the grid. The name is cut off, and the agent picks a file that only looks like the right one. Then it says it is done. The checker says fail.
-This brings us to the failure analysis.
+Here are two runs of the same task, Files, at a speed you can follow. Both are three times faster.
+On the left, seed 42. The folder holds look-alike files whose names are cut off. The agent scrolls until it sees the full name, sci_fi_book.mp3, selects exactly that file and moves it to Audiobooks. The file disappears from Recordings, and the agent goes to Audiobooks to check before it says done. The checker says pass.
+On the right, seed 43. Everything looks right: it opens the folder, selects a file, and moves it to Movies. But watch the file name in the grid. The name is cut off, and the agent picks a file that only looks like the right one. Then it says it is done. The checker says fail.
+Same app, same kind of screen, one different choice. This brings us to the failure analysis.
 
 ## Slide 17: How 275 project runs ended: the setup failed most often
 

@@ -67,6 +67,6 @@ def featured(task, row, speed, caption, name):
     ff("-ss", f"{mid:.1f}", "-i", str(out / f"{name}.mp4"), "-frames:v", "1", str(out / f"{name}_poster.png"))
     return seconds / speed
 
-print("featured success", featured("MarkorCreateNoteAndSms", 2, 4, "Markor note + SMS, seed 44", "featured_markor_pass"))
+print("featured success", featured("FilesMoveFile", 0, 3, "Files move, seed 42", "featured_files_pass"))
 print("featured failure", featured("FilesMoveFile", 1, 3, "Files move, seed 43", "featured_files_fail"))
 print("wall", duration(out / "wall_21_runs.mp4"), "s")

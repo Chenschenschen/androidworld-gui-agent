@@ -6,6 +6,7 @@ Start here rather than reading the design history from beginning to end.
 | --- | --- |
 | [TEAM_FINAL_EVALUATION.md](TEAM_FINAL_EVALUATION.md) | **Team final evaluation**: one agent, seven tasks, three runs each, one frozen version (v65), 18/21, with the three failures analysed. |
 | [RUN_LOG.md](RUN_LOG.md) | **Run log of the final evaluation**: one card per task with the three runs side by side, in the course log fields (D1 p.49) plus a note, the recording clips, a trajectory link and the agent version. |
+| [MARKOR_SHARE_V66.md](MARKOR_SHARE_V66.md) | **Follow-up after the freeze (v66)**: the Markor Skill shares the note itself (Share > Plain Text) instead of typing its text again; practice log, 3 recorded runs (2/3, one grounding failure) and v65/v66 comparison. |
 | [../presentation/Team_Briefing_AndroidWorld_Agent.docx](../presentation/Team_Briefing_AndroidWorld_Agent.docx) | **Start here if you are new**: the story of the project and a slide-by-slide explanation of the presentation. |
 | [../presentation/](../presentation/) | Final presentation: editable PowerPoint with embedded demo videos, speaker script (SCRIPT.md), Q&A preparation (QA.md), and the scripts and data that built it. |
 | [TEAM_AGENT.md](TEAM_AGENT.md) | How the team agent was assembled from the three contributions, and its practice runs. |

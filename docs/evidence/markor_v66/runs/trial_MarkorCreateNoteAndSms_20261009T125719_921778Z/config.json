@@ -1,0 +1,61 @@
+{
+  "version": "autoglm_api_v66_markor_share",
+  "provider": "zai",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "model": "autoglm-phone-multilingual",
+  "observation": "screenshot",
+  "tree_backend": "none",
+  "task_tree_backends": {
+    "OsmAndTrack": "a11y_forwarder"
+  },
+  "supplemental_tree_packages": [
+    "com.android.settings",
+    "com.google.android.deskclock",
+    "com.android.chrome"
+  ],
+  "action_format": "native_pseudocall",
+  "sampling": {
+    "temperature": 0,
+    "top_p": 0.85,
+    "frequency_penalty": 0.2,
+    "max_tokens": 3000
+  },
+  "max_steps": 40,
+  "task_step_budgets": {
+    "ContactsAddContact": 16,
+    "SimpleCalendarAddOneEvent": 35,
+    "OsmAndTrack": 90,
+    "SimpleSmsSend": 20,
+    "FilesMoveFile": 25,
+    "MarkorCreateNoteAndSms": 40
+  },
+  "max_seconds": 1500,
+  "task_time_budgets": {
+    "SimpleCalendarAddOneEvent": 1200,
+    "OsmAndTrack": 2700,
+    "MarkorCreateNoteAndSms": 1500
+  },
+  "task_skills": {
+    "OsmAndTrack": "instructions/skills/osmand_track.md",
+    "MarkorCreateNoteAndSms": "instructions/skills/markor_sms.md"
+  },
+  "request_timeout": 120,
+  "recent_actions": 3,
+  "invalid_reply_corrections": 1,
+  "max_reobservations": 1,
+  "freshness_global_difference": 0.08,
+  "freshness_target_difference": 0.08,
+  "no_effect_difference": 0.001,
+  "note": "v66: the MarkorCreateNoteAndSms Skill shares the note itself (Markor More options > Share > Plain Text > SMS Messenger) instead of typing the text again in the SMS app; path checked by hand on the emulator (plain SMS, exact body in content://sms/sent, SMS Messenger in front). Only the Skill file and its test changed; other tasks are unaffected. v65: recorded Chinese translations of Simple SMS Messenger resolve through an alias table, still checked against the allowed apps (v64 practice: Launch '简单短信消息发送器' was refused twice with Markor and SMS allowed; branch hayati had fixed the same in its v48). v64: the input-method focus check accepts Markor's HighlightingEditor (v63 practice seed 1 refused a Type into the open note); MarkorCreateNoteAndSms gets a Skill (instructions/skills/markor_sms.md) built from a teammate's runs, repeated each step as a reminder; OsmAnd's checks and coded procedure apply to OsmAndTrack only; before an OsmAnd run the map file is checked and the official OsmAnd setup re-run if FilesMoveFile's storage clearing removed it. v63 (team agent, branch team-agent from Jia v62): adds SimpleSmsSend, FilesMoveFile and MarkorCreateNoteAndSms with visible completion rules and step budgets about 3x/2.5x/4x their 6/10/9 reference steps; FilesMoveFile's noise_candidates (setup data) are withheld from model inputs like Calendar's rows. Behaviour of the existing tasks is unchanged. v62 (after the v61 evaluation, not part of it): INCREASE SEARCH RADIUS on screen comes before scrolling, and a near-empty forwarder tree that the UIAutomator fallback could not replace is read once more after 2 s (v61 seed 31: the forwarder crashed, the next tree was empty, the model swiped past the visible Ruggell Village row and later kept swiping at the end of the list). v61 (frozen for the slide-task evaluation, tag osmand-extra-v61): once the route has a point, Actions on a place card and Plan a route in the Actions menu are refused (they start a new route; v60 seed 7 did that on the second waypoint's card). v60: when search rows are shown without the waypoint's settlement row the coded procedure suggests one scroll (a manual 'Malbun' search listed nine same-name rows before its Village row), the row refusal mentions scrolling, and a tap on the map's Route button (navigation, no track) is refused (v59 seed 7). v59 was the first verifier PASS (practice seed 8). v59: once the next waypoint's place card was seen, a street list met on the way back suggests Back, not SHOW <PLACE> ON THE MAP (v58 seed 8 alternated SHOW and Back three times). v58: OsmAnd result rows are read only on the search screen; in v57 seed 8 the route panel's date above its title formed a false row whose span covered Done, so the row check refused Done twice at points: 2 of 2. v57: the coded OsmAnd procedure recognises a place card before the route panel it can cover, and finish is refused while the GUI tree shows fewer route points than waypoints or the route panel is still open (v56 seed 8 reached the Rotenboden card over the panel, was told to search again and finished at points: 1 of 2, a false_done). v56: only a seen place card of the next waypoint counts as the map centre (a typed name no longer does), the route panel never suggests Add while its distance line reads 0 ft (centre still on the last point), and a street list suggests SHOW <PLACE> ON THE MAP before Back (v55 seed 8 left the Rotenboden street list by Back and tapped Add three times at points: 1). v55: OsmAnd screens are recognised from resource_name (forwarder) or resource_id (UIAutomator XML fallback); in v54 seed 8 the fallback tree hid the search field from the coded procedure, so the old reminder (region first) returned. The reminder no longer asks for the region-first step. v54: the forwarder backend checks for a near-empty tree before the supplemental package list; in v51-v53 the non-empty list (Settings, Clock, Chrome) took precedence, so the UIAutomator fallback never ran and the route panel stayed unread (v53 seed 8 then tapped Add three times at points: 1). v53: the OsmAnd Skill procedure runs as code: each step the program recognises the observed OsmAnd screen from the GUI tree (search field and rows, place card, Actions menu, route panel count, dialogs) and states the next step with its tap centre; refusals append that step (a fixed text in v52 sent the model from the country row to INCREASE SEARCH RADIUS). The Skill file drops the region-first step, which the model did not carry out in v44-v52; the search radius is widened instead (three or four taps). v52: every labelled GUI element gets an observed tap centre, not only clickable ones (the forwarder marks only the unlabeled container of OsmAnd's rows, Actions and INCREASE SEARCH RADIUS clickable, so v51 seed 8 guessed coordinates for 15 steps), and the OsmAnd row check accepts the Country row of the Skill's region step. v51: when the forwarder tree names at most one app control (it shows OsmAnd's Plan a route screen as only 'Map'), the observation reads the same screen with a checked UIAutomator dump, which lists the route panel (points, Add, Done) and the Search and Configure map buttons; the OsmAnd hints say Search is the second round button at the top left (v50 seed 8 tapped the globe, Configure map, five times). v50: an observation waits (up to 30 s) while OsmAnd's search spinner is on screen, and keyboard keys are left out of the GUI labels (v49 seed 8 read a still-running search as empty and the model looped until its reply was cut off). v49: OsmAndTrack reads its GUI tree through Android World's accessibility forwarder; the OsmAnd checks use the real screen (tapped labels, result types, the Favorite dialog, the route count) and the step text lists the place rows with tap centres; Type falls back to Android's input method when the tree reports no focus. v48 refuses, for the OsmAnd Skill, taps on the plain SHOW ON MAP row and search text containing a comma, two rules the model broke repeatedly. v47: once the route has a point, a tap on the route panel's Add is refused until the next waypoint has been typed into search (Add places the map centre, still at the previous waypoint). v46: code keeps the last route-panel count the model reported and states route progress and the next waypoint each step; a click while the model describes OsmAnd's Add/Edit Favorite dialog and Save is refused. v45: the reminder states that the route panel's Add never searches and gives the order for later waypoints (search, open place, Back to the panel, then Add). v44: the OsmAnd Skill first opens the task's region (the country after the comma) so the map moves there; a manual check then found the first waypoint without widening the search radius, which the model had abandoned. v43 rejects Type when no GUI tree exists and Android reports no focused text field (it would type into nothing), and the OsmAnd reminder adds the rules ignored in the v42 final evaluation (settlement rows only, never the Favorite button, finish one waypoint first). v42 counts more than 50 clearly changed full-resolution pixels as a visible effect, so small label changes (OsmAnd's search radius) are not mistaken for no progress. v41: the Skill reminder and file state that an empty search result needs INCREASE SEARCH RADIUS, not SHOW ON MAP or zooming. v40: with the Skill enabled, every step's user message restates the waypoint search terms (the system-prompt Skill alone was not followed). v39 keeps the goal turn plus the latest 19 executed turns in each request (an 88-step run hit the provider's prompt limit), stops when a block of 2-6 actions repeats three times in a row, and lets the OsmAnd Skill list each waypoint's search term. v38 allows ten unchanged Waits in a row (was five): a cold OsmAnd start after the snapshot restore showed its logo for over 40 s on the software-rendered emulator. v37 allows 60 s per typed word (was 10 s): OsmAnd searches on every character and one word exceeded 10 s on the software-rendered emulator. v36 bounds unchanged Wait actions separately (stop after five in a row) so a slow splash screen is not mistaken for a no-progress cycle; other actions keep the v29 cycle stop. v35 confirms each screen-recorder clip survives encoder start-up (1.5 s) before GUI actions resume and starts a new clip otherwise (observed: 'unable to configure video/avc codec ... err=-38'); agent behaviour unchanged from v34. v34 keeps the shared ADB server when android_env retries a timed-out command (its kill-server also ended the screen recorder) and adds an optional per-task Skill: instructions/skills/osmand_track.md for OsmAndTrack, written from a manual exploration that passed the official track matcher. evaluate_tasks.py --disable-skills runs the same code without it. v33 launches apps with a 30-second `am start -W` timeout: Android World's 5 seconds expired on a cold OsmAnd start, android_env then restarted the ADB server and that also ended the screen recorder. v32 replaces a recorder clip that ends early (polled each second, logged as RECORDING NOTE) and closes a host adb shell that does not return after SIGINT; agent behaviour unchanged from v31. v31 resolves Launch names like upstream Open-AutoGLM (case/spacing-insensitive; a translated non-Latin name resolves only when exactly one app is allowed) and stops on all-black screenshots as a rendering infrastructure error. v30 adds SimpleCalendarAddOneEvent (medium) and OsmAndTrack (hard) with visible completion rules and initial step/time budgets of about 2x and 1.5x their 17/60 reference steps, to be revised from learning trials; Calendar verifier rows are withheld from model inputs. v29 follows pinned Open-AutoGLM English contract and sourced Android World guidance. Long task recipes and Clock keypad Type exception withdrawn. Short visible goals, ordered native history, latest screenshot, checked GUI state and actual selected-control feedback. Bounded recorder readiness and observed EditText recognition repair recorded adapter faults. Scheduler stops at the first failed clean trial; repeated unchanged action cycles stop without forcing completion. Sixteen offline checks; live task-specific v20/v28 gates and unresolved Timer/Clipboard errors are in docs/WARMUP_RESULTS.md. Sources/slide mapping: docs/COURSE_AND_UPSTREAM_REVIEW.md.",
+  "visual_stability_checks": 3,
+  "visual_stability_pause": 0.5,
+  "visual_stability_difference": 0.01,
+  "history_turns": 20,
+  "api_base_url": "https://api.z.ai/api/paas/v4",
+  "task_seed": 44,
+  "task_name": "MarkorCreateNoteAndSms",
+  "allowed_apps": [
+    "markor",
+    "simple sms messenger"
+  ]
+}

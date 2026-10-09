@@ -1,0 +1,33 @@
+{
+  "kind": "learning_trial",
+  "task": "MarkorCreateNoteAndSms",
+  "run_id": "trial_MarkorCreateNoteAndSms_20261009T125401_048355Z",
+  "agent_done": true,
+  "verifier": "PASS",
+  "steps": 18,
+  "manual_intervention": false,
+  "evaluation_valid": true,
+  "version": "autoglm_api_v66_markor_share",
+  "model": "autoglm-phone-multilingual",
+  "prompt_version": "autoglm_native_en_v19_generic_launch_example",
+  "observation": "screenshot",
+  "grounding": "coordinates",
+  "step_budget": 40,
+  "time_budget_seconds": 1500,
+  "skill": "instructions/skills/markor_sms.md",
+  "initial_verifier_score": 0.0,
+  "steps_attempted": 18,
+  "stop_reason": "complete",
+  "model_calls_attempted": 18,
+  "verifier_score": 1.0,
+  "failure_class": null,
+  "screenshot_fallbacks": [],
+  "video_errors": [],
+  "verified_agent_success": true,
+  "clean_agent_success": true,
+  "videos": [
+    "video_001.mp4"
+  ],
+  "duration_seconds": 196.82800000000861,
+  "agent_phase_seconds": 166.39000000001397
+}

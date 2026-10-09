@@ -1,0 +1,12 @@
+{
+  "name": "MarkorCreateNoteAndSms",
+  "goal": "Create a new note in Markor named great_house_2023_05_06.md with the following text: The library book is due back on the 15th.. Share the entire content of the note with the phone number +11819600133 via SMS using Simple SMS Messenger",
+  "parameters": {
+    "file_name": "great_house_2023_05_06.md",
+    "text": "The library book is due back on the 15th.",
+    "number": "+11819600133"
+  },
+  "verifier_rows": {},
+  "seed": 42,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

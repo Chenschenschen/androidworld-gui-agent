@@ -126,6 +126,10 @@ closed. Class: `grounding` (the tap lands on nothing). Fix layer: program (snap
 a tap that falls just outside a labelled control to that control, or refuse it
 with the stated centre).
 
+## Follow-up after the freeze: Markor shares the note (v66)
+
+In the runs above the Markor Skill sent the note's text by typing it again in Simple SMS Messenger. The verifier accepts that, but the task asks to share the note's content. After the freeze we changed only that Skill to Markor's own Share > Plain Text and evaluated MarkorCreateNoteAndSms again with seeds 42, 43 and 44 (tag `markor-share-v66`): 2/3 passed, all three runs shared the note instead of typing the text again, and seed 42 failed on a grounding error at the SMS send button. The table above is unchanged. Details: [MARKOR_SHARE_V66.md](MARKOR_SHARE_V66.md).
+
 ## How this relates to the earlier results
 
 | Result | Version | Status |

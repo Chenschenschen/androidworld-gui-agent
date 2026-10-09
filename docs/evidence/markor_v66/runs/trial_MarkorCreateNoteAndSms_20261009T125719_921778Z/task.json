@@ -1,0 +1,12 @@
+{
+  "name": "MarkorCreateNoteAndSms",
+  "goal": "Create a new note in Markor named copy_shy_horse.txt with the following text: Yoga class every Tuesday and Thursday at 6 PM.. Share the entire content of the note with the phone number +14031901284 via SMS using Simple SMS Messenger",
+  "parameters": {
+    "file_name": "copy_shy_horse.txt",
+    "text": "Yoga class every Tuesday and Thursday at 6 PM.",
+    "number": "+14031901284"
+  },
+  "verifier_rows": {},
+  "seed": 44,
+  "source_commit": "2dfc5ca3dc590efe9c72ce768f2b04182f2f75c7"
+}

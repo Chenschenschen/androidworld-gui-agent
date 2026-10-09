@@ -1,6 +1,6 @@
 # Presentation script
 
-About 2968 words, roughly 22 minutes at 135 words per minute, plus about 2 minutes of video.
+About 2987 words, roughly 22 minutes at 135 words per minute, plus about 2 minutes of video.
 
 ## Slide 1: Title
 
@@ -42,20 +42,14 @@ On the AndroidWorld leaderboard a 9B AutoGLM-Mobile entry is listed at 80.2 perc
 
 This is how the agent works. It is one Python class with one method, step, as the course asks.
 Each step does five things.
-First, observe: take a screenshot of the phone.
+First, observe: take a screenshot of the phone. For Wi-Fi and OsmAnd it also gets text labels of the screen, and we report this for every run.
 Second, decide: send the task, the recent history and the screenshot to the model. The model answers with one action, for example tap at this point, or type this text.
 Third, check: our code checks the action before anything happens on the phone. Is the format valid? Is the point on the screen? Is a text field really focused before we type?
 Fourth, act: run the action on the emulator.
 Fifth, record: save the screenshot, the model's answer and the result in the trajectory log, while the screen recorder runs.
 This repeats until the model says finish or the step budget ends. Then the official checker decides pass or fail. All seven tasks use this same class.
 
-## Slide 7: What the agent can do, and what it sees in each task
-
-The model can use seven actions: tap, type, swipe, launch an app, go back, wait, and finish. Taps use coordinates on a grid from 0 to 1000.
-What the agent sees is the screenshot. For two tasks it also gets text labels of the screen elements. For Wi-Fi these come from the Settings app. For OsmAnd they come from AndroidWorld's accessibility tree, the same information a screen reader uses.
-We show this openly because it changes what we measure: five tasks were solved from the screenshot alone, two had extra help. The course example log on slide 49 also lists "accessibility tree" as an observation type, so this is allowed, but it must be reported.
-
-## Slide 8: Context and Skills: what goes into each model request
+## Slide 7: Context and Skills: what goes into each model request
 
 What does the model receive at each step?
 A system prompt with the action rules and a short completion rule, for example: the contact must be saved, a filled form is not enough.
@@ -65,13 +59,21 @@ For Markor it is text: use a plain SMS, never Markor's Share menu, because that 
 For OsmAnd the Skill is code. It reads the screen and tells the model the next step and where to tap. The model still decides and acts, and it did not always follow the advice.
 So nothing is a fixed list of taps. The model makes every decision.
 
-## Slide 9: A safety net: actions are checked before they reach the phone
+## Slide 8: A safety net: actions are checked before they reach the phone
 
 Our check step catches bad actions before they happen.
 The general checks work for every task: an action must have the right format, a point must be on the screen, and typing is only allowed when a text field is focused. Otherwise the text would go nowhere.
 Task checks protect against known traps. For OsmAnd, the star button on a place card saves a favourite, not a route point, so we refuse it.
 When we refuse an action, the model gets one correction in the same step, with the reason.
 In the 21 final runs these checks stopped 8 actions. Without them, some of these passing runs would have failed.
+
+## Slide 9: Implementation: four parts and how they talk
+
+How is it implemented? Four parts work together.
+The Android emulator runs a Pixel 6 phone with Android 13, without a window. AndroidWorld sets up each task from its seed and, at the end, its official verifier checks the result.
+Our runner, run_task.py, prepares the task, starts the screen recorder, calls the agent step by step, then asks the verifier and writes the logs.
+The agent, the AutoGLMAgent class in autoglm_agent.py, builds each request and checks each answer. The model itself runs behind the Z.ai API.
+Around this, evaluate_tasks.py runs whole batches and stops if the code changes during a batch, and 38 offline tests protect every fix. One command reproduces the whole evaluation.
 
 ## Slide 10: One run, step by step: a Markor note sent as an SMS
 
@@ -87,7 +89,7 @@ How did we test?
 First, we froze the code. The final version has a git tag, and both evaluation batches have the same source fingerprint, so all 21 runs come from exactly the same agent.
 Each task ran three times with fixed task seeds, 42, 43 and 44. For OsmAnd we used 31, 314 and 366, because these three seeds produce exactly the route on the course slide.
 Success is decided only by the official AndroidWorld verifier, which reads the phone's data.
-Every run has a screen recording, a step-by-step log, and one summary row with the fields from the course: task, run, model, observation, grounding, steps, verifier, failure class, recording and a note.
+Every run keeps three records: a summary row with the fields from the course, written by our runner while the run happens; a step-by-step trajectory log; and a screen recording. You will see all 21 rows right after the results.
 We did not rerun failures. A rerun of the same code only measures luck.
 
 ## Slide 12: 18 of 21 runs passed; every task passed at least twice
@@ -99,21 +101,18 @@ Both multi-app tasks together passed five of six, including OsmAndTrack, the har
 The three failures are all different. One is a false finish, one is a missed tap, and one is a navigation problem. We will look at each of them in a moment.
 Please keep in mind that three runs is a small sample. Three of three does not mean the task always works.
 
-## Slide 13: Steps used versus the course's reference steps
+## Slide 13: Run log (1/2): one row per run
 
-This chart compares the steps our agent used in passing runs with the reference steps from the course list.
-On simple tasks the agent needs a few more steps than the reference, for example because it checks the result or opens a menu first.
-Markor needs about twice the reference, because the agent types the text twice, once in the note and once in the SMS, instead of sharing it.
-On OsmAnd it is the other way round: the reference is 60 steps, and our agent needed only about 22, because the coded Skill leads it along the shortest path.
-The light bar is the step budget, the maximum we allow before we stop a run.
+Here is the full log, one row per run, sorted by task, as the course asks.
+Each row has the course's fields: task, run, the observation, steps against the budget, the verifier result, the failure class, the recording and a short note. The model, version and grounding are the same for every run, so they are in the line above the table.
+Our runner writes these rows while each run happens, so nothing is filled in from memory. Each run number links to its full step-by-step log on GitHub.
+The notes show small things the checks handled, for example the SMS runs where the model wrote the app name in Chinese and our runner still understood it.
 
-## Slide 14: Speed and cost: about 0.065 € for all 21 runs
+## Slide 14: Run log (2/2): the two multi-app tasks
 
-How long and how expensive was it?
-Simple tasks finished in about one to two minutes. Markor took about four minutes and OsmAnd about nine, including app start and setup time.
-All 21 runs together used about 1.45 million tokens. At 0.045 euro per million tokens, that is about 0.065 euro.
-Even the whole project, all local development runs together, cost only about 0.48 euro in model calls.
-The model answers fast, 1.77 seconds per call at the median. Most of the time per step is the phone: waiting for screens to load, typing, and saving logs and video.
+The second part shows the two hard tasks, with longer notes.
+All three Markor runs followed the Skill: save the note, then send the same text as a plain SMS. One run needed the alias table, because the model named the SMS app in Chinese.
+The first OsmAnd run had to restore the map first, because the Files task had cleared the phone's storage. The only failure here, OsmAnd run 3, reached the first route point and then missed the Clear button. We come back to it in the failure analysis.
 
 ## Slide 15: All 21 evaluation runs at once (sped up)
 
@@ -203,3 +202,25 @@ Our limitations: three runs per task is a small sample; we used one model; the O
 ## Slide 26: Thank you
 
 Thank you for listening. We are happy to take your questions.
+
+## Appendix slide 27 (not presented; for questions): What the agent can do, and what it sees in each task
+
+The model can use seven actions: tap, type, swipe, launch an app, go back, wait, and finish. Taps use coordinates on a grid from 0 to 1000.
+What the agent sees is the screenshot. For two tasks it also gets text labels of the screen elements. For Wi-Fi these come from the Settings app. For OsmAnd they come from AndroidWorld's accessibility tree, the same information a screen reader uses.
+We show this openly because it changes what we measure: five tasks were solved from the screenshot alone, two had extra help. The course example log on slide 49 also lists "accessibility tree" as an observation type, so this is allowed, but it must be reported.
+
+## Appendix slide 28 (not presented; for questions): Steps used versus the course's reference steps
+
+This chart compares the steps our agent used in passing runs with the reference steps from the course list.
+On simple tasks the agent needs a few more steps than the reference, for example because it checks the result or opens a menu first.
+Markor needs about twice the reference, because the agent types the text twice, once in the note and once in the SMS, instead of sharing it.
+On OsmAnd it is the other way round: the reference is 60 steps, and our agent needed only about 22, because the coded Skill leads it along the shortest path.
+The light bar is the step budget, the maximum we allow before we stop a run.
+
+## Appendix slide 29 (not presented; for questions): Speed and cost: about 0.065 € for all 21 runs
+
+How long and how expensive was it?
+Simple tasks finished in about one to two minutes. Markor took about four minutes and OsmAnd about nine, including app start and setup time.
+All 21 runs together used about 1.45 million tokens. At 0.045 euro per million tokens, that is about 0.065 euro.
+Even the whole project, all local development runs together, cost only about 0.48 euro in model calls.
+The model answers fast, 1.77 seconds per call at the median. Most of the time per step is the phone: waiting for screens to load, typing, and saving logs and video.

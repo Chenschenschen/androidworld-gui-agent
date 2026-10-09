@@ -1,6 +1,6 @@
 # Q&A preparation
 
-Short answers in simple English. Numbers match the slides and the run records.
+Short answers in simple English. Numbers match the slides and the run records. Appendix slides 27–29 (after the Thank-you slide) back up some answers.
 
 ## About the model
 
@@ -19,7 +19,7 @@ Partly. Two of our three final failures are perception or grounding errors: the 
 ## About the method
 
 **Q5. Is giving the agent the accessibility tree cheating?**
-No, but it changes what we measure, so we report it per task. AndroidWorld provides this tree itself, it is what a screen reader sees, and it contains no answer. The course example log on slide 49 even lists "accessibility tree" as an observation type. Five of our seven tasks used only the screenshot. Wi-Fi had Settings labels, and OsmAnd had the tree plus a coded Skill.
+No, but it changes what we measure, so we report it per task. AndroidWorld provides this tree itself, it is what a screen reader sees, and it contains no answer. The course example log on slide 49 even lists "accessibility tree" as an observation type. Five of our seven tasks used only the screenshot. Wi-Fi had Settings labels, and OsmAnd had the tree plus a coded Skill. (Appendix slide 27 shows this per task.)
 
 **Q6. Is the OsmAnd Skill just a hard-coded solution?**
 It is app knowledge in code, and we say that openly. It reads the screen and suggests the next step and where to tap. But it never taps by itself: the model decides every action, and in our runs it ignored the suggestion several times, for example by tapping the navigation button. Without the Skill, the same model passed 0 of 3. With it, 2 of 3. It only works for OsmAnd.
@@ -50,7 +50,7 @@ We ran the same frozen code, the same seeds and the same model, and changed only
 ## About cost and next steps
 
 **Q14. How much did it cost?**
-About 0.065 euro for the 21 final runs, 1.45 million tokens. All runs of this agent on our machine together cost about 0.48 euro.
+About 0.065 euro for the 21 final runs, 1.45 million tokens. All runs of this agent on our machine together cost about 0.48 euro. (Appendix slide 29 has run time and cost per task.)
 
 **Q15. What would you do next?**
 More seeds per task for a better estimate. A check that the selected item is exactly the requested one, which would fix the Files false finish. Snapping a tap that lands just outside a button to that button, which would fix the OsmAnd miss. And a more general way to build Skills, so that a new app does not need hand-written steps.

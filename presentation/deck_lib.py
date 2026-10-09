@@ -20,7 +20,7 @@ WHITE = RGBColor(0xFF, 0xFF, 0xFF)
 GREEN = RGBColor(0x2E, 0x7D, 0x4F)     # improvement section accent
 MUTED = RGBColor(0xA7, 0xB1, 0xBD)     # neutral bars
 BEZEL = RGBColor(0x1B, 0x1F, 0x2A)
-SECTION = {"FAILURE ANALYSIS": ORANGE, "IMPROVEMENT": GREEN, "FINDINGS": NAVY, "OUR WORK IN NUMBERS": NAVY}
+SECTION = {"APPENDIX": GREY, "FAILURE ANALYSIS": ORANGE, "IMPROVEMENT": GREEN, "FINDINGS": NAVY, "OUR WORK IN NUMBERS": NAVY}
 INK = RGBColor(0x22, 0x2A, 0x35)
 FONT = "Arial"
 W, H = 13.333, 7.5
@@ -122,9 +122,9 @@ def notes(slide, script):
 
 
 def table(slide, x, y, w, h, rows, col_widths=None, size=12, header_fill=NAVY, header_color=WHITE, zebra=True,
-          fills=None, bold_first_col=False, align_center_from=None):
-    """rows: list of lists of str (first row = header). fills: {(r,c): RGBColor} cell backgrounds."""
-    size = max(size, 13)                         # readable from the back of the room
+          fills=None, bold_first_col=False, align_center_from=None, min_size=13):
+    """rows: list of lists of str or (str, url) (first row = header). fills: {(r,c): RGBColor} cell backgrounds."""
+    size = max(size, min_size)                   # readable from the back of the room (dense log tables pass a lower minimum)
     shape = slide.shapes.add_table(len(rows), len(rows[0]), Inches(x), Inches(y), Inches(w), Inches(h))
     tbl = shape.table
     if col_widths:
@@ -140,7 +140,12 @@ def table(slide, x, y, w, h, rows, col_widths=None, size=12, header_fill=NAVY, h
             tf.word_wrap = True
             tf.paragraphs[0].text = ""
             run = tf.paragraphs[0].add_run()
+            url = None
+            if isinstance(value, tuple):
+                value, url = value
             run.text = str(value)
+            if url:
+                run.hyperlink.address = url
             run.font.name = FONT
             run.font.size = Pt(size)
             if align_center_from is not None and c >= align_center_from:
@@ -157,6 +162,9 @@ def table(slide, x, y, w, h, rows, col_widths=None, size=12, header_fill=NAVY, h
             if fills and (r, c) in fills and fills[(r, c)] in (BLUE, ORANGE, NAVY):
                 run.font.color.rgb = WHITE
                 run.font.bold = True
+            if url and r > 0:
+                run.font.color.rgb = BLUE
+                run.font.underline = True
     return tbl
 
 

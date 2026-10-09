@@ -157,7 +157,7 @@ text(s, 0.7, 6.25, 11.9, 0.7, "* Community leaderboard entry (google-research/an
 s = slide("Agent design", "One class, one step(): observe, decide, check, act, record", """
 This is how the agent works. It is one Python class with one method, step, as the course asks.
 Each step does five things.
-First, observe: take a screenshot of the phone.
+First, observe: take a screenshot of the phone. For Wi-Fi and OsmAnd it also gets text labels of the screen, and we report this for every run.
 Second, decide: send the task, the recent history and the screenshot to the model. The model answers with one action, for example tap at this point, or type this text.
 Third, check: our code checks the action before anything happens on the phone. Is the format valid? Is the point on the screen? Is a text field really focused before we type?
 Fourth, act: run the action on the emulator.
@@ -178,24 +178,6 @@ text(s, 0.7, 4.3, 11.9, 0.45, "repeat until the model says finish, or the step b
      size=15, bold=True, color=BLUE, align=PP_ALIGN.CENTER, fill=PALE)
 card(s, 0.7, 5.05, 5.8, 1.75, "step() in AutoGLMAgent (autoglm_agent.py)", "Reads the screen and the task, chooses one action, checks it, executes it, and reports whether the model said it is done.")
 card(s, 6.8, 5.05, 5.8, 1.75, "Same agent for all seven tasks", "Task-specific knowledge is loaded as data (completion rule, optional Skill). The model still decides every action.")
-
-# 7 ─ Actions and observation ─────────────────────────────────────────────────────────────────────
-s = slide("Agent design", "What the agent can do, and what it sees in each task", """
-The model can use seven actions: tap, type, swipe, launch an app, go back, wait, and finish. Taps use coordinates on a grid from 0 to 1000.
-What the agent sees is the screenshot. For two tasks it also gets text labels of the screen elements. For Wi-Fi these come from the Settings app. For OsmAnd they come from AndroidWorld's accessibility tree, the same information a screen reader uses.
-We show this openly because it changes what we measure: five tasks were solved from the screenshot alone, two had extra help. The course example log on slide 49 also lists "accessibility tree" as an observation type, so this is allowed, but it must be reported.
-""")
-rows = [["Action", "Example"], ["Tap", "do(action=\"Tap\", element=[500, 335])"], ["Type", "do(action=\"Type\", text=\"Ruggell\")"],
-        ["Swipe", "do(action=\"Swipe\", start=[500,560], end=[500,260])"], ["Launch", "do(action=\"Launch\", app=\"markor\")"],
-        ["Back / Wait", "do(action=\"Back\")"], ["Finish", "finish(message=\"Track saved\")"]]
-table(s, 0.7, 1.7, 5.6, 4.0, rows, col_widths=[1.4, 4.2], size=12, bold_first_col=True)
-rows = [["Task", "Observation"], ["Wi-Fi", "Screenshot + Settings labels"], ["Contacts", "Screenshot only"], ["SMS", "Screenshot only"],
-        ["Files", "Screenshot only"], ["Calendar", "Screenshot only"], ["Markor + SMS", "Screenshot only (+ text Skill)"],
-        ["OsmAnd", "Screenshot + accessibility tree (+ coded Skill)"]]
-fills = {(1, 1): PALE_BLUE, (7, 1): PALE_ORANGE}
-table(s, 6.6, 1.7, 6.0, 4.0, rows, col_widths=[1.8, 4.2], size=12, bold_first_col=True, fills=fills)
-text(s, 0.7, 5.95, 11.9, 0.9, "Grounding: coordinates on a 0–1000 grid. Where labels are given, the step text also lists each label's tap centre.",
-     size=13, color=GREY)
 
 # 8 ─ Context and Skills ──────────────────────────────────────────────────────────────────────────
 s = slide("Agent design", "Context and Skills: what goes into each model request", """
@@ -226,6 +208,32 @@ card(s, 8.3, 1.7, 4.35, 2.95, "How a refusal works", ["The action is not execute
 big_number(s, 0.7, 4.95, 3.5, f"{F['refusals_total']}", "actions stopped in the final runs\n(7 of 21 runs had one or more)", value_size=40)
 text(s, 4.4, 5.05, 8.25, 1.5, "Without these checks, the agent would have typed into nothing, saved a favourite instead of a route point, or acted on a broken reply. Six of the seven runs with a refusal still passed.", size=15, color=INK)
 
+# 9b - Implementation (components; the loop itself is on the architecture slide) --------------------------
+s = slide("Implementation", "Implementation: four parts and how they talk", """
+How is it implemented? Four parts work together.
+The Android emulator runs a Pixel 6 phone with Android 13, without a window. AndroidWorld sets up each task from its seed and, at the end, its official verifier checks the result.
+Our runner, run_task.py, prepares the task, starts the screen recorder, calls the agent step by step, then asks the verifier and writes the logs.
+The agent, the AutoGLMAgent class in autoglm_agent.py, builds each request and checks each answer. The model itself runs behind the Z.ai API.
+Around this, evaluate_tasks.py runs whole batches and stops if the code changes during a batch, and 38 offline tests protect every fix. One command reproduces the whole evaluation.
+""")
+parts = [("AutoGLM model", "Z.ai API (HTTPS)\nautoglm-phone-multilingual\nkey kept in .env, not in git"),
+         ("Agent", "AutoGLMAgent.step()\nautoglm_agent.py\nprompt, Skills, task config"),
+         ("Runner", "run_task.py\ntask setup, recorder, loop,\nverifier, logs"),
+         ("Phone","Android emulator: Pixel 6,\nAndroid 13, headless\nAndroidWorld setup + verifier")]
+links = ["request /\none action", "step() /\nresult", "adb: screen,\ntap, type"]
+for i, (head, body) in enumerate(parts):
+    x = 0.7 + i * 3.1
+    rect(s, x, 1.75, 2.55, 2.25, fill=PALE_BLUE if i != 3 else PALE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.06)
+    text(s, x + 0.1, 1.88, 2.35, 0.4, head, size=17, bold=True, color=NAVY, align=PP_ALIGN.CENTER)
+    text(s, x + 0.1, 2.38, 2.35, 1.55, body, size=13, color=INK, align=PP_ALIGN.CENTER, spacing=1.15)
+    if i < 3:
+        arrow(s, x + 2.58, 2.7, x + 3.07, 2.7, color=BLUE)
+        arrow(s, x + 3.07, 3.1, x + 2.58, 3.1, color=BLUE)
+        text(s, x + 2.5, 3.2, 0.65, 0.6, links[i], size=9, color=GREY, align=PP_ALIGN.CENTER)
+card(s, 0.7, 4.4, 3.85, 2.3, "Batch evaluation", ["evaluate_tasks.py runs task x seed batches", "Records a source fingerprint", "Stops if the code changes mid-batch"], body_size=14)
+card(s, 4.75, 4.4, 3.85, 2.3, "Quality", ["38 offline tests (no phone needed)", "Frozen git tag for the evaluation", "Every run: summary, log, video"], body_size=14)
+card(s, 8.8, 4.4, 3.85, 2.3, "Reproduce", ["git checkout team-agent-final-v65", "evaluate_tasks.py --tasks ... --seeds 42 43 44 --run-all-seeds", "Python 3.11, Windows laptop, no GPU needed"], body_size=13)
+
 # 10 ─ Trajectory ─────────────────────────────────────────────────────────────────────────────────
 traj = [m for m in F.get("traj", [])]
 s = slide("Trajectory", "One run, step by step: a Markor note sent as an SMS", """
@@ -248,17 +256,20 @@ How did we test?
 First, we froze the code. The final version has a git tag, and both evaluation batches have the same source fingerprint, so all 21 runs come from exactly the same agent.
 Each task ran three times with fixed task seeds, 42, 43 and 44. For OsmAnd we used 31, 314 and 366, because these three seeds produce exactly the route on the course slide.
 Success is decided only by the official AndroidWorld verifier, which reads the phone's data.
-Every run has a screen recording, a step-by-step log, and one summary row with the fields from the course: task, run, model, observation, grounding, steps, verifier, failure class, recording and a note.
+Every run keeps three records: a summary row with the fields from the course, written by our runner while the run happens; a step-by-step trajectory log; and a screen recording. You will see all 21 rows right after the results.
 We did not rerun failures. A rerun of the same code only measures luck.
 """)
 card(s, 0.7, 1.7, 3.9, 2.35, "Frozen", ["Git tag team-agent-final-v65", "Same source fingerprint in both batches", "No changes during the batch"], body_size=15, title_size=17)
 card(s, 4.75, 1.7, 3.9, 2.35, "Three runs per task", ["Seeds 42, 43, 44", "OsmAnd: 31, 314, 366 = the slide's route", "Failures kept, never rerun"], body_size=15, title_size=17)
 card(s, 8.8, 1.7, 3.85, 2.35, "Judged independently", ["Official AndroidWorld verifier", "The model's “finish” never counts", "Step budget about 2–4× reference"], body_size=15, title_size=17)
-rows = [["task", "run", "model", "observation", "grounding", "steps", "verifier", "failure class", "recording"],
-        ["FilesMoveFile", "2 of 3", "autoglm-phone", "screenshot", "coordinates", "13 / 25", "FAIL", "false_done", "video_001.mp4"]]
-table(s, 0.7, 4.4, 11.95, 0.85, rows, col_widths=[1.55, 0.85, 1.75, 1.35, 1.35, 0.95, 1.0, 1.4, 1.75], size=13, align_center_from=1)
-text(s, 0.7, 5.35, 11.95, 1.2, "One row per run, as on the course slide (D1 p.49). All 21 rows, the logs and the recordings are kept in the repository and the recording archive.",
-     size=13, color=GREY)
+for i, (head, body) in enumerate([("Summary row", "Course fields (D1 p.49), written by the runner during the run"),
+                                  ("Trajectory log", "Every screenshot, model reply, check and result, step by step"),
+                                  ("Screen recording", "The whole run on video, in one or more clips")]):
+    x = 0.7 + i * 4.05
+    rect(s, x, 4.45, 3.8, 1.45, fill=PALE_BLUE)
+    text(s, x + 0.2, 4.55, 3.4, 0.4, head, size=17, bold=True, color=NAVY)
+    text(s, x + 0.2, 4.98, 3.4, 0.85, body, size=14, color=INK)
+text(s, 0.7, 6.1, 11.95, 0.6, "Kept for every one of the 21 runs. The full run log follows right after the results.", size=15, bold=True, color=BLUE)
 
 # 12 ─ Results ────────────────────────────────────────────────────────────────────────────────────
 s = slide("Results", "18 of 21 runs passed; every task passed at least twice", """
@@ -281,33 +292,42 @@ for r, item in enumerate(order, start=1):
 table(s, 0.7, 1.65, 11.95, 4.95, rows, col_widths=[1.3, 3.3, 2.1, 2.1, 2.1, 1.05], size=13, fills=fills, align_center_from=2, bold_first_col=False)
 text(s, 0.7, 6.65, 11.95, 0.35, "s = task seed. Official AndroidWorld verifier. One frozen version (tag team-agent-final-v65).", size=11, color=GREY)
 
-# 13 ─ Efficiency ─────────────────────────────────────────────────────────────────────────────────
-s = slide("Results", "Steps used versus the course's reference steps", """
-This chart compares the steps our agent used in passing runs with the reference steps from the course list.
-On simple tasks the agent needs a few more steps than the reference, for example because it checks the result or opens a menu first.
-Markor needs about twice the reference, because the agent types the text twice, once in the note and once in the SMS, instead of sharing it.
-On OsmAnd it is the other way round: the reference is 60 steps, and our agent needed only about 22, because the coded Skill leads it along the shortest path.
-The light bar is the step budget, the maximum we allow before we stop a run.
-""")
-cats = [x["short"] for x in F["steps_rows"]]
-bar_chart(s, 0.7, 1.6, 11.95, 5.3, cats, [("Our agent (mean of passing runs)", [x["ours"] for x in F["steps_rows"]]),
-                                            ("Reference steps (course list)", [x["ref"] for x in F["steps_rows"]]),
-                                            ("Step budget", [x["budget"] for x in F["steps_rows"]])],
-          colors=[BLUE, NAVY, LINE], gap=70, overlap=-10)
+# 12b - Run log: one row per run (course slide D1 p.49: "Friday's presentation is this table, sorted") ----------
+from run_log_data import RUNS, ORDER, OBS, BUDGET, trajectory_url
+SHORT_OBS = {"SystemWifiTurnOn": "screenshot + labels", "MarkorCreateNoteAndSms": "screenshot + Skill",
+             "OsmAndTrack": "screenshot + tree + Skill"}
+LOG_SUB = "Model AutoGLM-Phone-9B (Z.ai), version v65, grounding by coordinates. Rows written by the runner during each run; click a run to open its log."
 
-# 14 ─ Speed and cost ─────────────────────────────────────────────────────────────────────────────
-s = slide("Results", f"Speed and cost: about {F['final_cost_eur']} € for all 21 runs", f"""
-How long and how expensive was it?
-Simple tasks finished in about one to two minutes. Markor took about four minutes and OsmAnd about nine, including app start and setup time.
-All 21 runs together used about {F['final_tokens_m']} million tokens. At 0.045 euro per million tokens, that is about {F['final_cost_eur']} euro.
-Even the whole project, all local development runs together, cost only about {F['project_cost_eur']} euro in model calls.
-The model answers fast, {F['median_call_s']} seconds per call at the median. Most of the time per step is the phone: waiting for screens to load, typing, and saving logs and video.
-""")
-cats = [x["short"] for x in F["cost_rows"]]
-bar_chart(s, 0.7, 1.6, 7.6, 5.3, cats, [("Mean run time (s)", [x["seconds"] for x in F["cost_rows"]])], colors=[BLUE], legend=False, gap=80, font_size=11)
-big_number(s, 8.75, 1.75, 3.9, f"{F['final_tokens_m']} M", "tokens for all 21 final runs", value_size=36)
-big_number(s, 8.75, 3.35, 3.9, f"€{F['final_cost_eur']}", "model cost of the final evaluation\n(€0.045 per million tokens)", value_size=36)
-big_number(s, 8.75, 4.95, 3.9, f"{F['median_call_s']} s", "median time per model call", value_size=36)
+
+def run_log_slide(title, script, tasks, note_index, size, widths):
+    s = slide("Results", title, script)
+    text(s, 0.6, 1.3, 12.1, 0.35, LOG_SUB, size=12, color=GREY)
+    rows = [["Task", "Run", "Seed", "Observation", "Steps / budget", "Verifier", "Failure class", "Clips", "Note"]]
+    fills = {}
+    for run in [r for t in tasks for r in RUNS if r[0] == t]:
+        task, number, seed, run_id, steps, verdict, failure, clips = run[:8]
+        r = len(rows)
+        rows.append([task, (f"{number} of 3", trajectory_url(run_id)), str(seed), SHORT_OBS.get(task, "screenshot"),
+                     f"{steps} / {BUDGET[task]}", verdict, failure or "\u2014", str(clips), run[note_index]])
+        if verdict == "FAIL":
+            fills[(r, 5)] = ORANGE
+            fills[(r, 6)] = PALE_ORANGE
+    table(s, 0.6, 1.72, 12.1, 0.3 * len(rows), rows, col_widths=widths, size=size, min_size=size, fills=fills, align_center_from=None)
+    return s
+
+
+run_log_slide("Run log (1/2): one row per run", """
+Here is the full log, one row per run, sorted by task, as the course asks.
+Each row has the course's fields: task, run, the observation, steps against the budget, the verifier result, the failure class, the recording and a short note. The model, version and grounding are the same for every run, so they are in the line above the table.
+Our runner writes these rows while each run happens, so nothing is filled in from memory. Each run number links to its full step-by-step log on GitHub.
+The notes show small things the checks handled, for example the SMS runs where the model wrote the app name in Chinese and our runner still understood it.
+""", ORDER[:5], 8, 10.5, [2.3, 0.65, 0.5, 1.45, 0.95, 0.75, 1.3, 0.55, 3.65])
+
+run_log_slide("Run log (2/2): the two multi-app tasks", """
+The second part shows the two hard tasks, with longer notes.
+All three Markor runs followed the Skill: save the note, then send the same text as a plain SMS. One run needed the alias table, because the model named the SMS app in Chinese.
+The first OsmAnd run had to restore the map first, because the Files task had cleared the phone's storage. The only failure here, OsmAnd run 3, reached the first route point and then missed the Clear button. We come back to it in the failure analysis.
+""", ORDER[5:], 9, 10.5, [2.15, 0.65, 0.5, 1.5, 0.9, 0.75, 1.05, 0.55, 4.05])
 
 # 15 ─ Demo wall ──────────────────────────────────────────────────────────────────────────────────
 s = slide("Demo", "All 21 evaluation runs at once (sped up)", """
@@ -528,12 +548,62 @@ phone(IMG / "traj_2.png", 8.1, 1.45, 4.9, -8)
 phone(IMG / "traj_5.png", 10.5, 1.45, 4.9, 8)
 phone(IMG / "osmand_pass_3.png", 9.15, 0.85, 5.75)
 
+MAIN = len(SLIDES)   # slides added below are the appendix: kept in the file for questions, not presented
+
+# 7 ─ Actions and observation ─────────────────────────────────────────────────────────────────────
+s = slide("Appendix", "What the agent can do, and what it sees in each task", """
+The model can use seven actions: tap, type, swipe, launch an app, go back, wait, and finish. Taps use coordinates on a grid from 0 to 1000.
+What the agent sees is the screenshot. For two tasks it also gets text labels of the screen elements. For Wi-Fi these come from the Settings app. For OsmAnd they come from AndroidWorld's accessibility tree, the same information a screen reader uses.
+We show this openly because it changes what we measure: five tasks were solved from the screenshot alone, two had extra help. The course example log on slide 49 also lists "accessibility tree" as an observation type, so this is allowed, but it must be reported.
+""")
+rows = [["Action", "Example"], ["Tap", "do(action=\"Tap\", element=[500, 335])"], ["Type", "do(action=\"Type\", text=\"Ruggell\")"],
+        ["Swipe", "do(action=\"Swipe\", start=[500,560], end=[500,260])"], ["Launch", "do(action=\"Launch\", app=\"markor\")"],
+        ["Back / Wait", "do(action=\"Back\")"], ["Finish", "finish(message=\"Track saved\")"]]
+table(s, 0.7, 1.7, 5.6, 4.0, rows, col_widths=[1.4, 4.2], size=12, bold_first_col=True)
+rows = [["Task", "Observation"], ["Wi-Fi", "Screenshot + Settings labels"], ["Contacts", "Screenshot only"], ["SMS", "Screenshot only"],
+        ["Files", "Screenshot only"], ["Calendar", "Screenshot only"], ["Markor + SMS", "Screenshot only (+ text Skill)"],
+        ["OsmAnd", "Screenshot + accessibility tree (+ coded Skill)"]]
+fills = {(1, 1): PALE_BLUE, (7, 1): PALE_ORANGE}
+table(s, 6.6, 1.7, 6.0, 4.0, rows, col_widths=[1.8, 4.2], size=12, bold_first_col=True, fills=fills)
+text(s, 0.7, 5.95, 11.9, 0.9, "Grounding: coordinates on a 0–1000 grid. Where labels are given, the step text also lists each label's tap centre.",
+     size=13, color=GREY)
+
+# 13 ─ Efficiency ─────────────────────────────────────────────────────────────────────────────────
+s = slide("Appendix", "Steps used versus the course's reference steps", """
+This chart compares the steps our agent used in passing runs with the reference steps from the course list.
+On simple tasks the agent needs a few more steps than the reference, for example because it checks the result or opens a menu first.
+Markor needs about twice the reference, because the agent types the text twice, once in the note and once in the SMS, instead of sharing it.
+On OsmAnd it is the other way round: the reference is 60 steps, and our agent needed only about 22, because the coded Skill leads it along the shortest path.
+The light bar is the step budget, the maximum we allow before we stop a run.
+""")
+cats = [x["short"] for x in F["steps_rows"]]
+bar_chart(s, 0.7, 1.6, 11.95, 5.3, cats, [("Our agent (mean of passing runs)", [x["ours"] for x in F["steps_rows"]]),
+                                            ("Reference steps (course list)", [x["ref"] for x in F["steps_rows"]]),
+                                            ("Step budget", [x["budget"] for x in F["steps_rows"]])],
+          colors=[BLUE, NAVY, LINE], gap=70, overlap=-10)
+
+# 14 ─ Speed and cost ─────────────────────────────────────────────────────────────────────────────
+s = slide("Appendix", f"Speed and cost: about {F['final_cost_eur']} € for all 21 runs", f"""
+How long and how expensive was it?
+Simple tasks finished in about one to two minutes. Markor took about four minutes and OsmAnd about nine, including app start and setup time.
+All 21 runs together used about {F['final_tokens_m']} million tokens. At 0.045 euro per million tokens, that is about {F['final_cost_eur']} euro.
+Even the whole project, all local development runs together, cost only about {F['project_cost_eur']} euro in model calls.
+The model answers fast, {F['median_call_s']} seconds per call at the median. Most of the time per step is the phone: waiting for screens to load, typing, and saving logs and video.
+""")
+cats = [x["short"] for x in F["cost_rows"]]
+bar_chart(s, 0.7, 1.6, 7.6, 5.3, cats, [("Mean run time (s)", [x["seconds"] for x in F["cost_rows"]])], colors=[BLUE], legend=False, gap=80, font_size=11)
+big_number(s, 8.75, 1.75, 3.9, f"{F['final_tokens_m']} M", "tokens for all 21 final runs", value_size=36)
+big_number(s, 8.75, 3.35, 3.9, f"€{F['final_cost_eur']}", "model cost of the final evaluation\n(€0.045 per million tokens)", value_size=36)
+big_number(s, 8.75, 4.95, 3.9, f"{F['median_call_s']} s", "median time per model call", value_size=36)
+
+
 import sys
 out = HERE / (sys.argv[1] if len(sys.argv) > 1 else "AndroidWorld_GUI_Agent_Presentation.pptx")
 prs.save(out)
-words = sum(len(t.split()) for _, t in SLIDES)
+words = sum(len(t.split()) for _, t in SLIDES[:MAIN])
 lines = [f"# Presentation script\n\nAbout {words} words, roughly {words / 135:.0f} minutes at 135 words per minute, plus about 2 minutes of video.\n"]
 for i, (title, script) in enumerate(SLIDES, start=1):
-    lines.append(f"## Slide {i}: {title}\n\n{script.strip()}\n")
+    head = f"Slide {i}" if i <= MAIN else f"Appendix slide {i} (not presented; for questions)"
+    lines.append(f"## {head}: {title}\n\n{script.strip()}\n")
 (HERE / "SCRIPT.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")
-print("saved", out, len(prs.slides), "slides,", words, "script words")
+print("saved", out, len(prs.slides), "slides,", MAIN, "presented,", words, "script words")

@@ -293,6 +293,7 @@ table([
     ["OsmAnd improvement (before/after)", "docs/IMPROVEMENT_OSMAND.md"],
     ["Every learning run with cause and fix", "docs/MEDIUM_HARD_TRIALS.md"],
     ["Logs and summaries (exported)", "docs/evidence/ (team, extra, final, followup)"],
+    ["Run log: one card per run (course log fields, note, recording, trajectory link)", "docs/RUN_LOG.md, and Run_Log_Final_Evaluation.docx in presentation/"],
     ["Presentation, script, Q&A", "presentation/ (PPTX with embedded demo videos, SCRIPT.md, QA.md)"],
     ["Screen recordings", "Not in git (too large). Zip archives next to the repository, for example team_agent_final_recordings_v65.zip"],
 ], widths=[5.6, 11.0])
@@ -301,7 +302,7 @@ doc.add_page_break()
 # ── Part 2 ───────────────────────────────────────────────────────────────────────────────────────
 h("Part 2: Every slide explained", 1)
 p("For each slide: what it says, where its numbers come from, the words a newcomer may not know, and a likely question. The spoken "
-  "script for each slide is in the slide notes and in SCRIPT.md.")
+  "script for each slide is in the slide notes and in SCRIPT.md. We present slides 1 to 26 (about 22 minutes of speaking plus 2 minutes of video). Slides 27 to 29 are an appendix after the Thank-you slide: they stay in the file and we only open them if a question needs them.")
 
 slide_section(1, "Cover", "Course, project title, the one-sentence idea of the project, team and lecturers. The three phones show real "
               "screens from our evaluation runs: the OsmAnd route Ruggell to Bendern in the middle, a Markor note and a sent SMS behind it.",
@@ -316,7 +317,7 @@ slide_section(2, "At a glance", "The whole result on one slide: one agent, seven
                     ("About 0.065 €: ", "1.45 million tokens for the 21 final runs at 0.045 € per million tokens."),
                     ("1.77 s: ", "median time of one model call in the final runs (296 calls).")],
               terms=[("Frozen: ", "the code was locked with a git tag before the runs."),
-                     ("Extra inputs disclosed: ", "two tasks received screen labels in addition to the screenshot, and we say so (slide 7).")],
+                     ("Extra inputs disclosed: ", "two tasks received screen labels in addition to the screenshot, and we say so (slides 6, 13–14 and appendix slide 27).")],
               ask="Is 18/21 the success rate of the agent? It is the result of 21 runs; with three runs per task it is a small sample.")
 
 slide_section(3, "Use case", "Who would use such an agent and why: it works with normal apps and needs only the screen, like a person.",
@@ -343,32 +344,35 @@ slide_section(5, "Model choice", "Why AutoGLM-Phone-9B, and our first attempt wi
 
 slide_section(6, "Agent design: the loop", "The agent is one class with one step() method. Each step: observe, decide, check, act, record. "
               "The loop ends when the model says finish or the step budget ends; then the verifier decides.",
-              terms=[("Check: ", "our code validates the model's action before the phone sees it (slide 9)."),
+              terms=[("Check: ", "our code validates the model's action before the phone sees it (slide 8)."),
                      ("Record: ", "screenshots, model replies and results go to the trajectory log; a screen recorder runs all the time.")],
               ask="Where is step()? In AutoGLMAgent in autoglm_agent.py.")
 
-slide_section(7, "Actions and observation", "The seven actions the model may use, with real examples, and what the agent sees in each task.",
-              data=[("Wi-Fi: ", "screenshot plus text labels from the Settings app (UIAutomator)."),
-                    ("OsmAnd: ", "screenshot plus the accessibility tree, plus the coded Skill."),
-                    ("Other five tasks: ", "screenshot only (Markor also gets a text Skill).")],
-              terms=[("0–1000 grid: ", "the model gives positions as if the screen were 1000 by 1000, whatever its real size."),
-                     ("Accessibility tree: ", "the list of on-screen elements a screen reader uses; AndroidWorld provides it.")],
-              ask="Is the tree cheating? No; AndroidWorld provides it and the course's own example log lists it as an observation type. It changes "
-                  "what we measure, so we report it per task.")
-
-slide_section(8, "Context and Skills", "What goes into each model request, and the two Skills.",
+slide_section(7, "Context and Skills", "What goes into each model request, and the two Skills.",
               data=[("Every request: ", "action rules, a completion rule (what done looks like), the last 20 steps, the newest screenshot, a short status."),
                     ("Markor Skill (text): ", "built from the Markor failure analysis: never use Markor's Share menu; type the text into a new plain SMS."),
                     ("OsmAnd Skill (code): ", "recognises the screen from the GUI tree and states the next step and its tap centre.")],
               terms=[("Completion rule: ", "one sentence per task, for example “the saved contact view shows the exact name and number; a filled form is not enough”.")],
               ask="Is the OsmAnd Skill a script? It suggests, the model decides and acts, and it sometimes ignored the suggestion. It only works for OsmAnd.")
 
-slide_section(9, "Safety net", "Actions are checked before they reach the phone. Refused actions are not executed; the model gets the reason "
+slide_section(8, "Safety net", "Actions are checked before they reach the phone. Refused actions are not executed; the model gets the reason "
               "and one correction in the same step.",
               data=[("8 refusals in the final runs, in 7 of 21 runs: ", "3 typing with no focused text field, 2 malformed replies, 1 unsupported "
                      "action, 1 truncated reply, 1 OsmAnd favourite button."),
                     ("6 of the 7 runs with a refusal still passed.", "")],
               terms=[("Malformed reply: ", "the model did not give exactly one action."), ("Favourite button: ", "on an OsmAnd place card it saves a favourite, not a route point.")])
+
+slide_section(9, "Implementation", "The four parts of the system and how they talk to each other, plus how we run, test and reproduce it.",
+              data=[("AutoGLM model: ", "runs on Z.ai's servers; we call it over HTTPS (model name autoglm-phone-multilingual). The API key is in a local .env file and never in git."),
+                    ("Agent: ", "the AutoGLMAgent class in autoglm_agent.py. Its step() builds the request (prompt, Skills, task settings), checks the answer and executes one action."),
+                    ("Runner: ", "run_task.py sets up the task from its seed, starts the screen recorder, calls step() until the run ends, asks the verifier and writes the logs."),
+                    ("Phone: ", "an Android emulator (Pixel 6, Android 13) without a window. AndroidWorld talks to it over adb to read the screen and to tap and type, and it provides the task setup and the verifier."),
+                    ("Batch evaluation: ", "evaluate_tasks.py runs tasks × seeds, writes a fingerprint of the source files into every run, and stops if the code changes during a batch."),
+                    ("Reproduce: ", "check out the tag team-agent-final-v65 and run evaluate_tasks.py with the seven tasks and seeds 42 43 44 (OsmAnd 31 314 366) and --run-all-seeds. Python 3.11 on a Windows laptop, no GPU needed.")],
+              terms=[("adb: ", "Android Debug Bridge, the standard tool a computer uses to control an Android phone or emulator."),
+                     ("Headless: ", "the emulator runs without showing a window; the recorder still films its screen."),
+                     ("Source fingerprint: ", "hashes of the agent's files; equal fingerprints prove two runs used the same code.")],
+              ask="Where is the loop? The runner calls step() again and again; each call does observe, decide, check, act, record (slide 6).")
 
 slide_section(10, "One run step by step", "Markor with seed 44 (15 steps, PASS): six screenshots and, under each, a sentence from the model's own reasoning in the log.",
               data=["Steps 2, 4, 8, 10, 14 and 15 of run trial_MarkorCreateNoteAndSms_20261008T222633_440045Z."],
@@ -378,23 +382,29 @@ slide_section(11, "How we tested", "One frozen version, three runs per task, the
               data=[("Tag team-agent-final-v65: ", "both batches recorded the same source fingerprint (hashes of the agent's files)."),
                     ("Seeds 42, 43, 44 for six tasks; 31, 314, 366 for OsmAnd: ", "these three OsmAnd seeds all produce the slide's route."),
                     ("Step budgets: ", "about 2 to 4 times the reference steps (Wi-Fi 12, Contacts 16, SMS 20, Files 25, Calendar 35, Markor 40, OsmAnd 90)."),
-                    ("Example row: ", "the failed Files run, in the fields of the course slide D1 p.49.")],
+                    ("Three boxes: ", "what we keep for every one of the 21 runs: a summary row in the course's log fields (D1 p.49), written by the runner during the run; "
+                                      "the trajectory log (every screenshot, model reply, check and result); and the screen recording. The full log follows on slides 13 and 14.")],
               ask="Why not rerun failures? Rerunning the same code until it passes only measures luck.")
 
 slide_section(12, "Results", "All 21 runs: blue PASS, orange FAIL with its failure class.",
               data=["Wi-Fi, SMS, Calendar, Markor 3/3; Contacts, Files, OsmAnd 2/3. Hard tasks together 5/6.",
                     "The “s” number in each cell is the task seed."])
 
-slide_section(13, "Steps versus the reference", "Mean steps of passing runs compared with the course's reference steps and our step budget.",
-              data=["Ours: Wi-Fi 5, Contacts 11.5, SMS 7.7, Files 15, Calendar 19, Markor 17, OsmAnd 22.5.",
-                    "Reference: 3, 5, 6, 10, 17, 9, 60. Budget: 12, 16, 20, 25, 35, 40, 90.",
-                    "Markor uses about twice the reference because the agent types the text twice (note and SMS) instead of sharing it; OsmAnd uses far fewer than the reference because the Skill leads the shortest path."])
+slide_section(13, "Run log (1/2): one row per run", "The course's run log (D1 p.49: “Friday's presentation is this table, sorted”), one row per run, sorted by task. This part has the five single-app tasks.",
+              data=[("Columns: ", "task, run (1 to 3), seed, observation, steps used / step budget, verifier result, failure class, number of video clips, and a short note."),
+                    ("Same for every run: ", "model AutoGLM-Phone-9B (Z.ai), version v65, grounding by coordinates. To save space they are in the grey line above the table."),
+                    ("Links: ", "each run number (“1 of 3”) opens that run's readable trajectory log on GitHub."),
+                    ("Clips: ", "Android's screen recorder stops after 180 seconds, so the runner starts a new clip; longer runs have 2 to 4 clips."),
+                    ("Orange rows: ", "the two failures here, Contacts s43 (other: navigation) and Files s43 (false_done)."),
+                    ("Source: ", "the rows come from each run's summary.json, written by the runner while the run happened.")],
+              terms=[("Chinese app name: ", "the model sometimes wrote the app name in Chinese; with one allowed app the runner can still resolve it.")],
+              ask="Where are the videos? Not in git because of their size. Every clip is in team_agent_final_recordings_v65.zip, in a folder named after the run ID. docs/RUN_LOG.md lists each run with its clips and log link.")
 
-slide_section(14, "Speed and cost", "Mean run time per task and the cost of the final evaluation.",
-              data=["Mean run time (s): Wi-Fi 71, Contacts 95, SMS 71, Files 109, Calendar 153, Markor 261, OsmAnd 537. Times include app start, "
-                    "setup and recording; one OsmAnd run also included restoring the map.",
-                    "1.45 M tokens (1,423,741 prompt + 23,737 completion) × 0.045 € per million = about 0.065 €.",
-                    "All runs on our machine together: 10.8 M tokens, about 0.48 €."])
+slide_section(14, "Run log (2/2): the two multi-app tasks", "The same table for Markor + SMS and OsmAnd, with longer notes because these runs have more going on.",
+              data=["Markor: all three runs followed the Skill (save the note, then send the same text as a plain SMS); run 1 needed the alias table for a Chinese app name; run 2 had one truncated reply that was retried.",
+                    "OsmAnd run 1: the runner first restored the map, because the Files runs had cleared shared storage. Runs 1 and 2 passed in 22 and 23 steps of 90.",
+                    "OsmAnd run 3 (FAIL, grounding): Ruggell became route point 1, then the model tapped Clear at [941, 57] instead of [941, 83] three times. Analysed on slide 19."],
+              terms=[("Alias table: ", "a small list in our code that maps other names of an app (for example Chinese ones) to the real app.")])
 
 slide_section(15, "Demo: all 21 runs", "One video with all 21 final runs at once. Columns are tasks, rows are runs.",
               data=["Each clip is sped up so that all end within 45 seconds; the label shows the speed (x2 = twice as fast) and PASS/FAIL.",
@@ -462,6 +472,26 @@ slide_section(25, "Findings and limitations", "What we learned and what is still
                     "extra screen labels; fixes after the freeze are not evaluated."])
 
 slide_section(26, "Thank you", "Repository, branch and tag, model and benchmark. The questions and short answers we prepared are in QA.md.")
+
+slide_section(27, "Appendix: actions and observation", "The seven actions the model may use, with real examples, and what the agent sees in each task.",
+              data=[("Wi-Fi: ", "screenshot plus text labels from the Settings app (UIAutomator)."),
+                    ("OsmAnd: ", "screenshot plus the accessibility tree, plus the coded Skill."),
+                    ("Other five tasks: ", "screenshot only (Markor also gets a text Skill).")],
+              terms=[("0–1000 grid: ", "the model gives positions as if the screen were 1000 by 1000, whatever its real size."),
+                     ("Accessibility tree: ", "the list of on-screen elements a screen reader uses; AndroidWorld provides it.")],
+              ask="Is the tree cheating? No; AndroidWorld provides it and the course's own example log lists it as an observation type. It changes "
+                  "what we measure, so we report it per task.")
+
+slide_section(28, "Appendix: steps versus the reference", "Mean steps of passing runs compared with the course's reference steps and our step budget.",
+              data=["Ours: Wi-Fi 5, Contacts 11.5, SMS 7.7, Files 15, Calendar 19, Markor 17, OsmAnd 22.5.",
+                    "Reference: 3, 5, 6, 10, 17, 9, 60. Budget: 12, 16, 20, 25, 35, 40, 90.",
+                    "Markor uses about twice the reference because the agent types the text twice (note and SMS) instead of sharing it; OsmAnd uses far fewer than the reference because the Skill leads the shortest path."])
+
+slide_section(29, "Appendix: speed and cost", "Mean run time per task and the cost of the final evaluation.",
+              data=["Mean run time (s): Wi-Fi 71, Contacts 95, SMS 71, Files 109, Calendar 153, Markor 261, OsmAnd 537. Times include app start, "
+                    "setup and recording; one OsmAnd run also included restoring the map.",
+                    "1.45 M tokens (1,423,741 prompt + 23,737 completion) × 0.045 € per million = about 0.065 €.",
+                    "All runs on our machine together: 10.8 M tokens, about 0.48 €."])
 
 out = HERE / "Team_Briefing_AndroidWorld_Agent.docx"
 doc.save(out)

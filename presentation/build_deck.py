@@ -34,18 +34,41 @@ Hello everyone, and thank you for having us.
 Our project is a GUI agent for Android. A GUI agent uses a phone the way a person does: it looks at the screen and decides where to tap or what to type.
 In the next 25 minutes we will show how we built one agent, how we tested it on seven AndroidWorld tasks, where it failed, and how we improved it.
 """)
-rect(s, 0, 0, W, 0.08, fill=BLUE)
-text(s, 0.9, 1.0, 11.5, 0.6, "AGENTIC AI IN MODERN BUSINESS", size=30, bold=True, color=RGBColor(0x2F, 0x34, 0x40), align=PP_ALIGN.CENTER)
-text(s, 0.9, 1.65, 11.5, 1.1, "PRESENTATION", size=60, bold=True, color=RGBColor(0x2A, 0x4F, 0xB5), align=PP_ALIGN.CENTER)
-text(s, 0.9, 2.75, 11.5, 0.4, "TUM School of Management", size=16, color=GREY, align=PP_ALIGN.CENTER)
-text(s, 0.9, 3.25, 11.5, 0.5, "One GUI agent for seven AndroidWorld tasks", size=20, bold=True, color=NAVY, align=PP_ALIGN.CENTER)
-text(s, 1.2, 4.2, 4.5, 0.4, "Team members", size=15, bold=True, color=NAVY)
-members = [("Danh Phuong Le", "03824340"), ("Ssu-Cheng Chen", "03827578"), ("Hayati Ömer Koç", "03801613"),
+# Left: navy panel with course, project title and team. Right: three real screens from our runs as phones.
+SOFT = RGBColor(0xB9, 0xC4, 0xD6)
+rect(s, 0, 0, W, H, fill=RGBColor(0xEE, 0xF3, 0xF8))
+rect(s, 0, 0, 7.9, H, fill=NAVY)
+rect(s, 0, 0, 7.9, 0.08, fill=BLUE)
+text(s, 0.75, 0.7, 6.8, 0.35, "AGENTIC AI IN MODERN BUSINESS  \u00b7  PRESENTATION", size=13, bold=True, color=LIGHT)
+text(s, 0.75, 1.02, 6.8, 0.35, "TUM School of Management", size=13, color=SOFT)
+text(s, 0.75, 1.6, 7.0, 1.3, "One GUI agent for seven\nAndroidWorld tasks", size=34, bold=True, color=WHITE, spacing=1.0)
+text(s, 0.75, 3.05, 6.6, 0.85, "An agent that looks at the phone screen and decides where to tap, "
+     "evaluated with the official AndroidWorld verifier.", size=16, color=SOFT, spacing=1.15)
+rect(s, 0.75, 4.15, 1.1, 0.06, fill=BLUE)
+text(s, 0.75, 4.65, 3.8, 0.3, "TEAM MEMBERS", size=11, bold=True, color=LIGHT)
+members = [("Danh Phuong Le", "03824340"), ("Ssu-Cheng Chen", "03827578"), ("Hayati \u00d6mer Ko\u00e7", "03801613"),
            ("Jia Qi", "03812325"), ("Tin Nghia Nguyen", "03826855")]
-text(s, 1.2, 4.6, 2.9, 2.0, "\n".join(m for m, _ in members), size=14, color=INK, spacing=1.25)
-text(s, 4.1, 4.6, 1.6, 2.0, "\n".join(i for _, i in members), size=14, color=INK, spacing=1.25)
-text(s, 8.4, 4.2, 4.0, 0.4, "Lecturers", size=15, bold=True, color=NAVY)
-text(s, 8.4, 4.6, 4.0, 1.5, "Haoyuan Jiang\nXuerui Zhang\nZhenyu Wang", size=14, color=INK, spacing=1.25)
+text(s, 0.75, 4.98, 2.5, 1.9, "\n".join(m for m, _ in members), size=13, color=WHITE, spacing=1.28)
+text(s, 3.2, 4.98, 1.4, 1.9, "\n".join(i for _, i in members), size=13, color=SOFT, spacing=1.28)
+text(s, 5.05, 4.65, 2.6, 0.3, "LECTURERS", size=11, bold=True, color=LIGHT)
+text(s, 5.05, 4.98, 2.6, 1.2, "Haoyuan Jiang\nXuerui Zhang\nZhenyu Wang", size=13, color=WHITE, spacing=1.28)
+
+
+def phone(path, x, y, h, angle=0, crop=0.08):
+    pic = s.shapes.add_picture(str(path), Inches(x), Inches(y), height=Inches(h))
+    pic.crop_top = crop                                   # hide AndroidWorld's debug overlay above the app
+    pic.height = int(pic.height * (1 - crop))
+    pic.auto_shape_type = MSO_SHAPE.ROUNDED_RECTANGLE
+    pic.line.color.rgb = RGBColor(0x1B, 0x1F, 0x2A)
+    pic.line.width = Pt(6)
+    pic.rotation = angle
+    return pic
+
+
+phone(IMG / "traj_6.png", 8.3, 1.45, 4.9, -8)
+phone(IMG / "traj_3.png", 10.75, 1.45, 4.9, 8)
+phone(IMG / "osmand_pass_4.png", 9.35, 0.85, 5.75)
+text(s, 7.9, 6.75, 5.43, 0.35, "Real screens from our evaluation runs", size=11, color=GREY, align=PP_ALIGN.CENTER)
 
 # 2 ─ At a glance ─────────────────────────────────────────────────────────────────────────────────
 s = slide("At a glance", "One agent, seven tasks: 18 of 21 runs passed the official check", f"""
@@ -492,7 +515,8 @@ text(s, 0.9, 4.6, 11.5, 0.5, "github.com/Chenschenschen/androidworld-gui-agent  
 text(s, 0.9, 5.2, 11.5, 0.5, "Model: AutoGLM-Phone-9B-Multilingual (Z.ai)  ·  Benchmark: AndroidWorld (Google Research)", size=13,
      color=RGBColor(0xB9, 0xC4, 0xD6), align=PP_ALIGN.CENTER)
 
-out = HERE / "AndroidWorld_GUI_Agent_Presentation.pptx"
+import sys
+out = HERE / (sys.argv[1] if len(sys.argv) > 1 else "AndroidWorld_GUI_Agent_Presentation.pptx")
 prs.save(out)
 words = sum(len(t.split()) for _, t in SLIDES)
 lines = [f"# Presentation script\n\nAbout {words} words, roughly {words / 135:.0f} minutes at 135 words per minute, plus about 2 minutes of video.\n"]

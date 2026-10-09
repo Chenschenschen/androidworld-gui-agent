@@ -31,7 +31,7 @@ No. The official verifier runs only after the run ends. One earlier experiment i
 The checks only stop actions that are clearly invalid on the real screen: a broken reply, typing with no focused text field, or a known trap button. The model still has to find the right action itself. In the final runs only 8 actions were refused, and the runs still had to pass the official verifier.
 
 **Q9. In Markor + SMS, did the agent share the note, or type the text again?**
-It typed the same text again in Simple SMS Messenger. The official checker looks at two things: the note file with the right name and text, and a sent SMS with exactly that text to the right number. It does not check how the text got into the SMS. We first tried Markor's own Share button: it attaches the file, so the message becomes an MMS that shows "Not sent", and the checker gives only half the score. Copying the text out of the note and pasting it would be closer to the idea of the task. We have not tested that yet; it is our next step.
+In the evaluated version (v65) it typed the same text again in Simple SMS Messenger. The official checker looks at two things: the note file with the right name and text, and a sent SMS with exactly that text to the right number. It does not check how the text got into the SMS. Markor's file share attaches the file, so the message becomes an MMS that shows "Not sent", and the checker gives only half the score. After the freeze we changed only the Markor Skill to Markor's own Share > Plain Text, which hands the note's text to the SMS app, and evaluated it separately with the same three seeds: all three runs shared the note and none typed the text again; two passed, and one missed the SMS send button (a grounding error). Details: docs/MARKOR_SHARE_V66.md.
 
 ## About the results
 
@@ -56,4 +56,4 @@ We ran the same frozen code, the same seeds and the same model, and changed only
 About 0.065 euro for the 21 final runs, 1.45 million tokens. All runs of this agent on our machine together cost about 0.48 euro. (Appendix slide 29 has run time and cost per task.)
 
 **Q16. What would you do next?**
-More seeds per task for a better estimate. A check that the selected item is exactly the requested one, which would fix the Files false finish. Snapping a tap that lands just outside a button to that button, which would fix the OsmAnd miss. Copying the note's text into the SMS instead of typing it again, which is closer to the Markor task's idea. And a more general way to build Skills, so that a new app does not need hand-written steps.
+More seeds per task for a better estimate. A check that the selected item is exactly the requested one, which would fix the Files false finish. Snapping a tap that lands just outside a button to that button, which would fix the OsmAnd miss. And a more general way to build Skills, so that a new app does not need hand-written steps.

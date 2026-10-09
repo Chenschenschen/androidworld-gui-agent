@@ -527,7 +527,7 @@ card(s, 7.85, 1.7, 4.8, 5.0, "Limitations", accent=ORANGE, body_size=19, title_s
     "One model, one laptop, one emulator",
     "OsmAnd Skill works only for OsmAnd",
     "Two tasks used extra screen labels",
-    "Fixes after the freeze are not evaluated"])
+    "After the freeze only the Markor fix was re-run"])
 
 # 26 ─ Thank you ──────────────────────────────────────────────────────────────────────────────────
 s = slide(None, "Thank you", """

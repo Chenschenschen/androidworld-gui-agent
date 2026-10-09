@@ -422,7 +422,7 @@ slide_section(16, "Demo: same task, one success, one failure", "Two runs of File
                     "Seed 42: the agent scrolled until the full name sci_fi_book.mp3 was visible, moved exactly that file, then opened Audiobooks to check before "
                     "finishing (the log shows this check; the video ends while it is on the way there).",
                     "Seed 43: the agent picked “documentary_20…”, a look-alike, moved it and said done. Slide 18 analyses this run."],
-              ask="Why not show Markor here? We kept the demo on one task so the success and the failure can be compared directly. Markor is still in the results and the run log; how it sends the SMS (it types the text again) and why is answered in QA.md, Q9.")
+              ask="Why not show Markor here? We kept the demo on one task so the success and the failure can be compared directly. Markor is still in the results and the run log; how it sends the SMS (in v65 it types the text again; the v66 follow-up shares the note) is answered in QA.md, Q9.")
 
 slide_section(17, "How 275 project runs ended", "End reasons of all runs with a machine-readable summary, from the first tests to the final.",
               data=["PASS 96; setup or other errors 60; no-progress stops 47; invalid replies 32; step budget used up 21; said done but verifier FAIL 19.",
@@ -479,7 +479,7 @@ slide_section(25, "Findings and limitations", "What we learned and what is still
               data=["Findings: trust the harness first; the verifier decides; where knowledge lives matters (prompt < reminder each step < code); "
                     "long tasks fail by small errors; checks catch traps (8 in the final runs).",
                     "Limitations: three runs per task; one model, one laptop, one emulator; the OsmAnd Skill only works for OsmAnd; two tasks used "
-                    "extra screen labels; fixes after the freeze are not evaluated."])
+                    "extra screen labels; after the freeze only the Markor fix was re-run (v66: Share > Plain Text, 2/3, see docs/MARKOR_SHARE_V66.md)."])
 
 slide_section(26, "Thank you", "Repository, branch and tag, model and benchmark. The questions and short answers we prepared are in QA.md.")
 

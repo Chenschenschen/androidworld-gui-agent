@@ -228,6 +228,7 @@ class AdapterTests(unittest.TestCase):
         reminder = skill_reminder(config, "MarkorCreateNoteAndSms", {"file_name": "a.txt", "text": "x", "number": "+1"})
         self.assertIn("Launch Markor", reminder)
         self.assertIn("labelled SMS", reminder)
+        self.assertIn("Share, then Plain Text", reminder)   # v66: share the note itself, do not retype
         self.assertNotIn("waypoint", reminder)
 
     def test_history_window_keeps_goal_and_recent_turns(self):

@@ -65,9 +65,9 @@ def phone(path, x, y, h, angle=0, crop=0.08):
     return pic
 
 
-phone(IMG / "traj_6.png", 8.3, 1.45, 4.9, -8)
-phone(IMG / "traj_3.png", 10.75, 1.45, 4.9, 8)
-phone(IMG / "osmand_pass_4.png", 9.35, 0.85, 5.75)
+phone(IMG / "traj_6.png", 8.1, 1.45, 4.9, -8)
+phone(IMG / "traj_3.png", 10.5, 1.45, 4.9, 8)
+phone(IMG / "osmand_pass_4.png", 9.15, 0.85, 5.75)
 text(s, 7.9, 6.75, 5.43, 0.35, "Real screens from our evaluation runs", size=11, color=GREY, align=PP_ALIGN.CENTER)
 
 # 2 ─ At a glance ─────────────────────────────────────────────────────────────────────────────────
@@ -78,11 +78,14 @@ We built one agent and gave it seven tasks from AndroidWorld, from easy to the h
 Behind this result there is a lot of work: about {F['project_runs']} recorded runs across the project and {F['versions']} versions of the agent.
 And it was cheap: the model cost for all 21 final runs was about {F['final_cost_eur']} euro.
 """)
-big_number(s, 0.7, 1.75, 3.0, "18 / 21", "runs passed the official\nAndroidWorld verifier", value_size=46)
-big_number(s, 3.9, 1.75, 2.9, "7 tasks", "covering easy, medium\nand hard (D1 task list)", value_size=40)
-big_number(s, 6.9, 1.75, 3.0, f"~{F['project_runs']}", "recorded runs across\nthe whole project", value_size=40)
-big_number(s, 10.0, 1.75, 2.8, f"{F['versions']}", "agent versions, each\nchange tested and logged", value_size=40)
-rect(s, 0.7, 3.65, 11.9, 0.02, fill=LINE)
+for i, (value, label) in enumerate([("18 / 21", "runs passed the official\nAndroidWorld verifier"),
+                                     ("7 tasks", "covering easy, medium\nand hard (D1 task list)"),
+                                     (f"~{F['project_runs']}", "recorded runs across\nthe whole project"),
+                                     (f"{F['versions']}", "agent versions, each\nchange tested and logged")]):
+    x = 0.7 + i * 3.02
+    rect(s, x, 1.6, 2.85, 2.05, fill=PALE_BLUE if i == 0 else PALE)
+    rect(s, x, 1.6, 2.85, 0.07, fill=BLUE)
+    big_number(s, x + 0.2, 1.85, 2.55, value, label, value_size=44 if i == 0 else 38)
 card(s, 0.7, 4.0, 3.8, 2.55, "Rigorous", ["One frozen version for all 21 runs", "Every run screen-recorded", "Official checker decides success"], body_size=16, title_size=18)
 card(s, 4.75, 4.0, 3.8, 2.55, "Cheap and fast", [f"About {F['final_cost_eur']} € model cost for 21 runs", f"{F['median_call_s']} s median per model call", "Hosted model, laptop without GPU"], body_size=16, title_size=18)
 card(s, 8.8, 4.0, 3.8, 2.55, "Honest", ["Failures kept, analysed, not rerun", "Fixes tested on other task seeds", "Extra inputs disclosed per task"], accent=ORANGE, body_size=16, title_size=18)
@@ -99,7 +102,7 @@ card(s, 0.7, 3.4, 3.9, 1.55, "What it needs", "Only the screen: no special app i
 card(s, 0.7, 5.15, 3.9, 1.55, "What it is told", "One sentence in plain English, for example: “Create a note named … and share its content via SMS.”")
 if (IMG / "traj_1.png").exists():
     for i, name in enumerate(["traj_1.png", "traj_3.png", "traj_6.png"]):
-        picture(s, IMG / name, 5.0 + i * 2.65, 1.65, h=5.05)
+        picture(s, IMG / name, 5.0 + i * 2.65, 1.65, h=5.05, phone=True)
     text(s, 5.0, 6.72, 7.6, 0.3, "One of our runs: a note in Markor, then the same text sent as an SMS", size=11, color=GREY)
 
 # 4 ─ Tasks ───────────────────────────────────────────────────────────────────────────────────────
@@ -166,12 +169,11 @@ steps = [("1  Observe", "Screenshot\n(+ GUI labels for\nsome tasks)"), ("2  Deci
          ("5  Record", "Trajectory log\n+ screen video")]
 for i, (t, b) in enumerate(steps):
     x = 0.7 + i * 2.45
-    rect(s, x, 2.0, 2.05, 1.75, fill=PALE_BLUE if i != 2 else PALE_ORANGE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.08)
+    rect(s, x, 1.9, 2.05, 2.0, fill=PALE_BLUE if i != 2 else PALE_ORANGE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.08)
     text(s, x + 0.1, 2.1, 1.85, 0.4, t, size=16, bold=True, color=NAVY, align=PP_ALIGN.CENTER)
-    text(s, x + 0.1, 2.6, 1.85, 1.1, b, size=12, color=INK, align=PP_ALIGN.CENTER)
+    text(s, x + 0.08, 2.5, 1.89, 1.35, b, size=14, color=INK, align=PP_ALIGN.CENTER)
     if i < 4:
         arrow(s, x + 2.08, 2.87, x + 2.42, 2.87, color=BLUE)
-arrow(s, 12.3, 3.8, 12.3, 4.25, color=BLUE)
 text(s, 0.7, 4.3, 11.9, 0.45, "repeat until the model says finish, or the step budget ends  →  official AndroidWorld verifier: PASS / FAIL",
      size=15, bold=True, color=BLUE, align=PP_ALIGN.CENTER, fill=PALE)
 card(s, 0.7, 5.05, 5.8, 1.75, "step() in AutoGLMAgent (autoglm_agent.py)", "Reads the screen and the task, chooses one action, checks it, executes it, and reports whether the model said it is done.")
@@ -235,9 +237,10 @@ Under each picture you see a sentence from the model's own reasoning, taken from
 """)
 for i, m in enumerate(traj[:6]):
     x = 0.55 + i * 2.08
-    picture(s, IMG / m["file"], x, 1.6, h=3.75)
-    text(s, x - 0.05, 5.42, 2.0, 0.3, f"Step {m['step']}", size=12, bold=True, color=BLUE)
-    text(s, x - 0.05, 5.7, 2.0, 1.25, "“" + m["model_quote"] + "”", size=10, color=INK)
+    picture(s, IMG / m["file"], x + 0.08, 1.55, h=3.7, phone=True)
+    rect(s, x - 0.04, 5.15, 1.96, 1.8, fill=PALE)
+    text(s, x + 0.04, 5.2, 1.8, 0.3, f"Step {m['step']}", size=13, bold=True, color=BLUE)
+    text(s, x + 0.04, 5.5, 1.82, 1.45, "“" + m["model_quote"] + "”", size=10.5, color=INK, spacing=1.05)
 
 # 11 ─ Evaluation method ──────────────────────────────────────────────────────────────────────────
 s = slide("Evaluation", "How we tested: one frozen version, three runs per task", """
@@ -253,7 +256,7 @@ card(s, 4.75, 1.7, 3.9, 2.35, "Three runs per task", ["Seeds 42, 43, 44", "OsmAn
 card(s, 8.8, 1.7, 3.85, 2.35, "Judged independently", ["Official AndroidWorld verifier", "The model's “finish” never counts", "Step budget about 2–4× reference"], body_size=15, title_size=17)
 rows = [["task", "run", "model", "observation", "grounding", "steps", "verifier", "failure class", "recording"],
         ["FilesMoveFile", "2 of 3", "autoglm-phone", "screenshot", "coordinates", "13 / 25", "FAIL", "false_done", "video_001.mp4"]]
-table(s, 0.7, 4.4, 11.95, 0.85, rows, size=11, align_center_from=1)
+table(s, 0.7, 4.4, 11.95, 0.85, rows, col_widths=[1.55, 0.85, 1.75, 1.35, 1.35, 0.95, 1.0, 1.4, 1.75], size=13, align_center_from=1)
 text(s, 0.7, 5.35, 11.95, 1.2, "One row per run, as on the course slide (D1 p.49). All 21 rows, the logs and the recordings are kept in the repository and the recording archive.",
      size=13, color=GREY)
 
@@ -301,7 +304,7 @@ Even the whole project, all local development runs together, cost only about {F[
 The model answers fast, {F['median_call_s']} seconds per call at the median. Most of the time per step is the phone: waiting for screens to load, typing, and saving logs and video.
 """)
 cats = [x["short"] for x in F["cost_rows"]]
-bar_chart(s, 0.7, 1.6, 7.6, 5.3, cats, [("Mean run time (s)", [x["seconds"] for x in F["cost_rows"]])], colors=[BLUE], legend=False, gap=80)
+bar_chart(s, 0.7, 1.6, 7.6, 5.3, cats, [("Mean run time (s)", [x["seconds"] for x in F["cost_rows"]])], colors=[BLUE], legend=False, gap=80, font_size=11)
 big_number(s, 8.75, 1.75, 3.9, f"{F['final_tokens_m']} M", "tokens for all 21 final runs", value_size=36)
 big_number(s, 8.75, 3.35, 3.9, f"€{F['final_cost_eur']}", "model cost of the final evaluation\n(€0.045 per million tokens)", value_size=36)
 big_number(s, 8.75, 4.95, 3.9, f"{F['median_call_s']} s", "median time per model call", value_size=36)
@@ -313,12 +316,12 @@ Each column is one task, each row is one run. The label says the task, the seed,
 You can see the difference in length: Wi-Fi is sped up only two times, OsmAnd about ten times or more.
 Look at the orange labels: Contacts seed 43, Files seed 43 and OsmAnd seed 366. These are the three failures we explain next.
 """)
-movie(s, VID / "wall_21_runs.mp4", VID / "wall_21_runs_poster.png", 2.4, 1.55, 5.6 * 1260 / 1200, 5.4)
-text(s, 8.55, 1.7, 4.1, 4.8, [[("How to read it", {"bold": True, "color": NAVY, "size": 16})],
-                              "Columns: Wi-Fi, Contacts, SMS, Files, Calendar, Markor + SMS, OsmAnd",
-                              "Rows: run 1, 2, 3 (seeds 42 / 43 / 44; OsmAnd 31 / 314 / 366)",
-                              "Label: verdict and speed-up (x2 = twice as fast)",
-                              "Each clip stops on its final screen"], size=14, spacing=1.25)
+movie(s, VID / "wall_21_runs.mp4", VID / "wall_21_runs_poster.png", 0.7, 1.5, 5.45 * 1260 / 1200, 5.45)
+card(s, 6.85, 1.5, 5.8, 5.45, "How to read it", [
+    "Columns: Wi-Fi, Contacts, SMS, Files, Calendar, Markor + SMS, OsmAnd",
+    "Rows: run 1, 2, 3 (seeds 42 / 43 / 44; OsmAnd 31 / 314 / 366)",
+    "Label: verdict and speed-up (x2 = twice as fast)",
+    "Each clip stops on its final screen"], body_size=17, title_size=20)
 
 # 16 ─ Featured demos ─────────────────────────────────────────────────────────────────────────────
 s = slide("Demo", "One success and one failure, step by step", """
@@ -329,8 +332,8 @@ This brings us to the failure analysis.
 """)
 movie(s, VID / "featured_markor_pass.mp4", VID / "featured_markor_pass_poster.png", 1.3, 1.55, 2.45, 5.45)
 movie(s, VID / "featured_files_fail.mp4", VID / "featured_files_fail_poster.png", 6.95, 1.55, 2.45, 5.45)
-text(s, 3.95, 2.0, 2.7, 4.5, [[("Success", {"bold": True, "color": BLUE, "size": 18})], "Markor + SMS, seed 44", "15 steps, PASS", "Note saved, then a plain SMS with the same text", "x4 speed"], size=13, spacing=1.25)
-text(s, 9.6, 2.0, 3.0, 4.5, [[("Failure", {"bold": True, "color": ORANGE, "size": 18})], "Files, seed 43", "13 steps, FAIL", "Moved a look-alike file, then said done", "x3 speed"], size=13, spacing=1.25)
+card(s, 3.95, 1.55, 2.75, 3.6, "Success", ["Markor + SMS, seed 44", "15 steps, PASS", "Note saved, then a plain SMS with the same text", "x4 speed"], accent=BLUE, title_size=20, body_size=15)
+card(s, 9.6, 1.55, 3.05, 3.6, "Failure", ["Files, seed 43", "13 steps, FAIL", "Moved a look-alike file, then said done", "x3 speed"], accent=ORANGE, title_size=20, body_size=15)
 
 # 17 ─ Where failures come from ───────────────────────────────────────────────────────────────────
 s = slide("Failure analysis", "How 275 project runs ended: the setup failed most often", f"""
@@ -340,14 +343,15 @@ Next come no-progress stops: the agent repeated an action and nothing changed, s
 The most dangerous group is false completion: the model says done, but the checker says fail. We saw {F['false_done']} of these. The course calls this false_done, and our completion rules and checks are there to reduce it.
 """)
 cats = [x[0] for x in F["outcome_rows"]]
-bar_chart(s, 0.7, 1.6, 7.4, 5.3, cats, [("Runs", [x[1] for x in F["outcome_rows"]])], colors=[BLUE], legend=False, horizontal=True, gap=55)
+chart = bar_chart(s, 0.7, 1.6, 7.4, 5.3, cats, [("Runs", [x[1] for x in F["outcome_rows"]])], colors=[BLUE], legend=False, horizontal=True, gap=55)
+color_points(chart, [BLUE if c == "PASS" else ORANGE if c.startswith("Said done") else MUTED for c in cats])
 card(s, 8.45, 1.7, 4.2, 4.9, "The five failure classes (D1 p.50)", [
     [("grounding", {"bold": True}), (": the tap lands on nothing", {})],
     [("too_early", {"bold": True}), (": acting on a loading screen", {})],
     [("lost_value", {"bold": True}), (": a value is lost or invented", {})],
     [("wrong_app", {"bold": True}), (": the wrong app is used", {})],
     [("false_done", {"bold": True}), (": says done, verifier fails", {})],
-    "Final evaluation: false_done 1, grounding 1, other 1"], body_size=13)
+    "Final evaluation: false_done 1, grounding 1, other 1"], body_size=15)
 
 # 18 ─ Deep dive ──────────────────────────────────────────────────────────────────────────────────
 s = slide("Failure analysis", "Deep dive: a false finish caused by a look-alike file", """
@@ -358,8 +362,8 @@ Then it did the move perfectly, waited for "Moving 1 item", and finished with th
 Class: false_done. The root cause is choosing a look-alike from a truncated name.
 Where to fix it: in the instructions, switch to list view or search for the exact name. And in the program, a check before Move that the selected name is exactly the requested one. That is the course's idea of a check step before declaring done.
 """)
-picture(s, IMG / "files43_step5.png", 0.7, 1.6, h=5.3)
-picture(s, IMG / "files43_final.png", 3.25, 1.6, h=5.3)
+picture(s, IMG / "files43_step5.png", 0.7, 1.6, h=5.3, phone=True)
+picture(s, IMG / "files43_final.png", 3.25, 1.6, h=5.3, phone=True)
 rows = [["Steps", "What happened", "Assessment"],
         ["1–4", "Opened Files, the storage root, then Alarms", "Correct"],
         ["5", "Grid with cut-off names; long-pressed “documentary_20…”", "Wrong object"],
@@ -367,8 +371,8 @@ rows = [["Steps", "What happened", "Assessment"],
         ["12–13", "Waited for “Moving 1 item”, then finish", "false_done"]]
 table(s, 5.95, 1.6, 6.7, 2.5, rows, col_widths=[0.9, 4.1, 1.7], size=12, fills={(4, 2): ORANGE})
 text(s, 5.95, 4.25, 6.7, 0.75, [[("Model: ", {"bold": True, "color": NAVY}), ("“" + F["files_quote"] + "”", {"italic": True})]], size=13)
-card(s, 5.95, 5.1, 3.25, 1.75, "Class", "false_done (D1 p.50); root cause: a look-alike chosen from a truncated name", accent=ORANGE, body_size=12)
-card(s, 9.4, 5.1, 3.25, 1.75, "Fix layer", "Instruction: list view or exact search. Program: check the full name before Move", body_size=12)
+card(s, 5.95, 5.1, 3.25, 1.75, "Class", "false_done (D1 p.50); root cause: a look-alike chosen from a truncated name", accent=ORANGE, body_size=13)
+card(s, 9.4, 5.1, 3.25, 1.75, "Fix layer", "Instruction: list view or exact search. Program: check the full name before Move", body_size=13)
 
 # 19 ─ Other failures and variance ────────────────────────────────────────────────────────────────
 s = slide("Failure analysis", "Two more failures, and why runs of one task differ", """
@@ -377,11 +381,11 @@ Contacts, seed 43: the agent swiped to find the phone field, but two swipes went
 OsmAnd, seed 366: our code said "tap Clear at 941, 83". The model tapped at 941, 57, the very top edge of the button, three times, and nothing happened. That is grounding: the tap lands on nothing.
 An important pattern: the same task can pass on one run and fail on another. OsmAnd was two of three in two separate frozen evaluations, but different runs failed, for different reasons. Long tasks have many steps, and each step is a chance for a small error.
 """)
-picture(s, IMG / "contacts43_step9.png", 0.7, 1.6, h=4.3)
-picture(s, IMG / "osmand366_step15.png", 2.75, 1.6, h=4.3)
+picture(s, IMG / "contacts43_step9.png", 0.7, 1.6, h=4.3, phone=True)
+picture(s, IMG / "osmand366_step15.png", 2.75, 1.6, h=4.3, phone=True)
 text(s, 0.7, 5.95, 4.0, 0.9, "Left: Contacts s43, Phone field cut off at the top.  Right: OsmAnd s366, Clear button at the top right.", size=11, color=GREY)
-card(s, 5.0, 1.6, 3.7, 2.45, "Contacts s43: other", "Two swipes went past the Phone field; four more changed only the blinking cursor, which our check counted as a change.", accent=ORANGE, body_size=12)
-card(s, 8.95, 1.6, 3.7, 2.45, "OsmAnd s366: grounding", "Code: “Tap Clear at [941, 83]”. Model tapped [941, 57], the top edge of the button, three times: no effect.", accent=ORANGE, body_size=12)
+card(s, 5.0, 1.6, 3.7, 2.45, "Contacts s43: other", "Two swipes went past the Phone field; four more changed only the blinking cursor, which our check counted as a change.", accent=ORANGE, body_size=14)
+card(s, 8.95, 1.6, 3.7, 2.45, "OsmAnd s366: grounding", "Code: “Tap Clear at [941, 83]”. Model tapped [941, 57], the top edge of the button, three times: no effect.", accent=ORANGE, body_size=14)
 rows = [["Same task, two frozen evaluations", "Run 1", "Run 2", "Run 3"],
         ["OsmAnd v61 (Skill experiment)", "FAIL", "PASS", "PASS"],
         ["OsmAnd v65 (final)", "PASS", "PASS", "FAIL"],
@@ -406,7 +410,7 @@ rows = [["Symptom", "Root cause", "Fix"],
         ["OsmAnd map missing", "Files task initialization deletes shared storage", "Check the map before OsmAnd; rerun official setup"]]
 table(s, 0.7, 1.65, 8.6, 4.6, rows, col_widths=[2.6, 3.0, 3.0], size=12, bold_first_col=True)
 if (IMG / "forwarder_crash.png").exists():
-    picture(s, IMG / "forwarder_crash.png", 9.7, 1.65, h=4.6)
+    picture(s, IMG / "forwarder_crash.png", 9.7, 1.65, h=4.6, phone=True)
 text(s, 0.7, 6.4, 11.9, 0.5, "Trust the harness before judging the model: without these fixes, setup faults would look like agent failures.", size=14, bold=True, color=BLUE)
 
 # 21 ─ Improvement journey ────────────────────────────────────────────────────────────────────────
@@ -425,7 +429,7 @@ card(s, 9.0, 1.7, 3.65, 4.9, "What changed", [
     "Rules on the model’s words: bypassed",
     [("Program reads the screen", {"bold": True}), (" (accessibility tree)", {})],
     [("Skill as code", {"bold": True}), (": next step + tap centre", {})],
-    "Each fix tested on practice seeds, never on the evaluation seeds"], body_size=13)
+    "Each fix tested on practice seeds, never on the evaluation seeds"], body_size=14)
 
 # 22 ─ Before and after ───────────────────────────────────────────────────────────────────────────
 s = slide("Improvement", "Before and after: only the Skill changed", """
@@ -479,7 +483,8 @@ for i, (v, l) in enumerate(nums):
     x = 0.7 + (i % 3) * 4.05
     y = 1.8 + (i // 3) * 2.45
     rect(s, x, y, 3.8, 2.1, fill=PALE)
-    big_number(s, x + 0.25, y + 0.3, 3.4, v, l, value_size=40)
+    rect(s, x, y, 3.8, 0.07, fill=NAVY)
+    big_number(s, x + 0.25, y + 0.35, 3.4, v, l, value_size=40)
 
 # 25 ─ Findings and limitations ───────────────────────────────────────────────────────────────────
 s = slide("Findings", "What we learned, and what is still limited", """
@@ -490,13 +495,13 @@ Three: where knowledge lives matters. A Skill in the system prompt was ignored. 
 Four: long tasks fail by small errors adding up. A missed tap or a wrong guess at any step is enough.
 Our limitations: three runs per task is a small sample; we used one model; the OsmAnd Skill only works for OsmAnd; and two tasks used extra screen labels, which we report in the results.
 """)
-card(s, 0.7, 1.7, 6.9, 5.0, "Findings", body_size=17, title_size=20, body=[
+card(s, 0.7, 1.7, 6.9, 5.0, "Findings", body_size=19, title_size=21, body=[
     [("Trust the harness first", {"bold": True}), (": setup faults looked like agent failures", {})],
     [("The verifier decides", {"bold": True}), (": false completions are real and dangerous", {})],
     [("Where knowledge lives matters", {"bold": True}), (": prompt < reminder each step < code", {})],
     [("Long tasks fail by small errors", {"bold": True}), (": one missed tap is enough", {})],
     [("Checks catch traps", {"bold": True}), (f": {F['refusals_total']} actions stopped in the final runs", {})]])
-card(s, 7.85, 1.7, 4.8, 5.0, "Limitations", accent=ORANGE, body_size=17, title_size=20, body=[
+card(s, 7.85, 1.7, 4.8, 5.0, "Limitations", accent=ORANGE, body_size=19, title_size=21, body=[
     "Three runs per task: small sample",
     "One model, one laptop, one emulator",
     "OsmAnd Skill works only for OsmAnd",
@@ -507,13 +512,21 @@ card(s, 7.85, 1.7, 4.8, 5.0, "Limitations", accent=ORANGE, body_size=17, title_s
 s = slide(None, "Thank you", """
 Thank you for listening. We are happy to take your questions.
 """)
-rect(s, 0, 0, W, H, fill=NAVY)
-text(s, 0.9, 2.2, 11.5, 1.0, "Thank you", size=54, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
-text(s, 0.9, 3.35, 11.5, 0.5, "Questions are welcome", size=22, color=RGBColor(0xB9, 0xC4, 0xD6), align=PP_ALIGN.CENTER)
-text(s, 0.9, 4.6, 11.5, 0.5, "github.com/Chenschenschen/androidworld-gui-agent  ·  branch team-agent  ·  tag team-agent-final-v65",
-     size=15, color=RGBColor(0xF0, 0x9A, 0x5B), align=PP_ALIGN.CENTER)
-text(s, 0.9, 5.2, 11.5, 0.5, "Model: AutoGLM-Phone-9B-Multilingual (Z.ai)  ·  Benchmark: AndroidWorld (Google Research)", size=13,
-     color=RGBColor(0xB9, 0xC4, 0xD6), align=PP_ALIGN.CENTER)
+# Same split layout as the cover, so the talk opens and closes with one look.
+rect(s, 0, 0, W, H, fill=RGBColor(0xEE, 0xF3, 0xF8))
+rect(s, 0, 0, 7.9, H, fill=NAVY)
+rect(s, 0, 0, 7.9, 0.08, fill=BLUE)
+text(s, 0.75, 0.7, 6.8, 0.35, "AGENTIC AI IN MODERN BUSINESS  ·  PRESENTATION", size=13, bold=True, color=LIGHT)
+text(s, 0.75, 1.85, 6.9, 1.1, "Thank you", size=54, bold=True, color=WHITE)
+text(s, 0.75, 3.0, 6.9, 0.5, "Questions are welcome", size=22, color=SOFT)
+rect(s, 0.75, 3.85, 1.1, 0.06, fill=BLUE)
+text(s, 0.75, 4.2, 6.9, 0.9, "github.com/Chenschenschen/androidworld-gui-agent\nbranch team-agent  ·  tag team-agent-final-v65",
+     size=15, color=RGBColor(0xF0, 0x9A, 0x5B), spacing=1.2)
+text(s, 0.75, 5.3, 6.9, 0.9, "Model: AutoGLM-Phone-9B-Multilingual (Z.ai)\nBenchmark: AndroidWorld (Google Research)", size=14,
+     color=SOFT, spacing=1.2)
+phone(IMG / "traj_2.png", 8.1, 1.45, 4.9, -8)
+phone(IMG / "traj_5.png", 10.5, 1.45, 4.9, 8)
+phone(IMG / "osmand_pass_3.png", 9.15, 0.85, 5.75)
 
 import sys
 out = HERE / (sys.argv[1] if len(sys.argv) > 1 else "AndroidWorld_GUI_Agent_Presentation.pptx")

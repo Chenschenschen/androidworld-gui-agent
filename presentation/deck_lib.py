@@ -17,6 +17,10 @@ PALE = RGBColor(0xF2, 0xF5, 0xF9)
 PALE_BLUE = RGBColor(0xE5, 0xEF, 0xF8)
 PALE_ORANGE = RGBColor(0xFC, 0xEC, 0xE0)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
+GREEN = RGBColor(0x2E, 0x7D, 0x4F)     # improvement section accent
+MUTED = RGBColor(0xA7, 0xB1, 0xBD)     # neutral bars
+BEZEL = RGBColor(0x1B, 0x1F, 0x2A)
+SECTION = {"FAILURE ANALYSIS": ORANGE, "IMPROVEMENT": GREEN, "FINDINGS": NAVY, "OUR WORK IN NUMBERS": NAVY}
 INK = RGBColor(0x22, 0x2A, 0x35)
 FONT = "Arial"
 W, H = 13.333, 7.5
@@ -92,7 +96,7 @@ def rect(slide, x, y, w, h, fill=PALE, line=None, shape=MSO_SHAPE.RECTANGLE, rad
     return s
 
 
-def card(slide, x, y, w, h, title, body, accent=BLUE, title_size=16, body_size=13, fill=PALE):
+def card(slide, x, y, w, h, title, body, accent=BLUE, title_size=17, body_size=14, fill=PALE):
     rect(slide, x, y, w, h, fill=fill)
     rect(slide, x, y, 0.06, h, fill=accent)
     text(slide, x + 0.18, y + 0.1, w - 0.28, 0.4, title, size=title_size, bold=True, color=NAVY)
@@ -103,8 +107,10 @@ def card(slide, x, y, w, h, title, body, accent=BLUE, title_size=16, body_size=1
 
 
 def header(slide, kicker, title, number, total):
-    rect(slide, 0, 0, W, 0.08, fill=BLUE)
-    text(slide, 0.6, 0.32, 9, 0.3, kicker.upper(), size=11, bold=True, color=BLUE)
+    accent = SECTION.get(kicker.upper(), BLUE)   # colour tells the audience which part of the talk this is
+    rect(slide, 0, 0, W, 0.08, fill=accent)
+    rect(slide, 0.6, 0.36, 0.22, 0.12, fill=accent)
+    text(slide, 0.9, 0.29, 9, 0.3, kicker.upper(), size=11, bold=True, color=accent)
     text(slide, 0.6, 0.58, 12.1, 0.8, title, size=28, bold=True, color=NAVY, spacing=1.0)
     slide.shapes.add_connector(MSO_CONNECTOR.STRAIGHT, Inches(0.6), Inches(7.05), Inches(W - 0.6), Inches(7.05)).line.color.rgb = LINE
     text(slide, 0.6, 7.1, 8, 0.3, "Agentic AI in Modern Business  ·  AndroidWorld GUI agent", size=10, color=GREY)
@@ -118,6 +124,7 @@ def notes(slide, script):
 def table(slide, x, y, w, h, rows, col_widths=None, size=12, header_fill=NAVY, header_color=WHITE, zebra=True,
           fills=None, bold_first_col=False, align_center_from=None):
     """rows: list of lists of str (first row = header). fills: {(r,c): RGBColor} cell backgrounds."""
+    size = max(size, 13)                         # readable from the back of the room
     shape = slide.shapes.add_table(len(rows), len(rows[0]), Inches(x), Inches(y), Inches(w), Inches(h))
     tbl = shape.table
     if col_widths:
@@ -165,6 +172,7 @@ def bar_chart(slide, x, y, w, h, categories, series, colors=None, horizontal=Fal
     chart = frame.chart
     chart.font.name = FONT
     chart.font.size = Pt(font_size)
+    chart.has_title = False                      # the slide title already says what the chart shows
     chart.has_legend = legend and len(series) > 1
     if chart.has_legend:
         chart.legend.position = XL_LEGEND_POSITION.TOP
@@ -181,7 +189,7 @@ def bar_chart(slide, x, y, w, h, categories, series, colors=None, horizontal=Fal
             plot.data_labels.position = XL_LABEL_POSITION.OUTSIDE_END
     va = chart.value_axis
     va.has_major_gridlines = True
-    va.major_gridlines.format.line.color.rgb = LINE
+    va.major_gridlines.format.line.color.rgb = RGBColor(0xE6, 0xEA, 0xEF)
     va.format.line.fill.background()
     va.tick_labels.font.size = Pt(font_size - 1)
     if axis_max is not None:
@@ -192,7 +200,7 @@ def bar_chart(slide, x, y, w, h, categories, series, colors=None, horizontal=Fal
         va.major_unit = major_unit
     va.minimum_scale = 0
     ca = chart.category_axis
-    ca.tick_labels.font.size = Pt(font_size)
+    ca.tick_labels.font.size = Pt(font_size + 1)
     ca.format.line.color.rgb = LINE
     for i, s in enumerate(plot.series):
         if colors:
@@ -200,9 +208,16 @@ def bar_chart(slide, x, y, w, h, categories, series, colors=None, horizontal=Fal
     return chart
 
 
-def picture(slide, path, x, y, w=None, h=None, border=True):
+def picture(slide, path, x, y, w=None, h=None, border=True, phone=False, crop=0.08):
+    """phone=True draws a phone screenshot like the cover: debug overlay cropped, rounded corners, dark bezel."""
     pic = slide.shapes.add_picture(str(path), Inches(x), Inches(y), Inches(w) if w else None, Inches(h) if h else None)
-    if border:
+    if phone:
+        pic.crop_top = crop
+        pic.height = int(pic.height * (1 - crop))
+        pic.auto_shape_type = MSO_SHAPE.ROUNDED_RECTANGLE
+        pic.line.color.rgb = BEZEL
+        pic.line.width = Pt(3.5)
+    elif border:
         pic.line.color.rgb = LINE; pic.line.width = Pt(1)
     return pic
 
@@ -211,9 +226,15 @@ def movie(slide, path, poster, x, y, w, h):
     return slide.shapes.add_movie(str(path), Inches(x), Inches(y), Inches(w), Inches(h), poster_frame_image=str(poster), mime_type="video/mp4")
 
 
-def big_number(slide, x, y, w, value, label, color=BLUE, value_size=40, label_size=13):
+def big_number(slide, x, y, w, value, label, color=BLUE, value_size=40, label_size=14):
     text(slide, x, y, w, 0.75, value, size=value_size, bold=True, color=color)
     text(slide, x, y + 0.78, w, 0.7, label, size=label_size, color=GREY)
+
+
+def color_points(chart, colors):
+    """Colour each bar of a single-series chart (e.g. PASS blue, false completion orange)."""
+    for point, colour in zip(chart.plots[0].series[0].points, colors):
+        point.format.fill.solid(); point.format.fill.fore_color.rgb = colour
 
 
 def arrow(slide, x1, y1, x2, y2, color=GREY, width=1.75):

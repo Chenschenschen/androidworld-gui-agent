@@ -5,6 +5,7 @@ Start here rather than reading the design history from beginning to end.
 | Current document | Purpose |
 | --- | --- |
 | [TEAM_FINAL_EVALUATION.md](TEAM_FINAL_EVALUATION.md) | **Team final evaluation**: one agent, seven tasks, three runs each, one frozen version (v65), 18/21, with the three failures analysed. |
+| [../presentation/Team_Briefing_AndroidWorld_Agent.docx](../presentation/Team_Briefing_AndroidWorld_Agent.docx) | **Start here if you are new**: the story of the project and a slide-by-slide explanation of the presentation. |
 | [../presentation/](../presentation/) | Final presentation: editable PowerPoint with embedded demo videos, speaker script (SCRIPT.md), Q&A preparation (QA.md), and the scripts and data that built it. |
 | [TEAM_AGENT.md](TEAM_AGENT.md) | How the team agent was assembled from the three contributions, and its practice runs. |
 | [FINAL_EVALUATION.md](FINAL_EVALUATION.md) | Earlier evaluation of Jia's branch: three tasks, three runs each (v42). |

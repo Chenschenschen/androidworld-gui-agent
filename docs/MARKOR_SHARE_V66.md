@@ -98,4 +98,4 @@ adb shell cmd role add-role-holder android.app.role.SMS com.google.android.apps.
 - Logs, summaries and configs of all nine runs, with a checksum manifest:
   [evidence/markor_v66/](evidence/markor_v66/)
 - Screen recordings (not in git because of their size):
-  `markor_share_v66_recordings.zip` next to the repository, one folder per run ID.
+  `markor_share_v66_recordings.zip` next to the repository. Each folder is named role_seed_result__run ID (for example `official_s43_PASS__trial_...`); `official_*` are the evaluation runs, `practice_*` are not part of the result; README.txt explains it.

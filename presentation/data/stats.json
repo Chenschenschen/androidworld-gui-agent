@@ -5,8 +5,8 @@
     "ledger": "C:\\Users\\Admin\\Desktop\\Agentic AI in Modern Business (MGTHN0211)\\amber_agent_integration_20261008\\evidence\\RUN_LEDGER_20261008.md"
   },
   "dedup_notes": {
-    "local_folders": 100,
-    "local_with_summary": 97,
+    "local_folders": 109,
+    "local_with_summary": 106,
     "local_without_summary": [
       {
         "run": "trial_ContactsAddContact_20261008T123322_740182Z",
@@ -90,10 +90,10 @@
   },
   "A_recorded_runs": {
     "combined": {
-      "total": 301,
-      "PASS": 113,
-      "FAIL": 173,
-      "other": 15,
+      "total": 310,
+      "PASS": 116,
+      "FAIL": 175,
+      "other": 19,
       "per_task": {
         "CameraTakePhoto": {
           "total": 25,
@@ -120,10 +120,10 @@
           "other": 4
         },
         "MarkorCreateNoteAndSms": {
-          "total": 17,
-          "PASS": 10,
-          "FAIL": 7,
-          "other": 0
+          "total": 26,
+          "PASS": 13,
+          "FAIL": 9,
+          "other": 4
         },
         "OsmAndTrack": {
           "total": 61,
@@ -158,10 +158,10 @@
       }
     },
     "local": {
-      "total": 97,
-      "PASS": 36,
-      "FAIL": 60,
-      "other": 1,
+      "total": 106,
+      "PASS": 39,
+      "FAIL": 62,
+      "other": 5,
       "per_task": {
         "ContactsAddContact": {
           "total": 8,
@@ -176,10 +176,10 @@
           "other": 0
         },
         "MarkorCreateNoteAndSms": {
-          "total": 6,
-          "PASS": 4,
-          "FAIL": 2,
-          "other": 0
+          "total": 15,
+          "PASS": 7,
+          "FAIL": 4,
+          "other": 4
         },
         "OsmAndTrack": {
           "total": 61,
@@ -291,7 +291,7 @@
     },
     "other_breakdown": {
       "local": {
-        "NOT_RUN": 1
+        "NOT_RUN": 5
       },
       "hayati": {
         "NOT_RUN": 10,
@@ -303,12 +303,12 @@
     },
     "versions": {
       "local": {
-        "distinct_version_strings": 36,
+        "distinct_version_strings": 37,
         "runs_without_version": 0,
         "families": {
           "autoglm_api": {
-            "distinct_strings": 36,
-            "range": "v30..v65"
+            "distinct_strings": 37,
+            "range": "v30..v66"
           }
         }
       },
@@ -367,7 +367,7 @@
         }
       },
       "ledger": "no version field in ledger",
-      "combined_distinct_version_strings": 105,
+      "combined_distinct_version_strings": 106,
       "strings_shared_local_hayati": []
     }
   },
@@ -439,15 +439,15 @@
       },
       "MarkorCreateNoteAndSms": {
         "runs": 3,
-        "PASS": 3,
-        "steps_mean": 17,
-        "steps_min": 15,
+        "PASS": 2,
+        "steps_mean": 18,
+        "steps_min": 18,
         "steps_max": 18,
-        "duration_mean_s": 260.6,
-        "prompt_tokens": 295270,
-        "completion_tokens": 6825,
-        "model_calls": 54,
-        "validation_errors": 1
+        "duration_mean_s": 201.6,
+        "prompt_tokens": 323566,
+        "completion_tokens": 3767,
+        "model_calls": 55,
+        "validation_errors": 0
       },
       "OsmAndTrack": {
         "runs": 3,
@@ -464,26 +464,25 @@
     },
     "totals": {
       "runs": 21,
-      "PASS": 18,
-      "steps_total": 284,
-      "steps_mean": 13.52,
-      "duration_total_s": 3891.7,
-      "duration_mean_s": 185.3,
-      "prompt_tokens": 1423741,
-      "completion_tokens": 23737,
-      "total_tokens": 1447478,
-      "model_calls": 296,
-      "response_files": 296,
-      "cost_eur": 0.0651,
-      "model_call_wall_s_median": 1.774,
-      "model_call_wall_s_mean": 2.129,
-      "validation_error_files": 8
+      "PASS": 17,
+      "steps_total": 287,
+      "steps_mean": 13.67,
+      "duration_total_s": 3714.6,
+      "duration_mean_s": 176.9,
+      "prompt_tokens": 1452037,
+      "completion_tokens": 20679,
+      "total_tokens": 1472716,
+      "model_calls": 297,
+      "response_files": 297,
+      "cost_eur": 0.0663,
+      "model_call_wall_s_median": 1.75,
+      "model_call_wall_s_mean": 1.85,
+      "validation_error_files": 7
     },
     "refusal_categories": {
       "unfocused Type": 3,
       "malformed reply (not exactly one do/finish)": 2,
       "unsupported action": 1,
-      "truncated model reply": 1,
       "OsmAnd: Add would save a Favorite": 1
     },
     "refusals_per_run": [
@@ -578,24 +577,6 @@
         "validation_errors": 0
       },
       {
-        "run_id": "trial_MarkorCreateNoteAndSms_20261008T221647_424207Z",
-        "task": "MarkorCreateNoteAndSms",
-        "verifier": "PASS",
-        "validation_errors": 0
-      },
-      {
-        "run_id": "trial_MarkorCreateNoteAndSms_20261008T222123_918435Z",
-        "task": "MarkorCreateNoteAndSms",
-        "verifier": "PASS",
-        "validation_errors": 1
-      },
-      {
-        "run_id": "trial_MarkorCreateNoteAndSms_20261008T222633_440045Z",
-        "task": "MarkorCreateNoteAndSms",
-        "verifier": "PASS",
-        "validation_errors": 0
-      },
-      {
         "run_id": "trial_OsmAndTrack_20261008T223004_312422Z",
         "task": "OsmAndTrack",
         "verifier": "PASS",
@@ -612,6 +593,24 @@
         "task": "OsmAndTrack",
         "verifier": "FAIL",
         "validation_errors": 1
+      },
+      {
+        "run_id": "trial_MarkorCreateNoteAndSms_20261009T125039_586151Z",
+        "task": "MarkorCreateNoteAndSms",
+        "verifier": "FAIL",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_MarkorCreateNoteAndSms_20261009T125401_048355Z",
+        "task": "MarkorCreateNoteAndSms",
+        "verifier": "PASS",
+        "validation_errors": 0
+      },
+      {
+        "run_id": "trial_MarkorCreateNoteAndSms_20261009T125719_921778Z",
+        "task": "MarkorCreateNoteAndSms",
+        "verifier": "PASS",
+        "validation_errors": 0
       }
     ],
     "non_pass_runs": [
@@ -647,62 +646,78 @@
         "stop_reason": "error",
         "error_class": "control_no_progress",
         "failure_class": null
+      },
+      {
+        "run_id": "trial_MarkorCreateNoteAndSms_20261009T125039_586151Z",
+        "task": "MarkorCreateNoteAndSms",
+        "seed": 42,
+        "verifier": "FAIL",
+        "agent_done": false,
+        "steps": 18,
+        "stop_reason": "error",
+        "error_class": "control_no_progress",
+        "failure_class": null
       }
     ],
     "versions": [
-      "autoglm_api_v65_team_agent"
+      "autoglm_api_v65_team_agent",
+      "autoglm_api_v66_markor_share"
     ]
   },
   "C_local_project": {
-    "run_folders": 100,
-    "runs_with_summary": 97,
-    "prompt_tokens": 10608093,
-    "completion_tokens": 159338,
-    "total_tokens": 10767431,
-    "cost_eur": 0.4845,
-    "model_response_files": 1642,
-    "model_calls_attempted_sum_from_summaries": 1637,
-    "steps_total_from_summaries": 1453,
-    "run_time_hours_from_summaries": 5.75,
-    "model_wall_hours": 0.98,
+    "run_folders": 109,
+    "runs_with_summary": 106,
+    "prompt_tokens": 11071504,
+    "completion_tokens": 165006,
+    "total_tokens": 11236510,
+    "cost_eur": 0.5056,
+    "model_response_files": 1722,
+    "model_calls_attempted_sum_from_summaries": 1717,
+    "steps_total_from_summaries": 1531,
+    "run_time_hours_from_summaries": 6.74,
+    "model_wall_hours": 1.02,
     "validation_error_files": 101
   },
   "D_outcome_categories": {
     "local": {
-      "total": 97,
+      "total": 106,
       "categories": {
-        "infrastructure/other": 8,
-        "PASS": 36,
-        "stopped by no-progress guard": 43,
+        "infrastructure/other": 13,
+        "PASS": 39,
+        "stopped by no-progress guard": 44,
         "false completion (model finished, verifier FAIL)": 2,
         "validation_error stop": 8
       },
       "infrastructure_other_by_error_class": {
-        "environment_setup_error": 1,
+        "environment_setup_error": 5,
+        "environment_or_execution_error": 4,
         "no error_class, stop_reason=time_budget_or_recording_error": 3,
-        "environment_or_execution_error": 3,
         "api_error": 1
       },
       "infrastructure_other_by_message": {
         "no error_class, stop_reason=time_budget_or_recording_error | Recording failed or did not finish within its join budget": 3,
         "environment_or_execution_error | adb stderr: [None]": 3,
+        "environment_setup_error | ValueError: Target text \"SMS Messenger\" not found.": 2,
         "environment_setup_error | RuntimeError: UIAutomator did not confirm writing this observation": 1,
+        "environment_setup_error | ValueError: Target text \"NEXT\" not found.": 1,
+        "environment_setup_error | ValueError: Target text \"Allow access to manage all files\" not found.": 1,
+        "environment_or_execution_error | RuntimeError: Observation time budget exhausted": 1,
         "api_error | urllib.error.HTTPError: HTTP Error 400: Bad Request": 1
       },
       "PASS_by_stop": {
-        "stop_reason=complete, agent_done=True": 36
+        "stop_reason=complete, agent_done=True": 39
       },
       "stop_reason_values": {
-        "error": 56,
-        "complete": 38,
+        "error": 62,
+        "complete": 41,
         "time_budget_or_recording_error": 3
       },
       "error_class_values": {
-        "environment_setup_error": 1,
-        "None": 41,
-        "control_no_progress": 43,
+        "environment_setup_error": 5,
+        "None": 44,
+        "control_no_progress": 44,
         "validation_error": 8,
-        "environment_or_execution_error": 3,
+        "environment_or_execution_error": 4,
         "api_error": 1
       }
     },
@@ -1204,9 +1219,9 @@
     {
       "task": "MarkorCreateNoteAndSms",
       "reference_steps": 9,
-      "pass_runs": 3,
-      "mean_pass_steps": 17,
-      "ratio": 1.89
+      "pass_runs": 2,
+      "mean_pass_steps": 18,
+      "ratio": 2.0
     },
     {
       "task": "OsmAndTrack",

@@ -8,13 +8,14 @@ finish. Android World's official verifier evaluates the result independently.
 This is a course project for **Agentic AI in Modern Business**. It is an
 experimental implementation with recorded successes and preserved failures.
 
-## Team final evaluation (v65): one agent, seven tasks
+## Team final evaluation (final agent v66): one agent, seven tasks
 
 Branch `team-agent` combines the group's work into one agent (the
 `AutoGLMAgent` class and its `step()` method) for all seven chosen tasks; the
 original branches `Jia` and `hayati` and the integration package stay
-unchanged. Frozen as tag **`team-agent-final-v65`**, three runs per task, every
-run screen-recorded and judged by the official Android World verifier:
+unchanged. Final agent: tag **`team-agent-final-v66`** (six tasks evaluated with
+v65, whose code is identical for them; Markor with v66 after its Skill fix), three
+runs per task, every run screen-recorded and judged by the official Android World verifier:
 
 | Course row | Task | Official PASS |
 | --- | --- | --- |
@@ -23,10 +24,10 @@ run screen-recorded and judged by the official Android World verifier:
 | Real work (medium) | SimpleSmsSend | **3/3** |
 | Real work (medium) | FilesMoveFile | **2/3** (one false completion) |
 | Real work (medium) | SimpleCalendarAddOneEvent | **3/3** |
-| Multi-app (hard) | MarkorCreateNoteAndSms | **3/3** |
+| Multi-app (hard) | MarkorCreateNoteAndSms | **2/3** |
 | Multi-app (hard) | OsmAndTrack (the slide's Ruggell, Bendern instance) | **2/3** |
 
-**18/21.** Run log (D1 p.49 fields, observation per task), the three failures
+**17/21.** Run log (D1 p.49 fields, observation per task), the four failures
 and how to reproduce: [TEAM_FINAL_EVALUATION.md](docs/TEAM_FINAL_EVALUATION.md).
 How the agent was assembled and what came from each contribution:
 [TEAM_AGENT.md](docs/TEAM_AGENT.md). The sections below are the earlier

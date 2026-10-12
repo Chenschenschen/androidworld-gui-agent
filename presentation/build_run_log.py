@@ -10,7 +10,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Pt, RGBColor, Cm
 from docx.enum.section import WD_ORIENT
-from run_log_data import RUNS, ORDER, ROW, OBS, BUDGET, MODEL, VERSION, ZIP, trajectory_url
+from run_log_data import RUNS, ORDER, ROW, OBS, BUDGET, MODEL, ZIP, trajectory_url, evidence_dir, version, zip_folder
 
 HERE = Path(__file__).resolve().parent
 repo = Path(sys.argv[1])
@@ -23,15 +23,17 @@ def values(run):
     task, number, seed, run_id, steps, verdict, failure, n_clips, short, note = run
     return {"task": task, "run": f"{number} of 3 (seed {seed})", "model": MODEL, "observation": OBS.get(task, "screenshot"),
             "grounding": "coordinates (0-1000 grid)", "steps": f"{steps} (budget {BUDGET[task]})", "verifier": verdict,
-            "failure_class": failure or "—", "recording": ", ".join(clips[run_id]) + f" in {ZIP} / {run_id}",
-            "note": note, "trajectory": run_id, "agent version": VERSION}
+            "failure_class": failure or "—", "recording": ", ".join(clips[run_id]) + f" in {ZIP} / {zip_folder(run)}",
+            "note": note, "trajectory": run_id, "agent version": version(run_id)}
 
 
 # Markdown (renders on GitHub, links work there)
-md = ["# Run log: final evaluation (v65)\n",
+md = ["# Run log: final evaluation (final agent v66)\n",
       "One card per task; the three runs are the columns. Fields follow the course's run log (D1 p.49), plus a note that explains "
       "the run, a link to its readable trajectory log and the agent version. Success is the official AndroidWorld verifier. "
-      f"Recordings are not in Git because of their size; every clip is in `{ZIP}` under the run ID. Summary and analysis: "
+      "Markor runs come from v66 (the Skill shares the note); the other tasks from v65, whose code is the same for them. "
+      f"Recordings are not in Git because of their size; every clip is in `{ZIP}`, one folder per run named "
+      "task_seed_result__run ID. Summary and analysis: "
       "[TEAM_FINAL_EVALUATION.md](TEAM_FINAL_EVALUATION.md).\n"]
 for task in ORDER:
     runs = [r for r in RUNS if r[0] == task]
@@ -43,7 +45,7 @@ for task in ORDER:
         for r in runs:
             v = values(r)[field]
             if field == "trajectory":
-                v = f"[Readable trajectory log](evidence/team/runs/{r[3]}/trajectory.txt)"
+                v = f"[Readable trajectory log](evidence/{evidence_dir(r[3])}/runs/{r[3]}/trajectory.txt)"
             elif field == "verifier":
                 v = f"**{v}**"
             cells.append(str(v).replace("|", "/"))
@@ -78,10 +80,11 @@ def link(paragraph, text, url):
     r.append(pr); t = OxmlElement("w:t"); t.text = text; r.append(t); h.append(r); paragraph._p.append(h)
 
 
-doc.add_heading("Run log: final evaluation (v65)", 1)
+doc.add_heading("Run log: final evaluation (final agent v66)", 1)
 doc.add_paragraph("One table per task; the three runs are the columns. Fields follow the course's run log (D1 p.49), plus a note that "
                   "explains the run, a link to its readable trajectory log on GitHub and the agent version. Success is decided by the "
-                  f"official AndroidWorld verifier. Every recording clip is in {ZIP} under the run ID.")
+                  "official AndroidWorld verifier. Markor runs come from v66 (the Skill shares the note); the other tasks from v65, "
+                  f"whose code is the same for them. Every recording clip is in {ZIP}, one folder per run named task_seed_result__run ID.")
 for i, task in enumerate(ORDER):
     runs = [r for r in RUNS if r[0] == task]
     if i:

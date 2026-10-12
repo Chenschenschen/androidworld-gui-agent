@@ -12,17 +12,17 @@ Combined = local + hayati + ledger. `other` = NOT_RUN / ERROR (no valid verdict)
 | ContactsAddContact | 42 | 18 | 19 | 5 |
 | SystemWifiTurnOn | 41 | 28 | 13 | 0 |
 | SystemCopyToClipboard | 37 | 4 | 31 | 2 |
+| MarkorCreateNoteAndSms | 26 | 13 | 9 | 4 |
 | CameraTakePhoto | 25 | 9 | 16 | 0 |
 | ClockTimerEntry | 24 | 4 | 20 | 0 |
 | FilesMoveFile | 23 | 12 | 7 | 4 |
 | SimpleSmsSend | 21 | 13 | 4 | 4 |
-| MarkorCreateNoteAndSms | 17 | 10 | 7 | 0 |
 | SimpleCalendarAddOneEvent | 10 | 7 | 3 | 0 |
-| **Total** | **301** | **113** | **173** | **15** |
+| **Total** | **310** | **116** | **175** | **19** |
 
 | Source | Runs | PASS | FAIL | other | Distinct versions | Version range |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| local (team-agent) | 97 | 36 | 60 | 1 | 36 | autoglm_api v30..v65 |
+| local (team-agent) | 106 | 39 | 62 | 5 | 37 | autoglm_api v30..v66 |
 | hayati branch | 178 | 60 | 107 | 11 | 69 (+3 runs unversioned) | autoglm_api v1..v57; other families: five_easy_tasks v8..v10, learning_contact_process v5..v5, learning_context_feedback v2..v2, learning_direct_type v6..v6, learning_gpu16 v3..v3, learning_label_grounding v4..v4, learning_single_name v7..v7, learning_targeted_type v3..v3, learning_tree_first v1..v1, learning_tree_first_json v1..v1, upstream_reference v1..v3 |
 | amber ledger | 26 | 17 | 6 | 3 | n/a | n/a (ledger has no version) |
 
@@ -34,16 +34,16 @@ Per task and source:
 | ClockTimerEntry | - | 4/20/0 | - |
 | ContactsAddContact | 6/1/1 | 9/17/4 | 3/1/0 |
 | FilesMoveFile | 3/1/0 | 9/6/4 | - |
-| MarkorCreateNoteAndSms | 4/2/0 | - | 6/5/0 |
+| MarkorCreateNoteAndSms | 7/4/4 | - | 6/5/0 |
 | OsmAndTrack | 8/53/0 | - | - |
 | SimpleCalendarAddOneEvent | 7/3/0 | - | - |
 | SimpleSmsSend | 4/0/0 | 4/4/1 | 5/0/3 |
 | SystemCopyToClipboard | - | 4/31/2 | - |
 | SystemWifiTurnOn | 4/0/0 | 21/13/0 | 3/0/0 |
 
-Distinct version strings across local+hayati: 105 (no string shared; numbering restarts per branch, so v-numbers overlap but are different agents).
+Distinct version strings across local+hayati: 106 (no string shared; numbering restarts per branch, so v-numbers overlap but are different agents).
 
-Dedup: local = 97 of 100 folders (3 without summary.json skipped). hayati = 178 learning-trial summaries: 75 dirs without summary skipped, 7 `runs/presentation/*` summaries dropped (each has the same run_id as a top-level trial dir; identical content: 7/7), 3 non-task probe summaries dropped; 6 renamed trial folders (e.g. `trial_FilesMoveFile_successful`) kept because their internal run_id is unique. No run_id overlap local/hayati; no timestamp overlap of ledger with either. `other` = local {'NOT_RUN': 1}, hayati {'NOT_RUN': 10, 'ERROR': 1}, ledger {'ERROR': 3}.
+Dedup: local = 106 of 109 folders (3 without summary.json skipped). hayati = 178 learning-trial summaries: 75 dirs without summary skipped, 7 `runs/presentation/*` summaries dropped (each has the same run_id as a top-level trial dir; identical content: 7/7), 3 non-task probe summaries dropped; 6 renamed trial folders (e.g. `trial_FilesMoveFile_successful`) kept because their internal run_id is unique. No run_id overlap local/hayati; no timestamp overlap of ledger with either. `other` = local {'NOT_RUN': 5}, hayati {'NOT_RUN': 10, 'ERROR': 1}, ledger {'ERROR': 3}.
 
 ## B. Final evaluation (21 runs, v65)
 
@@ -54,13 +54,13 @@ Dedup: local = 97 of 100 folders (3 without summary.json skipped). hayati = 178 
 | SimpleSmsSend | 3 | 3 | 7.67 (7-9) | 71.2 | 59,462 | 1,649 | 23 | 0 |
 | FilesMoveFile | 3 | 2 | 14.33 (13-17) | 109.0 | 147,518 | 3,665 | 44 | 1 |
 | SimpleCalendarAddOneEvent | 3 | 3 | 19 (16-21) | 152.9 | 229,894 | 4,347 | 59 | 2 |
-| MarkorCreateNoteAndSms | 3 | 3 | 17 (15-18) | 260.6 | 295,270 | 6,825 | 54 | 1 |
+| MarkorCreateNoteAndSms | 3 | 2 | 18 (18-18) | 201.6 | 323,566 | 3,767 | 55 | 0 |
 | OsmAndTrack | 3 | 2 | 20.33 (16-23) | 537.0 | 549,665 | 4,130 | 66 | 4 |
-| **Total** | **21** | **18** | 13.52 (sum 284) | 185.3 | 1,423,741 | 23,737 | 296 | 8 |
+| **Total** | **21** | **17** | 13.67 (sum 287) | 176.9 | 1,452,037 | 20,679 | 297 | 7 |
 
-- Tokens total 1,447,478 -> cost at EUR 0.045/M tokens: **EUR 0.0651**
-- Model-call wall time (n=296 responses): median **1.774 s**, mean **2.129 s**
-- Total run time of the 21 runs: 64.9 min
+- Tokens total 1,472,716 -> cost at EUR 0.045/M tokens: **EUR 0.0663**
+- Model-call wall time (n=297 responses): median **1.75 s**, mean **1.85 s**
+- Total run time of the 21 runs: 61.9 min
 
 Refusals (validation_error files) by category:
 
@@ -69,49 +69,48 @@ Refusals (validation_error files) by category:
 | unfocused Type | 3 |
 | malformed reply (not exactly one do/finish) | 2 |
 | unsupported action | 1 |
-| truncated model reply | 1 |
 | OsmAnd: Add would save a Favorite | 1 |
 
-Runs with >=1 refusal: 7 of 21 — FilesMoveFile 220713: 1 (PASS), SimpleCalendarAddOneEvent 220904: 1 (PASS), SimpleCalendarAddOneEvent 221147: 1 (PASS), MarkorCreateNoteAndSms 222123: 1 (PASS), OsmAndTrack 223004: 2 (PASS), OsmAndTrack 224202: 1 (PASS), OsmAndTrack 225108: 1 (FAIL).
+Runs with >=1 refusal: 6 of 21 — FilesMoveFile 220713: 1 (PASS), SimpleCalendarAddOneEvent 220904: 1 (PASS), SimpleCalendarAddOneEvent 221147: 1 (PASS), OsmAndTrack 223004: 2 (PASS), OsmAndTrack 224202: 1 (PASS), OsmAndTrack 225108: 1 (FAIL).
 
-Non-PASS runs: ContactsAddContact seed 43: FAIL, agent_done=False, stop=error, error_class=control_no_progress, failure_class=None; FilesMoveFile seed 43: FAIL, agent_done=True, stop=complete, error_class=None, failure_class=false_done; OsmAndTrack seed 366: FAIL, agent_done=False, stop=error, error_class=control_no_progress, failure_class=None.
+Non-PASS runs: ContactsAddContact seed 43: FAIL, agent_done=False, stop=error, error_class=control_no_progress, failure_class=None; FilesMoveFile seed 43: FAIL, agent_done=True, stop=complete, error_class=None, failure_class=false_done; OsmAndTrack seed 366: FAIL, agent_done=False, stop=error, error_class=control_no_progress, failure_class=None; MarkorCreateNoteAndSms seed 42: FAIL, agent_done=False, stop=error, error_class=control_no_progress, failure_class=None.
 
 ## C. Whole local project (all local trial folders)
 
 | Metric | Value |
 | --- | ---: |
-| Prompt tokens | 10,608,093 |
-| Completion tokens | 159,338 |
-| Total tokens | 10,767,431 |
-| Cost at EUR 0.045/M | EUR 0.4845 |
-| Model calls (response files) | 1,642 |
-| Model calls attempted (sum of summaries) | 1,637 |
-| Executed steps (sum of summaries) | 1,453 |
-| Run time (sum duration_seconds) | 5.75 h |
-| Model wall time (sum) | 0.98 h |
+| Prompt tokens | 11,071,504 |
+| Completion tokens | 165,006 |
+| Total tokens | 11,236,510 |
+| Cost at EUR 0.045/M | EUR 0.5056 |
+| Model calls (response files) | 1,722 |
+| Model calls attempted (sum of summaries) | 1,717 |
+| Executed steps (sum of summaries) | 1,531 |
+| Run time (sum duration_seconds) | 6.74 h |
+| Model wall time (sum) | 1.02 h |
 
 ## D. Outcome categories (from summary fields)
 
 | Category | local | hayati |
 | --- | ---: | ---: |
-| PASS | 36 | 60 |
+| PASS | 39 | 60 |
 | false completion (model finished, verifier FAIL) | 2 | 17 |
-| stopped by no-progress guard | 43 | 4 |
+| stopped by no-progress guard | 44 | 4 |
 | validation_error stop | 8 | 24 |
 | step budget exhausted | 0 | 21 |
-| infrastructure/other | 8 | 52 |
-| **Total** | **97** | **178** |
+| infrastructure/other | 13 | 52 |
+| **Total** | **106** | **178** |
 
 Rules (first match wins): verifier PASS; agent_done true and verifier FAIL; error_class control_no_progress; error_class validation_error; stop_reason step_budget; everything else.
-Local stop_reason values: {'error': 56, 'complete': 38, 'time_budget_or_recording_error': 3} (no local run reached its step budget). Hayati PASS includes non-clean stops: {'stop_reason=complete, agent_done=True': 52, 'stop_reason=step_budget, agent_done=False': 4, 'stop_reason=error, agent_done=False': 4}.
+Local stop_reason values: {'error': 62, 'complete': 41, 'time_budget_or_recording_error': 3} (no local run reached its step budget). Hayati PASS includes non-clean stops: {'stop_reason=complete, agent_done=True': 52, 'stop_reason=step_budget, agent_done=False': 4, 'stop_reason=error, agent_done=False': 4}.
 
 Infrastructure/other breakdown:
 
 | Source | error_class / stop | Count |
 | --- | --- | ---: |
+| local | environment_setup_error | 5 |
+| local | environment_or_execution_error | 4 |
 | local | no error_class, stop_reason=time_budget_or_recording_error | 3 |
-| local | environment_or_execution_error | 3 |
-| local | environment_setup_error | 1 |
 | local | api_error | 1 |
 | hayati | environment_or_execution_error | 38 |
 | hayati | environment_setup_error | 10 |
@@ -161,7 +160,7 @@ Local OsmAndTrack runs with version >= v49: **25**. Runs where a tree/response c
 | SimpleSmsSend | 6 | 3 | 7.67 | 1.28x |
 | FilesMoveFile | 10 | 2 | 15 | 1.5x |
 | SimpleCalendarAddOneEvent | 17 | 3 | 19 | 1.12x |
-| MarkorCreateNoteAndSms | 9 | 3 | 17 | 1.89x |
+| MarkorCreateNoteAndSms | 9 | 2 | 18 | 2.0x |
 | OsmAndTrack | 60 | 2 | 22.5 | 0.38x |
 
 ## Not computed / caveats

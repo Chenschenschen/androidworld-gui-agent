@@ -1,7 +1,8 @@
 # Project working rules
 
-Update, 9 October 2026: branch team-agent is the group's final agent. Frozen v65 (tag team-agent-final-v65):
-seven tasks x three runs, 18/21 official PASS (docs/TEAM_FINAL_EVALUATION.md, docs/TEAM_AGENT.md). Branches Jia and
+Update, 12 October 2026: branch team-agent is the group's final agent, tag team-agent-final-v66. Seven tasks x
+three runs, 17/21 official PASS: six tasks from the v65 batches (same code), Markor from the v66 batch after its
+Skill was changed to share the note (docs/TEAM_FINAL_EVALUATION.md, docs/MARKOR_SHARE_V66.md, docs/TEAM_AGENT.md). Branches Jia and
 hayati and the amber_agent_integration package are left unchanged.
 
 Update, 8 October 2026 (evening): additional OsmAnd-only experiment. v49-v61 use the accessibility

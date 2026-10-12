@@ -3,10 +3,12 @@
 Facts come from each run's summary.json, action.json files and validation_error files; notes describe what the run did.
 Used by build_deck.py (run-log slides) and build_run_log.py (the per-run log cards for the submission).
 """
-REPO = "https://github.com/Chenschenschen/androidworld-gui-agent/blob/team-agent/docs/evidence/team/runs"
+REPO = "https://github.com/Chenschenschen/androidworld-gui-agent/blob/team-agent/docs/evidence"
 MODEL = "AutoGLM-Phone-9B-Multilingual (hosted, Z.ai)"
-VERSION = "autoglm_api_v65_team_agent (tag team-agent-final-v65)"
-ZIP = "team_agent_final_recordings_v65.zip"
+# Final agent v66: Markor runs from the v66 batch; the other six tasks from the v65 batches (identical code for them).
+V66_RUNS = {"trial_MarkorCreateNoteAndSms_20261009T125039_586151Z", "trial_MarkorCreateNoteAndSms_20261009T125401_048355Z",
+            "trial_MarkorCreateNoteAndSms_20261009T125719_921778Z"}
+ZIP = "team_agent_final_recordings_v66.zip"
 ORDER = ["SystemWifiTurnOn", "ContactsAddContact", "SimpleSmsSend", "FilesMoveFile",
          "SimpleCalendarAddOneEvent", "MarkorCreateNoteAndSms", "OsmAndTrack"]
 ROW = {"SystemWifiTurnOn": "Warm-up", "ContactsAddContact": "Warm-up", "SimpleSmsSend": "Real work", "FilesMoveFile": "Real work",
@@ -67,17 +69,17 @@ RUNS = [
  ("SimpleCalendarAddOneEvent", 3, 44, "trial_SimpleCalendarAddOneEvent_20261008T221423_161758Z", 16, "PASS", "", 1,
   "Saved event in 16 steps; no refusals",
   "Same procedure in 16 steps with no refusals."),
- ("MarkorCreateNoteAndSms", 1, 42, "trial_MarkorCreateNoteAndSms_20261008T221647_424207Z", 18, "PASS", "", 2,
-  "Note saved; SMS app via alias; plain SMS",
-  "Created the note with the right name and text and saved it; launched Simple SMS Messenger by a Chinese name (resolved by "
-  "the alias table); typed the same text into a new plain SMS and sent it."),
- ("MarkorCreateNoteAndSms", 2, 43, "trial_MarkorCreateNoteAndSms_20261008T222123_918435Z", 18, "PASS", "", 2,
-  "Name + .txt, saved, plain SMS; 1 retry",
-  "Typed the name, replaced the extension with .txt, typed and saved the text, then sent it as a plain SMS. One truncated "
-  "model reply was retried."),
- ("MarkorCreateNoteAndSms", 3, 44, "trial_MarkorCreateNoteAndSms_20261008T222633_440045Z", 15, "PASS", "", 2,
-  "New file, .txt, text, Save, SMS; 15 steps",
-  "New file, name and extension, text, Save; then Simple SMS Messenger, number, the text, SMS button. 15 steps."),
+ ("MarkorCreateNoteAndSms", 1, 42, "trial_MarkorCreateNoteAndSms_20261009T125039_586151Z", 18, "FAIL", "grounding", 1,
+  "Shared the note; missed the SMS button 4x",
+  "Note saved; Share > Plain Text sent its text to SMS Messenger; number confirmed. The model then said the SMS button was at "
+  "the top right and tapped [940, 60] four times; the button was at the right of the message bar. No-progress stop."),
+ ("MarkorCreateNoteAndSms", 2, 43, "trial_MarkorCreateNoteAndSms_20261009T125401_048355Z", 18, "PASS", "", 1,
+  "Share > Plain Text, number, SMS",
+  "New file, name and .txt, text, Save; More options > Share > Plain Text > SMS Messenger; number and checkmark; the text was "
+  "already in the message field, so it only tapped SMS."),
+ ("MarkorCreateNoteAndSms", 3, 44, "trial_MarkorCreateNoteAndSms_20261009T125719_921778Z", 18, "PASS", "", 2,
+  "Same path; SMS sent in 18 steps",
+  "Same path as run 2: the note's text was shared with Share > Plain Text, not typed again; SMS sent in 18 steps."),
  ("OsmAndTrack", 1, 31, "trial_OsmAndTrack_20261008T223004_312422Z", 22, "PASS", "", 4,
   "Map restored first; Ruggell, Bendern, Done",
   "Before the run the runner restored OsmAnd's map (the Files runs had cleared storage). Three radius increases and one scroll "
@@ -94,5 +96,18 @@ RUNS = [
 ]
 
 
+def evidence_dir(run_id):
+    return "markor_v66" if run_id in V66_RUNS else "team"
+
+
+def version(run_id):
+    return ("autoglm_api_v66_markor_share (tag team-agent-final-v66)" if run_id in V66_RUNS
+            else "autoglm_api_v65_team_agent (tag team-agent-final-v65; same code as v66 for this task)")
+
+
+def zip_folder(run):
+    return f"{run[0]}_s{run[2]}_{run[5]}__{run[3]}"
+
+
 def trajectory_url(run_id):
-    return f"{REPO}/{run_id}/trajectory.txt"
+    return f"{REPO}/{evidence_dir(run_id)}/runs/{run_id}/trajectory.txt"

@@ -22,7 +22,10 @@ def duration(path):
 
 runs = []
 for batch in ("eval_batch_20261008T215129_132839Z", "eval_batch_20261008T223002_941777Z"):
-    runs += json.loads((project / "runs" / batch / "results.json").read_text(encoding="utf-8"))
+    runs += [r for r in json.loads((project / "runs" / batch / "results.json").read_text(encoding="utf-8"))
+             if r["task"] != "MarkorCreateNoteAndSms"]
+# Markor + SMS: final runs come from v66 (Skill shares the note with Share > Plain Text)
+runs += json.loads((project / "runs" / "eval_batch_20261009T125038_033286Z" / "results.json").read_text(encoding="utf-8"))
 grid = {}
 for r in runs:
     folder = project / "runs" / r["run_id"]
@@ -69,4 +72,6 @@ def featured(task, row, speed, caption, name):
 
 print("featured success", featured("FilesMoveFile", 0, 3, "Files move, seed 42", "featured_files_pass"))
 print("featured failure", featured("FilesMoveFile", 1, 3, "Files move, seed 43", "featured_files_fail"))
+print("featured Markor pass", featured("MarkorCreateNoteAndSms", 1, 4, "Markor + SMS (shares the note), seed 43", "featured_markor_v66_pass"))
+print("featured Markor fail", featured("MarkorCreateNoteAndSms", 0, 4, "Markor + SMS (shares the note), seed 42", "featured_markor_v66_fail"))
 print("wall", duration(out / "wall_21_runs.mp4"), "s")

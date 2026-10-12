@@ -1,8 +1,9 @@
-# Follow-up after the freeze: Markor shares the note itself (v66)
+# Markor shares the note itself (v66): the final Markor runs
 
-The final evaluation ([TEAM_FINAL_EVALUATION.md](TEAM_FINAL_EVALUATION.md), v65,
-18/21) stays our main result. This page records one change made after that
-freeze, evaluated on its own.
+The v66 runs below are the final MarkorCreateNoteAndSms results in
+[TEAM_FINAL_EVALUATION.md](TEAM_FINAL_EVALUATION.md) (17/21 overall); they replace
+the v65 Markor runs. This page explains the change, the practice runs and the
+evaluation.
 
 ## Why
 

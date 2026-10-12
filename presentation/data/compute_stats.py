@@ -18,6 +18,9 @@ RUNS = REPO / "runs"
 LEDGER = ROOT / "amber_agent_integration_20261008" / "evidence" / "RUN_LEDGER_20261008.md"
 OUT = ROOT / "presentation" / "data"
 FINAL_BATCHES = ["eval_batch_20261008T215129_132839Z", "eval_batch_20261008T223002_941777Z"]
+# Markor + SMS was re-evaluated with v66 (Skill: Share > Plain Text instead of typing the text again);
+# its three runs replace the v65 Markor runs in the final set. v66 changed only the Markor Skill.
+MARKOR_BATCH = "eval_batch_20261009T125038_033286Z"
 EUR_PER_MTOK = 0.045
 REF_STEPS = {
     "SystemWifiTurnOn": 3, "ContactsAddContact": 5, "SimpleSmsSend": 6, "FilesMoveFile": 10,
@@ -206,7 +209,10 @@ V_shared = sorted(all_local_strings & all_hay_strings)
 final_entries = []
 for b in FINAL_BATCHES:
     for e in load(RUNS / b / "results.json"):
-        final_entries.append((b, e))
+        if e["task"] != "MarkorCreateNoteAndSms":
+            final_entries.append((b, e))
+for e in load(RUNS / MARKOR_BATCH / "results.json"):
+    final_entries.append((MARKOR_BATCH, e))
 assert len(final_entries) == 21, len(final_entries)
 final_runs = []
 for b, e in final_entries:

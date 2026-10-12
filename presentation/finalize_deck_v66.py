@@ -193,6 +193,18 @@ for sh in slide(15).shapes:
         blip = sh._element.xpath(".//a:blip")[0]
         part.related_part(blip.get("{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed"))._blob = (VID / "wall_21_runs_poster.png").read_bytes()
 
+note(15, "Contacts seed 43, Files seed 43 and OsmAnd seed 366. These are the three failures we explain next.",
+     "Contacts seed 43, Files seed 43, Markor seed 42 and OsmAnd seed 366. These are the four failures we explain next.")
+
+# 16-22 - leftover "Clip goes here" boxes hidden behind the videos
+removed = 0
+for n in range(16, 23):
+    for sh in list(slide(n).shapes):
+        if sh.has_text_frame and sh.text_frame.text.startswith("Clip goes here") and n != 21:
+            sh._element.getparent().remove(sh._element)
+            removed += 1
+assert removed == 7, removed
+
 # 16-22 - demo slides: correct notes (they carried a copy of the old Files notes)
 set_note(16, "First the warm-up tasks, sped up so you can follow. Wi-Fi, seed 42: the agent opens Settings, Network and internet, then Internet, "
              "switches Wi-Fi on, and finishes on its own when it sees the switch on. Five steps.")

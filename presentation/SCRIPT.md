@@ -122,7 +122,7 @@ The first OsmAnd run had to restore the map first, because the Files task had cl
 Now the demo. This video shows all 21 evaluation runs at the same time.
 Each column is one task, each row is one run. The label says the task, the seed, pass or fail, and how much the video is sped up. Each clip ends on the final screen.
 You can see the difference in length: Wi-Fi is sped up only two times, OsmAnd about ten times or more.
-Look at the orange labels: Contacts seed 43, Files seed 43 and OsmAnd seed 366. These are the three failures we explain next.
+Look at the orange labels: Contacts seed 43, Files seed 43, Markor seed 42 and OsmAnd seed 366. These are the four failures we explain next.
 
 ## Slide 16: Warm-up: SystemWifiTurnOn
 
